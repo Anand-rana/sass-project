@@ -1,0 +1,10 @@
+.contactFromBlock {
+  @include padding(70 0 30);
+  @include media("<=767px") {
+    @include padding(40 0);
+  }
+  .field-group {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+}

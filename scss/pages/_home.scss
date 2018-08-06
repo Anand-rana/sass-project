@@ -1,0 +1,143 @@
+.bannerBlock {
+  //background-color: $theme;
+  @include experimental-value(min-height, calc(100vh));
+  @include pos(rel, null);
+  @include media("<=990px") {
+    min-height: 400px;
+  }
+  ._bannerVideo {
+    @include experimental-value(min-height, calc(100vh));
+    overflow: hidden;
+    @include pos(ab, 0);
+    @include media("<=990px") {
+      min-height: auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.homeBlock {
+  ._aboutLych-section {
+    @include bg-norepeat("#{$url}background_pattren.png", transparent, no-repeat);
+  }
+  ._aboutLych {
+    @include padding-top(100);
+    @include media("<=990px") {
+      @include padding-top(50);
+    }
+    h1 {
+      @include font-size(40);
+      text-align: center;
+      line-height: 56px;
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+    ._dataContainer {
+      @include margin-top(60);
+      ._dataRow {
+        @include padding-bottom(120);
+        @include pos(rel, null);
+        @include media("<=990px") {
+          @include padding-bottom(60);
+        }
+        img.img-fluid {
+          @include margin-top(50);
+          @include media("<=767px") {
+            display: none;
+          }
+        }
+        ._number {
+          text-align: right;
+          display: block;
+          @include media("<=767px") {
+            text-align: left;
+            @include pos(ab, 0 null null 0);
+            z-index: -1;
+          }
+          span {
+            font-weight: 700;
+            color: #C2C4F3;
+            @include opacity(0.1);
+            line-height: 250px;
+            @include fontsize(280);
+            @include media("<=990px") {
+              @include fontsize(180);
+              line-height: 180px;
+            }
+          }
+        }
+        ._txt {
+          max-width: 480px;
+          h2 {
+            @include fontsize(34);
+            line-height: 34px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            @include media("<=990px") {
+              @include fontsize(24);
+            }
+          }
+        }
+        ._mSpace-left {
+          @include padding-left(30);
+          @include media("<=767px") {
+            @include padding-left(0);
+          }
+        }
+        ._mSpace-right {
+          @include padding-right(30);
+          @include media("<=767px") {
+            @include padding-right(0);
+          }
+        }
+        ._lineSperator {
+          @include media("<=767px") {
+            display: none;
+          }
+          span {
+            width: 20px;
+            height: 20px;
+            border: 1px solid darken($white, 20%);
+            background-color: $white;
+            z-index: 2;
+            @include pos(ab, 255px null 0 50%);
+            @include transform(translate(-50%, 0));
+            @include radius(100%);
+            display: block;
+            @include media("<=990px") {
+              top: 190px;
+            }
+          }
+          .__line {
+            @include pos(ab, 275px null 0 50%);
+            @include transform(translate(-50%, 0));
+            z-index: 1;
+            width: 1px;
+            height: 100%;
+            background-color: darken($white, 10%);
+            @include media("<=990px") {
+              top: 210px;
+            }
+          }
+        }
+      }
+    }
+  }
+  ._app-section {
+    background-color: $theme;
+    color: $white;
+    @include padding(110 0 150);
+    @include media("<=990px") {
+      @include padding(50 0);
+    }
+    h2 {
+      @include fontsize(34);
+      line-height: 34px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+  }
+}

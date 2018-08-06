@@ -1,0 +1,48 @@
+//Fonts
+@include font-face($font, "#{$font-path}/sourcesanspro-light", 100, normal);
+@include font-face($font, "#{$font-path}/sourcesanspro-regular", 400, normal);
+@include font-face($font, "#{$font-path}/sourcesanspro-semibold", 500, normal);
+@include font-face($font, "#{$font-path}/sourcesanspro-bold", 700, normal);
+@include font-face($font-secondary, "#{$font-path}/poppins-semibold-webfont", 300, normal);
+@include font-face($font-secondary, "#{$font-path}/poppins-regular-webfont", 200, normal);
+@font-face {
+  font-family: 'icomoon';
+  src: url("#{$icon-font-path}/icomoon.eot?t40l21");
+  src: url("#{$icon-font-path}/icomoon.eot?t40l21#iefix") format("embedded-opentype"),
+  url("#{$icon-font-path}/icomoon.ttf?t40l21") format("truetype"),
+  url("#{$icon-font-path}/icomoon.woff?t40l21") format("woff"),
+  url("#{$icon-font-path}/icomoon.svg?t40l21#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*="icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tick:before {
+  content: "\e903";
+}
+
+.icon-facebook:before {
+  content: "\e901";
+}
+
+.icon-google:before {
+  content: "\e902";
+}
+
+.icon-login-icon:before {
+  content: "\e900";
+}

@@ -1,0 +1,94 @@
+footer {
+    ._dataContainer {
+        &.footerBg {
+            @include bg-norepeat("#{$url}foter_bg.png", transparent, no-repeat);
+
+            background-color: #fafbff;
+            background-position: center  bottom 30px;
+
+            // background-image: url(#{$url});
+       
+        }
+
+        ._signUpOpt {
+            @include padding(80 0 60);
+
+            @include media("<=767px") {
+                @include padding(50 0);
+            }
+
+
+            text-align: center;
+
+            h2 {
+                @include fontsize(40);
+
+                font-weight: 100;
+
+                @include margin-bottom(15);
+
+                line-height: 56px;
+            }
+
+            ._btnOpt {
+                @include margin-top(40);
+            }
+        }
+
+        .footer-links {
+            @include padding(20 0);
+
+            @include media("<=990px") {
+                text-align: center;
+            }
+
+
+            ._linksNav {
+                @include media("<=990px") {
+                    @include margin-top(10);
+                }
+
+
+                & > ul {
+                    & > li {
+                        display: inline-block;
+
+                        & > a {
+                            text-decoration: none;
+
+                            @include padding(0 15);
+
+                            @include fontsize(16);
+
+                            font-family: $font-secondary;
+                            font-weight: 200;
+                            text-transform: capitalize;
+                            color: darken($white, 40%);
+
+                            &:hover, &:focus {
+                                color: $theme;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footerCopyBlock {
+            @include padding(10 0);
+
+            background-color: $white;
+
+            p {
+                font-family: $font-secondary;
+                font-weight: 200;
+                margin-bottom: 0;
+
+                @include fontsize(12);
+
+                color: darken($white, 40%);
+            }
+        }
+    }
+}

@@ -1,0 +1,522 @@
+header {
+    @include padding(15 0);
+    @include pos(rel, null);
+    @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.16));
+    @include media("<=767px") {
+        .logo {
+            img {
+                max-width: 170px;
+            }
+            &>a {
+                display: inline-block;
+            }
+        }
+    }
+    @include media("<=575px") {
+        .logo {
+            @include margin-bottom(20);
+        }
+    }
+    .user_nav {
+        text-align: right;
+        @include media("<=1200px") {
+            @include padding-right(40);
+        }
+        @include media("<=575px") {
+            text-align: center;
+            @include padding-right(0);
+        }
+        &>ul {
+            display: $ib;
+            &>li {
+                display: $ib;
+                vertical-align: middle;
+                @include padding(0 10);
+                font-weight: 700;
+                color: $theme;
+                @include media("<=767px") {
+                    @include padding(0 5);
+                }
+                .search-btn {
+                    color: $theme;
+                    cursor: pointer;
+                    @include fontsize(18);
+                }
+                .l-link {
+                    text-decoration: none;
+                    color: $theme;
+                    @include fontsize(15);
+                }
+                .usr-info {
+                    display: table;
+                    width: 100%;
+                    position: relative;
+                    .user-drop-down {
+                        display: table;
+                        width: 100%;
+                        cursor: pointer;
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    .dropdown-menu {
+                        border-radius: 0;
+                        padding: 0;
+                        margin-top: 18px;
+                        @include media("<=767px") {
+                            margin-top: 10px;
+                        }
+                        &>ul {
+                            &>li {
+                                &>a {
+                                    @include padding(10 15);
+                                    display: block;
+                                    font-weight: 400;
+                                    text-decoration: none;
+                                    @include fontsize(12);
+                                    &:focus,
+                                    &:hover {
+                                        background-color: $theme;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    img {
+                        width: 45px;
+                        height: 45px;
+                        object-fit: cover;
+                        float: left;
+                    }
+                    ._dtl-txt {
+                        float: left;
+                        text-align: left;
+                        @include padding-left(10);
+                        span {
+                            display: $b;
+                            @include fontsize(15);
+                            color: darken($white, 50%);
+                            font-weight: 400;
+                            &._name {
+                                font-weight: 700;
+                                color: $theme;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .search-container {
+        background: $white;
+        @include pos(ab, 0 0 0 0);
+        @include opacity(0);
+        @include transform(translate(0, -100%));
+        -webkit-transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 150;
+        .search-field {
+            @include pos(ab, 50% 10px null 10px);
+            max-width: 900px;
+            margin: auto;
+            @include transform(translate(0, -50%));
+            .input-group {
+                width: 100%;
+                .form-control {
+                    border: 1px solid transparent;
+                    background-color: darken($white, 5%);
+                    height: 46px;
+                    @include padding(0 15);
+                    @include media("<=767px") {
+                        display: $b;
+                        width: 100%;
+                    }
+                    &:focus {
+                        border-color: $theme;
+                    }
+                }
+                .button {
+                    @include padding(0 40);
+                    height: 46px;
+                    line-height: 46px;
+                    text-align: center;
+                    @include media("<=767px") {
+                        display: $b;
+                        width: 100%;
+                        @include margin-top(10);
+                    }
+                }
+            }
+        }
+        &.isOpen {
+            @include transform(translate(0, 0));
+            @include opacity(1);
+        }
+        .close-btn {
+            @include pos(ab, 10px 10px null null);
+            cursor: pointer;
+            @include fontsize(18);
+            color: $theme;
+        }
+    }
+}
+
+.nav-section {
+    background-color: $color_main02;
+    @include pos(rel, null); // @include padding-left(210);
+    text-align: center;
+    @include media("<=1500px") {
+        @include padding-left(145);
+        text-align: left;
+    }
+    @include media(">=1200px") {
+        &.fixedNav {
+            @include pos(fix, 0 0 null 0);
+            z-index: 30;
+        }
+    }
+    @include media("<=1200px") {
+        @include pos(fix, 0 null 0 -250px);
+        -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+        @include opacity(0);
+        overflow: auto;
+        min-width: 250px;
+        z-index: 110;
+        text-align: left;
+        @include padding-left(0);
+        @include padding-top(60);
+        &>.container-fluid {
+            @include padding(0);
+        }
+    }
+    &.isOpen {
+        @include opacity(1);
+        left: 0;
+    }
+    ._aboutThink_link {
+        @include pos(ab, 0 null 0 0);
+        overflow: hidden;
+        @include media("<=1200px") {
+            bottom: auto;
+            right: 0;
+            text-align: center;
+        }
+        &>a {
+            color: $white;
+            font-weight: 700;
+            text-decoration: none;
+            background-color: $theme;
+            display: block;
+            @include padding(20 40);
+            &:hover {
+                background-color: lighten($color:$theme, $amount: 10%);
+            }
+            @include media("<=1500px") {
+                @include padding(20 20);
+                @include fontsize(15);
+            }
+        }
+    }
+    nav {
+        &>ul {
+            &>li {
+                display: $ib;
+                @include pos(rel, null);
+                @include media("<=1200px") {
+                    display: block;
+                    &.hasChild {
+                        .ac-ico {
+                            @include pos(ab, 20px 10px null null); //@include transform(translate(0, -50%));
+                            color: $white;
+                            @include fontsize(18);
+                            cursor: pointer;
+                            min-width: 30px;
+                            z-index: 10;
+                            text-align: right;
+                        } // & > a {
+                        //     &:after {
+                        //         font-family: 'icomoon' !important;
+                        //         content: "\e911";
+                        //
+                        //         @include pos(ab, 50% 10px null null);
+                        //
+                        //         @include transform(translate(0, -50%));
+                        //
+                        //         color: $white;
+                        //
+                        //         @include fontsize(18);
+                        //     }
+                        //
+                        //     &.active {
+                        //         &:after {
+                        //             content: "\e912";
+                        //         }
+                        //     }
+                        // }
+                    }
+                }
+                &>a {
+                    @include padding(20 10);
+                    text-decoration: none;
+                    @include fontsize(15);
+                    color: $white;
+                    display: block;
+                    vertical-align: middle; //-webkit-transform: perspective(1px) translateZ(0);
+                    // transform: perspective(1px) translateZ(0);
+                    position: relative;
+                    &:before {
+                        content: "";
+                        position: absolute; //z-index: -1;
+                        right: 0;
+                        width: 0;
+                        bottom: 15px;
+                        background: $white;
+                        @include radius(2px);
+                        height: 1px;
+                        -webkit-transition-property: width;
+                        transition-property: width;
+                        -webkit-transition-duration: 0.2s;
+                        transition-duration: 0.2s;
+                        -webkit-transition-timing-function: ease-out;
+                        transition-timing-function: ease-out;
+                    }
+                    &:active:before,
+                    &:focus:before,
+                    &:hover:before {
+                        right: auto;
+                        left: 0;
+                        width: 100%;
+                    }
+                    &.active {
+                        &:before {
+                            right: auto;
+                            left: 0;
+                            width: 100%;
+                        }
+                    }
+                }
+                &:last-child {
+                    &>a {
+                        text-decoration: underline;
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+                &>.sub-menu {
+                    @include pos(ab, 100% 0 null 0);
+                    overflow: hidden;
+                    max-height: 300px;
+                    height: auto;
+                    z-index: 10;
+                    min-width: 120px;
+                    background-color: $color_main02;
+                    color: $white;
+                    @include transform(scale(1, 0));
+                    @include opacity(0);
+                    @include transform-origin(top, null);
+                    -webkit-transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+                    transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+                    @include media("<=1200px") {
+                        @include pos(rel, 0 0 0 0);
+                        @include opacity(1);
+                        @include transform(scale(1));
+                        overflow: auto;
+                        transition: none;
+                    }
+                    &>li {
+                        &>a {
+                            color: $white;
+                            display: block;
+                            text-decoration: none;
+                            @include padding(12 15);
+                            &:focus,
+                            &:hover {
+                                // text-decoration: underline;
+                                background-color: darken($color_main02, 6%);
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    &>.sub-menu {
+                        @include transform(scale(1, 1));
+                        @include opacity(1);
+                    }
+                }
+                &.has-catList {
+                    .nav-catList {
+                        @include pos(ab, 100% 0 null null);
+                        overflow: hidden;
+                        height: auto;
+                        z-index: 9;
+                        @include transform(scale(1, 0));
+                        @include opacity(0);
+                        @include transform-origin(top, null);
+                        -webkit-transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+                        transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+                        background-color: $color_main02;
+                        color: $white;
+                        @include media("<=1200px") {
+                            @include pos(rel, 0 0 0 0);
+                            @include opacity(1);
+                            @include transform(scale(1));
+                            overflow: auto;
+                            transition: none;
+                        }
+                        ._list {
+                            display: flex;
+                            @include media("<=1200px") {
+                                display: block;
+                            }
+                        }
+                        ._mainList {
+                            background-color: darken($color_main02, 10%);
+                            -webkit-flex: 1;
+                            /* Safari 6.1+ */
+                            -ms-flex: 1;
+                            /* IE 10 */
+                            flex: 1;
+                            max-height: 400px;
+                            min-width: 160px;
+                            max-width: 160px;
+                            @include media("<=1200px") {
+                                flex: none;
+                                -webkit-flex: none;
+                                min-width: inherit;
+                                max-width: inherit;
+                                max-height: inherit;
+                                background-color: $color_main02;
+                            }
+                            &>ul {
+                                &>li {
+                                    @include pos(rel, null);
+                                    &>a {
+                                        color: $white;
+                                        display: block;
+                                        text-decoration: none;
+                                        @include padding(10 20);
+                                        &:focus,
+                                        &:hover {
+                                            // text-decoration: underline;
+                                            background-color: darken($color_main02, 5%);
+                                            @include media("<=1200px") {
+                                                background-color: transparent;
+                                            }
+                                        }
+                                        @include media("<=1200px") {
+                                            @include padding(20 10);
+                                            text-decoration: none;
+                                            @include fontsize(15);
+                                            color: $white;
+                                            display: block;
+                                            vertical-align: middle;
+                                            -webkit-transform: perspective(1px) translateZ(0);
+                                            transform: perspective(1px) translateZ(0);
+                                            position: relative;
+                                            &:before {
+                                                content: "";
+                                                position: absolute;
+                                                z-index: -1;
+                                                right: 0;
+                                                width: 0;
+                                                bottom: 15px;
+                                                background: $white;
+                                                @include radius(2px);
+                                                height: 1px;
+                                                -webkit-transition-property: width;
+                                                transition-property: width;
+                                                -webkit-transition-duration: 0.2s;
+                                                transition-duration: 0.2s;
+                                                -webkit-transition-timing-function: ease-out;
+                                                transition-timing-function: ease-out;
+                                            }
+                                            &:active:before,
+                                            &:focus:before,
+                                            &:hover:before {
+                                                right: auto;
+                                                left: 0;
+                                                width: 100%;
+                                            }
+                                            &.active {
+                                                &:before {
+                                                    right: auto;
+                                                    left: 0;
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .sub-menu {
+                                        display: none;
+                                        @include media("<=1200px") {
+                                            &>li {
+                                                &>a {
+                                                    color: $white;
+                                                    display: block;
+                                                    text-decoration: none;
+                                                    @include padding(12 15);
+                                                    &:focus,
+                                                    &:hover {
+                                                        // text-decoration: underline;
+                                                        background-color: darken($color_main02, 6%);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.hasChild {
+                                        .ac-ico {
+                                            @include pos(ab, 20px 10px null null); //@include transform(translate(0, -50%));
+                                            color: $white;
+                                            @include fontsize(18);
+                                            cursor: pointer;
+                                            min-width: 30px;
+                                            z-index: 10;
+                                            text-align: right;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        ._subList {
+                            -webkit-flex: 1;
+                            /* Safari 6.1+ */
+                            -ms-flex: 1;
+                            /* IE 10 */
+                            flex: 1;
+                            min-width: 200px;
+                            max-height: 300px;
+                            &>ul {
+                                // -webkit-column-count: 3;
+                                // /* Chrome, Safari, Opera
+                                // -moz-column-count   : 3;
+                                // /* Firefox
+                                // column-count        : 3;
+                                &>li {
+                                    display: block;
+                                    &>a {
+                                        color: $white;
+                                        display: block;
+                                        text-decoration: none;
+                                        @include padding(5 20);
+                                        &:focus,
+                                        &:hover {
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.openMenu {
+                            @include transform(scale(1, 1));
+                            @include opacity(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

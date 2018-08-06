@@ -1,0 +1,105 @@
+.mainWrapper {
+  @include calc(min-height, "100vh");
+}
+
+.contentWrapper {
+  @include experimental-value(min-height, calc(100vh - 354px));
+}
+
+.form-group {
+  @include margin-bottom(18);
+  label {
+    @include fontsize(14);
+    font-weight: 500;
+    color: #7F8FA4;
+    @include padding-bottom(5);
+    margin-bottom: 0;
+    text-transform: uppercase;
+    &.label-sm {
+      @include fontsize(15);
+    }
+  }
+  .form-control {
+    height: 48px;
+    @include radius(4px);
+    border: 2px solid #DDE3E9;
+    &:focus {
+      @include box-shadow-none;
+      border-color: lighten($main-color01, 10%);
+    }
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: darken($white, 20%);
+    }
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: darken($white, 20%);
+    }
+    & :-ms-input-placeholder {
+      /* IE 10+ */
+      color: darken($white, 20%);
+    }
+    & :-moz-placeholder {
+      /* Firefox 18- */
+      color: darken($white, 20%);
+    }
+  }
+  textarea.form-control {
+    height: auto;
+    resize: none;
+  }
+}
+
+.ham-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  .menu-icon {
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    width: 30px;
+    span {
+      position: relative;
+      @include margin-bottom(6);
+      height: 5px;
+      display: block;
+      &:before {
+        @include pos(ab, 0 0 0 0);
+        content: "";
+        background-color: $white;
+        width: 30px;
+        height: 3px;
+        transition: all 300ms ease-in-out;
+      }
+      &:nth-child(2) {
+        &:before {
+          width: 25px;
+        }
+      }
+    }
+    &:hover {
+      span {
+        &:nth-child(2) {
+          &:before {
+            left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menuOpen {
+  @include pos(fix, 0 0 0 0);
+  overflow: hidden;
+}
+
+.back-overlay {
+  @include pos(fix, 0 0 0 0);
+  z-index: 99;
+  background-color: rgba($black, 0.8);
+  display: none;
+  &.openBg {
+    display: $b;
+  }
+}

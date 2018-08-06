@@ -1,0 +1,274 @@
+.formWrapper {
+  background-color: #fafbff;
+  background: url(#{$url}left_side.png) left bottom no-repeat,
+  url(#{$url}right_side.png) right bottom no-repeat;
+  ._headerBlock {
+    @include padding(30 0);
+    max-width: 1600px;
+    margin: $za;
+  }
+  .formWrapper-block {
+    @include experimental-value(min-height, calc(100vh - 94px));
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(flex-end);
+    @include padding(40 0);
+    @include media("<=767px") {
+      min-width: inherit;
+      @include padding-bottom(20);
+    }
+    .form-box {
+      background-color: $white;
+      -webkit-box-shadow: 0 2px 17px 0 #C8D0F4;
+      -moz-box-shadow: 0 2px 17px 0 #C8D0F4;
+      box-shadow: 0 2px 17px 0 #C8D0F4;
+      ._signOptBlock {
+        @include bg-norepeat("#{$url}loginBg.jpg", transparent, no-repeat);
+        text-align: center;
+        color: $white;
+        @include pos(ab, -20px 0 -20px 20px);
+        @include display-flex;
+        @include align-items(center);
+        &:before {
+          content: "";
+          background-color: rgba($theme, 0.7);
+          @include pos(ab, 0 0 0 0);
+        }
+        @include media("<=767px") {
+          margin: 10px;
+          @include pos(rel, 0);
+        }
+        ._container {
+          @include padding(70 0);
+          width: 100%;
+          position: relative;
+          z-index: 1;
+          @include media("<=767px") {
+            @include padding(30 0);
+          }
+          h2 {
+            @include fontsize(32);
+            font-weight: 700;
+          }
+        }
+        .__opt {
+          @include padding(70 0);
+          @include media("<=767px") {
+            @include padding(40 0);
+          }
+          h3 {
+            @include fontsize(20);
+            line-height: 28px;
+            font-weight: 400;
+          }
+          ._btn {
+            display: block;
+            border: 0;
+            background: $white;
+            cursor: pointer;
+            text-align: left;
+            max-width: 260px;
+            width: 100%;
+            @include padding(10 50 10 20);
+            @include pos(rel, null);
+            margin: 15px auto 0;
+            @include fontsize(15);
+            font-family: $font-secondary;
+            font-weight: 300;
+            @include border-radius(30px);
+            @include transition(all 0.3s ease-in-out);
+            -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+            -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+            &._facebook-btn {
+              color: #2C4EDF;
+              ._txt {
+                border-right: 1px solid #DDE3E9;
+                display: block;
+                line-height: 25px;
+              }
+              &:hover {
+                background-color: $theme;
+                color: $white;
+              }
+            }
+            &._google-btn {
+              color: #FB583C;
+              ._txt {
+                border-right: 1px solid #DDE3E9;
+                display: block;
+                line-height: 25px;
+              }
+              &:hover {
+                background-color: #FB583C;
+                color: $white;
+              }
+            }
+            span.ico {
+              @include pos(ab, 50% 25px null null);
+              @include transform(translate(0, -50%));
+            }
+          }
+        }
+        ._linkOpt {
+          h3 {
+            @include fontsize(18);
+            font-weight: 400;
+            color: $white;
+            &>a {
+              color: $white;
+              text-decoration: none;
+              font-weight: 700;
+              display: inline-block;
+              vertical-align: middle;
+              -webkit-transform: perspective(1px) translateZ(0);
+              transform: perspective(1px) translateZ(0);
+              position: relative; //overflow: hidden;
+              &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                right: 0;
+                width: 0;
+                bottom: -2px;
+                background: $white;
+                @include radius(2px);
+                height: 1px;
+                -webkit-transition-property: width;
+                transition-property: width;
+                -webkit-transition-duration: 0.2s;
+                transition-duration: 0.2s;
+                -webkit-transition-timing-function: ease-out;
+                transition-timing-function: ease-out;
+              }
+              &:hover:before,
+              &:focus:before,
+              &:active:before {
+                right: auto;
+                left: 0;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      ._signFrom {
+        @include padding(70 45);
+        @include media("<=990px") {
+          @include padding(50 30);
+        }
+        @include media("<=767px") {
+          @include padding(30 15);
+        }
+        h2 {
+          @include fontsize(20);
+          line-height: 28px;
+          color: $darken-grey;
+          font-weight: 400;
+        }
+        .field-group {
+          @include margin-top(20);
+          ._forgotLink {
+            ._fLink {
+              @include fontsize(16);
+              text-decoration: none;
+              color: $font-color;
+            }
+          }
+        }
+      }
+      ._signupFrom {
+        @include padding(45 40 40);
+        @include media("<=990px") {
+          @include padding(30 30);
+        }
+        @include media("<=767px") {
+          @include padding(30 15);
+        }
+        .nav-tabs {
+          border: 0;
+          li {
+            @include padding(0 12);
+            @include media("<=479px") {
+              @include padding(0 8);
+            }
+            &:first-child {
+              @include padding-left(0);
+            }
+          }
+          .nav-link {
+            @include padding(0);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $darken-grey;
+            border: 0;
+            background: none;
+            text-decoration: none;
+            @include padding-bottom(15);
+            border-bottom: 3px solid transparent;
+            @include media("<=479px") {
+              @include fontsize(15);
+            }
+            &.active {
+              color: $color03;
+              border-color: $color03;
+            }
+            &:hover {
+              color: $theme;
+            }
+          }
+        }
+        .field-group {
+          @include margin-top(25);
+        }
+      }
+    }
+    .sFormBox {
+      background-color: $white;
+      -webkit-box-shadow: 0 2px 17px 0 #C8D0F4;
+      -moz-box-shadow: 0 2px 17px 0 #C8D0F4;
+      box-shadow: 0 2px 17px 0 #C8D0F4;
+      @include padding(70 20);
+      max-width: 850px;
+      margin: 0 auto;
+      @include media("<=767px") {
+        @include padding(30 20);
+      }
+      h3 {
+        text-align: center;
+        font-weight: 400;
+        color: $theme;
+        @include fontsize(28);
+      }
+      h4 {
+        @include fontsize(18);
+        color: $darken-grey;
+        font-weight: 400;
+        text-align: center;
+      }
+      .field-group {
+        @include margin-top(30);
+      }
+    }
+  }
+  .fogotFrom-section {
+    .formWrapper-block {
+      .sFormBox {
+        .field-group {
+          max-width: 300px;
+          margin: 30px auto 0;
+        }
+      }
+    }
+  }
+  .resetFrom-section {
+    .formWrapper-block {
+      .sFormBox {
+        .field-group {
+          max-width: 550px;
+          margin: 30px auto 0;
+        }
+      }
+    }
+  }
+}

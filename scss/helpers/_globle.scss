@@ -1,0 +1,101 @@
+/*==================================== GLOBLE CSS ====================================*/
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    font-family: $font;
+    color: $font-color;
+    font-weight: 400;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 18px;
+    line-height: 24px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-text-stroke: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    overflow-x: hidden;
+
+    // @include transition(all 500ms ease-in-out);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    @include anchor;
+
+    @include transition($trasition_all);
+
+    color: $font-color;
+    text-decoration: underline;
+    outline: none !important;
+
+    &:hover {
+        color: $color02;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        outline: none !important;
+    }
+}
+
+input[type="file"] {
+    cursor: pointer;
+
+    &::-webkit-file-upload-button {
+        cursor: pointer;
+    }
+}
+
+.visibleHide {
+    visibility: hidden;
+}
+
+.select-control {
+    select {
+        @include appearance(none);
+
+        // @include bg-norepeat("#{$url}icons/down-arrow.png", transparent, no-repeat, right 20px center, 12px);
+
+        outline: 0px !important;
+        padding-right: 35px !important;
+        text-overflow: ellipsis;
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+        }
+    }
+}
+
+button,
+input {
+    &[type="button"],
+    &[type="submit"] {
+        cursor: pointer;
+    }
+}

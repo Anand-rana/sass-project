@@ -1,0 +1,273 @@
+.formWrapper {
+    .container-fluid {
+        @include padding(0);
+    }
+
+    .formWrapper-dataBox {
+        @include padding(45 30 0);
+
+        @include calc(height, "100vh");
+
+        background-color: $white;
+        overflow: auto;
+
+        @include media("<=767px") {
+            @include padding(30 10 0);
+
+            height: auto;
+        }
+
+
+        .__header-block {
+            @include media("<=767px") {
+                img {
+                    @include margin(10 0);
+                }
+            }
+
+
+            a {
+                text-transform: uppercase;
+                text-decoration: underline;
+                font-weight: 700;
+            }
+        }
+
+        .fromBlock {
+            @include margin(60 0 40);
+
+            @include media("<=767px") {
+                @include margin(30 0 20);
+            }
+
+
+            h2 {
+                @include font-size(30);
+
+                color: $heading-color;
+                font-weight: 700;
+                text-transform: uppercase;
+
+                @include media("<=767px") {
+                    @include fontsize(24);
+                }
+            }
+
+            .fieldGroup {
+                @include margin-top(40);
+
+                @include media("<=767px") {
+                    @include margin-top(20);
+                }
+
+
+                ._tpDtlContainer {
+                    .help-ico {
+                        text-align: right;
+
+                        @include margin-bottom(10);
+
+                        .ico {
+                            color: #c3c3c3;
+                        }
+                    }
+                }
+
+                ._tpDtl {
+                    max-height: 170px;
+                    position: relative;
+
+                    //overflow: auto;
+
+                    ._content {
+                        @include padding(0 10 10 0);
+                    }
+
+                    h1, h2, h3, h4, h5, h6 {
+                        @include fontsize(16);
+
+                        font-weight: 400;
+                    }
+
+                    strong, bold {
+                        font-weight: 700;
+                    }
+
+                    ul {
+                        @include padding-left(30);
+
+                        @include margin-bottom(10);
+
+                        li {
+                            list-style: disc;
+                        }
+                    }
+
+                    ol {
+                        @include padding-left(30);
+
+                        @include margin-bottom(10);
+
+                        li {
+                            list-style: decimal;
+                        }
+                    }
+                }
+
+                .btn-field {
+                    @include margin-top(50);
+
+                    @include media("<=767px") {
+                        @include margin-top(30);
+                    }
+                }
+            }
+        }
+    }
+
+    .title-block {
+        color: $white;
+        display: table;
+        width: 100%;
+        position: relative;
+
+        .logo {
+            @include pos(ab, 30px null null 50%);
+
+            @include transform(translate(-50%, 0));
+
+            @include media(">=320px", "<=991px", "retina3x") {
+                display: $b;
+                max-width: 90px;
+                margin: 10px auto;
+
+                @include pos(r, 0);
+
+                @include transform(translate(0, 0));
+            }
+        }
+
+        .title-block-box {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        h2 {
+            @include font-size(30);
+
+            @include padding(0 30);
+
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $white;
+
+            @include media("<=767px") {
+                @include padding(0 10);
+            }
+
+
+            @include media(">=320px", "<=991px", "retina3x") {
+                @include font-size(16);
+            }
+        }
+    }
+}
+
+.login-section {
+    .login-fromBlock {
+        .title-block {
+            @include bg_image("#{$url}login-bg.jpg");
+
+            @include calc(height, "100vh");
+
+            overflow: hidden;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .login-opt-container {
+            @include calc(height, "100vh - 70px");
+
+            display: table;
+            width: 100%;
+
+            @include media("<=767px") {
+                @include calc(height, "100vh - 130px");
+            }
+
+
+            .login-opt {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        .formWrapper-dataBox {
+            .fromBlock {
+                .fieldGroup {
+                    .form-group {
+                        .f-link {
+                            color: $theme;
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.forgot-section {
+    .forgot-fromBlock {
+        .title-block {
+            @include bg_image("#{$url}login-bg.jpg");
+
+            @include calc(height, "100vh");
+
+            overflow: hidden;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.signUp-section {
+    .signUp-fromBlock {
+        .title-block {
+            @include bg_image("#{$url}signup-bg.jpg");
+
+            @include calc(height, "100vh");
+
+            overflow: hidden;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .signup-opt-container {
+            @include calc(height, "100vh - 70px");
+
+            display: table;
+            width: 100%;
+
+            @include media("<=767px") {
+                @include calc(height, "100vh - 130px");
+            }
+
+
+            .signup-opt {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+}

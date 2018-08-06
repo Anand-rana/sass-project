@@ -1,0 +1,43 @@
+// THEME AND COLOR
+$color00: #BFC7D1 !default;
+$color01: #042DE0 !default;
+$color02: #2ED918 !default;
+$color03: #4040EB !default;
+$color04: #ED9E29 !default;
+$color05: #3BC6D1 !default; //#42C142 !default;
+$color06: #EA2929 !default;
+$red: #ca2015 !default;
+$black: #000000 !default;
+$white: #ffffff !default;
+$theme: #042DE0 !default;
+$main-color01: #858BEE !default;
+$light-grey: #FAFBFF !default;
+$darken-grey: #7F8FA4 !default;
+$font-color: #354052 !default;
+// PATH & FONT NAME
+$font: "source-sans" !default;
+$font-secondary: "Poppins" !default;
+$imgpath: "assets/images/" !default;
+$font-path: "assets/fonts" !default;
+$icon-font-path: "assets/fonts/icons" !default;
+$url: $imgpath !default;
+$fa-font-path: "../node_modules/font-awesome/fonts" !default;
+// FONTS and TEXT STYLE
+$fontnormal: 16px !default;
+$fontsmall: 12px !default;
+$lineheight: 1.5 !default;
+$fontawesome: FontAwesome !default;
+$spacing: 5px !default;
+// Display
+$in: inline !default;
+$ib: inline-block !default;
+$b: block !default;
+$t: table !default;
+$cell: table-cell !default;
+$n: none !default;
+//TRANSITION EFFECT
+$trasition_all: all 300ms ease-in-out !default;
+// Margin
+$a: auto !default;
+$auto: auto auto !default;
+$za: 0 auto !default;

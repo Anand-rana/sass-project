@@ -1,0 +1,115 @@
+.add-postSection {
+   .feildGroup {
+      max-width: 560px;
+      margin   : 40px auto 60px;
+
+      .form-group {
+         ._date {
+            @include pos(r, null);
+
+            i {
+               @include pos(ab, 10px 5px null null);
+               color: darken($white, 20%);
+            }
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+               color          : rgba(0, 0, 0, 0);
+               @include bg-norepeat('#{$url}calendar-icon.png');
+               background-size: auto 100%;
+               @include square(20px);
+            }
+
+            input[type="date"]::-webkit-inner-spin-button {
+               display: none;
+            }
+         }
+      }
+
+      .pic-upload-list {
+         @include margin-top(30);
+
+         .ch-upload-button
+         {
+            @include margin(0 10 10 0);
+         }
+
+         #image_preview,
+         #images {
+            .pip {
+               overflow: hidden;
+               display : inline-block;
+               @include margin(0 10 10 0);
+               @include width(130);
+               @include height(100);
+
+               img {
+                  min-height: 100px;
+                  min-width : 130px;
+                  object-fit: cover;
+                  max-width : 100%;
+                  display   : $b;
+                  height    : auto;
+               }
+            }
+         }
+
+         #clear_button {
+            .remove {
+               border          : 2px solid $color_main02;
+               color           : $color_main02;
+               background-color: transparent;
+               min-width       : 180px;
+               height          : 45px;
+               line-height     : 41px;
+               text-align      : center;
+               font-weight     : 700;
+               display         : $ib;
+               cursor          : pointer;
+               @include transition(all 0.4s);
+               @include padding(0 20);
+               @include margin-top(10);
+
+               @include fontsize(15) &:hover {
+                  background-color: $color_main02;
+                  color           : $white;
+               }
+            }
+         }
+
+         .img-box {
+            @include pos(Rel, null);
+            width   : 130px;
+            position: relative;
+
+            img {
+               width     : 130px;
+               height    : 100px;
+               object-fit: cover;
+            }
+
+            .close-btn {
+               @include pos(ab, -10px -10px null null);
+               @include fontsize(20);
+               cursor: pointer;
+               color : $theme;
+            }
+         }
+      }
+
+      .ch-upload-button {
+         span {
+            width           : 130px;
+            height          : 100px;
+            text-align      : center;
+            background-color: #f2f2f2;
+            display         : block;
+            line-height     : 100px;
+            @include fontsize(35);
+         }
+      }
+
+      .btn-field {
+         @include margin-top(70);
+      }
+   }
+}
