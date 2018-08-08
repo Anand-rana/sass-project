@@ -1,0 +1,350 @@
+.m-post-eventsroute
+		.container
+			.row
+				.col-md-9.col-md-offset-3
+					.heading-block
+						.row
+							.col-md-12
+								.breadcrumb-list
+									ul
+										li
+											a(href="#") My Posts
+										li
+											a(href="#") Events
+										li
+											a(href="#").active Expired
+				.col-md-3
+					.filter-side-block
+						.filter-side-box(ng-class="{'active margin-bottom':issortingCollapsed}")
+							.filter-block__top(ng-click="issortingCollapsed = !issortingCollapsed" class="pointer")
+								h4 Sorting
+								span.caret
+							.filter-field-group(uib-collapse="!issortingCollapsed")
+								.filter-inline-field
+									.row.row-5
+										.col-sm-3
+											label Sort by
+										.col-sm-9
+											.f-field
+												.select-control
+														select.f-field-control
+															option(value='Latest Post') Latest Post
+									.filter-button-group
+										.row.row-10
+											.col-md-6.col-sm-6
+												button.button.button-rounded.button-block.margin-bottom-2x Apply
+											.col-md-6.col-sm-6
+												button.button.button-border.button-theme.button-border-thin.button-rounded.button-block.margin-bottom-2x Reset
+										
+										
+									
+
+						.filter-side-box(ng-class="{'active margin-top':isfilterCollapsed}")
+							.filter-block__top(ng-click="isfilterCollapsed = !isfilterCollapsed" class="pointer")
+								h4 Filters
+								span.caret
+							.filter-field-group(uib-collapse="!isfilterCollapsed")
+								.f-field
+									input(type="text", placeholder="Title").f-field-control
+								.f-field.has-icon
+									input(type="text", placeholder="From").f-field-control
+									span.icon-addon
+										i.icon-calendar
+								.f-field.has-icon
+									input(type="text", placeholder="To").f-field-control
+									span.icon-addon
+										i.icon-calendar
+								.f-field
+									input(type="text", placeholder="Location").f-field-control
+								
+								a(href="#" class="search_link") Advanced Search
+								.filter-button-group
+										.row.row-10
+											.col-md-6.col-sm-6
+												button.button.button-rounded.button-block.margin-bottom-2x Apply
+											.col-md-6.col-sm-6
+												button.button.button-border.button-theme.button-border-thin.button-rounded.button-block.margin-bottom-2x Reset
+
+			
+
+				.col-md-9
+					
+
+							
+									
+					//.ap-filter remove class if filter not applied				
+					.m-post-eventroute__list.ap-filter
+						.filter-ap-msg
+							h4  
+								span
+									i.icon-asterisk-symbol 
+								|Filters Applied
+						.total-posted
+							span Total Posted : 20
+						.event-route-box
+								.row
+									.col-md-3.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											
+											.list-label
+												span e
+
+
+									.col-md-9.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.nr-title Lorem Ipsum is simply dummy text
+												.user-dtl-txt
+													p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...
+												.user-dtl-info-list
+													.row
+														.col-md-6.col-elg-4
+															ul.list-info
+																
+																li
+																	span.l-label Location
+																	span New York ,USA
+																li
+																	span.l-label Due Date
+																	span  24th June 2017
+																
+														.col-md-6.col-elg-4
+															ul.list-info
+																
+																li
+																	span.l-label Date created
+																	span 24th May 2016
+																li
+																	span.l-label Last updated
+																	span 24th May 2017
+																
+														.col-md-6.col-elg-4
+															
+															button.button.button-rounded.button-height-small.button-font-base-small.button-min-width.margin-bottom-2x  View
+															button.button.button-action.button-rounded.button-height-small.button-font-base-small.button-min-width  Show Interested People
+								.event-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span.__label Like : 
+												span 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span.__label Comments : 
+												span 40
+
+										li
+											
+											.t-interst
+												span.icon
+													i.icon-user-o 
+												span.__label Interested : 
+												span 23
+										li
+											.t-share
+												span.icon.pointer(ng-click="isNavCollapsed  = !isNavCollapsed")
+													i.icon-share
+												span.__label Share : 
+												span 23
+												.t-share-opt(uib-collapse="!isNavCollapsed") 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+													a(href="#") Share by Facebook
+													a(href="#") Share by Twitter
+													a(href="#") Share by LinkedIn
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link
+						.event-route-box
+								.row
+									.col-md-3.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											
+											.list-label
+												span e
+
+
+									.col-md-9.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.nr-title Lorem Ipsum is simply dummy text
+												.user-dtl-txt
+													p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...
+												.user-dtl-info-list
+													.row
+														.col-md-6.col-elg-4
+															ul.list-info
+																
+																li
+																	span.l-label Location
+																	span New York ,USA
+																li
+																	span.l-label Due Date
+																	span  24th June 2017
+																
+														.col-md-6.col-elg-4
+															ul.list-info
+																
+																li
+																	span.l-label Date created
+																	span 24th May 2016
+																li
+																	span.l-label Last updated
+																	span 24th May 2017
+																
+														.col-md-6.col-elg-4
+															
+															button.button.button-rounded.button-height-small.button-font-base-small.button-min-width.margin-bottom-2x  View
+															button.button.button-action.button-rounded.button-height-small.button-font-base-small.button-min-width  Show Interested People
+								.event-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span.__label Like : 
+												span 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span.__label Comments : 
+												span 40
+
+										li
+											
+											.t-interst
+												span.icon
+													i.icon-user-o 
+												span.__label Interested : 
+												span 23
+										li
+											.t-share
+												span.icon.pointer(ng-click="isNav1Collapsed  = !isNav1Collapsed")
+													i.icon-share
+												span.__label Share : 
+												span 23
+												.t-share-opt(uib-collapse="!isNav1Collapsed") 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+													a(href="#") Share by Facebook
+													a(href="#") Share by Twitter
+													a(href="#") Share by LinkedIn
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link
+						.event-route-box
+								.row
+									.col-md-3.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											
+											.list-label
+												span e
+
+
+									.col-md-9.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.nr-title Lorem Ipsum is simply dummy text
+												.user-dtl-txt
+													p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...
+												.user-dtl-info-list
+													.row
+														.col-md-6.col-elg-4
+															ul.list-info
+																
+																li
+																	span.l-label Location
+																	span New York ,USA
+																li
+																	span.l-label Due Date
+																	span  24th June 2017
+																
+														.col-md-6.col-elg-4
+															ul.list-info
+																
+																li
+																	span.l-label Date created
+																	span 24th May 2016
+																li
+																	span.l-label Last updated
+																	span 24th May 2017
+																
+														.col-md-6.col-elg-4
+															
+															button.button.button-rounded.button-height-small.button-font-base-small.button-min-width.margin-bottom-2x  View
+															button.button.button-action.button-rounded.button-height-small.button-font-base-small.button-min-width  Show Interested People
+								.event-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span.__label Like : 
+												span 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span.__label Comments : 
+												span 40
+
+										li
+											
+											.t-interst
+												span.icon
+													i.icon-user-o 
+												span.__label Interested : 
+												span 23
+										li
+											.t-share
+												span.icon.pointer(ng-click="isNav2Collapsed  = !isNav2Collapsed")
+													i.icon-share
+												span.__label Share : 
+												span 23
+												.t-share-opt(uib-collapse="!isNav2Collapsed") 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+													a(href="#") Share by Facebook
+													a(href="#") Share by Twitter
+													a(href="#") Share by LinkedIn
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link

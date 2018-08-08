@@ -1,0 +1,685 @@
+    .b-dashboard-section {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        min-height: 100%;
+        @include josefinsansregular;
+        @include fontsize(16);
+        &.sidemini {
+            .b-sidebar {
+                width: 75px;
+                .profile-user-block {
+                    @include padding(20 10);
+                    .userimg {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .media-left {
+                        @include padding(0);
+                    }
+                    .user-dtl {
+                        display: none;
+                    }
+                }
+                .main-menu {
+                    & > ul {
+                        &> li {
+                            text-align: center;
+                            & > a {
+                                text-align: center;
+                                @include padding(20 0);
+                            }
+                            .menu-txt {
+                                display: block;
+                                margin-left: 0;
+                                @include font-size(15);
+                            }
+                        }
+                    }
+                }
+                .sizetoogle {
+                    @include rotate(180deg);
+                }
+                .logo-band {
+                    overflow: hidden;
+                }
+            }
+            .main-container {
+                @include margin-left(75);
+                .b-nav-bar {
+                    left: 75px;
+                }
+            }
+        }
+        .b-sidebar {
+            @include pos(fix, 0 null 0 0);
+            z-index: 800;
+            // @include transition(all 0.3s);
+            width: 300px;
+            height: 100%;
+            background-color: #1c1c1c;
+            display: $block;
+            float: left;
+            color: #ededec;
+            @include josefinsansregular;
+            @include fontsize(16);
+            .logo-band {
+                @include padding(10);
+                display: $block;
+                text-align: center;
+                background-color: $color01;
+            }
+            .profile-user-block {
+                @include padding(30 25);
+                @include border-bottom(1, solid, #3f3f3f);
+                .userimg {
+                    width: 70px;
+                    height: 70px;
+                    @include circle();
+                }
+                .user-dtl {
+                    h4 {
+                        color: #ededec;
+                        @include fontsize(20);
+                        @include josefinsansbold;
+                        @include padding-bottom(5);
+                    }
+                }
+                .list-inline {
+                    & > li {
+                        display: $inline;
+                        & > a {
+                            @include fontsize(20);
+                            color: #ededec;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .main-menu {
+        & > ul {
+            & > li {
+                &> a {
+                    @include padding(20);
+                    @include fontsize(20);
+                    @include josefinsansregular;
+                    color: #ededec;
+                    display: $block;
+                    @include border-bottom(1, solid, #3f3f3f);
+                    @include pos(rel, null);
+                    @include transition(all 0.3s);
+                    &:hover,
+                    &:focus {
+                        background-color: $color01;
+                        .menu-hover {
+                            opacity: 1;
+                        }
+                    }
+                    &.active {
+                        background-color: $color01;
+                        .menu-hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .menu-icon {
+                    vertical-align: middle;
+                    @include fontsize(30);
+                }
+                .menu-txt {
+                    @include margin-left(20);
+                }
+                .menu-hover {
+                    @include pos(ab, 0 null 0 0);
+                    width: 2px;
+                    background-color: $themecolor;
+                    opacity: 0;
+                    @include transition(all 0.3s);
+                }
+            }
+        }
+    }
+    
+    .sizetoogle {
+        width: 38px;
+        height: 38px;
+        background-color: $themecolor;
+        @include circle();
+        color: #ededec;
+        display: $block;
+        text-align: center;
+        @include transition(all 0.2s);
+        cursor: pointer;
+        @include pos(ab, 10px -15px 0 null);
+        z-index: 1000;
+        & > i {
+            @include fontsize(20);
+            line-height: 42px;
+        }
+        &:hover {
+            background-color: lighten($themecolor, 5%);
+        }
+    }
+    
+    .main-container {
+        min-height: 800px;
+        @include margin-left(300);
+        @include pos(rel, null);
+        .b-nav-bar {
+            background-color: $color02;
+            @include border-bottom(1, solid, #cccccc);
+            @include padding(0 15);
+            @include pos(fix, 0 0 null 300px);
+            z-index: 600;
+            .nav-notification {
+                @include margin-left(60);
+                & >li {
+                    display: $inline;
+                    & > a {
+                        @include padding(12 15);
+                        display: $block;
+                        color: $textcolor;
+                        @include fontsize(25);
+                        @include border-right(1, solid, #cccccc);
+                        @include pos(rel, null);
+                        .badge {
+                            background-color: $themecolor;
+                            @include pos(ab, 5px 8px null null);
+                            color: $color02;
+                        }
+                    }
+                }
+            }
+            .user-info {
+                text-align: right;
+                &> ul {
+                    &> li {
+                        @include padding(10 15);
+                        display: $inline;
+                        vertical-align: middle;
+                        @include pos(rel, null);
+                        & > a {
+                            color: $textcolor;
+                            &:hover {
+                                color: $themecolor;
+                            }
+                        }
+                        &:first-child {
+                            @include border-right(1, solid, #cccccc);
+                        }
+                    }
+                }
+                .search-div {
+                    @include border(1, solid, #fff);
+                    @include padding(0 10);
+                    input[type="text"] {
+                        background-color: transparent;
+                        width: 0px;
+                        height: 30px;
+                        float: left;
+                        opacity: 0;
+                        border: 0;
+                    }
+                    .search-icon {
+                        @include fontsize(25);
+                        cursor: pointer;
+                    }
+                }
+                .user-pic {
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        @include circle();
+                    }
+                }
+            }
+        }
+    }
+    
+    .breadcrumb-list {
+        @include margin-top(30);
+        li {
+            @include fontsize(18);
+            color: #a5a5a5;
+            span.active {
+                color: #444444;
+            }
+        }
+    }
+    
+    .main-content-wrapper {
+        @include padding(20);
+        @include margin-top(60);
+    }
+    
+    .profile-view {
+        .b-about-text {
+            @include padding-bottom(30);
+        }
+        .prorile-up-block {
+            text-align: center;
+            @include margin(30 0);
+            //@include padding(0 50);
+            img {
+                width: 110px;
+                height: 110px;
+                @include circle();
+                margin: 0 auto;
+            }
+            .fileUpload {
+                display: $inline;
+            }
+            .dropzone {
+                @include border(1, dashed, #dedede);
+                max-width: 300px;
+                margin: 0 auto;
+                min-height: inherit;
+                .dz-message {
+                    margin: 0;
+                }
+            }
+        }
+        .profile-dtl-content {
+            @include fontsize(20);
+            .profile-links {
+                @include margin-top(40);
+                & > ul {
+                    display: table;
+                    width: 100%;
+                    & > li {
+                        width: 50%;
+                        float: left;
+                        text-align: center;
+                        @include margin-bottom(30);
+                        .link-box {
+                            max-width: 250px;
+                            margin: 0 auto;
+                            @include padding(15);
+                            cursor: pointer;
+                            &:hover {
+                                background-color: #eff5ff;
+                            }
+                            h4 {
+                                @include fontsize(20);
+                                text-transform: $uppercase;
+                                @include josefinsansbold;
+                                @include margin-top(15);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .social-links {
+        ul {
+            li {
+                display: $inline;
+                @include margin-right(10);
+                a {
+                    color: #828282;
+                    @include fontsize(20);
+                    @include transition(all 0.2s);
+                    &:hover {
+                        color: $themecolor;
+                    }
+                }
+                &:last-child {
+                    @include margin-right(0);
+                }
+            }
+        }
+    }
+    
+    .t-field {
+        @include pos(rel, null);
+        @include margin-bottom(20);
+        .field-control {
+            border: 0;
+            @include padding(5 0);
+            @include border-bottom(1, solid, #d3d3d3);
+            width: 100%;
+            background-color: transparent;
+            @include fontsize(18);
+            @include open-regular;
+            height: 50px;
+            color: #5e5e5e;
+            &:focus {
+                border-color: $themecolor;
+            }
+        }
+        select.field-control {
+            @include padding-right(30);
+            text-overflow: ellipsis;
+        }
+        &.has-feedback {
+            .field-control {
+                @include padding-right(40);
+            }
+            .form-control-feedback {
+                pointer-events: auto;
+            }
+        }
+    }
+    
+    .line-heading {
+        @include border-bottom(1, solid, #cccccc);
+        @include margin-bottom(10);
+        @include padding-bottom(10);
+    }
+    
+    .tab-bar {
+        & > ul {
+            & > li {
+                display: $inline;
+                & > a {
+                    @include padding(15 25);
+                    display: $block;
+                    color: #888888;
+                    text-transform: $uppercase;
+                    @include fontsize(14);
+                    @include open-semibold;
+                    background-color: #e7e7e7;
+                }
+                &.active {
+                    a {
+                        background-color: $themecolor;
+                        color: $color02;
+                    }
+                }
+            }
+        }
+    }
+    
+    .delete-icon {
+        cursor: pointer;
+        color: $color01;
+        @include fontsize(25);
+    }
+    
+    .list-icon {
+        @include fontsize(25);
+        @include margin-left(10);
+        vertical-align: middle;
+        cursor: pointer;
+        &:hover {
+            color: $color01;
+        }
+    }
+    
+    .grid-icon {
+        @include fontsize(25);
+        @include margin-left(10);
+        vertical-align: middle;
+        cursor: pointer;
+        &:hover {
+            color: $color01;
+        }
+    }
+    
+    .pagnation-section {
+        .pagination {
+            li {
+                @include margin-left(5);
+                display: $inline;
+                a {
+                    color: $textcolor;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    
+    .filter-section {
+        @include open-regular;
+        .filter-top {
+            @include border-bottom(1, solid, $themecolor);
+            @include padding-bottom(10);
+            @include margin-top(30);
+            .breadcrumb-list {
+                @include margin-top(0);
+            }
+            .filter-menu {
+                float: right;
+                cursor: pointer;
+            }
+        }
+        .filter-options {
+            display: none;
+            .form-group {
+                @include margin-right(15);
+                @include fontsize(18);
+                @include margin-bottom(15);
+            }
+            .form-control {
+                @include border-round(2);
+                border-color: #dedede;
+                height: 40px;
+            }
+            select.form-control {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-image: url(#{$imgpath}caret.png);
+                background-position: right 10px center;
+                background-repeat: no-repeat;
+                @include padding-right(50);
+                line-height: inherit;
+                &::-ms-expand {
+                    display: none;
+                }
+            }
+        }
+        .price-range {
+            width: 300px;
+        }
+    }
+    
+    .list-view {
+        .table {
+            thead {
+                th {
+                    @include fontsize(18);
+                    color: $color01;
+                    @include josefinsansbold;
+                }
+            }
+            td {
+                @include padding(15 8);
+                vertical-align: middle;
+            }
+        }
+    }
+    
+    .grid-view {
+        .row {
+            @include margin(0 -7);
+            [class*="col-"] {
+                @include padding(0 7);
+            }
+        }
+        .g-w-box {
+            @include margin-bottom(20);
+            figure {
+                background-color: #ccc;
+                @include margin(0);
+                overflow: hidden;
+                @include fluid-ratio(2 1, img);
+                img {
+                    max-width: 100%;
+                }
+            }
+            figcaption {
+                @include margin-top(15);
+                @include fontsize(18);
+            }
+        }
+    }
+    
+    .message-view {
+        .p-cat-info {
+            figure {
+                background-color: #ccc;
+                @include margin(0);
+                overflow: hidden;
+                @include fluid-ratio(2 1, img);
+                @include border-round(5);
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        .chat-box {
+            .msgarea {
+                max-height: 200px;
+                @include padding-right(40);
+            }
+            @include margin-top(30);
+            color: #575858;
+            @include open-regular;
+            .umsg {
+                @include padding-right(80);
+            }
+            .media-left,
+            .media-right {
+                img {
+                    width: 80px;
+                    height: 80px;
+                    @include circle();
+                }
+            }
+            .fmsg {
+                @include padding-left(80);
+                text-align: right;
+            }
+            .media-body {
+                @include border-bottom(1, solid, #e7e6e6);
+                @include padding-bottom(10);
+            }
+            p {
+                @include fontsize(15);
+            }
+            .msg-info {
+                @include margin-bottom(10);
+                & > ul {
+                    li {
+                        display: $inline;
+                        @include open-semibold;
+                        @include fontsize(17);
+                        color: $color01;
+                        &.reply {
+                            @include margin-left(15);
+                            @include padding-left(15);
+                            @include border-left(1, solid, #a8a8a8);
+                        }
+                    }
+                }
+            }
+        }
+        .chat-box-row {
+            @include margin-bottom(20);
+        }
+        .chat-txt-area {
+            @include pos(rel, null);
+            @include margin-right(70);
+            @include margin-left(70);
+            @include margin-top(20);
+            .chat-field {
+                min-height: 40px;
+                max-height: 100px;
+                @include padding(8 90 8 40);
+            }
+            span {
+                @include pos(ab, 0 null 0 0);
+                @include fontsize(18);
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+            }
+            button {
+                background-color: transparent;
+                border: 0;
+                @include pos(ab, 0 20px null null);
+                @include ralway-regular;
+                height: 40px;
+                color: $themecolor;
+                .fa {
+                    @include fontsize(20);
+                    @include margin-right(5);
+                    color: #a8a8a8;
+                }
+            }
+        }
+        .message-pannel {
+            @include margin-bottom(40);
+            @include padding-bottom(40);
+            @include border-bottom(1, solid, #d8d8d8);
+            &:last-of-type{
+                border: 0;
+            }
+        }
+    }
+    
+    .cat-tabs {
+        @include border-bottom(1, solid, #d8d8d8);
+        @include margin(0 0 10);
+        ul {
+            & > li {
+                display: $inline;
+                @include margin-right(30);
+                & > a {
+                    color: #a8a8a8;
+                    @include padding( 0 0 15);
+                    display: $block;
+                    @include pos(rel, null);
+                    @include josefinsansbold;
+                    &:hover {
+                        color: #434343;
+                        &:after {
+                            @include pos(ab, null 5px 10px 5px);
+                            content: "";
+                            height: 1px;
+                            background-color: $themecolor;
+                        }
+                    }
+                }
+                &.active {
+                    a {
+                        color: #434343;
+                        &:after {
+                            @include pos(ab, null 5px 10px 5px);
+                            content: "";
+                            height: 1px;
+                            background-color: $themecolor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .product-detials {
+        & > ul {
+            & > li {
+                display: $inline;
+                @include margin-right(10);
+            }
+        }
+        span.label-field {
+            @include pos(rel, null);
+            @include padding-right(30);
+            &:after {
+                @include pos(ab, 50% 15px null null);
+                width: 5px;
+                height: 1px;
+                background-color: $themecolor;
+                content: "";
+                @include translatepos(-50%, 0);
+            }
+        }
+    }

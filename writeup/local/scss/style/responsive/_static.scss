@@ -1,0 +1,140 @@
+@include media("<=1200px") {
+    .contact-form-section {
+        .contact-form-box {
+            .contact-form {
+                @include padding(30);
+            }
+            .contact-info-list {
+                @include padding(30);
+            }
+        }
+    }
+}
+
+@include media("<=992px") {
+  .about-section {
+
+
+      .about-content-block {
+
+
+          .about-content-company__block {
+
+            .owl-nav
+            {
+              left:10px
+            }
+              .ab-company-txt
+              {
+                @include padding(30 0);
+              }
+          }
+      }
+  }
+}
+
+@include media("<=767px") {
+    .about-section {
+        @include padding(30 0 0);
+
+        .about-content-block {
+            @include margin-top(40);
+
+            .about-content-company__block {
+              // .owl-next
+              // {
+              //   @include pos(ab, 50% -20px null null);
+              //   @include translatepos(0, -50%);
+              //     @include margin-left(0);
+              // }
+              // .owl-prev
+              // {
+              //   @include pos(ab, 50% null null -20px);
+              //   @include translatepos(0, -50%);
+              //
+              // }
+                .ab-ceo-img {
+                    @include margin-bottom(20);
+                    img {
+                        height: auto;
+                    }
+                }
+
+                .ab-company-txt
+                {
+                  @include padding(20 0);
+                }
+            }
+        }
+    }
+    .contact-form-section {
+        @include margin-top(40);
+        .contact-form-box {
+            .contact-form {
+                display: $b;
+                width: 100%;
+            }
+            .contact-info-list {
+                display: $b;
+                width: 100%;
+            }
+        }
+    }
+    .terms-section {
+        @include padding-top(30);
+    }
+    .faq-section {
+        @include padding-top(30);
+    }
+    .page-content-section {
+        @include margin-top(40);
+    }
+
+    .faq-section {
+        .faq-list {
+            .panel {
+                .panel-heading {
+                    @include padding(10);
+                    .panel-title {
+                        @include fontsize(15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=479px") {
+
+    .about-section {
+
+
+        .about-content-block {
+
+            .about-content-team__block {
+                .team-list {
+                    [class^="col-"],
+                    [class*=" col-"] {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .faq-section {
+        .faq-list {
+            .panel {
+                .panel-heading {
+                    .panel-title {
+                        a {
+                            [class*="icon-"] {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

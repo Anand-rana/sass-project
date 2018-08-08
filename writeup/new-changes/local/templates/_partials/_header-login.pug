@@ -1,0 +1,65 @@
+header
+	
+	.header-section
+		.container
+			.row
+				.col-md-3.col-sm-2
+					a(href="#" class="logo")
+						img(src="images/logo.jpg" alt="img" class="img-responsive")
+
+				.col-md-9.col-sm-10
+					.nav-section
+						.main-nav
+							ul
+								li(data-ui-sref-active="active")
+									a(ui-sref="about") About
+								li(data-ui-sref-active="active")
+									a(ui-sref="contact") Contact
+								li
+									a(href="#") News
+								li(data-ui-sref-active="active")
+									a(ui-sref="leaderboard") Leaderboard
+								
+						
+
+						.main-user-nav
+							ul
+								li
+									.user-drop-down(ng-click="isNavCollapsed = !isNavCollapsed" ng-class="{'open':isNavCollapsed}")
+										img(src="images/user.jpg" alt="img")
+										span.caret
+									.user-drop-down-box(uib-collapse="!isNavCollapsed")
+										.user-opt-menu
+											ul
+												li
+													a(ui-sref="write-review") Write a review
+												li
+													a(ui-sref="profile") Profile
+												li
+													a(ui-sref="competitions") Competitions
+												li
+													a(ui-sref="subcription") Subscriptions
+													span.n-label  29
+										.logout-btn
+												ul
+													li
+														a(href="#") Logout
+								li(ng-class="{active: $state.is('notification')}")
+									.notfication-btn(ng-click="$state.go('notification')" )
+										i.icon-well
+										span.total 1
+								li(ng-class="{active: $state.is('search')}")
+									.search-btn(ng-click="$state.go('search')" )
+										i.icon-magnifier
+								
+
+						div(id="nav-icon3" class="nav-icon" data-ng-controller="MenuCtrl")
+							span
+							span
+							span 
+							span
+
+
+					
+
+				

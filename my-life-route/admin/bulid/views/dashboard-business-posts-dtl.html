@@ -1,0 +1,98 @@
+
+<div class="dashboard-business-section" data-ng-controller="pagedtlCtrl">
+  <div class="dashboard-business-stats-dtl">
+    <div class="heading-block">
+      <div class="row">
+        <div class="col-md-5">
+          <h2 class="title">New Store Opening</h2>
+        </div>
+        <div class="col-md-7">
+          <div class="text-right">
+            <button class="button button-business button-font-bold button-rounded margin-right-1x">View Stats</button>
+            <button class="button button-danger button-font-bold button-rounded margin-right-1x">Block</button>
+            <button class="button button-font-bold button-rounded margin-right-1x">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-dtl-box">
+      <div class="__inner-content">
+        <div class="page-dtl__info">
+          <div class="media">
+            <div class="media-left">
+              <div class="page-dtl__img"><img src="images/b-page.jpg" alt="img"/></div>
+            </div>
+            <div class="media-body">
+              <div class="page-dtl__name">
+                <h3>Merchant Store</h3><span class="time">8 hrs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-dtl__text">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text is these when an unnown py qwe gth  isps  took a galley tia smx okoxt of the printing and typesetting industry. Lorem smx okoxt of the printing and typesetting</p>
+        </div>
+        <div class="page-dtl__main-img"><img class="img-responsive pointer" src="images/store-img.jpg" alt="img" ng-click="mainpopup()"/></div>
+        <div class="page-dtl__other-info">
+          <ul>
+            <li><span class="__label">Location :</span> New York ,USA</li>
+            <li><span class="__label">Date created  : </span> 24th May 2016</li>
+            <li><span class="__label">Last updated  :</span> 24th May 2017</li>
+          </ul>
+        </div>
+        <div class="page-dtl__share-info">
+          <ul>
+            <li><span class="ico t-liked"><i class="icon-thumb"> </i></span><span>Like : 500</span></li>
+            <li><span class="ico t-comment"><i class="icon-comment"> </i></span><span>Comments : 40</span></li>
+            <li><span class="ico t-share"><i class="icon-share"> </i></span><span>Share : 23</span></li>
+          </ul>
+        </div>
+        <div class="page-dtl__comment-block">
+          <div class="page-dtl__comment-row">
+            <div class="page-dtl__comment-box">
+              <div class="media">
+                <div class="media-left">
+                  <div class="usr-pic"><img src="images/user.jpg" alt="img"/></div>
+                </div>
+                <div class="media-body">
+                  <div class="page-dtl__comment-msg">
+                    <div class="comment-msg__top">
+                      <div class="comment-mg__usr-info">
+                        <div class="usr-name">
+                          <h4>Bryan Linquist CIA, CFE  </h4>
+                        </div>
+                        <div class="usr-profile">
+                          <h4>Chief Audit Exceutive</h4>
+                        </div>
+                      </div>
+                      <div class="comment-mg__usr__opt">
+                        <div class="ico" ng-click="isoptCollapsed1 = !isoptCollapsed1"><i class="icon-dots-ellips"></i>
+                          <div class="drop-box" uib-collapse="!isoptCollapsed1"><span ng-controller="ModalCtrl" ng-click="report()">Report</span></div>
+                        </div><span class="time">11:22 pm	</span>
+                      </div>
+                    </div>
+                    <p> Lorem Ipsum is simply dummy text of the pgand typesetting industry. Lorem Ipsum has if been the industry's standard  dummy text the ever since the 1500s, when an unknown text printer took a galley tially unchanged...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list-label b-list-label"><span>b</span></div>
+      <div class="page-dtl-overlay">
+        <div class="close-ico" ng-click="mainpopupclose()"><span><i class="icon-close-o"></i></span></div>
+        <div class="page-dtl-overlay-container">
+          <div class="page-dtl-overlay-slider">
+            <ng-owl-carousel class="owl-theme" owl-items="items" owl-properties="properties" owl-ready="ready($api)">
+              <div class="item" data-ng-repeat="item in items">
+                <figure><img src="images/store-img.jpg" alt="img"/></figure>
+              </div>
+            </ng-owl-carousel>
+            <div class="customnav" id="customnav"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

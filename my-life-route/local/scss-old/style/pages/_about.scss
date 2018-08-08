@@ -1,0 +1,27 @@
+.about-section {
+    @include padding(100 0 50);
+    .heading-block {
+        @include border-bottom(1, solid, lighten($theme, 30%));
+        @include padding-bottom(10);
+
+        h3 {
+            @include fontsize(30);
+            font-weight: 400;
+            color: $theme;
+        }
+    }
+
+    .page-content {
+        @include margin-top(60);
+
+        @include fontsize(16);
+        color: $color-text-02;
+        font-weight: 300;
+
+        h4 {
+            @include padding-bottom(15);
+            @include fontsize(22);
+            font-weight: 400;
+        }
+    }
+}

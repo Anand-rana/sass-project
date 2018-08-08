@@ -1,0 +1,500 @@
+
+<div class="main-feed-section" data-ng-controller="sideCtrl">
+  <div class="side-backdrop hidden"></div>
+  <div class="sp-btn" data-ng-click="sidemenu()"><span>Show Profile</span></div>
+  <div class="container">
+    <div class="main-feed-option">
+      <div class="m-feed-opt-block"><a data-ui-sref="create-liferoute-step-1">
+          <div class="icon-box"><img src="images/create-liferoute.png" alt="img"/>
+            <div class="add-icon"><i class="icon-plus"></i></div>
+          </div>
+          <figcaption>
+            <h3>Create <span>LIFEROUTE</span></h3>
+          </figcaption></a></div>
+      <div class="m-feed-opt-block"><a data-ui-sref="create-news">
+          <div class="icon-box"><img src="images/create-news.png" alt="img"/>
+            <div class="add-icon c-1"><i class="icon-plus"></i></div>
+          </div>
+          <figcaption>
+            <h3>Create <span>news</span></h3>
+          </figcaption></a></div>
+      <div class="m-feed-opt-block"><a data-ui-sref="create-event">
+          <div class="icon-box"><img src="images/create-event.png" alt="img"/>
+            <div class="add-icon c-2"><i class="icon-plus"></i></div>
+          </div>
+          <figcaption>
+            <h3>Create <span>event</span></h3>
+          </figcaption></a></div>
+    </div>
+    <div class="main-feed-data" data-ng-controller="mainfeedCtrl">
+      <div class="user-dtl-block">
+        <div class="user-dtl-block-container">
+          <div class="user-dtl-box">
+            <div class="user-pic"><img src="images/profile-3.jpg" alt="img"/></div>
+            <div class="user-name">
+              <h3>Mahmood Choudhury</h3>
+            </div>
+            <div class="user-profile">
+              <h3>Entrepreneur</h3>
+            </div>
+            <div class="user-other-dtl-list">
+              <ul>
+                <li>
+                  <div class="t-cell icon-label"><span class="icon"><i class="icon-user"></i></span></div>
+                  <div class="t-cell"><span>22 Years Old</span></div>
+                </li>
+                <li>
+                  <div class="t-cell icon-label"><span class="icon"><i class="icon-marker"></i></span></div>
+                  <div class="t-cell"><span>London, United Kingdom</span></div>
+                </li>
+                <li>
+                  <div class="t-cell icon-label"><span class="icon"><i class="icon-phone"></i></span></div>
+                  <div class="t-cell"><span>+999-123-4567	</span></div>
+                </li>
+                <li>
+                  <div class="t-cell icon-label"><span class="icon"><i class="icon-cap"></i></span></div>
+                  <div class="t-cell"><span>Postgraduate</span></div>
+                </li>
+                <li>
+                  <div class="t-cell icon-label"><span class="icon"><i class="icon-web"></i></span></div>
+                  <div class="t-cell"><span>www.myliferoute.com</span></div>
+                </li>
+              </ul>
+            </div>
+            <div class="edit-icon"><a href="#"><i class="icon-edit"></i></a></div>
+            <div class="close-icon visible-xs" data-ng-click="closemenu()"><i class="icon-close-o"></i></div>
+          </div>
+          <div class="margin-top-2x margin-bottom-2x">
+            <button class="button button-green button-rounded button-font-base button-height-large button-font-medium button-font-medium-txt button-block" ng-controller="ModalCtrl" ng-click="workhistory()">View Work History<span class="button-btn-icon"><i class="icon-arrow-right"> </i></span></button>
+          </div>
+          <div class="user-dtl-box">
+            <div class="user-work-dtl-list">
+              <ul>
+                <li>
+                  <div class="t-cell label-name"><span class="icon"><i class="icon-route"> </i></span><span>Liferoutes :</span></div>
+                  <div class="t-cell text-right"><span>22</span></div>
+                </li>
+                <li>
+                  <div class="t-cell label-name"><span class="icon"><i class="icon-news"> </i></span><span>News posted :</span></div>
+                  <div class="t-cell text-right"><span>12</span></div>
+                </li>
+                <li>
+                  <div class="t-cell label-name"><span class="icon"><i class="icon-connection"> </i></span><span>Connections :</span></div>
+                  <div class="t-cell text-right"><span>22</span></div>
+                </li>
+                <li>
+                  <div class="t-cell label-name"><span class="icon"><i class="icon-follow"> </i></span><span>Followers :</span></div>
+                  <div class="t-cell text-right"><span>12</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-9">
+          <div class="main-feed-list">
+            <div class="m-feed-box">
+              <div class="l-route-box">
+                <div class="row">
+                  <div class="col-md-3 col-sm-4 col-lg-3">
+                    <div class="user-p-info">
+                      <div class="user-img"><img src="images/user.jpg" alt="img"/></div>
+                      <div class="user-name">
+                        <h3>James Young</h3>
+                      </div>
+                      <div class="user-profile">
+                        <h4>UI Designer</h4>
+                      </div>
+                      <div class="list-label"><span>LR</span></div>
+                    </div>
+                  </div>
+                  <div class="col-md-9 col-sm-8 col-lg-9">
+                    <div class="user-dtl">
+                      <div class="user-dtl-info">
+                        <h3 class="r-title">Lorem Ipsum is simply dummy text</h3>
+                        <div class="user-dtl-info-list">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <ul class="list-info">
+                                <li><span class="l-label">From </span><span>Associate</span></li>
+                                <li><span class="l-label">To </span><span>Consultant</span></li>
+                                <li><span class="l-label">Location </span><span>New York ,USA</span></li>
+                                <li><span class="l-label">Steps </span><span>7</span></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <ul class="list-info">
+                                <li><span class="l-label">Duration  </span><span>27 Months</span></li>
+                                <li><span class="l-label">Date created  </span><span>24th May 2016</span></li>
+                                <li><span class="l-label">Last updated </span><span>24th May 2017</span></li>
+                                <li><span class="l-label">Total Cost </span><span>&pound;70,000</span></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="user-status-info">
+                                <h2>Status</h2>
+                                <div class="status-rep">
+                                  <h3 class="cmp">Completed</h3>
+                                </div>
+                                <div class="margin-top-4x">
+                                  <button class="button button-rounded button-font-medium button-height-large button-min-width-small" ng-click="$state.go('life-route-dtl')"> View</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="r-bottom-block">
+                  <ul>
+                    <li>
+                      <div class="t-videos"><span class="icon"><i class="icon-play-btn"></i></span><span>6</span></div>
+                      <div class="t-img"><span class="icon"><i class="icon-file"></i></span><span>8</span></div>
+                    </li>
+                    <li>
+                      <div class="t-likes"><span class="icon"><i class="icon-thumb"></i></span><span class="__label">Like : </span><span>500</span></div>
+                    </li>
+                    <li>
+                      <div class="t-coments"><span class="icon"><i class="icon-comment"></i></span><span class="__label">Comments : </span><span>40</span></div>
+                    </li>
+                    <li>
+                      <div class="t-follower"><span class="icon"><i class="icon-user-group"></i></span><span class="__label">Followers : </span><span>900</span></div>
+                    </li>
+                    <li>
+                      <div class="t-share"><span class="icon pointer" ng-click="isNavCollapsed  = !isNavCollapsed"><i class="icon-share"></i></span><span class="__label">Share : </span><span>23</span>
+                        <div class="t-share-opt" uib-collapse="!isNavCollapsed"> <a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareroute()">Share by Myliferoute</a><a href="#">Share by Facebook</a><a href="#">Share by Twitter</a><a href="#">Share by LinkedIn</a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareemail()">Share by Email </a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="copy()">Copy Link</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="m-feed-box">
+              <div class="posted-time"><span>Albert Smith Posted News - </span><span class="time">2 Min Ago</span></div>
+              <div class="news-route-box">
+                <div class="row">
+                  <div class="col-md-3 col-sm-4 col-lg-3">
+                    <div class="user-p-info">
+                      <div class="user-img"><img src="images/user.jpg" alt="img"/></div>
+                      <div class="user-name">
+                        <h3>James Young</h3>
+                      </div>
+                      <div class="list-label"><span>n</span></div>
+                    </div>
+                  </div>
+                  <div class="col-md-9 col-sm-8 col-lg-9">
+                    <div class="user-dtl">
+                      <div class="user-dtl-info">
+                        <h3 class="nr-title">Lorem Ipsum is simply dummy text</h3>
+                        <div class="user-dtl-txt">
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...</p>
+                        </div>
+                        <div class="user-dtl-info-list">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <ul class="list-info">
+                                <li><span class="l-label">Location</span><span>New York ,USA</span></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <ul class="list-info">
+                                <li><span class="l-label">Date created</span><span>24th May 2016</span></li>
+                                <li><span class="l-label">Last updated</span><span>24th May 2017</span></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="margin-top-3x">
+                                <button class="button button-rounded button-font-medium button-height-large button-min-width-small" ng-click="$state.go('news-route-dtl')"> View</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nr-bottom-block">
+                  <ul>
+                    <li>
+                      <div class="t-videos"><span class="icon"><i class="icon-play-btn"></i></span><span>6</span></div>
+                      <div class="t-img"><span class="icon"><i class="icon-file"></i></span><span>8</span></div>
+                    </li>
+                    <li>
+                      <div class="t-likes"><span class="icon"><i class="icon-thumb"></i></span><span class="__label">Like : </span><span>500</span></div>
+                    </li>
+                    <li>
+                      <div class="t-coments"><span class="icon"><i class="icon-comment"></i></span><span class="__label">Comments : </span><span>40</span></div>
+                    </li>
+                    <li>
+                      <div class="t-follower"><span class="icon"><i class="icon-user-group"></i></span><span class="__label">Followers : </span><span>900</span></div>
+                    </li>
+                    <li>
+                      <div class="t-share"><span class="icon pointer" ng-click="isNav1Collapsed  = !isNav1Collapsed"><i class="icon-share"></i></span><span class="__label">Share : </span><span>23</span>
+                        <div class="t-share-opt" uib-collapse="!isNav1Collapsed"> <a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareroute()">Share by Myliferoute</a><a href="#">Share by Facebook</a><a href="#">Share by Twitter</a><a href="#">Share by LinkedIn</a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareemail()">Share by Email </a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="copy()">Copy Link</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="m-feed-box">
+              <div class="posted-time"><span>Albert Smith Posted News - </span><span class="time">2 Min Ago</span></div>
+              <div class="news-route-box">
+                <div class="row">
+                  <div class="col-md-3 col-sm-4 col-lg-3">
+                    <div class="user-p-info">
+                      <div class="user-img"><img src="images/user.jpg" alt="img"/></div>
+                      <div class="user-name">
+                        <h3>James Young</h3>
+                      </div>
+                      <div class="list-label"><span>n</span></div>
+                    </div>
+                  </div>
+                  <div class="col-md-9 col-sm-8 col-lg-9">
+                    <div class="user-dtl">
+                      <div class="user-dtl-info">
+                        <h3 class="nr-title">Lorem Ipsum is simply dummy text</h3>
+                        <div class="user-dtl-txt">
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...</p>
+                        </div>
+                        <div class="user-dtl-info-list">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <ul class="list-info">
+                                <li><span class="l-label">Location</span><span>New York ,USA</span></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <ul class="list-info">
+                                <li><span class="l-label">Date created</span><span>24th May 2016</span></li>
+                                <li><span class="l-label">Last updated</span><span>24th May 2017</span></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="margin-top-3x">
+                                <button class="button button-rounded button-font-medium button-height-large button-min-width-small" ng-click="$state.go('news-route-dtl')"> View</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nr-bottom-block">
+                  <ul>
+                    <li>
+                      <div class="t-videos"><span class="icon"><i class="icon-play-btn"></i></span><span>6</span></div>
+                      <div class="t-img"><span class="icon"><i class="icon-file"></i></span><span>8</span></div>
+                    </li>
+                    <li>
+                      <div class="t-likes"><span class="icon"><i class="icon-thumb"></i></span><span class="__label">Like : </span><span>500</span></div>
+                    </li>
+                    <li>
+                      <div class="t-coments"><span class="icon"><i class="icon-comment"></i></span><span class="__label">Comments : </span><span>40</span></div>
+                    </li>
+                    <li>
+                      <div class="t-follower"><span class="icon"><i class="icon-user-group"></i></span><span class="__label">Followers : </span><span>900</span></div>
+                    </li>
+                    <li>
+                      <div class="t-share"><span class="icon pointer" ng-click="isNav2Collapsed  = !isNav2Collapsed"><i class="icon-share"></i></span><span class="__label">Share : </span><span>23</span>
+                        <div class="t-share-opt" uib-collapse="!isNav2Collapsed"> <a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareroute()">Share by Myliferoute</a><a href="#">Share by Facebook</a><a href="#">Share by Twitter</a><a href="#">Share by LinkedIn</a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareemail()">Share by Email </a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="copy()">Copy Link </a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="m-feed-box">
+              <div class="posted-time"><span>Albert Smith Posted News - </span><span class="time">2 Min Ago</span></div>
+              <div class="event-route-box">
+                <div class="row">
+                  <div class="col-md-3 col-sm-4 col-lg-3">
+                    <div class="user-p-info">
+                      <div class="user-img"><img src="images/user.jpg" alt="img"/></div>
+                      <div class="user-name">
+                        <h3>James Young</h3>
+                      </div>
+                      <div class="list-label"><span>e</span></div>
+                    </div>
+                  </div>
+                  <div class="col-md-9 col-sm-8 col-lg-9">
+                    <div class="user-dtl">
+                      <div class="user-dtl-info">
+                        <h3 class="nr-title">Lorem Ipsum is simply dummy text</h3>
+                        <div class="user-dtl-txt">
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...</p>
+                        </div>
+                        <div class="user-dtl-info-list">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <ul class="list-info">
+                                <li><span class="l-label">Location</span><span>New York ,USA</span></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <ul class="list-info">
+                                <li><span class="l-label">Date created</span><span>24th May 2016</span></li>
+                                <li><span class="l-label">Last updated</span><span>24th May 2017</span></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="margin-top-3x">
+                                <button class="button button-rounded button-font-medium button-height-large button-min-width-small" ng-click="$state.go('events-route-dtl')"> View</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-bottom-block">
+                  <ul>
+                    <li>
+                      <div class="t-videos"><span class="icon"><i class="icon-play-btn"></i></span><span>6</span></div>
+                      <div class="t-img"><span class="icon"><i class="icon-file"></i></span><span>8</span></div>
+                    </li>
+                    <li>
+                      <div class="t-likes"><span class="icon"><i class="icon-thumb"></i></span><span class="__label">Like : </span><span>500</span></div>
+                    </li>
+                    <li>
+                      <div class="t-coments"><span class="icon"><i class="icon-comment"></i></span><span class="__label">Comments : </span><span>40</span></div>
+                    </li>
+                    <li>
+                      <div class="t-interst"><span class="icon"><i class="icon-user-o"> </i></span><span class="__label">Interested : </span><span>23</span></div>
+                    </li>
+                    <li>
+                      <div class="t-share"><span class="icon pointer" ng-click="isNav3Collapsed  = !isNav3Collapsed"><i class="icon-share"></i></span><span class="__label">Share : </span><span>23</span>
+                        <div class="t-share-opt" uib-collapse="!isNav3Collapsed"> <a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareroute()">Share by Myliferoute</a><a href="#">Share by Facebook</a><a href="#">Share by Twitter</a><a href="#">Share by LinkedIn</a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareemail()">Share by Email </a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="copy()">Copy Link</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="m-feed-box">
+              <div class="posted-time"><span>Albert Smith Posted News - </span><span class="time">2 Min Ago</span></div>
+              <div class="event-route-box">
+                <div class="row">
+                  <div class="col-md-3 col-sm-4 col-lg-3">
+                    <div class="user-p-info">
+                      <div class="user-img"><img src="images/user.jpg" alt="img"/></div>
+                      <div class="user-name">
+                        <h3>James Young</h3>
+                      </div>
+                      <div class="list-label"><span>e</span></div>
+                    </div>
+                  </div>
+                  <div class="col-md-9 col-sm-8 col-lg-9">
+                    <div class="user-dtl">
+                      <div class="user-dtl-info">
+                        <h3 class="nr-title">Lorem Ipsum is simply dummy text</h3>
+                        <div class="user-dtl-txt">
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...</p>
+                        </div>
+                        <div class="user-dtl-info-list">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <ul class="list-info">
+                                <li><span class="l-label">Location</span><span>New York ,USA</span></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <ul class="list-info">
+                                <li><span class="l-label">Date created</span><span>24th May 2016</span></li>
+                                <li><span class="l-label">Last updated</span><span>24th May 2017</span></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="margin-top-3x">
+                                <button class="button button-rounded button-font-medium button-height-large button-min-width-small" ng-click="$state.go('events-route-dtl')"> View</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-bottom-block">
+                  <ul>
+                    <li>
+                      <div class="t-videos"><span class="icon"><i class="icon-play-btn"></i></span><span>6</span></div>
+                      <div class="t-img"><span class="icon"><i class="icon-file"></i></span><span>8</span></div>
+                    </li>
+                    <li>
+                      <div class="t-likes"><span class="icon"><i class="icon-thumb"></i></span><span class="__label">Like : </span><span>500</span></div>
+                    </li>
+                    <li>
+                      <div class="t-coments"><span class="icon"><i class="icon-comment"></i></span><span class="__label">Comments : </span><span>40</span></div>
+                    </li>
+                    <li>
+                      <div class="t-interst"><span class="icon"><i class="icon-user-o"> </i></span><span class="__label">Interested : </span><span>23</span></div>
+                    </li>
+                    <li>
+                      <div class="t-share"><span class="icon pointer" ng-click="isNav4Collapsed  = !isNav4Collapsed"><i class="icon-share"></i></span><span class="__label">Share : </span><span>23</span>
+                        <div class="t-share-opt" uib-collapse="!isNav4Collapsed"> <a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareroute()">Share by Myliferoute</a><a href="#">Share by Facebook</a><a href="#">Share by Twitter</a><a href="#">Share by LinkedIn</a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareemail()">Share by Email </a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="copy()">Copy Link</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="main-side-block">
+            <div class="invite-other-block">
+              <button class="button-invite" ng-controller="ModalCtrl" ng-click="invite()"><span class="ico"><i class="icon-user-group-o"></i></span>Invite Others</button>
+            </div>
+            <div class="user-activity-block">
+              <div class="u-activity-header">
+                <h3>Popular User Activity</h3>
+              </div>
+              <div class="u-activity-list">
+                <ul>
+                  <li>500000 Users are talking about these Liferoutes <a href="#">View Post</a></li>
+                  <li>500000 Users are talking about these Liferoutes <a href="#">View Post</a></li>
+                  <li>500000 Users are talking about these Liferoutes <a href="#">View Post</a></li>
+                  <li>500000 Users are talking about these Liferoutes <a href="#">View Post</a></li>
+                  <li>500000 Users are talking about these Liferoutes <a href="#">View Post</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="recomend-block">
+              <h3>Recommended For You</h3>
+              <div class="recomend-slider" data-ng-controller="reCtrl">
+                <ng-owl-carousel class="owl-theme" owl-items="items" owl-properties="properties" owl-ready="ready($api)">
+                  <div class="item" data-ng-repeat="item in items">
+                    <figure><img src="images/slide-1.jpg" alt="img"/>
+                      <figcaption>
+                        <h4>Business Formula's</h4>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </ng-owl-carousel>
+                <div class="margin-top-2x text-center"><a class="button button-small button-rounded button-black" data-ui-sref="page-adverts-all">View All</a></div>
+              </div>
+              <div class="recomend-slider margin-top-5x" data-ng-controller="reCtrl">
+                <ng-owl-carousel class="owl-theme" owl-items="items" owl-properties="properties" owl-ready="ready($api)">
+                  <div class="item" data-ng-repeat="item in items">
+                    <figure><img src="images/slide-1.jpg" alt="img"/>
+                      <figcaption>
+                        <h4>Business Formula's</h4>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </ng-owl-carousel>
+                <div class="margin-top-2x text-center"><a class="button button-small button-rounded button-black" data-ui-sref="page-adverts-all">View All</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,123 @@
+<div class="main-header is-g-border">
+  <div class="container">
+    <div class="header">
+      <div class="row">
+        <div class="col-md-3"><a ui-sref="home" class="logo"><img src="images/logo.png" alt="logo" class="img-reponsive"/></a>
+        <div id="nav-icon1" class="visible-xs" ng-controller="MenuCtrl" >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="nav_bar">
+          <ul>
+            <li><a href="#" title="">Listing</a></li>
+            <li><a href="#" title="">Our Guarantee</a></li>
+            <li><a href="#" title="">about us</a></li>
+            <li><a href="#" title="">help</a></li>
+            <li><a href="javascript:void(0);" title="" class="nav_bar__callbtn" ng-click="isrCollapsed = !isrCollapsed">Request Callback</a>
+            <div class="r-popup-container" uib-collapse="!isrCollapsed">
+              <div class="r-popup">
+                <button class="close-ico visible-xs" type="button" ng-click="isrCollapsed =false"><i class="icon-cancel"></i></button>
+                <form class="form-horizontal">
+                  <div class="r-form">
+                    
+                    <div class="r-error col-sm-offset-3"><div class="msg-error">Your name required</div></div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Name</label>
+                      <div class="col-sm-10">
+                        <div class="r-field">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Email</label>
+                      <div class="col-sm-10">
+                        <div class="r-field">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Number</label>
+                      <div class="col-sm-10">
+                        <div class="r-field">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="r-btn-section">
+                    <button class="r_btn">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </li>
+          <li><a href="#" title="" class="nav_bar__callbtn">inbox</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--main-contanier-->
+<div class="main-block">
+<div class="msg-section">
+<div class="container">
+  <div class="msg-dtl">
+    <h4 class="o-s-bold"><a href="#" class="text-theme">&larr; Back to Inbox</a></h4>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="user-dtl">
+          <div class="user-img">
+            <img src="images/agentuser.jpg" alt="user"/>
+            <h5 class="o-s-bold margin-top-3x margin-bottom-2x">Andy smith</h5>
+            <button class="button button-rounded button-medium button-uppercase ">View Profile</button>
+            <hr/>
+            <div class="margin-top-4x">
+              <p class="o-s-bold margin-bottom-2x">Lot: EH5378</p>
+              <button class="button button-rounded button-medium button-uppercase ">View lot</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="msg-view-dtl" ng-scrollbars >
+          <div class="msg-view">
+            <div class="msg-view__box f-msg">
+              <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets</p>
+              <div class="msg-p__date o-s-bold">31 May 2016,  02:47PM</div>
+            </div>
+            <div class="msg-view__box u-msg">
+              <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets</p>
+              <div class="msg-p__date o-s-bold">31 May 2016,  02:47PM</div>
+            </div>
+            <div class="msg-view__box f-msg">
+              <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets</p>
+              <div class="msg-p__date o-s-bold">31 May 2016,  02:47PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="msg-text-s">
+          <textarea msd-elastic ng-model="foo" class="form-control"></textarea>
+          <div class="text-right margin-top-3x">
+            <div class="fileUpload padding-right-4x v-middle">
+              <span> Attach a file <i class="icon-link"></i> </span>
+              <input id="uploadBtn" class="upload" type="file">
+            </div>
+            <button class="button button-medium button-uppercase button-rounded v-middle">Send</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--end-main-contanier-->

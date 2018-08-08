@@ -1,0 +1,15 @@
+.b-box {
+    @include border(1, solid, #e1e3e5);
+}
+
+.questionry__content {
+    @include padding(25 15);
+
+    & > h4 {
+        @include fontsize(20);
+
+        @include open-semibold;
+
+        @include margin-bottom(30);
+    }
+}

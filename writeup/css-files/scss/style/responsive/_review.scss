@@ -1,0 +1,119 @@
+@include media("<=992px") {
+
+    .read-review-block {
+        .r-review-dtl {
+            @include padding(30);
+
+            &>.row {
+                @include margin-left(-15);
+                @include margin-right(-15);
+                &>[class^="col-"] {
+                    @include padding-left(15);
+                    @include padding-right(15);
+                }
+            }
+        }
+        .r-reply-section {
+            .r-reply-cotainer {
+                @include padding(30);
+            }
+        }
+        .r-other-section {
+            .r-other-cotainer {
+                @include padding(30);
+            }
+        }
+    }
+
+    .write-review-block {
+        .write-review-block__form {
+            &>.row {
+                @include margin-left(-15);
+                @include margin-right(-15);
+                &>[class^="col-"] {
+                    @include padding-left(15);
+                    @include padding-right(15);
+                }
+            }
+
+            .write-review-block-form-box {
+                .field-group {
+                    .file-field {
+                        .fileUpload {
+                            width: 70px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+    .all-review-block {
+        .all-review-header {
+            @include padding(20 30 20 20);
+
+            .close-ico {
+                right: 15px;
+            }
+        }
+        .all-review-list {
+            @include padding(30 20);
+        }
+    }
+
+    .read-review-block {
+        @include margin-top(40);
+        .r-review-dtl {
+            @include padding(30);
+
+            .r-rating-list {
+                max-width: 250px;
+                margin: 25px auto 0;
+            }
+            .r-user-block {
+                text-align: center;
+
+                .r-img {
+                    img {
+                        display: $ib;
+                    }
+                }
+            }
+            .r-review-info {
+                .r-review-txt {
+                    .review-opt {
+                        ul
+                        {
+                            li.report-ico
+                            {
+                                float: none;
+                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .write-review-block {
+        .write-review-block__form {
+            @include padding(30);
+            .r-user-block {
+                text-align: center;
+
+                .r-img {
+                    img {
+                        display: $ib;
+                    }
+                }
+            }
+            .r-rating-list {
+                max-width: 250px;
+                margin: 25px auto 0;
+            }
+        }
+    }
+}

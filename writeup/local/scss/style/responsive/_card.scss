@@ -1,0 +1,25 @@
+@include media("<=767px") {
+    .card-block {
+        @include margin-top(40);
+        .card-block-content {
+            @include padding(40 30 50); 
+            .card-list {
+                .s-card-box {
+                    .s-card-dtl {
+                        ul {
+                            li {
+                                width: 100%;
+                                display: $b;
+                                @include margin-bottom(10);
+
+                                &.text-right {
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+ .dashboard-notification-section {
+     .notification-list {
+         @include margin-top(50);
+
+         .media {
+             @include padding(15 0);
+             @include margin(0);
+             @include border-bottom(1, solid, lighten(#d7d7d7, 10%));
+             .user-pic {
+                 img {
+                     width: 60px;
+                     height: 60px;
+                     @include circle;
+                     object-fit: cover;
+                 }
+             }
+
+             .n-txt {
+                 p {
+                     font-weight: 300;
+                     @include fontsize(16);
+                     color: $black;
+                 }
+                 .p-time {
+                     font-weight: 300;
+                     @include fontsize(13);
+                     color: lighten($color-text-02, 10%);
+                 }
+             }
+
+             .media-left {
+                 @include padding-right(25);
+             }
+             .media-left,
+             .media-right,
+             .media-body {
+                 vertical-align: middle;
+             }
+
+             &:first-child {
+                 @include padding-top(0);
+             }
+         }
+     }
+ }

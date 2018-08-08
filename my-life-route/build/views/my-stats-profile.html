@@ -1,0 +1,61 @@
+
+<div class="my-stats-section">
+  <div class="container">
+    <div class="heading-block">
+      <div class="breadcrumb-list">
+        <ul>
+          <li><span>My Stats </span></li>
+          <li><span class="active"> My Profile</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="__inner-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="stats-nav__list">
+            <ul>
+              <li><a data-ui-sref="my-stats" data-ui-sref-active="active">My Life Routes</a></li>
+              <li><a data-ui-sref="my-stats-news" data-ui-sref-active="active">My News (76 )</a></li>
+              <li><a data-ui-sref="my-stats-events" data-ui-sref-active="active">My Events (88)</a></li>
+              <li><a data-ui-sref="my-stats-connection" data-ui-sref-active="active">My Connections (68)</a></li>
+              <li><a data-ui-sref="my-stats-profile" data-ui-sref-active="active">My Profile</a></li>
+              <li><a data-ui-sref="my-stats-message " data-ui-sref-active="active">My Messages (45)</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="m-stats__data-container">
+            <div class="m-stats__profile">
+              <div class="m-stats-route-box">
+                <h3>My Profile</h3>
+                <div class="m-stats-route__result" data-ng-controller="routeresultCtrl">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <ul class="t-result-list">
+                        <li class="list-dot list-dot-g"><span class="__t-no">188</span><span>My Followers</span></li>
+                        <li class="list-dot"><span class="__t-no">323</span><span>Users I am Following</span></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-5"> 
+                      <canvas class="chart chart-pie" id="pie" chart-data="data" chart-labels="labels" chart-options="options" chart-dataset-override="datasetOverride"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-stats__oth-info-container">
+                <div class="m-stats__info-block">
+                  <h3>200</h3>
+                  <h5>Activity Count</h5>
+                </div>
+                <div class="m-stats__info-block">
+                  <h3>200</h3>
+                  <h5>Share Count</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

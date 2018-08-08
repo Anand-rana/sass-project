@@ -1,0 +1,90 @@
+.form-section {
+    @include padding(120 0);
+    .form-container {
+        max-width: 930px;
+        margin: 0 auto;
+        @include josefinsansregular;
+    }
+}
+
+.login-form-section {
+    @include fontsize(20);
+    .sign-link {
+        text-align: right;
+        a {
+            @include fontsize(24);
+            text-transform: $uppercase;
+            color: $color01;
+            @include josefinsansbold;
+            &:hover {
+                color: $themecolor;
+            }
+        }
+    }
+}
+
+.c-field {
+    @include pos(rel, null);
+    @include margin-bottom(70);
+    .field-control {
+        border: 0;
+        @include padding(5 0);
+        @include border-bottom(1, solid, #d3d3d3);
+        width: 100%;
+        background-color: transparent;
+        @include fontsize(16);
+        @include josefinsansregular;
+        @include fontsize(20);
+        height: 50px;
+        &:focus {
+            border-color: $themecolor;
+        }
+    }
+    &.field-feedback {
+        .field-control {
+            @include padding-left(60);
+        }
+        .field-group-addon {
+            @include pos(ab, 0 null null 0);
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            @include fontsize(35);
+            color: $color01;
+        }
+    }
+    &.field-feedback-side {
+        .field-control {
+            @include padding(0 160 0 60);
+        }
+        .field-group-addon {
+            @include pos(ab, 0 null null 0);
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            @include fontsize(35);
+            color: $color01;
+        }
+        .field-group-link {
+            @include pos(ab, 0 0 null null);
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            @include fontsize(20);
+            color: $textcolor;
+            @include josefinsansregular;
+            a {
+                color: $textcolor;
+                &:hover {
+                    color: $themecolor;
+                }
+            }
+        }
+    }
+}
+
+.t-field {
+    @include margin-bottom(70);
+}

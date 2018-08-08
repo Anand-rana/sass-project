@@ -1,0 +1,40 @@
+// VARIABLES FOR FONTS
+$primary-font-path:         "../fonts" !default;
+
+
+@mixin font-face($font-family, $primary-font-path, $font-weight, $font-style) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$primary-font-path}.eot');
+        src: url('#{$primary-font-path}.eot?#iefix') format('embedded-opentype'),
+            url('#{$primary-font-path}.woff') format('woff'),
+            url('#{$primary-font-path}.ttf') format('truetype');
+        //url('#{$primary-font-path}.svg##{$font-family}') format('svg');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+    // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+    //  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    //    @font-face {
+    //      font-family: $font-family;
+    //        src: url('#{$primary-font-path}.svg##{$font-family}') format('svg');
+    //    }
+    //  }
+}
+
+//mixns
+
+@mixin open-regular {font-family: 'open_sansregular', arial, sans-serif;font-weight: normal; font-style: normal; }
+@mixin open-light {font-family: 'open_sanslight', arial, sans-serif;font-weight: normal; font-style: normal; }
+@mixin open-bold {font-family: 'open_sansbold', arial, sans-serif;font-weight: normal; font-style: normal; }
+@mixin open-semibold {font-family: 'open_sanssemibold', arial, sans-serif;font-weight: normal; font-style: normal; }
+
+
+@mixin ralway-regular {font-family: 'ralewayregular', arial, sans-serif;font-weight: normal; font-style: normal; }
+@mixin ralway-light  {font-family: 'ralewaylight', arial, sans-serif;font-weight: normal; font-style: normal; }
+@mixin ralway-medium  {font-family: 'ralewaymedium', arial, sans-serif;font-weight: normal; font-style: normal; }
+@mixin ralway-bold  {font-family: 'ralewaybold', arial, sans-serif;font-weight: normal; font-style: normal; }
+@mixin raleway-semibold {font-family: 'ralewaysemibold', arial, sans-serif;font-weight: normal; font-style: normal; }
+
+
+

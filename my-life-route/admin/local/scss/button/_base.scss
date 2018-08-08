@@ -1,0 +1,230 @@
+#{$ubtn-namespace} {
+    color: $ubtn-font-color;
+    background-color: $ubtn-bgcolor;
+    border-color: $ubtn-bgcolor;
+    font-weight: $ubtn-font-weight;
+    font-size: $ubtn-font-size;
+    font-family: $ubtn-font-family;
+    text-decoration: none;
+    text-align: center;
+    line-height: $ubtn-height;
+    height: $ubtn-height;
+    padding: 0 ($ubtn-height / 2);
+    margin: 0;
+    display: inline-block;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box; // Compass Mixins
+    @if $ubtn-use-compass {
+        @include transition-property(all);
+        @include transition-duration(0.3s);
+    }
+    @else {
+        transition-property: all;
+        transition-duration: .3s;
+    }
+    &:visited {
+        color: $ubtn-font-color;
+    }
+    &:hover,
+    &:focus {
+        background-color: darken($ubtn-bgcolor, 3%);
+        text-decoration: none;
+        outline: none;
+        color: $ubtn-font-color;
+    }
+    &:active,
+    &.active,
+    &.is-active {
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+        text-decoration: none;
+        background-color: desaturate($ubtn-bgcolor, 10%);
+        border-color: darken($ubtn-bgcolor, 12%);
+        color: darken($ubtn-bgcolor, 10%); // Compass Mixin
+        @if $ubtn-use-compass {
+            @include transition-duration(0s);
+            @include box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.2));
+        }
+        @else {
+            transition-duration: 0s;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+    }
+    &.disabled,
+    &.is-disabled,
+    &:disabled {
+        top: 0 !important;
+        background: #EEE !important;
+        border: 1px solid #DDD !important;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 1) !important;
+        color: #CCC !important;
+        cursor: default !important;
+        appearance: none !important; // Compass Mixin
+        @if $ubtn-use-compass {
+            @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.1) !important);
+            @include opacity(0.8 !important);
+        }
+        @else {
+            box-shadow: none !important;
+            opacity: .8 !important;
+        }
+    }
+}
+
+#{$ubtn-namespace}-uppercase {
+    text-transform: uppercase;
+}
+
+#{$ubtn-namespace}-lowercase {
+    text-transform: lowercase;
+}
+
+#{$ubtn-namespace}-capitalize {
+    text-transform: capitalize;
+}
+
+#{$ubtn-namespace}-small-caps {
+    font-variant: small-caps;
+}
+
+#{$ubtn-namespace}-icon-txt-large {
+    font-size: 36px !important;
+}
+
+#{$ubtn-namespace}-font-large {
+    font-size: 34px !important;
+}
+
+#{$ubtn-namespace}-font-small {
+    font-size: 12px !important;
+}
+
+#{$ubtn-namespace}-font-base {
+    font-size: 16px !important;
+}
+
+#{$ubtn-namespace}-font-base-small {
+    font-size: 14px !important;
+}
+
+#{$ubtn-namespace}-font-medium {
+    font-size: 18px !important;
+}
+
+#{$ubtn-namespace}-width-small {
+    padding: 0 10px !important;
+}
+
+#{$ubtn-namespace}-width-medium {
+    padding: 0 20px !important;
+}
+
+#{$ubtn-namespace}-width-large {
+    padding: 0 40px !important;
+}
+
+#{$ubtn-namespace}-height-large {
+    height: 50px;
+    line-height: 50px;
+}
+
+#{$ubtn-namespace}-height-small {
+    height: 30px;
+    line-height: 3px;
+}
+
+#{$ubtn-namespace}-height-extra-large {
+    height: 60px;
+    line-height: 60px;
+}
+
+#{$ubtn-namespace}-height-small {
+    height: 30px;
+    line-height: 30px;
+}
+
+#{$ubtn-namespace}-max-width {
+    max-width: 300px;
+    width: 100%;
+}
+
+#{$ubtn-namespace}-min-width {
+    min-width: 200px;
+}
+
+#{$ubtn-namespace}-min-width-small {
+    min-width: 150px;
+}
+
+#{$ubtn-namespace}-min-width-xsmall {
+    min-width: 120px;
+}
+
+#{$ubtn-namespace}-min-width-medium {
+    min-width: 180px;
+}
+
+#{$ubtn-namespace}-l-spacing {
+    letter-spacing: 4px;
+}
+
+#{$ubtn-namespace}-pulse {
+    &:hover,
+    &:focus {
+        @include animation(pulse 0.7s);
+    }
+}
+
+#{$ubtn-namespace}-font-medium-txt {
+    font-weight: 300;
+}
+
+#{$ubtn-namespace}-font-sbold {
+    font-weight: 500;
+}
+
+#{$ubtn-namespace}-font-bold {
+    font-weight: 400;
+}
+
+#{$ubtn-namespace}-shadow {
+    @include box-shadow(0 2px 3px rgba(0, 0, 0, .17));
+}
+
+@each $ubtn-color in $ubtn-colors {
+    $ubtn-name: nth($ubtn-color, 1);
+    $ubtn-background: nth($ubtn-color, 2);
+    $ubtn-color: nth($ubtn-color, 3); // Crete class for .button-primary
+    // and legacy flat .button-primary-flat
+    #{$ubtn-namespace}-#{$ubtn-name},
+    #{$ubtn-namespace}-#{$ubtn-name}-flat {
+        background-color: $ubtn-background;
+        border-color: $ubtn-background;
+        color: $ubtn-color;
+        &:visited {
+            color: $ubtn-color;
+        }
+        &:hover,
+        &:focus {
+            background-color: darken($ubtn-background, 15%);
+            border-color: darken($ubtn-background, 15%);
+            color: $ubtn-color;
+        }
+        &:active,
+        &.active,
+        &.is-active {
+            background-color: desaturate($ubtn-background, 10%);
+            border-color: desaturate($ubtn-background, 10%);
+            color: darken($ubtn-background, 30%);
+        }
+    }
+    #{$ubtn-namespace}-#{$ubtn-name}-shadow {
+        border-top: 1px solid darken($ubtn-background, 5%);
+        border-left: 1px solid darken($ubtn-background, 5%);
+        border-right: 1px solid darken($ubtn-background, 5%);
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        border-bottom-color: darken($ubtn-background, 15%) !important;
+    }
+}

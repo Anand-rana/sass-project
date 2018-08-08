@@ -1,0 +1,220 @@
+
+<div class="profile-section">
+  <div class="container">
+    <div class="p-top-block">
+      <div class="icon pointer" ng-click="isoptCollapsed = !isoptCollapsed"><i class="icon-dots"></i>
+        <div class="p-opt__dropbox" uib-collapse="!isoptCollapsed">
+          <ul>
+            <li><span ng-controller="ModalCtrl" ng-click="usrblock()">Block</span></li>
+            <li><span ng-controller="ModalCtrl" ng-click="report()">Report</span></li>
+          </ul>
+        </div>
+      </div>
+      <button class="button button-green button-rounded button-font-sbold">Add to My People</button>
+    </div>
+    <div class="profile-block">
+      <div class="other-user-profile-block">
+        <uib-tabset justified="true">
+          <uib-tab index="0" heading="Overview">
+            <div class="profile-block__container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="usr-pic"><img src="images/user-2.jpg" alt="img"/></div>
+                </div>
+                <div class="col-md-8">
+                  <div class="profile-block__content">
+                    <div class="profile-block__content__row">
+                      <div class="usr-name">
+                        <h3>Albert Smith</h3>
+                      </div>
+                      <div class="usr-profile"><span>Entrepreneur</span></div>
+                    </div>
+                    <div class="profile-block__content__row">
+                      <div class="usr-dtl">
+                        <ul>
+                          <li><span class="fw300 label-name">Age : </span><span class="fw400">66 Years Old</span></li>
+                          <li><span class="fw300 label-name">Location :</span><span class="fw400">London, United Kingdom</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="profile-block__content__row">
+                      <div class="usr-oh-info usr-work-info">
+                        <h4>Work Related Experience and Skiils</h4>
+                        <ul>
+                          <li class="w-label">IT Management</li>
+                          <li class="w-time">6 Years 8 Months</li>
+                          <li class="v-link">
+                            <button class="button button-theme button-rounded button-font-sbold button-width-large" ng-controller="ModalCtrl" ng-click="workhistory()">View All</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="usr-tp-container">
+                    <div class="usr-tp-block">
+                      <h2 class="title">Posts</h2>
+                      <div class="usr-tp__list">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="usr-tp__box">
+                              <h3>Life Routes</h3>
+                              <div class="t-no c-1">55</div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="usr-tp__box text-center">
+                              <h3>News Posts</h3>
+                              <div class="t-no c-2">5</div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="usr-tp__box text-center">
+                              <h3>Event Posts</h3>
+                              <div class="t-no c-3">7</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="usr-tp-block">
+                      <h2 class="title">People</h2>
+                      <div class="usr-tp__list">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="usr-tp__box">
+                              <h3>Connections</h3>
+                              <div class="t-no c-4">55</div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="usr-tp__box text-center">
+                              <h3>People Following Me</h3>
+                              <div class="t-no c-5">5</div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="usr-tp__box text-center">
+                              <h3>People I am Following</h3>
+                              <div class="t-no c-6">7</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </uib-tab>
+          <uib-tab index="1" heading="About">
+            <div class="profile-block__container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="usr-pic"><img src="images/user-2.jpg" alt="img"/></div>
+                </div>
+                <div class="col-md-8">
+                  <div class="profile-block__content">
+                    <div class="profile-block__content__row">
+                      <div class="usr-name">
+                        <h3>Albert Smith</h3>
+                      </div>
+                      <div class="usr-profile"><span>Entrepreneur</span></div>
+                    </div>
+                    <div class="profile-block__content__row">
+                      <div class="usr-dtl">
+                        <ul>
+                          <li><span class="fw300 label-name">Age : </span><span class="fw400">66 Years Old</span></li>
+                          <li><span class="fw300 label-name">Location :</span><span class="fw400">London, United Kingdom</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="profile-block__content__row">
+                      <div class="usr-dtl">
+                        <ul>
+                          <li><span class="fw300 label-name">Gender :</span><span class="fw400">Male</span></li>
+                          <li><span class="fw300 label-name">Date of Birth : </span><span class="fw400">6 January 1982</span></li>
+                          <li><span class="fw300 label-name">Email : </span><span class="fw400">Myliferoute@gmail.com</span></li>
+                          <li><span class="fw300 label-name">Education Level :  </span><span class="fw400">PHD</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="profile-block__content__row">
+                      <div class="usr-oh-info">
+                        <h4>Interests</h4>
+                        <p class="fw300">Adventure, Reading, Gym, Hiking, Partying, Internet, Entrepreneurship</p>
+                      </div>
+                    </div>
+                    <div class="profile-block__content__row">
+                      <div class="usr-oh-info usr-work-info">
+                        <h4>Work Related Experience and Skiils</h4>
+                        <ul>
+                          <li class="w-label">IT Management</li>
+                          <li class="w-time">6 Years 8 Months</li>
+                          <li class="v-link">
+                            <button class="button button-theme button-rounded button-font-sbold button-width-large" ng-controller="ModalCtrl" ng-click="workhistory()">View All</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="profile-block__content__row">
+                      <div class="about-block">
+                        <h2 class="title">About Me</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's st been dard dummy text ever since the 1500s,when an unknown printer took a galley tially unchanged typesetting prinitng tooks Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's st been dard dummy text ever since the 1500s,when an unknown printer took a galley tially unchanged typesetting prinitng been Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's st took dard dummy text ever since the 1500s,when an unknown printer took a galley tially unchanged typesetting prinitng been Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's st took dard dummy text ever since the 1500s,when an unknown printer took a galley tially unchanged typesetting prinitng been</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </uib-tab>
+          <uib-tab index="2" heading="Posts">
+            <div class="profile-post__container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="usr-pic"><img src="images/user-2.jpg" alt="img"/>
+                    <div class="u-name">
+                      <h3>Albert Smith</h3>
+                    </div>
+                    <div class="u-profile"><span>Entrepreneur</span></div>
+                    <div class="u-location"><span><i class="icon-marker"> </i>New York ,USA</span></div>
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="usr-post-list">
+                    <div class="connection-box c-1"><a data-ui-sref="post-life-route">
+                        <h3>60 Life Routes</h3></a></div>
+                    <div class="connection-box c-2"><a data-ui-sref="post-news-route">
+                        <h3>88 News Posts</h3></a></div>
+                    <div class="connection-box c-3"><a data-ui-sref="post-events-route">
+                        <h3>66 Event Posts</h3></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </uib-tab>
+          <uib-tab index="3" heading="People">
+            <div class="profile-people__container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="usr-pic"><img src="images/user-2.jpg" alt="img"/>
+                    <div class="u-name">
+                      <h3>Albert Smith</h3>
+                    </div>
+                    <div class="u-profile"><span>Entrepreneur</span></div>
+                    <div class="u-location"><span><i class="icon-marker"> </i>New York ,USA</span></div>
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="usr-conection-list">
+                    <div class="connection-box c-4"><a data-ui-sref="my-people-connetion">
+                        <h3>66 Connections</h3></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </uib-tab>
+        </uib-tabset>
+      </div>
+    </div>
+  </div>
+</div>

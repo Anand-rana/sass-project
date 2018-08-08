@@ -1,0 +1,619 @@
+.main-feed-section(data-ng-controller="sideCtrl")
+	.side-backdrop.hidden
+	.sp-btn(data-ng-click="sidemenu()")
+		span Show Profile
+	.container
+		.main-feed-option
+			.m-feed-opt-block
+				a(data-ui-sref="create-liferoute-step-1")
+					.icon-box
+						img(src="images/create-liferoute.png" alt="img")
+						.add-icon
+							i.icon-plus
+					figcaption
+						h3 Create 
+							span LIFEROUTE
+			.m-feed-opt-block
+				a(data-ui-sref="create-news")
+					.icon-box
+						img(src="images/create-news.png" alt="img")
+						.add-icon.c-1
+							i.icon-plus
+					figcaption
+						h3 Create 
+							span news
+			.m-feed-opt-block
+				a(data-ui-sref="create-event")
+					.icon-box
+						img(src="images/create-event.png" alt="img")
+						.add-icon.c-2
+							i.icon-plus
+					figcaption
+						h3 Create 
+							span event
+		.main-feed-data(data-ng-controller="mainfeedCtrl")
+
+			.user-dtl-block
+				.user-dtl-block-container
+						.user-dtl-box
+							.user-pic
+								img(src="images/profile-3.jpg" alt="img")
+							.user-name
+								h3 Mahmood Choudhury
+							.user-profile
+								h3 Entrepreneur
+							.user-other-dtl-list
+								ul
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-user
+										.t-cell
+											span 22 Years Old
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-marker
+										.t-cell
+											span London, United Kingdom
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-phone
+										.t-cell
+											span +999-123-4567	
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-cap
+										.t-cell
+											span Postgraduate
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-web
+										.t-cell
+											span www.myliferoute.com
+							.edit-icon
+								a(href="#")
+									i.icon-edit
+							.close-icon.visible-xs(data-ng-click="closemenu()")
+								i.icon-close-o
+						.margin-top-2x.margin-bottom-2x
+							button.button.button-green.button-rounded.button-font-base.button-height-large.button-font-medium.button-font-medium-txt.button-block(ng-controller="ModalCtrl"  ng-click="workhistory()") View Work History
+								span.button-btn-icon
+									i.icon-arrow-right 
+
+
+						.user-dtl-box
+							
+							.user-work-dtl-list
+								ul
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-route  
+											span Liferoutes :
+										.t-cell.text-right
+											span 22
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-news  
+											span News posted :
+										.t-cell.text-right
+											span 12
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-connection  
+											span Connections :
+										.t-cell.text-right
+											span 22
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-follow  
+											span Followers :
+										.t-cell.text-right
+											span 12
+			.row
+				
+				.col-md-9
+					.main-feed-list
+						.m-feed-box
+							.l-route-box
+								.row
+									.col-md-3.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											.user-profile
+													h4 UI Designer
+											.list-label
+												span LR
+
+
+									.col-md-9.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.r-title Lorem Ipsum is simply dummy text
+												.user-dtl-info-list
+													.row
+														.col-md-6.col-lg-4
+															ul.list-info
+																li
+																	span.l-label From 
+																	span Associate
+																li
+																	span.l-label To 
+																	span Consultant
+																li
+																	span.l-label Location 
+																	span New York ,USA
+																li
+																	span.l-label Steps 
+																	span 7
+														.col-md-6.col-lg-4
+															ul.list-info
+																li
+																	span.l-label Duration  
+																	span 27 Months
+																li
+																	span.l-label Date created  
+																	span 24th May 2016
+																li
+																	span.l-label Last updated 
+																	span 24th May 2017
+																li
+																	span.l-label Total Cost 
+																	span &pound;70,000
+														.col-md-6.col-lg-4
+															.user-status-info
+																h2 Status
+																.status-rep
+																	h3.cmp Completed
+																.margin-top-4x
+																	button.button.button-rounded.button-font-medium.button-height-large.button-min-width-small(ng-click="$state.go('life-route-dtl')" )  View
+								.r-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span.__label Like : 
+												span 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span.__label Comments : 
+												span 40
+
+										li
+											.t-follower
+												span.icon
+													i.icon-user-group
+												span.__label Followers : 
+												span 900
+										li
+											.t-share
+												span.icon.pointer(ng-click="isNavCollapsed  = !isNavCollapsed")
+													i.icon-share
+												span.__label Share : 
+												span 23
+												.t-share-opt(uib-collapse="!isNavCollapsed") 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+													a(href="#") Share by Facebook
+													a(href="#") Share by Twitter
+													a(href="#") Share by LinkedIn
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link
+						.m-feed-box
+							.posted-time
+								span Albert Smith Posted News - 
+								span.time 2 Min Ago
+							.news-route-box
+								.row
+									.col-md-3.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											
+											.list-label
+												span n
+
+
+									.col-md-9.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.nr-title Lorem Ipsum is simply dummy text
+												.user-dtl-txt
+													p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...
+												.user-dtl-info-list
+													.row
+														.col-md-6.col-lg-4
+															ul.list-info
+																
+																li
+																	span.l-label Location
+																	span New York ,USA
+																
+														.col-md-6.col-lg-4
+															ul.list-info
+																
+																li
+																	span.l-label Date created
+																	span 24th May 2016
+																li
+																	span.l-label Last updated
+																	span 24th May 2017
+																
+														.col-md-6.col-lg-4
+															.margin-top-3x
+																	button.button.button-rounded.button-font-medium.button-height-large.button-min-width-small(ng-click="$state.go('news-route-dtl')" )  View
+								.nr-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span.__label Like : 
+												span 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span.__label Comments : 
+												span 40
+
+										li
+											.t-follower
+												span.icon
+													i.icon-user-group
+												span.__label Followers : 
+												span 900
+										li
+											.t-share
+												span.icon.pointer(ng-click="isNav1Collapsed  = !isNav1Collapsed")
+													i.icon-share
+												span.__label Share : 
+												span 23
+												.t-share-opt(uib-collapse="!isNav1Collapsed") 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+													a(href="#") Share by Facebook
+													a(href="#") Share by Twitter
+													a(href="#") Share by LinkedIn
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link
+						.m-feed-box
+							.posted-time
+								span Albert Smith Posted News - 
+								span.time 2 Min Ago
+							.news-route-box
+								.row
+									.col-md-3.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											
+											.list-label
+												span n
+
+
+									.col-md-9.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.nr-title Lorem Ipsum is simply dummy text
+												.user-dtl-txt
+													p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...
+												.user-dtl-info-list
+													.row
+														.col-md-6.col-lg-4
+															ul.list-info
+																
+																li
+																	span.l-label Location
+																	span New York ,USA
+																
+														.col-md-6.col-lg-4
+															ul.list-info
+																
+																li
+																	span.l-label Date created
+																	span 24th May 2016
+																li
+																	span.l-label Last updated
+																	span 24th May 2017
+																
+														.col-md-6.col-lg-4
+															.margin-top-3x
+																	button.button.button-rounded.button-font-medium.button-height-large.button-min-width-small(ng-click="$state.go('news-route-dtl')" )  View
+								.nr-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span.__label Like : 
+												span 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span.__label Comments : 
+												span 40
+
+										li
+											.t-follower
+												span.icon
+													i.icon-user-group
+												span.__label Followers : 
+												span 900
+										li
+											.t-share
+												span.icon.pointer(ng-click="isNav2Collapsed  = !isNav2Collapsed")
+													i.icon-share
+												span.__label Share : 
+												span 23
+												.t-share-opt(uib-collapse="!isNav2Collapsed") 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+													a(href="#") Share by Facebook
+													a(href="#") Share by Twitter
+													a(href="#") Share by LinkedIn
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link 
+						.m-feed-box
+							.posted-time
+								span Albert Smith Posted News - 
+								span.time 2 Min Ago
+							.event-route-box
+								.row
+									.col-md-3.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											
+											.list-label
+												span e
+
+
+									.col-md-9.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.nr-title Lorem Ipsum is simply dummy text
+												.user-dtl-txt
+													p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...
+												.user-dtl-info-list
+													.row
+														.col-md-6.col-lg-4
+															ul.list-info
+																
+																li
+																	span.l-label Location
+																	span New York ,USA
+																
+														.col-md-6.col-lg-4
+															ul.list-info
+																
+																li
+																	span.l-label Date created
+																	span 24th May 2016
+																li
+																	span.l-label Last updated
+																	span 24th May 2017
+																
+														.col-md-6.col-lg-4
+															.margin-top-3x
+																	button.button.button-rounded.button-font-medium.button-height-large.button-min-width-small(ng-click="$state.go('events-route-dtl')" )  View
+								.event-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span.__label Like : 
+												span 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span.__label Comments : 
+												span 40
+
+										li
+											
+											.t-interst
+												span.icon
+													i.icon-user-o 
+												span.__label Interested : 
+												span 23
+										li
+											.t-share
+												span.icon.pointer(ng-click="isNav3Collapsed  = !isNav3Collapsed")
+													i.icon-share
+												span.__label Share : 
+												span 23
+												.t-share-opt(uib-collapse="!isNav3Collapsed") 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+													a(href="#") Share by Facebook
+													a(href="#") Share by Twitter
+													a(href="#") Share by LinkedIn
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link
+						.m-feed-box
+							.posted-time
+								span Albert Smith Posted News - 
+								span.time 2 Min Ago
+							.event-route-box
+								.row
+									.col-md-3.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											
+											.list-label
+												span e
+
+
+									.col-md-9.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.nr-title Lorem Ipsum is simply dummy text
+												.user-dtl-txt
+													p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...
+												.user-dtl-info-list
+													.row
+														.col-md-6.col-lg-4
+															ul.list-info
+																
+																li
+																	span.l-label Location
+																	span New York ,USA
+																
+														.col-md-6.col-lg-4
+															ul.list-info
+																
+																li
+																	span.l-label Date created
+																	span 24th May 2016
+																li
+																	span.l-label Last updated
+																	span 24th May 2017
+																
+														.col-md-6.col-lg-4
+															.margin-top-3x
+																	button.button.button-rounded.button-font-medium.button-height-large.button-min-width-small(ng-click="$state.go('events-route-dtl')" )  View
+								.event-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span.__label Like : 
+												span 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span.__label Comments : 
+												span 40
+
+										li
+											
+											.t-interst
+												span.icon
+													i.icon-user-o 
+												span.__label Interested : 
+												span 23
+										li
+											.t-share
+												span.icon.pointer(ng-click="isNav4Collapsed  = !isNav4Collapsed")
+													i.icon-share
+												span.__label Share : 
+												span 23
+												.t-share-opt(uib-collapse="!isNav4Collapsed") 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+													a(href="#") Share by Facebook
+													a(href="#") Share by Twitter
+													a(href="#") Share by LinkedIn
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link
+				.col-md-3
+					.main-side-block
+						.invite-other-block
+								button.button-invite(ng-controller="ModalCtrl"  ng-click="invite()")
+									span.ico
+										i.icon-user-group-o
+									|Invite Others
+						.user-activity-block
+							.u-activity-header
+								h3 Popular User Activity
+							.u-activity-list
+								ul
+									li 500000 Users are talking about these Liferoutes 
+										a(href="#") View Post
+									li 500000 Users are talking about these Liferoutes 
+										a(href="#") View Post
+									li 500000 Users are talking about these Liferoutes 
+										a(href="#") View Post
+									li 500000 Users are talking about these Liferoutes 
+										a(href="#") View Post
+									li 500000 Users are talking about these Liferoutes 
+										a(href="#") View Post
+						.recomend-block
+							h3 Recommended For You
+							.recomend-slider(data-ng-controller="reCtrl")
+								ng-owl-carousel(class="owl-theme" owl-items="items" owl-properties="properties" owl-ready="ready($api)")
+									.item(data-ng-repeat="item in items")
+										figure
+											img(src="images/slide-1.jpg" alt="img")
+											figcaption
+												h4 Business Formula's
+								.margin-top-2x.text-center
+									a(data-ui-sref="page-adverts-all").button.button-small.button-rounded.button-black View All
+
+							.recomend-slider.margin-top-5x(data-ng-controller="reCtrl")
+								ng-owl-carousel(class="owl-theme" owl-items="items" owl-properties="properties" owl-ready="ready($api)")
+									.item(data-ng-repeat="item in items")
+										figure
+											img(src="images/slide-1.jpg" alt="img")
+											figcaption
+												h4 Business Formula's
+								.margin-top-2x.text-center
+									a(data-ui-sref="page-adverts-all").button.button-small.button-rounded.button-black View All

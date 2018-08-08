@@ -1,0 +1,165 @@
+.m-people-section {
+    @include padding(100 0 50);
+    @include pos(rel, null);
+
+    .my-people-block {
+        @include pos(rel, null);
+    }
+
+    .user-dtl-block {
+        @include pos(ab, 0 null null 0);
+        margin-top: 100px;
+        &.push-left {
+            left: -1000px;
+        }
+    }
+    .my-people-cotainer {
+        -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+        transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+        @include padding-left(390);
+        .my-conection-list {
+            @include margin-top(50);
+        }
+        .title {
+            @include fontsize(30);
+            font-weight: 400;
+            color: $theme;
+            @include padding-bottom(5);
+            @include border-bottom(1, solid, $theme);
+        }
+
+        &.open {
+            @include padding-left(0);
+        }
+    }
+    .sp-btn {
+        @include pos(ab, 150px null null -35px);
+        z-index: 20;
+    }
+}
+
+.mp-connection-section {
+    @include padding(100 0 50);
+    .heading-block {
+        @include border-bottom(1, solid, $theme);
+        @include padding-bottom(10);
+
+
+        .breadcrumb-list {
+            @include margin-top(10);
+            ul {
+                li {
+                    display: $ib;
+
+                    a {
+                        @include fontsize(30);
+                        text-transform: capitalize;
+                        font-weight: 400;
+                        color: $theme;
+                        @include padding(0 15);
+                        @include pos(rel, null);
+                        &:after {
+                            @include pos(ab, -4px -8px 0px null);
+                            content: ">";
+                        }
+
+                        &.active {
+                            color: lighten($theme, 20%);
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+
+
+                    &:first-child {
+                        a {
+                            @include padding-left(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .filter-side-block {
+        @include margin-top(70);
+         &.ap-filter {
+            @include margin-top(120);
+        }
+    }
+    .mp-connection__list {
+        @include margin-top(70);
+
+        .filter-ap-msg {
+            text-align: center;
+            @include margin-bottom(20);
+
+            h4 {
+                color: $theme;
+                font-weight: 300;
+                @include fontsize(17);
+            }
+        }
+
+        .total-connection {
+            @include fontsize(14);
+            font-weight: 300;
+            @include padding-bottom(10);
+        }
+
+        &.ap-filter {
+            @include margin-top(50);
+        }
+    }
+
+    .mp-connection-box {
+        @include border-round(13);
+        @include margin-bottom(30);
+        background-color: $white;
+        @include padding(30 20);
+        text-align: center;
+        @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, .35));
+        min-height:373px;
+
+        .user-pic {
+            @include margin-bottom(15);
+            img {
+                width: 140px;
+                height: 140px;
+                @include circle;
+                object-fit: cover;
+                @include border(2, solid, $theme);
+            }
+        }
+        .user-name {
+            @include padding-bottom(10);
+            h3 {
+                font-weight: 400;
+                color: $color-text-02;
+                @include fontsize(18);
+                text-decoration: underline;
+                text-overflow: ellipsis;
+                white-space:nowrap;
+                overflow: hidden;
+            }
+        }
+        .user-profile {
+            @include padding-bottom(10);
+            h4 {
+                font-weight: 300;
+                @include fontsize(16);
+                color: lighten($color-text-01, 10%);
+            }
+        }
+        .cp-name {
+            h4 {
+                color: #39b54a;
+            }
+        }
+        .btn-block {
+            @include margin-top(30);
+        }
+    }
+}

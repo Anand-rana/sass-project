@@ -1,0 +1,92 @@
+.dashboard-business-section(data-ng-controller="pagedtlCtrl")
+	.dashboard-business-stats-dtl
+		.heading-block
+			.row
+				.col-md-5
+					h2.title New Store Opening
+				.col-md-7
+					.text-right
+						button.button.button-business.button-font-bold.button-rounded.margin-right-1x View Stats
+						button.button.button-danger.button-font-bold.button-rounded.margin-right-1x Block
+						button.button.button-font-bold.button-rounded.margin-right-1x Delete
+		.page-dtl-box
+			.__inner-content
+				.page-dtl__info
+					.media
+						.media-left
+							.page-dtl__img
+								img(src="images/b-page.jpg" alt="img")
+						.media-body
+							.page-dtl__name
+								h3 Merchant Store
+								span.time 8 hrs
+				.page-dtl__text
+					p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text is these when an unnown py qwe gth  isps  took a galley tia smx okoxt of the printing and typesetting industry. Lorem smx okoxt of the printing and typesetting
+				.page-dtl__main-img
+					img(src="images/store-img.jpg" alt="img" class="img-responsive pointer" ng-click="mainpopup()") 
+				.page-dtl__other-info
+					ul
+						li
+							span.__label Location :
+							|  New York ,USA
+						li
+							span.__label Date created  : 
+							|  24th May 2016
+						li
+							span.__label Last updated  :
+							|  24th May 2017
+				.page-dtl__share-info
+
+					ul
+						li
+							span.ico.t-liked
+								i.icon-thumb 
+							span Like : 500
+						li
+							span.ico.t-comment
+								i.icon-comment 
+							span Comments : 40
+						li
+							span.ico.t-share
+								i.icon-share 
+							span Share : 23
+				.page-dtl__comment-block
+
+				
+
+					.page-dtl__comment-row
+						.page-dtl__comment-box
+							.media
+								.media-left
+									.usr-pic
+										img(src="images/user.jpg" alt="img")
+								.media-body
+									.page-dtl__comment-msg
+										.comment-msg__top
+											.comment-mg__usr-info
+												.usr-name
+													h4 Bryan Linquist CIA, CFE  
+												.usr-profile
+													h4 Chief Audit Exceutive
+											.comment-mg__usr__opt
+												.ico(ng-click="isoptCollapsed1 = !isoptCollapsed1")
+													i.icon-dots-ellips
+													.drop-box(uib-collapse="!isoptCollapsed1")
+														span(ng-controller="ModalCtrl"  ng-click="report()") Report
+												span.time 11:22 pm	
+										p  Lorem Ipsum is simply dummy text of the pgand typesetting industry. Lorem Ipsum has if been the industry's standard  dummy text the ever since the 1500s, when an unknown text printer took a galley tially unchanged...
+										
+									
+			.list-label.b-list-label
+				span b
+			.page-dtl-overlay
+				.close-ico(ng-click="mainpopupclose()")
+					span
+						i.icon-close-o
+				.page-dtl-overlay-container
+					.page-dtl-overlay-slider
+						ng-owl-carousel(class="owl-theme" owl-items="items" owl-properties="properties" owl-ready="ready($api)")
+							.item(data-ng-repeat="item in items")
+								figure
+									img(src="images/store-img.jpg" alt="img")
+						div(id="customnav" class="customnav")

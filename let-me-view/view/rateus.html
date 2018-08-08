@@ -1,0 +1,100 @@
+<div class="main-header is-g-border">
+  <div class="container">
+    <div class="header">
+      <div class="row">
+        <div class="col-md-3"><a ui-sref="home" class="logo"><img src="images/logo.png" alt="logo" class="img-reponsive"/></a>
+        <div id="nav-icon1" class="visible-xs" ng-controller="MenuCtrl" >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="nav_bar">
+          <ul>
+            <li><a href="#" title="">Listing</a></li>
+            <li><a href="#" title="">Our Guarantee</a></li>
+            <li><a href="#" title="">about us</a></li>
+            <li><a href="#" title="">help</a></li>
+            <li><a href="javascript:void(0);" title="" class="nav_bar__callbtn" ng-click="isrCollapsed = !isrCollapsed">Request Callback</a>
+            <div class="r-popup-container" uib-collapse="!isrCollapsed">
+            <div class="r-popup">
+            <button class="close-ico visible-xs" type="button" ng-click="isrCollapsed =false"><i class="icon-cancel"></i></button>
+              <form class="form-horizontal">
+                <div class="r-form">
+                  
+                  <div class="r-error col-sm-offset-3"><div class="msg-error">Your name required</div></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                      <div class="r-field">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <div class="r-field">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Number</label>
+                    <div class="col-sm-10">
+                      <div class="r-field">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="r-btn-section">
+                  <button class="r_btn">Submit</button>
+                </div>
+              </form>
+            </div>
+            </div>
+          </li>
+          <li><a href="#" title="" class="nav_bar__callbtn">inbox</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--main-contanier-->
+<div class="main-block">
+<div class="rate-us-section">
+<div class="container">
+  <div class="rate-us__cotent margin-top-4x">
+    <h4 class="r-m-size padding-left-4x">Rate us</h4>
+    <div class="rate-us__box">
+ <div class="rate_us__fields">
+      <div class="form-group">
+        <label>Overall experience</label>
+        <p>How would you rate our service?</p>
+        <div class="rating-container margin-top-2x">
+          <span uib-rating ng-model="rate" max="5" state-on="'icon-star'" state-off="'icon-star-o'" aria-labelledby="custom-icons-1"></span>
+        </div>
+      </div>
+      <div class="form-group margin-top-8x">
+        <label>Share your experience!</label>
+        <div class="c-field margin-top-2x">
+          <textarea rows="10" cols="10" class="form-control" placeholder="Write your feedback for us..."></textarea>
+          <span class="help-block text-right padding-right-3x">500 words left</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="margin-top-4x text-right">
+      <button class="button button-rounded button-uppercase button-cancel">Cancel</button>
+      <button class="button button-rounded button-uppercase">Submit</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--end-main-contanier-->

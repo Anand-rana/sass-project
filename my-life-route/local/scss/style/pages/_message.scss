@@ -1,0 +1,496 @@
+.my-message-section {
+    @include padding(100 0 50);
+
+    @include pos(rel, null);
+
+    .title {
+        @include fontsize(30);
+
+        font-weight: 400;
+        color: $theme;
+
+        @include padding-bottom(5);
+
+        @include border-bottom(1, solid, $theme);
+    }
+
+    .f-list-block {
+        @include margin-top(80);
+
+        .search-field {
+            @include pos(rel, null);
+
+            @include border-bottom(1, solid, $theme);
+
+            .search-field-control {
+                width: 100%;
+                height: 55px;
+
+                @include padding(15 15 15 50);
+
+                background-color: #ededed;
+                border: 0;
+
+                @include fontsize(16);
+
+                font-weight: 300;
+                color: $color-text-02;
+                outline: none !important;
+                text-overflow: ellipsis;
+
+                @include box-shadow(inset 0 3px 14px rgba(0, 0, 0, 0.11));
+
+                &::-webkit-input-placeholder {
+                    /* Chrome/Opera/Safari */
+                    color: lighten($color-text-02, 10%);
+                    opacity: 1;
+                }
+
+                &::-moz-placeholder {
+                    /* Firefox 19+ */
+                    color: lighten($color-text-02, 10%);
+                    opacity: 1;
+                }
+
+                &:-ms-input-placeholder {
+                    /* IE 10+ */
+                    color: lighten($color-text-02, 10%);
+                    opacity: 1;
+                }
+
+                &:-moz-placeholder {
+                    /* Firefox 18- */
+                    color: lighten($color-text-02, 10%);
+                    opacity: 1;
+                }
+            }
+
+            .icon-addon {
+                @include pos(ab, 50% null null 20px);
+
+                @include fontsize(20);
+
+                @include translatepos(0, -50%);
+
+                color: $color-text-02;
+                cursor: pointer;
+            }
+        }
+
+        .f-list-data_cotainer {
+            //@include padding-bottom(80);
+            background-color: $white;
+
+            @include border-left(1, solid, #f0f0f0);
+
+            @include border-right(1, solid, #f0f0f0);
+
+            @include border-bottom(1, solid, #f0f0f0);
+        }
+
+        .f-list-data {
+            max-height: 690px;
+            outline: none !important;
+            .media {
+                @include padding(20 15);
+
+                @include border-top(1, solid, #f0f0f0);
+
+                @include border-bottom(1, solid, #f0f0f0);
+
+                margin-bottom: 0;
+                margin-top: -1px;
+                outline: none !important;
+
+                &:hover {
+                    @include box-shadow(0 0 30px rgba(0, 0, 0, 0.1) inset);
+                    outline: none !important;
+                }
+
+                &.active {
+                    @include box-shadow(0 0 30px rgba(0, 0, 0, 0.1) inset);
+
+                    background-color: lighten($theme, 40%);
+                }
+
+                .usr-pic {
+                    img {
+                        width: 60px;
+                        height: 60px;
+
+                        @include circle;
+
+                        object-fit: cover;
+                    }
+                }
+
+                .user-name {
+                    display: $ib;
+                    vertical-align: middle;
+
+                    h3 {
+                        @include fontsize(18);
+
+                        font-weight: 400;
+                        max-width: 200px;
+                        color: $color-text-02;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+
+                .t-msg {
+                    display: $ib;
+                    vertical-align: middle;
+
+                    span {
+                        display: $b;
+                        width: 18px;
+                        height: 18px;
+                        line-height: 1.6;
+                        background-color: $color-list-01;
+                        color: $white;
+                        text-align: center;
+
+                        @include fontsize(10);
+
+                        @include circle;
+                    }
+                }
+
+                .time {
+                    display: $ib;
+                    float: right;
+
+                    span {
+                        @include fontsize(12);
+
+                        font-weight: 300;
+                    }
+                }
+
+                .usr-des-txt {
+                    @include fontsize(13);
+                }
+
+                .media-left,
+                .media-right,
+                .media-body {
+                    vertical-align: middle;
+                }
+
+                &:first-of-type {
+                    border-top: 0;
+                }
+
+                &:last-of-type {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .chat-box-container {
+        @include margin-top(80);
+
+        background-color: $white;
+
+        @include border(1, solid, #f0f0f0);
+
+        .chat-head__block {
+            @include padding(20 40);
+
+            background-color: $theme;
+
+            .media {
+                .media-left,
+                .media-right,
+                .media-body {
+                    vertical-align: middle;
+                }
+
+                .media-left {
+                    @include padding-right(20);
+                }
+            }
+
+            .usr-pic {
+                @include square(70px);
+
+                @include circle;
+
+                @include border(2, solid, $white);
+
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                    display: block;
+                    min-height: 66px;
+                    min-width: 66px;
+                    max-height: 66px;
+                    object-fit: cover;
+                }
+            }
+
+            .usr-name {
+                h3 {
+                    color: $white;
+
+                    @include fontsize(20);
+
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .chat-msg__area {
+            background-color: $white;
+
+            @include padding(40 30);
+
+            @include experimental-value(max-height, calc(100vh - 310px)); //max-height: 700px;
+            .chat-msg__label {
+                text-align: center;
+
+                @include fontsize(16);
+
+                font-weight: 400;
+                color: lighten($color-text-01, 10%);
+
+                @include pos(rel, null);
+
+                z-index: 0;
+
+                &:after {
+                    @include pos(ab, 50% 0 null 0);
+
+                    content: "";
+                    height: 1px;
+                    background-color: #e5e5e5;
+
+                    @include translatepos(0, -50%);
+
+                    z-index: -1;
+                }
+
+                span {
+                    display: $ib;
+
+                    @include padding(0 40);
+
+                    background-color: $white;
+                }
+
+                &+.chat-msg__box {
+                    @include margin-top(60);
+                }
+            }
+
+            .chat-msg__box {
+                .msg {
+                    @include margin-bottom(20);
+
+                    display: table;
+                    width: 100%;
+
+                    .usr-pic {
+                        img {
+                            width: 60px;
+                            height: 60px;
+
+                            @include circle;
+
+                            object-fit: cover;
+                        }
+                    }
+
+                    .f-msg {
+                        @include pos(rel, null);
+
+                        .usr-pic {
+                            //@include pos(ab, -20px null null 0);
+                            @include pos(ab, 0 null null 0); //@include opacity(0);
+                            //@include animation(zoom-in-pulse 0.3s linear);
+                            // @include animation-delay(1s);
+                            //  @include animation-fill-mode(both);
+                        }
+
+                        .usr-msg__container {
+                            max-width: 630px;
+                            display: table;
+                            width: 100%;
+
+                            @include padding-left(85);
+
+                            .usr-msg {
+                                background-color: #ededed;
+
+                                @include padding(15 20);
+
+                                @include border-round(4);
+
+                                @include pos(rel, null);
+
+                                @include margin-bottom(4); // @include opacity(0);
+                                //@include animation(zoominleft 0.3s linear);
+                                //@include animation-delay(1.5s);
+                                //@include animation-fill-mode(both);
+                                // @include transform-origin(center, left);
+                                float: left;
+                                clear: both;
+
+                                &:before {
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-width: 15px 10px 15px 0;
+                                    border-color: transparent #ededed transparent transparent;
+
+                                    @include pos(ab, 30px 100% null null);
+
+                                    @include translatepos(0, -50%);
+
+                                    content: "";
+                                }
+
+                                p {
+                                    @include fontsize(16);
+
+                                    font-weight: 500;
+                                    color: $color-text-02;
+                                    display: $ib;
+                                }
+                            }
+
+                            .p-time {
+                                @include fontsize(13);
+
+                                font-weight: 500;
+                                color: lighten($color-text-01, 10%);
+                                float: left;
+                                clear: both; // @include opacity(0);
+                                // @include animation(fade-up 0.3s linear);
+                                // @include animation-delay(1.7s);
+                                // @include animation-fill-mode(both);  
+                            }
+                        }
+                    }
+
+                    .m-msg {
+                        @include pos(rel, null);
+
+                        float: right;
+
+                        .usr-pic {
+                            @include pos(ab, 0px 0 null null); // @include opacity(0);
+                            // @include animation(zoom-in-pulse 0.3s linear);
+                            //@include animation-delay(1s);
+                            //  @include animation-fill-mode(both);
+                        }
+
+                        .me-msg__container {
+                            max-width: 630px;
+                            display: table;
+                            width: 100%;
+
+                            @include padding-right(85);
+
+                            .me-msg {
+                                background-color: #d4f2fb;
+
+                                @include padding(15 20);
+
+                                @include border-round(4);
+
+                                @include pos(rel, null);
+
+                                @include margin-bottom(4);
+
+                                float: right;
+                                clear: both; //@include opacity(0);
+                                // @include animation(zoominright 0.3s linear);
+                                // @include animation-delay(1.5s);
+                                //@include animation-fill-mode(both);
+                                //@include transform-origin(center, right);
+                                &:before {
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-width: 15px 0 15px 10px;
+                                    border-color: transparent transparent transparent #d4f2fb;
+
+                                    @include pos(ab, 30px null null 100%);
+
+                                    @include translatepos(0, -50%);
+
+                                    content: "";
+                                }
+
+                                p {
+                                    @include fontsize(16);
+
+                                    font-weight: 500;
+                                    color: $color-text-02;
+                                    display: $ib;
+                                }
+                            }
+
+                            .p-time {
+                                @include fontsize(13);
+
+                                font-weight: 500;
+                                color: lighten($color-text-01, 10%);
+                                float: right;
+                                clear: both; // @include opacity(0);
+                                // @include animation(fade-up 0.3s linear);
+                                //@include animation-delay(1.7s);
+                                // @include animation-fill-mode(both);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .chat-msg__text-field {
+            textarea {
+                height: 80px;
+                width: 100%;
+                resize: none;
+                width: 100%;
+                background-color: #f2f2f2;
+                border: 0;
+
+                @include padding(20 30 20 30);
+
+                @include box-shadow(inset -1px 3px 5px rgba(0, 0, 0, 0.07));
+
+                @include fontsize(17);
+
+                color: $color-text-02;
+                font-weight: 300;
+                float: left;
+            }
+
+            .chat-btn {
+                width: 110px;
+                height: 80px;
+                border: 0;
+                padding: 0;
+                background-color: $theme;
+
+                @include fontsize(20);
+
+                font-weight: 400;
+                color: $white;
+
+                &:hover,
+                &:focus {
+                    background-color: darken($theme, 10%);
+                }
+            }
+        }
+    }
+}

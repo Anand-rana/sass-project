@@ -1,0 +1,27 @@
+@include media("<=992px") {
+    .faq-page-section {
+        @include padding(50 0);
+    }
+}
+
+@include media("<=767px") {
+    .faq-page-section {
+        @include padding(30 0);
+        .heading-block {
+            h3 {
+                @include fontsize(25);
+            }
+        }
+        .search-field {
+            @include margin-top(30);
+        }
+        .page-content {
+            @include margin-top(30);
+
+            .f-nav-list {
+
+                @include margin-top(0);
+            }
+        }
+    }
+}

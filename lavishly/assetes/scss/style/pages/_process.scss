@@ -1,0 +1,92 @@
+        .process-section {
+            .p-key {
+                @include pos(rel, null);
+                @include padding(100 0);
+                .p-key-row {
+                    @include margin-bottom(80);
+                }
+                .p-key-txt {
+                    @include margin-top(100);
+                    h4 {
+                        @include margin-bottom(15);
+                    }
+                    p {
+                        @include fontsize(18);
+                    }
+                }
+            }
+            .p-benfit-section {
+                background-color: #242424;
+                h2 {
+                    text-align: center;
+                    color: $color02;
+                    @include fontsize(34);
+                    @include josefinsansbold;
+                    @include padding(50 0);
+                    display: block;
+                    text-transform: $uppercase;
+                }
+                .row {
+                    @include margin(0);
+                    [class*="col-"] {
+                        @include padding(0);
+                    }
+                }
+                .r--1 {
+                    @include ratio(4, 3);
+                }
+                .be-box {
+                    @include transition(all 0.35s);
+                    &.one {
+                        background: url(#{$imgpath}be-1.jpg) no-repeat;
+                        background-size: 100%;
+                        background-position: center;
+                    }
+                    &.two {
+                        background: url(#{$imgpath}be-2.jpg) no-repeat;
+                        background-size: 100%;
+                        background-position: center;
+                    }
+                    &.three {
+                        background: url(#{$imgpath}be-3.jpg) no-repeat;
+                        background-size: 100%;
+                        background-position: center;
+                    }
+                    .ratioinner {
+                        max-width: 500px;
+                        height: 200px;
+                        margin: auto auto;
+                        border: 1px solid transparent;
+                        -moz-border-image: -moz-linear-gradient(-25deg, rgba(0, 0, 0, .9), #f8f8f8 34%, rgba(255, 255, 255, .97) 35%, rgba(9, 9, 9, 0) 63%, rgba(0, 0, 0, .03) 64%, #000, #fff);
+                        -webkit-border-image: -webkit-linear-gradient(-25deg, rgba(0, 0, 0, .9), #f8f8f8 34%, rgba(255, 255, 255, .97) 35%, rgba(9, 9, 9, 0) 63%, rgba(0, 0, 0, .03) 64%, #000, #fff);
+                        border-image: linear-gradient(-25deg, rgba(0, 0, 0, .9), #f8f8f8 34%, rgba(255, 255, 255, .97) 35%, rgba(9, 9, 9, 0) 63%, rgba(0, 0, 0, .03) 64%, #000, #fff);
+                        border-image-slice: 1;
+                    }
+                    .be-box-content {
+                        background-color: rgba(0, 0, 0, 0);
+                        background-image: -webkit-linear-gradient(45deg, rgba(36, 36, 36, .7), rgba(26, 26, 26, 0));
+                        background-image: -moz-linear-gradient(45deg, rgba(36, 36, 36, .7), rgba(26, 26, 26, 0));
+                        background-image: -o-linear-gradient(45deg, rgba(36, 36, 36, .7), rgba(26, 26, 26, 0));
+                        background-image: -ms-linear-gradient(45deg, rgba(36, 36, 36, .7), rgba(26, 26, 26, 0));
+                        background-image: linear-gradient(45deg, rgba(36, 36, 36, .7), rgba(26, 26, 26, 0));
+                        height: 100%;
+                        @include padding(50 40);
+                        text-align: center;
+                        color: $color02;
+                        h3 {
+                            @include fontsize(30);
+                            color: $color02;
+                            text-transform: $uppercase;
+                            @include josefinsansbold;
+                            @include margin-bottom(10);
+                        }
+                        p {
+                            @include fontsize(16);
+                        }
+                    }
+                    &:hover {
+                        background-size: 150%;
+                    }
+                }
+            }
+        }

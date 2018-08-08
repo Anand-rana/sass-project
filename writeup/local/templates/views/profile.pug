@@ -1,0 +1,234 @@
+.page-conatiner
+	.profile-section.s-ov
+		.container
+			.main-heading
+				h2.title Profile preview
+			.profile-block
+				.profile-block-dtl
+					.row
+						.col-md-4.col-sm-5
+							.p-user-block
+								.p-img
+									img(src="images/profile.jpg" alt="img" class="img-responsive")
+								.p-user-info-block
+									.p-trophies
+										h3.title 
+											span Trophies
+										.p-trophies-list
+											ul
+												li
+													img(src="images/trophy-1.png" alt="img")
+												li
+													img(src="images/trophy-2.png" alt="img")
+												li
+													img(src="images/trophy-3.png" alt="img")
+												li
+													img(src="images/trophy-2.png" alt="img")
+												li
+													img(src="images/trophy-1.png" alt="img")
+												li
+													img(src="images/trophy-3.png" alt="img")
+									.p-points
+										h3.title 
+											span points
+										.p-points-total
+											img(src="images/points.png" alt="img").ib_v
+											h4.ib_v 
+												span 400 
+												|Points
+
+						.col-md-8.col-sm-7
+							.p-personal-info-block
+								.row
+									.col-md-8.col-sm-8
+										.user-name 
+											h3 John smith
+										.user-profile
+											h4 Product Designer
+										
+									.col-md-4.col-sm-4
+										a(ui-sref="editprofile").u-edit-link
+											i.icon-pencil-edit-button.text-blue.margin-right-2x
+											|Edit Profile
+								.user-rating-cotainer
+											h3 Rating
+											.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-1")
+								.p-tabs
+									uib-tabset
+										uib-tab(index="0" heading="Personal Information")
+											.p-tab-cotent
+												.up-info
+													.up-info-row
+														h3 About
+														.up-row
+															.t-cell.label-name
+																label Bio :
+															.t-cell
+																p Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quamnunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec.
+													.up-info-row
+														h3 Contact Information
+														.up-row
+															.t-cell.label-name
+																label Address :
+															.t-cell
+																p 525E 68th Street
+																	br
+																	|New York, NY 10651-78 156-187-60
+														.up-row
+															.t-cell.label-name
+																label E-mail :
+															.t-cell
+																p.text-blue Dummy@gmail.com
+														.up-row
+															.t-cell.label-name
+																label Website :
+															.t-cell
+																p.text-blue www.dummysitename.com
+													.up-info-row
+														h3 Other Details
+														.up-row
+															.t-cell.label-name
+																label Age :
+															.t-cell
+																p 28 years 
+														.up-row
+															.t-cell.label-name
+																label Gender :
+															.t-cell
+																p Male
+													.up-info-row
+														h3 Card Details
+														.margin-top-4x
+															button.button.button-uppercase.button-blue.button-font-base(ng-click="$state.go('card')" ) Manage Cards
+														
+
+										uib-tab(index="1" heading="Change Password")
+											.p-tab-cotent
+												.p-cp-block
+													.field-group
+														.field-row
+															.t-cell
+																label Current password :
+															.t-cell
+																.c-field.c-md
+																	input(type="password").c-field-control
+														.field-row
+															.t-cell
+																label New Password :
+															.t-cell
+																.c-field.c-md
+																	input(type="password").c-field-control
+														.field-row
+															.t-cell
+																label Re-enter new password :
+															.t-cell
+																.c-field.c-md
+																	input(type="password").c-field-control
+												.padding-top-5x
+													.row
+															.col-md-4
+																button.button.button-uppercase.button-blue.button-font-base.button-block.margin-bottom-2x confirm
+															.col-md-8
+																.su-msg-box
+																	span.ico
+																		i.icon-checked
+																	span Your password has been changed successfully
+																	span.close-ico
+																		i.icon-close
+				.p-rev-cotainer
+					h2.title
+						span Recent Reviews
+					.review-block
+						.review-list
+							.review-box
+								.media
+									.media-left
+										.user-img
+											img(src="images/user-1.jpg" alt="img")
+									.media-body
+										.user-name
+											h3 Sam wilson
+										.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star-o star-uncheck-o'"  read-only="true" aria-labelledby="default-rating-2")
+										.review-txt
+											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.... 
+												a(href="#" class="r-link")  View More
+										.review-opt
+											
+												ul
+														li
+															span Reply 3
+															span.ico
+																i.icon-reply
+														li
+															span 390
+															span.ico.liked
+																i.icon-heart
+														li
+															span 20
+															span.ico.text-blue
+																i.icon-network
+														li.report-ico(ng-controller="ModalCtrl"  ng-click="report()" class="pointer")
+															span.ico.pointer
+																i.icon-do-not-disturb
+										
+							
+								.rev-reply-list
+									.review-box
+											.media
+												.media-left
+													.user-img
+														img(src="images/user-1.jpg" alt="img")
+												.media-body
+													.user-name
+														h3 Sam wilson
+													
+													.review-txt
+														p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.... 
+															a(href="#" class="r-link")  View More
+									.margin-top-5x
+										a(href="#" class="view-link") View all
+									.rev-reply-field
+										textarea(placeholder="Type here" rows="1" cols="2").rev-reply-field-control
+										.reply-btn
+											i.icon-paper-plain
+										
+							.review-box
+								.media
+									.media-left
+										.user-img
+											img(src="images/user-1.jpg" alt="img")
+									.media-body
+										.user-name
+											h3 Sam wilson
+										.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star-o star-uncheck-o'"  read-only="true" aria-labelledby="default-rating-2")
+										.review-txt
+											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.... 
+												a(href="#" class="r-link")  View More
+										.review-opt
+											
+												ul
+														li
+															span Reply 3
+															span.ico
+																i.icon-reply
+														li
+															span 390
+															span.ico.liked
+																i.icon-heart
+														li
+															span 20
+															span.ico.text-blue
+																i.icon-network
+														li.report-ico(ng-controller="ModalCtrl"  ng-click="report()" class="pointer")
+															span.ico.pointer
+																i.icon-do-not-disturb
+											
+													 
+										
+							.text-center.margin-top-5x
+								a(href="#" class="view-link") View all reviews
+
+			

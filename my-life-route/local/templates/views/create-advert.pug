@@ -1,0 +1,174 @@
+.create-advert
+	.container
+		.step-form-block
+			h2.title Create ADVERT
+			.step-form-container
+				.step-form-heading
+					h3.title Essential Details
+					
+				.step-form-data
+					.step-form-field-box
+						.field-group
+							.c-field.c-outline.c-lh.c-shadow
+									.c-line
+										label Title
+									input(type="text", placeholder="Advert Headline").c-field-control
+							.row.row-10
+								.col-md-6
+									.c-field.c-outline.c-lh.c-shadow
+										.c-line
+											label Start Date
+										.c-has-icon
+											input(type="text", placeholder="DD/MM/YYYY").c-field-control
+											.icon-addon.hidden-xs
+												i.icon-calendar
+								.col-md-6
+									.c-field.c-outline.c-lh.c-shadow
+										.c-line
+											label End Date
+										.c-has-icon
+											input(type="text", placeholder="DD/MM/YYYY").c-field-control
+											.icon-addon.hidden-xs
+												i.icon-calendar
+
+							.row.row-10
+								.col-md-6
+									.c-field.c-outline.c-lh.c-shadow
+										.c-line
+											label Start Time
+										.c-has-icon
+											input(type="text", placeholder="Time").c-field-control
+											.icon-addon.hidden-xs
+												i.icon-watch
+								.col-md-6
+									.c-field.c-outline.c-lh.c-shadow
+										.c-line
+											label End Time
+										.c-has-icon
+											input(type="text", placeholder="Time").c-field-control
+											.icon-addon.hidden-xs
+												i.icon-watch
+							.c-field.c-outline.c-lh.c-shadow
+									.c-line
+										label Location
+									input(type="text", placeholder="Specify Location (City, Country etc)").c-field-control
+							.c-field.c-outline.c-shadow.c-b-lg
+									.c-line
+										label Description
+									textarea(rows="8" cols="8" placeholder="Advert Description").c-field-control
+							.c-field.c-outline.c-shadow.c-b-lg
+									.c-line
+										label Keywords/ Tags
+									textarea(rows="5" cols="5" placeholder="Specific words associated with this Advert Post (e.g. Job,market etc)").c-field-control
+							.c-field.c-outline.c-lh.c-shadow
+									.c-line
+										label Website Link
+									input(type="text", placeholder="www.abcde.com").c-field-control
+							
+							
+							.c-add-img-video__block.c-addimgblcok
+											.c-add-img-video__top
+												.fileUpload
+													input(type="file" class="upload")
+													button.button.button-rounded.button-height-large.button-font-bold Add Images
+												span.help-icon(ng-controller="ModalCtrl"  ng-click="tips()")
+													img(src="images/help-icon.png" alt="img")
+											.data-list
+												.row
+													.col-md-6.col-sm-6
+														.img-box
+															span.delete-ico
+																	i.icon-close-fill
+															figure
+
+																img(src="images/test.jpg" alt="img")
+															figcaption
+																h3.file-title Originalname.jpeg
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption = ! addcaption" ng-class="{'hidden':addcaption}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+
+													.col-md-6.col-sm-6
+														.img-box
+															span.delete-ico
+																	i.icon-close-fill
+															figure
+																img(src="images/test.jpg" alt="img")
+															figcaption
+																h3.file-title Originalname.jpeg
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption1 = ! addcaption1" ng-class="{'hidden':addcaption1}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption1") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+
+							.c-add-img-video__block
+											.c-add-img-video__top
+												
+												button.button.button-rounded.button-height-large.button-font-bold(ng-controller="ModalCtrl"  ng-click="insertvideo()") Add Videos
+												span.help-icon(ng-controller="ModalCtrl"  ng-click="tips()")
+													img(src="images/help-icon.png" alt="img")
+											.data-list
+												.row
+													.col-md-6.col-sm-6
+														.video-box
+															span.delete-ico
+																	i.icon-close-fill
+															
+															iframe(width="100%" height="200" src="https://www.youtube.com/embed/7mNu1DaTVDY" frameborder="0" allowfullscreen)
+																	
+															figcaption
+																h3.file-title Originalname.mp4
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption3 = ! addcaption3" ng-class="{'hidden':addcaption3}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption3") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+													.col-md-6.col-sm-6
+														.video-box
+															span.delete-ico
+																	i.icon-close-fill
+															
+															iframe(width="100%" height="200" src="https://www.youtube.com/embed/7mNu1DaTVDY" frameborder="0" allowfullscreen)
+																	
+															figcaption
+																h3.file-title Originalname.mp4
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption4 = ! addcaption4" ng-class="{'hidden':addcaption4}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption4") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+
+							.btn-field.text-right
+									button.button.button-danger.button-font-medium.button-uppercase.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-left-1x.margin-right-1x.margin-bottom-2x CANCEL
+									button.button.button-uppercase.button-font-medium.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-right-1x.margin-left-1x(ng-controller="ModalCtrl"  ng-click="advmsg()") POST

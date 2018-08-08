@@ -1,0 +1,257 @@
+
+<div class="dashboard-news-section">
+  <div class="header-block">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="sort-input-field margin-bottom-2x">
+          <div class="select-control">
+            <select class="sort-field-control">
+              <option>Sort By</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="text-right">
+          <button class="button button-purpule button-height-large button-font-bold button-rounded margin-right-1x">All Stats</button>
+          <button class="button button-height-large button-font-bold button-rounded" ng-controller="ModalCtrl" ng-click="nstatssearch()"><i class="icon-magnifier"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="news-list">
+    <div class="total-entries"><span>500 Entries</span></div>
+    <div class="data-table">
+      <div class="table-responsive">
+        <table class="table c-2 table-bordered">
+          <thead>
+            <tr>
+              <th class="text-center">No</th>
+              <th class="text-center">Title</th>
+              <th class="text-center">Author<br/>Name</th>
+              <th class="text-center">Author Email</th>
+              <th class="text-center">Location</th>
+              <th class="text-center">Creation Date<br/><span>(DD/MM/YYYY)</span></th>
+              <th class="text-center">Last Updated<br/><span>(DD/MM/YYYY)</span></th>
+              <th class="text-center">Status</th>
+              <th class="text-center">Likes</th>
+              <th class="text-center">Comments</th>
+              <th class="text-center">Shares</th>
+              <th class="text-center">Video Links</th>
+              <th class="text-center">Images</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"> <span uib-popover="500,000" popover-trigger="'mouseenter'">500k</span></td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">23</td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-1" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-news-stats-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="newsdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="page-nation-list c-1 margin-top-4x">
+      <ul>
+        <li><a href="#">1</a></li>
+        <li><a class="active" href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">8</a></li>
+        <li><a class="next-btn" href="#">Next
+            <Span class="ico"><i class="icon-angle-right"></i></Span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>

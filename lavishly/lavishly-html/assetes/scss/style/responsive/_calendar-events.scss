@@ -1,0 +1,48 @@
+@include media("<=1400px") {
+    .c-event-dtl {
+        .c-upcoming-events {
+            .item-section {
+                @include padding(50);
+            }
+        }
+        .c-smilar-items {
+            .item-section {
+                @include padding(50);
+            }
+        }
+    }
+}
+
+@include media("<=992px") {
+    .c-event-dtl {
+        .c-upcoming-events {
+            .item-section {
+                @include padding(50 0);
+            }
+        }
+        .c-smilar-items {
+            .item-section {
+                @include padding(50 0);
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+    .c-event-section {
+        .c-event-list {
+            .c-event-box {
+                figure {
+                    figcaption {
+                        max-height: inherit;
+                    }
+                }
+            }
+        }
+        .c-event-top {
+            .c-event-filter {
+                @include margin-top(10);
+            }
+        }
+    }
+}

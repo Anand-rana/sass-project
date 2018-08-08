@@ -1,0 +1,16 @@
+@include media("<=1200px") {
+
+    .dashboard-news-event-dtl {
+        .news-event-dtl-box {
+            .__inner-container {
+                .slider-block {
+                    .news-event-slider-block {
+                        .sliderNav {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

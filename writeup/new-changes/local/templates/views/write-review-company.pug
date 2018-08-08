@@ -1,0 +1,96 @@
+.page-conatiner
+	.write-review-section.s-ov
+		.container
+			.main-heading
+				h2.title Write a Review
+			.write-review-block
+				.write-review-block__form
+					.row
+						.col-md-4.col-sm-5
+							.r-user-block
+								.r-img
+									img(src="images/profile.jpg" class="img-responsive")
+								.r-rating-list
+									.media
+										.media-left
+											span.ico
+												i.icon-cap
+										.media-body
+											h3.title Knowledge
+											.rating-container
+												span(uib-rating ng-model="knowledge"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"   aria-labelledby="default-rating-1")
+									.media
+										.media-left
+											span.ico
+												i.icon-smily
+										.media-body
+											h3.title Enthusiasm	
+											.rating-container
+												span(uib-rating ng-model="Enthusiasm"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  aria-labelledby="default-rating-2")
+									.media
+										.media-left
+											span.ico
+												i.icon-briefcase
+										.media-body
+											h3.title Work Ethics	
+											.rating-container
+												span(uib-rating ng-model="Work"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"   aria-labelledby="default-rating-3")
+									.media
+										.media-left
+											span.ico
+												i.icon-piggy-bank
+										.media-body
+											h3.title Value for money
+											.rating-container
+												span(uib-rating ng-model="money"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"   aria-labelledby="default-rating-4")
+									.media
+										.media-left
+											span.ico
+												i.icon-handshake
+										.media-body
+											h3.title Friendliness
+											.rating-container
+												span(uib-rating ng-model="Friendliness"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  aria-labelledby="default-rating-5")
+									.media
+										.media-left
+											span.ico
+												i.icon-like-thumb
+										.media-body
+											h3.title Recommended
+											.rating-container
+												span(uib-rating ng-model="Recommended"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"   aria-labelledby="default-rating-5")
+						.col-md-8.col-sm-7
+							.write-review-block-form-box
+								.user-name
+									h3 John smith
+								.user-profile
+									h4 Product Designer @ 
+										span.text-black ABC IT COMPANY
+								.field-group
+									.c-field.field-req
+										input(type="text", placeholder="Subject").c-field-control
+										.icon-sign &#42;
+									.c-field.field-req
+										textarea(placeholder="Review").c-field-control
+										.icon-sign &#42;
+									.c-field.field-req
+										input(type="text", placeholder="Tags").c-field-control
+										.icon-sign &#42;
+									.file-field.c-field
+										.fileUpload
+											input(type="file", placeholder="Tags").upload
+											span
+												img(src="images/upload-icon.jpg" alt="img")
+										textarea(placeholder="Picture description").c-field-control
+									.file-field.c-field
+										.fileUpload
+											input(type="file", placeholder="Tags").upload
+											span
+												img(src="images/upload-video-icon.jpg" alt="img")
+										textarea(placeholder="Video description").c-field-control
+						.col-md-12.col-sm-12
+							.margin-top-6x.text-center
+								button.button.button-blue-dark.button-uppercase.button-height-large.button-font-base.button-blue-shadow.button-min-width.margin-bottom-2x.margin-right-2x Submit
+								button.button.button-uppercase.button-height-large.button-font-base.button-shadow.button-min-width Cancel
+
+		

@@ -1,0 +1,55 @@
+.dashboard-advert-section
+	.dashboard-adverts-dtl
+		.heading-block
+			h2.title New Store Opening
+		.adv-dtl-box
+			.__inner-container
+				.title-block
+					h3.title New Store Opening
+				.slider-block
+					.adv-slider-block
+						.adv-slider(data-ng-controller="newsCtrl")
+								ng-owl-carousel(class="owl-theme" owl-items="items" owl-properties="properties" owl-ready="ready($api)")
+									.item(data-ng-repeat="item in items")
+										figure
+											img(src="images/news-1.jpg" alt="img")
+											figcaption
+												h4 New_assign_name
+						div(id="sliderNav" class="sliderNav")
+				.adv-dtl-info
+					ul
+						li
+							span.__label Location :
+							| New York ,USA
+						li
+							.row
+								.col-md-4
+									span.__label Date Created  :
+									span 24th May 2016
+								.col-md-8
+
+									ul.social-info
+										li
+											span.ico.t-liked
+												i.icon-thumb 
+											span Like : 500
+										li
+											span.ico.t-views
+												i.icon-user-o 
+											span Views : 40
+										
+				.adv-des-txt
+					p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text is these when an unnown py qwe gth  isps  took a galley tia smx oko industry standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged floewf dustry standard dum has been flp lly unchanged dsx owkd Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text is these when an unnown py qwe gth  isps  took a galley tia smx oko industry standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged floewf dustry standard dum has been flp lly unchanged dsx owkd Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text is these when an unnown py qwe gth  isps  took a galley tia smx oko industry standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged floewf dustry standard dum has been flp lly unchanged dsx owkd
+				.adv-keyword.adv-content-row
+					span.__label Keywords : 
+					|Lifestyle, New-age, Apparels, 2017, Exciting
+				.adv-website.adv-content-row
+					span.__label Website :
+					a(href="#" target="_blank" class="text-theme") 
+						u www.mlr.advert.org.com			
+				.adv-t-images.adv-content-row
+					span.__label Total Images : 
+					sapn  23
+				.adv-t-images.adv-content-row
+					span.__label Total Video Links : 
+					sapn  23		

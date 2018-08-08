@@ -1,0 +1,18 @@
+.share-route-modal
+	.modal-header
+		h2.title Share  By Email 
+		button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close
+	.modal-body
+		.share-form
+			.c-field.c-b-sm.c-md.c-shadow
+					tags-input(ng-model="ltags" placeholder="Add Email's")
+			.c-field.c-b-sm.c-md.c-shadow
+					input.c-field-control(placeholder="Post Link" readonly)
+			.c-field.c-shadow.c-b-sm.c-md 
+				textarea.c-field-control(placeholder="Message " rows="3" cols="3")
+			.btn-field.margin-top-5x
+					button.button.button-green.button-width-large.button-rounded.button.font-medium-txt Share
+			
+		
+		

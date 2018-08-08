@@ -1,0 +1,165 @@
+
+<div class="my-stats-section">
+  <div class="container">
+    <div class="heading-block">
+      <div class="breadcrumb-list">
+        <ul>
+          <li><span>My Stats </span></li>
+          <li><span class="active">My Life Routes</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="__inner-container">
+      <div class="row">
+        <div class="col-md-3 col-sm-3">
+          <div class="stats-nav__list">
+            <ul>
+              <li><a data-ui-sref="my-stats" data-ui-sref-active="active">My Life Routes</a></li>
+              <li><a data-ui-sref="my-stats-news" data-ui-sref-active="active">My News (76 )</a></li>
+              <li><a data-ui-sref="my-stats-events" data-ui-sref-active="active">My Events (88)</a></li>
+              <li><a data-ui-sref="my-stats-connection" data-ui-sref-active="active">My Connections (68)</a></li>
+              <li><a data-ui-sref="my-stats-profile" data-ui-sref-active="active">My Profile</a></li>
+              <li><a data-ui-sref="my-stats-message " data-ui-sref-active="active">My Messages (45)</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-9">
+          <div class="m-stats__data-container">
+            <div class="m-stats__life-routes">
+              <div class="m-stats-route-box">
+                <h3>Life Routes</h3>
+                <div class="m-stats-route__result" data-ng-controller="routeresultCtrl">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <ul class="t-result-list">
+                        <li><span class="__t-no">688</span><span>Total Liferoutes Posted</span></li>
+                        <li class="list-dot list-dot-g"><span class="__t-no">588</span><span>Requested Liferoutes</span></li>
+                        <li class="list-dot"><span class="__t-no">188</span><span>Completed Liferoutes</span></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-5"> 
+                      <canvas class="chart chart-pie" id="pie" chart-data="data" chart-labels="labels" chart-options="options" chart-dataset-override="datasetOverride"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-stats__oth-info-container">
+                <div class="m-stats__info-block">
+                  <h3>200</h3>
+                  <h5>Total Images</h5>
+                </div>
+                <div class="m-stats__info-block">
+                  <h3>200</h3>
+                  <h5>Total Video Links</h5>
+                </div>
+              </div>
+              <div class="m-stats__data-table">
+                <div class="m-stats__table-top">
+                  <div class="row">
+                    <div class="col-md-3"><span class="__t-count">Total Liferoutes : 80</span></div>
+                    <div class="col-md-9">
+                      <div class="sort-field"><span class="__label">Sort by</span>
+                        <div class="select-control">
+                          <select class="sort-field-control">
+                            <option value="Status">Status...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="__inner-data">
+                  <div class="table-responsive">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Title</th>
+                          <th>Steps</th>
+                          <th>Views</th>
+                          <th>Likes</th>
+                          <th>Comments</th>
+                          <th>Shared</th>
+                          <th>Followers</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Lorem Ipsum is simply dummy text </td>
+                          <td>6</td>
+                          <td>800</td>
+                          <td>345</td>
+                          <td>455</td>
+                          <td>435</td>
+                          <td>238</td>
+                        </tr>
+                        <tr>
+                          <td>Lorem Ipsum is simply dummy text </td>
+                          <td>6</td>
+                          <td>800</td>
+                          <td>345</td>
+                          <td>455</td>
+                          <td>435</td>
+                          <td>238</td>
+                        </tr>
+                        <tr>
+                          <td>Lorem Ipsum is simply dummy text </td>
+                          <td>6</td>
+                          <td>800</td>
+                          <td>345</td>
+                          <td>455</td>
+                          <td>435</td>
+                          <td>238</td>
+                        </tr>
+                        <tr>
+                          <td>Lorem Ipsum is simply dummy text </td>
+                          <td>6</td>
+                          <td>800</td>
+                          <td>345</td>
+                          <td>455</td>
+                          <td>435</td>
+                          <td>238</td>
+                        </tr>
+                        <tr>
+                          <td>Lorem Ipsum is simply dummy text </td>
+                          <td>6</td>
+                          <td>800</td>
+                          <td>345</td>
+                          <td>455</td>
+                          <td>435</td>
+                          <td>238</td>
+                        </tr>
+                        <tr>
+                          <td>Lorem Ipsum is simply dummy text </td>
+                          <td>6</td>
+                          <td>800</td>
+                          <td>345</td>
+                          <td>455</td>
+                          <td>435</td>
+                          <td>238</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="page-nation-list c-1 margin-top-4x">
+                  <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a class="active" href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a class="next-btn" href="#">Next
+                        <Span class="ico"><i class="icon-angle-right"></i></Span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

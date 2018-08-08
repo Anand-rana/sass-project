@@ -1,0 +1,62 @@
+.page-conatiner
+	.competion-section.s-ov
+		.container
+			.main-heading
+				h2.title Create a competition
+			.competion-block
+				.competion-block__inner
+					.competion-create-form
+						.row
+							.col-md-8
+								.field-group
+									.c-field
+										input(type="text", placeholder="Name of competition").c-field-control
+									.c-field
+										input(type="text", placeholder="Maximum number of participants").c-field-control
+									.c-field
+										input(type="text", placeholder="Prize").c-field-control
+									.c-field
+										tags-input(ng-model="tags")
+									.row
+										.col-md-6
+											.c-field.has-icon
+												input(type="text", placeholder="Start date").c-field-control
+												span.icon-addon
+													i.icon-calendar
+
+										.col-md-6
+											.c-field.has-icon
+												input(type="text", placeholder="end Date").c-field-control
+												span.icon-addon
+													i.icon-calendar
+									.c-field
+										input(type="text", placeholder="Phone Number").c-field-control
+									.c-field
+										input(type="text", placeholder="Email Address").c-field-control
+									.c-field
+										label.label-checkbox.label-checkbox-small
+											input(type="checkbox")
+											span.check-mark
+											span.label-name Contact WriteUp to host this competition
+											span.helpicon.ib_v.hidden-xs(uib-popover="Select this check box to contact Write Up regarding setting up your competition. We will take care of all aspects of your competition before going live"  popover-placement="top-right")
+												i.icon-help
+							.col-md-4
+								.upload-field
+									h3.title Upload pictures and video
+									.fileUpload
+										input(type="file").upload
+										img(src="images/upload-icon.jpg" alt="img").img-responsive
+									.upload-list
+										ul
+											li
+												img(src="images/news-1.jpg" alt="img")
+											li
+												img(src="images/news-2.jpg" alt="img")
+											li
+												img(src="images/news-3.jpg" alt="img")
+						.margin-top-8x.text-center
+							button.button.button-uppercase.button-height-large.button-blue-shadow.button-blue-dark.button-font-base.button-min-width.margin-right-4x.margin-bottom-2x Submit
+							button.button.button-uppercase.button-height-large.button-shadow.button-font-base.button-min-width Preview
+
+
+					

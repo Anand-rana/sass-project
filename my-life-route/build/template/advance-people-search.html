@@ -1,0 +1,62 @@
+
+<div class="advance-search-modal" data-ng-controller="searchCtrl">
+  <div class="modal-header">
+    <h2 class="title">Advanced Search</h2>
+    <button class="close-ico" id="close" ng-click="cancel()"><i class="icon-close-o"></i></button>
+  </div>
+  <div class="modal-body">
+    <div class="field-group">
+      <div class="row">
+        <div class="col-md-4 col-lg-4">
+          <div class="advance-field-group">
+            <div class="search-filed s-outline c-2">
+              <label>Title</label>
+              <input class="search-field-control" type="text" placeholder="Full Name"/>
+            </div>
+          </div>
+          <div class="advance-field-group">
+            <div class="search-filed s-outline c-2">
+              <label>Location</label>
+              <input class="search-field-control" type="text" placeholder="Search by Location"/>
+            </div>
+          </div>
+          <div class="advance-field-group">
+            <div class="search-filed s-outline c-2">
+              <label>Keywords</label>
+              <input class="search-field-control" type="text" placeholder="Search by Keywords"/>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-lg-offset-1">
+          <div class="margin-bottom-4x">
+            <div class="search-drop-down-field c-2">
+              <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'User Type'}" extra-settings="inputsettings"></div>
+            </div>
+            <div class="search-drop-down-field c-2">
+              <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'Occupation'}" extra-settings="inputsettings"></div>
+            </div>
+            <div class="search-drop-down-field c-2">
+              <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'Age Range'}" extra-settings="inputsettings"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-lg-offset-1">
+          <div class="search-drop-down-field c-2">
+            <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'Educational Level'}" extra-settings="inputsettings"> </div>
+          </div>
+          <div class="search-drop-down-field c-2">
+            <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'Years of Experience'}" extra-settings="inputsettings"> </div>
+          </div>
+          <div class="search-drop-down-field c-2">
+            <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'Online Activity'}" extra-settings="inputsettings"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-field">
+        <button class="button button-rounded button-font-medium-txt button-rounded margin-left-1x margin-bottom-1x margin-right-1x button-width-large">Search</button>
+        <button class="button button-green button-rounded button-font-medium-txt button-rounded margin-left-1x margin-bottom-1x margin-right-1x button-width-large">Reset</button>
+        <button class="button button-danger button-rounded button-font-medium-txt button-rounded margin-left-1x margin-bottom-1x margin-right-1x button-width-large">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

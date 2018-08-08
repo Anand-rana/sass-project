@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Writeup</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minmum-scale=1, maximum-scale=1">
+    <!-- StyleSheet-->
+    <link href="assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/fonts.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/font-icons.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/button.css" type="text/css" rel="stylesheet">
+    <!--owl-carousel-->
+    <link href="assets/css/owl.carousel.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/owl.theme.default.min.css" type="text/css" rel="stylesheet">
+    <!--rev-slider-->
+    <link href="assets/css/layers.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/settings.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/navigation.css" type="text/css" rel="stylesheet">
+    <!--animate-->
+    <link href="assets/css/animate.css" type="text/css" rel="stylesheet">
+    <!--tags-->
+    <link href="node_modules/ng-tags-input/build/ng-tags-input.min.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/responsive.css" type="text/css" rel="stylesheet">
+    <!-- Scripting-->
+    <script src="assets/js/modernizr.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!--<![endif]-->
+  </head>
+  <body data-ng-app="myApp" data-ng-class="bodyClass">
+    <div class="preloader">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    <div ui-view="header" data-ng-class="headerClass"></div>
+    <div ui-view="banner"></div>
+    <div class="main-container">
+      <div ui-view="content"></div>
+    </div>
+    <footer>
+      <div class="footer-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-4">
+              <div class="f-logo-block"><img class="img-responsive" src="images/footer-logo.png" alt="img">
+                <h3>Reviews done right</h3>
+                <div class="f-social-links">
+                  <ul>
+                    <li><a href="#"><i class="icon-facbook"></i></a></li>
+                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-8">
+              <div class="footer-inner-block">
+                <div class="row">
+                  <div class="col-md-6 col-sm-6">
+                    <h2>Know more</h2>
+                    <div class="f-page-links">
+                      <ul>
+                        <li><a ui-sref="about">About Us</a></li>
+                        <li><a ui-sref="terms">Terms &amp; Conditions</a></li>
+                        <li><a ui-sref="privacy">Privacy Policy</a></li>
+                        <li><a ui-sref="faq">FAQ’s</a></li>
+                        <li><a ui-sref="contact">Contact Us</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <h2>CONTACT INFO</h2>
+                    <div class="f-contact-info">
+                      <ul>
+                        <li>
+                          <div class="media">
+                            <div class="media-left"><span class="c-ico"><i class="icon-marker"></i></span></div>
+                            <div class="media-body">
+                              <p>Lorem Ipsum Lorem Ipsum Suite 600, New York</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="media">
+                            <div class="media-left"><span class="c-ico"><i class="icon-phone"></i></span></div>
+                            <div class="media-body">
+                              <p>07903340743</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="media">
+                            <div class="media-left"><span class="c-ico"><i class="icon-enevelope"></i></span></div>
+                            <div class="media-body">
+                              <p>Daniel@Writeupreviews.com</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="f-bottom-block">
+          <div class="container-fluid">
+            <div class="copy-txt">
+              <p>&copy; 2017 WRITEUP  -  Lorem Ipsum </p>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-top" data-ng-controller="arrowctrl" data-ng-click="offsetTop();"><i class="icon-arrow-top"></i></div>
+      </div>
+    </footer>
+    <!--owl-carousel-->
+    <script src="assets/js/owl.carousel.min.js" type="text/javascript"></script>
+    <!--rev-->
+    <script src="assets/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+    <!--custom-scroll-->
+    <script src="node_modules/angular-nicescroll/demo/app/bower_components/jquery.nicescroll/jquery.nicescroll.min.js" type="text/javascript"></script>
+    <!--angular-->
+    <script src="node_modules/angular/angular.js" type="text/javascript"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular-ui-router/release/stateEvents.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js" type="text/javascript"></script>
+    <script src="node_modules/angular-owl-carousel2/src/angular-owl-carousel-2.js" type="text/javascript"></script>
+    <script src="node_modules/angular-revolution/release/angular-revolution.js" type="text/javascript"></script>
+    <script src="node_modules/angular-nicescroll/angular-nicescroll.js" type="text/javascript"></script>
+    <script src="node_modules/ng-tags-input/build/ng-tags-input.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <div class="side-back-drop hidden"></div>
+  </body>
+</html>

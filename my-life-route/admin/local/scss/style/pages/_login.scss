@@ -1,0 +1,100 @@
+.form-bg {
+    background: url(#{$imgpath}form-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.dashboard-form-container {
+    @include experimental-value(height, calc(100vh));
+
+    @include pos(rel, null);
+    .dashboard-form__box {
+        max-width: 600px;
+        background-color: $white;
+        @include padding(60 70);
+        @include pos(ab, 50% 0 null 0);
+        @include translatepos(0, -50%);
+        margin: auto;
+
+
+        .logo {
+            @include padding-left(30);
+        }
+
+        .login-form {
+            @include margin-top(50);
+
+            .login-form__heading-block {
+                h3 {
+                    @include fontsize(25);
+                    font-weight: 400;
+                    color: $color-text-03;
+                }
+                h4 {
+                    @include fontsize(18);
+                    font-weight: 300;
+                }
+            }
+            .field-group {
+                @include margin-top(35);
+            }
+
+            .btn-field {
+                @include margin-top(60);
+            }
+            .forgot-link {
+                @include fontsize(16);
+                font-weight: 400;
+                color: $color-text-03;
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .forgot-form {
+            @include margin-top(50);
+            .forgot-form__heading-block {
+                h3 {
+                    @include fontsize(25);
+                    font-weight: 400;
+                    color: $color-text-03;
+                }
+                p {
+                    @include fontsize(18);
+                    font-weight: 300;
+                    @include margin-top(10);
+                }
+            }
+            .field-group {
+                @include margin-top(35);
+            }
+
+            .btn-field {
+                @include margin-top(60);
+            }
+        }
+
+        .email-msg {
+            @include margin-top(50);
+            .email-msg__heading-block {
+                h3 {
+                    @include fontsize(25);
+                    font-weight: 400;
+                    color: $color-text-03;
+                }
+                p {
+                    @include fontsize(18);
+                    font-weight: 300;
+                    @include margin-top(10);
+                }
+            }
+            .btn-field {
+                @include margin-top(60);
+            }
+        }
+    }
+}

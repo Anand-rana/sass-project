@@ -1,0 +1,271 @@
+
+<div class="dashboard-user-mange-section">
+  <div class="header-block">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="sort-input-field margin-bottom-2x">
+          <div class="select-control">
+            <select class="sort-field-control">
+              <option>Sort By</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="text-right">
+          <button class="button button-green button-height-large button-font-bold button-rounded margin-right-1x">Active Users</button>
+          <button class="button button-danger button-height-large button-font-bold button-rounded margin-right-1x">In-Active Users</button>
+          <button class="button button-height-large button-font-bold button-rounded" ng-controller="ModalCtrl" ng-click="usersearch()"><i class="icon-magnifier"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="user-mangement-list">
+    <div class="total-entries"><span>500 Entries</span></div>
+    <div class="data-table">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="text-center">Full Name</th>
+              <th class="text-center">Email</th>
+              <th class="text-center">Signed Up <br/><span>(DD/MM/YYYY)</span></th>
+              <th class="text-center">Status</th>
+              <th class="text-center">Location</th>
+              <th class="text-center">DOB<br/><span>(DD/MM/YYYY)</span></th>
+              <th class="text-center">Age</th>
+              <th class="text-center">Gender</th>
+              <th class="text-center">Total <br/>Connections</th>
+              <th class="text-center">Total<br/>Followers</th>
+              <th class="text-center">Life Routes</th>
+              <th class="text-center">News</th>
+              <th class="text-center">Events</th>
+              <th class="text-center">Business Pages</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td class="text-center">Jennie jackson</td>
+              <td class="text-center">Jennie_son@gmail.com</td>
+              <td class="text-center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td class="text-center">Mohali India</td>
+              <td class="text-center">03/06/1993</td>
+              <td align="center">23</td>
+              <td align="center">Male</td>
+              <td align="center">27</td>
+              <td align="center">27</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center">4</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-user-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="userdelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="page-nation-list margin-top-4x">
+      <ul>
+        <li><a href="#">1</a></li>
+        <li><a class="active" href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">8</a></li>
+        <li><a class="next-btn" href="#">Next
+            <Span class="ico"><i class="icon-angle-right"></i></Span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>

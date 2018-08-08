@@ -1,0 +1,135 @@
+@include media("<=1400px") {
+    .profile-section {
+        .profile-block {
+            .nav-tabs {
+                @include padding-left(300);
+            }
+        }
+    }
+}
+
+@include media("<=992px") {
+    .profile-section {
+        .profile-block {
+            .nav-tabs {
+                @include padding-left(0);
+            }
+
+            .profile-post__container {
+                @include margin-top(30);
+
+                .usr-post-list {
+                    @include margin-top(20);
+                }
+            }
+
+            .profile-people__container {
+                @include margin-top(30);
+
+                .usr-conection-list {
+                    @include margin-top(20);
+                }
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+
+    .profile-section {
+        @include padding(50 0);
+
+
+
+        .p-top-block {
+            .icon {
+                .p-opt__dropbox {
+                    top: 50px;
+                    right: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        .profile-block {
+
+            .nav-tabs {
+                &>li {
+                    &>a {
+                        @include padding(15);
+                    }
+                }
+            }
+
+            .profile-block__container {
+                .usr-tp-container {
+                    .usr-tp-block {
+                        .usr-tp__box {
+                            text-align: center;
+                            min-width: inherit;
+                            display: $b;
+
+                            h3 {
+                                min-height: 50px;
+                            }
+                        }
+                    }
+                }
+
+                .usr-work-info {
+                    ul {
+                        li {
+                            @include margin-right(5);
+                            &.v-link {
+                                float: none;
+                                display: $ib;
+                            }
+                            &.w-label {
+                                padding: 0;
+                                margin-top: 0;
+                            }
+                            &.w-time {
+                                padding: 0;
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=479px") {
+    .profile-section {
+
+        .p-top-block {
+            .icon {
+                @include margin-right(5);
+            }
+        }
+
+        .profile-block {
+            .profile-block__container {
+                .usr-tp-container {
+                    .usr-tp-block {
+                        .usr-tp__list {
+                            &>.row {
+                                &>[class^="col-"] {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        .usr-tp__box {
+
+                            h3 {
+                                min-height: inherit;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

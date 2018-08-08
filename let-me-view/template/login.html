@@ -1,0 +1,52 @@
+<!--login-box-->
+<div id="login-modal">
+  <div class="modal-header">
+    <button type="button" class="close" id="loginclose" ng-click="cancel()"><i class="icon-cancel"></i></button>
+    <h2 class="modal-title" id="myModalLabel">Sign in your account</h2>
+  </div>
+  <div class="modal-body">
+    
+    <div class="sign_options">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 text-center"><h4>Sign in with</h4></div>
+        <div class="col-md-6 col-sm-6 text-center">
+          
+          <a href="#" class="facebook_icon"><i class="icon-facebook-o"></i></a>
+          <a href="#" class="linkdin_icon"><i class="icon-linkedin-o"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="speartor_line">
+      <span>or</span>
+    </div>
+    <div class="form">
+      <form>
+        <div class="field-group"><div class="email_field field"><input type="text" placeholder="Email"/><span class="bg-focus"></span></div>
+        <div class="msg-error">Your name required</div>
+      </div>
+      <div class="field-group"><div class="password_field field"><input type="text" placeholder="Password"/><span class="bg-focus"></span></div></div>
+    </form>
+  </div>
+</div>
+<div class="modal_footer">
+  <div class="row">
+    <div class="col-md-7 col-sm-7">
+      <div class="check-btn">
+        <div class="fh-checkbox" >
+          <input type="checkbox" id="rem">
+          <label for="rem">Remember me</label>
+        </div>
+      </div>
+      <div class="margin-top-4x ">
+        <a ui-sref="agent" ng-click="cancel()" class="text-blue o-s-bold"><i class="icon-arrow-left margin-right-2x "></i> <u>I ‘m an Agent</u> </a>
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-5 text-center">
+      <button class="button button-uppercase button-width-large">Submit</button>
+      <span class="block margin-top-2x">Forget password ? <a href="#" class="text-black"><u>Reset now</u></a></span>
+    </div>
+  </div>
+</div>
+<div class="modal_bottom">
+  <h4>Don’t have an account? <a href="#" ng-controller="ModalCtrl" class="text-white" ng-click="register()"><u>Sign up here</u></a></h4>
+</div>

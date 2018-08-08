@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+	include _partials/_head.pug
+	body(data-ng-app="myApp")
+		div(ui-view="header")
+		.main-cotainer(data-ng-class="containerClass")
+			div(ui-view="menu")
+			.dashboard-content(data-ng-class="contentClass")
+				div(ui-view="content")
+
+		
+	include _partials/_footer.pug

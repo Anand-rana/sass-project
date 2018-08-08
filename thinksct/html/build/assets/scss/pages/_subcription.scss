@@ -1,0 +1,30 @@
+.sp-section {
+    @include padding(45 0);
+
+    text-align: center;
+
+    h2 {
+        @include fontsize(24);
+
+        @include margin-bottom(30);
+
+        text-transform: uppercase;
+    }
+
+    .payment-opt {
+        @include margin-top(40);
+
+        & > ul {
+            & > li {
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 20px;
+                margin-bottom: 10px;
+
+                .ch-radio {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

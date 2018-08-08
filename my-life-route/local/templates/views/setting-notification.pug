@@ -1,0 +1,146 @@
+.my-setting-section(data-ng-controller="settingCtrl")
+	.sp-btn(data-ng-click="profileside(); showcaption = ! showcaption")
+		span(ng-show="!showcaption").hidden-xs Hide Profile
+		span(ng-show="showcaption").hidden-xs Show Profile
+		//for mobile-view
+		span( ng-show="!showcaption").visible-xs Show Profile
+		span(ng-show="showcaption").visible-xs Hide Profile
+	.container
+		.my-setting-block
+			.user-dtl-block
+				.user-dtl-block-container
+						.user-dtl-box
+							.user-pic
+								img(src="images/profile-3.jpg" alt="img")
+							.user-name
+								h3 Mahmood Choudhury
+							.user-profile
+								h3 Entrepreneur
+							.user-other-dtl-list
+								ul
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-user
+										.t-cell
+											span 22 Years Old
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-marker
+										.t-cell
+											span London, United Kingdom
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-phone
+										.t-cell
+											span +999-123-4567	
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-cap
+										.t-cell
+											span Postgraduate
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-web
+										.t-cell
+											span www.myliferoute.com
+							.edit-icon
+								a(href="#")
+									i.icon-edit
+							.close-icon.visible-xs(data-ng-click="closemenu()")
+								i.icon-close-o
+						.margin-top-2x.margin-bottom-2x
+							button.button.button-green.button-rounded.button-font-base.button-height-large.button-font-medium.button-font-medium-txt.button-block(ng-controller="ModalCtrl"  ng-click="workhistory()") View Work History
+								span.button-btn-icon
+									i.icon-arrow-right 
+
+
+						.user-dtl-box
+							
+							.user-work-dtl-list
+								ul
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-route  
+											span Liferoutes :
+										.t-cell.text-right
+											span 22
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-news  
+											span News posted :
+										.t-cell.text-right
+											span 12
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-connection  
+											span Connections :
+										.t-cell.text-right
+											span 22
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-follow  
+											span Followers :
+										.t-cell.text-right
+											span 12
+			.my-setting-cotainer
+				.heading-block
+					.breadcrumb-list
+						ul
+							li
+								span Settings
+							li
+								span.active Manage Notifications
+				.my-setting-form
+					.my-setting-form__container
+						h3.form-title Manage Notifications
+						.nt-setting-group
+
+							.nt-setting-opt
+								.row
+									.col-md-8.col-sm-8.col-xs-8
+										h3 Activity Involving Me - Alerts
+										span.help-note When someone likes, follows, comments, shares any of your content or Liferoutes.
+									.col-md-4.col-md-4.col-xs-4
+										.fh-switch
+														input(type="checkbox" id="one")
+														label(for="one")
+														span.fh-switch-knob
+							.nt-setting-opt
+								.row
+									.col-md-8.col-sm-8.col-xs-8
+										h3 Email - Activity Involving Me
+										span.help-note New Message, New Comment, Connection Request, Comment Threads, Likes and Shares.
+									.col-md-4.col-md-4.col-xs-4
+										.fh-switch
+														input(type="checkbox" id="two")
+														label(for="two")
+														span.fh-switch-knob
+							.nt-setting-opt
+								.row
+									.col-md-8.col-sm-8.col-xs-8
+										h3 My Connections – Online Activity 
+										span.help-note Anyone that is a connection whether that be on your Profile Page or that you have Followed or Liked - any activity they do you will be notified.
+									.col-md-4.col-md-4.col-xs-4
+										.fh-switch
+														input(type="checkbox" id="three")
+														label(for="three")
+														span.fh-switch-knob
+							.nt-setting-opt
+								.row
+									.col-md-8.col-sm-8.col-xs-8
+										h3 Business Pages – User Interaction 
+										span.help-note Anyone that posts a comment, likes, follows one or more of your Pages or mentions this on a Liferoute that they have created or requested.
+									.col-md-4.col-md-4.col-xs-4
+										.fh-switch
+														input(type="checkbox" id="four")
+														label(for="four")
+														span.fh-switch-knob

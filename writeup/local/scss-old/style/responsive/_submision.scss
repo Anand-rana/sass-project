@@ -1,0 +1,32 @@
+@include media("<=992px") {
+
+    .submision-block {
+        .sub-box {
+            .sub-user-dtl {
+                .sub-dtl-txt {
+                    @include padding(15 30 0 60);
+                }
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+
+    .submision-block {
+        @include margin-top(40);
+        @include padding(50 20);
+        .sub-box {
+            .sub-user-dtl {
+                .sub-dtl-info {
+                    ul {
+                        li {
+                            width: 100%;
+                            @include margin-bottom(10);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

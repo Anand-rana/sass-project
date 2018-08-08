@@ -1,0 +1,22 @@
+//Fonts
+@import "style/base/fonts";
+
+
+
+//font-regular----------------------------
+@include font-face($font-family, #{$primary-font-path}/opensans-regular-webfont, 100, normal);
+
+//semi-bold
+@include font-face($font-family, #{$primary-font-path}/opensans-semibold-webfont, 200, normal);
+
+//bold
+@include font-face($font-family, #{$primary-font-path}/opensans-bold-webfont, 300, normal);
+
+//oswald
+
+//oswald-light
+@include font-face($font-family-alt, #{$primary-font-path}/Oswald-Light,100, normal);
+//oswald-medium
+@include font-face($font-family-alt, #{$primary-font-path}/Oswald-Medium,200, normal);
+//oswaldbold
+@include font-face($font-family-alt, #{$primary-font-path}/Oswald-Bold,300, normal);

@@ -1,0 +1,315 @@
+.dashboard-route-section
+	.header-block
+		.row
+			.col-md-4
+				.sort-input-field.margin-bottom-2x
+					.select-control
+						select.sort-field-control
+							option Sort By
+			.col-md-8
+				.text-right
+					button.button.button-green.button-height-large.button-font-bold.button-rounded.margin-right-1x All Life Routes
+					button.button.button-height-large.button-font-bold.button-rounded(ng-controller="ModalCtrl"  ng-click="routesearch()")
+						i.icon-magnifier
+	.user-route-list
+		.total-entries
+			span 500 Entries
+		.data-table
+			.table-responsive
+				table.table.c-1.table-bordered
+					thead
+						tr
+							th(class="text-center") No
+							th(class="text-center") Title
+							th(class="text-center") From
+								br 
+								|(Start)
+							th(class="text-center") To
+								br
+								| (End)
+							th(class="text-center") Life Route
+								br
+								| Type
+							th(class="text-center") Author
+								br
+								|Name
+							th(class="text-center") Author Email
+							th(class="text-center") Location
+							th(class="text-center") No 
+								br
+								|of Steps
+							th(class="text-center") Total Cost
+							th(class="text-center") Creation Date
+								br 
+								span (DD/MM/YYYY)
+							th(class="text-center") Last Updated
+								br 
+								span (DD/MM/YYYY)
+							th(class="text-center") Status
+							th(class="text-center") Actions
+					tbody
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Student
+							td(align="center") Consultant
+							td(align="center") Completed
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") 2
+							td(align="center") £70,000
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") Active
+
+							td(align="center")
+								a(data-ui-sref="dashboard-route-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routeblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routedelete()")
+									i.icon-delete
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Student
+							td(align="center") Consultant
+							td(align="center") Completed
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") 2
+							td(align="center") £70,000
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") Active
+
+							td(align="center")
+								a(data-ui-sref="dashboard-route-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routeblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routedelete()")
+									i.icon-delete
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Student
+							td(align="center") Consultant
+							td(align="center") Completed
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") 2
+							td(align="center") £70,000
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") Active
+
+							td(align="center")
+								a(data-ui-sref="dashboard-route-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routeblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routedelete()")
+									i.icon-delete
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Student
+							td(align="center") Consultant
+							td(align="center") Completed
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") 2
+							td(align="center") £70,000
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") Active
+
+							td(align="center")
+								a(data-ui-sref="dashboard-route-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routeblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routedelete()")
+									i.icon-delete
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Student
+							td(align="center") Consultant
+							td(align="center") Completed
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") 2
+							td(align="center") £70,000
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") Active
+
+							td(align="center")
+								a(data-ui-sref="dashboard-route-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routeblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routedelete()")
+									i.icon-delete
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Student
+							td(align="center") Consultant
+							td(align="center") Completed
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") 2
+							td(align="center") £70,000
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") Active
+
+							td(align="center")
+								a(data-ui-sref="dashboard-route-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routeblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routedelete()")
+									i.icon-delete
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Student
+							td(align="center") Consultant
+							td(align="center") Completed
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") 2
+							td(align="center") £70,000
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") Active
+
+							td(align="center")
+								a(data-ui-sref="dashboard-route-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routeblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routedelete()")
+									i.icon-delete
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Student
+							td(align="center") Consultant
+							td(align="center") Completed
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") 2
+							td(align="center") £70,000
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") Active
+
+							td(align="center")
+								a(data-ui-sref="dashboard-route-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routeblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routedelete()")
+									i.icon-delete
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Student
+							td(align="center") Consultant
+							td(align="center") Completed
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") 2
+							td(align="center") £70,000
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") Active
+
+							td(align="center")
+								a(data-ui-sref="dashboard-route-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routeblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routedelete()")
+									i.icon-delete
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Student
+							td(align="center") Consultant
+							td(align="center") Completed
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") 2
+							td(align="center") £70,000
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") Active
+
+							td(align="center")
+								a(data-ui-sref="dashboard-route-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routeblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routedelete()")
+									i.icon-delete
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Student
+							td(align="center") Consultant
+							td(align="center") Completed
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") 2
+							td(align="center") £70,000
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") Active
+
+							td(align="center")
+								a(data-ui-sref="dashboard-route-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routeblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="routedelete()")
+									i.icon-delete
+						
+		.page-nation-list.margin-top-4x
+			ul
+				li
+					a(href="#") 1
+				li
+					a(href="#").active 2
+				li
+					a(href="#") 3
+				li
+					a(href="#") 4
+				li
+					a(href="#") 5
+				li
+					a(href="#") 6
+				li
+					a(href="#") 7
+				li
+					a(href="#") 8
+				li
+					a(href="#").next-btn Next
+						Span.ico
+							i.icon-angle-right

@@ -1,0 +1,54 @@
+// THEME AND COLOR
+
+$black: #000000 !default;
+$gray: #7c7f8e !default;
+$text_gray: #e2e1e1 !default;
+$white: #ffffff !default;
+$textcolor: #25272c !default;
+$themecolor: #e76048 !default;
+$secondarycolor: #272e3e !default;
+$field_color: #e5f1f9 !default;
+$blue_bg: #D2E4FC !default;
+$filter_bg: #3a435a !default;
+$drop_downcolor: #5f6373 !default;
+$dark_gray: #5b5c66 !default;
+$grey_bg: #dfe2e8 !default;
+$green-color:#5a913f !default;
+
+//hover and other colors
+$color01: #e76048 !default;
+$color02: #ff0303 !default;
+$color3: #272e3e !default;
+$color4: #6292b2 !default;
+$color5: #d7e7fc !default;
+
+$action: $color01 !default;
+$highlight: $color02 !default;
+$cancel: #b2b3bc !default;
+$info: #7c7f8e !default;
+
+
+//block divs
+
+$block: block;
+$inline: inline-block;
+
+// PATH & FONT NAME
+$font-family: "open_sansregular", arial, sans-serif !default;
+
+$imgpath: "../images/" !default;
+$primary-font-path: "../fonts" !default;
+$url: $imgpath !default;
+
+// FONTS and TEXT STYLE
+$fontnormal: 15px !default;
+$fontsmall: 13px !default;
+$lineheight: 1.5 !default;
+$lineheight-sm: 1.2 !default;
+$fontawesome: FontAwesome !default;
+$spacing: 5px !default;
+$uppercase: uppercase;
+$capitalize: capitalize;
+
+//TRANSITION EFFECT
+$trasition_all: all 0.4s ease-in-out 0s !default;

@@ -1,0 +1,17 @@
+.reply-modal
+	.modal-header
+		.user-info
+			.user-pic
+				img(src="images/user.jpg" alt="img")
+			.user-name
+				h5 John Smith
+		button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close
+	.modal-body
+		.reply-modal-form
+			.c-field.c-bg-color.c-shadow.c-b-none.c-txt-medium.c-txt-small.c-b-xsm
+				input(type="text" class="c-field-control" placeholder="Subject/Title")
+			.c-field.c-bg-color.c-shadow.c-b-none.c-txt-medium.c-txt-small.c-b-xsm
+				textarea(class="c-field-control" placeholder="Type a Message..." rows="7" cols="7")
+			.btn-field.text-right
+				button.button.button-green.button-rounded.button-font-bold.button-width-large Send

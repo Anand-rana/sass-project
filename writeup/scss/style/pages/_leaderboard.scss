@@ -1,0 +1,112 @@
+.leader-block {
+    background-color: $white;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .09);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, .09);
+    box-shadow: 0 0 4px rgba(0, 0, 0, .09);
+    @include margin-top(70);
+
+    .leader-block__head {
+        @include border-bottom(3, solid, $color-bg-04);
+        ul {
+            display: table;
+            width: 100%;
+            &>li {
+                display: table-cell;
+                width: 33.33%;
+                text-align: center;
+
+                h3 {
+                    font-family: $font-family-alt;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    color: $color-text-04;
+                    @include fontsize(18);
+                    @include padding(22 0);
+                    display: $b;
+                }
+            }
+        }
+    }
+
+    .leader-block__list {
+        .leader-block__list__row {
+            @include padding(30 70);
+            @include border-bottom(3, solid, $color-bg-04);
+
+            ul {
+                display: table;
+                width: 100%;
+                &>li {
+                    display: table-cell;
+                    width: 33.33%;
+                }
+            }
+            .user-pic {
+                display: $ib;
+                vertical-align: middle;
+                @include margin-right(30);
+                img {
+                    width: 70px;
+                    height: 70px;
+                    @include circle;
+                }
+            }
+            .user-name {
+                display: $ib;
+                vertical-align: middle;
+                max-width: 220px;
+                h4 {
+                    font-family: $font-family-alt;
+                    font-weight: 200;
+                    text-transform: uppercase;
+                    @include fontsize(18);
+                    color: $color-text-04;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+
+            .rating-container {
+                @include fontsize(20);
+            }
+
+            .user-postion {
+                @include pos(rel, null);
+                img {
+                    vertical-align: middle;
+                    display: $ib;
+                }
+                span {
+                    @include padding(5 15);
+                    display: $ib;
+                    color: $white;
+                    @include fontsize(16);
+                    text-transform: uppercase;
+                    font-weight: 200;
+                    font-family: $font-family-alt;
+                    background-color: #a3a3a3;
+                    @include margin-left(15);
+                    display: $ib;
+                    vertical-align: middle;
+                }
+                .help-ico {
+                    color: #c6c6c6;
+                    @include pos(ab, 10px -30px null null);
+                    @include fontsize(18);
+                    vertical-align: middle;
+                }
+            }
+
+            &.user-selected {
+                background-color: #e7f3fe;
+
+                .user-postion {
+                    span {
+                        background-color: #2196f3;
+                    }
+                }
+            }
+        }
+    }
+}

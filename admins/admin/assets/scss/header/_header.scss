@@ -1,0 +1,35 @@
+#header {
+   .navbar {
+      background-color: $theme;
+
+      .brand {
+         background-color: $theme;
+         @include padding(20 15);
+      }
+
+      .navbar-btn {
+         @include media('>=1000px') {
+            display: $n;
+         }
+      }
+
+      .navbar-nav {
+         .dropdown {
+            .dropdown-toggle {
+               ._userImg {
+                  @include square(30px);
+                  @include radius(50%);
+                  display       : $ib;
+                  vertical-align: middle;
+                  @include margin-right(10);
+               }
+
+               i {
+                  display       : $ib;
+                  vertical-align: middle;
+               }
+            }
+         }
+      }
+   }
+}

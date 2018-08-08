@@ -1,0 +1,157 @@
+ @include media("<=1600px") {
+     .profile-wrapper {
+         .c-profile-info {
+             .c-contact-dtl {
+                 .c-list-dtl {
+                     .c-contact-list {
+                         & > li {
+                             @include fontsize(15);
+                             @include margin-right(10);
+                             @include margin-bottom(10);
+                             @include padding-right(10);
+                             [class*="icon-"] {
+                                 @include margin-right(10);
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+ 
+ @include media("<=1300px") {
+     .profile-wrapper {
+         .product-item-section {
+             .p-item-box {
+                 figcaption {
+                     .p-item-info {
+                         li {
+                             @include margin-right(10);
+                             @include padding-right(10);
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+ 
+ @include media(">=1000px", "<=1200px") {
+     .profile-wrapper {
+         .product-item-section {
+             .p-item-box {
+                 figcaption {
+                     .p-item-info {
+                         li {
+                             @include margin-right(0);
+                             @include padding-right(0);
+                             display: block;
+                             &:after {
+                                 display: none;
+                             }
+                         }
+                     }
+                 }
+                 .main-slider {
+                     .owl-thumbs {
+                         @include margin-top(-30);
+                     }
+                 }
+                 .p-cnav {
+                     bottom: 0;
+                 }
+             }
+         }
+     }
+     .owl-thumbs {
+         .owl-thumb-item {
+             img {
+                 width: 60px;
+                 height: 60px;
+             }
+         }
+     }
+ }
+ 
+ @include media("<=1200px") {
+     .profile-wrapper {
+         .c-profile-info {
+             .c-contact-dtl {
+                 .c-list-dtl {
+                     .c-contact-list {
+                         & > li {
+                             @include fontsize(13);
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+ 
+ @include media("<=992px") {
+     .profile-wrapper {
+         @include margin-top(0);
+         .c-profile-info {
+             @include padding(0);
+         }
+         .product-item-section {
+             @include padding(0 20 20 20);
+         }
+     }
+     .profile-wrapper {
+         .c-profile-info {
+             .c-contact-dtl {
+                 .c-list-dtl {
+                     .c-contact-list {
+                         & > li {
+                             [class*="icon-"] {
+                                 @include fontsize(25);
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+ 
+ @include media("<=767px") {
+     .profile-wrapper {
+         .product-item-section {
+             .p-item-box {
+                 figcaption {
+                     .text-right {
+                         text-align: left !important;
+                     }
+                     .p-item-info {
+                         @include margin-top(5);
+                     }
+                 }
+             }
+         }
+     }
+ }
+ 
+ @include media("<=500px") {
+     .profile-wrapper {
+         .c-profile-info {
+             .media-left,
+             .media-right,
+             .media-body {
+                 display: $block;
+                 width: auto;
+             }
+             .c-contact-dtl {
+                 @include margin-top(20);
+                 .c-list-dtl {
+                     @include margin-top(20);
+                 }
+                 .c-title {
+                     color: $color01;
+                 }
+             }
+         }
+     }
+ }

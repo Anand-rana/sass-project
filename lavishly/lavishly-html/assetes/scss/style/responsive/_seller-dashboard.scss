@@ -1,0 +1,12 @@
+ @include media("<=767px") {
+     .form-pannel-box {
+         @include padding(40 15);
+     }
+     .my-lisitng-view {
+         .new-listing-form {
+             .new-listing-field-group {
+                 @include padding(0 15);
+             }
+         }
+     }
+ }

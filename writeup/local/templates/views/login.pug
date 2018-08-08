@@ -1,0 +1,48 @@
+.form-block-section
+	.container
+		.form-block-box
+			.login-form
+				.inner-form
+					.inner-form-row
+						.inner-form-cell
+							.inner-form-block
+								.main-heading
+									h2.title Log in
+								.field-group
+									
+									.c-field.field-req
+										input(type="text", placeholder="Email address").c-field-control
+										.icon-sign &#42;
+									
+									.c-field.field-req
+										input(type="password", placeholder="Password").c-field-control
+										.icon-sign &#42;
+									.c-field
+										a(data-ui-sref="forgot.section({ type: 'forgot'})" class="forgot-link") Forgotten password?
+
+									
+									.c-field
+										button.button.button-block.button-height-large.button-font-base.button-uppercase.button-shadow Log in
+
+						.inner-form-cell.form-right-block
+							.form-block-options
+								h2 Or log in with
+								.form-options-btn-group
+									.row.row-10
+										.col-md-6
+											button.button-facebook 
+												span.btn-icon
+													i.icon-facbook 
+												span Facebook
+										.col-md-6
+											button.button-google-plus 
+												span.btn-icon
+													i.icon-google-plus 
+												span Google+
+									
+									.margin-top-10x.text-center
+										a(ui-sref="signup" class="opt-link") New User? Register
+
+
+
+

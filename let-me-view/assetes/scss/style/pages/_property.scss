@@ -1,0 +1,648 @@
+.auc_section {
+    @include margin-top(20);
+
+    .auc_title {
+        @include open-semibold;
+
+        @include margin-bottom(5);
+
+        .auc_total {
+            float: right;
+        }
+    }
+}
+
+.auc-slider {
+    @include padding(30 0);
+
+    background-color: #e2e7ee;
+
+    .auc_box {
+        background-color: $white;
+
+        @include padding(8);
+
+        @include border(1, solid, #9daad0);
+
+        figure {
+            @include margin(0);
+
+            overflow: hidden;
+
+            @include ratio(16, 9);
+
+            background-color: #ccc;
+
+            @include pos(rel, null);
+
+            img {
+                @include pos(ab, 0 0 0 0);
+
+                margin: auto auto;
+            }
+
+            .auc-p-stauts {
+                @include pos(ab, null null 0px null);
+
+                @include ralway-medium;
+
+                width: 100%;
+                text-align: center;
+                background-color: rgba($themecolor, 0.9);
+
+                @include padding(5 0);
+
+                color: $white;
+                text-transform: $uppercase;
+            }
+        }
+
+        figcaption {
+            text-align: center;
+
+            @include padding(10 0);
+
+            text-align: center;
+
+            @include fontsize(12);
+
+            h5 {
+                @include open-semibold;
+
+                @include fontsize(14);
+
+                @include margin-bottom(5);
+            }
+
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        &:hover {
+            border-color: $themecolor;
+
+            figcaption h5 {
+                text-decoration: underline;
+            }
+        }
+
+        & > a {
+            color: $textcolor;
+        }
+    }
+
+    .owl-nav {
+        .owl-prev {
+            @include pos(ab, 50% null null -25px);
+
+            @include translatepos(0, -50%);
+
+            @include fontsize(20);
+
+            cursor: pointer;
+
+            &:hover, &:focus {
+                color: $themecolor;
+            }
+        }
+
+        .owl-next {
+            @include pos(ab, 50% -25px null null);
+
+            @include translatepos(0, -50%);
+
+            @include fontsize(20);
+
+            cursor: pointer;
+
+            &:hover, &:focus {
+                color: $themecolor;
+            }
+        }
+    }
+}
+
+.owl-dots {
+    text-align: center;
+
+    @include margin(10 0 0);
+
+    display: none;
+}
+
+.property-view {
+    @include padding(70 0);
+
+    .row {
+        margin: 0 -1px;
+    }
+
+    [class^=col-] {
+        @include padding(0 2);
+    }
+}
+
+.cloudzoom-gallery {
+    &.cloudzoom-gallery-active {
+        opacity: 0.6;
+    }
+}
+
+.property__slider {
+    width: 100%;
+
+    .property_title {
+        h4 {
+            color: $themecolor;
+
+            @include ralway-bold;
+
+            @include margin-bottom(10);
+
+            text-transform: $uppercase;
+        }
+    }
+
+    .property_info {
+        @include margin-bottom(10);
+
+        @include padding-right(160);
+
+        .l-address {
+            @include open-semibold;
+        }
+
+        .time {
+            float: right;
+        }
+    }
+
+    .zoom-image {
+        width: 100%;
+
+        @include padding-right(138);
+
+        @include pos(rel, null);
+
+        &.single-zoom-image {
+            @include padding-right(0);
+        }
+    }
+
+    #vslider {
+        @include pos(ab, 0 2px null null);
+
+        height: 100%;
+        width: 134px;
+        float: left;
+
+        @include margin-left(1);
+    }
+}
+
+.property-status {
+    @include margin-top(30);
+
+    .total-views {
+        & > i {
+            @include fontsize(30);
+
+            vertical-align: middle;
+            color: $themecolor;
+        }
+    }
+
+    .total-lot {
+        float: right;
+    }
+
+    .bid-status {
+        @include padding(40 25);
+
+        background-color: #efeff2;
+        text-align: center;
+        display: table;
+        width: 100%;
+        height: 415px;
+
+        .bid-txt {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        .bid-histry-status {
+            background-color: #fff;
+
+            @include padding(15);
+
+            text-align: left;
+
+            & > h3 {
+                @include padding-bottom(15);
+
+                @include border-bottom(1, solid, #e3e3ef);
+            }
+
+            .bid-histry__txt {
+                @include padding(30 20);
+
+                & > ul {
+                    & > li {
+                        @include margin-bottom(30);
+
+                        &:last-child {
+                            @include margin-bottom(0);
+                        }
+
+                        & > h5 {
+                            @include fontsize(16);
+
+                            @include open-semibold;
+
+                            @include margin-bottom(5);
+                        }
+                    }
+                }
+            }
+        }
+
+        .bid-status__info {
+            @include padding(20);
+
+            background-color: #fff;
+
+            h3 {
+                @include fontsize(20);
+
+                @include ralway-bold;
+
+                color: $themecolor;
+            }
+
+            h4 {
+                @include fontsize(20);
+
+                @include margin-top(10);
+
+                @include open-semibold;
+            }
+        }
+
+        .bid-status__date {
+            @include margin(40 0);
+
+            h3 {
+                @include fontsize(18);
+
+                @include open-semibold;
+
+                @include margin-bottom(10);
+            }
+        }
+
+        .bid-status__ico {
+            @include margin(40 0);
+
+            @include fontsize(100);
+
+            color: #9d9ea0;
+            line-height: 100px;
+        }
+
+        .bid-status__links {
+            text-align: left;
+
+            @include margin-left(-24);
+
+            li {
+                display: $block;
+
+                @include margin-bottom(5);
+
+                & > a {
+                    display: $inline;
+
+                    @include fontsize(15);
+
+                    @include padding(5);
+
+                    color: #687aa2;
+                    background-color: $white;
+
+                    & > i {
+                        @include margin-left(10);
+                    }
+                }
+            }
+        }
+
+        .bid-status__history {
+            text-align: left;
+
+            h5 {
+                @include open-bold;
+
+                @include fontsize(14);
+
+                @include margin-bottom(15);
+            }
+
+            li {
+                @include margin-bottom(10);
+
+                & > a {
+                    float: right;
+                    text-decoration: underline;
+                    color: $textcolor;
+                }
+            }
+        }
+
+        .price-field {
+            .c-field {
+                @include margin-bottom(20);
+
+                label {
+                    @include padding-left(0);
+                }
+            }
+
+            &.h-price-field {
+                @include margin-top(100);
+            }
+        }
+    }
+}
+
+.req-buy-section {
+    @include margin-top(2);
+
+    text-align: center;
+    background-color: #e5eefd;
+
+    @include border(1, solid, #828ea8);
+
+    @include padding(2);
+
+    @include fontsize(25);
+
+    color: #6a6a6a;
+
+    @include open-semibold;
+
+    .req-heading {
+        @include fontsize(17);
+
+        @include ralway-bold;
+
+        background-color: #6192b2;
+
+        @include padding(10);
+
+        @include border-round(2);
+
+        display: $block;
+
+        h4 {
+            color: $white;
+            text-transform: $uppercase;
+        }
+    }
+}
+
+.property-view-options {
+    background-color: #efeff2;
+
+    @include padding(25 0);
+
+    .row {
+        @include margin(0 -4);
+    }
+
+    [class^=col-] {
+        @include padding(0 8);
+    }
+
+    .property-list-options {
+        background-color: $white;
+
+        @include border(1, solid, #d3d2d2);
+
+        @include margin-bottom(8);
+
+        ul {
+            display: table;
+            width: 100%;
+
+            li {
+                display: table-cell;
+                width: 20%;
+                text-align: center;
+                vertical-align: middle;
+
+                @include border-right(1, solid, #d3d2d2);
+
+                &:last-child {
+                    border: none;
+                }
+
+                & > span {
+                    display: $block;
+
+                    @include padding(5);
+
+                    @include fontsize(16);
+
+                    text-transform: $uppercase;
+
+                    @include raleway-semibold;
+
+                    & > a {
+                        color: $textcolor;
+                    }
+                }
+
+                & > .d-btn {
+                    @include padding(10);
+
+                    & > h4 {
+                        @include raleway-semibold;
+
+                        text-transform: $uppercase;
+
+                        @include fontsize(16);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c-dtl {
+    @include padding(10);
+
+    @include border(1, solid, #d3d2d2);
+
+    @include pos(rel, null);
+
+    display: block;
+    width: 100%;
+    background-color: $white;
+    min-height: 115px;
+
+    .media-left {
+        img {
+            width: 85px;
+            height: 85px;
+
+            @include circle;
+        }
+    }
+
+    .media-body {
+        .l-ac-date {
+            @include margin-top(15);
+        }
+    }
+}
+
+.m-ico {
+    @include pos(ab, 0 10px null null);
+
+    color: #b5b5bd;
+
+    @include fontsize(25);
+}
+
+.filter_tabs {
+    &.is--viewmod {
+        display: table;
+        width: 100%;
+
+        @include border(1, solid, #d3d2d2);
+
+        & > ul {
+            & > li {
+                background-color: $white;
+
+                @include border-right(1, solid, #d3d2d2);
+
+                &:last-child {
+                    border: none;
+                }
+
+                & > span {
+                    @include padding(10);
+                }
+
+                &.active {
+                    background-color: $themecolor;
+                }
+            }
+        }
+    }
+}
+
+.p-detail-section {
+    @include padding(50 0);
+
+    .p-dt-list {
+        & ul {
+            & > li {
+                @include margin-bottom(15);
+            }
+
+            @include margin-bottom(50);
+        }
+    }
+
+    .p-dt-cotent {
+        @include border-left(1, solid, #d7d7d7);
+
+        @include padding-left(30);
+
+        h1, h2, h3 {
+            @include fontsize(16);
+
+            @include margin-bottom(20);
+
+            @include open-semibold;
+        }
+
+        p {
+            @include margin-bottom(15);
+        }
+
+        .content__note {
+            background-color: #efeff2;
+
+            @include padding(20 10);
+
+            @include margin(40 0);
+        }
+
+        hr {
+            border-color: #fff;
+        }
+
+        .p-documents {
+            ul {
+                max-width: 500px;
+
+                @include margin-bottom(50);
+
+                li {
+                    list-style: inside none disc;
+                    color: #575a61;
+                    background-color: #efeff2;
+
+                    @include padding(10);
+
+                    @include margin-bottom(10);
+
+                    a {
+                        color: #575a61;
+
+                        &:hover, &:focus {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.share-links {
+    @include margin-top(15);
+
+    & > a {
+        @include fontsize(30);
+
+        @include padding-right(15);
+
+        &:last-child {
+            @include padding-right(0);
+        }
+
+        &:hover, &:focus {
+            @include opacity(0.8);
+        }
+    }
+
+    & .facebook-link {
+        color: #3b5a99;
+    }
+
+    & .linked-link {
+        color: #127bb7;
+    }
+
+    & .twiiter-link {
+        color: #00abf1;
+    }
+}

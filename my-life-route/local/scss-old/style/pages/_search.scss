@@ -1,0 +1,50 @@
+.search-result-section {
+    @include padding(100 0 40);
+    &>.container {
+        max-width: 1170px;
+    }
+    .search-list-block {
+        @include margin-top(100);
+
+        .search-list-top {
+            @include padding-bottom(10);
+            @include border-bottom(1, solid, #d4d4d4);
+            display: table;
+            width: 100%;
+            .total-result {
+                font-weight: 300;
+                display: $ib;
+                @include margin-top(10);
+            }
+
+            .sort-field-group {
+                float: right;
+                .label-field {
+                    display: $ib;
+                    @include margin-right(10);
+                    font-weight: 300;
+                    color: $black;
+                }
+                .select-control {
+                    background-color: $white;
+                    display: $ib;
+                    width: 250px;
+                    @include fontsize(15);
+                }
+                .sort-field-control {
+
+                    @include border(1, solid, #c0c0c0);
+                    width: 100%;
+                    @include padding(10 12);
+                }
+            }
+        }
+
+        .search-list-data {
+            @include margin-top(25);
+            .people-route-list { 
+                @include padding-top(45); 
+            }
+        }
+    }
+}

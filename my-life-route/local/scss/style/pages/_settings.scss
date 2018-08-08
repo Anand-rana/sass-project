@@ -1,0 +1,126 @@
+.my-setting-section {
+    @include padding(60 0 50);
+    @include pos(rel, null);
+
+    .my-setting-block {
+        @include pos(rel, null);
+    }
+
+    .user-dtl-block {
+        @include pos(ab, 0 null null 0);
+        margin-top: 100px;
+        &.push-left {
+            left: -1000px;
+        }
+    }
+
+
+    .my-setting-cotainer {
+        -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+        transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+        @include padding-left(370);
+        min-height: 850px;
+        .my-setting-list {
+            @include margin-top(50);
+        }
+        .title {
+            @include fontsize(30);
+            font-weight: 400;
+            color: $theme;
+            @include padding-bottom(5);
+            @include border-bottom(1, solid, $theme);
+        }
+
+        .heading-block {
+            @include padding-bottom(10);
+             @include border-bottom(1, solid, $theme);
+            .breadcrumb-list {
+                @include margin-top(10);
+                ul {
+                    li {
+                        display: $ib;
+
+                        span {
+                            @include fontsize(30);
+                            display:$b;
+                            text-transform: capitalize;
+                            font-weight: 400;
+                            color: $theme;
+                            @include padding(0 15);
+                            @include pos(rel, null);
+                            &:after {
+                                @include pos(ab, -2px -10px 0px null);
+                                content: ">";
+                            }
+
+                            &.active {
+                                color: lighten($theme, 20%);
+
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                        }
+
+
+                        &:first-child {
+                            span {
+                                @include padding-left(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.open {
+            @include padding-left(0);
+        }
+
+        .my-setting-form {
+            @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, .17));
+            background-color: $white;
+            @include border(1, solid, #d7d7d7);
+            @include padding(40 40 100);
+            @include margin-top(50);
+
+            .form-title {
+                @include fontsize(22);
+                font-weight: 400;
+                color: $color-text-02;
+            }
+
+            .field-group {
+                max-width: 500px;
+                @include margin-top(50);
+
+                .btn-field {
+                    @include margin-top(40);
+                }
+            }
+
+            .nt-setting-group {
+                @include margin-top(50);
+                max-width: 650px;
+                .nt-setting-opt {
+                    @include padding-bottom(40);
+                    h3 {
+                        @include fontsize(18);
+                        font-weight: 400;
+                        color: $color-text-02;
+                    }
+                    .help-note {
+                        @include fontsize(13);
+                        display: $b;
+                        @include margin-top(5);
+                    }
+                }
+            }
+        }
+    }
+
+    .sp-btn {
+        @include pos(ab, 150px null null -35px);
+        z-index: 20;
+    }
+}

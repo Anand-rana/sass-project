@@ -1,0 +1,79 @@
+@include media("<=992px") {
+    .search-result-view {
+        .search-result__box {
+            .search-result__property {
+                .property__infobox {
+                    float: none;
+                }
+            }
+        }
+
+        .pagnation-list {
+            text-align: center;
+        }
+    }
+}
+
+
+@include media("<=767px") {
+    .filter__catbox {
+        @include margin-bottom(15);
+    }
+
+    .search-result-view {
+        .search-result__box {
+            text-align: center;
+
+            .search-result__property {
+                .property__img {
+                    width: 250px;
+                    margin: 0 auto;
+                }
+
+                .property__dtl {
+                    @include margin(10 0);
+                }
+
+                .property__infobox {
+                    margin: 0 auto;
+                }
+
+                .property__price {
+                    .total__view {
+                        float: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include media("<=479px") {
+    .search-result-view {
+        .search-result__box {
+            .search-result__property {
+                .property__price {
+                    .price {
+                        @include padding(0);
+
+                        display: block;
+                        border: 0;
+                    }
+
+                    .by {
+                        @include padding(0);
+
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .search-view__top {
+        .pagnation-list {
+            @include margin-bottom(10);
+        }
+    }
+}

@@ -1,0 +1,213 @@
+.cat-listing-section {
+    @include padding(70 0 200);
+    .container-fluid {
+        @include padding(0 70);
+    }
+    .cat-filter {
+        @include padding(20 15);
+        background-color: $color02;
+        .c-nav-filters {
+            .c-facet-name {
+                @include padding(20 0);
+                display: $block;
+                color: $color01;
+                cursor: pointer;
+                h3 {
+                    @include fontsize(18);
+                    text-transform: $uppercase;
+                    line-height: 1;
+                    display: $inline;
+                }
+                span {
+                    float: right;
+                    line-height: 1;
+                    @include fontsize(25);
+                }
+                &.is-expand {
+                    span {
+                        @include rotate(90deg);
+                    }
+                }
+            }
+            .c-facet-nav-items {
+                @include fontsize(16);
+                @include pos(rel, null);
+                display: none;
+                .c-facet-nav-link {
+                    color: $color01;
+                    @inlcude pos(rel, null);
+                    z-index: 1;
+                    width: 100%;
+                    display: $block;
+                    line-height: 25px;
+                    &:hover {
+                        color: $themecolor;
+                    }
+                }
+                .c-facet-count {
+                    @include pos(ab, 0 0 null null);
+                    display: $block;
+                    z-index: 0;
+                    text-align: right;
+                    cursor: pointer;
+                }
+                .facet-nav-item {
+                    @include pos(rel, null);
+                }
+                .display-options-item {
+                    @include padding-bottom(15);
+                }
+                .nested-facet-nav-items {
+                    @include padding-left(10);
+                }
+            }
+            .c-filter-accorditon {
+                @include border-bottom(1, solid, #d8d8d8);
+                clear: both;
+            }
+            .is-more-link {
+                text-align: right;
+                @include padding-bottom(15);
+                a {
+                    color: $themecolor;
+                    @include open-semibold;
+                    @include fontsize(15);
+                }
+            }
+            .price-slide-field {
+                display: table;
+                width: 100%;
+            }
+            .price-slide-input {
+                @include margin(30 0);
+                float: left;
+                width: 75%;
+                @include pos(rel, null);
+                .slide-input {
+                    @inlcude border(1, solid, #828282);
+                    height: 30px;
+                    width: 40%;
+                    float: left;
+                    text-align: center;
+                    @include pos(rel, null);
+                    z-index: 1;
+                    @include padding(2);
+                    &.input-max {
+                        float: right;
+                    }
+                }
+                .slide-input-txt {
+                    @include pos(ab, 5px null null 0);
+                    text-align: center;
+                    width: 100%;
+                    z-index: 0;
+                }
+            }
+            .price-slide-button {
+                float: right;
+                @include margin-top(28);
+                width: 25%;
+                text-align: right;
+            }
+        }
+        .c-total-result {
+            @include fontsize(16);
+        }
+        .c-search-box {
+            @include margin(20 0);
+            .form-control {
+                @include border(1, solid, lighten(#828282, 25%));
+                &:focus {
+                    @include border(1, solid, lighten(#828282, 25%));
+                }
+            }
+            .input-group-addon {
+                border-radius: 0;
+                background-color: transparent;
+            }
+        }
+    }
+    .cat-all-listing {
+        .c-sort-wrapper {
+            display: table;
+            width: 100%;
+            @include margin-bottom(30);
+            .c-sort-inner {
+                float: right;
+                .sort-field {
+                    display: $inline;
+                    select.sort-field-control {
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        background-image: url(#{$imgpath}caret.png);
+                        background-position: right 10px center;
+                        background-repeat: no-repeat;
+                        @include padding-right(50);
+                        @include padding-left(10);
+                        @include padding-top(10);
+                        @include padding-bottom(10);
+                        @include margin-right(10);
+                        line-height: inherit;
+                        @include border(1, solid, #dedede);
+                        @inlcude border-round(4);
+                        &::-ms-expand {
+                            display: none;
+                        }
+                    }
+                    /*-- HACK SAFRI & CHROME ONLY --*/
+                    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+                        ::i-block-chrome,
+                        select.form-control {
+                            background-position-x: 97%;
+                            background-position-y: 50%;
+                        }
+                    }
+                    .view-toggle-buttons {
+                        button.view-toggle {
+                            background-color: $themecolor;
+                            border: 0;
+                            padding: 10px 15px;
+                            margin: 0;
+                            color: $color02;
+                        }
+                        .grid-view-button-link {
+                            @include border-round(4 0 0 4);
+                        }
+                        .list-view-button-link {
+                            @include border-round(0 4 4 0);
+                            border-left: 1px solid $color02 !important;
+                        }
+                    }
+                }
+            }
+        }
+        &.listing-row {
+            .item-section {
+                .item-box {
+                    display: table;
+                    width: 100%;
+                    figure {
+                        width: 30%;
+                        float: left;
+                        border-radius: 0;
+                        &:before {
+                            display: none;
+                        }
+                        img {
+                            max-width: 100%;
+                            width: auto;
+                            @include pos(rel, null);
+                        }
+                    }
+                    figcaption {
+                        width: 70%;
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,158 @@
+.agent-user {
+    .agent-user__img {
+        & > img {
+            width: 150px;
+            height: 150px;
+
+            @include circle;
+        }
+    }
+
+    .agent-user__dtl {
+        p {
+            line-height: 25px;
+        }
+
+        .agent-user__listing {
+            & > h5 {
+                @include padding-bottom(10);
+
+                @include border-bottom(1, solid, #d8d8d8);
+            }
+
+            & > ul {
+                @include margin-top(25);
+
+                display: table;
+                width: 100%;
+
+                & > li {
+                    width: 50%;
+                    float: left;
+                    text-align: center;
+
+                    & > span {
+                        width: 35px;
+                        height: 35px;
+
+                        @include border(1, solid, #d1d4d6);
+
+                        @include open-bold;
+
+                        line-height: 32px;
+
+                        @include circle;
+
+                        @include margin-left(10);
+
+                        display: $inline;
+                    }
+
+                    &:last-child {
+                        @include border-left(1, solid, #d8d8d8);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.agent-user-contact {
+    @include margin-top(50);
+
+    .agent-contact__form {
+        .agent-form__heading {
+            background-color: #6192b2;
+
+            @include padding(12 30);
+
+            & > h4 {
+                color: $white;
+
+                @include raleway-semibold;
+
+                text-transform: $uppercase;
+            }
+        }
+
+        .agent-form__fields {
+            .form-group {
+                @include margin-bottom(25);
+
+                .c-field {
+                    .form-control {
+                        border-color: #6192b2;
+
+                        &:focus {
+                            background-color: #ecf0f3;
+                        }
+                    }
+
+                    textarea.form-control {
+                        resize: none;
+                        height: 154px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.agent-user-featrued {
+    @include margin-top(30);
+
+    .auc-slider {
+        background-color: transparent;
+
+        @include margin-top(10);
+    }
+}
+
+.buyer-profile {
+    background-color: #f0f6f6;
+
+    @include border(1, solid, #828ea8);
+
+    @include padding(15);
+
+    @include margin-top(20);
+
+    .buyer-img {
+        @include padding(30 0);
+
+        @include border-right(1, solid, #dbdfe0);
+
+        text-align: center;
+
+        & > img {
+            width: 150px;
+            height: 150px;
+
+            @include circle;
+        }
+
+        & > h5 {
+            @include raleway-semibold;
+
+            @include margin-top(10);
+        }
+    }
+
+    .buyer__dtl {
+       // @include padding(0 40);
+
+        @include margin(25 0);
+
+        & > h5 {
+            @include padding-bottom(10);
+
+            @include border-bottom(1, solid, #dbdfe0);
+        }
+
+        ul {
+            li {
+                @include margin-bottom(10);
+            }
+        }
+    }
+}

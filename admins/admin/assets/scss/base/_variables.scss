@@ -1,0 +1,42 @@
+// THEME AND COLOR
+$color00            : #222222 !default;
+$color01            : #1fcf6d !default;
+$color02            : #ff6b3e !default;
+$color03            : #fbad27 !default;
+$color04            : #083552 !default;
+$color05            : #eb5244 !default;
+$color06            : #4c4c4c !default;
+$color07            : #1fabf8 !default;
+$black              : #000000 !default;
+$white              : #ffffff !default;
+$theme-default      : $color00 !default;
+$theme              : $color01 !default;
+$theme-highlight    : $color02 !default;
+$theme-warning      : $color03 !default;
+$theme-primary      : $color04 !default;
+$theme-primary-light: $color07 !default;
+$theme-danger       : $color05 !default;
+$theme-gray         : $color06 !default; // PATH & FONT NAME
+$font               : "Montserrat" !default;
+$imgpath            : "../images/" !default;
+$font-path          : "../fonts" !default;
+$icon-font-path     : "../fonts/icons" !default;
+$url                : $imgpath !default;
+$fa-font-path       : "../node_modules/font-awesome/fonts" !default;
+$slick-font-path    : "../node_modules/slick-carousel/slick/fonts/" !default;
+$slick-loader-path  : "../node_modules/slick-carousel/slick/" !default; // FONTS and TEXT STYLE
+$fontnormal         : 16px !default;
+$fontsmall          : 12px !default;
+$lineheight         : 1.5 !default;
+$fontawesome        : FontAwesome !default;
+$spacing            : 5px !default; // Display
+$in                 : inline !default;
+$ib                 : inline-block !default;
+$b                  : block !default;
+$t                  : table !default;
+$cell               : table-cell !default;
+$n                  : none !default; //TRANSITION EFFECT
+$trasition_all      : all 300ms ease-in-out !default; // Margin
+$a                  : auto !default;
+$auto               : auto auto !default;
+$za                 : 0 auto !default;

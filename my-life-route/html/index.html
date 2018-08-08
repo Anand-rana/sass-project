@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My-life-route</title>
+    <meta charset="utf-8">
+    <!--base(href="/")-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minmum-scale=1, maximum-scale=1">
+    <!-- StyleSheet-->
+    <link href="assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/fonts.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/font-custom-icons.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/button.css" type="text/css" rel="stylesheet">
+    <!--owl-carousel-->
+    <link href="assets/css/owl.carousel.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/owl.theme.default.min.css" type="text/css" rel="stylesheet">
+    <!--video-css-->
+    <link href="node_modules/video.js/dist/video-js.css" type="text/css" rel="stylesheet">
+    <!--fancy-box-->
+    <link href="node_modules/fancybox-plus/css/jquery.fancybox-plus.css" type="text/css" rel="stylesheet">
+    <!--tags-->
+    <link href="node_modules/ng-tags-input/build/ng-tags-input.min.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/responsive.css" type="text/css" rel="stylesheet">
+    <!-- Scripting-->
+    <script src="assets/js/modernizr.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!--<![endif]-->
+  </head>
+  <body  data-ng-app="myApp">
+    <div ui-view="header"></div>
+    <div class="find-path-cotainer" ui-view="path" data-ng-class="pathClass"></div>
+    <div ui-view="f-banner"></div>
+    <div class="main-cotainer">
+      <div ui-view="content"></div>
+    </div>
+    <footer>
+      <div class="inner-footer">
+        <div class="container">
+          <div class="footer-links">
+            <ul>
+              <li><a data-ui-sref="helpsupport.section({ type: 'news'})">FAQ</a></li>
+              <li><a data-ui-sref="about">About Us </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-bar">
+          <div class="container">
+            <div class="bottom-bar-container">
+              <p class="cpy-right">Copyright © 2017  MyLifeRoute.</p>
+              <div class="follow-div" data-ng-show="$state.includes('home')">
+                <h3 class="hidden-xs">Follow Us On </h3>
+                <ul>
+                  <li><a class="facbook-ico" href="https://www.facebook.com/myliferoute" target="_blank"><i class="icon-facebook"></i></a></li>
+                  <li><a class="twitter-ico" href="https://twitter.com/myliferoute" target="_blank"><i class="icon-twitter"></i></a></li>
+                  <li><a class="youtube-ico" href="https://www.youtube.com/myliferoute" target="_blank"> <i class="icon-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--owl-carousel-->
+    <script src="assets/js/owl.carousel.min.js" type="text/javascript"></script>
+    <!--custom-scroll-->
+    <script src="node_modules/angular-nicescroll/demo/app/bower_components/jquery.nicescroll/jquery.nicescroll.min.js" type="text/javascript"></script>
+    <!--script(src="node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js", type="text/javascript")-->
+    <!--angular-->
+    <script src="node_modules/angular/angular.js" type="text/javascript"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular-ui-router/release/stateEvents.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js" type="text/javascript"></script>
+    <script src="node_modules/angular-owl-carousel2/src/angular-owl-carousel-2.js" type="text/javascript"></script>
+    <script src="node_modules/ng-tags-input/build/ng-tags-input.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular-nicescroll/angular-nicescroll.js" type="text/javascript"></script>
+    <script src="node_modules/angularjs-dropdown-multiselect/dist/angularjs-dropdown-multiselect.min.js" type="text/javascript"></script>
+    <script src="node_modules/chart.js/dist/Chart.bundle.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular-chart.js/dist/angular-chart.min.js" type="text/javascript"></script>
+    <!--video-js-->
+    <script src="node_modules/video.js/dist/video.min.js" type="text/javascript"></script>
+    <script src="node_modules/videojs-youtube/dist/Youtube.min.js" type="text/javascript"></script>
+    <script src="node_modules/videojs-vimeo/src/Vimeo.js" type="text/javascript"></script>
+    <script src="node_modules/vjs-video/dist/vjs-video.min.js" type="text/javascript"></script>
+    <!--fancy-box-->
+    <script src="node_modules/fancybox-plus/dist/jquery.fancybox-plus.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular-fancybox-plus/js/angular-fancybox-plus.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/js/routing.js" type="text/javascript"></script>
+    <div class="bg-back-drop hidden"></div>
+  </body>
+</html>

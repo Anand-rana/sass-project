@@ -1,0 +1,41 @@
+@include media("<=992px") {
+
+    .section-digital-services {
+        .services-list {
+            ul {
+                &>li {
+                    line-height: 60px;
+                    @include fontsize(40);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) , (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation: landscape){
+
+    .section-app-content {
+        .inner-block {
+            height: auto;
+            @include padding(40 0);
+        }
+    }
+
+      .section-digital-services {
+        .inner-block {
+            height: auto;
+            @include padding(40 0);
+        }
+        .services-list {
+            ul {
+                &>li {
+                    line-height: 25px;
+                    @include fontsize(16);
+                }
+            }
+        }
+        .services-list-boxs {
+            @include margin-top(50);
+        }
+    }
+}

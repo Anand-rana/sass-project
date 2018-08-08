@@ -1,0 +1,238 @@
+.as-white-layer {
+    background-color: rgba($color02, 0.8);
+    span {
+        @include fontsize(65);
+        color: $color01;
+        text-transform: $uppercase;
+        letter-spacing: 6px;
+        display: block;
+        @include josefinsansbold;
+        @include rotate(-90deg);
+        @include transform-origin(30%, 100%, 0);
+    }
+}
+
+.nav-section {
+    @include padding(12 0);
+    background-color: $color02;
+    @include transition(all 0.5s);
+    @include pos(rel, null);
+    @include box-shadow(0 , 2px , 8px ,rgba(8,8,8,.16),null);
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 510px;
+        height: 100%;
+        background: #000;
+        -webkit-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+        transform-origin: 100% 0;
+        @include skewX(-30deg);
+        z-index: 0;
+    }
+   /* &:after {
+        @include box-shadow(0, 0, 20px, $color01, null);
+        content: "";
+        border-radius: 50%;
+        @include pos(ab, 0 10px 5px 0);
+        z-index: -1;
+    }*/
+    nav {
+        float: left;
+        ul {
+            @include margin-left(30);
+            & > li {
+                display: $inline;
+                & > a {
+                    text-transform: $uppercase;
+                    color: $textcolor;
+                    display: block;
+                    @include padding(20 10);
+                    @include pos(r, null);
+                    &:after {
+                        content: "";
+                        @include pos(ab, null 0 50%);
+                        border-bottom: 2px solid $color01;
+                        @include transition(all 0.3s);
+                        @include opacity(0);
+                        visibility: hidden;
+                    }
+                    &:hover,
+                    &.active {
+                        &:after {
+                            @include opacity(1);
+                            visibility: visible;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .inner {
+        @include pos(rel, null);
+    }
+    .r-block {
+        float: right;
+        & > ul {
+            @include margin-top(10);
+            li {
+                display: $inline;
+                color: $color01;
+                @include padding-right(15);
+                @include fontsize(30);
+                cursor: pointer;
+                @include transition(all 0.2s ease-in-out);
+                &:last-child {
+                    @include padding-right(0);
+                }
+                &:hover {
+                    color: $themecolor;
+                }
+            }
+        }
+    }
+    #nav-icon1 {
+        @include margin-bottom(0);
+    }
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+}
+
+.overlay-menu {
+    @include pos(fix, 0);
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color01, 0.8);
+    z-index: 1000;
+    @include transform(translateY(-100%));
+    .overlay-close {
+        background: transparent;
+        border: 0;
+        @include pos(ab, 20px 20px null null);
+        @include fontsize(40);
+        color: $color02;
+        outline: none;
+    }
+    nav {
+        text-align: center;
+        position: relative;
+        top: 50%;
+        height: 70%;
+        @include transform(translateY(-50%));
+        ul {
+            display: $inline;
+            height: 100%;
+            @include pos(rel, null);
+            margin: 0 auto;
+            li {
+                display: $block;
+                height: calc(100% / 5);
+                a {
+                    @include fontsize(50);
+                    color: $color02;
+                    display: $block;
+                    @include ralway-regular;
+                }
+            }
+        }
+    }
+}
+
+.logo-stripe {
+    width: 160px;
+    height: 100%;
+    @include pos(ab, 0 null 0 0);
+    background-color: $color02;
+    z-index: 999;
+    text-align: center;
+    @include padding(30 0);
+    img {
+        display: $inline;
+        max-height: 100%;
+        width: auto;
+    }
+}
+
+.inner-header {
+    .main-header {
+        background-color: $color08;
+        @include padding(24 0);
+        @include border-bottom(1, solid, #2f2f2f);
+        .main-h-links {
+            text-align: right;
+            ul {
+                & > li {
+                    display: $inline;
+                    & > a {
+                        @include fontsize(30);
+                        color: $color02;
+                        display: $block;
+                        @include padding-right(10);
+                        @include padding-top(10);
+                        @include padding-bottom(10);
+                        @include transition(all 0.2s ease-in-out);
+                        &:hover {
+                            color: $themecolor;
+                        }
+                    }
+                    .menu-btn {
+                        @include pos(rel, null);
+                        @include padding-left(20);
+                        cursor: pointer;
+                        &:before {
+                            width: 2px;
+                            background-color: #7b6d6a;
+                            content: "";
+                            @include pos(ab, -10px null -10px 0);
+                        }
+                    }
+                    .icon-bar {
+                        width: 25px;
+                        display: $block;
+                        background-color: $color02;
+                        height: 2px;
+                        @include margin-bottom(10);
+                        &:last-of-type {
+                            @include margin(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-b-caption {
+        background-color: $color08;
+        @include padding(70 0 100);
+        .p-caption {
+            @include padding-top(30);
+            h3 {
+                @include fontsize(43);
+                text-transform: $uppercase;
+                color: $color02;
+                @include josefinsansbold;
+                @include pos(rel, null);
+                @include padding-bottom(20);
+                @include margin-bottom(25);
+                &:after {
+                    background-color: rgba(255, 255, 255, 0);
+                    @include background-image(linear-gradient(left, rgba(122, 79, 87, 0), rgba(122, 79, 87, .12) 6%, #fff 50%, rgba(122, 75, 83, .14) 93%, rgba(122, 75, 83, 0)));
+                    @include pos(ab, null 0 0 0);
+                    width: 60px;
+                    height: 2px;
+                    content: "";
+                }
+            }
+            p {
+                @include fontsize(17);
+                color: $color02;
+                @include josefinsansregular;
+            }
+        }
+    }
+}

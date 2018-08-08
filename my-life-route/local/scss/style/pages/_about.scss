@@ -1,0 +1,112 @@
+.about-section {
+    @include padding(100 0 50);
+    .heading-block {
+        @include border-bottom(1, solid, lighten($theme, 30%));
+        @include padding-bottom(10);
+
+        h3 {
+            @include fontsize(30);
+            font-weight: 400;
+            color: $theme;
+        }
+    }
+
+    .page-content {
+        @include margin-top(60);
+
+        @include fontsize(16);
+        color: $color-text-02;
+        font-weight: 300;
+
+        h4 {
+            @include padding-bottom(15);
+            @include fontsize(22);
+            font-weight: 400;
+        }
+    }
+}
+
+.s-page-section {
+    @include padding(60 0);
+    .heading-block {
+        @include border-bottom(1, solid, lighten($theme, 30%));
+        @include padding-bottom(10);
+
+        h3 {
+            @include fontsize(30);
+            font-weight: 400;
+            color: $theme;
+        }
+    }
+
+    .page-content {
+        @include margin-top(40);
+
+        @include fontsize(16);
+        color: $color-text-02;
+        font-weight: 300;
+
+        h5 {
+            @include padding-bottom(15);
+            @include fontsize(22);
+            font-weight: 400;
+        }
+
+        ul {
+            @include padding-left(30);
+            @include margin-top(10);
+
+            li {
+                list-style-type: disc;
+                @include padding-bottom(10);
+
+                &>ul {
+                    @include margin(10 0);
+                    &>li {
+                        list-style-type: decimal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-section {
+    @include padding(60 0);
+    .heading-block {
+        @include border-bottom(1, solid, lighten($theme, 30%));
+        @include padding-bottom(10);
+
+        h3 {
+            @include fontsize(30);
+            font-weight: 400;
+            color: $theme;
+        }
+    }
+    .contact-form {
+        @include margin-top(30);
+
+        h3 {
+            @include fontsize(18);
+            font-weight: 500;
+            color: $color-text-02;
+        }
+
+        .field-group {
+            max-width: 550px;
+            margin: 35px 0 0 0;
+
+            .c-field {
+                label {
+                    @include fontsize(18);
+                    text-transform: uppercase;
+                }
+
+                .c-field-control {
+                    border: 0;
+                    color: $color-text-02;
+                }
+            }
+        }
+    }
+}

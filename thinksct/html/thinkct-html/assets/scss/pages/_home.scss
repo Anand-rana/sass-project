@@ -1,0 +1,337 @@
+.homeWrapper {
+   background-color: darken($white, 4%);
+   @include padding(0 0 50);
+   @include pos(r, null);
+   @include calc(min-height, '100vh - 410px');
+
+   &.pt-50 {
+      @include padding-top(50);
+   }
+   @include media('<=991px') {
+      @include padding(0 0 20);
+
+      &.pt-50 {
+         @include padding-top(0);
+      }
+   }
+}
+
+.categoryWrapper {
+   @include padding(30 0);
+   @include pos(r, null);
+
+   ._addNewButton {
+      display        : $ib;
+      vertical-align : middle;
+      text-decoration: $n;
+      font-weight    : 700;
+      color          : lighten($font-color, 10%);
+      @include font-size(16);
+      @include margin-bottom(20);
+
+      &:hover {
+         color: $theme;
+      }
+
+      .button {
+         line-height: 35px;
+         text-align : center;
+         overflow   : hidden;
+         @include pos(r, null);
+         @include square(35px);
+
+         &:after,
+         &:before {
+            content         : "";
+            @include pos(ab, 0);
+            margin          : $auto;
+            height          : 18px;
+            width           : 2px;
+            background-color: $white;
+         }
+
+         &:after {
+            width : 18px;
+            height: 2px;
+         }
+      }
+   }
+
+   .gridLayout {
+      @include pos(r, null);
+      @include transition(all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55));
+
+      & * {
+         @include transition(all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55));
+      }
+
+      & > .row {
+         & > [class^="col-"] {
+            @include first(3) {
+               .gridBlock {
+                  ._name {
+                     @include pos(ab, 10px null null 10px);
+                  }
+               }
+            }
+
+            &:nth-child(2) {
+               .gridBlock {
+                  ._content {
+                     @include padding-right(50);
+                     @include media('<=1199px') {
+                        @include padding-right(40);
+                     }
+                     @include media('<=991px') {
+                        @include padding-right(0);
+                     }
+                  }
+               }
+            }
+
+            &:nth-child(3) {
+               .gridBlock {
+                  ._content {
+                     @include padding-left(100);
+                     @include media('<=1199px') {
+                        @include padding-left(50);
+                     }
+                     @include media('<=991px') {
+                        @include padding-left(0);
+                     }
+                  }
+               }
+            }
+
+            &:nth-child(4) {
+               .gridBlock {
+                  ._date {
+                     right: 80px;
+                     @include media('<=1199px') {
+                        right: 65px;
+                     }
+                     @include media('<=991px') {
+                        right: 10px;
+                     }
+                  }
+               }
+            }
+         }
+         // Color Mixing
+         $mix-color: #6599d1, #3e58a7, #ee1d23, #6599d1, #fec210, #3e58a7;
+         @for $i from 1 through length($mix-color) {
+            & > [class^="col-"] {
+               &:nth-child(#{length($mix-color)}n+#{$i}) {
+                  .gridBlock {
+                     ._name {
+                        background-color: nth($mix-color, $i);
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      ._logoBlock {
+         background-color: darken($white, 4%);
+         margin          : $auto;
+         overflow        : hidden;
+         z-index         : 5;
+         @include square(160px);
+         @include radius(50%);
+         @include pos(ab, 0);
+         @include padding(25);
+         @include media('<=1199px') {
+            @include square(125px);
+         }
+         @include media('<=991px') {
+            display: $n;
+         }
+      }
+
+      .gridBlock {
+         background-color: darken($white, 10%);
+         overflow        : hidden;
+         @include margin(5 0);
+         @include pos(r, null);
+
+         &:hover {
+            img {
+               @include scale(1.1);
+            }
+         }
+
+         img {
+            min-height: 100%;
+            min-width : 100%;
+            object-fit: cover;
+            @include pos(ab, 0);
+         }
+
+         ._gridInner {
+            text-decoration: none;
+            color          : $white;
+            @include rgba($black, 0.4, bg);
+            @include padding(10);
+            @include display-flex;
+            @include align-items(flex-end);
+         }
+
+         ._date {
+            color: $white;
+            @include pos(ab, 10px 10px null null);
+            @include fontsize(12);
+            @include padding(3 0);
+
+            i {
+               @include fontsize(16);
+            }
+         }
+
+         ._name {
+            background-color: darken($white, 40%);
+            color           : $white;
+            display         : $ib;
+            line-height     : 1;
+            min-width       : 65px;
+            text-align      : center;
+            @include fontsize(12);
+            @include padding(5);
+            @include radius(3px);
+         }
+
+         ._content {
+            display: $b;
+            width  : 100%;
+
+            p {
+               font-weight: 700;
+               color      : $white;
+               line-height: 1.4;
+               @include fontsize(15);
+               @include margin(5 0 0);
+            }
+         }
+
+         &.gridBlock-sm {
+            @include fluid-ratio(16 15, '._gridInner');
+            @include media('<=575px') {
+               @include fluid-ratio(16 9, '._gridInner');
+            }
+         }
+
+         &.gridBlock-lg {
+            @include fluid-ratio(16 7.4, '._gridInner');
+            @include media('>=768px','<=991px') {
+               &:before {
+                  padding-bottom: 93.75%;
+               }
+            }
+            @include media('<=575px') {
+               @include fluid-ratio(16 9, '._gridInner');
+            }
+         }
+      }
+   }
+}
+
+.newsSection {
+   @include padding(30 0);
+
+   h2 {
+      @include fontsize(24);
+      @include margin(0 0 35);
+      @include media('<=767px') {
+         @include margin-bottom(20);
+      }
+
+      strong {
+         font-weight: 700;
+      }
+
+      span {
+         display      : $ib;
+         @include padding(15 0);
+         border-bottom: 1px solid $black;
+         @include media('<=767px') {
+            @include padding(0 0 10);
+         }
+      }
+   }
+
+   ._saleImg {
+      @include margin-top(70);
+      @include media('<=991px') {
+         @include margin-top(30);
+      }
+      @include media('<=767px') {
+         @include margin-top(0);
+      }
+   }
+
+   ._block {
+      background-color: $white;
+      border          : 1px solid darken($white, 35%);
+      @include padding(20 15);
+      @include margin-bottom(30);
+      @include experimental-value(min-height, calc(100% - 130px));
+
+      h4 {
+         font-weight: 700;
+         @include margin-bottom(10);
+         @include fontsize(18);
+      }
+
+      ._followus {
+         float: right;
+         @include margin-top(-40);
+
+         a {
+            display        : $ib;
+            color          : $theme;
+            text-decoration: none;
+            @include margin(5 0 5 15);
+         }
+      }
+
+      ._newsSection {
+         border-top: 1px solid darken($white, 10%);
+         @include padding(25 0 0);
+         @include margin-top(25);
+
+         .input-group {
+            @include padding-top(15);
+            @include media('<=767px') {
+               display: $b;
+            }
+
+            .form-control {
+               border          : 1px solid transparent;
+               background-color: darken($white, 5%);
+               height          : 46px;
+               @include padding(0 15);
+               @include media('<=767px') {
+                  display: $b;
+                  width  : 100%;
+               }
+
+               &:focus {
+                  border-color: $theme;
+               }
+            }
+
+            .button {
+               @include padding(0 40);
+               height     : 46px;
+               line-height: 46px;
+               text-align : center;
+               @include media('<=767px') {
+                  display: $b;
+                  width  : 100%;
+                  @include margin-top(10);
+               }
+            }
+         }
+      }
+   }
+}

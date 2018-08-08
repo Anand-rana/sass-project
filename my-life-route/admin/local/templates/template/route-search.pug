@@ -1,0 +1,88 @@
+.search-modal-section
+	.modal-header
+		h2.title Search
+		button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close-o
+	.modal-body
+		.field-group
+			.row
+				.col-md-6
+
+					.c-field.c-b-sm.c-shadow.c-lh
+						label Title
+						input(type="text", placeholder="e.g. From Accountant to Architect in 10 Steps").c-field-control
+
+					.c-field.c-b-sm.c-shadow.c-lh
+						label Author Email
+						input(type="text", placeholder="Enter Email..").c-field-control
+
+
+				.col-md-6
+					.c-field.c-b-sm.c-shadow.c-lh
+						label Author Full Name
+						input(type="text", placeholder="Enter Name..").c-field-control
+
+					.c-field.c-b-sm.c-shadow.c-lh
+						label Keywords
+						tags-input(ng-model="tags" placeholder="Add Keywords")
+			.c-field.c-b-sm
+				.check-opt-field
+					label  Steps
+					.list-opt
+						ul
+							li
+								label.label-checkbox-o.label-checkbox-o-lg
+									input(type="checkbox")
+									span.check-mark
+									span.label-name All
+							li
+								label.label-checkbox-o.label-checkbox-o-lg
+									input(type="checkbox")
+									span.check-mark
+									span.label-name 0-5
+							li
+								label.label-checkbox-o.label-checkbox-o-lg
+									input(type="checkbox")
+									span.check-mark
+									span.label-name 5-10
+							
+			.row
+				.col-md-6
+
+					.c-field.c-b-sm.c-shadow.c-lh
+						label Creation Date
+						.c-has-icon
+							input(type="text", placeholder="Select").c-field-control
+							.icon-addon.hidden-xs
+								i.icon-calender-o
+					
+
+					.c-field.c-b-sm.c-shadow.c-lh
+						label Life Route Type
+						.select-control
+							select.c-field-control
+								option Select
+		
+
+
+				.col-md-6
+					.c-field.c-b-sm.c-shadow.c-lh
+						label Last Updated
+						.c-has-icon
+							input(type="text", placeholder="Select").c-field-control
+							.icon-addon.hidden-xs
+								i.icon-calender-o
+
+
+					.c-field.c-b-sm.c-shadow.c-lh
+						label Status
+						.select-control
+							select.c-field-control
+								option Select
+
+			.btn-field
+					button.button.button-shadow.button-width-large.button-green.button-height-large.button-font-bold.button-rounded.button-font-medium.margin-right-1x Search
+					button.button.button-shadow.button-width-large.button-danger.button-height-large.button-font-bold.button-rounded.button-font-medium.margin-left-1x Reset
+
+				
+		

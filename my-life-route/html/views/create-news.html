@@ -1,0 +1,251 @@
+
+<div class="create-news-section">
+  <div class="container">
+    <div class="step-form-block">
+      <h2 class="title">Create NEWS</h2>
+      <div class="step-form-container">
+        <div class="step-form-heading">
+          <h3 class="title">Essential Details</h3>
+        </div>
+        <div class="step-form-data">
+          <div class="step-form-field-box">
+            <div class="field-group">
+              <div class="c-field c-outline c-2 c-lh c-shadow">
+                <div class="c-line c-2">
+                  <label>Title</label>
+                </div>
+                <input class="c-field-control" type="text" placeholder="e.g. From Accountant to Architect in 10 Steps"/>
+              </div>
+              <div class="row row-10">
+                <div class="col-md-6">
+                  <div class="c-field c-outline c-2 c-lh c-shadow">
+                    <div class="c-line c-2">
+                      <label>Start Date</label>
+                    </div>
+                    <div class="c-has-icon">
+                      <input class="c-field-control" type="text" placeholder="DD/MM/YYYY"/>
+                      <div class="icon-addon hidden-xs"><i class="icon-calendar"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="c-field c-outline c-2 c-lh c-shadow">
+                    <div class="c-line c-2">
+                      <label>End Date</label>
+                    </div>
+                    <div class="c-has-icon">
+                      <input class="c-field-control" type="text" placeholder="DD/MM/YYYY"/>
+                      <div class="icon-addon hidden-xs"><i class="icon-calendar"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row row-10">
+                <div class="col-md-6">
+                  <div class="c-field c-outline c-2 c-lh c-shadow">
+                    <div class="c-line c-2">
+                      <label>Start Time</label>
+                    </div>
+                    <div class="c-has-icon">
+                      <input class="c-field-control" type="text" placeholder="Time"/>
+                      <div class="icon-addon hidden-xs"><i class="icon-watch"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="c-field c-outline c-2 c-lh c-shadow">
+                    <div class="c-line c-2">
+                      <label>End Time</label>
+                    </div>
+                    <div class="c-has-icon">
+                      <input class="c-field-control" type="text" placeholder="Time"/>
+                      <div class="icon-addon hidden-xs"><i class="icon-watch"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-field c-outline c-2 c-lh c-shadow">
+                <div class="c-line c-2">
+                  <label>Location</label>
+                </div>
+                <input class="c-field-control" type="text" placeholder="Specify Location (City, Country etc)"/>
+              </div>
+              <div class="c-field c-outline c-2 c-shadow c-b-lg">
+                <div class="c-line c-2">
+                  <label>Description</label>
+                </div>
+                <textarea class="c-field-control" rows="8" cols="8" placeholder="News Description"></textarea>
+              </div>
+              <div class="c-field c-outline c-2 c-shadow c-b-lg">
+                <div class="c-line c-2">
+                  <label>Keywords/ Tags</label>
+                </div>
+                <textarea class="c-field-control" rows="5" cols="5" placeholder="Specific words associated with this News Post (e.g. Employment, Career, Economy etc)."></textarea>
+              </div>
+              <div class="c-add-img-video__block c-addimgblcok">
+                <div class="c-add-img-video__top">
+                  <div class="fileUpload">
+                    <input class="upload" type="file"/>
+                    <button class="button button-news button-rounded button-height-large button-font-bold">Add Images</button>
+                  </div>
+                  <div class="help-txt c-1">
+                    <p>Max. 4 JPEGs of 10MB in Size </p>
+                  </div>
+                </div>
+                <div class="data-list">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="img-box"><span class="delete-ico"><i class="icon-close-fill"></i></span>
+                        <figure><img src="images/test.jpg" alt="img"/></figure>
+                        <figcaption>
+                          <h3 class="file-title">Originalname.jpeg</h3>
+                          <div class="caption__opt">
+                            <button class="button button-rounded button-grey button-font-sbold button-height-small" ng-click="addcaption = ! addcaption" ng-class="{'hidden':addcaption}"> Add Caption</button>
+                            <div class="c-edit-field" ng-show="addcaption"> 
+                              <input type="text" placeholder="New Name Assign"/>
+                              <div class="field-opt">
+                                <ul>
+                                  <li><span class="edit-ico"><i class="icon-edit-o"></i></span></li>
+                                  <li><span class="close-ico"><i class="icon-close-o"></i></span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="img-box"><span class="delete-ico"><i class="icon-close-fill"></i></span>
+                        <figure><img src="images/test.jpg" alt="img"/></figure>
+                        <figcaption>
+                          <h3 class="file-title">Originalname.jpeg</h3>
+                          <div class="caption__opt">
+                            <button class="button button-rounded button-grey button-font-sbold button-height-small" ng-click="addcaption1 = ! addcaption1" ng-class="{'hidden':addcaption1}"> Add Caption</button>
+                            <div class="c-edit-field" ng-show="addcaption1"> 
+                              <input type="text" placeholder="New Name Assign"/>
+                              <div class="field-opt">
+                                <ul>
+                                  <li><span class="edit-ico"><i class="icon-edit-o"></i></span></li>
+                                  <li><span class="close-ico"><i class="icon-close-o"></i></span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-add-img-video__block">
+                <div class="c-add-img-video__top">
+                  <button class="button button-news button-rounded button-height-large button-font-bold" ng-controller="ModalCtrl" ng-click="insertvideo()">Add Videos</button>
+                  <div class="help-txt c-1">
+                    <p>Max. 2 External Video Links</p>
+                  </div>
+                </div>
+                <div class="data-list">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="video-box"><span class="delete-ico"><i class="icon-close-fill"></i></span>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/7mNu1DaTVDY" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                        <figcaption>
+                          <h3 class="file-title">Originalname.mp4</h3>
+                          <div class="caption__opt">
+                            <button class="button button-rounded button-grey button-font-sbold button-height-small" ng-click="addcaption3 = ! addcaption3" ng-class="{'hidden':addcaption3}"> Add Caption</button>
+                            <div class="c-edit-field" ng-show="addcaption3"> 
+                              <input type="text" placeholder="New Name Assign"/>
+                              <div class="field-opt">
+                                <ul>
+                                  <li><span class="edit-ico"><i class="icon-edit-o"></i></span></li>
+                                  <li><span class="close-ico"><i class="icon-close-o"></i></span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="video-box"><span class="delete-ico"><i class="icon-close-fill"></i></span>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/7mNu1DaTVDY" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                        <figcaption>
+                          <h3 class="file-title">Originalname.mp4</h3>
+                          <div class="caption__opt">
+                            <button class="button button-rounded button-grey button-font-sbold button-height-small" ng-click="addcaption4 = ! addcaption4" ng-class="{'hidden':addcaption4}"> Add Caption</button>
+                            <div class="c-edit-field" ng-show="addcaption4"> 
+                              <input type="text" placeholder="New Name Assign"/>
+                              <div class="field-opt">
+                                <ul>
+                                  <li><span class="edit-ico"><i class="icon-edit-o"></i></span></li>
+                                  <li><span class="close-ico"><i class="icon-close-o"></i></span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-setting-opt">
+                <div class="row">
+                  <div class="col-md-8 col-sm-8 col-xs-8">
+                    <h3>Post this to My Connections only</h3>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="c-oth-opt__btn">
+                      <div class="fh-switch fh-sm fc-1">
+                        <input type="radio" id="four" name="a"/>
+                        <label for="four"></label><span class="fh-switch-knob"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-setting-opt">
+                <div class="row">
+                  <div class="col-md-8 col-sm-8 col-xs-8">
+                    <h3>Post this to Specific People only</h3>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="c-oth-opt__btn">
+                      <div class="fh-switch fh-sm fc-1">
+                        <input type="radio" id="five" name="a"/>
+                        <label for="five"></label><span class="fh-switch-knob"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-search-field">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <label>Select People</label>
+                  </div>
+                  <div class="col-sm-9">
+                    <div class="c-field c-outline c-2 c-sh c-shadow c-b-sm c-md">
+                      <input class="c-field-control" type="text" placeholder="Search"/>
+                      <div class="people-list">
+                        <ul>
+                          <li><span class="__label">John Smith</span><span class="ico pointer"> <i class="icon-close-o"> </i></span></li>
+                          <li><span class="__label">John Smith</span><span class="ico pointer"><i class="icon-close-o"> </i></span></li>
+                          <li><span class="__label">John Smith</span><span class="ico pointer"> <i class="icon-close-o"></i></span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-field text-right">
+                <button class="button button-danger button-font-medium button-uppercase button-font-medium-txt button-height-extra-large button-rounded button-min-width-small margin-left-1x margin-right-1x margin-bottom-2x" ng-click="$state.go('landing')">CANCEL</button>
+                <button class="button button-uppercase button-font-medium button-font-medium-txt button-height-extra-large button-rounded button-min-width-small margin-right-1x margin-left-1x" ng-click="$state.go('landing')">POST</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

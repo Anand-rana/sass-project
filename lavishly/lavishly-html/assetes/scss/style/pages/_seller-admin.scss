@@ -1,0 +1,171 @@
+    .profile-wrapper {
+        @include margin-top(60);
+        .profile-cover {
+            background: url(#{$imgpath}profile-cover.jpg) no-repeat bottom;
+            background-size: cover;
+            min-height: 400px;
+        }
+        .c-profile-info {
+            @include open-semibold;
+            @include padding(0 40);
+            .c-profile-logo {
+                @include padding-right(10);
+                img {
+                    width: 185px;
+                    height: 185px;
+                    @include border(1, solid, $color02);
+                }
+            }
+            .c-contact-dtl {
+                @include margin-top(50);
+                .c-title {
+                    @include fontsize(32);
+                    color: $color02;
+                }
+                .c-list-dtl {
+                    @include margin-top(50);
+                    .c-contact-list {
+                        & > li {
+                            display: $inline;
+                            @include fontsize(18);
+                            @include padding-right(20);
+                            @include margin-right(20);
+                            @include border-right(2, solid, #8a8a8a);
+                            line-height: 25px;
+                            [class*="icon-"] {
+                                @include margin-right(15);
+                                @include fontsize(30);
+                                vertical-align: middle;
+                            }
+                            &:last-child {
+                                @include padding-right(0);
+                                @include margin-right(0);
+                                border: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .c-profile-dtl-txt {
+                @include margin-top(-90);
+                @include padding-bottom(50);
+                @include fontsize(15);
+                .cp-link {
+                    h4 {
+                        display: $inline;
+                        @include margin-right(10);
+                    }
+                }
+                .cp-type {
+                    @include fontsize(18);
+                    i {
+                        @include margin-right(10);
+                        @include fontsize(30);
+                        vertical-align: middle;
+                        color: $themecolor;
+                    }
+                }
+            }
+            .c-profile-inner {
+                @include padding(0 15);
+                background-color: $color02;
+                .media {
+                    @include pos(rel, -120px null null null);
+                }
+            }
+        }
+        .product-item-section {
+            @include padding(0 40 40 40);
+            @include margin-top(50);
+            .p-item-box {
+                background-color: $color02;
+                -webkit-box-shadow: 0 0 5px rgba(12, 6, 14, .1);
+                -moz-box-shadow: 0 0 5px rgba(12, 6, 14, .1);
+                box-shadow: 0 0 5px rgba(12, 6, 14, .1);
+                @include margin-bottom(30);
+                @include border-round(3);
+                .main-slider {
+                    @include pos(rel, null);
+                    .owl-thumbs {
+                        @include margin-top(-50);
+                        position: relative;
+                        z-index: 100;
+                        @include margin-left(20);
+                    }
+                    .p-cnav {
+                        @include pos(ab, null 20px 20px null);
+                        z-index: 100;
+                    }
+                }
+                figcaption {
+                    @include padding(20 15);
+                    @include fontsize(17);
+                    .p-item-info {
+                        li {
+                            display: $inline;
+                            @include josefinsansbold;
+                            @include padding-right(15);
+                            @include margin-right(15);
+                            // @include border-right(1, solid, #b1b1b1);
+                            @include pos(rel, null);
+                            &:after {
+                                @include pos(ab, 5px 0 5px null);
+                                content: "";
+                                width: 2px;
+                                background-color: #b1b1b1;
+                            }
+                            &:last-child {
+                                @include padding(0);
+                                @include margin(0);
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                            [class*="icon-"] {
+                                @include fontsize(20);
+                                vertical-align: middle;
+                                @include margin-right(10);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .owl-thumbs {
+        .owl-thumb-item {
+            border: 0 !important;
+            background-color: none !important;
+            padding: 0 !important;
+            @include margin-right(10);
+            img {
+                width: 100px;
+                height: 100px;
+                -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+                -moz-box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+            }
+        }
+    }
+    
+    .p-cnav {
+        width: 60px;
+        & > a {
+            display: $block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            @include fontsize(25);
+            color: $color01;
+            @include border(1, solid, $color01);
+            background-color: $color02;
+            &.owl-next {
+                @include margin-left(30);
+            }
+            &.owl-prev {
+                @include margin-right(30);
+            }
+        }
+    }

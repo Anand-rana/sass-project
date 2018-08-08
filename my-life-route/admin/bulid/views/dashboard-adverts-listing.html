@@ -1,0 +1,244 @@
+
+<div class="dashboard-advert-section">
+  <div class="header-block">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="sort-input-field margin-bottom-2x">
+          <div class="select-control">
+            <select class="sort-field-control">
+              <option>Sort By</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="text-right">
+          <button class="button button-l-green button-height-large button-font-bold button-rounded margin-right-1x">All Pending Adverts</button>
+          <button class="button button-height-large button-font-bold button-rounded" ng-controller="ModalCtrl" ng-click="advertsearch()"><i class="icon-magnifier"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="advert-list">
+    <div class="total-entries"><span>500 Entries</span></div>
+    <div class="data-table">
+      <div class="table-responsive">
+        <table class="table c-5 table-bordered">
+          <thead>
+            <tr>
+              <th class="text-center">No</th>
+              <th class="text-center">Title</th>
+              <th class="text-center">Author<br/>Name</th>
+              <th class="text-center">Creator Email</th>
+              <th class="text-center">Location </th>
+              <th class="text-center">Profile Type</th>
+              <th class="text-center">Creation Date<br/><span>(DD/MM/YYYY)</span></th>
+              <th class="text-center">Start Date<br/><span>(DD/MM/YYYY)</span></th>
+              <th class="text-center">End Date<br/><span>(DD/MM/YYYY)</span></th>
+              <th class="text-center">Duration</th>
+              <th class="text-center">Video Links</th>
+              <th class="text-center">Images</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">Brand/Product</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">5 Days</td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="video()"><i class="icon-help"></i></span></td>
+              <td align="center">10<span class="help-ico c-4" ng-controller="ModalCtrl" ng-click="images()"><i class="icon-help"></i></span></td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-adverts-dtl"><i class="icon-eye"></i></a><span class="ap-ico opt-ico"><i class="icon-check-o"></i></span><span class="close-ico opt-ico" ng-controller="ModalCtrl" ng-click="reject()"><i class="icon-close-o"></i></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="page-nation-list c-4 margin-top-4x">
+      <ul>
+        <li><a href="#">1</a></li>
+        <li><a class="active" href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">8</a></li>
+        <li><a class="next-btn" href="#">Next
+            <Span class="ico"><i class="icon-angle-right"></i></Span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>

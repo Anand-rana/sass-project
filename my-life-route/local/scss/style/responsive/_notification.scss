@@ -1,0 +1,29 @@
+@include media("<=992px") {
+  .notification-section {
+    @include padding(50 0);
+
+    .heading-block {
+      .del-opt {
+        text-align: left;
+      }
+    }
+
+    .notification-list {
+      @include margin-top(50);
+    }
+  }
+}
+@include media("<=767px") {
+  .notification-section {
+    .notification-list {
+      .notification-row {
+        @include padding-right(0);
+
+        .nt-del-opt {
+          @include margin-top(15);
+          @include pos(rel,0 0 0 0);
+        }
+      }
+    }
+  }
+}

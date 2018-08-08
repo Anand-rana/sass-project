@@ -1,0 +1,56 @@
+@include media("<=992px") {
+    .adv-section {
+        @include padding(50 0);
+
+        .filter-side-block {
+            @include margin-top(30);
+        }
+    }
+}
+
+@include media("<=767px") {
+
+    .adv-section {
+        @include padding(30 0);
+        .heading-block {
+            h3 {
+                @include fontsize(25);
+            }
+
+            .breadcrumb-list {
+                text-align: center;
+            }
+        }
+
+        .adv-dtl-box {
+            .__inner-container {
+                .title-block {
+                    h3.title {
+                        @include fontsize(30);
+                    }
+                }
+
+
+
+                .adv-dtl-info {
+
+                    &>ul {
+                        &>li {
+                            @include padding-bottom(20);
+                        }
+                    }
+                    .social-info {
+                        @include padding-top(20);
+                        text-align: left;
+
+
+                        &>li {
+                            display: $b;
+                            @include padding(0 0 20);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

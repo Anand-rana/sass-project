@@ -1,0 +1,29 @@
+@include media("<=767px") {
+    .subcription-section {
+        .search-result-filter__block {
+            text-align: center;
+            @include margin(20 0);
+        }
+        .subcription-list-block {
+            @include margin-top(40);
+            .subcription-list-row {
+                @include padding(30);
+                text-align: center;
+                .user-pic {
+                    display: $b;
+                }
+                .user-name {
+                    @include margin(10 0);
+                    display: $b;
+                }
+                .media-left,
+                .media-right,
+                .media-body {
+                    display: $b;
+                    width: auto;
+                    @include padding(0);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.detailPageWrapper {
+   .panel-heading {
+      border-bottom: 1px solid darken($white, 10%);
+
+      h2 {
+         @include fontsize(20);
+         @include margin(0);
+         text-transform: uppercase;
+      }
+   }
+
+   .panel-body {
+      @include padding(50 30);
+
+      .detailViewWrap {
+         ._imgBlock {
+            @include max-width(250);
+            @include max-height(250);
+            @include margin-bottom(20);
+            display: $ib;
+         }
+
+         .form-group {
+            label {
+               text-align: left;
+               display   : $b;
+            }
+         }
+
+         ._trainingDetailBlock {
+            h3 {
+               @include fontsize(18);
+               @include margin(0 -31 20);
+               @include padding(15 30);
+               background-color: darken($white, 10%);
+               text-transform  : uppercase;
+            }
+
+            .form-group {
+               ._skillsWrap {
+                  column-count       : 2;
+                  list-style-position: inside;
+                  @include padding-left(0);
+                  @include clear;
+
+                  li {
+                     @include padding(7 15 7 0);
+                     @include pos(r, null);
+                  }
+               }
+
+               ._hashTagWrap {
+                  span {
+                     @include padding(5 15);
+                     @include radius(20px);
+                     @include margin(5 10 5 0);
+                     display         : $ib;
+                     background-color: darken($white, 15%);
+                     border          : 1px solid darken($white, 25%);
+                     font-weight     : 500;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

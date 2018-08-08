@@ -1,0 +1,47 @@
+// THEME AND COLOR
+
+
+$white: #ffffff !default;
+$textcolor: #707070 !default;
+$themecolor: #067cb6 !default;
+$bluecolor:#067cb6 !default;
+$pinkcolor: #ef5f5f !default;
+$yellowcolor:#f2b562 !default;
+$graycolor:#838d93 !default;
+$blackcolor: #313234 !default;
+$darkblue:#0370a6 !default;
+
+//hover and other colors
+$color01: #e76048 !default;
+$color02: #ff0303 !default;
+
+
+$action: $color01 !default;
+$highlight: $color02 !default;
+$cancel: #b2b3bc !default;
+$info: #7c7f8e !default;
+
+
+//block divs
+
+$block: block;
+$inline: inline-block;
+
+// PATH & FONT NAME
+$font-family: "open_sansregular", arial, sans-serif !default;
+
+$imgpath: "../images/" !default;
+$primary-font-path: "../fonts" !default;
+$url: $imgpath !default;
+
+// FONTS and TEXT STYLE
+$fontnormal: 15px !default;
+$fontsmall: 13px !default;
+$lineheight: 1.5 !default;
+$lineheight-sm: 1.2 !default;
+$fontawesome: FontAwesome !default;
+$spacing: 5px !default;
+$uppercase: uppercase;
+
+//TRANSITION EFFECT
+$trasition_all: all 0.4s ease-in-out 0s !default;

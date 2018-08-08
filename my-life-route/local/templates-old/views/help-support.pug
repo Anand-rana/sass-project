@@ -1,0 +1,32 @@
+.faq-page-section
+	.container
+		.__top-block
+			.row
+				.col-md-8.col-md-offset-4
+					.heading-block
+						h3 Help &amp; Support - FAQ
+					.search-field
+						input(type="text" placeholder="Search").search-field-control
+						span.ico
+							i.icon-search
+		.page-content
+			.row
+				.col-md-4.col-sm-4
+					.f-nav-list
+						ul
+							
+							li
+								a(data-ui-sref="helpsupport.section({ type: 'signup'})" data-ui-sref-active="active") SIGNING UP
+							li
+								a(data-ui-sref="helpsupport.section({ type: 'genral'})" data-ui-sref-active="active") GENERAL USE
+							li
+								a(data-ui-sref="helpsupport.section({ type: 'advertise'})" data-ui-sref-active="active") ADVERTISING
+							li
+								a(data-ui-sref="helpsupport.section({ type: 'terms'})" data-ui-sref-active="active") T &amp; C
+							li
+								a(data-ui-sref="helpsupport.section({ type: 'policy'})" data-ui-sref-active="active") PRIVACY POLICY
+							li
+								a(data-ui-sref="helpsupport.section({ type: 'contact'})" data-ui-sref-active="active") CONTACT
+				.col-md-8.col-sm-8
+					.content-data
+						div(ui-view="section")

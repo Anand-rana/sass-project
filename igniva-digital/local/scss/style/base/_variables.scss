@@ -1,0 +1,46 @@
+// THEME AND COLOR
+
+$black: #000000 !default;
+$white: #ffffff !default;
+$theme:#FF0000 !default
+
+
+//bg-colors
+$color-red : #FF0000 !default;
+$color-pink: #FFE6E6 !default;
+$color-shadow-red: #C80000 !default;
+$color-n-black : #1A1A1A !default;
+$color-grey:#404040 !default;
+$color-neutral:#F2F2F2 !default;
+//text-colors
+
+$color-01 : #ffb3b3 !default;
+
+
+// PATH & FONT NAME
+$font-family: "open" !default;
+$imgpath: "../images/" !default;
+$primary-font-path: "../fonts" !default;
+$url: $imgpath !default;
+
+// FONTS and TEXT STYLE
+$fontnormal: 15px !default;
+$fontsmall: 12px !default;
+$lineheight: 1.5 !default;
+$fontawesome: FontAwesome !default;
+$spacing: 5px !default;
+
+//TRANSITION EFFECT
+$trasition_all: all 0.3s ease-in-out 0s !default;
+
+// Display
+$ib: inline-block !default;
+$b: block !default;
+$t: table !default;
+$cell: table-cell !default;
+$none: none !default;
+
+// Margin
+$mauto: auto auto !default;
+$zeroauto: 0 auto !default;
+$auto: auto !default;

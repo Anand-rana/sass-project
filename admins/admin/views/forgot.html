@@ -1,0 +1,24 @@
+		<div class="vertical-align-wrap">
+			<div class="vertical-align-middle">
+				<div class="auth-box ">
+					<div class="left">
+						<div class="content">
+							<div class="header">
+								<div class="logo text-center"><img src="assets/img/logo-dark.png" alt="Klorofil Logo"></div>
+								<p class="lead">Retrieve Password</p>
+							</div>
+							<form class="form-auth-small"  name="forgotForm" ng-submit="forgot_password(forgotForm.$valid)">
+							<div class="form-group">
+								<input class="form-control" placeholder="Enter Your Email" name="email" type="text" ng-model="forgotData.email" ng-required="true" ng-pattern="/^[A-Z0-9._-]+@[A-Z0-9.-]+\.[A-Z0-9.-]+$/i"
+								aria-describedby="emailHelp"  autofocus/>
+								<span class="text-danger" ng-show="forgotForm.email.$error.required && !forgotForm.email.$pristine">Email is required</span>
+						 		<span class="text-danger" ng-show="!forgotForm.email.$error.required && forgotForm.email.$invalid && !forgotForm.email.$pristine">Enter valid Email</span>
+							</div>
+							<button type="submit"  ng-disabled="(forgotForm.$invalid)"  class="btn btn-primary btn-lg btn-block">Send</button>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>

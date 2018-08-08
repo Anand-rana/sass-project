@@ -1,0 +1,41 @@
+.s-prdouct-dtl {
+    .s-product-img {
+        @include margin-left(-15);
+        .s-product-thumbs {
+            .item {
+                @include pos(rel, null);
+                span.ico {
+                    @include fontsize(100);
+                    color: $color02;
+                    @include pos(ab, 50% null null 50%);
+                    z-index: 100;
+                    @include translatepos(-50%, -50%);
+                }
+            }
+        }
+        #sync2 .current .item {
+            opacity: 0.7;
+        }
+    }
+    .s-product-txt {
+        @include margin-top(100);
+        h3 {
+            @include open-semibold;
+            color: $color01;
+            @include fontsize(25);
+            @include border-bottom(1, solid, #e5e5e5);
+            @include padding-bottom(10);
+        }
+        .s-price {
+            display: $block;
+            background-color: $themecolor;
+            color: $color02;
+            text-align: center;
+            @include padding(15);
+            @include fontsize(16);
+            .fa {
+                @include fontsize(20);
+            }
+        }
+    }
+}

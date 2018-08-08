@@ -1,0 +1,56 @@
+.agrement-section {
+    @include margin-top(30);
+
+    & > h4 {
+        @include fontsize(20);
+
+        @include open-semibold;
+    }
+
+    .agrement-content {
+        @include border(1, solid, #e1e3e5);
+
+        @include padding(20 10);
+
+        @include margin-top(30);
+
+        p {
+            @include margin-bottom(20);
+        }
+
+        h3 {
+            @include open-semibold;
+
+            text-transform: $uppercase;
+
+            @include fontsize(16);
+
+            text-decoration: underline;
+            display: $inline;
+
+            @include margin-bottom(20);
+        }
+    }
+
+    .mCSB_dragger_bar {
+        background-color: $themecolor !important;
+    }
+}
+
+.page-section {
+    @include margin-top(10);
+
+    .page-content {
+        @include margin-top(40);
+
+        @include padding-bottom(30);
+
+        h4 {
+            @include margin(30 0 20);
+
+            @include raleway-semibold;
+
+            @include fontsize(18);
+        }
+    }
+}

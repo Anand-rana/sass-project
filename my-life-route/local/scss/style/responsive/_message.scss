@@ -1,0 +1,93 @@
+@include media("<=992px") {
+   .my-message-section {
+      @include padding(50 0);
+   }
+}
+
+
+@include media("<=767px") {
+   .my-message-section {
+      @include padding(30 0);
+
+      .f-list-block {
+         @include margin-top(40);
+      }
+
+      .chat-box-container {
+         @include margin-top(40);
+      }
+   }
+
+   .my-message-section {
+      .chat-box-container {
+         .chat-msg__area {
+            @include experimental-value(max-height, calc(100vh - 100px));
+
+            .chat-msg__box {
+               .msg .m-msg {
+                  .me-msg__container {
+                     display: block;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+
+@include media("<=479px") {
+   .my-message-section {
+      .chat-box-container {
+         .chat-head__block {
+            @include padding(20 30);
+         }
+
+         .chat-msg__area {
+            @include padding(20 15);
+
+            .chat-msg__label {
+               & + .chat-msg__box {
+                  @include margin-top(40);
+               }
+            }
+
+            .chat-msg__box {
+               .msg {
+                  .f-msg {
+                     .usr-msg__container {
+                        .usr-msg {
+                           @include padding(10 15);
+
+                           p {
+                              @include fontsize(15);
+                           }
+                        }
+                     }
+                  }
+
+                  .m-msg {
+                     .me-msg__container {
+                        .me-msg {
+                           @include padding(10 15);
+
+                           p {
+                              @include fontsize(15);
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+
+         .chat-msg__text-field {
+            textarea {
+               @include padding(15 20);
+
+               @include fontsize(16);
+            }
+         }
+      }
+   }
+}

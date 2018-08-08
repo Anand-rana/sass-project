@@ -1,0 +1,241 @@
+
+<div class="dashboard-route-section">
+  <div class="header-block">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="sort-input-field margin-bottom-2x">
+          <div class="select-control">
+            <select class="sort-field-control">
+              <option>Sort By</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="text-right">
+          <button class="button button-green button-height-large button-font-bold button-rounded margin-right-1x">All Life Routes</button>
+          <button class="button button-height-large button-font-bold button-rounded" ng-controller="ModalCtrl" ng-click="routesearch()"><i class="icon-magnifier"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="user-route-list">
+    <div class="total-entries"><span>500 Entries</span></div>
+    <div class="data-table">
+      <div class="table-responsive">
+        <table class="table c-1 table-bordered">
+          <thead>
+            <tr>
+              <th class="text-center">No</th>
+              <th class="text-center">Title</th>
+              <th class="text-center">From<br/>(Start)</th>
+              <th class="text-center">To<br/>(End)</th>
+              <th class="text-center">Life Route<br/>Type</th>
+              <th class="text-center">Author<br/>Name</th>
+              <th class="text-center">Author Email</th>
+              <th class="text-center">Location</th>
+              <th class="text-center">No <br/>of Steps</th>
+              <th class="text-center">Total Cost</th>
+              <th class="text-center">Creation Date<br/><span>(DD/MM/YYYY)</span></th>
+              <th class="text-center">Last Updated<br/><span>(DD/MM/YYYY)</span></th>
+              <th class="text-center">Status</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Student</td>
+              <td align="center">Consultant</td>
+              <td align="center">Completed</td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">2</td>
+              <td align="center">£70,000</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-route-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routeblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routedelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Student</td>
+              <td align="center">Consultant</td>
+              <td align="center">Completed</td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">2</td>
+              <td align="center">£70,000</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-route-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routeblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routedelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Student</td>
+              <td align="center">Consultant</td>
+              <td align="center">Completed</td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">2</td>
+              <td align="center">£70,000</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-route-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routeblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routedelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Student</td>
+              <td align="center">Consultant</td>
+              <td align="center">Completed</td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">2</td>
+              <td align="center">£70,000</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-route-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routeblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routedelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Student</td>
+              <td align="center">Consultant</td>
+              <td align="center">Completed</td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">2</td>
+              <td align="center">£70,000</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-route-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routeblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routedelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Student</td>
+              <td align="center">Consultant</td>
+              <td align="center">Completed</td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">2</td>
+              <td align="center">£70,000</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-route-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routeblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routedelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Student</td>
+              <td align="center">Consultant</td>
+              <td align="center">Completed</td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">2</td>
+              <td align="center">£70,000</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-route-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routeblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routedelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Student</td>
+              <td align="center">Consultant</td>
+              <td align="center">Completed</td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">2</td>
+              <td align="center">£70,000</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-route-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routeblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routedelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Student</td>
+              <td align="center">Consultant</td>
+              <td align="center">Completed</td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">2</td>
+              <td align="center">£70,000</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-route-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routeblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routedelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Student</td>
+              <td align="center">Consultant</td>
+              <td align="center">Completed</td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">2</td>
+              <td align="center">£70,000</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-route-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routeblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routedelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td align="center">Lorem Ipsum is simp text ennie </td>
+              <td align="center">Student</td>
+              <td align="center">Consultant</td>
+              <td align="center">Completed</td>
+              <td align="center">Jennie jackson</td>
+              <td align="center">Jennie_son@gmail.com</td>
+              <td align="center">Mohali India</td>
+              <td align="center">2</td>
+              <td align="center">£70,000</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">07/06/2017</td>
+              <td align="center">Active</td>
+              <td align="center"><a class="view-ico opt-ico" data-ui-sref="dashboard-route-dtl"><i class="icon-eye"></i></a><span class="n-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routeblock()"><i class="icon-not-allowed"></i></span><span class="delete-ico opt-ico" data-ng-controller="ModalCtrl" data-ng-click="routedelete()"><i class="icon-delete"></i></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="page-nation-list margin-top-4x">
+      <ul>
+        <li><a href="#">1</a></li>
+        <li><a class="active" href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">8</a></li>
+        <li><a class="next-btn" href="#">Next
+            <Span class="ico"><i class="icon-angle-right"></i></Span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>

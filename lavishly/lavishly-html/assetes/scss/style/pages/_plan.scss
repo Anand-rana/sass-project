@@ -1,0 +1,288 @@
+.price-plan-section {
+    background-color: #282828;
+    @include padding(70 0 180);
+    @include pos(rel, null);
+    .price-box {
+        background-color: #f7f7f7;
+        //@include padding(40 0);
+        @include pos(rel, null);
+        .price-title {
+            .inner-title {
+                background-color: rgba($color02, 0.9);
+                @include padding(40 0 30);
+                text-align: center;
+                h3 {
+                    @include margin-top(20);
+                    @include josefinsansbold;
+                    @include fontsize(24);
+                }
+            }
+            .price-icon {
+                width: 140px;
+                @include circle();
+                margin: 0 auto;
+                img {
+                    width: 130px;
+                    height: 130px;
+                    @include circle();
+                    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .24);
+                    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .24);
+                    box-shadow: 0 0 8px rgba(0, 0, 0, .24);
+                    @include border(5, solid, $color02);
+                }
+            }
+        }
+        .the-price {
+            background-color: $color02;
+            @include padding(15 0);
+            @include margin(0 -8);
+            @include pos(rel, null);
+            -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
+            -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
+            text-align: center;
+            @include josefinsansregular;
+            @include fontsize(24);
+            color: #2e2e2e;
+            span {
+                @include fontsize(34);
+                color: $color01;
+                @include josefinsansbold;
+            }
+            &:before {
+                @include pos(ab, 100% null null -1px);
+                content: '';
+                border-left: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-right: 4px solid #6d6d6d;
+                border-top: 5px solid #6d6d6d;
+                //@include translatepos(0, -50%);
+            }
+            &:after {
+                @include pos(ab, 100% -1px null null);
+                content: '';
+                border-left: 4px solid #6d6d6d;
+                border-bottom: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid #6d6d6d;
+                //@include translatepos(0, -50%);
+            }
+        }
+        .plan-detail {
+            @include padding(0 5);
+            @include pos(rel, null);
+            &> ul {
+                @include pos(rel, null);
+                z-index: 3;
+                & > li {
+                    @include padding(20);
+                    @include josefinsansregular;
+                    @include fontsize(18);
+                    color: #4c4c4c;
+                    @include border-bottom(1, solid, #d6d6d6);
+                    span {
+                        float: right;
+                        @include fontsize(16);
+                        &.check-ico {
+                            color: #3ec848;
+                        }
+                        &.close-ico {
+                            color: #e03131;
+                        }
+                    }
+                }
+            }
+            .plan-btns {
+                @include pos(rel, null);
+                z-index: 3;
+                @include margin-top(40);
+                @include padding-bottom(40);
+                .button {
+                    @include fontsize(18);
+                }
+            }
+            &:after {
+                // @include pos(ab, 100% null null null);
+                content: '';
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: $color02;
+                padding-bottom: 50%;
+                width: 57.7%;
+                z-index: 1;
+                -webkit-transform-origin: 0 0;
+                -ms-transform-origin: 0 0;
+                transform-origin: 0 0;
+                -webkit-transform: rotate(-30deg) skewX(30deg);
+                -ms-transform: rotate(-30deg) skewX(30deg);
+                transform: rotate(-30deg) skewX(30deg);
+                // @include translatepos(0, -50%);
+            }
+        }
+        &.b-plan {
+            .price-title {
+                background: url(#{$imgpath}pattern-1.jpg) repeat;
+                background-size: 70px;
+            }
+        }
+        &.s-plan {
+            .price-title {
+                background: url(#{$imgpath}pattern-2.jpg) repeat;
+                background-size: 60px;
+            }
+            .the-price {
+                background-color: #cccccc;
+            }
+            .plan-detail {
+                .plan-btns {
+                    .button {
+                        border-color: #cccccc;
+                        &:hover,
+                        &:focus {
+                            background-color: #cccccc;
+                            color: $color01;
+                            border-color: #cccccc;
+                        }
+                    }
+                }
+            }
+        }
+        &.p-plan {
+            .price-title {
+                background: url(#{$imgpath}pattern-3.jpg) repeat;
+                background-size: 110px;
+            }
+            .the-price {
+                background-color: #141414;
+                color: $color02;
+                span {
+                    color: $color02;
+                }
+                &:before {
+                    @include pos(ab, 100% null null -1px);
+                    content: '';
+                    border-left: 5px solid transparent;
+                    border-bottom: 5px solid transparent;
+                    border-right: 4px solid #141414;
+                    border-top: 5px solid #141414;
+                    //@include translatepos(0, -50%);
+                }
+                &:after {
+                    @include pos(ab, 100% -1px null null);
+                    content: '';
+                    border-left: 4px solid #141414;
+                    border-bottom: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 5px solid #141414;
+                    //@include translatepos(0, -50%);
+                }
+            }
+        }
+        &.c-plan {
+            .price-title {
+                background: url(#{$imgpath}pattern-4.jpg) no-repeat;
+                background-size: cover;
+            }
+            .the-price {
+                background-color: $themecolor;
+                color: $color02;
+                span {
+                    color: $color02;
+                }
+                &:before {
+                    @include pos(ab, 100% null null -1px);
+                    content: '';
+                    border-left: 5px solid transparent;
+                    border-bottom: 5px solid transparent;
+                    border-right: 4px solid #89251e;
+                    border-top: 5px solid #89251e;
+                    //@include translatepos(0, -50%);
+                }
+                &:after {
+                    @include pos(ab, 100% -1px null null);
+                    content: '';
+                    border-left: 4px solid #89251e;
+                    border-bottom: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 5px solid #89251e;
+                    //@include translatepos(0, -50%);
+                }
+            }
+        }
+    }
+}
+
+.payment-plan-section {
+    @include padding(40 0 50);
+    @include pos(rel, null);
+    min-height: 800px;
+    .payment-plan-heading {
+        background-color: $themecolor;
+        @include padding(25 40 25 80);
+        @include pos(rel, null);
+        h3 {
+            color: $color02;
+            @include fontsize(18);
+            text-transform: $uppercase;
+            @include josefinsanssemibold;
+            display: $inline;
+        }
+        .payment-plan-ico {
+            @include pos(ab, 0 null 0 0);
+            background-color: #e93e33;
+            text-align: center;
+            width: 60px;
+            @include padding(20 0);
+        }
+        .ex-ico {
+            float: right;
+            color: $color02;
+        }
+    }
+    .payment-plan-list {
+        .table-responsive {
+            border: 0 !important;
+        }
+        .list-table {
+            width: 100%;
+            thead {
+                tr {
+                    background-color: #292929;
+                    td {
+                        color: $color02;
+                        @include josefinsansregular;
+                        @include fontsize(18);
+                        @include padding(15);
+                        .list-help-ico {
+                            color: $themecolor;
+                            @include fontsize(20);
+                        }
+                    }
+                }
+            }
+            td.divider {
+                border: 0 !important;
+                padding: 0;
+            }
+            .inner-table {
+                @include border(1, solid, #d6d6d6);
+                width: 100%;
+                tbody {
+                    td {
+                        @include padding(20 15);
+                        @include border-bottom(1, solid, #d6d6d6);
+                        @include fontsize(16);
+                    }
+                    .check-ico {
+                        color: #3ec848;
+                    }
+                    .close-ico {
+                        color: #e03131;
+                    }
+                }
+            }
+        }
+    }
+}

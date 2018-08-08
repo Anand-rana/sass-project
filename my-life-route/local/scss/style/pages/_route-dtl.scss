@@ -1,0 +1,1348 @@
+.life-route-dtl-section {
+    @include padding(80 0 50);
+
+    .life-route-dtl__content {
+        &>.row {
+            @include margin-left(-30);
+
+            @include margin-right(-30);
+
+            &>[class^="col-"] {
+                @include padding-left(30);
+
+                @include padding-right(30);
+            }
+        }
+    }
+
+    .heading-block {
+        @include border-bottom(1, solid, lighten($theme, 30%));
+
+        @include padding-bottom(10);
+
+        .btn-opt {
+            text-align: right;
+        }
+
+        .breadcrumb-list {
+            @include margin-top(10);
+
+            ul {
+                li {
+                    display: $ib;
+
+                    span {
+                        @include fontsize(30);
+                        display: $b;
+                        text-transform: capitalize;
+                        font-weight: 400;
+                        color: $theme;
+
+                        @include padding(0 15);
+
+                        @include pos(rel, null);
+
+                        &:after {
+                            @include pos(ab, -2px -10px 0px null);
+
+                            content: ">";
+                        }
+
+                        &.active {
+                            color: lighten($theme, 20%);
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                        span {
+                            @include padding-left(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .life-route-dtl__box {
+        @include margin-top(80);
+
+        .l-route-dtl__box {
+            @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, 0.35));
+
+            overflow: hidden;
+
+            .user-p-info {
+                @include pos(rel, null);
+
+                text-align: center;
+
+                @include padding(30 0);
+
+                .user-img {
+                    width: 100px;
+                    height: 100px;
+                    overflow: hidden;
+
+                    @include circle;
+
+                    @include border(2, solid, $theme);
+
+                    margin: 0 auto 15px;
+
+                    img {
+                        min-height: 100px;
+                        object-fit: cover;
+                        max-width: 100%;
+                    }
+                }
+
+                .user-name {
+                    @include padding(0 25);
+                    @include margin-bottom(5);
+                    h3 {
+                        @include fontsize(18);
+
+                        color: $color-text-02;
+                        font-weight: 400;
+                    }
+                }
+
+                .user-profile {
+                    h4 {
+                        @include fontsize(14);
+
+                        color: $theme;
+                    }
+                }
+            }
+
+            .list-label {
+                @include fontsize(25);
+
+                line-height: 25px;
+                font-weight: 400;
+
+                @include pos(ab, 0 null null null);
+
+                @include padding(10);
+
+                z-index: 0;
+                color: $white;
+                text-transform: uppercase;
+
+                &:before {
+                    @include arrow(top-left, $color-list-01, 80px);
+
+                    content: "";
+
+                    @include pos(ab, 0 nul null 0);
+
+                    z-index: -1;
+                }
+            }
+
+            .user-dtl {
+                .user-dtl-info {
+                    @include padding(30 0 40);
+
+                    .r-title {
+                        @include fontsize(18);
+
+                        font-weight: 400;
+                        color: $color-text-02;
+                    }
+
+                    .user-dtl-info-list {
+                        @include margin-top(30);
+
+                        @include fontsize(15);
+
+                        .list-info {
+                            li {
+                                display: table;
+                                width: 100%;
+
+                                @include padding-bottom(20);
+
+                                @include pos(rel, null);
+
+                                font-weight: 300;
+                                color: $black;
+
+                                span {
+                                    display: table-cell;
+                                }
+
+                                .l-route-duration {
+                                    display: table-cell;
+
+                                    span {
+                                        display: $ib;
+                                    }
+                                }
+
+                                .l-label {
+                                    @include pos(rel, null);
+
+                                    @include padding-right(25); //color: $color-text-01;
+                                    width: 130px;
+                                    font-weight: 400;
+
+                                    &:after {
+                                        @include pos(ab, 0 25px 0 mull);
+
+                                        content: ":";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .user-des-txt {
+                    color: $color-text-02;
+
+                    @include padding-right(30);
+
+                    @include margin-top(20);
+
+                    @include padding-bottom(20);
+
+                    @include border-bottom(1, solid, #ededed);
+
+                    h3.title {
+                        @include fontsize(15);
+
+                        font-weight: 400;
+                        color: $color-text-02;
+
+                        @include padding-bottom(10);
+
+                        span {
+                            vertical-align: middle;
+                            display: $ib;
+                        }
+
+                        span.ico {
+                            @include padding-right(10);
+
+                            @include fontsize(18);
+                        }
+                    }
+
+                    .desc-txt {
+                        p {
+                            @include fontsize(15);
+                            text-align: justify;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+                .user-keywords {
+                    @include padding(20 0);
+
+                    color: $color-text-02;
+
+                    h3.title {
+                        @include fontsize(15);
+
+                        font-weight: 400;
+                        color: $color-text-02;
+
+                        @include padding-bottom(10);
+
+                        span {
+                            vertical-align: middle;
+                            display: $ib;
+                        }
+
+                        span.ico {
+                            @include padding-right(10);
+
+                            @include fontsize(18);
+                        }
+                    }
+
+                    .keywords-list {
+                        p {
+                            @include fontsize(15);
+
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+
+            .r-bottom-block {
+                @include padding(15 0);
+
+                background-color: $color-list-b-01;
+
+                ul {
+                    display: table;
+                    width: 100%;
+
+                    li {
+                        float: left;
+                        width: 20%;
+                        text-align: center;
+
+                        .icon {
+                            @include fontsize(25);
+
+                            @include margin-right(15);
+                        }
+
+                        .__label {
+                            font-weight: 400;
+
+                            @include margin-right(2);
+                        }
+
+                        span {
+                            display: $ib;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+
+                .t-videos {
+                    font-weight: 400;
+
+                    @include fontsize(18);
+
+                    display: $ib;
+
+                    span {
+                        display: $ib;
+                        vertical-align: middle;
+                    }
+
+                    .icon {
+                        @include fontsize(25);
+
+                        @include margin-right(5);
+                    }
+                }
+
+                .t-img {
+                    display: $ib;
+                    font-weight: 400;
+
+                    @include margin-left(18);
+
+                    @include fontsize(18);
+
+                    span {
+                        display: $ib;
+                        vertical-align: middle;
+                    }
+
+                    .icon {
+                        @include fontsize(25);
+
+                        @include margin-right(5);
+                    }
+                }
+
+                .t-likes {
+                    vertical-align: middle;
+
+                    .icon {
+                        color: #52a0c0;
+                    }
+
+                    span
+                    {
+                        color: $color-text-01;
+                    }
+                }
+
+                .t-coments {
+                    .icon {
+                        color: #e55657;
+                    }
+                }
+
+                .t-follower {
+                    .icon {
+                        color: #e99e61;
+                    }
+                }
+
+                .t-share {
+                    .icon {
+                        color: #51a851;
+                    }
+                }
+            }
+        }
+    }
+
+    .life-route-steps-block {
+        @include padding(60 0);
+        @include margin-top(60);
+        @include pos(rel, null);
+
+        &:after {
+            @include pos(ab, 0 null 0 50%);
+
+            content: "";
+            width: 6px;
+            background-color: #ededed;
+
+            @include translatepos(-50%, 0%);
+
+            z-index: -1;
+        }
+
+        .life-route-steps-block__inner {
+            @include pos(rel, null);
+
+            &:before {
+                @include pos(ab, -70px null null 50%);
+
+                width: 17px;
+                height: 17px;
+
+                @include circle;
+
+                background-color: #ededed;
+                content: "";
+
+                @include translatepos(-50%, 0%);
+            }
+
+            &:after {
+                @include pos(ab, -null null -70px 50%);
+
+                width: 17px;
+                height: 17px;
+
+                @include circle;
+
+                background-color: #ededed;
+                content: "";
+
+                @include translatepos(-50%, 0%);
+            }
+
+            .life-route-steps-list {
+                .m-space-left {
+                    @include margin-left(50);
+                }
+
+                .m-space-right {
+                    @include margin-right(50);
+                }
+
+                &>ul {
+                    counter-reset: mega-step, mini-step;
+
+                    &>li {
+                        @include pos(rel, null);
+
+                        @include padding-bottom(70);
+
+                        counter-increment: mega-step;
+
+                        &:after {
+                            width: 70px;
+                            height: 70px;
+
+                            @include circle;
+
+                            background-color: $theme;
+
+                            @include box-shadow(inset 0 3px 3px 1px rgba(5, 136, 176, 0.76));
+
+                            color: $white;
+
+                            @include fontsize(16);
+
+                            text-transform: uppercase;
+                            font-weight: 400;
+
+                            @include pos(ab, 100px null null 50%);
+
+                            content: "Step \a" counter(mega-step, decimal);
+                            white-space: pre;
+                            display: block;
+
+                            @include padding(15 0);
+
+                            line-height: 20px;
+                            text-align: center;
+
+                            @include translatepos(-50%, 0%);
+
+                            z-index: 1;
+                        }
+
+                        &:before {
+                            width: 80px;
+                            height: 80px;
+
+                            @include circle;
+
+                            background-color: #eeeeee;
+                            color: $white;
+
+                            @include fontsize(16);
+
+                            text-transform: uppercase;
+                            font-weight: 400;
+
+                            @include pos(ab, 95px null null 50%);
+
+                            content: '';
+
+                            @include translatepos(-50%, 0%);
+
+                            z-index: 1;
+                        }
+                    }
+                }
+
+                .l-route-info-box {
+                    @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, 0.35));
+
+                    .header-block {
+                        background-color: $theme; //background-color: $color-list-01;
+                        @include padding(20 30);
+
+                        h3 {
+                            @include fontsize(20);
+
+                            color: $white;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .l-route-info__list {
+                        @include padding(40 40 40 50);
+
+                        background-color: $color-bg-02;
+                        color: $color-text-02;
+
+                        &>ul {
+                            &>li {
+                                @include padding-bottom(40);
+
+                                @include padding-left(50);
+
+                                @include pos(rel, null);
+
+                                &:after {
+                                    @include pos(ab, 0px null 0px 0px);
+
+                                    content: "";
+                                    width: 6px;
+                                    background-color: #ededed;
+                                }
+
+                                h4 {
+                                    @include fontsize(18);
+
+                                    font-weight: 400;
+                                }
+
+                                p {
+                                    text-align: justify;
+                                }
+
+                                &:last-child {
+                                    &:after {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .list-ico {
+                            width: 34px;
+                            color: $white;
+                            text-align: center;
+
+                            @include padding(0 4);
+
+                            display: $b;
+
+                            @include pos(ab, 0 null null -14px);
+
+                            z-index: 1;
+
+                            &:before {
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 0 17px 10px 17px;
+                                border-color: transparent transparent $theme transparent;
+
+                                @include pos(ab, null 0 100% 0);
+
+                                content: "";
+                            }
+
+                            &:after {
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 10px 17px 0 17px;
+                                border-color: $theme transparent transparent transparent;
+
+                                @include pos(ab, 100% 0 null 0);
+
+                                content: "";
+                            }
+
+                            &.c-1 {
+                                background-color: $color-list-01;
+
+                                &:before {
+                                    border-color: transparent transparent $color-list-01 transparent;
+                                }
+
+                                &:after {
+                                    border-color: $color-list-01 transparent transparent transparent;
+                                }
+                            }
+
+                            &.c-2 {
+                                background-color: $color-list-02;
+
+                                &:before {
+                                    border-color: transparent transparent $color-list-02 transparent;
+                                }
+
+                                &:after {
+                                    border-color: $color-list-02 transparent transparent transparent;
+                                }
+                            }
+
+                            &.c-3 {
+                                background-color: $color-list-03;
+
+                                &:before {
+                                    border-color: transparent transparent $color-list-03 transparent;
+                                }
+
+                                &:after {
+                                    border-color: $color-list-03 transparent transparent transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .l-route-files-box {
+                    @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, 0.35));
+
+                    @include padding(40 40 40 50);
+
+                    background-color: $color-bg-02;
+
+                    .l-route-files__list {
+                        color: $color-text-02;
+
+                        &>ul {
+                            &>li {
+                                @include padding-bottom(40);
+
+                                @include padding-left(50);
+
+                                @include pos(rel, null);
+
+                                &:after {
+                                    @include pos(ab, 0px null 0px 0px);
+
+                                    content: "";
+                                    width: 6px;
+                                    background-color: #ededed;
+                                }
+
+                                &.last-block {
+                                    &:after {
+                                        display: none;
+                                    }
+                                }
+
+                                h4 {
+                                    @include fontsize(16);
+
+                                    font-weight: 400;
+
+                                    @include padding-bottom(15);
+                                }
+
+                                .vimeoFrame {
+                                    padding: 0 !important;
+                                    position: static !important;
+                                }
+
+                                figure {
+                                    @include margin(0);
+
+                                    overflow: hidden;
+
+                                    @include fluid-ratio(16 9, img);
+
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+
+                                figcaption {
+                                    @include padding(10 0 15);
+
+                                    h5 {
+                                        @include fontsize(12);
+
+                                        font-weight: 400;
+                                        letter-spacing: 2px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .list-ico {
+                            width: 34px;
+                            color: $white;
+                            text-align: center;
+
+                            @include padding(4);
+
+                            @include fontsize(12);
+
+                            display: $b;
+
+                            @include pos(ab, 0 null null -14px);
+
+                            z-index: 1;
+
+                            &:before {
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 0 17px 10px 17px;
+                                border-color: transparent transparent $theme transparent;
+
+                                @include pos(ab, null 0 100% 0);
+
+                                content: "";
+                            }
+
+                            &:after {
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 10px 17px 0 17px;
+                                border-color: $theme transparent transparent transparent;
+
+                                @include pos(ab, 100% 0 null 0);
+
+                                content: "";
+                            }
+
+                            &.c-1 {
+                                background-color: #bd9e32;
+
+                                &:before {
+                                    border-color: transparent transparent #bd9e32 transparent;
+                                }
+
+                                &:after {
+                                    border-color: #bd9e32 transparent transparent transparent;
+                                }
+                            }
+
+                            &.c-2 {
+                                background-color: #f75742;
+
+                                &:before {
+                                    border-color: transparent transparent #f75742 transparent;
+                                }
+
+                                &:after {
+                                    border-color: #f75742 transparent transparent transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.life-route-dtl__side-block {
+    @include margin-top(80);
+
+    .user-similar-products {
+        @include box-shadow(0 4px 5px rgba(0, 0, 0, 0.32));
+
+        @include border-round(0 0 4 4);
+
+        @include margin-bottom(30);
+
+        .u-similar-header {
+            background-color: $color-list-01;
+
+            @include padding(15 10);
+
+            text-align: center;
+
+            @include border-round(4 4 0 0);
+
+            h3 {
+                @include fontsize(16);
+
+                color: $white;
+                font-weight: 400;
+            }
+        }
+
+        .u-similar-list {
+            @include padding(20 25);
+
+            ul {
+                li {
+                    @include fontsize(11);
+
+                    @include padding-left(20);
+
+                    font-weight: 300;
+                    color: $black;
+
+                    @include padding-bottom(20);
+
+                    @include pos(rel, null);
+
+                    &:after {
+                        @include pos(ab, 5px null 0 0);
+
+                        width: 1px;
+                        height: 100%;
+                        content: "";
+                        background-color: #37a789;
+                    }
+
+                    &:before {
+                        width: 5px;
+                        height: 5px;
+
+                        @include circle;
+
+                        background-color: #37a789;
+
+                        @include pos(ab, 5px null null -2px);
+
+                        content: "";
+                    }
+
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+
+                    &>a {
+                        color: #37a789;
+
+                        &:hover,
+                        &:focus {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .recomend-block {
+        @include padding-top(20);
+
+        h3 {
+            @include fontsize(14);
+
+            font-weight: 300;
+            color: $black;
+
+            @include padding-bottom(15);
+        }
+
+        .recomend-slider {
+            figure {
+                @include margin(0);
+
+                @include pos(rel, null);
+
+                img {
+                    max-width: 100%;
+
+                    @include border-round(4);
+                }
+
+                figcaption {
+                    @include pos(ab, null 0 0 0);
+
+                    @include padding(12 15);
+
+                    background-color: rgba($black, 0.5);
+
+                    @include border-round(0 0 4 4);
+
+                    z-index: 10;
+
+                    h4 {
+                        @include fontsize(15);
+
+                        color: $white;
+                    }
+                }
+            }
+
+            .owl-dots {
+                text-align: center;
+
+                @include margin-top(12);
+
+                .owl-dot {
+                    span {
+                        background: transparent;
+
+                        @include border(1, solid, $black);
+                    }
+
+                    &.active {
+                        span {
+                            background: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.route-comments-block {
+    @include margin-top(60);
+
+    .route-comments-block__info {
+        @include box-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+
+        @include border(1, solid, rgba(0, 0, 0, 0.21));
+
+        @include padding(15 30);
+
+        .usr-pic {
+            text-align: center;
+            img {
+                width: 108px;
+                height: 108px;
+                max-width: 100%;
+                object-fit: cover;
+
+                @include circle;
+
+                @include border(2, solid, $theme);
+            }
+        }
+
+        .usr-name {
+            text-align: center;
+
+            h4 {
+                @include fontsize(17);
+
+                font-weight: 400;
+                color: $color-text-02;
+
+                @include padding-top(10);
+            }
+        }
+
+        .list-info {
+            display: table;
+            width: 100%;
+
+            @include margin-top(25);
+
+            &>ul {
+                display: table-row;
+
+                &>li {
+                    display: table-cell;
+                    width: 25%;
+
+                    @include padding(0 10);
+
+                    font-weight: 500;
+
+                    @include fontsize(17);
+
+                    text-align: center;
+
+                    @include border-left(1, solid, #e0e0e0);
+
+                    @include border-right(1, solid, #e0e0e0);
+
+                    margin-left: -1px;
+
+                    &>span {
+                        display: $b;
+
+                        @include fontsize(28);
+
+                        font-weight: 300;
+                        color: $theme;
+                        text-transform: uppercase;
+                    }
+
+                    &:first-child {
+                        border-left: 0;
+                    }
+
+                    &:last-child {
+                        border-right: 0;
+                    }
+
+                    .button-grey {
+                        &:disabled {
+                            background-color: darken($white, 20%) !important;
+                            border-color: darken($white, 20%) !important;
+                            color: darken($white, 50%) !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.oth-usr {
+            .list-info {
+                &>ul {
+                    &>li {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+
+    .route-comments__list {
+        @include margin-top(60);
+
+        @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, 0.35));
+
+        .header-block {
+            //background-color: $theme;
+            background-color: $color-list-01;
+
+            @include padding(20 25);
+
+            color: $white;
+
+            @include pos(rel, null);
+
+            &:before {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 17px 17px 17px;
+                border-color: transparent transparent $color-list-01 transparent;
+
+                @include pos(ab, null 0 100% 40px);
+
+                content: "";
+            }
+
+            h4 {
+                font-weight: 400;
+
+                @include fontsize(20);
+            }
+        }
+
+        .route-comments__listdata {
+            @include padding(20 25);
+
+            .comment-txt-field {
+                @include margin-bottom(20);
+
+                .usr-pic {
+                    img {
+                        width: 55px;
+                        height: 55px;
+                        object-fit: cover;
+
+                        @include circle;
+                    }
+                }
+
+                .media {
+                    .media-left {
+                        @include padding-right(15);
+                    }
+                }
+
+                input[type="text"] {
+                    width: 100%;
+                    height: 50px;
+
+                    @include border(1, solid, $color-list-01);
+
+                    @include border-round(4);
+
+                    @include padding(0 15);
+
+                    color: $color-text-02;
+
+                    @include fontsize(15);
+                }
+            }
+        }
+
+        .comment-box {
+            @include padding(25 0 0);
+
+            &>.media {
+                &>.media-left {
+                    @include padding-right(15);
+
+                    .usr-pic {
+                        img {
+                            width: 55px;
+                            height: 55px;
+                            object-fit: cover;
+
+                            @include circle;
+                        }
+                    }
+                }
+
+                .comment-msg {
+                    @include fontsize(14);
+
+                    color: $color-text-02;
+
+                    @include border-bottom(1, solid, #f1f1f1);
+
+                    @include padding-bottom(20);
+
+                    .comment-msg__top {
+                        display: table;
+                        width: 100%;
+
+                        @include padding-bottom(10);
+
+                        .comment-mg__usr-info {
+                            float: left;
+
+                            .usr-name {
+                                h4 {
+                                    @include fontsize(16);
+
+                                    font-weight: 500;
+                                    color: $color-text-02;
+                                }
+                            }
+
+                            .usr-profile {
+                                @include padding-top(5);
+
+                                h4 {
+                                    @include fontsize(13);
+
+                                    font-weight: 100;
+                                    color: $color-text-01;
+                                }
+                            }
+                        }
+
+                        .comment-mg__usr__opt {
+                            float: right;
+                            color: $color-text-02;
+
+                            .ico {
+                                @include padding-right(15);
+
+                                display: $ib;
+                                cursor: pointer;
+
+                                @include pos(rel, null);
+
+                                .drop-box {
+                                    @include pos(ab, 15px 100% null null);
+
+                                    background-color: $white;
+
+                                    @include box-shadow(0 0 16px rgba(0, 0, 0, 0.11));
+
+                                    span {
+                                        display: $b;
+
+                                        @include padding(15 25);
+
+                                        @include fontsize(18);
+
+                                        font-weight: 500;
+                                        color: $color-text-02;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+
+                            span.time {
+                                display: $ib;
+
+                                @include padding-left(15);
+                            }
+                        }
+                    }
+
+                    .comment-msg__opt {
+                        @include padding-top(10);
+
+                        &>ul {
+                            &>li {
+                                display: $ib;
+
+                                @include padding(0 10);
+
+                                span {
+                                    color: $color-list-01;
+                                    font-weight: 500;
+
+                                    @include fontsize(13);
+
+                                    cursor: pointer;
+                                }
+
+                                .t-like {
+                                    @include fontsize(16);
+
+                                    [class*="icon-"] {
+                                        @include padding-right(5);
+                                    }
+                                }
+
+                                &:first-child {
+                                    @include padding-left(0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .comment-reply-msg {
+                @include padding(20 0 30);
+
+                @include border-bottom(1, solid, #f1f1f1);
+
+                .r-usr-pic {
+                    img {
+                        width: 45px;
+                        height: 45px;
+                        object-fit: cover;
+
+                        @include circle;
+                    }
+                }
+
+                .comment-msg {
+                    border: 0;
+                }
+
+                .comment-txt-field {
+                    @include margin-bottom(0);
+
+                    .usr-pic {
+                        img {
+                            width: 45px;
+                            height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.c-2 {
+        .route-comments__list {
+            .header-block {
+                background-color: $color-list-02;
+
+                &:before {
+                    border-color: transparent transparent $color-list-02 transparent;
+                }
+            }
+
+            .route-comments__listdata {
+                .comment-txt-field {
+                    input[type="text"] {
+                        border-color: $color-list-02;
+                    }
+                }
+            }
+
+            .comment-box {
+                &>.media {
+                    .comment-msg {
+                        .comment-msg__opt {
+                            &>ul {
+                                &>li {
+                                    span {
+                                        color: $color-text-10;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &.c-3 {
+        .route-comments__list {
+            .header-block {
+                background-color: $color-list-03;
+
+                &:before {
+                    border-color: transparent transparent $color-list-03 transparent;
+                }
+            }
+
+            .route-comments__listdata {
+                .comment-txt-field {
+                    input[type="text"] {
+                        border-color: $color-list-03;
+                    }
+                }
+            }
+
+            .comment-box {
+                &>.media {
+                    .comment-msg {
+                        .comment-msg__opt {
+                            &>ul {
+                                &>li {
+                                    span {
+                                        color: $color-text-09;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

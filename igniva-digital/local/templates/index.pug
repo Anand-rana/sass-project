@@ -1,0 +1,282 @@
+doctype html
+html(lang="en")
+	include _partials/_head.pug
+	body
+		
+		.layer-backdrop
+
+
+		.main-container
+			//banner-section
+			section(class="banner-section slide" data-section-name="home")
+				//header-section
+				header(id="header")
+					.top-header
+						.container
+							.row.align-items-center
+								.col-md-3
+									.logo-block
+										a(href="index.html")
+											img(src="images/logo.svg" alt="logo" class="img-fluid logo-white")
+											img(src="images/logo-red.svg" alt="logo" class="img-fluid logo-red")
+									div(class="hamburger hamburger--spin  nav-icon")
+										.hamburger-box
+											.hamburger-inner
+								.col-md-9
+									.nav-section
+										ul
+											li
+												a(href="#about") About us
+											li
+												a(href="#work") Our work
+											li
+												a(href="#services") Our services
+											li
+												a(href="#contact") Contact
+											li
+												a(href="insights.html") Insights
+											
+											
+				.container
+					.inner-block
+						.banner-caption
+							h1
+								span We
+								span(class="type-it") DO
+									br
+									|Design
+									br
+									|market
+									br
+									|heart
+									br
+									|grow
+									br
+									|develop
+									br
+									|create
+									br
+									|dream
+									br
+									|sweat
+									br
+									|want
+									br
+									|love
+									br
+									|build
+									br
+									|worship
+									br
+									|promote
+									br
+									|demand
+									br
+									|like
+									br
+									|make
+									br
+									|hype!!!
+								span Apps
+						a(href="#about").scroll-arrow
+							span
+								i.icon-down-arrow
+			//about-section
+			section(class="about-section slide"  id ="about" data-section-name="about")
+				.container
+					.inner-block
+						.about-content
+							.txt-block
+								h2(class="type-about") Igniva is a company based in Croydon that makes &amp; markets apps &amp; websites.
+			//work-section
+			section(class="portfolio-section" id="work")
+				.portfolio-section-block
+					.container
+						.inner__container
+							.profolio-list
+								h3.title(class="type-heading-one") Our Work
+								.p-data-container
+									.p-data-row.active(id="post-0")
+										.p-content-list
+													h3 App name
+													.p-content-txt
+														p This is a brief description of our current portfolio highlights.
+														p Each phone displays an animated walkthrough of the application, similarly to how the website currently presents our live projects. At least 3-4 projects should display here.
+														
+													h4 Marketing stats
+													.d-btn-block
+														ul
+															li
+																a(href="#")
+																	img(src="images/iphone-appstore.png" alt="img")
+															li
+																a(href="#")
+																	img(src="images/google-playstore.png" alt="img")
+
+										
+									.p-data-row(id="post-1")
+										.p-content-list
+													h3 App name one
+													.p-content-txt
+														p This is a brief description of our current portfolio highlights.
+														p Each phone displays an animated walkthrough of the application, similarly to how the website currently presents our live projects. At least 3-4 projects should display here.
+														
+													h4 Marketing stats
+													.d-btn-block
+														ul
+															li
+																a(href="#")
+																	img(src="images/iphone-appstore.png" alt="img")
+															li
+																a(href="#")
+																	img(src="images/google-playstore.png" alt="img")
+										
+									.p-data-row(id="post-2")
+										.p-content-list
+													h3 App name three
+													.p-content-txt
+														p This is a brief description of our current portfolio highlights.
+														p Each phone displays an animated walkthrough of the application, similarly to how the website currently presents our live projects. At least 3-4 projects should display here.
+														p Each phone displays an animated walkthrough of the application, similarly to how the website currently presents our live projects. At least 3-4 projects should display here.
+													h4 Marketing stats
+													.d-btn-block
+														ul
+															li
+																a(href="#")
+																	img(src="images/iphone-appstore.png" alt="img")
+															li
+																a(href="#")
+																	img(src="images/google-playstore.png" alt="img")
+									.p-data-row(id="post-3")
+										.p-content-list
+													h3 App name four
+													.p-content-txt
+														p This is a brief description of our current portfolio highlights.
+														
+														p Each phone displays an animated walkthrough of the application, similarly to how the website currently presents our live projects. At least 3-4 projects should display here.
+													h4 Marketing stats
+													.d-btn-block
+														ul
+															li
+																a(href="#")
+																	img(src="images/iphone-appstore.png" alt="img")
+															li
+																a(href="#")
+																	img(src="images/google-playstore.png" alt="img")
+									.profolio-app-list
+										.app-walkthrough-list.active(id="post-img-0")
+											img(src="images/Igniva-site-filler-iPhone.gif" alt="img")
+										.app-walkthrough-list(id="post-img-1")
+											img(src="images/Igniva-site-filler-iPhone.gif" alt="img")
+										.app-walkthrough-list(id="post-img-2")
+											img(src="images/Igniva-site-filler-iPhone.gif" alt="img")
+										.app-walkthrough-list(id="post-img-3")
+											img(src="images/Igniva-site-filler-iPhone.gif" alt="img")
+										.phone-bg
+												img(src="images/phone-bg.png" alt="img")
+					.indicators
+						ul
+							li(id="slide-0" data-id="0" class="active")
+								span
+							li(id="slide-1" data-id="1")
+								span
+							li(id="slide-2" data-id="2")
+								span
+							li(id="slide-3" data-id="3" )
+								span
+
+
+			//service-section
+			section(class="service-section slide" id="services" data-section-name="service")
+				.container
+					.inner-block
+						h3(class="type-heading-two") Our services
+						.service-list-block
+							.row
+								.col-md-6
+									.s-box(class="wow fadeInUp" data-wow-delay="0.1s")
+										figure
+											a(href="desgin-developement.html")
+												img(src="images/Igniva-site-filler-1x1.gif" class="img-fluid" alt="img")
+								.col-md-6
+									.s-box(class="wow fadeInUp" data-wow-delay="0.2s")
+										figure
+											a(href="desgin-developement.html")
+												img(src="images/Igniva-site-filler-1x1.gif" class="img-fluid" alt="img")
+								.col-md-6
+									.s-box(class="wow fadeInUp" data-wow-delay="0.3s")
+										figure
+											a(href="#")
+												img(src="images/Igniva-site-filler-3x2.gif" class="img-fluid" alt="img")
+								.col-md-6
+									.s-box(class="wow fadeInUp" data-wow-delay="0.4s")
+										figure
+											a(href="#")
+												img(src="images/Igniva-site-filler-3x2.gif" class="img-fluid" alt="img")
+			
+
+			//contact-section
+			section(class="contact-section slide" id="contact" data-section-name="contact")
+				.container
+					.inner-block
+						h2(class="wow fadeInUp" data-wow-delay="0.1s") Contact
+						.contact-form-block
+							.field-group
+								.row
+									.col-md-6
+										.field-row-left
+											.c-field(class="wow fadeIn" data-wow-delay="0.2s")
+												input(type="text" placeholder="Name" class="c-field-control")
+											.c-field(class="wow fadeIn" data-wow-delay="0.2s")
+												input(type="text" placeholder="Email" class="c-field-control")
+									.col-md-6
+										.field-row-right
+											.c-field(class="wow fadeIn" data-wow-delay="0.2s")
+												input(type="text" placeholder="Company (optional)" class="c-field-control")
+											.c-field(class="wow fadeIn" data-wow-delay="0.2s")
+												input(type="text" placeholder="Phone (optional)" class="c-field-control")
+									.col-md-12
+										.help-field(class="wow fadeIn" data-wow-delay="0.2s")
+											.c-field
+												textarea( rows="1" placeholder="How can we help?" class="c-field-control js-elasticArea")
+								.btn-field(class="wow fadeIn" data-wow-delay="0.3s")
+									button.s-btn Send ›
+			//footer-section
+			footer
+				.container
+					.inner-footer
+						.row
+							.col-md-6
+								.address-block(class="wow fadeIn")
+									p london@ignivadigital.com
+									p +44 (0)203 769 0628
+									.margin-top-2x
+										p 11th Floor, One Croydon, Croydon, London CR0 0XT
+							.col-md-6
+								.social-links(class="wow fadeIn")
+									ul
+										li
+											a(href="#")
+												i.icon-instagram
+										li
+											a(href="#")
+												i.icon-facebook
+										li
+											a(href="#")
+												i.icon-linked-in
+										li
+											a(href="#")
+												i.icon-twitter
+								.footer-links(class="wow fadeIn")
+									ul
+										li
+											a(href="#") ©2017 Igniva Digital  
+										li
+											a(href="#") Privacy policy
+										li
+											a(href="#") Cookies
+
+
+
+
+	include _partials/_footer.pug

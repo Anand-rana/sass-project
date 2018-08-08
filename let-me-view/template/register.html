@@ -1,0 +1,64 @@
+<!--login-box-->
+<div id="register-modal">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()"><i class="icon-cancel"></i></button>
+    <h2 class="modal-title" id="myModalLabel">Create your account</h2>
+  </div>
+  <div class="modal-body">
+    
+    <div class="sign_options">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 text-center"><h4>Sign up with</h4></div>
+        <div class="col-md-6 col-sm-6 text-center">
+          
+          <a href="#" class="facebook_icon"><i class="icon-facebook-o"></i></a>
+          <a href="#" class="linkdin_icon"><i class="icon-linkedin-o"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="speartor_line">
+      <span>or</span>
+    </div>
+    <div class="form">
+      <form>
+        <div class="field-group name-group">
+          <div class="name-group__field">
+            <div class="field">
+              <input type="text" placeholder="First name"/>
+              <span class="bg-focus"></span>
+            </div>
+          </div>
+          <div class="name-group__lastfield">
+            <div class="field">
+              <input type="text" placeholder="Last name"/>
+              <span class="bg-focus"></span>
+            </div>
+          </div>
+          <div class="msg-error">Your name required</div>
+        </div>
+        <div class="field-group"><div class="email_field field"><input type="text" placeholder="Email"/><span class="bg-focus"></span></div>
+        
+      </div>
+      <div class="field-group"><div class="password_field field"><input type="text" placeholder="Password"/><span class="bg-focus"></span></div></div>
+    </form>
+  </div>
+</div>
+<div class="modal_footer">
+  <div class="row">
+    <div class="col-md-8 col-sm-8">
+      <div class="check-btn">
+        <div class="fh-checkbox" >
+          <input type="checkbox" id="rem">
+          <label for="rem">I ‘d like to receive coupons and newsletters</label>
+        </div>
+      </div>
+      <div class="margin-top-4x ">
+        <a ui-sref="agent" ng-click="cancel()" class="text-blue o-s-bold"><i class="icon-arrow-left margin-right-2x "></i> <u>I ‘m an Agent</u> </a>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 text-center">
+      <button class="button button-uppercase button-width-large">Submit</button>
+      <span class="block margin-top-2x sm-txt">Have an account? <a href="#" class="text-black"><u>Sign in</u></a></span>
+    </div>
+  </div>
+</div>

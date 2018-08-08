@@ -1,0 +1,88 @@
+.page-conatiner
+	.profile-section.s-ov
+		.container
+			.main-heading
+				h2.title Profile preview
+			.profile-block
+				.profile-block-dtl
+					.row
+						.col-md-4.col-sm-5
+							.p-user-block
+								.p-img
+									img(src="images/profile.jpg" alt="img" class="img-responsive")
+								.p-user-info-block
+									.p-trophies
+										h3.title 
+											span Trophies
+										.p-trophies-list
+											ul
+												li
+													img(src="images/trophy-1.png" alt="img")
+												li
+													img(src="images/trophy-2.png" alt="img")
+												li
+													img(src="images/trophy-3.png" alt="img")
+												li
+													img(src="images/trophy-2.png" alt="img")
+												li
+													img(src="images/trophy-1.png" alt="img")
+												li
+													img(src="images/trophy-3.png" alt="img")
+									
+
+						.col-md-8.col-sm-7
+							.p-personal-info-block
+								.row
+									.col-md-12
+										.user-name 
+											h3 John smith
+										.user-profile
+											h4 Product Designer
+										
+								
+								.user-rating-cotainer
+											h3 Rating
+											.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-1")
+								.p-user-opt
+									button.button.button-blue-dark.button-font-open.button-uppercase.button-font-small.margin-right-4x.margin-bottom-2x  Review this user
+									button.button.button-border.button-blue-dark.button-font-open.button-uppercase.button-font-small.button-width-large  subscribe
+								.p-tabs
+									uib-tabset
+										uib-tab(index="0" heading="Personal Information")
+											.p-tab-cotent
+												.up-info
+													.up-info-row
+														h3 About
+														.up-row
+															.t-cell.label-name
+																label Bio :
+															.t-cell
+																p Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quamnunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec.
+													.up-info-row
+														h3 Contact Information
+														.up-row
+															.t-cell.label-name
+																label Address :
+															.t-cell
+																p 525E 68th Street
+																	br
+																	|New York, NY 10651-78 156-187-60
+														.up-row
+															.t-cell.label-name
+																label E-mail :
+															.t-cell
+																p.text-blue Dummy@gmail.commodo
+														
+													
+														
+
+
+				.p-rev-cotainer
+					h2.title
+						span Recent Reviews
+					.review-block
+						.review-list
+							h3.no-rev-msg No reviews yet
+
+			

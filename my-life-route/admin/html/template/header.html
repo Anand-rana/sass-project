@@ -1,0 +1,124 @@
+
+<header>
+  <div class="header-block">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 col-sm-4"><a class="logo" data-ui-sref="dashboard-home"><img class="img-responsive" src="images/logo.jpg" alt="img"/></a></div>
+        <div class="col-md-4 col-sm-4 col-md-push-4 col-sm-push-4">
+          <div class="nav-section">
+            <div class="main-user-nav">
+              <ul>
+                <li>
+                  <div class="notification-btn"><span class="icon pointer" ng-click="isnotificationCollapsed = !isnotificationCollapsed;isNavCollapsed = false;" ng-class="{'active':isnotificationCollapsed}"><i class="icon-notification"></i><span class="t-no">8</span></span></div>
+                  <div class="notification-drop-down-box" uib-collapse="!isnotificationCollapsed">
+                    <div class="notification-drop-down-box-cotainer">
+                      <div class="notification-drop-header">
+                        <h4>Notifications (22)</h4><span class="close-btn visible-xs" ng-click="isnotificationCollapsed = false"><i class="icon-close"></i></span>
+                      </div>
+                      <div class="notification-list-drop" ng-nicescroll="ng-nicescroll" nice-option="{cursorcolor: '#2abeeb',cursorwidth:'6px',background:'#c4c4c4',cursorborder:'1px solid #c4c4c4',cursorborderradius:'5px',cursorfixedheight:70,touchbehavior:true}" nice-scroll-top-end="topEndComplete()" nice-scroll-end="endScroll()">
+                        <ul>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                        </ul>
+                      </div>
+                      <div class="notification-drop-down-footer"><a data-ui-sref="dashboard-notification">See All</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="user-drop-down pointer" ng-click="isNavCollapsed = !isNavCollapsed;isnotificationCollapsed = false;"><img src="images/profile-2.jpg" alt="img"/><span class="user-name hidden-xs hidden-sm hidden-md">Mahmood Choudhury</span><span class="caret" ng-class="{'open':isNavCollapsed}"></span></div>
+                  <div class="user-drop-down-box" uib-collapse="!isNavCollapsed">
+                    <div class="user-opt-menu">
+                      <ul>
+                        <li><a data-ui-sref="dashboard-change-password">Change Password</a></li>
+                        <li><a href="#">Logout</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-md-pull-4 col-sm-pull-4">
+          <h4 class="page-title">{{globalTitle}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

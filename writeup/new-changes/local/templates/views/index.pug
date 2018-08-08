@@ -1,0 +1,191 @@
+.service-section
+	.service-inner
+		.container
+			.service-block
+				.row
+					.col-md-4.col-sm-4
+						.service-block-box
+							span.s-ico
+								i.icon-magnifier-o
+							h2.title SEARCH
+							p Search for and discover companies, products and people within the fitness industry
+
+					.col-md-4.col-sm-4
+						.service-block-box
+							span.s-ico
+								i.icon-user-rating
+							h2.title Rating and Reviews
+							p Read our ratings and reviews on products, companies and services in the fitness industry
+					.col-md-4.col-sm-4
+						.service-block-box
+							span.s-ico
+								i.icon-cup
+							h2.title Participate In Competitions
+							p Enter competitions hosted by our partners to win their services and products. Terms and Conditions apply.
+.r-rev-section.s-ov
+	.container
+		.main-heading
+			h2.title Recent Reviews
+		.r-rev-list-block
+			.row
+				.col-md-6
+					.rv-box
+						.r-cell.rv-user-cell
+							.rv-user-dtl
+								
+								.rv-user-pic
+										img(src="images/user.jpg" alt="img")
+								
+								.rv-user-txt
+										h3.title John smith
+										p
+											span.fw200 Praesent blandit turpis
+										p Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis 
+										a(ui-sref="read-review" class="more-link") Read more ....
+								.r-rating-container
+									.rating-container
+										span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-1")
+									.like-container
+										span.txt 390
+										span.like-icon
+											i.icon-heart-o
+						.r-cell.rv-img-box
+							figure
+								img(src="images/rv.jpg" alt="jpg")
+
+				.col-md-6
+					.rv-box
+						.r-cell.rv-user-cell
+							.rv-user-dtl
+								
+								.rv-user-pic
+										img(src="images/user.jpg" alt="img")
+								
+								.rv-user-txt
+										h3.title John smith
+										p
+											span.fw200 Praesent blandit turpis
+										p Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis 
+										a(ui-sref="read-review" class="more-link") Read more ....
+								.r-rating-container
+									.rating-container
+										span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-2")
+									.like-container
+										span.txt 390
+										span.like-icon
+											i.icon-heart-o
+						.r-cell.rv-img-box
+							figure
+								img(src="images/rv.jpg" alt="jpg")
+				.col-md-6
+					.rv-box
+						.r-cell.rv-user-cell
+							.rv-user-dtl
+								
+								.rv-user-pic
+										img(src="images/user.jpg" alt="img")
+								
+								.rv-user-txt
+										h3.title John smith
+										p
+											span.fw200 Praesent blandit turpis
+										p Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis 
+										a(ui-sref="read-review" class="more-link") Read more ....
+								.r-rating-container
+									.rating-container
+										span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-3")
+									.like-container
+										span.txt 390
+										span.like-icon.liked
+											i.icon-heart
+						.r-cell.rv-img-box
+							figure
+								img(src="images/rv.jpg" alt="jpg")
+				.col-md-6
+					.rv-box
+						.r-cell.rv-user-cell
+							.rv-user-dtl
+								
+								.rv-user-pic
+										img(src="images/user.jpg" alt="img")
+								
+								.rv-user-txt
+										h3.title John smith
+										p
+											span.fw200 Praesent blandit turpis
+										p Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis 
+										a(ui-sref="read-review" class="more-link") Read more ....
+								.r-rating-container
+									.rating-container
+										span(uib-rating ng-model="4"   state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-4")
+									.like-container
+										span.txt 390
+										span.like-icon.liked
+											i.icon-heart
+						.r-cell.rv-img-box
+							figure
+								img(src="images/rv.jpg" alt="jpg")
+			.r-rev-bottom.text-center
+				a(ui-sref="search" class="button-group")
+					span.button.button-grey VIEW ALL
+					span.button.button-theme.button-width-small
+						i.icon-arrow-right
+.client-section.s-ov
+	.container
+		.client-section-top
+			.row
+				.col-md-6.col-sm-6
+					.main-heading
+						h2.title Clients love us
+				.col-md-6.col-sm-6
+					.c-owl-nav(id="customNav")
+						
+		.slider-block(data-ng-controller="rvCtrl")
+			h3.s-title Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+			.user-slider-block
+				ng-owl-carousel(class="owl-theme user-slider" owl-items="items" owl-properties="properties" owl-ready="ready($api)")
+					.item(data-ng-repeat="item in items")
+						.user-img
+							img(src="images/user-{{item}}.jpg" alt="img")
+			.user-txt-slider
+				ng-owl-carousel(class="owl-theme user-txt-slider" owl-items="number" owl-properties="propertiestxt" owl-ready="ready2($api)")
+					.item
+						.msg-txt-block
+							h3 JOHN SMITH
+							p Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu.Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl. Nullam vel tellus massa.
+					.item
+						.msg-txt-block
+							h3 JOHN SMITH
+							p Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu.Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl. Nullam vel tellus massa.
+					.item
+						.msg-txt-block
+							h3 JOHN SMITH
+							p Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu.Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl. Nullam vel tellus massa. 
+	
+		img(src="images/map-line.png" alt="img" class="c-overlay-img")
+.l-news-section.s-ov
+	.container
+		.l-news-top
+			.row
+					.col-md-6.col-sm-6
+						.main-heading
+							h2.title LATEST NEWS
+					.col-md-6.col-sm-6
+						.c-owl-nav(id="custom-news-Nav")
+		.l-news-list-block(data-ng-controller="newsCtrl")
+				ng-owl-carousel(class="owl-theme news-slider" owl-items="items" owl-properties="properties" owl-ready="ready($api)")
+					.item(data-ng-repeat="item in items")
+						.news-box
+							figure
+								img(src="images/news-{{item}}.jpg" alt="img").img-responsive
+								.pu-date
+									span.date 30
+									span.month APR
+							figcaption
+								h3 Lorem Ipsum
+								.news-txt
+									p Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu.
+								a(ui-sref="single-post").button.button-border.button-dark READ MORE
+									span.margin-left-2x
+										i.icon-arrow-right
+					

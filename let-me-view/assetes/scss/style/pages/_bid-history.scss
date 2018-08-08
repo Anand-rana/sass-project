@@ -1,0 +1,64 @@
+.bid-hisoty-section {
+    .property-view {
+        @include padding(50 0);
+    }
+}
+
+.property__slider {
+    &.is--cmod {
+        .property_info {
+            @include padding-right(0);
+        }
+    }
+}
+
+.bid-status {
+    &.is--cmod {
+        @include padding(10);
+    }
+}
+.table-responsive
+{
+    max-height:321px;
+    height:auto;
+}
+.bidlist__table {
+    &.table {
+        & > thead {
+            & > tr {
+                & > th {
+                    background-color: #6192b2;
+
+                    @include ralway-bold;
+
+                    text-transform: $uppercase;
+                    color: $white;
+
+                    @include padding(20 10);
+
+                    @include border(1, solid, #494747);
+                }
+
+                &:first-child {
+                    & > th {
+                        @include border-top(1, solid, #494747);
+                    }
+                }
+            }
+        }
+
+        & > tbody {
+            tr:nth-child(even) {
+                background-color: #efeff2;
+            }
+
+            tr:nth-child(odd) {
+                background-color: #ffffff;
+            }
+
+            td {
+                border-color: #494747;
+            }
+        }
+    }
+}

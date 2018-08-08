@@ -1,0 +1,621 @@
+                @include media("<=1800px") {
+                    .about-section {
+                        .a-box {
+                            .a-box--title {
+                                @include padding(70 30);
+                                h3 {
+                                    @include fontsize(25);
+                                }
+                            }
+                        }
+                    }
+                    .event-section {
+                        .event-dtl {
+                            .event-dtl-content {
+                                .dtl---options {
+                                    @include padding(20 10);
+                                    .button {
+                                        @include padding(0 10);
+                                    }
+                                }
+                                .tab-txt {
+                                    @include padding(15);
+                                }
+                            }
+                        }
+                        .event-tabs {
+                            ul {
+                                li {
+                                    @include padding(20 10);
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                @include media("<=1600px") {
+                    .container-fluid.container-lg-pad {
+                        @include padding(0 50);
+                    }
+                    .banner-section {
+                        .top--header {
+                            right: 50px;
+                        }
+                    }
+                    .inner-section {
+                        @include padding-left(140);
+                        &:before {
+                            width: 140px;
+                        }
+                    }
+                    .logo-stripe {
+                        width: 140px;
+                    }
+                    .about-section {
+                        .a-box {
+                            .a-box--title {
+                                @include padding(60 15);
+                            }
+                        }
+                    }
+                    .event-section {
+                        .event-dtl {
+                            .event-dtl-content {
+                                @include flex(1.5 0);
+                                .tab-txt {
+                                    max-height: 440px;
+                                    overflow: auto;
+                                }
+                            }
+                        }
+                        .event-tabs {
+                            ul {
+                                li {
+                                    @include padding(10);
+                                }
+                            }
+                        }
+                    }
+                    .nav-section {
+                        &:before {
+                            width: 460px;
+                        }
+                    }
+                    .grid-item-content {
+                        max-height: 285px;
+                    }
+                    .l-news-section {
+                        .news-box {
+                            .ratioinner {
+                                max-width: 450px;
+                            }
+                        }
+                    }
+                    .tilled-txt-1 {
+                        left: -100px;
+                    }
+                    .tilled-txt-2 {
+                        left: -100px;
+                    }
+                    .tilled-txt-3 {
+                        left: -100px;
+                    }
+                    .tilled-txt-4 {
+                        left: -100px;
+                    }
+                    .tilled-txt-5 {
+                        left: -100px;
+                    }
+                    .tilled-txt-6 {
+                        left: -100px;
+                    }
+                }
+                
+                @include media("<=1500px") {
+                    .nav-section {
+                        &:before {
+                            width: 420px;
+                        }
+                    }
+                    .grid-item-content {
+                        max-height: 275px;
+                    }
+                    .about-section {
+                        .a-box {
+                            .a-box--title {
+                                @include padding(60 10);
+                                h3 {
+                                    @include fontsize(20);
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                @include media("<=1400px") {
+                    .nav-section {
+                        &:before {
+                            width: 400px;
+                        }
+                    }
+                    .grid-item-content {
+                        max-height: 260px;
+                    }
+                    .inner-section {
+                        @include padding-left(120);
+                        &:before {
+                            width: 120px;
+                        }
+                    }
+                    .logo-stripe {
+                        width: 120px;
+                    }
+                    .container-fluid.container-lg-pad {
+                        @include padding(0 40);
+                    }
+                    .banner-section {
+                        .top--header {
+                            right: 40px;
+                        }
+                    }
+                    .event-section {
+                        .event-dtl {
+                            .event-dtl-content {
+                                @include flex(1.8 0);
+                            }
+                        }
+                    }
+                    .l-news-section {
+                        .news-box {
+                            .ratioinner {
+                                max-width: 400px;
+                            }
+                            .news-content {
+                                @include padding(30 20);
+                                h3 {
+                                    @include fontsize(25);
+                                }
+                            }
+                        }
+                    }
+                    .tilled-heading {
+                        @include fontsize(50);
+                    }
+                    .tilled-txt-1 {
+                        left: -90px;
+                        top: 500px;
+                    }
+                    .tilled-txt-2 {
+                        left: -90px;
+                        top: 200px;
+                    }
+                    .tilled-txt-3 {
+                        left: -90px;
+                    }
+                    .tilled-txt-4 {
+                        left: -90px;
+                    }
+                    .tilled-txt-5 {
+                        left: -90px;
+                    }
+                    .counter-section {
+                        .container {
+                            width: 100%;
+                            @include padding(0 40);
+                        }
+                    }
+                    .top-list-section {
+                        .container {
+                            width: 100%;
+                            @include padding(0 40);
+                        }
+                    }
+                }
+                
+                @include media("<=1300px") {
+                    .nav-section {
+                        &:before {
+                            width: 360px;
+                        }
+                    }
+                    .grid-item-content {
+                        max-height: 240px;
+                    }
+                    .inner-section {
+                        @include padding-left(100);
+                        &:before {
+                            width: 100px;
+                        }
+                    }
+                    .logo-stripe {
+                        width: 100px;
+                    }
+                    .container-fluid.container-lg-pad {
+                        @include padding(0 20);
+                    }
+                    .banner-section {
+                        .top--header {
+                            right: 20px;
+                        }
+                    }
+                    .counter-section {
+                        .container {
+                            @include padding(0 20);
+                        }
+                    }
+                    .top-list-section {
+                        .container {
+                            @include padding(0 20);
+                        }
+                    }
+                    .l-news-section {
+                        .news-box {
+                            .ratioinner {
+                                max-width: 350px;
+                                height: 180px;
+                            }
+                        }
+                    }
+                    .tilled-heading {
+                        @include fontsize(40);
+                    }
+                    .tilled-txt-1 {
+                        left: -75px;
+                    }
+                    .tilled-txt-2 {
+                        left: -75px;
+                    }
+                    .tilled-txt-3 {
+                        left: -75px;
+                    }
+                    .tilled-txt-4 {
+                        left: -75px;
+                    }
+                    .tilled-txt-5 {
+                        left: -75px;
+                    }
+                    .tilled-txt-6 {
+                        left: -75px;
+                    }
+                }
+                
+                @include media("<=1200px") {
+                    .nav-section {
+                        &:before {
+                            width: 300px;
+                        }
+                    }
+                    .logo {
+                        @include padding-top(10);
+                    }
+                    .user-testimonial-section {
+                        @include padding(40);
+                    }
+                    .about-section {
+                        .a-box {
+                            @include padding(20);
+                            .a-box--inner {
+                                @include padding(20);
+                                .a-box--title {
+                                    @include padding(40 10);
+                                    h3 {
+                                        letter-spacing: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .event-section {
+                        .event-tabs {
+                            @include margin-top(0);
+                            @include margin-bottom(20);
+                            ul {
+                                li {
+                                    display: none;
+                                    &.active {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .l-news-section {
+                        .news-box {
+                            .ratioinner {
+                                max-width: 300px;
+                                height: 140px;
+                            }
+                            .news-content {
+                                h3 {
+                                    @include fontsize(20);
+                                }
+                            }
+                        }
+                    }
+                    .top-list-section {
+                        .top--list {
+                            ul {
+                                li {
+                                    width: 33.33%;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                @include media("<=992px") {
+                    .nav-section {
+                        background-color: $color01;
+                        &:before {
+                            display: none;
+                        }
+                        nav {
+                            ul {
+                                & > li {
+                                    & > a {
+                                        color: $color02;
+                                        &:after {
+                                            border-color: $color02;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .r-block {
+                            & > ul {
+                                & >li {
+                                    color: $color02;
+                                    & > a {
+                                        color: $color02;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .about-section {
+                        .a-box {
+                            @include margin-bottom(15);
+                        }
+                    }
+                    .event-section {
+                        .event-dtl {
+                            display: block;
+                            .event-dtl--view {
+                                display: block;
+                            }
+                            .event-dtl-content {
+                                display: block;
+                                &:before {
+                                    @include arrow(top, $themecolor, 20px, null);
+                                    @include pos(ab, -20px null 100% 50%);
+                                    @include translatepos(-50%, -50%);
+                                }
+                            }
+                        }
+                    }
+                    .grid-item-content {
+                        max-height: 300px;
+                    }
+                    .l-news-section {
+                        .news-box {
+                            @include padding(20 0);
+                            &:before {
+                                display: none;
+                            }
+                            .ratioinner {
+                                max-width: 500px;
+                                height: auto;
+                                @include pos(rel, 0);
+                            }
+                        }
+                    }
+                    .user-testimonial-section {
+                        .testimonial-slider {
+                            @include padding(0);
+                            @include margin-top(10);
+                        }
+                    }
+                }
+                
+                @include media("<=767px") {
+                    .inner-section {
+                        @include padding-left(0);
+                        &:before {
+                            display: none;
+                        }
+                    }
+                    .grid-item-content {
+                        max-height: 400px;
+                    }
+                    .tilled-txt-1 {
+                        display: none;
+                    }
+                    .tilled-txt-2 {
+                        display: none;
+                    }
+                    .tilled-txt-3 {
+                        display: none;
+                    }
+                    .tilled-txt-4 {
+                        display: none;
+                    }
+                    .tilled-txt-5 {
+                        display: none;
+                    }
+                    .tilled-txt-6 {
+                        display: none;
+                    }
+                    .nav-section {
+                        nav {
+                            @include pos(fix, 0 null 0 -250px);
+                            max-width: 250px;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba($color01, 0.7);
+                            overflow: auto;
+                            z-index: 1200;
+                            ul {
+                                @include margin-left(0);
+                                @include padding(0 30);
+                                li {
+                                    display: $block;
+                                }
+                            }
+                        }
+                        .r-block {
+                            ul {
+                                @include margin-top(0);
+                            }
+                        }
+                    }
+                    .logo {
+                        @include padding-top(0);
+                    }
+                    .top-list-section {
+                        .top--list {
+                            ul {
+                                li {
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                    .news-letter-section {
+                        .news-letter-form {
+                            .field-inline {
+                                display: $block;
+                                @include padding(0 20);
+                                .n-field {
+                                    width: 100%;
+                                    max-width: 500px;
+                                    margin: 0 auto 10px;
+                                }
+                            }
+                        }
+                    }
+                    .user-testimonial-section {
+                        @include padding(20);
+                        .testimonial-slider {
+                            &:before {
+                                display: none;
+                            }
+                            h3 {
+                                span {
+                                    @include margin-left(0);
+                                    @include padding(0);
+                                    border: 0;
+                                    display: $block;
+                                    @include margin-top(5);
+                                }
+                            }
+                        }
+                    }
+                    .event-section {
+                        .event-dtl {
+                            .event-dtl-content {
+                                .tab-contentxt {
+                                    height: auto;
+                                    .tab-txt {
+                                        max-height: inherit;
+                                    }
+                                }
+                                ul {
+                                    li {
+                                        @include fontsize(25);
+                                        line-height: 25px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .overlay-menu {
+                        nav {
+                            ul {
+                                li {
+                                    a {
+                                        @include fontsize(30);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .get--touch {
+                        @include padding(20 0);
+                        .get--txt {
+                            @include margin-top(10);
+                            & > ul {
+                                & > li {
+                                    display: block;
+                                    margin-left: 0 !important;
+                                    &>span {
+                                        min-width: 160px;
+                                        display: $inline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    footer {
+                        .inner-footer {
+                            @include padding(20 0);
+                        }
+                    }
+                    .weekly-modal {
+                        .modal-body {
+                            .w-content {
+                                @include padding(0 10 30 10);
+                                h2 {
+                                    @include fontsize(55);
+                                }
+                            }
+                        }
+                    }
+                    .about-section {
+                        @include margin-top(0);
+                    }
+                }
+                
+                @include media("<=480px") {
+                    .logo-stripe {
+                        width: 70px;
+                    }
+                    .banner-section {
+                        .top--header {
+                            & > ul {
+                                & > li {
+                                    .icon-bar {
+                                        @include margin-bottom(8);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .top-list-section {
+                        .top--list {
+                            ul {
+                                li {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    .nav-section {
+                        [class*="col-"] {
+                            width: 100%;
+                        }
+                    }
+                    .event-section {
+                        .event-dtl {
+                            .event-dtl-content {
+                                .dtl---options {
+                                    .button {
+                                        float: none !important;
+                                        display: block;
+                                        @include margin(5 0);
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }

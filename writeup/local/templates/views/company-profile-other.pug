@@ -1,0 +1,225 @@
+.page-conatiner
+	.profile-section.company-profile-section.s-ov
+		.container
+			.main-heading
+				h2.title Profile preview
+			.profile-block.emp-profile
+				.profile-block-dtl
+					.row
+						.col-md-4.col-sm-5
+							.p-user-block
+								.p-img
+									img(src="images/c-logo-1.png" alt="img" class="img-responsive")
+								.p-user-info-block
+									
+									.p-up-competions
+										h3.title 
+											span Upcoming competitions
+										.p-up-competions-list
+											.media
+												.media-left
+													.p-c-img
+														img(src="images/news-3.jpg" alt="img")
+												.media-body
+													h3 weight lifting
+													p Vivamus elementum semper nisi.Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor ...
+											.media
+												.media-left
+													.p-c-img
+														img(src="images/news-3.jpg" alt="img")
+												.media-body
+													h3 weight lifting
+													p Vivamus elementum semper nisi.Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor ...
+											.text-center
+												a(ui-sref="competitions-history-all" class="view-link") View all competitions
+									
+
+						.col-md-8.col-sm-7
+							.p-personal-info-block
+								.row
+									.col-md-12
+										.user-name 
+											h3 ABCD company
+										.user-profile
+											h4 IT Company
+												
+										
+								
+								.user-rating-cotainer
+											h3 Rating
+											.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-1")
+								.p-user-opt
+									button.button.button-blue-dark.button-font-open.button-uppercase.button-font-small.margin-right-4x.margin-bottom-2x(ng-click="$state.go('write-review-company')" )  Review this user
+									button.button.button-border.button-blue-dark.button-font-open.button-uppercase.button-font-small.button-width-large  subscribe
+								.p-tabs
+									uib-tabset
+										uib-tab(index="0" heading="About ABCD Company")
+											.p-tab-cotent
+												.up-info
+													.up-info-row
+														h3 About
+														.up-row
+															.t-cell.label-name
+																label Description  :
+															.t-cell
+																p Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quamnunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec.
+													.up-info-row
+														h3 Contact Information
+														.up-row
+															.t-cell.label-name
+																label Address :
+															.t-cell
+																p 790 Washington Ave, Brooklyn, 
+																	br
+																	|New York 11238
+
+
+														.up-row
+															.t-cell.label-name
+																label E-mail :
+															.t-cell
+																p.text-blue Dummy@gmail.com
+														.up-row
+															.t-cell.label-name
+																label Website :
+															.t-cell
+																p.text-blue www.dummysitename.com
+										uib-tab(index="1" heading="Members")
+											.p-tab-cotent
+												.u-staff-list(ng-nicescroll nice-option="{cursorcolor: '#484d52'}")
+													.media
+														.media-left
+															.user-pic
+																img(src="images/user-1.jpg" alt="img")
+														.media-body
+															.user-name
+																h3 John smith
+															.user-profile
+																h3 Product Designer
+													.media
+														.media-left
+															.user-pic
+																img(src="images/user-1.jpg" alt="img")
+														.media-body
+															.user-name
+																h3 John smith
+															.user-profile
+																h3 Product Designer
+													.media
+														.media-left
+															.user-pic
+																img(src="images/user-1.jpg" alt="img")
+														.media-body
+															.user-name
+																h3 John smith
+															.user-profile
+																h3 Product Designer
+													.media
+														.media-left
+															.user-pic
+																img(src="images/user-1.jpg" alt="img")
+														.media-body
+															.user-name
+																h3 John smith
+															.user-profile
+																h3 Product Designer
+													.media
+														.media-left
+															.user-pic
+																img(src="images/user-1.jpg" alt="img")
+														.media-body
+															.user-name
+																h3 John smith
+															.user-profile
+																h3 Product Designer
+													.media
+														.media-left
+															.user-pic
+																img(src="images/user-1.jpg" alt="img")
+														.media-body
+															.user-name
+																h3 John smith
+															.user-profile
+																h3 Product Designer
+
+													
+														
+
+
+				.p-rev-cotainer
+					h2.title
+						span Recent Reviews
+					.review-block
+						.review-list
+							.review-box
+								.media
+									.media-left
+										.user-img
+											img(src="images/user-1.jpg" alt="img")
+									.media-body
+										.user-name
+											h3 Sam wilson
+										.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star-o star-uncheck-o'"  read-only="true" aria-labelledby="default-rating-2")
+										.review-txt
+											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.... 
+												a(href="#" class="r-link")  View More
+										.review-opt
+											
+												ul
+														li
+															span Reply 3
+															span.ico
+																i.icon-reply
+														li
+															span 390
+															span.ico.liked
+																i.icon-heart
+														li
+															span 20
+															span.ico.text-blue
+																i.icon-network
+														li.report-ico
+															span.ico.pointer
+																i.icon-do-not-disturb
+										
+							
+								
+										
+							.review-box
+								.media
+									.media-left
+										.user-img
+											img(src="images/user-1.jpg" alt="img")
+									.media-body
+										.user-name
+											h3 Sam wilson
+										.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star-o star-uncheck-o'"  read-only="true" aria-labelledby="default-rating-2")
+										.review-txt
+											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.... 
+												a(href="#" class="r-link")  View More
+										.review-opt
+											
+												ul
+														li
+															span Reply 3
+															span.ico
+																i.icon-reply
+														li
+															span 390
+															span.ico.liked
+																i.icon-heart
+														li
+															span 20
+															span.ico.text-blue
+																i.icon-network
+														li.report-ico
+															span.ico.pointer
+																i.icon-do-not-disturb
+										
+							.text-center.margin-top-5x
+								a(href="#" class="view-link") View all reviews
+
+			

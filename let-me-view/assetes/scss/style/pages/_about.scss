@@ -1,0 +1,234 @@
+.lb_title {
+    @include pos(rel, null);
+
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+
+    & > h2 {
+        @include open-light;
+
+        text-transform: $uppercase;
+
+        @include fontsize(35);
+
+        @include padding(0 40);
+
+        @include pos(rel, null);
+
+        z-index: 10;
+        background-color: $white;
+        display: $inline;
+    }
+
+    &:before {
+        content: "";
+
+        @include pos(ab, 50% 0 null 0);
+
+        height: 1px;
+        background-color: $textcolor;
+
+        @include translatepos(0, -50%);
+    }
+}
+
+.about-content-section {
+    @include margin-top(20);
+
+    @include padding-bottom(60);
+}
+
+.team-section {
+    .team_title {
+        background-color: $themecolor;
+
+        @include padding(20 0);
+
+        .lb_title {
+            max-width: 500px;
+
+            & > h2 {
+                color: $white;
+                background-color: $themecolor;
+            }
+
+            &:before {
+                background-color: $white;
+            }
+        }
+    }
+
+    .team__list {
+        @include padding(70 0);
+
+        .t__box {
+            text-align: center;
+
+            figure {
+                @include margin(0);
+
+                & > img {
+                    display: $inline;
+                    -webkit-filter: grayscale(100%);
+                    filter: grayscale(100%);
+                    transition: $trasition_all;
+
+                    &:hover {
+                        -webkit-filter: none;
+                        filter: none;
+                    }
+                }
+            }
+
+            figcaption {
+                @include margin(30 0);
+
+                h3 {
+                    @include open-light;
+
+                    @include fontsize(20);
+
+                    @include margin-bottom(5);
+                }
+
+                .m-dtl {
+                    @include margin-top(25);
+                }
+            }
+        }
+    }
+}
+
+.s-links {
+    & > a {
+        @include margin-right(20);
+
+        color: #a7a7a8;
+
+        @include fontsize(20);
+
+        &:last-child {
+            @include margin(0);
+        }
+
+        &:hover {
+            color: $themecolor;
+        }
+    }
+}
+
+.investor-section {
+    @include padding(70 0);
+
+    background-color: #ececec;
+
+    @include border-bottom(7, solid, #cccacb);
+
+    .investor_title {
+        text-align: center;
+
+        .lb_title {
+            max-width: 500px;
+            display: $inline;
+            width: 100%;
+            vertical-align: middle;
+
+            & > h2 {
+                background-color: #ececec;
+            }
+
+            &:before {
+                background-color: #b8b7bb;
+                height: 4px;
+            }
+        }
+
+        .inv-next {
+            @include fontsize(20);
+
+            @include padding-left(20);
+
+            vertical-align: middle;
+            cursor: pointer;
+
+            &:hover {
+                color: $themecolor;
+            }
+        }
+
+        .inv-prev {
+            @include fontsize(20);
+
+            @include padding-right(20);
+
+            vertical-align: middle;
+            cursor: pointer;
+
+            &:hover {
+                color: $themecolor;
+            }
+        }
+    }
+
+    .inv_slider {
+        @include margin-top(40);
+
+        .inv_slider_box {
+            figure {
+                @include margin(0);
+
+                & > img {
+                    width: 120px;
+                    height: 120px;
+
+                    @include circle;
+
+                    display: $inline;
+                }
+
+                & > span {
+                    @include padding-left(5);
+
+                    @include ralway-medium;
+                }
+            }
+
+            figcaption {
+                @include margin-top(15);
+
+                span {
+                    color: $themecolor;
+
+                    @include padding-right(10);
+                }
+            }
+        }
+    }
+}
+
+.our-partner-section {
+    .p_title {
+        background-color: #697885;
+
+        @include padding(20 0);
+
+        .lb_title {
+            max-width: 500px;
+
+            & > h2 {
+                color: $white;
+                background-color: #697885;
+            }
+
+            &:before {
+                background-color: $white;
+                height: 4px;
+            }
+        }
+    }
+
+    .inner-cotent {
+        @include padding(70 0);
+    }
+}

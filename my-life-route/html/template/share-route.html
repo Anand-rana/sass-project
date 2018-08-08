@@ -1,0 +1,49 @@
+
+<div class="share-route-modal">
+  <div class="modal-header">
+    <h2 class="title">Share  My liferoute</h2>
+    <button class="close-ico" id="close" ng-click="cancel()"><i class="icon-close"></i></button>
+  </div>
+  <div class="modal-body">
+    <div class="share-route-opt">
+      <div class="share-route-opt-row">
+        <div class="row">
+          <div class="col-md-8 col-sm-8 col-xs-8">
+            <h3>Post this to Specific People only</h3>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <div class="c-oth-opt__btn">
+              <div class="fh-switch fh-sm">
+                <input type="radio" id="one" name="b" ng-model="content" value="first"/>
+                <label for="one"></label><span class="fh-switch-knob"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="share-route-opt-row">
+        <div class="row">
+          <div class="col-md-8 col-sm-8 col-xs-8">
+            <h3>From the list of my connection only</h3>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <div class="c-oth-opt__btn">
+              <div class="fh-switch fh-sm">
+                <input type="radio" id="two" name="b" ng-model="content" value="other"/>
+                <label for="two"></label><span class="fh-switch-knob"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="share-route-opt-row" ng-show="content == 'first'">
+        <div class="c-field c-outline c-1 c-shadow c-b-sm">
+          <input class="c-field-control" type="text" placeholder="Select People"/>
+        </div>
+        <div class="btn-field margin-top-5x">
+          <button class="button button-green button-width-large button-rounded button font-medium-txt">Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

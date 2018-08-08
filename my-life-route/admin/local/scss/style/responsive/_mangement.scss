@@ -1,0 +1,7 @@
+@include media("<=991px") {
+    .dashboard-user-dtl-section {
+        .usr-pic-dtl {
+            @include margin(40 0);
+        }
+    }
+}

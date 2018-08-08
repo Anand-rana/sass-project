@@ -1,0 +1,45 @@
+<div class="vertical-align-wrap">
+	<div class="vertical-align-middle">
+		<div class="auth-box ">
+			<div class="left">
+				<div class="content">
+					<div class="header">
+						<div class="logo text-center"><img src="assets/img/logo-dark.png" alt="Klorofil Logo"></div>
+						<p class="lead">Login to your account</p>
+					</div>
+					<form class="form-auth-small" name="signInForm" ng-submit="login(signInForm.$valid)">
+						<div class="form-group">
+							<label for="signin-email" class="control-label sr-only">Email</label>
+							<input class="form-control" id="email" name="email" type="text" ng-model="loginData.email" ng-required="true" ng-pattern="/^[A-Z0-9._-]+@[A-Z0-9.-]+\.[A-Z0-9.-]+$/i" aria-describedby="emailHelp" placeholder="Enter Email" autofocus>
+							<div class="text-left">
+								<span class="text-danger" ng-show="signInForm.email.$error.required && !signInForm.email.$pristine">Email is required</span>
+								<span class="text-danger" ng-show="!signInForm.email.$error.required && signInForm.email.$invalid && !signInForm.email.$pristine">Enter valid Email</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="signin-password" class="control-label sr-only">Password</label>
+							<input class="form-control" id="password" type="password" placeholder="Password" name="password" ng-model="loginData.password" ng-required="true">
+							<div class="text-left">
+								<span class="text-danger" ng-show="signInForm.password.$error.required && signInForm.password.$dirty">
+			                Password is required</span>
+								<span class="text-danger" ng-show="!signInForm.password.$error.required && signInForm.password.$invalid && !signInForm.password.$pristine">
+				                Enter Vaild Password</span>
+							</div>
+						</div>
+						<div class="form-group clearfix">
+							<label class="fancy-checkbox element-left">
+										<input type="checkbox">
+										<span>Remember me</span>
+									</label>
+						</div>
+						<div class="text-danger">{{warning_message}}</div>
+						<button type="submit" ng-disabled="signInForm.$invalid" class="btn btn-primary btn-lg btn-block">LOGIN</button>
+						<div class="bottom">
+							<span class="helper-text"><i class="fa fa-lock"></i> <a ui-sref="forgot">Forgot password?</a></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

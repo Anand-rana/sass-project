@@ -1,0 +1,1225 @@
+.step-form-block {
+    @include margin-top(-330);
+
+    .title {
+        @include fontsize(35);
+
+        text-align: center;
+        font-weight: 300;
+        color: $white;
+    }
+
+    .step-form-container {
+        background-color: $white;
+
+        @include margin-top(50);
+
+        .step-form-heading {
+            background-color: $theme;
+            text-align: center;
+
+            @include padding(50 0);
+
+            color: $white;
+
+            h3.title {
+                @include fontsize(28);
+
+                font-weight: 400;
+            }
+
+            &.h-sm {
+                @include padding(30 0 25);
+            }
+        }
+
+        .step-form-data {
+            @include padding(25 0);
+        }
+
+        .step-form-field-box {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .step-form-nav {
+            max-width: 430px;
+            margin: 0 auto;
+
+            ul {
+                display: table;
+                width: 100%;
+
+                li {
+                    float: left;
+                    width: 50%;
+
+                    @include pos(rel, null);
+
+                    z-index: 0;
+
+                    .step-nav-box {
+                        width: 100px;
+                        height: 100px;
+
+                        @include circle;
+
+                        background-color: $white;
+                        text-align: center;
+
+                        @include border(2, dashed, #d7d7d7);
+
+                        display: table;
+                        -webkit-transition: all 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                        transition: all 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+                        .step-nav-txt {
+                            display: table-cell;
+                            vertical-align: middle;
+                        }
+
+                        .label-step {
+                            display: $b;
+
+                            @include fontsize(22);
+
+                            font-weight: 500;
+                            line-height: 1.2;
+                            color: lighten($color-text-01, 30%);
+                        }
+
+                        .step-no {
+                            display: $b;
+
+                            @include fontsize(28);
+
+                            font-weight: 500;
+                            line-height: 1.2;
+                            color: lighten($color-text-01, 30%);
+                        }
+                    }
+
+                    .step-one {
+                        &:after {
+                            @include pos(ab, 50% 0 0 0);
+
+                            content: "";
+                            height: 2px;
+
+                            @include border-top(2, dashed, #d7d7d7);
+
+                            width: 100%;
+                            z-index: -1;
+                        }
+                    }
+
+                    .step-two {
+                        float: right;
+
+                        &:after {
+                            @include pos(ab, 50% 0 0 null);
+
+                            content: "";
+                            height: 2px;
+
+                            @include border-top(2, dashed, #d7d7d7);
+
+                            width: 100%;
+                            z-index: -1;
+                        }
+                    }
+
+                    .active {
+                        @include border(2, solid, $theme);
+
+                        background-color: $theme;
+
+                        .label-step {
+                            color: $white;
+                        }
+
+                        .step-no {
+                            color: $white;
+                        }
+
+                        &:after {
+                            border-color: #aeaeae;
+                        }
+                    }
+                }
+            }
+        }
+
+        .field-group {
+            @include margin-top(80);
+
+            .cover_img_field {
+                .fileUpload {
+                    width: 150px;
+                    display: $ib;
+                    vertical-align: middle;
+                    @include margin-right(10);
+                    @include margin-bottom(10);
+                    .icon-box {
+                        width: 150px;
+                        height: 100px;
+                        background-color: #eeeeee;
+                        @include border(1, solid, #b8b8b8);
+                        @include border-round(4);
+                        line-height: 100px;
+                        text-align: center;
+                        @include fontsize(20);
+                    }
+                }
+                .data-list {
+                    display: $ib;
+                    vertical-align: middle;
+                    @include margin-bottom(10);
+                    .img-box {
+                        @include pos(rel, null);
+                        figure {
+                            @include margin(0);
+
+                            img {
+                                object-fit: cover;
+                            }
+                        }
+                        .delete-ico {
+                            width: 15px;
+                            height: 15px;
+                            text-align: center;
+                            line-height: 15px;
+                            background-color: $theme;
+                            @include circle;
+                            @include pos(ab, -8px -5px null null);
+                            cursor: pointer;
+                            color: $white;
+                            @include fontsize(7);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.signup-form-section {
+    .step-form-container {
+        .step-form-heading {
+            @include padding(30 0 25);
+
+            h3.title {
+                @include padding-bottom(10);
+            }
+
+            h4.note {
+                @include fontsize(16);
+            }
+        }
+    }
+}
+
+.signup-form-section,
+.edit-profile-section {
+    @include padding-bottom(50);
+
+    .step-form-container {
+        @include padding-bottom(50);
+    }
+
+    .btn-field {
+        @include padding-top(60);
+    }
+
+    .upload-file-box {
+        text-align: center;
+
+        @include margin-bottom(80);
+
+        .user-pic {
+            width: 130px;
+            height: 130px;
+            overflow: hidden;
+
+            @include circle;
+
+            @include border(1, solid, #a2a7ac);
+
+            margin: 0 auto 10px;
+
+            img {
+                min-height: 130px;
+                object-fit: cover;
+                max-width: 100%;
+            }
+        }
+
+        h4 {
+            @include fontsize(16);
+
+            font-weight: 400;
+            text-align: center;
+            color: $color-text-05;
+        }
+
+        .fileUpload {
+            display: $ib;
+
+            @include margin-top(30);
+        }
+    }
+
+    .t-exp-field {
+        display: table;
+        width: 100%;
+
+        .c-field {
+            .c-field-control {
+                max-width: 85px;
+                display: $ib;
+                vertical-align: middle;
+                text-align: center;
+
+                @include margin-right(12);
+            }
+
+            span {
+                display: $ib;
+                vertical-align: middle;
+
+                @include fontsize(16);
+
+                font-weight: 400;
+                color: $color-text-05;
+            }
+        }
+    }
+
+    .t-exp-time-field {
+        .label-name {
+            display: $b;
+            text-align: center;
+            font-weight: 400;
+        }
+    }
+
+    .exp-field-group {
+        @include padding-top(30);
+    }
+
+    .field-opt {
+        display: table;
+        width: 100%;
+
+        @include margin-bottom(40);
+
+        .add-icon {
+            width: 50px;
+            height: 50px;
+            float: left;
+
+            @include pos(rel, null);
+
+            z-index: 0;
+            display: $b;
+            text-align: center;
+
+            @include fontsize(22);
+
+            line-height: 52px;
+            cursor: pointer;
+            color: $white;
+
+            &:before {
+                @include pos(ab, 0 0 0 0);
+
+                background-color: $theme;
+
+                @include circle;
+
+                content: "";
+                z-index: -1;
+            }
+
+            &:after {
+                @include pos(ab, 0 0 0 0);
+
+                background-color: lighten($theme, 10%);
+
+                @include circle;
+
+                @include transform(scale(0));
+
+                content: "";
+                z-index: -1;
+                -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            &:hover {
+                &:after {
+                    @include transform(scale(1));
+                }
+            }
+        }
+
+        .delete-icon {
+            width: 50px;
+            height: 50px;
+            float: right;
+
+            @include pos(rel, null);
+
+            z-index: 0;
+            display: $b;
+            text-align: center;
+
+            @include fontsize(22);
+
+            line-height: 50px;
+            cursor: pointer;
+            color: $color-text-05;
+
+            &:before {
+                @include pos(ab, 0 0 0 0);
+
+                background-color: #eaeaea;
+
+                @include circle;
+
+                content: "";
+                z-index: -1;
+            }
+
+            &:after {
+                @include pos(ab, 0 0 0 0);
+
+                background-color: darken(#eaeaea, 10%);
+
+                @include circle;
+
+                @include transform(scale(0));
+
+                content: "";
+                z-index: -1;
+                -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            &:hover {
+                &:after {
+                    @include transform(scale(1));
+                }
+            }
+        }
+    }
+}
+
+.create-liferoute-section {
+    .step-form-block {
+        .step-form-container {
+            .step-form-heading {
+                background-color: $color-list-01;
+
+                .sub-title {
+                    @include fontsize(20);
+
+                    font-weight: 300;
+                }
+            }
+
+            .step-form-nav {
+                ul {
+                    li {
+                        .active {
+                            background-color: $color-list-01;
+                            border-color: $color-list-01;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .create-liferoute__step-2 {
+        .step-form-block {
+            .step-form-container {
+                .step-form-field-box {
+                    max-width: 800px;
+                }
+            }
+        }
+    }
+
+    .c-lroute-stepbox {
+        @include border(1, solid, lighten(#5b5b5b, 50%));
+
+        @include padding(15);
+        @include margin-bottom(25);
+        @include box-shadow(0 4px rgba(34, 34, 34, 0.24));
+
+        @include border-round(3);
+
+        background-color: #d2f0d8;
+
+        .c-lroute__top {
+            display: table;
+            width: 100%;
+
+            .c-title {
+                float: left;
+                font-weight: 400;
+
+                @include fontsize(18); // text-transform: uppercase;
+                color: $color-text-02;
+                letter-spacing: 2px;
+            }
+
+            .c-lroute__opt {
+                float: right;
+
+                ul {
+                    li {
+                        display: $ib;
+
+                        @include padding-right(15);
+
+                        color: #525252;
+
+                        &:last-child {
+                            @include padding-right(0);
+                        }
+
+                        span.video-icon {
+                            @include border(2, solid, $theme);
+                            width: 35px;
+                            height: 35px;
+                            @include circle;
+                            line-height: 33px;
+                            @include fontsize(12);
+                            display: $b;
+                            text-align: center;
+                            @include pos(rel, null);
+
+                            &:after {
+                                @include pos(ab, null -5px -5px null);
+                                content: "\e90d";
+                                font-family: 'icomoon' !important;
+                                color: $white;
+                                background-color: $color-list-01;
+                                text-align: center;
+                                width: 15px;
+                                height: 15px;
+                                @include circle;
+                                line-height: 14px;
+                                @include fontsize(8);
+                            }
+                        }
+
+                        span.img-icon {
+                            @include border(2, solid, $theme);
+                            width: 35px;
+                            height: 35px;
+                            @include circle;
+                            line-height: 33px;
+                            @include fontsize(12);
+                            display: $b;
+                            text-align: center;
+                            @include pos(rel, null);
+                            &:after {
+                                @include pos(ab, null -5px -5px null);
+                                content: "\e90d";
+                                font-family: 'icomoon' !important;
+                                color: $white;
+                                background-color: $color-list-01;
+                                text-align: center;
+                                width: 15px;
+                                height: 15px;
+                                @include circle;
+                                line-height: 14px;
+                                @include fontsize(8);
+                            }
+                        }
+
+                        span.caret {
+                            border-width: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .c-lroute__field-group {
+            @include margin-top(50);
+
+            .c-field {
+                .c-field-control {
+                    border-radius: 0;
+                    background-color: $white;
+                }
+            }
+        }
+
+        &.active {
+            @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, 0.35));
+
+            .c-lroute__opt {
+                ul {
+                    li {
+                        .caret {
+                            @include transform(rotate(-180deg));
+                        }
+                    }
+                }
+            }
+        }
+
+        .c-add-img-video__block {
+            border-color: darken(#d2f0d8, 30%);
+
+            .data-list {
+                figcaption {
+                    .file-title {
+                        border-color: darken(#d2f0d8, 30%);
+                        min-height: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .c-post_option__row {
+        .c-post_option__txt {
+            h5 {
+                @include margin-bottom(25);
+            }
+        }
+    }
+
+    .c-post_option {
+        @include border(1, solid, lighten(#5b5b5b, 50%));
+
+        @include padding(15);
+
+        @include margin-bottom(50);
+
+        h4 {
+            @include fontsize(18);
+
+            color: $theme;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .c-post_option__row {
+            @include padding(20 0);
+
+            @include border-bottom(1, solid, lighten(#5b5b5b, 50%));
+
+            .c-post_option__txt {
+                @include fontsize(16);
+
+                h5 {
+                    @include fontsize(20);
+
+                    color: $color-text-02;
+
+                    @include padding-bottom(10);
+
+                    font-weight: 500;
+                }
+
+                color: $color-text-02;
+
+                p {
+                    font-weight: 300;
+                }
+            }
+
+            .c-post_option_btn {
+                float: right;
+            }
+
+            &:last-of-type {
+                border-bottom: 0;
+            }
+        }
+    }
+
+
+    .c-setting-opt-container {
+        @include margin(60 0 70);
+        h2 {
+            font-weight: 300;
+            @include padding-bottom(20);
+            @include border-bottom(1, solid, lighten(#5b5b5b, 50%));
+            @include fontsize(20);
+            color: $color-text-08;
+            @include margin-bottom(15);
+        }
+    }
+
+    .c-setting-opt {
+        @include padding(20 25 20 0);
+
+        @include border-bottom(1, solid, lighten(#5b5b5b, 50%));
+
+        h3 {
+            color: $color-text-02;
+            font-weight: 300;
+
+            @include fontsize(20);
+        }
+
+        .c-oth-opt__btn {
+            float: right;
+        }
+    }
+
+    .c-search-field {
+        @include margin-top(30);
+
+        label {
+            @include fontsize(14);
+
+            color: $theme;
+            font-weight: 500;
+
+            @include padding-top(15);
+        }
+
+        .c-field {
+            .c-field-control {
+                border-radius: 0;
+            }
+        }
+
+        .people-list {
+            @include margin-top(15);
+
+            ul {
+                li {
+                    display: $ib;
+
+                    @include fontsize(11);
+
+                    font-weight: 500;
+                    color: $color-text-02;
+                    background-color: #e7e7e7;
+
+                    @include padding(5 10);
+
+                    @include border-round(4);
+
+                    @include margin-right(10);
+
+                    @include margin-bottom(5);
+                }
+            }
+        }
+    }
+
+    .btn-field {
+        @include margin-top(80);
+    }
+}
+
+.create-news-section {
+    .step-form-block {
+        .step-form-container {
+            .step-form-heading {
+                background-color: $color-list-02;
+            }
+
+            .field-group {
+                @include margin-top(50);
+            }
+
+            .c-add-img-video__block {
+                &.c-addimgblcok {
+                    @include padding-top(0);
+                }
+            }
+        }
+    }
+
+    .c-setting-opt-container {
+        @include margin(60 0 70);
+        h2 {
+            font-weight: 300;
+            @include padding-bottom(20);
+            @include border-bottom(1, solid, lighten(#5b5b5b, 50%));
+            @include fontsize(20);
+            color: $color-text-10;
+            @include margin-bottom(15);
+        }
+    }
+
+    .c-setting-opt {
+        @include padding(20 25 20 0);
+
+        @include border-bottom(1, solid, lighten(#5b5b5b, 50%));
+
+        h3 {
+            color: $color-text-02;
+            font-weight: 300;
+
+            @include fontsize(18);
+        }
+
+        .c-oth-opt__btn {
+            float: right;
+        }
+    }
+
+    .c-search-field {
+        @include margin-top(30);
+
+        label {
+            @include fontsize(14);
+
+            color: $theme;
+            font-weight: 500;
+
+            @include padding-top(15);
+        }
+
+        .c-field {
+            .c-field-control {
+                border-radius: 0;
+            }
+        }
+
+        .people-list {
+            @include margin-top(15);
+
+            ul {
+                li {
+                    display: $ib;
+
+                    @include fontsize(11);
+
+                    font-weight: 500;
+                    color: $color-text-02;
+                    background-color: #e7e7e7;
+
+                    @include padding(5 10);
+
+                    @include border-round(4);
+
+                    @include margin-right(10);
+
+                    @include margin-bottom(5);
+                }
+            }
+        }
+    }
+
+    .btn-field {
+        @include margin-top(60);
+    }
+}
+
+.create-event-section {
+    .step-form-block {
+        .step-form-container {
+            .step-form-heading {
+                background-color: $color-list-03;
+            }
+
+            .field-group {
+                @include margin-top(50);
+            }
+
+            .c-add-img-video__block {
+                &.c-addimgblcok {
+                    @include padding-top(0);
+                }
+            }
+        }
+    }
+
+    .c-setting-opt {
+        @include padding(20 25 20 0);
+
+        @include border-bottom(1, solid, lighten(#5b5b5b, 50%));
+
+        h3 {
+            color: $color-text-02;
+            font-weight: 300;
+
+            @include fontsize(18);
+        }
+
+        .c-oth-opt__btn {
+            float: right;
+        }
+    }
+
+    .c-search-field {
+        @include margin-top(30);
+
+        label {
+            @include fontsize(14);
+
+            color: $theme;
+            font-weight: 500;
+
+            @include padding-top(15);
+        }
+
+        .c-field {
+            .c-field-control {
+                border-radius: 0;
+            }
+        }
+
+        .people-list {
+            @include margin-top(15);
+
+            ul {
+                li {
+                    display: $ib;
+
+                    @include fontsize(11);
+
+                    font-weight: 500;
+                    color: $color-text-02;
+                    background-color: #e7e7e7;
+
+                    @include padding(5 10);
+
+                    @include border-round(4);
+
+                    @include margin-right(10);
+
+                    @include margin-bottom(5);
+                }
+            }
+        }
+    }
+
+    .btn-field {
+        @include margin-top(60);
+    }
+}
+
+.create-business-post {
+    .step-form-block {
+        .step-form-container {
+            .step-form-heading {
+                background-color: $color-list-05;
+            }
+
+            .field-group {
+                @include margin-top(50);
+            }
+
+            .c-add-img-video__block {
+                &.c-addimgblcok {
+                    @include padding-top(0);
+                }
+            }
+        }
+    }
+
+    .c-setting-opt {
+        @include padding(20 25 20 0);
+
+        @include border-bottom(1, solid, lighten(#5b5b5b, 50%));
+
+        h3 {
+            color: $color-text-02;
+            font-weight: 300;
+
+            @include fontsize(18);
+        }
+
+        .c-oth-opt__btn {
+            float: right;
+        }
+    }
+
+    .c-search-field {
+        @include margin-top(30);
+
+        label {
+            @include fontsize(14);
+
+            color: $theme;
+            font-weight: 500;
+
+            @include padding-top(15);
+        }
+
+        .c-field {
+            .c-field-control {
+                border-radius: 0;
+            }
+        }
+
+        .people-list {
+            @include margin-top(15);
+
+            ul {
+                li {
+                    display: $ib;
+
+                    @include fontsize(11);
+
+                    font-weight: 500;
+                    color: $color-text-02;
+                    background-color: #e7e7e7;
+
+                    @include padding(5 10);
+
+                    @include border-round(4);
+
+                    @include margin-right(10);
+
+                    @include margin-bottom(5);
+                }
+            }
+        }
+    }
+
+    .btn-field {
+        @include margin-top(60);
+    }
+}
+
+.create-advert {
+    .step-form-block {
+        .step-form-container {
+            .field-group {
+                @include margin-top(50);
+            }
+
+            .c-add-img-video__block {
+                &.c-addimgblcok {
+                    @include padding-top(0);
+                }
+            }
+        }
+    }
+
+    .btn-field {
+        @include margin-top(60);
+    }
+}
+
+.c-add-img-video__block {
+    @include padding(40 0);
+
+    @include border-bottom(1, solid, #f1f1f1);
+
+    .c-add-img-video__top {
+        display: table;
+        width: 100%;
+
+        .fileUpload {
+            display: $ib;
+            vertical-align: middle;
+        }
+
+        .help-txt {
+            display: $ib;
+            vertical-align: middle;
+            color: $theme;
+            font-weight: 300;
+
+            @include fontsize(18);
+
+            @include margin-left(10);
+
+            &.c-1 {
+                color: $color-text-10;
+            }
+
+            &.c-2 {
+                color: $color-text-09;
+            }
+
+            &.c-3 {
+                color: $color-text-11;
+            }
+        }
+    }
+
+    .data-list {
+        @include margin-top(30);
+
+        .row {
+            @include margin-left(-20);
+
+            @include margin-right(-20);
+
+            [class^="col-"] {
+                @include padding-left(20);
+
+                @include padding-right(20);
+            }
+        }
+
+        .img-box {
+            @include margin-bottom(10);
+
+            .delete-ico {
+                text-align: right;
+                color: $theme;
+                display: $b;
+
+                @include padding-bottom(10);
+
+                [class^="icon-"] {
+                    color: $theme;
+                    cursor: pointer;
+                }
+            }
+
+            figure {
+                @include margin(0);
+
+                overflow: hidden;
+
+                @include fluid-ratio(16 9, img);
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .video-box {
+            @include margin-bottom(10);
+
+            .video-js {
+                width: 100%;
+            }
+
+            .delete-ico {
+                text-align: right;
+                color: $theme;
+                display: $b;
+
+                @include padding-bottom(10);
+
+                [class^="icon-"] {
+                    color: $theme;
+                    cursor: pointer;
+                }
+            }
+
+            figure {
+                @include margin(0);
+
+                overflow: hidden;
+
+                @include fluid-ratio(16 9, img);
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        figcaption {
+            .file-title {
+                @include fontsize(12);
+
+                color: $theme;
+                font-weight: 500;
+
+                @include padding(15 0);
+
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+
+                @include border-bottom(1, solid, lighten(#d7d7d7, 10%));
+            }
+
+            .caption__opt {
+                @include margin-top(20);
+
+                .button {
+                    @include fontsize(10);
+
+                    letter-spacing: 2px;
+                }
+
+                .c-edit-field {
+                    display: table;
+                    width: 100%;
+
+                    input[type="text"] {
+                        width: 150px;
+                        height: 30px;
+
+                        @include border-round(30);
+
+                        background-color: #ededed;
+                        border: 0;
+                        outline: none;
+                        font-weight: 500;
+
+                        @include fontsize(10);
+
+                        color: #403939;
+
+                        @include padding(0 15);
+
+                        float: left;
+                    }
+
+                    .field-opt {
+                        float: right;
+
+                        ul {
+                            li {
+                                display: $ib;
+
+                                .edit-ico {
+                                    @include padding-right(10);
+
+                                    @include padding-top(5);
+
+                                    @include padding-bottom(5);
+
+                                    color: $color-text-02;
+
+                                    @include border-right(1, solid, #dbdbdb);
+
+                                    cursor: pointer;
+
+                                    &:hover,
+                                    &:focus {
+                                        color: $theme;
+                                    }
+                                }
+
+                                .close-ico {
+                                    @include padding-left(10);
+
+                                    @include padding-top(5);
+
+                                    @include padding-bottom(5);
+
+                                    color: $color-text-02;
+                                    cursor: pointer;
+
+                                    &:hover,
+                                    &:focus {
+                                        color: $theme;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,326 @@
+@include media("<=1200px") {
+    .life-route-dtl-section {
+        .life-route-dtl__content {
+            &>.row {
+                @include margin(0 -15);
+
+                &>[class^="col-"] {
+                    @include padding(0 15);
+                }
+            }
+        }
+    }
+}
+
+
+@include media("<=992px") {
+    .life-route-dtl-section {
+        @include padding(50 0);
+
+        .heading-block {
+            .btn-opt {
+                text-align: left;
+            }
+        }
+
+        .life-route-steps-block {
+            @include padding(20 0);
+
+            &:after {
+                display: none;
+            }
+
+            .life-route-steps-block__inner {
+                &:after {
+                    display: none;
+                }
+
+                &:before {
+                    display: none;
+                }
+
+                .life-route-steps-list {
+                    .m-space-right {
+                        @include margin(0);
+                    }
+
+                    .m-space-left {
+                        @include margin(0);
+                    }
+
+                    .l-route-info-box {
+                        @include margin-bottom(30);
+                    }
+
+                    &>ul {
+                        &>li {
+                            @include padding-bottom(20);
+
+                            &:before {
+                                display: none;
+                            }
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .life-route-dtl__box {
+            @include margin-top(40);
+        }
+    }
+
+    .life-route-dtl__side-block {
+        @include margin-top(40);
+    }
+
+    .route-comments-block {
+        @include margin-top(0);
+
+        .route-comments-block__info {
+            &.oth-usr {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+@include media("<=767px") {
+    .life-route-dtl-section {
+        @include padding(30 0);
+
+        .heading-block {
+            text-align: center;
+
+            .btn-opt {
+                text-align: center;
+            }
+        }
+
+        .life-route-dtl__box {
+            .l-route-dtl__box {
+
+                .user-p-info {
+                    .user-name {
+                        @include padding(0);
+                    }
+                }
+
+                .user-dtl {
+                    .user-dtl-info {
+                        @include padding(0 10 20);
+
+                        .r-title {
+                            text-align: center;
+                        }
+
+                        .user-dtl-info-list {
+                            display: $ib;
+                            text-align: left;
+                        }
+                    }
+
+                    .user-des-txt {
+                        @include padding-right(0);
+
+                        .desc-txt p {
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .r-bottom-block {
+                    ul {
+                        li {
+                            display: $ib;
+                            width: auto;
+                            float: none;
+
+                            @include margin(0 5 5);
+                        }
+                    }
+                }
+            }
+        }
+        .life-route-steps-block {
+            .life-route-steps-block__inner {
+                .life-route-steps-list {
+                    .l-route-info-box {
+                        .l-route-info__list {
+
+                            &>ul {
+                                &>li {
+                                    p {
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .route-comments-block {
+        .route-comments-block__info {
+            @include padding(10 15);
+
+            text-align: center;
+            .list-info {
+                @include margin-top(15);
+            }
+        }
+    }
+}
+
+
+@include media("<=550px") {
+    .route-comments-block {
+        .route-comments__list {
+            .route-comments__listdata {
+                .comment-txt-field {
+                    .media,
+                    .media-left,
+                    .media-body {
+                        display: block;
+
+                        @include width-auto;
+                    }
+
+                    .usr-pic {
+                        @include margin-bottom(10);
+                    }
+                }
+            }
+
+            .comment-box {
+                .media,
+                .media-left,
+                .media-body {
+                    display: block;
+
+                    @include width-auto;
+                }
+
+                .usr-pic {
+                    @include margin-bottom(10);
+                }
+
+                .comment-reply-msg {
+                    @include padding-left(20);
+
+                    .r-usr-pic {
+                        @include margin-bottom(10);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include media("<=479px") {
+    .route-comments-block {
+        .route-comments-block__info {
+            .list-info {
+                &>ul {
+                    &>li {
+                        display: $b;
+
+                        @include padding(10);
+
+                        width: 100%;
+                        margin-left: 0px;
+                        border-left: 0;
+                        border-right: 0;
+
+                        @include border-bottom(1, solid, #e0e0e0);
+                    }
+                }
+            }
+
+            &.oth-usr {
+                .list-info {
+                    &>ul {
+                        &>li {
+                            @include padding(10);
+
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .route-comments__list {
+            .comment-box {
+                .media {
+                    .comment-msg {
+                        .comment-msg__top {
+                            .comment-mg__usr-info {
+                                float: none;
+                                display: $b;
+                            }
+
+                            .comment-mg__usr__opt {
+                                float: none;
+                                display: $b;
+
+                                .ico {
+                                    .drop-box {
+                                        right: auto;
+                                        left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .life-route-dtl-section {
+        .life-route-steps-block {
+            .life-route-steps-block__inner {
+                .life-route-steps-list {
+                    .l-route-info-box {
+                        .header-block {
+                            @include padding(20);
+                        }
+
+                        .l-route-info__list {
+                            @include padding(30);
+
+                            &>ul {
+                                &>li {
+                                    @include padding-left(30);
+                                }
+                            }
+                        }
+                    }
+
+                    .l-route-files-box {
+                        @include padding(30);
+
+                        .l-route-files__list {
+                            &>ul {
+                                &>li {
+                                    @include padding-left(30);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

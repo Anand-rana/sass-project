@@ -1,0 +1,103 @@
+@include media("<=1200px") {
+    .auc-slider {
+        .owl-nav {
+            display: none;
+        }
+    }
+
+    .owl-dots {
+        display: block;
+    }
+}
+
+
+@include media("<=1100px") {
+    .property-status {
+        .bid-status {
+            height: 350px;
+        }
+    }
+}
+
+
+@include media("<=992px") {
+    .property-status {
+        @include margin-top(50);
+    }
+
+    .p-detail-section {
+        .p-dt-cotent {
+            border: none;
+
+            @include padding(0);
+
+            @include margin-top(15);
+        }
+    }
+}
+
+
+@include media("<=767px") {
+    .property__slider {
+        .property_info {
+            .time {
+                float: none;
+            }
+        }
+    }
+
+    .property-view-options {
+        .property-list-options {
+            ul {
+                li {
+                    & > span {
+                        @include padding(0);
+
+                        @include fontsize(14);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include media("<=568px") {
+    .property__slider {
+        .zoom-image {
+            width: 100%;
+
+            @include padding-right(0);
+        }
+
+        .property_info {
+            @include padding-right(0);
+        }
+
+        #vslider {
+            display: none;
+        }
+    }
+
+    .filter_tabs.is--viewmod {
+        li {
+            @include fontsize(15);
+        }
+    }
+
+    .property-view-options {
+        .property-list-options {
+            & > ul {
+                & > li {
+                    display: $block;
+
+                    @include padding(15 0);
+
+                    @include border-bottom(1, solid, #ccc);
+
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

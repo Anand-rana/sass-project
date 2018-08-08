@@ -1,0 +1,163 @@
+doctype html
+html(lang="en")
+	include _partials/_head.pug
+	body
+		
+		.layer-backdrop
+
+
+		.main-container
+			.app-page-block
+				header(id="header").fx-3
+						.top-header
+							.container
+								.row.align-items-center
+									.col-md-3
+										.logo-block
+											a(href="index.html")
+												img(src="images/logo.png" alt="logo" class="img-fluid logo-white")
+												img(src="images/logo-red.png" alt="logo" class="img-fluid logo-red")
+										div(class="hamburger hamburger--spin  nav-icon")
+											.hamburger-box
+												.hamburger-inner
+									.col-md-9
+										.nav-section
+											ul
+												li
+													a(href="Javascript:void;") About us
+												li
+													a(href="#app-work") Our work
+												li
+													a(href="#app-services") Our services
+												li
+													a(href="#app-contact") Contact
+												li
+													a(href="insights.html") Insights
+				section(class="section-app-about")
+					.container
+						.inner-block
+							.app-about-content
+								.txt-block
+									h2(class="type-about") App + web design is our bread + butter.
+										br
+										br
+										|Here is a selection of our work and this typed out just now.
+				section(class="section-app-desgin" id="app-work")
+					.container
+						.inner-block
+							.inner__container
+								.row.align-items-center
+									.col-md-6
+										.txt-block(class="wow fadeIn")
+											h3 Design
+											.p-content-txt
+												p Imagni iditiore nam ute in erro volectio. Tem eos derum nesto disciatia que veliber iorepudae eum et mos aut aditatem eum, evenima gnimos doluptate perovid quatum aut |Ovid que volor arum quo comnienderum quiberorere,
+												p  ventota tibusan totatempel excepuditas sit qui verum ent ipsam que volupta ant qui acepeli gendis voluptum veliqui omnieniet occum sim est, quia di con 
+												p cum adis expe aped mos volorum, nonse quatem fugit, ommos veligenimus eatur sinvenim quibusandit erum veles sam, ut aspieni hitiis aut la ipsuntiis eum etur?
+									.col-md-6
+										.app-phone-bg(class="wow fadeInUp d-none d-md-block")
+											img(src="images/Igniva-site-filler-iPhone.gif" atl="img")
+				section(class="section-app-dev")
+					.container
+						.inner-block
+							.inner__container
+								.row.align-items-center
+									.col-md-7.col-lg-6
+										.app-tablet-bg(class="wow fadeInUp d-none d-md-block")
+											img(src="images/Igniva-site-filler-iPhone.gif" atl="img")
+									.col-md-5.col-lg-6
+										.txt-block(class="wow fadeIn")
+											h3 Development
+											.p-content-txt
+												p Imagni iditiore nam ute in erro volectio. Tem eos derum nesto disciatia que veliber iorepudae eum et mos aut aditatem eum, evenima gnimos doluptate perovid quatum aut |Ovid que volor arum quo comnienderum quiberorere,
+												p  ventota tibusan totatempel excepuditas sit qui verum ent ipsam que volupta ant qui acepeli gendis voluptum veliqui omnieniet occum sim est, quia di con 
+												p cum adis expe aped mos volorum, nonse quatem fugit, ommos veligenimus eatur sinvenim quibusandit erum veles sam, ut aspieni hitiis aut la ipsuntiis eum etur?
+				section(class="section-our-services" id="app-services")
+					.container
+						.inner-block
+							.inner__container
+								.services-list
+									ul
+										li(class="wow fadeIn") > UI/UX design
+										li(class="wow fadeIn") > full stack development
+										li(class="wow fadeIn") > illustration
+										li(class="wow fadeIn") > identity design
+									.margin-top-6x
+										ul
+											li(class="wow fadeIn") > &amp; more
+								.services-list-boxs
+									.row
+										.col-md-6
+											.s-box(class="wow fadeIn")
+												figure
+													a(href="#")
+														img(src="images/Igniva-site-filler-1x1.gif" class="img-fluid" alt="img")
+
+										.col-md-6
+											.s-box(class="wow fadeIn")
+												figure
+													a(href="#")
+														img(src="images/Igniva-site-filler-1x1.gif" class="img-fluid" alt="img")
+
+			//contact-section
+			section(class="contact-section slide" id="app-contact" data-section-name="contact")
+				.container
+					.inner-block
+						h2(class="wow fadeInUp" data-wow-delay="0.1s") Contact
+						.contact-form-block
+							.field-group
+								.row
+									.col-md-6
+										.field-row-left
+											.c-field(class="wow fadeIn" data-wow-delay="0.2s")
+												input(type="text" placeholder="Name" class="c-field-control")
+											.c-field(class="wow fadeIn" data-wow-delay="0.2s")
+												input(type="text" placeholder="Email" class="c-field-control")
+									.col-md-6
+										.field-row-right
+											.c-field(class="wow fadeIn" data-wow-delay="0.2s")
+												input(type="text" placeholder="Company (optional)" class="c-field-control")
+											.c-field(class="wow fadeIn" data-wow-delay="0.2s")
+												input(type="text" placeholder="Phone (optional)" class="c-field-control")
+									.col-md-12
+										.help-field(class="wow fadeIn" data-wow-delay="0.2s")
+											.c-field
+												textarea( rows="1" placeholder="How can we help?" class="c-field-control js-elasticArea")
+								.btn-field(class="wow fadeIn" data-wow-delay="0.3s")
+									button.s-btn Send ›
+			//footer-section
+			footer
+					.container
+						.inner-footer
+							.row
+								.col-md-6
+									.address-block(class="wow fadeIn")
+										p london@ignivadigital.com
+										p +44 (0)203 769 0628
+										.margin-top-2x
+											p 11th Floor, One Croydon, Croydon, London CR0 0XT
+								.col-md-6
+									.social-links(class="wow fadeIn")
+										ul
+											li
+												a(href="#")
+													i.icon-instagram
+											li
+												a(href="#")
+													i.icon-facebook
+											li
+												a(href="#")
+													i.icon-linked-in
+											li
+												a(href="#")
+													i.icon-twitter
+									.footer-links(class="wow fadeIn")
+										ul
+											li
+												a(href="#") ©2017 Igniva Digital  
+											li
+												a(href="#") Privacy policy
+											li
+												a(href="#") Cookies							
+
+	include _partials/_footer.pug

@@ -1,0 +1,66 @@
+{
+    "sass.enabled": true,
+    "path": {
+        "assetes/scss/style.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../css/",
+                "inputpath": [],
+                "sourceComments": false,
+                "outputStyle": "compact"
+            },
+            "linting.collapsed": false,
+            "useTabChar": true,
+            "linting.SCSS.collapsed": true,
+            "mikaeljorhult.bracketsPHPLintTools.php-available": false
+        },
+        "assetes/scss/fonts.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../css/",
+                "inputpath": [],
+                "sourceComments": false,
+                "outputStyle": "compressed"
+            }
+        },
+        "assetes/scss/responsive.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../css/",
+                "inputpath": [],
+                "sourceComments": false,
+                "outputStyle": "compact"
+            }
+        },
+        "assetes/scss/bootstrap.min.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../css/",
+                "inputpath": [],
+                "sourceComments": false,
+                "outputStyle": "compressed"
+            },
+            "linting.collapsed": false
+        },
+        "assetes/scss/button.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../css/",
+                "inputpath": [],
+                "sourceComments": false,
+                "outputStyle": "compressed"
+            },
+            "linting.collapsed": false
+        },
+        "assetes/scss/slick.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../css/",
+                "inputpath": [],
+                "sourceComments": false,
+                "outputStyle": "compressed"
+            },
+            "linting.collapsed": false
+        }
+    }
+}

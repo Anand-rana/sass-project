@@ -1,0 +1,53 @@
+.advance-search-modal(data-ng-controller="searchCtrl")
+	.modal-header
+		h2.title Advanced Search
+		button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close-o
+	.modal-body
+		.field-group
+			.row
+				.col-md-4.col-lg-4
+					.advance-field-group
+						.search-filed.s-outline
+							label Title
+							input(type="text" placeholder="Liferoute Title").search-field-control
+							
+					.advance-field-group
+						.search-filed.s-outline
+							label Location
+							input(type="text" placeholder="Search by Location").search-field-control
+					.advance-field-group
+						.search-filed.s-outline
+							label Keywords
+							input(type="text" placeholder="Search by Keywords").search-field-control
+					
+
+				.col-md-4.col-lg-3.col-lg-offset-1
+					
+					.margin-bottom-4x
+						.search-drop-down-field
+							div(ng-dropdown-multiselect="" options="testmodeldata"  selected-model="testmodel" translation-texts="{buttonDefaultText: 'Steps'}"  extra-settings ="inputsettings")
+						.search-drop-down-field
+							div(ng-dropdown-multiselect="" options="testmodeldata"  selected-model="testmodel" translation-texts="{buttonDefaultText: 'Posting Status'}"  extra-settings ="inputsettings")
+						.search-drop-down-field
+							div(ng-dropdown-multiselect="" options="testmodeldata"  selected-model="testmodel" translation-texts="{buttonDefaultText: 'Media'}"  extra-settings ="inputsettings")
+						.search-drop-down-field
+							div(ng-dropdown-multiselect="" options="testmodeldata"  selected-model="testmodel" translation-texts="{buttonDefaultText: 'Posted By'}"  extra-settings ="inputsettings")
+						
+
+				.col-md-4.col-lg-3.col-lg-offset-1
+					
+					.search-drop-down-field
+						div(ng-dropdown-multiselect="" options="testmodeldata"  selected-model="testmodel" translation-texts="{buttonDefaultText: 'Relevance'}"  extra-settings ="inputsettings")  
+					.search-drop-down-field
+						div(ng-dropdown-multiselect="" options="testmodeldata"  selected-model="testmodel" translation-texts="{buttonDefaultText: 'Duration'}"  extra-settings ="inputsettings")  
+					.search-drop-down-field
+						div(ng-dropdown-multiselect="" options="testmodeldata"  selected-model="testmodel" translation-texts="{buttonDefaultText: 'Total Cost'}"  extra-settings ="inputsettings")  
+					.search-drop-down-field
+						div(ng-dropdown-multiselect="" options="testmodeldata"  selected-model="testmodel" translation-texts="{buttonDefaultText: 'Activity Status '}"  extra-settings ="inputsettings")  
+					
+			.btn-field
+				button.button.button-rounded.button-font-medium-txt.button-rounded.margin-left-1x.margin-bottom-1x.margin-right-1x.button-width-large Search
+				button.button.button-green.button-rounded.button-font-medium-txt.button-rounded.margin-left-1x.margin-bottom-1x.margin-right-1x.button-width-large Reset
+				button.button.button-danger.button-rounded.button-font-medium-txt.button-rounded.margin-left-1x.margin-bottom-1x.margin-right-1x.button-width-large Cancel
+		

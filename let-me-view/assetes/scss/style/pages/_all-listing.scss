@@ -1,0 +1,22 @@
+.all-listing-section {
+    .filter__sidebox {
+        .filter__catbox {
+            border: 0;
+        }
+    }
+
+    .all-listing__view {
+        .auction-list__box {
+            @include margin-bottom(30);
+
+            &:hover, &:focus {
+                border-width: 1px;
+                background-color: $white;
+            }
+
+            .button {
+                @include padding(0 10);
+            }
+        }
+    }
+}

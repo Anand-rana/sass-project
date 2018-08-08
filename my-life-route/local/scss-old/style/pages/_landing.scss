@@ -1,0 +1,457 @@
+.main-feed-section {
+    @include padding(60 0 50);
+    @include pos(rel, null);
+    .main-feed-option {
+        max-width: 920px;
+        display: table; // margin: 0 auto;
+        width: 100%;
+
+        .m-feed-opt-block {
+            width: 33.33%;
+            float: left;
+            text-align: center;
+            .icon-box {
+                width: 145px;
+                height: 145px;
+                @include circle;
+                background-color: $white;
+                margin: 0 auto 30px;
+                @include border(3, solid, $theme);
+                @include pos(rel, null);
+
+                img {
+                    max-width: 100%;
+                    @include pos(ab, 0 0 0 0);
+                    margin: auto;
+                    @include padding(30);
+                }
+
+                .add-icon {
+                    width: 37px;
+                    height: 37px;
+                    @include circle;
+                    background-color: $color-list-01;
+                    color: $white;
+                    text-align: center;
+                    @include fontsize(20);
+                    line-height: 37px;
+                    @include pos(ab, null 0 0 null);
+
+                    &.c-1 {
+                        background-color: $color-list-02;
+                    }
+                    &.c-2 {
+                        background-color: $color-list-03;
+                    }
+                }
+            }
+
+            figcaption {
+                @include padding(30 0);
+                @include border-top(1, solid, #d4d4d4);
+                @include border-bottom(1, solid, #d4d4d4);
+                @include fontsize(18);
+                h3 {
+                    font-weight: 400;
+                    color: $color-text-02;
+
+                    span {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-feed-data {
+        @include margin-top(60);
+        @include pos(rel, null);
+
+        .m-feed-box {
+            @include pos(rel, null);
+            //z-index: 0;
+            &:after {
+                @include pos(ab, 100% 0 0 50%);
+                content: "";
+                width: 1px;
+                height: 100%;
+
+                content: "";
+                background-color: #d4cece;
+                @include translatepos(-50%, 0);
+                z-index: -1;
+            }
+            &:before {
+                @include pos(ab, auto 0 -70px 50%);
+                width: 35px;
+                height: 35px;
+                @include circle;
+                background-color: $theme; //@include box-shadow(inset 0 3px 3px 1px rgba(5, 136, 176, .76));
+                content: "";
+                @include border(8, solid, #eeeeee);
+                @include translatepos(-50%, 0);
+            }
+
+
+
+            &:last-of-type {
+                &:after {
+                    display: none;
+                }
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            .posted-time {
+                @include fontsize(17);
+                @include margin-bottom(15);
+                background-color: $color-bg-02;
+                display: $ib;
+                .time {
+                    color: lighten($black, 70%);
+                }
+            }
+
+            .news-route-box,
+            .event-route-box,
+            .l-route-box {
+                @include margin-bottom(70);
+                background-color: $color-bg-02;
+
+                .user-dtl {
+                    .user-dtl-info {
+                        .user-dtl-info-list {
+
+                            .list-info {
+                                li {
+                                    .l-label {
+                                        width: 110px;
+                                        @include padding-right(10);
+                                        &:after {
+                                            right: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .l-route-box {
+                .user-dtl {
+
+                    .user-dtl-info {
+                        .user-dtl-info-list {}
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dtl-block {
+        @include pos(ab, 0 null null -1000px);
+
+        z-index: 10;
+
+        &.open {
+            left: -200px;
+            z-index: 30;
+        }
+    }
+
+    .sp-btn {
+        @include pos(ab, 250px null null -35px);
+        z-index: 20;
+    }
+}
+
+.main-side-block {
+
+    .invite-other-block {
+        @include border-bottom(1, solid, lighten(#959595, 30%));
+        @include padding-bottom(20);
+        @include margin-bottom(20);
+    }
+
+
+
+    .button-invite {
+        width: 100%;
+        display: $b;
+        color: $white;
+        height: 50px;
+        border: 0;
+        background-color: #8800d6;
+        margin: 0;
+        padding: 0;
+        @include border-round(4);
+        @include fontsize(18);
+        font-weight: 300;
+        @include pos(rel, null);
+        @include padding-left(60);
+        @include transition(all 0.3s ease-in-out);
+        .ico {
+            @include pos(ab, 0 null 0 0);
+            width: 60px;
+            line-height: 50px;
+            @include fontsize(20);
+            @include border-right(1, solid, $white);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: lighten(#8800d6, 5%);
+        }
+    }
+    .user-activity-block {
+        @include box-shadow(0 4px 5px rgba(0, 0, 0, .32));
+        @include border-round(0 0 4 4);
+        @include margin-bottom(30);
+        ;
+        .u-activity-header {
+            background-color: $theme;
+            @include padding(15 10);
+            text-align: center;
+            @include border-round(4 4 0 0);
+            h3 {
+                @include fontsize(16);
+                color: $white;
+                font-weight: 400;
+            }
+        }
+
+        .u-activity-list {
+            @include padding(20 25);
+
+            ul {
+                li {
+                    @include fontsize(11);
+                    @include padding-left(20);
+                    font-weight: 300;
+                    color: $black;
+                    @include padding-bottom(20);
+                    @include pos(rel, null);
+
+                    &:after {
+                        @include pos(ab, 5px null 0 0);
+                        width: 1px;
+                        height: 100%;
+                        content: "";
+                        background-color: #37a789;
+                    }
+
+                    &:before {
+                        width: 5px;
+                        height: 5px;
+                        @include circle;
+                        background-color: #37a789;
+                        @include pos(ab, 5px null null -2px);
+                        content: "";
+                    }
+
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+
+                    &>a {
+                        color: #37a789;
+
+                        &:hover,
+                        &:focus {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .recomend-block {
+        @include border-top(1, solid, lighten(#959595, 30%));
+        @include padding-top(20);
+        h3 {
+            @include fontsize(14);
+            font-weight: 300;
+            color: $black;
+            @include padding-bottom(15);
+        }
+
+        .recomend-slider {
+            @include border-bottom(1, solid, lighten(#959595, 30%));
+            @include padding-bottom(20);
+            figure {
+                @include margin(0);
+                @include pos(rel, null);
+
+
+                img {
+                    max-width: 100%;
+                    @include border-round(4);
+                }
+
+                figcaption {
+                    @include pos(ab, null 0 0 0);
+                    @include padding(12 15);
+                    background-color: rgba($black, 0.5);
+                    @include border-round(0 0 4 4);
+                    z-index: 10;
+
+                    h4 {
+                        @include fontsize(15);
+                        color: $white;
+                    }
+                }
+            }
+
+            .owl-dots {
+                text-align: center;
+                @include margin-top(12);
+
+                .owl-dot {
+                    span {
+                        background: transparent;
+                        @include border(1, solid, $black);
+                    }
+
+                    &.active {
+                        span {
+                            background: $black;
+                        }
+                    }
+                }
+            }
+
+            &:last-of-type {
+                border: 0;
+            }
+        }
+    }
+}
+
+.user-dtl-block {
+    max-width: 350px;
+    width: 100%;
+    -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+
+    .user-dtl-box {
+        background-color: $white;
+        @include box-shadow(0 3px 6px rgba(0, 0, 0, .24));
+        @include padding(20 50);
+        @include border-round(4);
+        @include pos(rel, null);
+
+        .user-pic {
+            @include margin-bottom(20);
+            img {
+                width: 120px;
+                height: 120px;
+                margin: 0 auto;
+                display: $b;
+                @include circle;
+                object-fit: cover;
+                @include border(3, solid, $theme);
+            }
+        }
+        .user-name {
+            h3 {
+                @include fontsize(20);
+                font-weight: 400;
+                color: $color-text-02;
+                text-align: center;
+            }
+        }
+        .user-profile {
+            @include margin-top(5);
+            h3 {
+                text-align: center;
+                @include fontsize(16);
+                font-weight: 300;
+                color: lighten($theme, 10%);
+            }
+        }
+
+
+        .user-other-dtl-list {
+            @include margin-top(35);
+            ul {
+                li {
+                    display: table;
+                    width: 100%;
+                    @include padding-bottom(15);
+                    font-weight: 300;
+                    color: $color-text-02;
+
+                    .icon-label {
+                        width: 50px;
+                    }
+
+                    .icon {
+
+                        @include fontsize(18);
+                        vertical-align: middle;
+                        display: $ib;
+                        width: 32px;
+                        height: 32px;
+                        line-height: 32px;
+                        text-align: center;
+                        @include circle; //@include border(1, solid, $theme);
+                        background-color: $theme;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .edit-icon {
+            @include pos(ab, 30px 10px null null);
+
+            &>a {
+                @include fontsize(20);
+                color: $color-list-01;
+            }
+        }
+        .close-icon {
+            @include pos(ab, 30px null null 10px);
+            @include fontsize(20);
+            color: #ff3b3c;
+            cursor: pointer;
+        }
+        .user-work-dtl-list {
+            ul {
+                li {
+                    display: table;
+                    width: 100%;
+                    @include padding-bottom(15);
+                    font-weight: 300;
+                    color: $color-text-02;
+                    span {
+                        vertical-align: middle;
+                    }
+                    .icon {
+                        @include margin-right(25);
+                        @include fontsize(18);
+                        vertical-align: middle;
+                        display: $ib;
+                        width: 32px;
+                        height: 32px;
+                        line-height: 32px;
+                        text-align: center;
+                        @include circle; // @include border(1, solid, $theme);
+                        color: $white;
+                        background-color: $theme;
+                    }
+
+                    .label-name {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}

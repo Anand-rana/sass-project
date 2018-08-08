@@ -1,0 +1,143 @@
+
+<div class="my-setting-section" data-ng-controller="settingCtrl">
+  <div class="sp-btn" data-ng-click="profileside(); showcaption = ! showcaption"><span class="hidden-xs" ng-show="!showcaption">Hide Profile</span><span class="hidden-xs" ng-show="showcaption">Show Profile</span>
+    <!--for mobile-view--><span class="visible-xs" ng-show="!showcaption">Show Profile</span><span class="visible-xs" ng-show="showcaption">Hide Profile</span>
+  </div>
+  <div class="container">
+    <div class="my-setting-block">
+      <div class="user-dtl-block">
+        <div class="user-dtl-block-container">
+          <div class="user-dtl-box">
+            <div class="user-pic"><img src="images/profile-3.jpg" alt="img"/></div>
+            <div class="user-name">
+              <h3>Mahmood Choudhury</h3>
+            </div>
+            <div class="user-profile">
+              <h3>Entrepreneur</h3>
+            </div>
+            <div class="user-other-dtl-list">
+              <ul>
+                <li>
+                  <div class="t-cell icon-label"><span class="icon"><i class="icon-user"></i></span></div>
+                  <div class="t-cell"><span>22 Years Old</span></div>
+                </li>
+                <li>
+                  <div class="t-cell icon-label"><span class="icon"><i class="icon-marker"></i></span></div>
+                  <div class="t-cell"><span>London, United Kingdom</span></div>
+                </li>
+                <li>
+                  <div class="t-cell icon-label"><span class="icon"><i class="icon-phone"></i></span></div>
+                  <div class="t-cell"><span>+999-123-4567	</span></div>
+                </li>
+                <li>
+                  <div class="t-cell icon-label"><span class="icon"><i class="icon-cap"></i></span></div>
+                  <div class="t-cell"><span>Postgraduate</span></div>
+                </li>
+                <li>
+                  <div class="t-cell icon-label"><span class="icon"><i class="icon-web"></i></span></div>
+                  <div class="t-cell"><span>www.myliferoute.com</span></div>
+                </li>
+              </ul>
+            </div>
+            <div class="edit-icon"><a href="#"><i class="icon-edit"></i></a></div>
+            <div class="close-icon visible-xs" data-ng-click="closemenu()"><i class="icon-close-o"></i></div>
+          </div>
+          <div class="margin-top-2x margin-bottom-2x">
+            <button class="button button-green button-rounded button-font-base button-height-large button-font-medium button-font-medium-txt button-block" ng-controller="ModalCtrl" ng-click="workhistory()">View Work History<span class="button-btn-icon"><i class="icon-arrow-right"> </i></span></button>
+          </div>
+          <div class="user-dtl-box">
+            <div class="user-work-dtl-list">
+              <ul>
+                <li>
+                  <div class="t-cell label-name"><span class="icon"><i class="icon-route"> </i></span><span>Liferoutes :</span></div>
+                  <div class="t-cell text-right"><span>22</span></div>
+                </li>
+                <li>
+                  <div class="t-cell label-name"><span class="icon"><i class="icon-news"> </i></span><span>News posted :</span></div>
+                  <div class="t-cell text-right"><span>12</span></div>
+                </li>
+                <li>
+                  <div class="t-cell label-name"><span class="icon"><i class="icon-connection"> </i></span><span>Connections :</span></div>
+                  <div class="t-cell text-right"><span>22</span></div>
+                </li>
+                <li>
+                  <div class="t-cell label-name"><span class="icon"><i class="icon-follow"> </i></span><span>Followers :</span></div>
+                  <div class="t-cell text-right"><span>12</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="my-setting-cotainer">
+        <div class="heading-block">
+          <div class="breadcrumb-list">
+            <ul>
+              <li><span>Settings</span></li>
+              <li><span class="active">Manage Notifications</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="my-setting-form">
+          <div class="my-setting-form__container">
+            <h3 class="form-title">Manage Notifications</h3>
+            <div class="nt-setting-group">
+              <div class="nt-setting-opt">
+                <div class="row">
+                  <div class="col-md-8 col-sm-8 col-xs-8">
+                    <h3>Activity Involving Me - Alerts</h3><span class="help-note">When someone likes, follows, comments, shares any of your content or Liferoutes.</span>
+                  </div>
+                  <div class="col-md-4 col-md-4 col-xs-4">
+                    <div class="fh-switch">
+                      <input type="checkbox" id="one"/>
+                      <label for="one"></label><span class="fh-switch-knob"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nt-setting-opt">
+                <div class="row">
+                  <div class="col-md-8 col-sm-8 col-xs-8">
+                    <h3>Email - Activity Involving Me</h3><span class="help-note">New Message, New Comment, Connection Request, Comment Threads, Likes and Shares.</span>
+                  </div>
+                  <div class="col-md-4 col-md-4 col-xs-4">
+                    <div class="fh-switch">
+                      <input type="checkbox" id="two"/>
+                      <label for="two"></label><span class="fh-switch-knob"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nt-setting-opt">
+                <div class="row">
+                  <div class="col-md-8 col-sm-8 col-xs-8">
+                    <h3>My Connections – Online Activity </h3><span class="help-note">Anyone that is a connection whether that be on your Profile Page or that you have Followed or Liked - any activity they do you will be notified.</span>
+                  </div>
+                  <div class="col-md-4 col-md-4 col-xs-4">
+                    <div class="fh-switch">
+                      <input type="checkbox" id="three"/>
+                      <label for="three"></label><span class="fh-switch-knob"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nt-setting-opt">
+                <div class="row">
+                  <div class="col-md-8 col-sm-8 col-xs-8">
+                    <h3>Business Pages – User Interaction </h3><span class="help-note">Anyone that posts a comment, likes, follows one or more of your Pages or mentions this on a Liferoute that they have created or requested.</span>
+                  </div>
+                  <div class="col-md-4 col-md-4 col-xs-4">
+                    <div class="fh-switch">
+                      <input type="checkbox" id="four"/>
+                      <label for="four"></label><span class="fh-switch-knob"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

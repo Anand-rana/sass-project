@@ -1,0 +1,227 @@
+.t-block {
+    background-color: #7c7f8e;
+
+    @include padding(20 0);
+
+    .search__sorfield {
+        max-width: 300px;
+        float: right;
+    }
+}
+
+.search-view__top {
+    text-align: right;
+}
+
+.search-list__view {
+    & > .row {
+        @include margin(0 -10);
+
+        & > [class^=col-] {
+            @include padding(0 10);
+        }
+    }
+}
+
+.search-list__filter {
+    .filter__sidebox {
+        @include border(1, solid, #828ea8);
+
+        @include open-semibold;
+
+        .filter__sidebox__title {
+            @include padding(20);
+
+            background-color: #eeefef;
+
+            @include border-bottom(1, solid, #828ea8);
+
+            & > h5 {
+                color: $themecolor;
+                display: $inline;
+            }
+
+            & > a {
+                float: right;
+                color: $textcolor;
+            }
+        }
+
+        .filter__sidebox__form {
+            @include padding(20 12);
+
+            .form-group {
+                @include margin-bottom(30);
+
+                .c-field {
+                    & > .form-control {
+                        border-color: #828ea8;
+                    }
+                }
+            }
+
+            .rzslider {
+                .rz-bar {
+                    height: 6px;
+                }
+
+                .rz-pointer {
+                    &:after {
+                        background-color: #cfe2f2;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+
+        .filter__catbox {
+            @include padding(20);
+
+            @include border-top(1, solid, #828ea8);
+
+            .filter__catbox__option {
+                @include margin-top(30);
+
+                & > h5 {
+                    @include open-semibold;
+                }
+
+                & > ul {
+                    @include padding-left(10);
+
+                    @include margin-top(20);
+
+                    & > li {
+                        @include margin-bottom(15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.search-result-view {
+    .search-result__box {
+        @include margin-bottom(15);
+
+        .search-result__title {
+            @include padding(20);
+
+            background-color: #eeefef;
+
+            @include border(1, solid, #828ea8);
+
+            & > h4 {
+                color: $themecolor;
+
+                @include fontsize(15);
+            }
+        }
+
+        .search-result__property {
+            @include padding(20 15);
+
+            @include border-left(1, solid, #c0c6d3);
+
+            @include border-right(1, solid, #c0c6d3);
+
+            @include border-bottom(1, solid, #c0c6d3);
+
+            .property__img {
+                @include border(1, solid, #dcdada);
+
+                @include pos(rel, null);
+
+                .property__caption {
+                    @include padding(4);
+                }
+            }
+
+            .property__dtl {
+                & p {
+                    @include margin-bottom(10);
+                }
+            }
+
+            .property__infobox {
+                @include border(1, solid, #dcdada);
+
+                width: 200px;
+                float: right;
+
+                @include open-semibold;
+
+                .property__infobox__heading {
+                    @include padding(10);
+
+                    color: $white;
+                    background-color: #aeaeaf;
+
+                    &.bid_timeleft {
+                        background-color: $themecolor;
+                    }
+                }
+
+                .property__infobox__content {
+                    & > .time {
+                        @include fontsize(17);
+
+                        display: $block;
+                    }
+
+                    & > .date {
+                        @include fontsize(17);
+
+                        @include open-bold;
+
+                        text-transform: $uppercase;
+
+                        @include margin(15 0);
+
+                        display: $block;
+                        color: $themecolor;
+                    }
+                }
+
+                .bid__out {
+                    @include fontsize(40);
+
+                    color: #aeaeaf;
+
+                    @include margin(20 0);
+                }
+            }
+
+            .property__price {
+                @include margin-top(15);
+
+                .price {
+                    @include open-bold;
+
+                    @include fontsize(17);
+
+                    color: $themecolor;
+
+                    @include padding-right(15);
+
+                    @include border-right(2, solid, #ccc4c4);
+                }
+
+                .by {
+                    @include padding-left(15);
+                }
+
+                .total__view {
+                    float: right;
+
+                    & > [class^="icon-"] {
+                        @include fontsize(30);
+
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

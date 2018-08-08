@@ -1,0 +1,804 @@
+.user-route-list {
+    @include margin-top(20);
+
+    .total-entries {
+        text-align: center;
+        @include font-size(15);
+        font-weight: 400;
+
+        span {
+            display: $ib;
+            text-decoration: underline;
+        }
+    }
+}
+
+.dashboard-route-dtl-section {
+    .heading-block {
+        @include border-bottom(1, solid, lighten($theme, 30%));
+        @include padding-bottom(10);
+
+        .title {
+            @include fontsize(24);
+            font-weight: 400;
+            color: $theme;
+        }
+    }
+
+    .life-route-dtl__container {
+        @include margin-top(70);
+        .life-route-dtl__box {
+
+
+            .l-route-dtl__box {
+                @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, .35));
+                overflow: hidden;
+
+                .user-p-info {
+                    @include pos(rel, null);
+                    text-align: center;
+                    @include padding(30 0);
+
+                    .user-img {
+                        width: 100px;
+                        height: 100px;
+                        overflow: hidden;
+                        @include circle;
+                        @include border(2, solid, $theme);
+                        margin: 0 auto 15px;
+                        img {
+                            min-height: 100px;
+                            object-fit: cover;
+                            max-width: 100%;
+                        }
+                    }
+                    .user-name {
+                        h3 {
+                            @include fontsize(18);
+                            color: $color-text-01;
+                            font-weight: 400;
+                        }
+                    }
+                    .user-profile {
+                        h4 {
+                            @include fontsize(14);
+                            color: $theme;
+                        }
+                    }
+                }
+                .list-label {
+                    @include fontsize(25);
+                    line-height: 25px;
+                    font-weight: 400;
+                    @include pos(ab, 0 null null null);
+                    @include padding(10);
+                    z-index: 0;
+                    color: $white;
+                    text-transform: uppercase;
+                    &:before {
+                        @include arrow(top-left, $color-list-01, 80px);
+                        content: "";
+                        @include pos(ab, 0 nul null 0);
+                        z-index: -1;
+                    }
+                }
+
+                .user-dtl {
+                    .user-dtl-info {
+                        @include padding(30 0 40);
+
+                        .r-title {
+                            @include fontsize(18);
+                            font-weight: 400;
+                            color: $color-text-01;
+                        }
+
+                        .user-dtl-info-list {
+                            @include margin-top(30);
+                            @include fontsize(15);
+                            .list-info {
+                                li {
+                                    display: table;
+                                    width: 100%;
+                                    @include padding-bottom(20);
+                                    @include pos(rel, null);
+                                    font-weight: 300;
+                                    color: $black;
+
+                                    span {
+                                        display: table-cell;
+                                    }
+
+                                    .l-label {
+                                        @include pos(rel, null);
+                                        @include padding-right(25); //color: $color-text-01;
+                                        width: 130px;
+                                        font-weight: 400;
+                                        &:after {
+                                            @include pos(ab, 0 25px 0 mull);
+                                            content: ":";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .user-des-txt {
+                        color: $color-text-01;
+                        @include margin-top(20);
+                        @include padding-bottom(20);
+                        @include border-bottom(1, solid, #ededed);
+
+                        h3.title {
+                            @include fontsize(15);
+                            font-weight: 400;
+                            color: $color-text-01;
+                            @include padding-bottom(10);
+
+                            span {
+                                vertical-align: middle;
+                                display: $ib;
+                            }
+                            span.ico {
+                                @include padding-right(10);
+                                @include fontsize(18);
+                            }
+                        }
+                        .desc-txt {
+                            @include padding-right(50);
+                            p {
+                                @include fontsize(15);
+                                font-weight: 300;
+                                color: $color-text-01;
+                            }
+                        }
+                    }
+
+                    .user-keywords {
+                        @include padding(20 0);
+                        color: $color-text-01;
+                        h3.title {
+                            @include fontsize(15);
+                            font-weight: 400;
+                            color: $color-text-01;
+                            @include padding-bottom(10);
+
+                            span {
+                                vertical-align: middle;
+                                display: $ib;
+                            }
+                            span.ico {
+                                @include padding-right(10);
+                                @include fontsize(18);
+                            }
+                        }
+
+                        .keywords-list {
+                            p {
+                                @include fontsize(15);
+                                font-weight: 300;
+                                color: $color-text-01;
+                            }
+                        }
+                    }
+                }
+
+                .r-bottom-block {
+                    @include padding(15 0);
+                    background-color: $color-list-b-01;
+
+                    ul {
+                        display: table;
+                        width: 100%;
+
+                        li {
+                            float: left;
+                            width: 20%;
+                            text-align: center;
+
+                            .icon {
+                                @include fontsize(25);
+                                @include margin-right(15);
+                            }
+                            .__label {
+                                font-weight: 400;
+                                @include margin-right(2);
+                            }
+                            span {
+                                display: $ib;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+
+                    .t-videos {
+                        font-weight: 400;
+                        @include fontsize(18);
+                        display: $ib;
+
+                        span {
+                            display: $ib;
+                            vertical-align: middle;
+                        }
+
+                        .icon {
+                            @include fontsize(25);
+                            @include margin-right(5);
+                        }
+                    }
+                    .t-img {
+                        display: $ib;
+                        font-weight: 400;
+                        @include margin-left(18);
+                        @include fontsize(18);
+                        span {
+                            display: $ib;
+                            vertical-align: middle;
+                        }
+
+                        .icon {
+                            @include fontsize(25);
+                            @include margin-right(5);
+                        }
+                    }
+                    .t-likes {
+
+                        vertical-align: middle;
+                        .icon {
+                            color: #52a0c0;
+                        }
+                    }
+                    .t-coments {
+
+                        .icon {
+                            color: #e55657;
+                        }
+                    }
+
+                    .t-follower {
+
+
+                        .icon {
+                            color: #e99e61;
+                        }
+                    }
+                    .t-share {
+
+
+                        .icon {
+                            color: #51a851;
+                        }
+                    }
+                }
+            }
+        }
+
+        .life-route-steps-block {
+            @include padding(60 0);
+            @include margin(60 0);
+            @include pos(rel, null);
+            z-index: 0;
+
+            &:after {
+                @include pos(ab, 0 null 0 50%);
+                content: "";
+                width: 6px;
+                background-color: #eeeeee;
+                @include translatepos(-50%, 0%);
+                z-index: -1;
+            }
+
+            .life-route-steps-block__inner {
+                @include pos(rel, null);
+                &:before {
+                    @include pos(ab, -70px null null 50%);
+                    width: 17px;
+                    height: 17px;
+                    @include circle;
+                    background-color: #eeeeee;
+                    content: "";
+                    @include translatepos(-50%, 0%);
+                }
+                &:after {
+                    @include pos(ab, -null null -70px 50%);
+                    width: 17px;
+                    height: 17px;
+                    @include circle;
+                    background-color: #eeeeee;
+                    content: "";
+                    @include translatepos(-50%, 0%);
+                }
+
+                .life-route-steps-list {
+
+                    .m-space-left {
+                        @include margin-left(50);
+                    }
+                    .m-space-right {
+                        @include margin-right(50);
+                    }
+
+                    &>ul {
+                        counter-reset: mega-step, mini-step;
+                        &>li {
+                            @include pos(rel, null);
+                            @include padding-bottom(70);
+                            counter-increment: mega-step;
+
+                            &:after {
+                                width: 70px;
+                                height: 70px;
+                                @include circle;
+                                background-color: $theme;
+                                @include box-shadow(inset 0 3px 3px 1px rgba(5, 136, 176, .76));
+                                color: $white;
+                                @include fontsize(16);
+                                text-transform: uppercase;
+                                font-weight: 400;
+                                @include pos(ab, 100px null null 50%);
+                                content: 'Step \A' counter(mega-step, decimal);
+                                white-space: pre;
+                                display: block;
+                                @include padding(15 0);
+                                line-height: 20px;
+                                text-align: center;
+                                @include translatepos(-50%, 0%);
+                                z-index: 1;
+                            }
+                            &:before {
+                                width: 80px;
+                                height: 80px;
+                                @include circle;
+                                background-color: #eeeeee;
+
+                                color: $white;
+                                @include fontsize(16);
+                                text-transform: uppercase;
+                                font-weight: 400;
+                                @include pos(ab, 95px null null 50%);
+                                content: '';
+
+                                @include translatepos(-50%, 0%);
+                                z-index: 1;
+                            }
+                        }
+                    }
+
+
+                    .l-route-info-box {
+                        @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, .35));
+                        .header-block {
+                            background-color: $theme;
+                            @include padding(20 30);
+
+                            h3 {
+                                @include fontsize(18);
+                                color: $white;
+                                font-weight: 400;
+                            }
+                        }
+
+
+                        .l-route-info__list {
+                            @include padding(40 40 40 50);
+                            background-color: $color-bg-02;
+                            color: $color-text-01;
+                            @include fontsize(13);
+
+
+                            p {
+                                color: $color-text-01;
+                            }
+                            &>ul {
+                                &>li {
+                                    @include padding-bottom(35);
+                                    @include padding-left(50);
+                                    @include pos(rel, null);
+                                    &:after {
+                                        @include pos(ab, 0px null 0px 0px);
+                                        content: "";
+                                        width: 6px;
+                                        background-color: #ededed;
+                                    }
+                                    h4 {
+                                        @include fontsize(16);
+                                        font-weight: 400;
+                                    }
+
+                                    &:last-child {
+                                        &:after {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .list-ico {
+                                width: 34px;
+                                color: $white;
+                                text-align: center;
+                                @include padding(0 4);
+                                display: $b;
+                                @include pos(ab, 0 null null -14px);
+                                z-index: 1;
+
+                                &:before {
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-width: 0 17px 10px 17px;
+                                    border-color: transparent transparent $theme transparent;
+
+                                    @include pos(ab, null 0 100% 0);
+                                    content: "";
+                                }
+
+                                &:after {
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-width: 10px 17px 0 17px;
+                                    border-color: $theme transparent transparent transparent;
+
+                                    @include pos(ab, 100% 0 null 0);
+                                    content: "";
+                                }
+
+                                &.c-1 {
+                                    background-color: $color-list-01;
+
+                                    &:before {
+                                        border-color: transparent transparent $color-list-01 transparent;
+                                    }
+
+                                    &:after {
+                                        border-color: $color-list-01 transparent transparent transparent;
+                                    }
+                                }
+
+
+                                &.c-2 {
+                                    background-color: $color-list-02;
+
+                                    &:before {
+                                        border-color: transparent transparent $color-list-02 transparent;
+                                    }
+
+                                    &:after {
+                                        border-color: $color-list-02 transparent transparent transparent;
+                                    }
+                                }
+
+                                &.c-3 {
+                                    background-color: $color-list-03;
+
+                                    &:before {
+                                        border-color: transparent transparent $color-list-03 transparent;
+                                    }
+
+                                    &:after {
+                                        border-color: $color-list-03 transparent transparent transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .l-route-files-box {
+                        @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, .35));
+                        @include padding(40 40 40 50);
+                        background-color: $color-bg-02;
+                        .l-route-files__list {
+                            color: $color-text-01;
+
+                            &>ul {
+                                &>li {
+                                    @include padding-bottom(40);
+                                    @include padding-left(50);
+                                    @include pos(rel, null);
+                                    &:after {
+                                        @include pos(ab, 0px null 0px 0px);
+                                        content: "";
+                                        width: 6px;
+                                        background-color: #ededed;
+                                    }
+                                    &.last-block {
+                                        &:after {
+                                            display: none;
+                                        }
+                                    }
+                                    h4 {
+                                        @include fontsize(16);
+                                        font-weight: 400;
+                                        @include padding-bottom(15);
+                                    }
+                                    .vimeoFrame {
+                                        padding: 0 !important;
+                                        position: static !important;
+                                    }
+                                    figure {
+                                        @include margin(0);
+                                        overflow: hidden;
+                                        @include fluid-ratio(16 9, img);
+
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                    figcaption {
+                                        @include padding(10 0 15);
+                                        h5 {
+                                            @include fontsize(12);
+                                            font-weight: 400;
+                                            letter-spacing: 2px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .list-ico {
+                                width: 34px;
+                                color: $white;
+                                text-align: center;
+                                @include padding(4);
+                                @include fontsize(12);
+                                display: $b;
+                                @include pos(ab, 0 null null -14px);
+                                z-index: 1;
+
+                                &:before {
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-width: 0 17px 10px 17px;
+                                    border-color: transparent transparent $theme transparent;
+
+                                    @include pos(ab, null 0 100% 0);
+                                    content: "";
+                                }
+
+                                &:after {
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-width: 10px 17px 0 17px;
+                                    border-color: $theme transparent transparent transparent;
+
+                                    @include pos(ab, 100% 0 null 0);
+                                    content: "";
+                                }
+
+                                &.c-1 {
+                                    background-color: #bd9e32;
+
+                                    &:before {
+                                        border-color: transparent transparent #bd9e32 transparent;
+                                    }
+
+                                    &:after {
+                                        border-color: #bd9e32 transparent transparent transparent;
+                                    }
+                                }
+
+
+                                &.c-2 {
+                                    background-color: #f75742;
+
+                                    &:before {
+                                        border-color: transparent transparent #f75742 transparent;
+                                    }
+
+                                    &:after {
+                                        border-color: #f75742 transparent transparent transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.stats-dtl-box {
+    background-color: $white;
+    @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, .17));
+    @include border(1, solid, #d6d6d6);
+    @include padding(50 40 40);
+    @include margin-bottom(40);
+
+    .head-block {
+        @include border-bottom(1, solid, lighten($theme, 30%));
+        @include padding-bottom(10);
+
+        .title {
+            @include fontsize(24);
+            font-weight: 400;
+        }
+    }
+
+
+    .stat-dtl-list {
+        @include margin-top(30);
+        &>ul {
+            &>li {
+                @include padding-bottom(20);
+                @include padding-left(30);
+                @include fontsize(16);
+                font-weight: 300;
+                @include pos(rel, null);
+
+                .t-no {
+                    @include fontsize(28);
+                    font-weight: 500;
+                    color: $theme;
+                    @include padding-right(10);
+                }
+
+
+                &:before {
+                    width: 15px;
+                    height: 15px;
+                    @include circle;
+                    background-color: $theme;
+                    @include pos(ab, 15px null null 0);
+                    content: "";
+                }
+            }
+        }
+    }
+}
+
+.stats-oth-info {
+    display: table;
+    width: 100%;
+    .stats-oth-info__block {
+        background-color: $white;
+        @include border(1, solid, #d7d7d7);
+        @include padding(35 40 30);
+        @include box-shadow(0 5px rgba(0, 0, 0, .16));
+        @include fontsize(20);
+        font-weight: 500;
+        color: $color-text-01;
+        float: left;
+        @include margin-bottom(10);
+        @include margin-right(20);
+        min-width: 250px;
+
+
+        h3 {
+            @include fontsize(24);
+            color: $color-text-04;
+            font-weight: 300;
+        }
+
+        h5 {
+            @include fontsize(16);
+            font-weight: 300;
+        }
+    }
+}
+
+.route-comments-block {
+    @include margin-top(50);
+
+
+
+    .route-comments__list {
+        @include margin-top(60);
+        @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, .35));
+
+        .header-block {
+            background-color: $color-bg-03;
+            @include padding(20 25);
+            color: $white;
+            @include pos(rel, null);
+
+
+            &:before {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 17px 17px 17px;
+                border-color: transparent transparent $color-bg-03 transparent;
+
+                @include pos(ab, null 0 100% 40px);
+                content: "";
+            }
+
+            h4 {
+                font-weight: 400;
+                @include fontsize(20);
+            }
+
+            &.c-1 {
+                background-color: $color-bg-04;
+
+                &:before {
+                    border-color: transparent transparent $color-bg-04 transparent;
+                }
+            }
+
+            &.c-2 {
+                background-color: $color-bg-05;
+
+                &:before {
+                    border-color: transparent transparent $color-bg-05 transparent;
+                }
+            }
+        }
+
+        .route-comments__listdata {
+            @include padding(20 25);
+        }
+
+        .comment-box {
+            @include padding(20 0 0);
+
+
+            &>.media {
+                &>.media-left {
+                    @include padding-right(15);
+                    .usr-pic {
+                        img {
+                            width: 55px;
+                            height: 55px;
+                            object-fit: cover;
+                            @include circle;
+                        }
+                    }
+                }
+
+
+                .comment-msg {
+                    @include fontsize(14);
+                    color: $color-text-01;
+                    @include border-bottom(1, solid, #f1f1f1);
+                    @include padding-bottom(20);
+                    .comment-msg__top {
+                        display: table;
+                        width: 100%;
+                        @include padding-bottom(10);
+                        .comment-mg__usr-info {
+                            float: left;
+                            .usr-name {
+                                h4 {
+                                    @include fontsize(16);
+                                    font-weight: 500;
+                                    color: $color-text-01;
+                                }
+                            }
+                            .usr-profile {
+                                @include padding-top(5);
+                                h4 {
+                                    @include fontsize(13);
+                                    font-weight: 100;
+                                    color: $color-text-01;
+                                }
+                            }
+                        }
+                        .comment-mg__usr__opt {
+                            float: right;
+                            color: $color-text-01;
+
+                            .ico {
+                                @include padding-right(15);
+                                display: $ib;
+                                cursor: pointer;
+                                @include pos(rel, null);
+                            }
+
+                            span.time {
+                                display: $ib;
+                                @include padding-left(15);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

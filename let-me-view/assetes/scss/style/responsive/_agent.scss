@@ -1,0 +1,41 @@
+@include media("<=1200px") {
+    .manage-pannel {
+        .pannel__txt {
+            @include fontsize(15);
+
+            @include padding(0 5);
+        }
+    }
+}
+
+
+@include media("<=992px") {
+    .agent-record-section {
+        .agent-record-list {
+            & > li {
+                @include margin-right(0);
+
+                @include margin-bottom(30);
+
+                @inlcude padding(0 10);
+            }
+        }
+    }
+}
+
+
+@include media("<=767px") {
+    .page_heading {
+        @at-root #{&}__title {
+            h2 {
+                @include fontsize(25);
+            }
+        }
+    }
+
+    .q-reg-title {
+        h3 {
+            @include fontsize(25);
+        }
+    }
+}

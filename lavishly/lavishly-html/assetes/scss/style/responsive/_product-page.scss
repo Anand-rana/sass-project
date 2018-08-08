@@ -1,0 +1,20 @@
+ @include media("<=992px") {
+     .s-prdouct-dtl {
+         .s-product-img {
+             @include margin( 20 0 0 0);
+             .s-product-thumbs {
+                 .item {
+                     span.ico {
+                         @include fontsize(70);
+                     }
+                 }
+             }
+         }
+         .s-product-txt {
+             @include margin(20 0);
+             .s-price {
+                 @include margin-top(10);
+             }
+         }
+     }
+ }

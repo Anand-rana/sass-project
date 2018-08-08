@@ -1,0 +1,96 @@
+footer {
+    background-color: $theme;
+    color: $white;
+
+    .inner-footer {
+        @include padding(50 0);
+
+        @include fontsize(15);
+
+        @include media("<=767px") {
+            @include padding(40 0);
+        }
+
+
+        h3 {
+            @include fontsize(15);
+
+            @include margin-bottom(25);
+
+            color: $white;
+            font-weight: 700;
+        }
+
+        ul {
+            & > li {
+                & > a {
+                    color: $white;
+                    text-decoration: none;
+                    display: block;
+
+                    @include padding-bottom(10);
+                }
+            }
+        }
+    }
+
+    .bottom-bar {
+        @include padding(22 0);
+
+        border-top: 1px solid rgba($white, 0.2);
+
+        @include media("<=767px") {
+            @include padding(20 0);
+        }
+
+
+        .container {
+            @include pos(rel, null);
+        }
+
+        .social-links {
+            @include pos(ab, 50% 0 null null);
+
+            @include transform(translate(0, -50%));
+
+            @include media("<=767px") {
+                @include pos(rel, 0 0 0 0);
+
+                @include transform(translate(0, 0));
+
+                text-align: center;
+
+                @include margin-top(15);
+            }
+
+
+            & > ul {
+                & > li {
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    @include margin-right(30);
+
+                    & > a {
+                        color: $white;
+                        text-decoration: none;
+
+                        @include fontsize(20);
+                    }
+
+                    &:last-child {
+                        @incluide margin-right(0);
+                    }
+                }
+            }
+        }
+
+        .copy-txt {
+            text-align: center;
+
+            p {
+                @include margin-bottom(0);
+            }
+        }
+    }
+}

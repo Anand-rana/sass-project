@@ -1,0 +1,20 @@
+ .join-form-section {
+     @include padding(60 0 70);
+     ._msgTxt {
+         text-align: center;
+         @include fontsize(20);
+         color: red;
+         font-weight: 300;
+         @include margin-bottom(20);
+     }
+     .join-form-container {
+         max-width: 500px;
+         margin: 0 auto;
+         .field-group {
+             @include margin-top(70);
+             .btn-field {
+                 @include padding-top(35);
+             }
+         }
+     }
+ }

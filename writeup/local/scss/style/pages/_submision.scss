@@ -1,0 +1,80 @@
+.submision-block {
+    background-color: $white;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .09);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, .09);
+    box-shadow: 0 0 4px rgba(0, 0, 0, .09);
+    @include margin-top(70);
+    @include padding(60 40 70);
+
+
+    .sub-box {
+        display: table;
+        width: 100%;
+        background-color: #f8f8f8;
+
+        @include pos(rel, null);
+        @include margin-bottom(60);
+
+
+        .sub-user-dtl {
+            @include padding-bottom(20);
+            .sub-user-pic {
+                @include pos(ab, -25px null null 10px);
+                img {
+                    width: 45px;
+                    height: 45px;
+                    @include circle;
+                    object-fit:cover;
+                }
+            }
+
+            .sub-dtl-txt {
+                @include padding(15 40 0 70);
+                @include fontsize(12);
+                .title {
+                    font-family: $font-family-alt;
+                    font-weight: 100;
+                    @include fontsize(16);
+                    text-transform: uppercase;
+                    @include padding-bottom(10);
+                }
+                p {
+                    color: $color-text-04;
+                    @include margin-bottom(4);
+                }
+                .more-link {
+                    color: $color-text-04;
+                    font-weight: 200;
+                    @include fontsize(10);
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .sub-dtl-info {
+                @include padding(10 0);
+                ul {
+                    display: table;
+                    width: 100%;
+                    li {
+                        width: 20%;
+                        @include padding-right(10);
+                        float: left;
+                        @include fontsize(12);
+                        color: $color-text-04;
+
+                        a {
+                            color: $color-text-04;
+                        }
+
+                        &:last-child
+                        {
+                          @include padding-right(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

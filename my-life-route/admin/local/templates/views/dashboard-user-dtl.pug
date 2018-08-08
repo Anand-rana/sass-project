@@ -1,0 +1,158 @@
+.dashboard-user-dtl-section
+	.row
+		.col-md-3
+			a(data-ui-sref="dashboard-user-management").back-btn
+				span.ico
+					i.icon-arrow-left
+				|Back 
+			.usr-pic-dtl
+				img(src="images/user-2.jpg" alt="img")
+				.margin-top-5x
+					button.button.button-rounded.button-danger-light.button-shadow.button-font-bold.button-width-medium.button-width-large.margin-bottom-2x(data-ng-controller="ModalCtrl"  data-ng-click="userblock()") Block
+					br
+					button.button.button-rounded.button-shadow.button-font-bold.button-width-medium.button-width-large.margin-bottom-2x(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()") Delete
+		.col-md-9
+
+			.profile-block
+					.user-profile-dtl
+						uib-tabset(justified="true")
+							uib-tab(index="0" heading="Overview")
+								.profile-block__container
+									
+											.profile-block__content
+												.profile-block__content__row
+													.usr-name
+														h3 Albert Smith
+													.usr-profile
+														span Entrepreneur
+												.profile-block__content__row
+													.usr-dtl
+														ul
+															li
+																span.fw300.label-name Age : 
+																span.fw400 66 Years Old
+															li
+																span.fw300.label-name Location :
+																span.fw400 London, United Kingdom
+												.profile-block__content__row
+													.usr-oh-info.usr-work-info
+														h4 Work Related Experience and Skiils
+														ul
+															li.w-label IT Management
+															li.w-time 6 Years 8 Months
+															li.v-link
+																button.button.button-theme.button-rounded.button-font-sbold.button-width-medium.button-font-base-small(ng-controller="ModalCtrl"  ng-click="workhistory()") View All
+											.usr-tp-container
+												.usr-tp-block
+													h2.title Posts
+													.usr-tp__list
+														.row
+															.col-md-4.col-sm-4.col-xs-4
+																.usr-tp__box
+																	h3 Life Routes
+																	.t-no.c-1 55
+
+															.col-md-4.col-sm-4.col-xs-4
+																.usr-tp__box.text-center
+																	h3 News Posts
+																	.t-no.c-2 5
+															.col-md-4.col-sm-4.col-xs-4
+																.usr-tp__box.text-center
+																	h3 Event Posts
+																	.t-no.c-3 7
+												.usr-tp-block
+													h2.title People
+													.usr-tp__list
+														.row
+															.col-md-4.col-sm-4.col-xs-4
+																.usr-tp__box
+																	h3 Connections
+																	.t-no.c-4 55
+
+															.col-md-4.col-sm-4.col-xs-4
+																.usr-tp__box.text-center
+																	h3 People Following Me
+																	.t-no.c-5 5
+															.col-md-4.col-sm-4.col-xs-4
+																.usr-tp__box.text-center
+																	h3 People I am Following
+																	.t-no.c-6 7
+
+							uib-tab(index="1" heading="About")
+								.profile-block__container
+									
+											.profile-block__content
+												.profile-block__content__row
+													.usr-name
+														h3 Albert Smith
+													.usr-profile
+														span Entrepreneur
+												.profile-block__content__row
+													.usr-dtl
+														ul
+															li
+																span.fw300.label-name Age : 
+																span.fw400 66 Years Old
+															li
+																span.fw300.label-name Location :
+																span.fw400 London, United Kingdom
+														
+												.profile-block__content__row
+													.usr-dtl
+														ul
+															li
+																span.fw300.label-name Gender :
+																span.fw400 Male
+															li
+																span.fw300.label-name Date of Birth : 
+																span.fw400 6 January 1982
+															li
+																span.fw300.label-name Email : 
+																span.fw400 Myliferoute@gmail.com
+
+															li
+																span.fw300.label-name Education Level :  
+																span.fw400 PHD
+												.profile-block__content__row
+													.usr-oh-info
+														h4 Interests
+														p.fw300 Adventure, Reading, Gym, Hiking, Partying, Internet, Entrepreneurship
+												.profile-block__content__row
+													.usr-oh-info.usr-work-info
+														h4 Work Related Experience and Skiils
+														ul
+															li.w-label IT Management
+															li.w-time 6 Years 8 Months
+															li.v-link
+																button.button.button-theme.button-rounded.button-font-sbold.button-width-medium.button-font-base-small(ng-controller="ModalCtrl"  ng-click="workhistory()") View All
+												.profile-block__content__row
+													.about-block
+														h2.title About Me
+														p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's st been dard dummy text ever since the 1500s,when an unknown printer took a galley tially unchanged typesetting prinitng tooks Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's st been dard dummy text ever since the 1500s,when an unknown printer took a galley tially unchanged typesetting prinitng been Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's st took dard dummy text ever since the 1500s,when an unknown printer took a galley tially unchanged typesetting prinitng been Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's st took dard dummy text ever since the 1500s,when an unknown printer took a galley tially unchanged typesetting prinitng been
+
+							uib-tab(index="2" heading="Posts")
+								.profile-post__container
+									
+												.usr-post-list
+													.connection-box.c-1
+														a(href="#")
+															h3 60 Life Routes
+													.connection-box.c-2
+														a(href="#")
+															h3 88 News Posts
+													.connection-box.c-3
+														a(href="#")
+															h3 66 Event Posts
+							uib-tab(index="3" heading="People")
+								.profile-people__container
+									
+												.usr-conection-list
+													.connection-box.c-4
+														a(href="#")
+															h3 66 Connections
+
+						
+			
+								
+
+			

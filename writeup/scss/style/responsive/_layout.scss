@@ -1,0 +1,239 @@
+@include media(">=1000px") {
+    .modal {
+        text-align: center;
+        padding: 0 !important;
+    }
+
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+}
+
+@include media("<=1200px") {
+    .rv-box {
+        .rv-user-dtl {
+            .rv-user-txt {
+                @include padding-left(50);
+            }
+        }
+    }
+}
+
+@include media("<=992px") {
+    .arrow-top {
+        right: 0px;
+        background-color: $black;
+        color: $white;
+        &:hover {
+            background-color: $black;
+        }
+    }
+
+    .c-field {
+        .help-block {
+            text-align: left;
+        }
+    }
+
+    .footer-section {
+        .footer-inner-block {
+            @include padding(20 0 0 10);
+
+            .f-page-links {
+                @include padding(20 0 0);
+            }
+            .f-contact-info {
+                @include padding(20 0 0);
+            }
+        }
+    }
+
+    .rv-box {
+        @include margin-bottom(30);
+        .rv-user-dtl {
+            .rv-user-txt {
+                @include padding(15 20);
+                min-height: inherit;
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+    .page-conatiner {
+        @include padding(30 0 40);
+    }
+    .tp-tabs,
+    .tp-thumbs,
+    .tp-bullets {
+        display: none;
+    }
+    .nav-section {
+        text-align: center;
+        .main-nav {
+            @include pos(fix, 0 null 0 -250px);
+            max-width: 250px;
+            width: 100%;
+            z-index: 2000;
+            overflow: auto;
+            background-color: $theme-action;
+            text-align: left;
+            -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+            &>ul {
+                &>li {
+                    display: $b;
+                    @include padding(10 0);
+                    &>a {
+                        color: $white;
+                        border: 0;
+                    }
+
+                    &.active {
+                        &>a {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-login-nav {
+            &>ul {
+                &>li {
+                    @include padding(10 0);
+                }
+            }
+        }
+        .main-user-nav {
+            &>ul {
+                &>li {
+                    @include padding(10 0);
+
+
+                    .user-drop-down-box {
+                        left: 0;
+                        right: 0;
+                        min-width: 250px;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-icon {
+        display: $b;
+    }
+
+    .header-section {
+        text-align: center;
+        .logo {
+            @include padding( 10 0);
+        }
+    }
+
+
+    .sideopen {
+        .nav-section {
+            .main-nav {
+                left: 0;
+            }
+        }
+        .nav-icon {
+            z-index: 1000;
+        }
+    }
+
+    .c-owl-nav {
+        display: none;
+    }
+
+    .footer-section {
+        .f-logo-block {
+            @include margin-bottom(0);
+            @include padding(30 15 20 20);
+        }
+        .f-social-links {
+            &>ul {
+                @include margin-top(20);
+            }
+        }
+
+        .footer-inner-block {
+            @include padding(20 0);
+        }
+    }
+    .arrow-top {
+        right: 20px;
+        background-color: $black;
+        color: $white;
+        z-index: 10;
+        &:hover {
+            background-color: $black;
+        }
+    }
+
+    .rv-box {
+        .rv-img-box {
+            display: none;
+        }
+
+        .rv-user-dtl {
+            .rv-user-txt {
+                min-height: inherit;
+            }
+        }
+    }
+
+    .review-block {
+        .review-box {
+            .review-opt {
+
+
+                ul {
+                    li {
+                        @include margin-right(15);
+                        @include margin-bottom(5);
+
+                        &.report-ico {
+                            float: none;
+                        }
+                    }
+                }
+            }
+            .user-img {
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+        .rev-reply-list {
+            @include margin-left(30);
+        }
+    }
+    .prize-modal {
+        .modal-body {
+            @include padding(30 10 40);
+        }
+    }
+    .app-modal {
+        .modal-header {
+            .close-ico {
+                right: 10px;
+                left: 10;
+            }
+        }
+    }
+}

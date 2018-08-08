@@ -1,0 +1,267 @@
+.comingsoon-top-header {
+    @include pos(rel, null);
+    z-index: 100;
+    margin-top: -60px;
+    &:before {
+        @include pos(ab, 60px 0 10px 0);
+        content: "";
+        background-color: #fff47f;
+        z-index: -1;
+        -webkit-box-shadow: 0px -7px 18px -5px rgba(255, 234, 0, 1);
+        -moz-box-shadow: 0px -7px 18px -5px rgba(255, 234, 0, 1);
+        box-shadow: 0px -7px 18px -5px rgba(255, 234, 0, 1);
+    }
+
+    .coming-inner {
+        @include pos(rel, null);
+        z-index: 0;
+
+        .comingsoon-top-header-block {
+            max-width: 950px;
+            background-color: $theme;
+            @include padding(40 80 40 0);
+            color: $color-text-03;
+
+            h2 {
+                @include fontsize(50);
+                font-family: $font-family-alt;
+                font-weight: 100;
+                text-transform: uppercase;
+
+                span
+                {
+                  display: $ib;
+                  vertical-align: middle;
+                }
+
+                span.ico {
+                    @include fontsize(70);
+                    @include margin-right(25);
+                    color:$black;
+                }
+            }
+        }
+
+        &:before {
+            @include pos(ab, 0 50% 0 0);
+            content: "";
+            background-color: $theme;
+            z-index: -1;
+        }
+    }
+}
+
+
+.comingsoonOuter {
+    background: #f8f8f8;
+}
+
+.comingsoonOuter .comingsoonInner .comSoonCntnt,
+.weofferOuter .weofferInner .weOfferCntnt {
+    padding: 50px 0 40px;
+}
+
+.comingsoonOuter .comingsoonInner .comSoonCntnt p,
+.weofferOuter .weofferInner .weOfferCntnt p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: #989898;
+}
+
+.comingsoonOuter .comingsoonInner .comSoonCntnt .introMapOuter img {
+    width: auto;
+    max-width: 100%;
+}
+
+
+
+.weofferOuter .weofferInner .weOfferCntnt .rytUpFeatures {
+    padding: 0 0 70px;
+}
+
+.weofferOuter .weofferInner .weOfferCntnt .rytUpFeatures .featuresBox {
+    padding-top: 70px;
+    font-family: "oswald";
+}
+
+.weofferOuter .weofferInner .weOfferCntnt .rytUpFeatures .featuresBox h3 {
+  font-family: "oswald";
+  font-weight: 200;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+.weofferOuter .weofferInner .weOfferCntnt .rytUpFeatures .featuresBox .featuresMain .panel-default>.panel-heading {
+    background: #ececec;
+    color: #414146;
+    font-family: "oswald";
+    text-transform: uppercase;
+    font-size: 18px;
+    border-radius: 0;
+    padding: 0;
+}
+.weofferOuter .weofferInner .weOfferCntnt .rytUpFeatures .featuresBox .featuresMain .panel-default.panel-open>.panel-heading {
+    background: #414146;
+    color: #fff;
+}
+
+.weofferOuter .weofferInner .weOfferCntnt .rytUpFeatures .featuresBox .featuresMain .panel-default.panel-open>.panel-heading .panel-title a:hover {
+    color: #fff;
+}
+
+.weofferOuter .weofferInner .weOfferCntnt .rytUpFeatures .featuresBox .featuresMain .panel-default>.panel-heading .panel-title a {
+    padding: 20px 26px;
+    display: block;
+}
+
+.weofferOuter .weofferInner .weOfferCntnt .rytUpFeatures .featuresBox .featuresMain .panel-default>.panel-heading .panel-title a:hover {
+    color: #414146;
+}
+
+.weofferOuter .weofferInner .weOfferCntnt .rytUpFeatures .featuresBox .featuresMain .panel-group .panel {
+    border: none;
+}
+
+.weofferOuter .weofferInner .weOfferCntnt .rytUpFeatures .featuresBox .featuresMain .panel-default .panel-collapse {
+    background: #f5f5f5;
+    color: #7c7c7c;
+    font-family: "oswald";
+    font-size: 18px;
+}
+
+.weofferOuter .weofferInner .weOfferCntnt .rytUpFeatures .featuresBox .featuresMain .panel-default .panel-collapse .panel-body {
+    padding: 20px 26px;
+}
+
+.contactUs {
+    background: url(#{$imgpath}contact-bg.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+
+.contactUs .contactUsInner {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.contactUs .contactUsInner .formOuter {
+  margin: 50px 0 55px;
+  font-family: "oswald";
+  max-width: 700px;
+}
+
+.contactUs .contactUsInner .formOuter p {
+    font-size: 22px;
+    font-weight: lighter;
+    font-family: "oswald";
+    margin-bottom: 48px;
+}
+
+.contactUs .contactUsInner .formOuter {
+    max-width: 640px;
+    margin: 50px auto 65px;
+}
+
+.contactUs .contactUsInner .formOuter input,
+.contactUs .contactUsInner .formOuter textarea {
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 14px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-top-width: 2px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.contactUs .contactUsInner .formOuter textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contactUs .contactUsInner .formOuter input::-webkit-input-placeholder,
+.contactUs .contactUsInner .formOuter textarea::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+    opacity: 1;
+}
+
+.contactUs .contactUsInner .formOuter input::-moz-placeholder,
+.contactUs .contactUsInner .formOuter textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    opacity: 1;
+}
+
+.contactUs .contactUsInner .formOuter input:-ms-input-placeholder,
+.contactUs .contactUsInner .formOuter textarea:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    opacity: 1;
+}
+
+.contactUs .contactUsInner .formOuter input:-moz-placeholder,
+.contactUs .contactUsInner .formOuter textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    opacity: 1;
+}
+
+.contactUs .contactUsInner .formOuter input[type="submit"] {
+    width: auto;
+    margin: auto;
+    padding: 13px 24px;
+    font-size: 15px;
+    border-width: 2px;
+}
+
+.contactUs .contactUsInner .formOuter .captcha {
+    text-align: left;
+    margin: 13px 0 14px;
+}
+
+.footer-section .footer-inner-block .f-contact-info li a {
+    color: #fff;
+}
+.comSoonCntnt .introMapOuter {
+  position: relative;
+}
+.comSoonCntnt .introMapOuter .reviewsTip {
+    position: absolute;
+    font-weight: bolder;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    background: #a2a2a2;
+    padding-top: 11px;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 50%;
+}
+.comSoonCntnt .introMapOuter .reviewsTip:hover {
+  background: #424146;
+}
+.comSoonCntnt .introMapOuter .reviewsTip.tip1 {
+    left: 32%;
+    top: 32%;
+}
+.comSoonCntnt .introMapOuter .reviewsTip.tip2 {
+    top: 9%;
+    right: 43.5%;
+}
+.comSoonCntnt .introMapOuter .reviewsTip.tip3 {
+    top: 9%;
+    right: 43.5%;
+}
+.comSoonCntnt .introMapOuter .reviewsTip.tip3 {
+    right: 28%;
+    top: 28%;
+}
+.comSoonCntnt .introMapOuter .tooltip-inner {
+  background: #424146;
+  padding: 12px 24px;
+  text-align: left;
+}

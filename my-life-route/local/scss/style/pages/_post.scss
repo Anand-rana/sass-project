@@ -1,0 +1,458 @@
+.m-post-section {
+  @include padding(90 0 50);
+  @include pos(rel, null);
+
+  .my-post-block {
+    @include pos(rel, null);
+  }
+
+  .user-dtl-block {
+    @include pos(ab, 0 null null 0);
+    margin-top: 100px;
+
+    &.push-left {
+      left: -1000px;
+    }
+  }
+
+  .my-post-cotainer {
+    -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    @include padding-left(390);
+    min-height: 850px;
+
+    .my-post-list {
+      @include margin-top(50);
+    }
+
+    .title {
+      @include fontsize(30);
+      font-weight: 400;
+      color: $theme;
+      @include padding-bottom(5);
+      @include border-bottom(1, solid, $theme);
+    }
+
+    &.open {
+      @include padding-left(0);
+    }
+  }
+
+  .sp-btn {
+    @include pos(ab, 150px null null -35px);
+    z-index: 20;
+  }
+}
+
+.m-post-liferoute {
+  @include padding(100 0 50);
+
+  .filter-ap-msg {
+    text-align: center;
+
+    h4 {
+      color: $theme;
+      font-weight: 300;
+      @include fontsize(17);
+    }
+  }
+
+  .heading-block {
+    @include border-bottom(1, solid, $theme);
+    @include padding-bottom(10);
+
+    .heading-block__buttons {
+      text-align: right;
+    }
+
+    .breadcrumb-list {
+      @include margin-top(10);
+
+      ul {
+        li {
+          display: $ib;
+
+          a {
+            @include fontsize(30);
+            text-transform: capitalize;
+            font-weight: 400;
+            color: $theme;
+            @include padding(0 15);
+            @include pos(rel, null);
+            display: $b;
+
+            &:after {
+              @include pos(ab, -2px -10px 0 null);
+              content: ">";
+            }
+
+            &.active {
+              color: lighten($theme, 20%);
+
+              &:after {
+                display: none;
+              }
+            }
+          }
+
+          &:first-child {
+            a {
+              @include padding-left(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .filter-side-block {
+    @include margin-top(80);
+  }
+}
+
+.m-post-liferoute__list {
+  @include margin-top(50);
+
+  .total-posted {
+    @include padding-bottom(10);
+    @include fontsize(14);
+    font-weight: 300;
+  }
+
+  .l-route-box {
+    @include margin-bottom(20);
+    background-color: $color-bg-02;
+
+    .user-dtl {
+      .user-dtl-info {
+        .user-dtl-info-list {
+          .list-info {
+            li {
+              .l-label {
+                width: 110px;
+                @include padding-right(10);
+
+                &:after {
+                  right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ap-filter {
+    @include margin-top(45);
+  }
+
+  .filter-ap-msg {
+    @include margin-bottom(20);
+  }
+}
+
+.m-post-newsroute {
+  @include padding(100 0 50);
+
+  .filter-ap-msg {
+    text-align: center;
+
+    h4 {
+      color: $theme;
+      font-weight: 300;
+      @include fontsize(17);
+    }
+  }
+
+  .heading-block {
+    @include border-bottom(1, solid, $theme);
+    @include padding-bottom(10);
+
+    .heading-block__buttons {
+      text-align: right;
+    }
+
+    .breadcrumb-list {
+      @include margin-top(10);
+
+      ul {
+        li {
+          display: $ib;
+
+          a {
+            @include fontsize(30);
+            text-transform: capitalize;
+            font-weight: 400;
+            color: $theme;
+            @include padding(0 15);
+            @include pos(rel, null);
+
+            &:after {
+              @include pos(ab, -4px -8px 0 null);
+              content: ">";
+            }
+
+            &.active {
+              color: lighten($theme, 20%);
+
+              &:after {
+                display: none;
+              }
+            }
+          }
+
+          &:first-child {
+            a {
+              @include padding-left(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .filter-side-block {
+    @include margin-top(80);
+  }
+}
+
+.m-post-newsroute__list {
+  @include margin-top(50);
+
+  .total-posted {
+    @include padding-bottom(10);
+    @include fontsize(14);
+    font-weight: 300;
+  }
+
+  .news-route-box {
+    @include margin-bottom(20);
+    background-color: $color-bg-02;
+
+    .user-dtl {
+      .user-dtl-info {
+        .user-dtl-info-list {
+          .list-info {
+            li {
+              .l-label {
+                width: 110px;
+                @include padding-right(10);
+
+                &:after {
+                  right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ap-filter {
+    @include margin-top(60);
+  }
+
+  .filter-ap-msg {
+    @include margin-bottom(20);
+  }
+}
+
+.m-post-eventsroute {
+  @include padding(100 0 50);
+
+  .filter-ap-msg {
+    text-align: center;
+
+    h4 {
+      color: $theme;
+      font-weight: 300;
+      @include fontsize(17);
+    }
+  }
+
+  .heading-block {
+    @include border-bottom(1, solid, $theme);
+    @include padding-bottom(10);
+
+    .heading-block__buttons {
+      text-align: right;
+    }
+
+    .breadcrumb-list {
+      @include margin-top(10);
+
+      ul {
+        li {
+          display: $ib;
+
+          a {
+            @include fontsize(30);
+            text-transform: capitalize;
+            font-weight: 400;
+            color: $theme;
+            @include padding(0 15);
+            @include pos(rel, null);
+
+            &:after {
+              @include pos(ab, -4px -8px 0 null);
+              content: ">";
+            }
+
+            &.active {
+              color: lighten($theme, 20%);
+
+              &:after {
+                display: none;
+              }
+            }
+          }
+
+          &:first-child {
+            a {
+              @include padding-left(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .filter-side-block {
+    @include margin-top(80);
+  }
+}
+
+.m-post-eventroute__list {
+  @include margin-top(80);
+
+  .total-posted {
+    @include padding-bottom(10);
+    @include fontsize(14);
+    font-weight: 300;
+  }
+
+  .event-route-box {
+    @include margin-bottom(20);
+    background-color: $color-bg-02;
+
+    .user-dtl {
+      .user-dtl-info {
+        .user-dtl-info-list {
+          .list-info {
+            li {
+              .l-label {
+                width: 110px;
+                @include padding-right(10);
+
+                &:after {
+                  right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ap-filter {
+    @include margin-top(60);
+  }
+
+  .filter-ap-msg {
+    @include margin-bottom(20);
+  }
+}
+
+.filter-side-block {
+  .filter-side-box {
+    @include padding(20 20 0);
+
+    .filter-block__top {
+      display: table;
+      width: 100%;
+      @include padding-bottom(15);
+      @include border-bottom(1, solid, #dedede);
+
+      h4 {
+        @include fontsize(16);
+        font-weight: 400;
+        color: $color-text-02;
+        float: left;
+      }
+
+      .caret {
+        float: right;
+        border-width: 6px;
+        border-top-color: #000;
+        margin-top: 5px;
+      }
+    }
+
+    .filter-field-group {
+      @include margin-top(30);
+      @include fontsize(15);
+
+      .filter-inline-field {
+        label {
+          font-weight: 400;
+          @include margin-top(8);
+        }
+      }
+    }
+
+    &.active {
+      @include box-shadow(-1px 3px 6px rgba(0, 0, 0, .08));
+      background-color: $white;
+      @include margin-bottom(30);
+      @include padding-bottom(20);
+
+      &.margin-bottom {
+        @include margin-bottom(30);
+      }
+
+      &.margin-top {
+        @include margin-top(30);
+      }
+
+      .filter-block__top {
+        .caret {
+          @include transform(rotate(-180deg));
+        }
+      }
+    }
+
+    .filter-button-group {
+      @include margin-top(35);
+    }
+
+    .filter-steps {
+      @include margin-top(40);
+
+      h3 {
+        font-weight: 400;
+        @include fontsize(15);
+        color: $color-text-02;
+      }
+
+      ul {
+        @include margin-top(10);
+
+        li {
+          @include padding-bottom(10);
+        }
+      }
+    }
+
+    .search_link {
+      color: $color-text-08;
+      font-weight: 300;
+      @include fontsize(15);
+      text-decoration: underline;
+      @include margin-top(10);
+      display: $ib;
+    }
+  }
+}

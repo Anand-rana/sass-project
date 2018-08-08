@@ -1,0 +1,60 @@
+
+<div class="page-conatiner">
+  <div class="competion-section s-ov">
+    <div class="container">
+      <div class="main-heading">
+        <h2 class="title">Competition Detail</h2>
+      </div>
+      <div class="competion-block">
+        <div class="competion-block__inner">
+          <div class="competion-block__dtl">
+            <div class="competion-block__dtl__header">
+              <h3><a ui-sref="competitions-history"><span><i class="icon-angle-left-o"> </i></span>competition Name here </a></h3>
+            </div>
+            <div class="competion-content-block">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="c-dtl-box">
+                    <div class="c-user-dtl">
+                      <div class="c-dtl-txt">
+                        <p><span class="fw200">Praesent blandit </span></p>
+                        <p>Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam quis. Phasellus sit amet libero ligula. Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam et metus sed tortor eleifend.Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl. Nullam vel tellus massa. Vivamus porttitor rutrum libero ac mattis. Aliquam congue malesuada mauris vitae dignissim. Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis elit varius rhoncus. Etiam ut tellus at ligula eleifend malesuada. Aenean et metus sapien.</p>
+                        <div class="c-dtl-info">
+                          <ul>
+                            <li> <span class="fw300">Section : </span>Gym</li>
+                            <li> <span class="fw300">Host : </span>Gym</li>
+                            <li> <span class="text-blue margin-right-2x"><i class="icon-cup-o"></i></span>3 months free pass</li>
+                            <li> <span class="l-label">Live</span>04/11/2017</li>
+                            <li>
+                              <h4 class="ow-100 uppercase">You contacted Writeup to host this competition</h4>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="competion-block__dtl__sidebar" data-ng-controller="compCtrl">
+                    <ng-owl-carousel class="owl-theme c-slider" owl-items="items" owl-properties="properties" owl-ready="ready($api)">
+                      <div class="item" data-ng-repeat="item in items"><img class="img-responsive" src="images/news-{{item}}.jpg" alt="img"/></div>
+                    </ng-owl-carousel>
+                    <ng-owl-carousel class="owl-theme c-thumb-slider" owl-items="number" owl-properties="propertiestxt" owl-ready="ready2($api)">
+                      <div class="item" data-ng-repeat="numbers in number"><img class="img-responsive" src="images/news-{{numbers}}.jpg" alt="img"/></div>
+                    </ng-owl-carousel>
+                    <div class="margin-top-8x">
+                      <div class="text-right">
+                        <h4 class="ow-100 uppercase padding-bottom-2x"> Number of participants - 200</h4>
+                      </div>
+                      <button class="button button-blue-dark button-block button-uppercase button-height-large button-font-base button-blue-shadow" ng-controller="ModalCtrl" ng-click="all()">View all participants </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

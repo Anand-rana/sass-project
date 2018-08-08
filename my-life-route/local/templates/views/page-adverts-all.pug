@@ -1,0 +1,152 @@
+.adv-section
+	.container
+		.heading-block
+			h3 Recommended For You
+		.all-adv-list
+			.row
+				.col-md-3
+					.filter-side-block
+						.filter-side-box(ng-class="{'active':isSearchCollapsed}")
+							.filter-block__top(ng-click="isSearchCollapsed = !isSearchCollapsed" class="pointer")
+								h4 Search
+								span.caret
+							.filter-field-group(uib-collapse="!isSearchCollapsed")
+								.f-field
+									input(type="text", placeholder="Search by Keyword").f-field-control
+								.f-field
+									input(type="text", placeholder="Search by Location").f-field-control
+								
+								.filter-button-group
+										.row.row-10
+											.col-md-6.col-sm-6
+												button.button.button-rounded.button-block.margin-bottom-2x Search
+											.col-md-6.col-sm-6
+												button.button.button-border.button-theme.button-border-thin.button-rounded.button-block.margin-bottom-2x Cancel
+
+						.filter-side-box(ng-class="{'active margin-top':isFilterCollapsed}")
+							.filter-block__top(ng-click="isFilterCollapsed = !isFilterCollapsed" class="pointer")
+								h4 Filter
+								span.caret
+							.filter-field-group(uib-collapse="!isFilterCollapsed") 
+								.f-field
+									input(type="text", placeholder="Date").f-field-control
+								
+								
+								.filter-button-group
+										.row.row-10
+											.col-md-6.col-sm-6
+												button.button.button-rounded.button-block.margin-bottom-2x Apply
+											.col-md-6.col-sm-6
+												button.button.button-border.button-theme.button-border-thin.button-rounded.button-block.margin-bottom-2x Reset
+
+
+				.col-md-9
+					.all-adv-list__container.ap-filter
+						.filter-ap-msg
+								h4  
+									span
+										i.icon-asterisk-symbol 
+									|Filters Applied
+						.page-adv-list
+								span.total-adv Total Adverts : 3
+								.row
+									.col-md-4.col-sm-4
+										.adv-box
+											a(data-ui-sref="page-adverts-dtl")
+												figure
+													img(src="images/adv-1.jpg" alt="img")
+												figcaption
+														h3.title Advert Title
+														span.adv-location 
+															i.icon-marker-o
+															|Location
+									.col-md-4.col-sm-4
+										.adv-box
+											a(data-ui-sref="page-adverts-dtl")
+												figure
+													img(src="images/adv-1.jpg" alt="img")
+												figcaption
+														h3.title Advert Title
+														span.adv-location 
+															i.icon-marker-o
+															|Location
+									.col-md-4.col-sm-4
+										.adv-box
+											a(data-ui-sref="page-adverts-dtl")
+												figure
+													img(src="images/adv-1.jpg" alt="img")
+												figcaption
+														h3.title Advert Title
+														span.adv-location 
+															i.icon-marker-o
+															|Location
+									.col-md-4.col-sm-4
+										.adv-box
+											a(data-ui-sref="page-adverts-dtl")
+												figure
+													img(src="images/adv-1.jpg" alt="img")
+												figcaption
+														h3.title Advert Title
+														span.adv-location 
+															i.icon-marker-o
+															|Location
+									.col-md-4.col-sm-4
+										.adv-box
+											a(data-ui-sref="page-adverts-dtl")
+												figure
+													img(src="images/adv-1.jpg" alt="img")
+												figcaption
+														h3.title Advert Title
+														span.adv-location 
+															i.icon-marker-o
+															|Location
+									.col-md-4.col-sm-4
+										.adv-box
+											a(data-ui-sref="page-adverts-dtl")
+												figure
+													img(src="images/adv-1.jpg" alt="img")
+												figcaption
+														h3.title Advert Title
+														span.adv-location 
+															i.icon-marker-o
+															|Location
+									.col-md-4.col-sm-4
+										.adv-box
+											a(data-ui-sref="page-adverts-dtl")
+												figure
+													img(src="images/adv-1.jpg" alt="img")
+												figcaption
+														h3.title Advert Title
+														span.adv-location 
+															i.icon-marker-o
+															|Location
+									.col-md-4.col-sm-4
+										.adv-box
+											a(data-ui-sref="page-adverts-dtl")
+												figure
+													img(src="images/adv-1.jpg" alt="img")
+												figcaption
+														h3.title Advert Title
+														span.adv-location 
+															i.icon-marker-o
+															|Location
+									.col-md-4.col-sm-4
+										.adv-box
+											a(data-ui-sref="page-adverts-dtl")
+												figure
+													img(src="images/adv-1.jpg" alt="img")
+												figcaption
+														h3.title Advert Title
+														span.adv-location 
+															i.icon-marker-o
+															|Location
+									.col-md-4.col-sm-4
+										.adv-box
+											a(data-ui-sref="page-adverts-dtl")
+												figure
+													img(src="images/adv-1.jpg" alt="img")
+												figcaption
+														h3.title Advert Title
+														span.adv-location 
+															i.icon-marker-o
+															|Location

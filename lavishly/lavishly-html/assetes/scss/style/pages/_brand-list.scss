@@ -1,0 +1,97 @@
+.brand-section {
+    @include padding(70 0);
+    .brand-h-top {
+        @include padding-bottom(20);
+        @include pos(rel, null);
+        @include border-bottom(2, solid, #e0e0e0);
+        h3 {
+            @include fontsize(38);
+            text-transform: $uppercase;
+            @include josefinsansbold;
+            // @include padding-bottom(20);
+            span {
+                @include fontsize(30);
+                @include josefinsansregular;
+            }
+        }
+        .b-filter {
+            text-align: right;
+            @include josefinsansregular;
+            @include fontsize(16);
+            .form-control {
+                @include border-round(4);
+            }
+            select.form-control {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-image: url(#{$imgpath}caret.png);
+                background-position: right 10px center;
+                background-repeat: no-repeat;
+                @include padding-right(50);
+                line-height: inherit;
+                &::-ms-expand {
+                    display: none;
+                }
+            }
+            /*-- HACK SAFRI & CHROME ONLY --*/
+            @media screen and (-webkit-min-device-pixel-ratio: 0) {
+                ::i-block-chrome,
+                select.form-control {
+                    background-position-x: 97%;
+                    background-position-y: 50%;
+                }
+            }
+        }
+        &:after {
+            content: "";
+            @include pos(ab, 100% null 0 0);
+            width: 50px;
+            height: 2px;
+            background-color: $themecolor;
+        }
+    }
+    .brand-all-list {
+        .brand-all-row {
+            @include padding(60 0);
+            @include border-bottom(2, solid, #e0e0e0);
+            .b-label {
+                display: $block;
+                width: 42px;
+                height: 42px;
+                background-color: $themecolor;
+                @include border-top(2, solid, $color01);
+                color: $color02;
+                @include fontsize(30);
+                @include josefinsansbold;
+                text-align: center;
+                text-transform: $uppercase;
+                @include margin-bottom(10);
+            }
+            ul {
+                @include margin-bottom(10);
+                li {
+                    @include fontsize(20);
+                    @include josefinsansregular;
+                    color: $color01;
+                }
+            }
+        }
+    }
+}
+
+.load-btn {
+    background-color: transparent;
+    border: 0;
+    @include padding(20);
+    max-width: 300px;
+    width: 100%;
+    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, .14);
+    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, .14);
+    box-shadow: 0 0 7px rgba(0, 0, 0, .14);
+    @include border-round(4);
+    display: $block;
+    margin: 0 auto;
+}

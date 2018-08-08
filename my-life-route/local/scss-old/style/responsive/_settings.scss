@@ -1,0 +1,37 @@
+@include media("<=992px") {
+
+    .my-setting-section {
+        @include padding(50 0);
+    }
+}
+
+@include media("<=767px") {
+    .my-setting-section {
+        @include padding(70 0 50);
+        .user-dtl-block {
+            @include pos(fix, 0 null 0 -1000px);
+            margin-top: 0px;
+            background-color:$black;
+            @include padding(10);
+            overflow: auto;
+
+            &.open {
+                left: 0;
+                z-index: 30;
+            }
+        }
+
+        .my-setting-cotainer {
+            @include padding-left(0);
+        }
+        .sp-btn {
+            top: 0;
+        }
+    }
+
+    .my-setting-section {
+        .heading-block {
+            text-align: center;
+        }
+    }
+}

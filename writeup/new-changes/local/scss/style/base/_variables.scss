@@ -1,0 +1,47 @@
+// THEME AND COLOR
+
+$black: #000000 !default;
+$white: #ffffff !default;
+$theme:#ffea00 !default;
+$theme-action: #414146 !default;
+$color-bg-01:#5995f0 !default;
+$color-bg-02:#d75a4a !default;
+$color-bg-03:#f8f8f8 !default;
+$color-bg-04:#f1f1f1 !default;
+$color-bg-05:#414146 !default;
+
+//txt-color
+$color-text-01:#a6a8aa !default;
+$color-text-02:#fc9494 !default;
+$color-text-03:#484d52 !default;
+$color-text-04:#6f6f73 !default;
+$color-text-05:#ff8e00 !default;
+$color-text-06:#2196f3 !default;
+
+// PATH & FONT NAME
+$font-family: "open" !default;
+$imgpath: "../images/" !default;
+$primary-font-path: "../fonts" !default;
+$url: $imgpath !default;
+
+// FONTS and TEXT STYLE
+$fontnormal: 14px !default;
+$fontsmall: 12px !default;
+$lineheight: 1.5 !default;
+$fontawesome: FontAwesome !default;
+$spacing: 5px !default;
+
+//TRANSITION EFFECT
+$trasition_all: all 0.3s ease-in-out 0s !default;
+
+// Display
+$ib: inline-block !default;
+$b: block !default;
+$t: table !default;
+$cell: table-cell !default;
+$none: none !default;
+
+// Margin
+$mauto: auto auto !default;
+$zeroauto: 0 auto !default;
+$auto: auto !default;

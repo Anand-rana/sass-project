@@ -1,0 +1,47 @@
+.press-section {
+    @include padding(100 0);
+    @include pos(rel, null);
+    .press-testimonial-section {
+        background-color: #292929;
+        @include padding(30 20);
+        text-align: center;
+        @include margin-bottom(-200);
+        .inner {
+            background-color: rgb(112, 112, 112); // Old browsers
+            @include filter-gradient(#707070, #ffffff, horizontal); // IE6-9 fallback on horizontal gradient
+            @include background-image(linear-gradient(left top, rgba(112, 112, 112, 1) 0%, rgba(112, 112, 112, 1) 30%, rgba(41, 41, 41, 1) 32%, rgba(41, 41, 41, 1) 60%, rgba(255, 255, 255, 1) 62%, rgba(255, 255, 255, 1) 100%));
+            display: $inline;
+            width: 100%;
+            .press-slider {
+                @include padding(40 30);
+                @include pos(rel, null);
+                @include margin(1);
+                display: $block;
+                background-color: #252525;
+                h3 {
+                    color: $themecolor;
+                    @include fontsize(30);
+                    text-transform: $uppercase;
+                    @include josefinsansbold;
+                    @include margin-bottom(10);
+                }
+                p {
+                    color: $color02;
+                    @include fontsize(16);
+                }
+                .owl-dots {
+                    @include margin-top(30);
+                }
+            }
+        }
+    }
+    .our-partner-section {
+        @include margin-top(300);
+    }
+    .press-contact {
+        @include padding-top(90);
+        h4 {
+            text-transform: $uppercase;
+        }
+    }
+}

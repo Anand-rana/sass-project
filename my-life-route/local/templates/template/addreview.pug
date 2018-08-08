@@ -1,0 +1,26 @@
+.add-review-modal
+	.modal-header.text-center
+		h2.title  Add Review
+		button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close-o
+	.modal-body
+		.add-review-form
+			ul
+				li
+					span.__label Case 1
+					.rating-container
+						span.t-rating(uib-rating ng-model="name1"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" aria-labelledby="rating-1")
+				li
+					span.__label Case 2
+					.rating-container
+						span.t-rating(uib-rating ng-model="name2"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" aria-labelledby="rating-2")
+				li
+					span.__label Case 3
+					.rating-container
+						span.t-rating(uib-rating ng-model="name3"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" aria-labelledby="rating-3")
+				li
+					span.__label Case 4
+					.rating-container
+						span.t-rating(uib-rating ng-model="name4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  aria-labelledby="rating-4")
+			.margin-top-8x.text-center
+				button.button.button-width-large.button-rounded.button-height-large.button-font-sbold.button-font-medium Post

@@ -1,0 +1,14 @@
+.dashboard-event-section {
+    .event-list {
+        .total-entries {
+            text-align: center;
+            @include font-size(15);
+            font-weight: 400;
+
+            span {
+                display: $ib;
+                text-decoration: underline;
+            }
+        }
+    }
+}

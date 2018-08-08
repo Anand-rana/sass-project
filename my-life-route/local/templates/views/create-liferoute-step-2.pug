@@ -1,0 +1,270 @@
+.create-liferoute-section
+	.create-liferoute__step-2
+		.container
+			.step-form-block
+				h2.title Create or Request LIFEROUTE
+				.step-form-container(ng-controller="routeCtrl")
+					.step-form-heading.h-sm
+						h3.sub-title If CREATING a Liferoute - please add maximum 10 STEPS and details. 
+							br
+							|If REQUESTING a Liferoute - please fill in as much information you currently know.
+						
+					.step-form-data
+						.step-form-field-box
+							.step-form-nav
+								ul
+									li
+										.step-nav-box.step-one.active
+											.step-nav-txt
+												span.label-step Step
+												span.step-no 1
+									li
+										.step-nav-box.step-two.active
+											.step-nav-txt
+												span.label-step Step
+												span.step-no 2
+							
+							.field-group
+								.padding-bottom-4x.text-right
+									button.button.button-green.button-rounded.button-font-bold.button-height-large(ng-click="addNewChoice()") Add Steps
+								.c-lroute-stepbox(ng-class="{'active':isstepCollapsed}" data-ng-repeat="choice in choices|limitTo:10")
+									.c-lroute__top
+										h3.c-title STEP
+											|{{$index+1}}:
+										.c-lroute__opt
+											ul
+												li
+													span.video-icon.pointer(ng-class="{'hidden':!isstepCollapsed}" ng-click="showaddvideoblock=true")
+														i.icon-video
+												li
+													span.img-icon.pointer(ng-class="{'hidden':!isstepCollapsed}" ng-click="showaddimgblock=true")
+														i.icon-file 
+												li
+													span.caret(ng-click="isstepCollapsed = !isstepCollapsed" class="pointer")
+									.c-lroute__field-group(uib-collapse="!isstepCollapsed" )
+										.c-field.c-outline.c-1.c-lh.c-shadow.c-b-xsm.c-md
+											input(type="text", placeholder="Sub Title").c-field-control
+										.c-field.c-outline.c-1.c-lh.c-shadow.c-b-xsm.c-md
+											textarea(rows="6" cols="6" placeholder="Description").c-field-control
+										.c-field.c-outline.c-1.c-lh.c-shadow.c-b-xsm.c-md
+											input(type="text", placeholder="Duration").c-field-control
+										.c-field.c-outline.c-1.c-lh.c-shadow.c-b-xsm.c-md
+											.c-has-icon.l-p
+												input(type="text", placeholder="Cost").c-field-control
+												.icon-addon.hidden-xs
+													i.icon-pound
+										.c-add-img-video__block.c-addimgblcok(ng-show="showaddimgblock")
+											.c-add-img-video__top
+												.fileUpload
+													input(type="file" class="upload")
+													button.button.button-green.button-rounded.button-height-large.button-font-bold Add Images
+												.help-txt
+													p Max. 4 JPEGs of 10MB in Size 
+												
+											.data-list
+												.row
+													.col-md-4.col-sm-6
+														.img-box
+															span.delete-ico
+																	i.icon-close-fill
+															figure
+
+																img(src="images/test.jpg" alt="img")
+															figcaption
+																h3.file-title Originalname.jpeg
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption = ! addcaption" ng-class="{'hidden':addcaption}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+
+													.col-md-4.col-sm-6
+														.img-box
+															span.delete-ico
+																	i.icon-close-fill
+															figure
+																img(src="images/test.jpg" alt="img")
+															figcaption
+																h3.file-title Originalname.jpeg
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption1 = ! addcaption1" ng-class="{'hidden':addcaption1}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption1") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+
+													.col-md-4.col-sm-6
+														.img-box
+															span.delete-ico
+																	i.icon-close-fill
+															figure
+																img(src="images/test.jpg" alt="img")
+															figcaption
+																h3.file-title Originalname.jpeg
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption2 = ! addcaption2" ng-class="{'hidden':addcaption2}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption2") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+
+										.c-add-img-video__block(ng-show="showaddvideoblock")
+											.c-add-img-video__top
+												
+												button.button.button-green.button-rounded.button-height-large.button-font-bold(ng-controller="ModalCtrl"  ng-click="insertvideo()") Add Videos
+												.help-txt
+													p Max. 2 External Video Links
+												
+											.data-list
+												.row
+													.col-md-4.col-sm-6
+														.video-box
+															span.delete-ico
+																	i.icon-close-fill
+															
+															iframe(width="100%" height="200" src="https://www.youtube.com/embed/7mNu1DaTVDY" frameborder="0" allowfullscreen)
+																	
+															figcaption
+																h3.file-title Originalname.mp4
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption3 = ! addcaption3" ng-class="{'hidden':addcaption3}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption3") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+													.col-md-4.col-sm-6
+														.video-box
+															span.delete-ico
+																	i.icon-close-fill
+															
+															iframe(width="100%" height="200" src="https://www.youtube.com/embed/7mNu1DaTVDY" frameborder="0" allowfullscreen)
+																	
+															figcaption
+																h3.file-title Originalname.mp4
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption4 = ! addcaption4" ng-class="{'hidden':addcaption4}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption4") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+								.c-post_option
+									h4 POSTING OPTION
+									.c-post_option__row
+										.row
+											.col-md-8.col-sm-8.col-xs-8
+												.c-post_option__txt
+													h5 Post as a new life route that I have completed
+													p Use this option to inform others that you have completed a particular life route which you have prior experience of. Users will be able to post and view comments by clicking on VIEW LIFE ROUTE button.
+											.col-md-4.col-sm-4.col-xs-4
+												.c-post_option_btn
+													.fh-switch
+														input(type="radio" id="one" name="a")
+														label(for="one")
+														span.fh-switch-knob
+									.c-post_option__row
+										.row
+											.col-md-8.col-sm-8.col-xs-8
+												.c-post_option__txt
+													h5 Post as a new life route request for help with
+													p  Use this option to ask other users for help, advice or suggestions for a life route you either have started or are in progress. Users can then offer support, advice and guidance by clicking on POST COMMENT.
+											.col-md-4.col-sm-4.col-xs-4
+												.c-post_option_btn
+													.fh-switch
+														input(type="radio" id="two" name="a")
+														label(for="two")
+														span.fh-switch-knob  
+								.c-setting-opt
+									.row
+										.col-md-8.col-sm-8.col-xs-8
+											h3 Post this to Everyone on MyLifeRoute
+										.col-md-4.col-sm-4.col-xs-4
+											.c-oth-opt__btn
+												.fh-switch
+														input(type="radio" id="three" name="b")
+														label(for="three")
+														span.fh-switch-knob
+								.c-setting-opt
+									.row
+										.col-md-8.col-sm-8.col-xs-8
+											h3 Post this to My Connections only
+										.col-md-4.col-sm-4.col-xs-4
+											.c-oth-opt__btn
+												.fh-switch
+														input(type="radio" id="four" name="b")
+														label(for="four")
+														span.fh-switch-knob
+								.c-setting-opt
+									.row
+										.col-md-8.col-sm-8.col-xs-8
+											h3 Post this to Specific People only
+										.col-md-4.col-sm-4.col-xs-4
+											.c-oth-opt__btn
+												.fh-switch
+														input(type="radio" id="five" name="b")
+														label(for="five")
+														span.fh-switch-knob
+								
+								.c-search-field
+									.row
+										.col-sm-3
+											label Select People
+										.col-sm-9
+											.c-field.c-outline.c-1.c-lh.c-shadow.c-b-sm
+												input(type="text", placeholder="Add Keywords").c-field-control
+												.people-list
+													ul
+														li
+															span.__label John Smith 
+															span.ico.pointer 
+																i.icon-close-o 
+														li
+															span.__label John Smith 
+															span.ico.pointer
+																i.icon-close-o 
+														li
+															span.__label John Smith 
+															span.ico.pointer 
+																i.icon-close-o
+
+
+
+											
+
+
+
+													
+								.btn-field.text-right
+									button.button.button-danger.button-font-medium.button-uppercase.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-left-1x.margin-right-1x.margin-bottom-2x CANCEL
+									button.button.button-green.button-font-medium.button-uppercase.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-left-1x.margin-right-1x.margin-bottom-2x SAVE AS DRAFT
+									button.button.button-uppercase.button-font-medium.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-right-1x.margin-left-1x POST

@@ -1,0 +1,89 @@
+// THEME AND COLOR
+$black: #000000 !default;
+$white: #ffffff !default;
+$theme:#26abd3 !default;
+$color-bg-01:#ececec !default;
+$color-bg-02:#f8f8f8 !default;
+$color-bg-03:#0ca200 !default;
+$color-bg-04:#8800d6 !default;
+$color-bg-05:#ec7d10 !default;
+$color-bg-06:#07beb9 !default;
+$color-bg-07:#3ab54a !default;
+$color-bg-08:#006495 !default;
+
+//txt-color
+$color-text-01:#444444 !default;
+$color-text-02:#777777 !default;
+$color-text-03:#424242 !default;
+$color-text-04:#0ca200 !default;
+$color-text-05:#fa3238 !default;
+$color-text-06:#8800d6 !default;
+$color-text-07:#ec7d10 !default;
+$color-text-08:#07beb9 !default;
+$color-text-09:#3ab54a !default;
+$color-text-10:#006495 !default;
+
+
+//box-color
+$color-l-bg-01:#78828f !default;
+$color-l-bg-02:#0ca300 !default;
+$color-l-bg-03:#8900d6 !default;
+$color-l-bg-04:#07beb9 !default;
+$color-l-bg-05:#ec7d11 !default;
+$color-l-bg-06:#26abd3 !default;
+
+
+//listing-color
+$color-list-01:#0ca200 !default;
+$color-list-02:#8800d6 !default;
+$color-list-03:#ec7d10 !default;
+$color-list-04:#1f1f1f !default;
+$color-list-05:#07beb9 !default;
+$color-list-06:#b8ba07 !default;
+$color-list-07:#3ab54a !default;
+
+$color-list-b-01:#ecf6eb !default;
+$color-list-b-02:#f0e2f8 !default;
+$color-list-b-03:#fbf1e8 !default;
+$color-list-b-04:#707070 !default;
+$color-list-b-05:#e1f5f4 !default;
+
+//connetion-color
+$color-connetion-01:#6bc664;
+$color-connetion-02:#b664e4;
+$color-connetion-03:#63c3eb;
+$color-connetion-04:#f69850;
+$color-connetion-05:#79838f;
+$color-connetion-06:#eac14f;
+$color-connetion-07:#74ca99;
+$color-connetion-08:#d9ab30;
+
+
+
+// PATH & FONT NAME
+$font-family: "ralway" !default;
+$imgpath: "../images/" !default;
+$primary-font-path: "../fonts" !default;
+$url: $imgpath !default;
+
+// FONTS and TEXT STYLE
+$fontnormal: 16px !default;
+$fontsmall: 12px !default;
+$lineheight: 1.5 !default;
+$fontawesome: FontAwesome !default;
+$spacing: 5px !default;
+
+//TRANSITION EFFECT
+$trasition_all: all 0.3s ease-in-out 0s !default;
+
+// Display
+$ib: inline-block !default;
+$b: block !default;
+$t: table !default;
+$cell: table-cell !default;
+$none: none !default;
+
+// Margin
+$mauto: auto auto !default;
+$zeroauto: 0 auto !default;
+$auto: auto !default;

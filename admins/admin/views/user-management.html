@@ -1,0 +1,58 @@
+<div class="container-fluid">
+   <div class="panel" ng-init="user_List()">
+      <div class="panel-heading">
+         <div class="row">
+            <div class="col-md-4">
+               <form ng-submit="user_List()">
+                  <div class="input-group">
+                     <input value="" class="form-control" ng-model="search" placeholder="Search dashboard..." type="text">
+                     <span class="input-group-btn"><button type="button"  ng-click="user_List()" class="btn btn-primary">Go</button></span>
+                  </div>
+               </form>
+            </div>
+            <div class="col-md-4">
+               <select class="form-control" ng-model="filter" ng-change="currentPage=1;user_List()">
+            <option value="">All</option>
+            <option value="Active">Active</option>
+            <option value="InActive">Deactive</option>
+  				</select>
+            </div>
+         </div>
+
+      </div>
+      <div class="panel-body">
+         <table class="table table-bordered">
+            <thead>
+               <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Details</th>
+                  <th>Action</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr ng-repeat="x in userList">
+                  <td>{{x.full_name}}</td>
+                  <td>{{x.email}}</td>
+                  <td><a ui-sref="main.user_detail({user_id: x._id})">View Profile</a></td>
+                  <td>
+                     <button class="btn btn-primary" ng-show="!x.is_blocked" ng-click="blockUser(x._id)">
+                        <i class="fa fa-lock"></i>
+                     </button>
+                     <button class="btn btn-success" ng-show="x.is_blocked" ng-click="unblockUser(x._id)">
+                        <i class="fa fa-unlock"></i>
+                     </button>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <div class="alert alert-danger" ng-show="userList.length == 0">
+            No results found
+         </div>
+      </div>
+
+      <div class="pagination-list">
+         <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="user_List()" max-size="maxSize" class="pagination-sm pull-right" boundary-link-numbers="true" rotate="false"></ul>
+      </div>
+   </div>
+</div>

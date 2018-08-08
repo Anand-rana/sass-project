@@ -1,0 +1,30 @@
+.forgot-form
+	.inner-form
+		.inner-form-row
+			.inner-form-cell
+				.inner-form-block
+					.main-heading
+						h2.title Forgotten password
+					.field-group
+						
+						.c-field.field-req
+							input(type="text", placeholder="Email address").c-field-control
+							.icon-sign &#42;
+							.help-block
+								p If you are signed up to WriteUp, you will be sent a recovery email
+						
+						
+
+						
+						.c-field
+							a(data-ui-sref="forgot.section({ type: 'forgotmsg'})").button.button-block.button-height-large.button-font-base.button-uppercase.button-shadow Submit
+
+			.inner-form-cell.form-right-block
+				.form-block-options
+					h2 already have an account?
+						
+					.margin-top-10x.text-center
+							a(ui-sref="login" class="opt-link") Login here
+								span.margin-left-2x
+									i.icon-angle-right-o
+

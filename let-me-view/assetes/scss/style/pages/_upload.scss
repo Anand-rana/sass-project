@@ -1,0 +1,666 @@
+.upload_wizard-btn {
+    @include padding(25 0);
+
+    .wizard__btn {
+        display: $inline;
+        background-color: $white;
+        border: none;
+        text-transform: $uppercase;
+
+        @include raleway-semibold;
+
+        @include pos(rel, null);
+
+        @include fontsize(13);
+
+        @include padding(15);
+
+        transition: $trasition_all;
+
+        & > span {
+            background-color: $themecolor;
+            color: $white;
+            width: 40px;
+
+            @include fontsize(18);
+
+            line-height: 50px;
+        }
+
+        &:hover, &:focus {
+            background-color: #abcbf4;
+        }
+    }
+
+    .wizard-prev {
+        @include padding(15 15 15 55);
+
+        min-width: 150px;
+
+        & > span {
+            @include pos(ab, 0 null 0 0);
+
+            &:before {
+                content: "";
+
+                @include pos(ab, -12px 0 -12px null);
+
+                z-index: 10;
+                width: 3px;
+                background-color: $themecolor;
+            }
+        }
+    }
+
+    .wizard-next {
+        @include padding(15 55 15 15);
+
+        min-width: 150px;
+        float: right;
+
+        & > span {
+            @include pos(ab, 0 0 0 null);
+
+            &:before {
+                content: "";
+
+                @include pos(ab, -12px null -12px 0);
+
+                z-index: 10;
+                width: 3px;
+                background-color: $themecolor;
+            }
+        }
+    }
+}
+
+.wizard-tab-section {
+    @include margin-top(20);
+}
+
+.wizard-tab__links {
+    text-align: center;
+
+    & > ul {
+        & > li {
+            display: $inline;
+
+            @include margin-right(12);
+
+            & > span {
+                @include padding(10 40);
+
+                cursor: pointer;
+                display: $block;
+                background-color: #d2e4fc;
+                color: #4e4e4e;
+
+                @include fontsize(16);
+
+                @include pos(rel, null);
+
+                transition: $trasition_all;
+
+                &:before {
+                    @include arrow(right, #d2e4fc, null, null);
+
+                    border-width: 22px 0 22px 12px;
+
+                    @include pos(ab, 0 null 0 100%);
+
+                    content: "";
+                    transition: $trasition_all;
+                }
+
+                &:after {
+                    @include arrow(right, #fff, null, null);
+
+                    border-width: 22px 0 22px 12px;
+
+                    @include pos(ab, 0 null 0 0);
+
+                    content: "";
+                    transition: $trasition_all;
+                }
+
+                &:hover {
+                    background-color: $themecolor;
+                    color: $white;
+
+                    &:before {
+                        border-color: transparent transparent transparent $themecolor;
+                    }
+                }
+            }
+
+            &.current, &.editing {
+                & > span {
+                    background-color: $themecolor;
+                    color: $white;
+
+                    &:before {
+                        border-color: transparent transparent transparent $themecolor;
+                    }
+                }
+            }
+
+            &.done {
+                & > span {
+                    background-color: #272e3e;
+                    color: $white;
+
+                    &:before {
+                        border-color: transparent transparent transparent #272e3e;
+                    }
+                }
+            }
+
+            &.default {
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.upload__basic__content {
+    @include margin-top(70);
+}
+
+.p-form-section {
+    @include margin-top(100);
+
+    .c-field {
+        .form-control {
+            &:focus {
+                background-color: #eceff2;
+                border-color: #828ea8;
+            }
+        }
+    }
+
+    .form-group {
+        @include margin-bottom(20);
+    }
+}
+
+.r-box {
+    max-width: 300px;
+    background-color: #e6e7e7;
+
+    @include border(1, solid, #828ea8);
+
+    @include padding(5 30);
+
+    & > .fh-radio {
+        display: $inline;
+
+        &:last-of-type {
+            float: right;
+        }
+    }
+}
+
+.property-type {
+    & > ul {
+        & > li {
+            display: $inline;
+
+            @include margin-left(-4);
+
+            width: 20%;
+        }
+    }
+}
+
+.pt-field {
+    display: block;
+
+    @include pos(rel, null);
+
+    text-align: center;
+}
+
+.pt-field input[type="checkbox"], .pt-field input[type="radio"] {
+    opacity: 0;
+
+    @include pos(ab, null);
+}
+
+.pt-field {
+    .optionlabel {
+        @include border(1, solid, #828ea8);
+
+        @include circle;
+
+        cursor: pointer;
+        display: block;
+
+        @include fontsize(40);
+
+        height: 110px;
+        line-height: 100px;
+        margin: 0 auto;
+        color: #828ea8;
+        width: 110px;
+
+        i {
+            vertical-align: middle;
+        }
+    }
+
+    input[type="checkbox"]:checked + label.optionlabel, input[type="radio"]:checked + label.optionlabel {
+        background-color: $themecolor;
+        color: $white;
+        border-color: $themecolor;
+    }
+
+    input[type="radio"]:checked + label.optionlabel + h5 {
+        @include border-bottom(2, solid, $themecolor);
+    }
+
+    h5 {
+        @include fontsize(14);
+
+        font-weight: 600;
+
+        @include margin(10 0 0);
+
+        @include open-semibold;
+
+        display: $inline;
+
+        @include padding(0 10 10);
+    }
+}
+
+.am-form {
+    @include padding(15);
+
+    color: $white;
+
+    .c-field {
+        label {
+            color: $white;
+        }
+
+        .form-control {
+            border-color: $white;
+
+            &:focus {
+                background-color: $white;
+                border-color: $white;
+            }
+        }
+    }
+
+    .add_btn {
+        display: $inline;
+        height: 40px;
+
+        & > .icon-plus {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            transition: $trasition_all;
+
+            @include fontsize(20);
+
+            background-color: $white;
+            color: #6292b2;
+
+            @include margin-left(10);
+
+            display: $inline;
+            vertical-align: middle;
+
+            @include circle;
+
+            cursor: pointer;
+
+            &:hover, &:focus {
+                background-color: $color3;
+                color: $white;
+            }
+        }
+    }
+}
+
+.upload__file__list {
+    .list__heading {
+        @include fontsize(17);
+
+        @include open-bold;
+
+        @include padding-left(15);
+
+        @include margin-bottom(10);
+    }
+
+    .list__files {
+        @include padding(15);
+
+        .row {
+            @include margin(0 -5);
+        }
+
+        [class^=col-] {
+            @include padding(0 10);
+        }
+    }
+
+    .file__uploadbox {
+        background-color: $white;
+
+        @include padding(10);
+
+        text-align: center;
+
+        @include border(1, dashed, #7c8595);
+
+        .fileUpload {
+            display: $inline;
+
+            @include margin(20 0);
+        }
+    }
+
+    .file_box {
+        @include margin-bottom(25);
+
+        & > figure {
+            @include margin(0);
+
+            background-color: $white;
+
+            @include pos(rel, null);
+
+            overflow: hidden;
+
+            @include fluid-ratio(1 1, img);
+
+            max-height: 138px;
+
+            & > img {
+                transition: $trasition_all;
+                margin: auto auto;
+
+                &:hover {
+                    @include scale(1.1);
+                }
+            }
+        }
+
+        .fav-opt {
+            @include pos(ab, null null 5px 5px);
+
+            cursor: pointer;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            background-color: $color3;
+            color: $white;
+            display: $inline;
+
+            @include circle;
+
+            &:hover, &:focus {
+                @include animation(rotateIn 0.5s linear 0s);
+
+                color: $white;
+                background-color: $themecolor;
+            }
+
+            &.active {
+                color: $white;
+                background-color: $themecolor;
+
+                & + .fav__label {
+                    display: $block;
+                }
+            }
+        }
+
+        .fav__label {
+            @include pos(ab, null null 5px 40px);
+
+            background-color: $themecolor;
+            color: $white;
+
+            @include padding(2 15 2 5);
+
+            @include fontsize(12);
+
+            display: none;
+        }
+
+        .delete-opt {
+            @include pos(ab, null 0 0 null);
+
+            cursor: pointer;
+            width: 34px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            background-color: $color3;
+            color: $white;
+            display: $inline;
+
+            @include fontsize(22);
+
+            transition: $trasition_all;
+
+            &:hover, &:focus {
+                color: $white;
+                background-color: $themecolor;
+            }
+        }
+
+        & > figcaption {
+            background-color: #e9f2fe;
+
+            @include padding(5 10);
+
+            @include fontsize(13);
+
+            @include margin-top(10);
+
+            @include open-semibold;
+
+            & > input {
+                border: 0;
+                background-color: transparent;
+            }
+        }
+
+        &.is--doc-box {
+            & > figure {
+                max-height: inherit;
+
+                & > .file-ico {
+                    text-align: center;
+
+                    @include padding(15 0);
+
+                    & > img {
+                        width: 90px;
+                        display: $inline;
+                    }
+                }
+
+                &:before {
+                    display: none;
+                }
+
+                img {
+                    @include pos(rel, 0);
+                }
+            }
+
+            & .delete-opt {
+                @include pos(rel, 0);
+
+                float: right;
+            }
+
+            & .file__name {
+                float: left;
+
+                @include margin(5 0 0 10);
+            }
+
+            figcaption {
+                background-color: #b0c9d9;
+            }
+        }
+    }
+}
+
+.finalize__row {
+    & h5 {
+        @include padding-left(25);
+
+        @include open-semibold;
+
+        @include margin-bottom(15);
+    }
+
+    .f-box {
+        background-color: #eeefef;
+
+        @include padding(20);
+
+        @include margin-bottom(50);
+
+        @include border(1, solid, #828ea8);
+
+        .c-field {
+            .input-group {
+                .input-group-addon {
+                    border-color: #828ea8;
+                }
+            }
+
+            .form-control {
+                border-color: #828ea8;
+            }
+        }
+
+        .c-textarea {
+            .c-field {
+                .form-control {
+                    resize: none;
+                    border-color: transparent;
+                    height: 130px;
+
+                    @include box-shadow-none;
+
+                    &:focus {
+                        border-color: transparent;
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+
+        .check-btn {
+            .fh-checkbox {
+                label {
+                    color: #687aa2;
+
+                    @include open-semibold;
+
+                    &:before {
+                        @include fontsize(18);
+                    }
+                }
+            }
+        }
+
+        .f__add_btn {
+            display: $inline;
+            height: 30px;
+
+            & > .icon-plus {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                transition: $trasition_all;
+                text-align: center;
+
+                @include fontsize(17);
+
+                background-color: #6292b2;
+                color: $white;
+
+                @include margin-left(10);
+
+                display: $inline;
+                vertical-align: middle;
+
+                @include circle;
+
+                cursor: pointer;
+
+                &:hover, &:focus {
+                    background-color: $color3;
+                    color: $white;
+                }
+            }
+        }
+
+        .f_empty-btn {
+            @include padding-left(10);
+        }
+
+        hr {
+            border-color: #b0b1b1;
+        }
+    }
+
+    .f_upload-box {
+        @include padding(50);
+
+        h2 {
+            @include fontsize(16);
+
+            text-transform: $uppercase;
+
+            @include ralway-bold;
+
+            @include margin-bottom(25);
+        }
+
+        p {
+            @include margin-bottom(15);
+        }
+    }
+}
+
+.c-textarea {
+    @include border(1, solid, #888888);
+
+    @include margin-top(15);
+
+    @include pos(rel, null);
+
+    &:before {
+        @include arrow(top, #888888, 15px, null);
+
+        content: "";
+
+        @include pos(ab, null null 100% 50%);
+
+        @include translatepos(-50%, 0);
+    }
+
+    &:after {
+        @include arrow(top, #fff, 15px, null);
+
+        content: "";
+
+        @include pos(ab, null null 100% 50%);
+
+        @include translatepos(-50%, 1px);
+    }
+}

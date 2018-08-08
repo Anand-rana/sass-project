@@ -1,0 +1,207 @@
+.c-event-section {
+    .title {
+        @include fontsize(30);
+        text-transform: $uppercase;
+        @include josefinsansbold;
+    }
+    .c-event-top {
+        @include padding(50 0);
+        .c-event-filter {
+            text-align: right;
+            @include josefinsansregular;
+            @include fontsize(16);
+            .form-control {
+                @include border-round(4);
+            }
+            select.form-control {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-image: url(#{$imgpath}caret.png);
+                background-position: right 10px center;
+                background-repeat: no-repeat;
+                @include padding-right(50);
+                line-height: inherit;
+                &::-ms-expand {
+                    display: none;
+                }
+            }
+            /*-- HACK SAFRI & CHROME ONLY --*/
+            @media screen and (-webkit-min-device-pixel-ratio: 0) {
+                ::i-block-chrome,
+                select.form-control {
+                    background-position-x: 97%;
+                    background-position-y: 50%;
+                }
+            }
+        }
+    }
+    .c-event-list {
+        .row {
+            @include margin(0);
+            [class*="col-"] {
+                @include padding(0);
+            }
+        }
+        .c-event-box {
+            text-align: center;
+            figure {
+                margin: 0;
+                @include pos(rel, null);
+                cursor: pointer;
+                overflow: hidden;
+                //@include transition(all 0.5s);
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+                figcaption {
+                    @include pos(ab, 0);
+                    max-height: 200px;
+                    margin: auto auto;
+                    h5 {
+                        color: $color02;
+                        @include josefinsansbold;
+                        @include fontsize(30);
+                        text-transform: $uppercase;
+                    }
+                }
+            }
+            figure img {
+                -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+                transition: opacity 0.35s, transform 0.35s;
+                width: 100%;
+            }
+            figure:hover img {
+                -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+            figure figcaption::before {
+                @include pos(ab, 30px 30px 30px 30px);
+                border: 1px solid transparent;
+                content: '';
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+                -moz-border-image: -moz-linear-gradient(-25deg, rgba(0, 0, 0, .9), #f8f8f8 34%, rgba(255, 255, 255, .97) 35%, rgba(9, 9, 9, 0) 63%, rgba(0, 0, 0, .03) 64%, #fff);
+                -webkit-border-image: -webkit-linear-gradient(-25deg, rgba(0, 0, 0, .9), #f8f8f8 34%, rgba(255, 255, 255, .97) 35%, rgba(9, 9, 9, 0) 63%, rgba(0, 0, 0, .03) 64%, #fff);
+                border-image: linear-gradient(-25deg, rgba(0, 0, 0, .9), #f8f8f8 34%, rgba(255, 255, 255, .97) 35%, rgba(9, 9, 9, 0) 63%, rgba(0, 0, 0, .03) 64%, #fff);
+                border-image-slice: 1;
+                background-image: -webkit-linear-gradient(45deg, rgba(36, 36, 36, .7), rgba(26, 26, 26, 0));
+                background-image: -moz-linear-gradient(45deg, rgba(36, 36, 36, .7), rgba(26, 26, 26, 0));
+                background-image: -o-linear-gradient(45deg, rgba(36, 36, 36, .7), rgba(26, 26, 26, 0));
+                background-image: -ms-linear-gradient(45deg, rgba(36, 36, 36, .7), rgba(26, 26, 26, 0));
+                background-image: linear-gradient(45deg, rgba(36, 36, 36, .7), rgba(26, 26, 26, 0));
+            }
+            figure figcaption::before,
+            figure p {
+                opacity: 0;
+                -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+                transition: opacity 0.35s, transform 0.35s;
+            }
+            figure p {
+                margin: 5px auto 0;
+                -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+                color: $color02;
+                @include fontsize(12);
+            }
+            figure:hover figcaption::before,
+            figure:hover p,
+            figure:hover span {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            .caption-txt {
+                @include pos(ab, 50% null null 50%);
+                @include translatepos(-50%, -50%);
+                width: 100%;
+                @include padding(0 35);
+            }
+        }
+    }
+}
+
+.c-event-dtl {
+    .c-event-dtl-info {
+        @include padding(100 0);
+        @include pos(rel, null);
+        .c-event-name {
+            background-color: #242424;
+            @include margin-bottom(50);
+            @include padding(30);
+            color: $color02;
+            h2 {
+                @include fontsize(20);
+                text-transform: $uppercase;
+                color: $themecolor;
+                @include open-semibold;
+                @include padding-bottom(15);
+                @include border-bottom(1, solid, $themecolor);
+            }
+            .c-event-name-info {
+                li {
+                    display: $inline;
+                    @include margin-right(20);
+                    [class*="icon-"] {
+                        @include margin-right(15);
+                        @include fontsize(20);
+                        vertical-align: middle;
+                    }
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+            .social-links {
+                float: right;
+                li {
+                    display: $inline;
+                    @include margin-right(10);
+                    a {
+                        color: #828282;
+                        @include fontsize(20);
+                        @include transition(all 0.2s);
+                        &:hover {
+                            color: $themecolor;
+                        }
+                    }
+                    &:last-child {
+                        @include margin-right(0);
+                    }
+                }
+            }
+        }
+        .c-event-dtl-txt {
+            @include padding-bottom(30);
+            p {
+                @include fontsize(16);
+            }
+        }
+        .contact-section {
+            @include pos(rel, null);
+            @include margin-top(70);
+            .c-field {
+                @include margin-bottom(30);
+                .field-control {
+                    @include open-regular;
+                }
+            }
+        }
+    }
+    .c-upcoming-events {
+        @include pos(rel, null);
+        .item-section {
+            @include padding(100);
+        }
+        background-color: #f2f2f5;
+    }
+    .c-smilar-items {
+        @include pos(rel, null);
+        .item-section {
+            @include padding(100);
+        }
+    }
+}

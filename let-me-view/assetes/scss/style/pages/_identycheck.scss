@@ -1,0 +1,51 @@
+.buyer-identy-block {
+    .personal-info {
+        .edit-btn {
+            @include pos(rel, null);
+
+            text-align: right;
+
+            &:before {
+                @include pos(ab, 50% 130px null 0);
+
+                content: "";
+                height: 2px;
+                background-color: #b9d5f9;
+            }
+        }
+
+        p {
+            line-height: 25px;
+        }
+    }
+
+    .p-dtl {
+
+        .p-dtl__heading {
+            background-color: #6192b2;
+
+            @include padding(20);
+
+            & > h3 {
+                color: $white;
+                text-transform: $uppercase;
+
+                @include raleway-semibold;
+
+                @include fontsize(16);
+            }
+        }
+
+        .form-group {
+            @include margin-bottom(20);
+
+            .has-feedback {
+                .form-control-feedback {
+                    line-height: 34px !important;
+
+                    @include fontsize(25);
+                }
+            }
+        }
+    }
+}

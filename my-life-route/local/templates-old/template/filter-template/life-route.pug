@@ -1,0 +1,27 @@
+.filter-form-block-container
+	.field-group
+		.filter-life-route
+			.t-cell
+				.c-field.c-outline
+					input(type="text", placeholder="Enter Title / Keywords").c-field-control
+			.t-cell
+				span.f-label.hidden-xs Or
+			.t-cell
+				.c-field.c-outline
+					input(type="text", placeholder="I am Currently...").c-field-control
+			.t-cell
+				.c-field.c-outline
+					input(type="text", placeholder="I Want To Be...").c-field-control
+			.t-cell
+				span.f-label.hidden-xs In
+			.t-cell
+				.c-field.c-outline 
+					input(type="text", placeholder="Specify Location (City, Country etc)").c-field-control
+			.t-cell
+				.btn-field
+					button.button.button-height-large.button-rounded.button-font-medium
+						i.icon-search
+
+
+.filter-advance
+	span.pointer(ng-controller="ModalCtrl"  ng-click="aliferoutesearch()") Advanced

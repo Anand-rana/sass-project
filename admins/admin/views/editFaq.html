@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel" ng-init="edifaq_question()">
+        <div class="panel-heading">
+            <h3 class="panel-title">Edit Faq</h3>
+        </div>
+        <div class="panel-body">
+          <form name="editfaqForm" ng-submit="editfaq(editfaqForm.$valid)">
+            <div class="form-group">
+              <input type="text" class="form-control"  name="question"  ng-model="question" ng-required="true" placeholder="Enter Question"/>
+              <div class="text-left">
+								<span class="text-danger" ng-show="editfaqForm.question.$error.required && !editfaqForm.question.$pristine">Please Enter Question.</span>
+							</div>
+            </div>
+            <div class="form-group">
+              <textarea rows="10" cols="5" class="form-control" name="answer"  ng-model="answer" ng-required="true" placeholder="Enter Text"/>
+              <div class="text-left">
+                <span class="text-danger" ng-show="editfaqForm.answer.$error.required && !editfaqForm.answer.$pristine">Please Enter answer.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" ng-disabled="editfaqForm.$invalid" class="btn btn-primary">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

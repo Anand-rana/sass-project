@@ -1,0 +1,46 @@
+@include media("<=767px") {
+   .search-result-section {
+      @include padding(40 0 30);
+
+      .search-list-block {
+         @include margin-top(30);
+
+         .search-list-data {
+            .people-route-list {
+               @include padding-top(0);
+            }
+         }
+      }
+   }
+}
+
+
+@include media("<=550px") {
+   .search-result-section {
+      .search-list-block {
+         .search-list-top {
+            .sort-field-group {
+               float: none;
+
+               .label-field {
+                  display: block;
+
+                  @include margin-bottom(5);
+               }
+
+               .select-control {
+                  display: block;
+                  width: auto;
+               }
+            }
+
+            .total-result {
+               display: block;
+               text-align: right;
+
+               @include margin-bottom(5);
+            }
+         }
+      }
+   }
+}

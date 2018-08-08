@@ -1,0 +1,40 @@
+@include media("<=992px") {
+  .product-section
+  {
+    .product-list-block
+    {
+      .product-list-row
+      {
+        @include padding(20 15);
+
+        .p-opt
+        {
+          @include margin-top(20);
+        }
+      }
+    }
+  }
+}
+
+@include media("<=767px") {
+  .product-section
+  {
+    .product-list-block
+    {
+      .product-list-row
+      {
+        @include padding(15 10);
+      }
+    }
+
+    .main-heading-r {
+        float: left;
+
+        @include margin-top(10);
+
+        &:before {
+            @include pos(ab, 0 100% 0 auto);
+        }
+    }
+  }
+}

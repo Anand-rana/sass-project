@@ -1,0 +1,226 @@
+.page-view-section(data-ng-controller="dtlCtrl")
+	.sp-btn.visible-sm.visible-xs(ng-click="sidenav()")
+		span 
+			i.icon-arrow-right
+	.business-page-view
+		.container
+			.heading-block
+						.breadcrumb-list
+							ul
+								li
+									span My Pages
+								li
+									span Business Profile
+								li
+									span.active  Events
+			.__inner-cotainer
+				.row
+					.col-md-3
+						.page-dtl-sidebar
+							.close-btn.visible-sm.visible-xs(ng-click="closenav()")
+								span
+									i.icon-close-o
+							.page-name-info
+								.page-img
+									figure
+										img(src="images/dummy-page.jpg" alt="img")
+									.page-img__overlay
+										.fileUpload
+											input(type="file" class="upload")
+											span
+												i.icon-camera
+								.page-name
+									h4 Merchant Store
+								.page-location
+									span
+										i.icon-marker
+									|  New York ,USA
+							.page-nav-list
+								ul
+									li
+										a(data-ui-sref="business-page" data-ui-sref-active="active") Home
+										a(data-ui-sref="create-business-post").button.button-rounded.button-font-base-small.button-rounded.button-font-medium-txt.button-height-small Create Post
+									li
+										a(data-ui-sref="page-about" data-ui-sref-active="active") About
+									li
+										a(data-ui-sref="page-followers" data-ui-sref-active="active") Followers (221)
+									li
+										a(data-ui-sref="page-likes" data-ui-sref-active="active") Page Likes (88)
+									li
+										a(data-ui-sref="page-route-mention" data-ui-sref-active="active") LR Mentions (34)
+									li
+										a(data-ui-sref="page-events" data-ui-sref-active="active") Events (66)
+									li
+										a(data-ui-sref="page-reviews" data-ui-sref-active="active") Reviews (35)
+									li
+										a(data-ui-sref="page-adverts" data-ui-sref-active="active") My Adverts (3)
+										a(data-ui-sref="create-advert").button.button-green.button-rounded.button-font-base-small.button-rounded.button-font-medium-txt.button-height-small Create Advert
+								.margin-top-4x
+									button.button.button-green.button-rounded.button-font-medium-txt.button-border-thin.button-width-large Edit Profile
+
+
+					.col-md-9
+						.page-events
+							.page-dtl-box(data-ng-controller="dtlCtrl")
+								.__inner-content
+									.page-events__info
+										.media
+											.media-left
+												.page-events__date
+													span.month Jun
+													span.date 5
+											.media-body
+												.page-events__name
+													h3 Merchant Store
+													span.time 8 hrs
+									
+									.page-events__main-img
+										//show to other user page remove class hidden
+										.page-othusr__opt
+											ul
+												li
+
+													button.button.button-light-grey.button-height-large.button-grey-shadow.button-font-sbold.button-font-medium.button-min-width-medium
+														span.icon-star.margin-right-2x
+														|Interested
+												li
+													
+													button.button.button-light-grey.button-height-large.button-grey-shadow.button-font-sbold.button-font-medium.button-min-width-medium
+														span.icon-reply.margin-right-2x
+														|Share
+												li
+													
+													button.button.button-light-grey.button-height-large.button-grey-shadow.button-font-sbold.button-font-medium.button-min-width-medium(ng-controller="ModalCtrl"  ng-click="addreview()")
+														span.icon-user-o.margin-right-2x
+														|Reviews
+												li
+													
+													button.button.button-light-grey.button-height-large.button-grey-shadow.button-font-sbold.button-font-medium.button-min-width-medium
+														span.icon-dots-ellips.margin-right-2x
+														|Report
+										img(src="images/store-img.jpg" alt="img" class="img-responsive pointer" ng-click="mainpopup()") 
+									.page-events__oth-info
+										ul
+											li
+												.media
+													.media-left
+														span.ico
+															i.icon-history
+													.media-body
+														p June 5 - June 14	
+														span.text-light  Jun 5 at 12 PM to Jun 14 at 3 PM
+											li
+												.media
+													.media-left
+														span.ico
+															i.icon-marker-o
+													.media-body
+														p 12-20 Osborn St, London E1 6TE, UK
+									.page-dtl__share-info
+
+										ul
+											li
+												span.ico.t-liked
+													i.icon-thumb 
+												span Like : 500
+											li
+												span.ico.t-comment
+													i.icon-comment 
+												span Comments : 40
+											li
+												span.ico.t-share
+													i.icon-share 
+												span Share : 23
+														
+								
+									.page-dtl__comment-block
+
+										.comment-txt-field
+											.media
+												.media-left
+													.usr-pic
+														img(src="images/user.jpg" alt="img")
+												.media-body
+													input(type="text" placeholder="Write a comment...")
+													.text-right
+														button.button.button-rounded.button-font-base-small.button-font-sbold.margin-top-2x Comment
+
+										.page-dtl__comment-row
+											.page-dtl__comment-box
+												.media
+													.media-left
+														.usr-pic
+															img(src="images/user.jpg" alt="img")
+													.media-body
+														.page-dtl__comment-msg
+															.comment-msg__top
+																.comment-mg__usr-info
+																	.usr-name
+																		h4 Bryan Linquist CIA, CFE  
+																	.usr-profile
+																		h4 Chief Audit Exceutive
+																.comment-mg__usr__opt
+																	.ico(ng-click="isoptCollapsed1 = !isoptCollapsed1")
+																		i.icon-dots-ellips
+																		.drop-box(uib-collapse="!isoptCollapsed1")
+																			span(ng-controller="ModalCtrl"  ng-click="report()") Report
+																	span.time 11:22 pm	
+															p  Lorem Ipsum is simply dummy text of the pgand typesetting industry. Lorem Ipsum has if been the industry's standard  dummy text the ever since the 1500s, when an unknown text printer took a galley tially unchanged...
+															.comment-msg__opt
+																ul
+																	li
+																		span.t-like
+																			i.icon-thumbs-up
+																			|22
+																	li
+																		span Like
+																	li
+																		span(ng-click="ireplyCollapsed1 = !ireplyCollapsed1") Reply
+														.page-dtl__comment-reply-msg(uib-collapse="!ireplyCollapsed1")
+															.media
+																.media-left
+																	.r-usr-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.page-dtl__comment-msg
+																		.comment-msg__top
+																			.comment-mg__usr-info
+																				.usr-name
+																					h4 Bryan Linquist CIA, CFE  
+																				.usr-profile
+																					h4 Chief Audit Exceutive
+																			.comment-mg__usr__opt
+																				.ico(ng-click="isoptCollapsed2 = !isoptCollapsed2")
+																					i.icon-dots-ellips
+																					.drop-box(uib-collapse="!isoptCollapsed2")
+																						span(ng-controller="ModalCtrl"  ng-click="report()") Report
+																				span.time 11:22 pm	
+																		p  Lorem Ipsum is simply dummy text of the pgand typesetting industry. Lorem Ipsum has if been the industry's standard  dummy text the ever since the 1500s, when an unknown text printer took a galley tially unchanged...
+																		.comment-msg__opt
+																			ul
+																				li
+																					span Like
+																				li
+																					span Reply
+															.comment-txt-field
+																.media
+																	.media-left
+																		.usr-pic
+																			img(src="images/user.jpg" alt="img")
+																	.media-body
+																		input(type="text" placeholder="Write a comment...")
+																		.text-right
+																			button.button.button-rounded.button-font-base-small.button-font-sbold.margin-top-2x Post
+								.list-label.e-list-label
+									span E
+								.page-dtl-overlay
+									.close-ico(ng-click="mainpopupclose()")
+										span
+											i.icon-close-o
+									.page-dtl-overlay-container
+										.page-dtl-overlay-slider
+											ng-owl-carousel(class="owl-theme" owl-items="items" owl-properties="properties" owl-ready="ready($api)")
+												.item(data-ng-repeat="item in items")
+													figure
+														img(src="images/store-img.jpg" alt="img")
+											div(id="customnav" class="customnav")

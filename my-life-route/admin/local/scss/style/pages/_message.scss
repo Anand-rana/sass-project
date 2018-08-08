@@ -1,0 +1,82 @@
+.dashboard-message-section {
+    .header-block {
+        .sort-input-field {
+            text-align: right;
+        }
+    }
+
+    .message-list {
+        @include margin-top(50);
+
+        .media {
+            @include padding( 15 0);
+            @include margin(0);
+            @include border-bottom(1, solid, #dfdfdf);
+            .user-pic {
+                img {
+                    width: 55px;
+                    height: 55px;
+                    @include circle;
+                    object-fit: cover;
+                }
+            }
+
+            .media-left {
+                @include padding-right(20);
+            }
+
+            .msg-u-info {
+                @include fontsize(16);
+                @include margin-top(10);
+                .user-name {
+                    display: $ib;
+                    vertical-align: middle;
+
+                    font-weight: 400;
+                }
+                .p-time {
+                    display: $ib;
+                    vertical-align: middle;
+                    color: $color-text-01;
+                    font-weight: 500;
+                }
+            }
+
+            .msg-txt {
+                @include margin-top(15);
+
+                h3 {
+                    @include fontsize(18);
+                    font-weight: 400;
+                    @include padding-bottom(5);
+                }
+                p {
+                    @include fontsize(15);
+                    font-weight: 500;
+                    color: $color-text-01;
+                }
+            }
+
+            .msg-opt {
+                @include margin-top(15);
+
+                &>ul {
+                    &>li {
+                        @include padding(0 15);
+                        display: $ib;
+                        &>a {
+                            display: $b;
+                            @include fontsize(15);
+                            font-weight: 500;
+                            color: $theme;
+                        }
+
+                        &:first-child {
+                            @include padding-left(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

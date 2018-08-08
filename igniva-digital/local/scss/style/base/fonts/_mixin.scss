@@ -1,0 +1,79 @@
+// VARIABLES FOR FONTS
+$primary-font-path: "../fonts" !default;
+$font-family: "open" !default;
+$font-family-m: "monsten" !default;
+
+//$font-family-alt-second: "ralway" !default;
+@mixin font-face($font-family, $primary-font-path, $font-weight, $font-style) {
+    @font-face {
+        font-family: $font-family;
+        src: url("#{$primary-font-path}.eot");
+        src: url("#{$primary-font-path}.eot?#iefix") format("embedded-opentype"),
+        url("#{$primary-font-path}.woff") format("woff");
+        //url("#{$primary-font-path}.ttf") format("truetype"),
+        //url("#{$primary-font-path}.svg##{$font-family}") format("svg");
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+    //Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        @font-face {
+            font-family: $font-family;
+            src: url("#{$primary-font-path}.svg##{$font-family}") format("svg");
+        }
+    }
+}
+
+//open-sans
+
+@mixin open {
+    font-family: '$font-family', arial, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+@mixin open {
+    font-family: '$font-family', arial, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+@mixin open {
+    font-family: '$font-family', arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin open {
+    font-family: '$font-family', arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin open {
+    font-family: '$font-family', arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin open {
+    font-family: '$font-family', arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+//montserrat
+
+@mixin monsten {
+    font-family: '$font-family-m', arial, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+
+@mixin monsten {
+    font-family: '$font-family-m', arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}

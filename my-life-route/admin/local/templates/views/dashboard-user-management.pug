@@ -1,0 +1,339 @@
+.dashboard-user-mange-section
+	.header-block
+		.row
+			.col-md-4
+				.sort-input-field.margin-bottom-2x
+					.select-control
+						select.sort-field-control
+							option Sort By
+			.col-md-8
+				.text-right
+					button.button.button-green.button-height-large.button-font-bold.button-rounded.margin-right-1x Active Users
+					button.button.button-danger.button-height-large.button-font-bold.button-rounded.margin-right-1x In-Active Users
+					button.button.button-height-large.button-font-bold.button-rounded(ng-controller="ModalCtrl"  ng-click="usersearch()")
+						i.icon-magnifier
+	.user-mangement-list
+		.total-entries
+			span 500 Entries
+		.data-table
+			.table-responsive
+				table.table.table-bordered
+					thead
+						tr
+							th(class="text-center") Full Name
+							th(class="text-center") Email
+							th(class="text-center") Signed Up 
+								br 
+								span (DD/MM/YYYY)
+							th(class="text-center") Status
+							th(class="text-center") Location
+							th(class="text-center") DOB
+								br 
+								span (DD/MM/YYYY)
+							th(class="text-center") Age
+							th(class="text-center") Gender
+							th(class="text-center") Total 
+								br
+								|Connections
+							th(class="text-center") Total
+								br
+								|Followers
+							th(class="text-center") Life Routes
+							th(class="text-center") News
+							th(class="text-center") Events
+							th(class="text-center") Business Pages
+							th(class="text-center") Actions
+					tbody
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						tr
+							td(class="text-center") Jennie jackson
+							td(class="text-center") Jennie_son@gmail.com
+							td(class="text-center") 07/06/2017
+							td(align="center") Active
+							td(class="text-center") Mohali India
+							td(class="text-center") 03/06/1993
+							td(align="center") 23
+							td(align="center") Male
+							td(align="center") 27
+							td(align="center") 27
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center") 4
+							td(align="center")
+								a(data-ui-sref="dashboard-user-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.n-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userblock()")
+									i.icon-not-allowed
+								span.delete-ico.opt-ico(data-ng-controller="ModalCtrl"  data-ng-click="userdelete()")
+									i.icon-delete
+						
+		.page-nation-list.margin-top-4x
+			ul
+				li
+					a(href="#") 1
+				li
+					a(href="#").active 2
+				li
+					a(href="#") 3
+				li
+					a(href="#") 4
+				li
+					a(href="#") 5
+				li
+					a(href="#") 6
+				li
+					a(href="#") 7
+				li
+					a(href="#") 8
+				li
+					a(href="#").next-btn Next
+						Span.ico
+							i.icon-angle-right
+
+				
+	
+						
+
+	

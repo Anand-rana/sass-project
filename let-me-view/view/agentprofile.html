@@ -1,0 +1,127 @@
+<div class="main-header">
+  <div class="container">
+    <div class="header is-h-border">
+      <div class="row">
+        <div class="col-md-3"><a ui-sref="home" class="logo"><img src="images/logo.png" alt="logo" class="img-reponsive"/></a>
+        <div id="nav-icon1" class="visible-xs" ng-controller="MenuCtrl" >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="nav_bar">
+          <ul>
+            <li><a href="#" title="">Listing</a></li>
+            <li><a href="#" title="">Our Guarantee</a></li>
+            <li><a href="#" title="">about us</a></li>
+            <li><a href="#" title="">help</a></li>
+            <li><a href="#" title="" class="nav_bar__callbtn">Request Callback</a></li>
+            <li><a href="#" title="" class="nav_bar__callbtn">Inbox</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--main-contanier-->
+<div class="agent-profile-section">
+<div class="container">
+  <div class="text-right margin-top-2x wow fadeIn">Last Active: <span class="text-theme">2 hours ago</span></div>
+  <div class="main-block">
+    <div class="agent-user margin-top-5x">
+      <div class="row">
+        <div class="col-md-2">
+          
+          <div class="agent-user__img text-center wow fadeInLeft">
+            <img src="images/agentuser.jpg" alt="img"/>
+            <h5 class="o-s-bold margin-top-5x">Andy smith</h5>
+          </div>
+        </div>
+        <div class="col-md-10"><div class="margin-top-2x agent-user__dtl wow fadeInRight"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop </p>
+        <p>publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div class="agent-user__listing margin-top-6x">
+          <h5 class="o-s-bold">My Listings</h5>
+          <ul>
+            <li>Bid Listing <span>32</span></li>
+            <li>Currently Live <span>45</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--contatct-->
+<div class="agent-user-contact wow fadeInUp">
+  <div class="agent-contact__form">
+    <div class="agent-form__heading">
+      <h4>Contact me @</h4>
+    </div>
+    <div class="agent-form__fields margin-top-8x">
+      <div class="row">
+        <div class="col-md-4">
+          
+          <div class="form-group">
+            <div class="c-field">
+              <input type="text" class="form-control" placeholder="Email Address"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="c-field">
+              <input type="text" class="form-control" placeholder="Mobile Number"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="c-field">
+              <input type="text" class="form-control" placeholder="Website"/>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="form-group">
+            <div class="c-field">
+              <textarea cols="6" rows="6" placeholder="Write your message..." class="form-control"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group text-right">
+            <button class="button  button-rounded button-uppercase">Submit</button>
+          </div>
+          <hr/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--agent-featured-->
+<div class="agent-user-featrued wow fadeIn">
+  <div class="text-center">
+    <h4 class="sub-heading ib_v">Featured properties</h4>
+  </div>
+  <div class="auc-slider">
+    <div class="auc-slider__main" ng-controller="MainCtrl" ng-init="names=[{image:'images/property.jpg',status:'live'},{image:'images/property.jpg',status:'Closed'},{image:'images/property.jpg',status:'upcoming'},{image:'images/property.jpg',status:'live'},{image:'images/property.jpg',status:'live'},{image:'images/property.jpg',status:'live'}]">
+      <div class="container">
+        <data-owl-carousel class="owl-carousel owl-theme" data-options="{nav: true,margin:35}">
+        <div owl-carousel-item="" ng-repeat="Objects in names" class="item">
+          <div class="auc_box">
+            <a href="#">
+              <figure><img src="{{Objects.image}}" alt="img"/>
+                <div class="auc-p-stauts">{{Objects.status}}</div>
+              </figure>
+              <figcaption>
+              <h5>Bid Listing</h5>
+              Chandigarh   160022
+              </figcaption>
+            </a>
+          </div>
+        </div>
+        </data-owl-carousel>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>

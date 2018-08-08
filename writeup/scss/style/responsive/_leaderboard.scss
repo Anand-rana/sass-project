@@ -1,0 +1,59 @@
+    @include media("<=1200px") {
+
+        .leader-block {
+            .leader-block__list {
+                .leader-block__list__row {
+                    .user-name {
+                        max-width: 160px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media("<=992px") {
+
+        .leader-block {
+            .leader-block__list {
+                .leader-block__list__row {
+                    .user-pic {
+                        display: $b;
+                        @include margin(0);
+                    }
+                    .user-name {
+                        display: $b;
+                        @include margin-top(10);
+                        max-width: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media("<=767px") {
+
+        .leader-block {
+            @include margin-top(40);
+            .leader-block__list {
+                .leader-block__list__row {
+                    @include padding(30);
+                    ul {
+                        &>li {
+                            display: $b;
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                    .user-name {
+
+                        max-width: 100%;
+                        @include margin(10 0);
+                    }
+
+                    .rating-container {
+                        @include margin-bottom(10);
+                    }
+                }
+            }
+        }
+    }

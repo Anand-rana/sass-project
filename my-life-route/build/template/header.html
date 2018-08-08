@@ -1,0 +1,29 @@
+
+<header>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-9"><a href="#"><img class="img-responsive" src="images/logo.jpg" alt="img"/></a></div>
+        <div class="col-md-8 col-sm-8 col-xs-3">
+          <div class="login-form" data-ng-controller="login">
+            <form ng-submit="signIn()">
+              <div class="field-group">
+                <div class="c-field c-bg-color l-email__field">
+                  <input class="c-field-control" type="text" placeholder="Email"/>
+                </div>
+                <div class="c-field c-bg-color l-pass__field">
+                  <input class="c-field-control" type="Password" placeholder="Password"/>
+                  <div class="forgot-link"><span ng-controller="ModalCtrl" ng-click="forgot()" data-nav="data-nav">Forgot Password ?</span></div>
+                </div>
+                <div class="btn-field">
+                  <button class="button buton-font-medium buton-font-medium-txt button-pill button-font-medium button-uppercase button-width-large button-height-large" type="submit">Sign In </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="nav-icon" id="nav-icon3" data-ng-controller="MenuCtrl"><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

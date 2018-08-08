@@ -1,0 +1,273 @@
+.is--agent {
+    background-image: url(#{$imgpath}/agent-bg.jpg);
+
+
+    //.button-white {
+      //  @include margin-top(100);
+   // }
+}
+
+.page_heading {
+    background-color: #272e3e;
+
+    @include padding(35 0 30);
+
+    @include margin-top(1);
+
+    text-align: center;
+
+    @include open-light;
+
+    @at-root #{&}__title {
+        max-width: 700px;
+        margin: 0 auto;
+
+        h2 {
+            text-transform: $uppercase;
+
+            @include fontsize(32);
+
+            display: $inline;
+
+            @include padding(0 25);
+
+            background-color: #272e3e;
+
+            @include pos(rel, null);
+
+            z-index: 12;
+            color: $white;
+        }
+
+        .page_heading__main {
+            @include pos(rel, null);
+
+            &:before {
+                content: "";
+
+                @include pos(ab, 50% 0 null 0);
+
+                @include translate(0, -50%);
+
+                height: 1px;
+                background-color: $white;
+                z-index: 10;
+            }
+        }
+
+        h3 {
+            @include fontsize(18);
+
+            @include margin-top(15);
+
+            color: $white;
+        }
+    }
+}
+
+.manage-pannel {
+    @include margin-top(70);
+
+    @include pos(rel, null);
+
+    &:before {
+        @include pos(ab, 60px 0 15px 0);
+
+        content: "";
+        background-color: #d1e4fc;
+    }
+
+    &:after {
+        @include pos(ab, null 0 0 0);
+
+        content: "";
+        background-color: #b9d5f9;
+        height: 12px;
+    }
+
+    @at-root #{&}__box {
+        text-align: center;
+        color: #595c64;
+        min-height: 320px;
+
+        @include transition;
+
+        @include pos(rel, null);
+
+        .pannel-content {
+            @include pos(rel, null);
+
+            z-index: 10;
+        }
+
+        .box-icon {
+            width: 120px;
+            height: 120px;
+            background-color: $white;
+            margin: 0 auto;
+
+            @include transition;
+
+            @include circle;
+
+            @include pos(rel, null);
+
+            img {
+                @include pos(ab, 0 0 0 0);
+
+                width: 70px;
+                height: 70px;
+                margin: auto;
+            }
+        }
+
+        h3 {
+            text-transform: $uppercase;
+
+            @include raleway-semibold;
+
+            @include fontsize(18);
+
+            @include margin-top(25);
+
+            color: #505665;
+        }
+
+        .pannel__txt {
+            @include fontsize(16);
+
+            @include margin-top(35);
+
+            @include open-semibold;
+
+            @include padding(0 10);
+        }
+
+        &:hover {
+            &:before {
+                @include pos(ab, 50px 0 0 0);
+
+                content: "";
+                background-color: #b9d5f9;
+                z-index: 9;
+            }
+
+            .box-icon {
+                @include margin-top(-20);
+
+                display: $inline;
+            }
+        }
+    }
+}
+
+.dashboard-content {
+    @include padding(80 0);
+
+    .content-row {
+        @include padding(60 0);
+
+        .content-txt {
+            h3 {
+                @include fontsize(26);
+
+                @include ralway-regular;
+
+                @include margin(50 0);
+            }
+
+            .content-options {
+                @include margin-top(50);
+
+                span[class^=icon-] {
+                    @include fontsize(60);
+
+                    display: $inline;
+                    width: 32%;
+                    color: $themecolor;
+                }
+
+                ul {
+                    li {
+                        @include fontsize(18);
+
+                        display: $block;
+
+                        @include margin-bottom(10);
+
+                        [class^=icon-] {
+                            @include fontsize(30);
+
+                            color: #00b6dd;
+                            vertical-align: middle;
+
+                            @include padding-right(20);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.q-reg-title {
+    text-align: center;
+
+    @include padding(20 0);
+
+    background-color: #272e3e;
+
+    h3 {
+        color: $white;
+        text-transform: $uppercase;
+
+        @include open-light;
+
+        @include fontsize(35);
+    }
+}
+
+.q-reg-form {
+    @include padding(50 0);
+
+    h4 {
+        @include fontsize(20);
+
+        @include raleway-semibold;
+
+        text-transform: $uppercase;
+    }
+
+    .q-rg-fields {
+        @include margin-top(50);
+
+        .rg-name-field {
+            display: table;
+            width: 100%;
+
+            #f-name {
+                width: 60%;
+                float: left;
+            }
+
+            #l-name {
+                width: 40%;
+                float: left;
+            }
+        }
+
+        .check-btn {
+            display: $inline;
+
+            &:last-child {
+                @include padding-left(20);
+            }
+        }
+
+        .button {
+            float: right;
+
+            @include margin-top(15);
+        }
+    }
+}

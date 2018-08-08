@@ -1,0 +1,34 @@
+{
+  "name": "ul-geion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-nicescroll": "0.0.0",
+    "angular-owl-carousel2": "^1.0.6",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^1.0.3",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "angular-fancybox-plus": "^1.0.3",
+    "angular-owl-carousel2": "^1.0.6",
+    "fancybox-plus": "^1.3.8",
+    "ng-tags-input": "^3.2.0",
+    "videojs-vimeo": "^2.0.2",
+    "videojs-youtube": "^2.4.1",
+    "vjs-video": "^0.1.11"
+  }
+}

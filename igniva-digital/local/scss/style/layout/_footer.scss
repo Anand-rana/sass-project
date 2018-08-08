@@ -1,0 +1,89 @@
+footer {
+    background-color: $color-red;
+    @include border-top(1, solid, #b30000); // -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+    // -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+    // box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+    @include pos(rel, null);
+    z-index: 10;
+    .inner-footer {
+        @include padding(25 0);
+
+        .address-block {
+            p {
+                @include fontsize(12);
+                line-height: 20px;
+                color: $white;
+            }
+            a
+            {
+              @include fontsize(12);
+              line-height: 20px;
+              color: $white;
+            }
+        }
+
+        .social-links {
+            text-align: right;
+            &>ul {
+                &>li {
+                    display: $ib;
+                    &>a {
+                        display: $b;
+                        @include padding(0 10);
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .footer-links {
+            @include margin-top(28);
+            text-align: right;
+            display: table;
+            width: 100%;
+            &>ul {
+                display: $ib;
+                &>li {
+                    float: left;
+                    color: $white;
+                    @include padding(0 12);
+                    @include pos(rel, null);
+
+                    &:after {
+                        @include pos(ab, -5px -2px null null);
+                        content: ".";
+                        color: $white;
+                    }
+                    &>a {
+                        display: $b;
+
+                        @include fontsize(12);
+                        color: $white;
+                        line-height: 14px;
+                        @include pos(rel, null);
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    &:first-child {
+                        @include padding-left(0);
+
+                        & > a
+                        {
+                          pointer-events: none;
+                        }
+                    }
+                    &:last-child {
+                        @include padding-right(0);
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

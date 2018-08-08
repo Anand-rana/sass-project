@@ -1,0 +1,38 @@
+@include media("<=1200px") {
+    .service-section {
+        .service-inner {
+            .service-block {
+                @include padding(30 30 30 0);
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+    .r-rev-section {
+        .r-rev-list-block {
+            @include padding(50 0);
+        }
+    }
+
+    .client-section {
+        .slider-block {
+            @include padding(50 0);
+        }
+    }
+
+    .service-section {
+        .service-inner {
+            .service-block {
+                .service-block-box {
+                    @include margin-bottom(10);
+                }
+            }
+        }
+    }
+    .l-news-section {
+        .l-news-list-block {
+            @include padding(40 0 50);
+        }
+    }
+}

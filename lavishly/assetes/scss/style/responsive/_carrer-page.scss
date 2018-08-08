@@ -1,0 +1,70 @@
+ @include media("<=1600px") {
+     .tilled-txt-7 {
+         left: -100px;
+     }
+     .tilled-txt-8 {
+         left: -100px;
+     }
+ }
+ 
+ @include media("<=1400px") {
+     .tilled-txt-7 {
+         left: -90px;
+     }
+     .tilled-txt-8 {
+         left: -90px;
+     }
+ }
+ 
+ @include media("<=1300px") {
+     .tilled-txt-7 {
+         left: -75px;
+     }
+     .tilled-txt-8 {
+         left: -75px;
+     }
+     .carrer-page-section {
+         .container {
+             width: 100%;
+         }
+     }
+     .carrer-detail-section {
+         .container {
+             width: 100%;
+         }
+         .c-job-reference {
+             .carrer-job-listing {
+                 .carrer-job-row {
+                     .c-job-action {
+                         border: 0;
+                         @include margin-top(10);
+                     }
+                 }
+             }
+         }
+     }
+ }
+ 
+ @include media("<=992px") {
+     .carrer-page-section {
+         @include padding(50 0);
+     }
+     .carrer-job-listing {
+         @include margin-top(50);
+         .carrer-job-row {
+             [class*="c-job-"] {
+                 width: 100% !important;
+                 display: block;
+                 text-align: center;
+             }
+             .c-job-time {
+                 border: 0;
+                 @include margin-top(10);
+             }
+             .c-job-location {
+                 border: 0;
+                 @include margin-top(10);
+             }
+         }
+     }
+ }

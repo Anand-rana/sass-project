@@ -1,0 +1,112 @@
+@include media(">=1000px") {
+    .modal {
+        text-align: center;
+        padding: 0 !important;
+    }
+
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .side-back-drop {
+        display: none;
+    }
+}
+
+@include media(">=1200px") {
+    .search-modal {
+        .modal-dialog {
+            width: 1200px;
+        }
+    }
+    .video-modal {
+        .modal-dialog {
+            width: 1200px;
+        }
+    }
+     .images-modal {
+        .modal-dialog {
+            width: 1200px;
+        }
+    }
+}
+
+
+
+
+@include media("<=1200px") {
+
+    header {
+        .nav-section {
+            .main-user-nav {
+                .notification-drop-down-box {
+                    left: auto;
+                    right: 0;
+
+                    .notification-drop-header {
+                        &:after {
+                            left: auto;
+                            right: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include media("<=991px") {
+
+
+
+    .dashboard-nav {
+        width: 200px;
+
+        .dashboard-nav__list {
+            &>ul {
+                &>li {
+                    &>a {
+                        @include padding(20 10);
+                        @include fontsize(15);
+
+                        [class*="icon-"] {
+                            @include fontsize(18);
+                            width: 25px;
+                            @include margin-right(5);
+                        }
+                    }
+                }
+            }
+            .d-sub-nav {
+                &>li {
+                    &>a {
+                        @include padding(20 10);
+                        @include fontsize(15);
+                        [class*="icon-"] {
+                            @include fontsize(18);
+                            width: 25px;
+                            @include margin-right(5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .dashboard-container {
+        .dashboard-content {
+            @include margin-left(200);
+        }
+    }
+}

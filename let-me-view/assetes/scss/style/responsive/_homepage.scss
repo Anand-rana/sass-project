@@ -1,0 +1,64 @@
+@include media("<=992px") {
+    .filter_section {
+        text-align: center;
+
+        .price_list {
+            @include margin-top(20);
+        }
+    }
+
+    .gurantee__box {
+        @include margin-bottom(30);
+    }
+
+    footer {
+        .footer_content {
+            [class^=col-md] {
+                @include margin-bottom(20);
+            }
+        }
+    }
+
+    .filter-options {
+        @include pos(rel, null);
+
+        margin: 0 auto;
+    }
+}
+
+
+@include media("<=1200px") {
+    .auction-list__caption {
+        @include padding(20 15);
+    }
+
+    .filter-options {
+        @include pos(ab, 0 null null 0);
+    }
+}
+
+
+@include media("<=767px") {
+    .filter_section {
+        .search-filter-fields {
+            float: none;
+        }
+
+        .filter_list {
+            width: 100%;
+            float: none;
+        }
+    }
+
+    .banner {
+        @at-root #{&}__caption {
+            .main-title {
+                @include fontsize(25);
+            }
+
+            h2 {
+                @include fontsize(20);
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.join-form-section
+	.container
+		.join-form-container
+			h2.page-heading.up-case START Now - It's 
+				u FREE
+			.field-group
+				.c-field.c-outline.c-bg-color
+					input(type="text", placeholder="Your Email Address").c-field-control
+				.c-field.c-outline.c-bg-color
+					input(type="text", placeholder="Your First Name").c-field-control
+				.c-field.c-outline.c-bg-color
+					input(type="text", placeholder="Your Last Name").c-field-control
+				.c-field.c-outline.c-bg-color
+					input(type="password", placeholder="Choose Password").c-field-control
+				.c-field.c-outline.c-bg-color
+					input(type="password", placeholder="Confirm Password").c-field-control
+				.c-field.c-outline
+					img(src="images/captcha.jpg" alt="img" class="img-responsive")
+				.c-field.c-outline.c-bg-color 
+					input(type="password", placeholder="Captcha Code").c-field-control
+				.c-field
+					label.label-checkbox.label-checkbox-small
+						input(type="checkbox")
+						span.check-mark
+						span.label-name.text-black
+							u I Agree to the Website's Terms of Service and Privacy Policy
+				.btn-field.text-center
+					button.button.buton-font-medium.button-font-medium-txt.button-uppercase.button-width-large.button-height-extra-large.button-rounded(ng-click="$state.go('signup-step-1')" ) JOIN NOW

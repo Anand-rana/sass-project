@@ -1,0 +1,122 @@
+@include media("<=1200px") {
+
+    .company-profile-section {
+        .profile-block {
+            .profile-block-dtl {
+                .p-tabs {
+                    .nav-tabs {
+                        li {
+                            a {
+                                @include padding(20);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=992px") {
+    .profile-block {
+        @include padding(30 20);
+        .profile-block-dtl {
+            &>.row {
+                @include margin-left(-15);
+                @include margin-right(-15);
+                &>[class^="col-"] {
+                    @include padding-left(15);
+                    @include padding-right(15);
+                }
+            }
+
+            .p-tabs {
+                .p-tab-cotent {
+
+                    .up-info {
+
+                        .up-info-row {
+
+                            .btn-field {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .company-profile-section {
+        .profile-block {
+            .profile-block-dtl {
+                .p-tabs {
+                    .nav-tabs {
+                        li {
+                            a {
+                                @include padding(10 5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+    .profile-block {
+        @include margin-top(40);
+
+        .profile-block-dtl {
+            .p-personal-info-block {
+                @include margin-top(30);
+
+                .u-edit-link {
+                    @include margin-top(10);
+                    display: $ib;
+                }
+
+                .user-rating-cotainer {
+                    @include margin-top(10);
+                }
+            }
+        }
+    }
+}
+
+@include media("<=479px") {
+    .profile-block {
+        .profile-block-dtl {
+            .p-tabs {
+                .p-tab-cotent {
+                    .up-info {
+                        .t-cell {
+                            display: $b;
+                        }
+                    }
+                    .p-cp-block {
+                        .t-cell {
+                            display: $b;
+                            width: 100%;
+                        }
+                    }
+
+                    .p-staff-block {
+                        .t-cell {
+                            display: $b;
+                            width: 100%;
+                        }
+                    }
+
+                    .p-product-block {
+                        .t-cell {
+                            display: $b;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

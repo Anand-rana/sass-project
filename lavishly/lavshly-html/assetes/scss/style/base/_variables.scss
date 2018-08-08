@@ -1,0 +1,36 @@
+// THEME AND COLOR
+$themecolor: #f84338 !default;
+$textcolor: #666c70 !default;
+$color01: #000000 !default;
+$color02: #ffffff !default;
+$color03: #c7c7c7 !default;
+$color04: #2a2a2a !default;
+$color05 : #3d3d3d !default;
+$color06: #1b1b1b !default;
+$color07: #262626 !default;
+$color08: #1f1f1f !default;
+
+//block divs
+
+$block: block;
+$inline: inline-block;
+
+// PATH & FONT NAME
+$font-family: 'open_sansregular', arial, sans-serif;
+
+$imgpath: "../images/" !default;
+$primary-font-path: "../fonts" !default;
+$url: $imgpath !default;
+
+// FONTS and TEXT STYLE
+$fontnormal: 15px !default;
+$fontsmall: 13px !default;
+$lineheight: 1.5 !default;
+$lineheight-sm: 1.2 !default;
+$fontawesome: FontAwesome !default;
+$spacing: 5px !default;
+$uppercase: uppercase;
+$capitalize: capitalize;
+
+//TRANSITION EFFECT
+$trasition_all: all 0.4s ease-in-out 0s !default;

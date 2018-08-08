@@ -1,0 +1,23 @@
+header
+	.top-header
+		.container
+			.row
+				.col-md-4.col-sm-4.col-xs-9
+					a(href="#")
+						img(src="images/logo.jpg" alt="img" class="img-responsive")
+				.col-md-8.col-sm-8.col-xs-3
+					.login-form
+						.field-group
+							.c-field.c-bg-color.l-email__field
+								input(type="text", placeholder="Email").c-field-control
+							.c-field.c-bg-color.l-pass__field
+								input(type="Password", placeholder="Password").c-field-control
+								.forgot-link
+									span(ng-controller="ModalCtrl"  ng-click="forgot()" data-nav) Forgot Password ?
+							.btn-field
+								button.button.buton-font-medium.buton-font-medium-txt.button-pill.button-font-medium.button-uppercase.button-width-large.button-height-large(ng-click="$state.go('landing')" ) Sign In 
+					div(id="nav-icon3" class="nav-icon"  data-ng-controller="MenuCtrl")
+							span
+							span
+							span
+							span

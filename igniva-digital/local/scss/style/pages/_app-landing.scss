@@ -1,0 +1,471 @@
+.section-app-about {
+  .inner-block {
+    display: table;
+    width: 100%;
+    @include calc(height, "100vh");
+    @include padding-top(55);
+  }
+
+  .app-about-content {
+    display: table-cell;
+    vertical-align: middle;
+
+    .txt-block {
+      min-height: 600px;
+    }
+
+    h2,
+    p {
+      font-family: $font-family-m;
+      font-weight: 300;
+      line-height: 80px;
+      @include fontsize(60);
+      color: $color-red;
+    }
+  }
+}
+
+.app-desgin-development-page {
+  .section-app-about {
+    .app-about-content {
+      .txt-block {
+        min-height: 500px;
+      }
+    }
+  }
+}
+
+.section-app-desgin {
+  background-color: #fafafa;
+
+  .inner-block {
+    display: table;
+    width: 100%;
+    @include calc(height, "100vh");
+    @include padding(70 0);
+  }
+
+  .inner__container {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .txt-block {
+    h3 {
+      font-family: $font-family-m;
+      font-weight: 300;
+      @include fontsize(30);
+      line-height: 40px;
+      color: $black;
+    }
+
+    p {
+      @include margin-bottom(15);
+      color: $color-n-black;
+      line-height: 25px;
+    }
+
+    .p-content-txt {
+      @include margin-top(30);
+    }
+  }
+
+  .app-phone-bg {
+    background: url("#{$imgpath}phone-bg.png");
+    background-repeat: no-repeat;
+    width: 295px;
+    height: 600px;
+    //margin: 0 auto;
+    //float:right;
+    text-align: center;
+
+    img {
+      width: 255px;
+      height: 455px;
+      @include margin-top(70);
+    }
+
+    video {
+      @include margin-top(70);
+    }
+    .wp-video
+    {
+      margin: 0 auto;
+      @include pos(rel,70px  0 0 0);
+
+      video
+      {
+        @include margin-top(0);
+      }
+    }
+  }
+}
+
+.section-app-content {
+  background-color: #fafafa;
+
+  .inner-block {
+    display: table;
+    width: 100%;
+    @include calc(height, "100vh");
+    @include padding(70 0 130);
+  }
+
+  .inner__container {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .txt-block {
+    h3 {
+      font-family: $font-family-m;
+      font-weight: 300;
+      @include fontsize(30);
+      line-height: 40px;
+      color: $black;
+    }
+
+    p {
+      @include margin-bottom(15);
+      color: $color-n-black;
+      line-height: 25px;
+    }
+
+    .p-content-txt {
+      //@include margin-top(30);
+    }
+  }
+
+  .app-phone-bg {
+    background: url("#{$imgpath}phone-bg.png");
+    background-repeat: no-repeat;
+    width: 295px;
+    height: 600px;
+    //margin: 0 auto;
+    text-align: center;
+
+    img {
+      width: 255px;
+      height: 455px;
+      @include margin-top(70);
+    }
+
+    video {
+      @include margin-top(70);
+    }
+    .wp-video
+    {
+      margin: 0 auto;
+      @include pos(rel,70px  0 0 0);
+
+      video
+      {
+        @include margin-top(0);
+      }
+    }
+  }
+
+  .video_block {
+    @include margin-top(130);
+
+    & > .row {
+      @include margin-left(-1);
+      @include margin-right(-1);
+
+      [class^="col-"] {
+        @include padding-left(1);
+        @include padding-right(1);
+      }
+    }
+
+    .video-box {
+      @include margin-bottom(20);
+      video {
+        width: 100%;
+        height: 100%;
+        //object-fit: cover;
+      }
+    }
+  }
+}
+
+.section-app-dev {
+  .inner-block {
+    display: table;
+    width: 100%;
+    @include calc(height, "100vh");
+    @include padding(70 0);
+  }
+
+  .inner__container {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .txt-block {
+    h3 {
+      font-family: $font-family-m;
+      font-weight: 300;
+      @include fontsize(30);
+      line-height: 40px;
+      color: $black;
+    }
+
+    p {
+      @include margin-bottom(15);
+      color: $color-n-black;
+      line-height: 25px;
+    }
+
+    .p-content-txt {
+      @include margin-top(30);
+    }
+  }
+
+  .app-tablet-bg {
+    background: url("#{$imgpath}tablet-bg.png");
+    background-repeat: no-repeat;
+    width: 378px;
+    height: 537px;
+    text-align: center;
+    float: right;
+    @include padding(45 20);
+
+    video
+    {
+      width:100%;
+      height: 100%;
+    }
+    img {
+      width: 334px;
+      height: 444px;
+      @include margin-top(48);
+    }
+  }
+}
+
+.section-our-services {
+  background-color: #ffebeb;
+
+  .inner-block {
+    display: table;
+    width: 100%;
+    @include calc(height, "100vh");
+    @include padding(140 0 70);
+  }
+
+  .inner__container {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .services-list {
+    ul {
+      & > li {
+        font-family: $font-family-m;
+        font-weight: 300;
+        line-height: 70px;
+        @include fontsize(50);
+        color: $color-red;
+      }
+    }
+  }
+
+  .services-list-boxs {
+    @include margin-top(120);
+
+    & > .row {
+      @include margin-left(-1);
+      @include margin-right(-1);
+
+      [class^="col-"] {
+        @include padding-left(1);
+        @include padding-right(1);
+      }
+    }
+
+    .s-box {
+      @include margin-bottom(20);
+
+      figure {
+        @include margin(0);
+        overflow: hidden;
+        @include fluid-ratio(3 2, img);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        br
+        {
+          display: none;
+        }
+      }
+
+      .s-post-container {
+        h4 {
+          @include pos(ab,15px 0 null 0);
+          display: $b;
+          @include padding(0 15);
+          z-index: 11;
+          font-weight: 300;
+          font-family: $font-family-m;
+          @include fontsize(15);
+          line-height: 24px;
+          color: #ff0000;
+        }
+
+        .rpscw-sidept {
+          @include pos(ab,0 0 null 0);
+          z-index: 10;
+          background-color: #fafafa;
+          @include padding(38 15 15);
+          @include border-bottom(1,solid,#cccccc);
+
+          & > a {
+            font-weight: 100;
+            font-family: $font-family-m;
+            @include fontsize(15);
+            line-height: 24px;
+            color: #ff6666;
+          }
+        }
+        @include margin(0);
+        overflow: hidden;
+        @include fluid-ratio(3 2, img);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          @include filter(grayscale(100%));
+        }
+
+        :hover {
+          img {
+            @include filter(grayscale(0%));
+          }
+        }
+      }
+
+      .rpscw-datetime {
+        display: none;
+      }
+    }
+  }
+}
+
+.section-digital-services {
+  background-color: #ffebeb;
+
+  .inner-block {
+    display: table;
+    width: 100%;
+    @include calc(height, "100vh");
+    @include padding(155 0);
+  }
+
+  .inner__container {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .services-list {
+    ul {
+      & > li {
+        font-family: $font-family-m;
+        font-weight: 300;
+        line-height: 70px;
+        @include fontsize(50);
+        color: $color-red;
+      }
+    }
+  }
+
+  .services-list-boxs {
+    @include margin-top(155);
+
+    & > .row {
+      @include margin-left(-1);
+      @include margin-right(-1);
+
+      [class^="col-"] {
+        @include padding-left(1);
+        @include padding-right(1);
+      }
+    }
+
+    .s-box {
+      @include margin-bottom(20);
+
+      figure {
+        @include margin(0);
+        overflow: hidden;
+        @include fluid-ratio(3 2, img);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        br
+        {
+          display: none;
+        }
+      }
+
+      .s-post-container {
+        h4 {
+          @include pos(ab,15px 0 null 0);
+          display: $b;
+          @include padding(0 15);
+          z-index: 11;
+          font-weight: 300;
+          font-family: $font-family-m;
+          @include fontsize(15);
+          line-height: 24px;
+          color: #ff0000;
+        }
+
+        .rpscw-sidept {
+          @include pos(ab,0 0 null 0);
+          z-index: 10;
+          background-color: #fafafa;
+          @include padding(38 15 15);
+          @include border-bottom(1,solid,#cccccc);
+
+          & > a {
+            font-weight: 100;
+            font-family: $font-family-m;
+            @include fontsize(15);
+            line-height: 24px;
+            color: #ff6666;
+          }
+        }
+        @include margin(0);
+        overflow: hidden;
+        @include fluid-ratio(3 2, img);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          @include filter(grayscale(100%));
+        }
+
+        :hover {
+          img {
+            @include filter(grayscale(0%));
+          }
+        }
+      }
+
+      .rpscw-datetime {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@include media("<=1400px") {
+
+    .m-post-liferoute {
+        @include padding(100 20 50);
+        .container {
+            width: 100%;
+        }
+    }
+
+    .m-post-newsroute {
+        @include padding(100 20 50);
+        .container {
+            width: 100%;
+        }
+    }
+
+    .m-post-eventsroute {
+        @include padding(100 20 50);
+        .container {
+            width: 100%;
+        }
+    }
+}
+
+@include media("<=1200px") {
+    .m-post-liferoute {
+        @include padding(50 0);
+    }
+
+    .m-post-newsroute {
+        @include padding(50 0);
+    }
+    .m-post-eventsroute {
+        @include padding(50 0);
+    }
+}
+
+
+@include media("<=992px") {
+
+    .m-post-liferoute {
+        .filter-side-block {
+            @include margin-top(0);
+        }
+
+        .heading-block {
+            text-align: center;
+            @include margin-bottom(20);
+
+            .heading-block__buttons {
+                text-align: center;
+                @include margin-top(15);
+            }
+        }
+    }
+
+    .m-post-newsroute {
+        .filter-side-block {
+            @include margin-top(0);
+        }
+
+        .heading-block {
+            text-align: center;
+            @include margin-bottom(20);
+
+            .heading-block__buttons {
+                text-align: center;
+                @include margin-top(15);
+            }
+        }
+    }
+
+    .m-post-eventsroute {
+        .filter-side-block {
+            @include margin-top(0);
+        }
+
+        .heading-block {
+            text-align: center;
+            @include margin-bottom(20);
+
+            .heading-block__buttons {
+                text-align: center;
+                @include margin-top(15);
+            }
+        }
+    }
+}
+
+
+
+@include media("<=767px") {
+    .m-post-section {
+        @include padding(70 0 50);
+        .user-dtl-block {
+            @include pos(fix, 0 null 0 -1000px);
+            margin-top: 0px;
+            background-color: $black;
+            @include padding(10);
+            overflow: auto;
+
+            &.open {
+                left: 0;
+                z-index: 30;
+            }
+        }
+
+        .my-post-cotainer {
+            @include padding-left(0);
+            min-height:inherit;
+        }
+        .sp-btn {
+            top: 0;
+        }
+    }
+
+    .m-post-liferoute {
+        @include padding(30 0);
+    }
+    .m-post-liferoute__list {
+        @include margin-top(30);
+    }
+
+    .m-post-newsroute {
+        @include padding(30 0);
+    }
+    .m-post-newsroute__list {
+        @include margin-top(30);
+    }
+
+    .m-post-eventsroute {
+        @include padding(30 0);
+    }
+    .m-post-eventsroute__list {
+        @include margin-top(30);
+    }
+}

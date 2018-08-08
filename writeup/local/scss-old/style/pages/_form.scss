@@ -1,0 +1,143 @@
+.form-block-section {
+    background: url(#{$imgpath}form-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100%;
+    @include experimental-value(min-height, calc(100vh - 330px));
+    @include padding(100 0);
+
+    .form-block-box {
+        overflow: hidden;
+        @include border-top(15, solid, rgba($white, 0.5));
+        @include border-bottom(15, solid, rgba($white, 0.5));
+        @include border-left(12, solid, rgba($white, 0.5));
+        @include border-right(12, solid, rgba($white, 0.5));
+
+        .reset-form {
+            .inner-form {
+
+                .row {
+                    @include margin-left(-50);
+                    @include margin-right(-50);
+                    [class^="col-"] {
+                        @include padding-left(50);
+                        @include padding-right(50);
+                    }
+                }
+            }
+        }
+
+        .inner-form {
+            background-color: $white;
+
+            .inner-form-row {
+                display: table;
+                width: 100%;
+
+                .inner-form-cell {
+                    display: table-cell;
+                    width: 50%;
+                }
+
+                .form-right-block {
+                    background-color: $color-bg-04;
+                }
+
+                .inner-form-block {
+                    @include padding(30 60);
+                    color: $color-text-01;
+                    font-family: $font-family-alt;
+                    font-weight: 100;
+                    .field-group {
+                        @include margin(50 0 30);
+                    }
+                }
+            }
+
+            .forgot-link {
+                @include fontsize(16);
+                font-family: $font-family-alt;
+                font-weight: 100;
+                color: $color-text-01;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $black;
+                }
+            }
+
+            .form-block-options {
+                @include padding(50 60 0);
+                color: $color-text-01;
+
+                h2 {
+                    text-align: center;
+                    @include fontsize(22);
+                    font-family: $font-family-alt;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    @include padding-bottom(35);
+                    @include pos(rel, null);
+
+                    &:after {
+                        @include pos(ab, 100% 0 0 0);
+                        content: "";
+                        height: 2px;
+                        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f1f1f1+20,a6a8aa+50,f1f1f1+80&0+0,0.8+15,1+19,1+81,0.8+85,0+100 */
+                        background: -moz-linear-gradient(-45deg, rgba(241, 241, 241, 0) 0%, rgba(241, 241, 241, 0.8) 15%, rgba(241, 241, 241, 1) 19%, rgba(241, 241, 241, 1) 20%, rgba(166, 168, 170, 1) 50%, rgba(241, 241, 241, 1) 80%, rgba(241, 241, 241, 1) 81%, rgba(241, 241, 241, 0.8) 85%, rgba(241, 241, 241, 0) 100%);
+                        /* FF3.6-15 */
+                        background: -webkit-linear-gradient(-45deg, rgba(241, 241, 241, 0) 0%, rgba(241, 241, 241, 0.8) 15%, rgba(241, 241, 241, 1) 19%, rgba(241, 241, 241, 1) 20%, rgba(166, 168, 170, 1) 50%, rgba(241, 241, 241, 1) 80%, rgba(241, 241, 241, 1) 81%, rgba(241, 241, 241, 0.8) 85%, rgba(241, 241, 241, 0) 100%);
+                        /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(135deg, rgba(241, 241, 241, 0) 0%, rgba(241, 241, 241, 0.8) 15%, rgba(241, 241, 241, 1) 19%, rgba(241, 241, 241, 1) 20%, rgba(166, 168, 170, 1) 50%, rgba(241, 241, 241, 1) 80%, rgba(241, 241, 241, 1) 81%, rgba(241, 241, 241, 0.8) 85%, rgba(241, 241, 241, 0) 100%);
+                        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f1f1f1', endColorstr='#00f1f1f1', GradientType=1);
+                        /* IE6-9 fallback on horizontal gradient */
+                    }
+                }
+
+                .form-options-btn-group {
+                    @include margin-top(50);
+                }
+
+                .opt-link {
+                    text-align: center;
+                    @include fontsize(16);
+                    font-family: $font-family-alt;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    color: $color-text-01;
+                    @include padding-bottom(10);
+                    display: $ib;
+                    @include border-bottom(1, solid, #d9d9d9);
+
+                    &:hover {
+                        border-color: $black;
+                        color: $black;
+                    }
+                }
+            }
+
+            .form-msg {
+                @include padding(80 20);
+                h2 {
+                    color: $color-text-04;
+                    font-family: $font-family-alt;
+                    font-weight: 100;
+                    @include fontsize(22);
+                    line-height: 2;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.reset-form {
+    .form-block-box {
+        max-width: 600px;
+         margin:0 auto;
+    }
+}

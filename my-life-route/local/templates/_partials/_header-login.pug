@@ -1,0 +1,139 @@
+header
+	.top-header(data-ng-class="headerClass" set-class-when-at-top="fixed")
+		.container
+			.row
+				.col-lg-4.col-md-3.col-sm-4
+					a(data-ui-sref="landing" class="logo")
+						img(src="images/logo.jpg" alt="img" class="img-responsive")
+
+				.col-lg-8.col-md-9.col-sm-8
+					.nav-section
+						div(id="nav-icon3" class="nav-icon" data-ng-controller="navCtrl")
+								span
+								span
+								span
+								span
+
+						.main-nav
+							ul
+								li
+									a(data-ui-sref="my-people" data-ui-sref-active="active" data-ng-class="{active:$state.includes('my-people-connetion')||$state.includes('my-people-request')||$state.includes('my-people-follow-me')||$state.includes('my-people-follow')||$state.includes('my-people-follow')||$state.includes('my-people-blocked')}") My People 
+								li
+									a(data-ui-sref="my-post" data-ui-sref-active="active"  data-ng-class="{active:$state.includes('post-life-route')||$state.includes('post-news-route')||$state.includes('post-events-route')||$state.includes('post-events-upcoming')||$state.includes('post-events-expired')}") My Posts 
+								li
+									a(data-ui-sref="my-pages" data-ui-sref-active="active" data-ng-class="{active:$state.includes('create-business')||$state.includes('create-company')||$state.includes('create-brand')||$state.includes('business-page')}") My Pages
+						.main-user-nav
+							ul
+								li
+									.msg-btn(ng-click="$state.go('my-message')" )
+										span.icon.pointer
+											i.icon-envelope
+											span.t-no 1
+								li
+									.notification-btn
+										span.icon(ng-click="isnotificationCollapsed = !isnotificationCollapsed; isNavCollapsed = false;" ng-class="{'active':isnotificationCollapsed}" class="pointer")
+											i.icon-notification
+											span.t-no 8
+									.notification-drop-down-box(uib-collapse="!isnotificationCollapsed")
+										.notification-drop-down-box-cotainer
+											.notification-drop-header
+												h4 Notifications (22)
+												span.close-btn.visible-xs(ng-click="isnotificationCollapsed = false")
+													i.icon-close
+											.notification-list-drop(ng-nicescroll nice-option="{cursorcolor: '#2abeeb',cursorwidth:'6px',background:'#c4c4c4',cursorborder:'1px solid #c4c4c4',cursorborderradius:'5px',cursorfixedheight:70,touchbehavior:true}" nice-scroll-top-end="topEndComplete()" nice-scroll-end="endScroll()")
+												ul
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+
+											.notification-drop-down-footer
+												a(data-ui-sref="notification") See All
+								li
+									.user-drop-down(ng-click="isNavCollapsed = !isNavCollapsed; isnotificationCollapsed = false;" class="pointer")
+										span.userImg
+											img(src="images/profile-2.jpg" alt="img")
+										span.user-name.hidden-xs Mahmood Choudhury
+										span.caret( ng-class="{'open':isNavCollapsed}")
+									.user-drop-down-box(uib-collapse="!isNavCollapsed")
+										.user-opt-menu
+											ul
+												li
+													a(data-ui-sref="my-pages" data-ui-sref-active="active") Create Page
+												li
+													a(data-ui-sref="create-advert" data-ui-sref-active="active") Create Advert
+												li
+													a(data-ui-sref="my-setting" data-ui-sref-active="active") Settings
+												li
+													a(data-ui-sref="my-stats" data-ui-sref-active="active") My Stats
+												li
+													a(data-ui-sref="my-profile" data-ui-sref-active="active") My Profile
+												li
+													a(href="#") Logout
+	.h-fix-height.hidden-xs.hidden-sm

@@ -1,0 +1,20 @@
+@include media("<=992px") {
+    .rate-us__cotent {
+        .rate-us__box {
+            .rate_us__fields {
+                @include padding(40);
+            }
+        }
+    }
+}
+
+
+@include media("<=767px") {
+    .rate-us__cotent {
+        .rate-us__box {
+            .rate_us__fields {
+                @include padding(20);
+            }
+        }
+    }
+}

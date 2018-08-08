@@ -1,0 +1,247 @@
+header {
+    @include padding(15 0);
+    background-color: $white;
+    @include box-shadow(3px 4px 18px rgba(0, 0, 0, .1));
+    @include pos(fix,0 null null null);
+    width: 100%;
+    z-index: 2;
+
+    .nav-section {
+        display: table;
+        width: 100%;
+        text-align: right;
+        .main-user-nav {
+            display: $ib;
+            vertical-align: middle;
+            @include margin-top(5);
+            &>ul {
+                &>li {
+                    display: $ib;
+                    vertical-align: middle;
+                    @include pos(rel, null);
+                }
+            }
+
+
+            .notification-btn {
+                color: #DAA520;
+                @include fontsize(24);
+                @include padding-right(20);
+                cursor: pointer;
+
+
+                .icon {
+                    @include pos(rel, null);
+                    z-index: 0;
+                    &:after {
+                        @include pos(ab, 50% null null 50%);
+                        @include transform(scale(0) translate(-50%, -50%));
+                        @include transform-origin(top, left);
+                        -webkit-transition: all 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                        transition: all 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                        @include circle;
+                        background-color: lighten($theme, 30%);
+                        content: "";
+                        width: 65px;
+                        height: 65px;
+                        z-index: -1;
+                    }
+                    .t-no {
+                        width: 23px;
+                        height: 23px;
+                        background-color: $theme;
+                        @include circle;
+                        text-align: center;
+                        @include fontsize(12);
+                        color: $white;
+                        display: $b;
+                        font-weight: 300;
+                        line-height: 23px;
+                        @include pos(ab, -10px -12px null null);
+                        &.t-no-large {
+                            width: auto;
+                            height: auto;
+                            @include border-round(4);
+                            line-height: 2;
+                        }
+                    }
+
+                    &:hover {
+                        &:after {
+                            @include transform(scale(1) translate(-50%, -50%));
+                        }
+                    }
+
+                    &.active {
+                        &:after {
+                            @include transform(scale(1) translate(-50%, -50%));
+                        }
+                    }
+                }
+            }
+
+            .notification-drop-down-box {
+                @include pos(ab, 100% null null -150px);
+                @include margin-top(60);
+                min-width: 340px;
+
+                z-index: 11;
+                @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, .35));
+                @include border-round(4);
+
+                .notification-drop-header {
+                    background-color: $theme;
+                    @include padding(12 0);
+                    @include border-round(4 4 0 0);
+                    @include pos(rel, null);
+
+                    &:after {
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 0 10px 15px 10px;
+                        border-color: transparent transparent $theme transparent;
+                        @include pos(ab, -15px null 100% 130px);
+                        content: "";
+                    }
+                    h4 {
+                        text-align: center;
+                        @include fontsize(14);
+                        color: $white;
+                        font-weight: 500;
+                    }
+
+                    .close-btn {
+                        @include pos(ab, -10px -5px null null);
+                        cursor: pointer;
+                        color: $white;
+                    }
+                }
+                .notification-list-drop {
+                    background-color: $white;
+                    max-height: 295px;
+                    ul {
+                        li {
+                            @include padding(10 20);
+                            @include border-bottom(1, solid, #ebebeb);
+                            text-align: left;
+                            .media {
+                                .user-pic {
+                                    img {
+                                        width: 38px;
+                                        height: 38px;
+                                        @include circle;
+                                    }
+                                }
+                                .nt-txt {
+                                    @include fontsize(12);
+
+                                    p {
+                                        color: $black;
+                                        font-weight: 300;
+                                    }
+                                    .time {
+                                        @include fontsize(11);
+                                        font-weight: 300;
+                                        color: lighten($black, 50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .notification-drop-down-footer {
+                    @include border-top(1, solid, #ebebeb);
+                    @include margin-top(-1);
+                    background-color: $white;
+                    @include border-round(0 0 6 6);
+                    @include padding(10 0);
+                    text-align: center;
+
+                    a {
+                        @include fontsize(14);
+                        color: $theme;
+                        font-weight: 400;
+                        &:hover,
+                        &:focus {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .user-drop-down {
+                @include padding(0 20);
+                img {
+                    width: 42px;
+                    height: 42px;
+                    object-fit: cover;
+                    @include circle;
+                    display: $ib;
+                    vertical-align: middle;
+                    @include border(2, solid, $theme);
+                }
+
+                .user-name {
+                    @include fontsize(16);
+                    color: $black;
+                    font-weight: 300;
+                    @include margin-left(10);
+                }
+
+                .caret {
+                    @include border-top(6, solid, $black);
+                    @include border-right(6, solid, transparent);
+                    @include border-left(6, solid, transparent);
+                    @include margin-left(10);
+                }
+            }
+
+            .user-drop-down-box {
+                @include pos(ab, 100% 0 null null);
+                @include margin-top(34);
+                background-color: $white;
+                min-width: 210px;
+                z-index: 11;
+                @include border(1, solid, #ebebeb);
+
+                ul {
+                    li {
+                        display: $b;
+                        text-align: left;
+
+
+                        &>a {
+                            @include padding(15 20);
+                            display: $b;
+                            color: $black;
+                            font-weight: 300;
+                            @include border-bottom(1, solid, #ebebeb);
+                            @include pos(rel, null);
+                            z-index: 0;
+                            overflow: hidden;
+
+
+                            &:hover {
+                                color: $white;
+                                background-color: $theme;
+                            }
+
+                            &.active {
+                                color: $white;
+                                background-color: $theme;
+                            }
+                        }
+
+                        &:last-child {
+                            &>a {
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@include media("<=1400px") {
+    .top-p-section {
+        .top-p-row {
+            .list-box {
+                figure {
+                    figcaption {
+                        h5 {
+                            @include fontsize(25);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+    .top-p-section {
+        @include padding(50 0);
+        .top-p-row {
+            .list-box {
+                figure {
+                    figcaption {
+                        h5 {
+                            @include fontsize(20);
+                        }
+                        &:before {
+                            @include pos(ab, 15px 15px 15px 15px);
+                        }
+                    }
+                }
+            }
+            .caption-txt {
+                @include padding(0 15);
+            }
+            
+        }
+    }
+}

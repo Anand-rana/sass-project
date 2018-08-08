@@ -1,0 +1,288 @@
+.form-section {
+    @include padding(120 0);
+    .form-container {
+        max-width: 930px;
+        margin: 0 auto;
+        @include josefinsansregular;
+    }
+}
+
+.login-form-section {
+    @include fontsize(20);
+    .sign-link {
+        text-align: right;
+        a {
+            @include fontsize(24);
+            text-transform: $uppercase;
+            color: $color01;
+            @include josefinsansbold;
+            &:hover {
+                color: $themecolor;
+            }
+        }
+    }
+    .sign-in-options {
+        @include margin-top(50);
+        .fh-radio {
+            label {
+                @include fontsize(24);
+                color: #272727;
+            }
+        }
+    }
+}
+
+.signup-form-section {
+    @include fontsize(20);
+    .form-section-top {
+        .step-list {
+            float: right;
+        }
+    }
+}
+
+.b-form-section {
+    @include fontsize(20);
+    .login-link {
+        color: $color01;
+        @include josefinsansbold;
+        &:hover {
+            color: $themecolor;
+        }
+    }
+}
+
+.dealar-form-section {
+    @include fontsize(20);
+    .dealar-step-2 {
+       // @include margin-top(120);
+        .dealar-step-2-submit {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .form-container {
+            @include padding(0 30);
+        }
+    }
+}
+
+.step-pannel-box {
+    @include border(1, solid, #d3d3d3);
+    @include padding(100 0 50);
+    @include pos(rel, null);
+    @include margin-bottom(120);
+    .step-pannel-heading {
+        display: $inline;
+        @include padding(15 30);
+        @include border(1, solid, #d3d3d3);
+        @include border-round(30);
+        @include open-semibold;
+        text-align: center;
+        background-color: $color02;
+        @include pos(ab, -25px null null 50px);
+        h4 {
+            @include fontsize(17);
+        }
+    }
+}
+
+.up-form {
+    display: none;
+    &.active-in-form {
+        display: block;
+    }
+}
+
+.c-field {
+    @include pos(rel, null);
+    @include margin-bottom(70);
+    .field-control {
+        border: 0;
+        @include padding(5 0);
+        @include border-bottom(1, solid, #d3d3d3);
+        width: 100%;
+        background-color: transparent;
+        @include josefinsansregular;
+        @include fontsize(20);
+        height: 50px;
+        color: #5e5e5e;
+        text-overflow: ellipsis;
+        &:focus {
+            border-color: $themecolor;
+            + .field-group-addon {
+                color: $themecolor;
+            }
+        }
+    }
+    select.field-control {
+        @include padding-right(30);
+    }
+    &.field-feedback {
+        .field-control {
+            @include padding-left(60);
+        }
+        .field-group-addon {
+            @include pos(ab, 0 null null 0);
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            @include fontsize(35);
+            color: #626262;
+        }
+    }
+    &.field-feedback-side {
+        .field-control {
+            @include padding(0 160 0 60);
+        }
+        .field-group-addon {
+            @include pos(ab, 0 null null 0);
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            @include fontsize(35);
+            color: #626262;
+        }
+        .field-group-link {
+            @include pos(ab, 0 0 null null);
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            @include fontsize(20);
+            color: $textcolor;
+            @include josefinsansregular;
+            a {
+                color: $textcolor;
+                &:hover {
+                    color: $themecolor;
+                }
+            }
+        }
+    }
+}
+
+select.field-control {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(#{$imgpath}caret.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    @include padding-right(50);
+    line-height: inherit;
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+
+/*-- HACK SAFRI & CHROME ONLY --*/
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    ::i-block-chrome,
+    select.field-control {
+        background-position-x: 97%;
+        background-position-y: 50%;
+    }
+}
+
+.page-heading {
+    @include josefinsansbold;
+    text-transform: $uppercase;
+    color: $color01;
+    @include fontsize(24);
+}
+
+.form-section-top {
+    @include margin(50 0);
+    .form-tabs {
+        display: table;
+        width: 100%;
+        & > li {
+            float: left;
+            width: 50%;
+            @include border(1, solid, #ccc);
+            text-align: center;
+            span {
+                cursor: pointer;
+                @include padding(15);
+                text-transform: $uppercase;
+                color: $color01;
+                @include fontsize(16);
+                background-color: #f1f2f6;
+                display: $block;
+                @include josefinsansbold;
+                &:hover {
+                    color: $themecolor;
+                }
+            }
+            &.active {
+                span {
+                    background-color: $themecolor;
+                    color: $color02;
+                }
+            }
+        }
+    }
+    .step-list {
+        display: table;
+        li {
+            float: left;
+            text-align: center;
+            .step-number {
+                width: 60px;
+                min-height: 60px;
+                background-color: #d3d3d3;
+                @include pos(rel, null);
+                @include circle();
+                span {
+                    background-color: #f4f4f4;
+                    width: 50px;
+                    height: 50px;
+                    @include circle();
+                    display: $block;
+                    color: #000;
+                    @include pos(ab, 0 0 0 0);
+                    margin: auto auto;
+                    @include fontsize(30);
+                    line-height: 50px;
+                    color: #d3d3d3;
+                    &.active {
+                        background-color: $themecolor;
+                        color: $color02;
+                        &:after {
+                            content: "";
+                            @include pos(ab, 5px 5px 5px 5px);
+                            //background-color: #000;
+                            @include border(3, solid, #fff);
+                            @include circle();
+                        }
+                    }
+                }
+            }
+            p {
+                @include margin-top(10);
+                color: #323232;
+            }
+            &:last-child {
+                .step-number {
+                    @include margin-left(21);
+                    &:before {
+                        @include pos(ab, 50% null 0 -27px);
+                        background: url(#{$imgpath}step-line.png) no-repeat center;
+                        content: "";
+                        width: 32px;
+                        height: 23px;
+                        @include translatepos(0, -50%);
+                    }
+                }
+                p {
+                    @include margin-left(28);
+                }
+            }
+        }
+    }
+}

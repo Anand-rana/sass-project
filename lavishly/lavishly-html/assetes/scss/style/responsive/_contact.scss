@@ -1,0 +1,26 @@
+@include media("<=1200px") {
+    .header-banner-pic {
+        min-height: 550px;
+    }
+}
+
+@include media("<=767px") {
+    .header-banner-pic {
+        display: none;
+    }
+    .contact-page-section {
+        .contact-dtl {
+            .contact-dtl-info {
+                h3 {
+                    @include margin-bottom(15);
+                }
+                .text-right {
+                    text-align: left;
+                }
+            }
+            .contact-dtl-form {
+                @include padding(30 15);
+            }
+        }
+    }
+}

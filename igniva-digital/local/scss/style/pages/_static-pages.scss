@@ -1,0 +1,89 @@
+.page-content-area {
+  @include calc(min-height, "100vh - 122px");
+
+  .inner-block {
+    @include padding(45 0 50);
+
+    h1.title {
+      @include margin-top(40);
+      font-family: $font-family-m;
+      font-weight: 300;
+      @include fontsize(30);
+      line-height: 40px;
+      color: $color-red;
+    }
+
+    .page-content {
+      @include margin-top(40);
+
+      p {
+        @include fontsize(15);
+        line-height: 24px;
+        color: $color-n-black;
+      }
+
+      ul {
+        @include padding-left(20);
+        & > li {
+            @include padding-left(10)
+          list-style: disc;
+          @include padding-bottom(10);
+        }
+      }
+
+      ol {
+        @include padding-left(20);
+        & > li {
+          @include padding-left(10)
+          list-style: decimal;
+          @include padding-bottom(10);
+        }
+      }
+
+      a {
+        @include border-bottom(3,solid,#FFB3B3);
+        @include transition(none);
+
+        &:hover {
+          border-color: #FF0000;
+          color: $color-n-black;
+        }
+
+        &:focus {
+          color: #FF6666;
+          border-color: #FF0000;
+        }
+      }
+
+      h2 {
+        font-weight: 300;
+        color: #FF0000;
+        @include fontsize(20);
+        line-height: 30px;
+        @include padding-bottom(10);
+
+        strong {
+          font-weight: 300;
+        }
+      }
+
+      h3 {
+        font-weight: 300;
+        color: $color-n-black;
+        @include fontsize(15);
+        line-height: 24px;
+        @include padding-bottom(10);
+
+        strong {
+          font-weight: 300;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        @include margin-bottom(10);
+      }
+    }
+  }
+}

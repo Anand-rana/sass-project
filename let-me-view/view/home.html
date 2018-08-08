@@ -1,0 +1,305 @@
+<div class="main-header"  set-class-when-at-top="fix-to-top">
+  <div class="container">
+    <div class="header">
+      <div class="row">
+        <div class="col-md-3"><a ui-sref="home" class="logo"><img src="images/logo.png" alt="logo" class="img-reponsive"/></a>
+        <div id="nav-icon1" class="visible-xs" ng-controller="MenuCtrl" >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="nav_bar">
+          <ul>
+            <li><a ui-sref="listing" title="" navc>Live Auctions</a></li>
+            <li><a href="#" title="" navc>about us</a></li>
+            <li><a href="#" title="" navc>help</a></li>
+            <li><a href="#" title="" ng-click="ismailCollapsed = !ismailCollapsed" navc>Get in touch</a>
+            <div class="mail-box-container" uib-collapse="!ismailCollapsed">
+              <div class="mail-box">
+                <button class="close-ico visible-xs" type="button" ng-click="ismailCollapsed =false"><i class="icon-cancel"></i></button>
+                <div class="main-box-heading">Have a Question? Email us</div>
+                <div class="mail-form">
+                  <div class="form-group">
+                    <div class="c-field">
+                      <label>Name</label>
+                      <input type="text" placeholder="Enter your name" class="form-control dash-border">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="c-field">
+                      <label>Email</label>
+                      <input type="text" placeholder="Enter your Email" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="c-field">
+                      <label>Message</label>
+                      <textarea placeholder="Write your Message.." class="form-control"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group text-right">
+                    <button class="button button-rounded button-width-large button-uppercase">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="login-btn" ng-controller="ModalCtrl"><a href="#"   ng-click="register()" navc>Sign Up</a>|
+          <a href="#"   ng-click="login()"  navc>Login</a></li>
+          
+          <li><a href="#" title="" class="nav_bar__listbtn">ADD A lISTING</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--banner-section-->
+<div class="banner">
+<div class="banner__caption">
+<h1 class="main-title white_bg wow fadeInDown">Seamlessly paperless bidding, at your own comfort</h1>
+<h2 class="wow fadeInDown">Free access to a range of properties at bargain-basement prices in urban cities</h2>
+<a href="#" class="wow zoomIn button button-font-large button-rounded button-max ">Explore Live Bids</a> </div>
+</div>
+<!--end-banner-->
+<!--filter-section-->
+<div class="filter_section">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9 col-md-8 col-sm-12">
+      
+      <div class="search-filter-fields wow fadeIn">
+        <div class="form-group filter_list">
+          
+          <select selectpicker="{style:'filter-btn'}" class="selectpicker">
+            <option value="">Listing type</option>
+            <option>Option first</option>
+            <option>Second type</option>
+            
+          </select>
+        </div>
+        <div class="form-group filter_list">
+          
+          <select selectpicker="{style:'filter-btn'}" class="selectpicker">
+            <option value="">Premises type</option>
+            <option>Option first</option>
+            <option>Second type</option>
+            
+          </select>
+        </div>
+        <div class="form-group filter_list">
+          
+          <select selectpicker="{style:'filter-btn'}" class="selectpicker">
+            <option value="">Property type</option>
+            <option>Option first</option>
+            <option>Second type</option>
+            
+          </select>
+        </div>
+        <div class="form-group filter_list">
+          
+          <select selectpicker="{style:'filter-btn'}" class="selectpicker">
+            <option value="">Location</option>
+            <option>Option first</option>
+            <option>Second type</option>
+            
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-sm-12">
+      <div class="form-group price_list wow fadeIn">
+        <div class="filter_price">
+          <div class="filter_range">
+            <span class="label_name">Price upto:  300 - $ 89756 </span>
+            <rzslider
+            rz-slider-model="0" rz-slider-high="1000"
+            rz-slider-options="{hideLimitLabels: true,hidePointerLabels:true}"></rzslider>
+          </div>
+          <span class="search_btn"><i class="icon-search"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</div>
+</div>
+<!--end-filter-section-->
+<!--main-contanier-->
+<div class="main-block">
+<!--auction-section-->
+<div class="auction">
+  <div class="container">
+    <div class="auction__heading">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="page-heading text-center">This Week&rsquo;s Auctions</h2>
+        </div>
+        <div class="col-md-6 text-center"> <span class="caret"></span><span class="auction__filter pointer noselect" ng-click="isCollapsed = !isCollapsed">Cities</span>
+        <div class="filter-options" uib-collapse="!isCollapsed">
+          <ul>
+            <li><a href="#" title="London">London (by default)</a></li>
+            <li><a href="#" title="City">City 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="auction-list">
+    <div class="row">
+      
+      <div class="col-md-4  col-xs-12 col-sm-12  box">
+        <div class="row">
+          <div class="col-sm-6 col-md-12">
+            <div class="auction-list__box  wow fadeInUp">
+            <figure><img src="images/auc-1.jpg" alt="pic" class="img-responsive"/></figure>
+            <div class="auction-list__caption">
+              <h3>Double story homes in countryside
+              location | <span class="text-theme">Brisbane</span></h3>
+              <small>Offered by Starteck agency at #76,<br/>
+              Calibarry, 888769..</small> <span class="c_bid">Current bid: $ 599000 <a href="#"  class="text-theme">Open <i class="icon-house"></i></a> </span> <span class="c_bd_cat">Traditional bid    |    20 hours left</span> <span class="c_ag_name">Agent name</span> </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-12">
+            <div class="auction-list__box wow fadeInUp">
+            <figure><img src="images/auc-4.jpg" alt="pic" class="img-responsive"/></figure>
+            <div class="auction-list__caption">
+              <h3>Double story homes in countryside
+              location | <span class="text-theme">Brisbane</span></h3>
+              <small>Offered by Starteck agency at #76,<br/>
+              Calibarry, 888769..</small> <span class="c_bid">Current bid: $ 599000 <a href="#" class="text-theme" >Open <i class="icon-premises"></i></a> </span> <span class="c_bd_cat">Traditional bid    |    20 hours left</span> <span class="c_ag_name">Agent name</span> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4  col-xs-12 col-sm-12  box">
+        <div class="row">
+          <div class="col-sm-6 col-md-12">
+            <div class="auction-list__box wow fadeInUp">
+            <figure><img src="images/auc-2.jpg" alt="pic" class="img-responsive"/></figure>
+            <div class="auction-list__caption">
+              <h3>Double story homes in countryside
+              location | <span class="text-theme">Brisbane</span></h3>
+              <small>Offered by Starteck agency at #76,<br/>
+              Calibarry, 888769..</small> <span class="c_bid">Current bid: $ 599000 <a href="#" class="text-theme" >Open <i class="icon-flat"></i></a> </span> <span class="c_bd_cat">Traditional bid    |    20 hours left</span> <span class="c_ag_name">Agent name</span> </div>
+              <span class="feature-arrow"></span> </div>
+            </div>
+            <div class="col-sm-6 col-md-12">
+              <div class="auction-list__box wow fadeInUp">
+              <figure><img src="images/auc-5.jpg" alt="pic" class="img-responsive"/></figure>
+              <div class="auction-list__caption">
+                <h3>Double story homes in countryside
+                location | <span class="text-theme">Brisbane</span></h3>
+                <small>Offered by Starteck agency at #76,<br/>
+                Calibarry, 888769..</small> <span class="c_bid">Current bid: $ 599000 <a href="#" >Sold <i class="icon-land"></i></a> </span> <span class="c_bd_cat">Traditional bid    |    20 hours left</span> <span class="c_ag_name">Agent name</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4  col-xs-12 col-sm-12 box">
+          <div class="row">
+            <div class="col-sm-6 col-md-12">
+              <div class="auction-list__box wow fadeInUp">
+              <figure><img src="images/auc-3.jpg" alt="pic" class="img-responsive"/></figure>
+              <div class="auction-list__caption">
+                <h3>Double story homes in countryside
+                location | <span class="text-theme">Brisbane</span></h3>
+                <small>Offered by Starteck agency at #76,<br/>
+                Calibarry, 888769..</small> <span class="c_bid">Current bid: $ 599000 <a href="#" class="text-theme" >Open <i class="icon-bulding"></i></a> </span> <span class="c_bd_cat">Traditional bid    |    20 hours left</span> <span class="c_ag_name">Agent name</span> </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-12">
+              <div class="auction-list__box wow fadeInUp">
+              <figure><img src="images/auc-6.jpg" alt="pic" class="img-responsive"/></figure>
+              <div class="auction-list__caption">
+                <h3>Double story homes in countryside
+                location | <span class="text-theme">Brisbane</span></h3>
+                <small>Offered by Starteck agency at #76,<br/>
+                Calibarry, 888769..</small> <span class="c_bid">Current bid: $ 599000 <a href="#" >Sold <i class="icon-land"></i></a> </span> <span class="c_bd_cat">Traditional bid    |    20 hours left</span> <span class="c_ag_name">Agent name</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <hr/>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end-auction-section-->
+<!--our-gurantee-section-->
+<div class="gurantee">
+  <div class="gurantee__heading wow fadeInUp">
+    <div class="title-block">
+      <h2 class="page-heading">Our Guarantee</h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="gurantee__list">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 wow zoomIn">
+          <div class="gurantee__box">
+            <figure> <span class="ico"> <i class="icon-support"></i> </span> </figure>
+            <figcaption>
+            <h4>Priority 1-2-1 support </h4>
+            <p><span class="o-bold">Short description</span> is natus error sit
+            voluptatem accusantium dolorem
+            quebo. Nemo enim  sit aspernatur
+          aut odit aut fugit, sed qu</p>
+          </figcaption>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 wow zoomIn">
+        <div class="gurantee__box">
+          <figure> <span class="ico"> <i class="icon-like"></i> </span> </figure>
+          <figcaption>
+          <h4>Exclusive deals
+          Just for members</h4>
+          <p><span class="o-bold">Short description</span> is natus error sit
+          voluptatem accusantium dolorem
+          quebo. Nemo enim  sit aspernatur
+        aut odit aut fugit, sed qu</p>
+        </figcaption>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 wow zoomIn">
+      <div class="gurantee__box">
+        <figure> <span class="ico"> <i class="icon-social-network"></i> </span> </figure>
+        <figcaption>
+        <h4>Hand-picked properties</h4>
+        <p><span class="o-bold">Short description</span> is natus error sit
+        voluptatem accusantium dolorem
+        quebo. Nemo enim  sit aspernatur
+      aut odit aut fugit, sed qu</p>
+      </figcaption>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-6 wow zoomIn">
+    <div class="gurantee__box">
+      <figure> <span class="ico"> <i class="icon-property"></i> </span> </figure>
+      <figcaption>
+      <h4>Fully inspected properties</h4>
+      <p><span class="o-bold">Short description</span> is natus error sit
+      voluptatem accusantium dolorem
+      quebo. Nemo enim  sit aspernatur
+    aut odit aut fugit, sed qu</p>
+    </figcaption>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--end-gurantee-section-->
+</div>
+<!--end-main-container-->
+<!--agent-modal-->
+<div ng-controller="agentCtrl">
+</div>
+<!--end-agent-modal-->

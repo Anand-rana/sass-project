@@ -1,0 +1,48 @@
+.search-result-section {
+    @include padding(35 0);
+    .search-result-filter__block {
+        text-align: right;
+    }
+
+
+    .search-result-list {
+        @include padding(100 0);
+
+        &>.row {
+            @include margin-left(-20);
+            @include margin-right(-20);
+            &>[class^="col-"] {
+                @include padding-left(20);
+                @include padding-right(20);
+            }
+        }
+
+        .rv-box {
+            .rv-user-dtl {
+                @include padding-bottom(20);
+            }
+        }
+
+        .search-list-bottom {
+            @include margin-top(80);
+            text-align: center;
+        }
+    }
+}
+
+.search-result-top {
+    .search-result-filter {
+        display: $ib;
+        vertical-align: middle;
+        ul {
+            li {
+                display: $ib;
+                @include padding(0 20);
+            }
+        }
+    }
+    .search-box-container {
+        display: $ib;
+        vertical-align: middle;
+    }
+}

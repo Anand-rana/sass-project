@@ -1,0 +1,44 @@
+header
+	
+	.header-section
+		.container
+			.row
+				.col-md-3.col-sm-2
+					a(href="#" class="logo")
+						img(src="images/logo.jpg" alt="img" class="img-responsive")
+
+				.col-md-9.col-sm-10
+					.nav-section
+						.main-nav
+							ul
+								li(data-ui-sref-active="active")
+									a(ui-sref="about") About
+								li(data-ui-sref-active="active")
+									a(ui-sref="contact") Contact
+								li
+									a(href="#") News
+								li(data-ui-sref-active="active")
+									a(ui-sref="leaderboard") Leaderboard
+								
+						.main-login-nav
+							ul
+								li(data-ui-sref-active="active")
+									a(ui-sref="login") Login
+								li(data-ui-sref-active="active" ng-class="{active: $state.is('signupcompany')}")
+									a(ui-sref="signup") Signup
+
+						.main-user-nav
+							ul
+								li(ng-class="{active: $state.is('search')}")
+									.search-btn(ng-click="$state.go('search')" )
+										i.icon-magnifier
+						div(id="nav-icon3" class="nav-icon" data-ng-controller="MenuCtrl")
+							span
+							span
+							span
+							span
+
+
+					
+
+				

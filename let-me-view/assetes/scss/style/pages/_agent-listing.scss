@@ -1,0 +1,236 @@
+.not-listed {
+    background-color: $blue_bg;
+
+    @include padding(100 0);
+
+    @include margin-top(70);
+
+    @include margin-bottom(50);
+
+    text-align: center;
+
+    @include pos(rel, null);
+
+    img {
+        @include pos(ab, (-55%) null null 50%);
+
+        @include translatepos(-50%, 55%);
+    }
+
+    h1 {
+        @include fontsize(35);
+
+        @include open-light;
+    }
+}
+
+.not-listed-section {
+    text-align: center;
+
+    h3 {
+        @include fontsize(18);
+    }
+
+    .button-max {
+        @include ralway-bold;
+
+        margin: 20px auto;
+    }
+}
+
+.auction-list__options {
+    background-color: #bec7df;
+
+    @include padding(10 15);
+
+    @include margin(1);
+
+    min-height: 122px;
+
+    .ac__btn {
+        height: 40px;
+        line-height: 40px;
+        display: block;
+        background-color: $white;
+
+        @include border(1, solid, #6a6b6b);
+
+        @include border-round(2);
+
+        @include fontsize(15);
+
+        @include raleway-semibold;
+
+        text-align: center;
+        color: $textcolor;
+        text-transform: capitalize;
+
+        @include margin-bottom(10);
+
+        @include pos(rel, null);
+
+        transition: $trasition_all;
+
+        &:hover, &:focus {
+            background-color: transparent;
+
+            &:before {
+                border-color: #7b88a4;
+            }
+        }
+
+        &:before {
+            @include pos(ab, 5px 5px 5px 5px);
+
+            content: "";
+
+            @include border(1, solid, $themecolor);
+        }
+
+        &.disabled {
+            background-color: transparent;
+        }
+    }
+}
+
+.agent-list {
+    @include margin(40 0 60);
+
+    .auction-list__box {
+        &:hover, &:focus {
+            background-color: $white;
+
+            @include border(1, solid, #e2dede);
+        }
+
+        .button {
+            &:hover, &:focus {
+                background-color: $color3;
+            }
+        }
+
+        .auction-list__caption {
+            h3 {
+                @include fontsize(16);
+            }
+        }
+    }
+}
+
+.agent-record-section {
+    background-color: #e9f2fa;
+
+    @include padding(40 0 100);
+
+    .title-block {
+        .page-heading {
+            background-color: #e9f2fa;
+
+            @include padding(0 40);
+
+            text-transform: none;
+            display: $inline;
+
+            @include pos(rel, null);
+
+            z-index: 10;
+        }
+
+        &:before {
+            background-color: #c3c3c3;
+        }
+    }
+
+    .agent-record-list {
+        @include margin-top(80);
+
+        text-align: center;
+
+        & > li {
+            display: $inline;
+            text-align: center;
+
+            @include open-light;
+
+            @include margin-right(30);
+
+            &:last-child {
+                @include margin(0);
+            }
+
+            & > h3 {
+                @include margin-top(40);
+
+                @include fontsize(20);
+            }
+        }
+    }
+}
+
+.agent-list__dtl {
+    @include margin(80 0 100);
+
+    .page-heading {
+        text-transform: none;
+    }
+
+    .agent__bidlist {
+        @include padding(40 0 70);
+
+        @include margin(80 0 50);
+
+        h2 {
+            color: $white;
+            text-transform: $uppercase;
+
+            @include fontsize(25);
+
+            @include ralway-bold;
+
+            @include margin-bottom(20);
+        }
+    }
+
+    .agent__bidlist__table {
+        background-color: #2e3648;
+
+        @include padding-right(30);
+
+        .bid-table {
+            max-height: 380px;
+            height: auto;
+        }
+
+        .table {
+            thead {
+                th {
+                    background-color: #86a8c5;
+                    color: $white;
+
+                    @include ralway-bold;
+
+                    text-transform: $uppercase;
+                    border-bottom-width: 1px;
+                }
+            }
+
+            tbody {
+                tr:nth-child(even) {
+                    background-color: #e9ecef;
+                }
+
+                tr:nth-child(odd) {
+                    background-color: #ffffff;
+                }
+
+                td {
+                    @include fontsize(15);
+                }
+            }
+        }
+    }
+
+    .mCSB_dragger_bar {
+        background-color: $themecolor !important;
+    }
+}

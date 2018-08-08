@@ -1,0 +1,22 @@
+//Fonts
+@import "style/base/fonts"; 
+
+
+
+//font-regular----------------------------
+@include font-face($font-family, #{$primary-font-path}/raleway-regular, 100, normal);
+
+//light
+@include font-face($font-family, #{$primary-font-path}/raleway-light, 200, normal);
+
+//medium
+@include font-face($font-family, #{$primary-font-path}/raleway-medium, 300, normal);
+
+//bold
+@include font-face($font-family, #{$primary-font-path}/raleway-bold, 400, normal);
+
+//semibold
+@include font-face($font-family, #{$primary-font-path}/raleway-semibold, 500, normal);
+
+
+

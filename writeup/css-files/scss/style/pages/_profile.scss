@@ -1,0 +1,440 @@
+.profile-block {
+    background-color: $white;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .09);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, .09);
+    box-shadow: 0 0 4px rgba(0, 0, 0, .09);
+    @include padding(40 60 40 60);
+    @include margin-top(70);
+
+    .profile-block-dtl {
+
+        &>.row {
+            @include margin-left(-30);
+            @include margin-right(-30);
+            &>[class^="col-"] {
+                @include padding-left(30);
+                @include padding-right(30);
+            }
+        }
+
+        .p-user-block {
+            .p-user-info-block {
+                @include margin-top(30);
+
+
+                .p-trophies-list {
+                    @include padding(35 0 30);
+                    display: table;
+                    width: 100%;
+                    ul {
+                        li {
+                            float: left;
+                            width: 33.33%;
+                            text-align: center;
+                            @include margin-bottom(30);
+                        }
+                    }
+                }
+            }
+            .title {
+                @include fontsize(16);
+                font-family: $font-family-alt;
+                text-transform: uppercase;
+                color: $color-text-01;
+                @include pos(rel, null);
+                z-index: 0;
+                span {
+                    background-color: $white;
+                    @include padding-right(10);
+                }
+                &:after {
+                    @include pos(ab, 50% 0 null 0);
+                    content: "";
+                    @include translatepos(0, -50%);
+                    height: 2px;
+                    background-color: $color-bg-04;
+                    z-index: -1;
+                }
+            }
+
+            .p-points {
+                .p-points-total {
+                    @include padding(20 0);
+
+                    h4 {
+                        font-family: $font-family-alt;
+                        font-weight: 300;
+                        @include fontsize(22);
+                        text-transform: uppercase;
+                        @include padding-left(15);
+                        color: $black;
+
+                        span {
+                            color: #ff8e00;
+                        }
+                    }
+                }
+            }
+
+            .p-up-competions {
+                .p-up-competions-list {
+                    @include padding(15 0);
+                    @include fontsize(12);
+                    color: $color-text-01;
+                    .p-c-img {
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                    .media {
+                        @include margin-bottom(20);
+                    }
+                    .media-body {
+                        h3 {
+                            color: $color-text-04;
+                            text-transform: uppercase;
+                            @include fontsize(14);
+                            font-family: $font-family-alt;
+                            font-weight: 100;
+                            @include padding-bottom(5);
+                        }
+                    }
+                    .view-link {
+                        @include fontsize(16);
+                        font-family: $font-family-alt;
+                        font-weight: 200;
+                        color: $color-text-04;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .p-personal-info-block {
+            .user-name {
+                h3 {
+                    @include fontsize(18);
+                    font-family: $font-family-alt;
+                    font-weight: 200;
+                    text-transform: uppercase;
+                    color: $color-text-04;
+                }
+            }
+            .user-profile {
+                @include margin-top(10);
+                h4 {
+                    @include fontsize(12);
+                    font-weight: 200;
+                    color: #2196f3;
+                }
+            }
+            .u-edit-link {
+                @include fontsize(14);
+                color: $color-text-04;
+            }
+            .user-rating-cotainer {
+                @include margin-top(25);
+                h3 {
+                    @include fontsize(16);
+                    font-weight: 300;
+                    color: $color-text-01;
+                }
+                .rating-container {
+                    @include margin-top(5);
+                    @include fontsize(20);
+                }
+            }
+
+            .p-user-opt {
+                @include margin-top(30);
+            }
+        }
+        .p-tabs {
+            @include margin-top(30);
+            .nav-tabs {
+                @include border-bottom(2, solid, $color-bg-04);
+                li {
+                    @include margin-bottom(0);
+                    a {
+                        border: 0;
+                        font-family: $font-family-alt;
+                        font-weight: 200;
+                        text-transform: uppercase;
+                        color: $color-text-04;
+                        @include fontsize(16);
+                        @include margin-bottom(-1);
+                        border-radius: 0;
+                        display: inline-block;
+                        vertical-align: middle;
+                        -webkit-transform: perspective(1px) translateZ(0);
+                        transform: perspective(1px) translateZ(0);
+                        box-shadow: 0 0 1px transparent;
+                        position: relative;
+                        overflow: hidden;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            z-index: -1;
+                            left: 50%;
+                            right: 50%;
+                            bottom: 0;
+                            background: #2196f3;
+                            height: 2px;
+                            -webkit-transition-property: left, right;
+                            transition-property: left, right;
+                            -webkit-transition-duration: 0.3s;
+                            transition-duration: 0.3s;
+                            -webkit-transition-timing-function: ease-out;
+                            transition-timing-function: ease-out;
+                        }
+                        &:hover:before,
+                        &:focus:before,
+                        &:active:before {
+                            left: 0;
+                            right: 0;
+                        }
+                        &:hover {
+                            background-color: transparent;
+                        }
+                    }
+
+                    &.active {
+                        a {
+                            &:before {
+                                left: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .p-tab-cotent {
+                @include padding(30 0 0);
+
+                .up-info {
+                    .up-info-row {
+                        @include margin-bottom(30);
+
+                        h3 {
+                            font-family: $font-family-alt;
+                            font-weight: 100;
+                            text-transform: uppercase;
+                            @include fontsize(16);
+                            color: $color-text-01;
+                        }
+                        .up-row {
+                            @include margin-top(25);
+                            display: table;
+                            width: 100%;
+
+                            .label-name {
+                                width: 100px;
+                            }
+
+                            label {
+                                font-weight: 200;
+                                @include fontsize(14);
+                                color: $color-text-04;
+                            }
+                            p {
+                                font-weight: 200;
+                                @include fontsize(14);
+                                color: $color-text-04;
+                            }
+                        }
+                    }
+                }
+
+
+
+                .u-staff-list {
+
+                    max-height: 500px;
+                    .media {
+                        @include padding(10 15);
+                        @include border-bottom(1, solid, $color-bg-04);
+                        @include margin-top(10);
+
+                        .media-left,
+                        .media-right,
+                        .media-body {
+                            vertical-align: middle;
+                        }
+                        .media-left {
+                            @include padding-right(25);
+                        }
+                        .user-pic {
+                            img {
+                                width: 70px;
+                                height: 70px;
+                                @include circle;
+                            }
+                        }
+                        .user-name {
+                            h3 {
+                                font-family: $font-family-alt;
+                                font-weight: 200;
+                                text-transform: uppercase;
+                                @include fontsize(18);
+                                color: $color-text-04;
+                            }
+                        }
+                        .user-profile {
+                            @include margin-top(10);
+                            h3 {
+                                @include fontsize(12);
+                                font-weight: 200;
+                                color: #2196f3;
+                            }
+                        }
+                        &:first-child {
+                            @include margin-top(0);
+                            @include padding-top(0);
+                        }
+                    }
+                }
+
+                .p-cp-block {
+                    max-width: 400px;
+                    .field-row {
+                        display: table;
+                        width: 100%;
+                        @include margin-bottom(30);
+                    }
+                    .t-cell {
+                        width: 50%;
+                    }
+                    label {
+                        font-weight: 100;
+                        text-transform: uppercase;
+                        @include fontsize(16);
+                        color: $color-text-01;
+                        font-family: $font-family-alt;
+                    }
+                }
+                .p-staff-block {
+
+                    .field-row {
+                        display: table;
+                        width: 100%;
+                        @include margin-bottom(30);
+                    }
+                    .label-name {
+                        width: 150px;
+                    }
+
+                    label {
+                        font-weight: 100;
+                        text-transform: uppercase;
+                        @include fontsize(16);
+                        color: $color-text-01;
+                        font-family: $font-family-alt;
+                    }
+                }
+
+                .p-product-block {
+
+                    .field-row {
+                        display: table;
+                        width: 100%;
+                        @include margin-bottom(30);
+                    }
+                    .label-name {
+                        width: 170px;
+                    }
+
+                    label {
+                        font-weight: 100;
+                        text-transform: uppercase;
+                        @include fontsize(16);
+                        color: $color-text-01;
+                        font-family: $font-family-alt;
+                    }
+                }
+            }
+        }
+    }
+
+    .p-rev-cotainer {
+        @include padding(40 0 50);
+
+        .title {
+            @include fontsize(18);
+            font-family: $font-family-alt;
+            color: $color-text-01;
+            font-weight: 200;
+            @include pos(rel, null);
+            z-index: 0;
+            span {
+                background-color: $white;
+                @include padding-right(10);
+            }
+            &:after {
+                @include pos(ab, 50% 0 null 0);
+                content: "";
+                @include translatepos(0, -50%);
+                height: 2px;
+                background-color: $color-bg-04;
+                z-index: -1;
+            }
+        }
+
+        .review-block {
+            @include margin-top(30);
+        }
+    }
+
+    .edit-profile-block {
+        .c-field {
+            .c-field-control {
+                font-weight: 200;
+                font-family: $font-family;
+                @include fontsize(14);
+                color: $color-text-04;
+            }
+        }
+    }
+}
+
+.emp-profile {
+    .up-info-row {
+        &.up-c-info {
+            .label-name {
+                width: 180px !important;
+            }
+        }
+    }
+}
+
+.company-profile-section {
+    .profile-block {
+        .profile-block-dtl {
+            .p-user-block {
+                .p-img {
+                    @include border(1, solid, #dcdbdb);
+                    background-color: #f8f8f8;
+                    text-align: center;
+                    @include pos(rel, null);
+                    @include padding(20 40);
+
+                    img {
+                        margin: auto;
+                    }
+                }
+            }
+
+            .p-tabs {
+                .nav-tabs {
+                    li {
+                        a {
+                            @include padding(10);
+                            @include fontsize(15);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

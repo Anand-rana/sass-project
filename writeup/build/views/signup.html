@@ -1,0 +1,77 @@
+
+<div class="form-block-section">
+  <div class="container">
+    <div class="form-block-box">
+      <div class="user-signup-form">
+        <div class="inner-form">
+          <div class="inner-form-row">
+            <div class="inner-form-cell">
+              <div class="inner-form-block">
+                <div class="main-heading">
+                  <h2 class="title">Sign up as a user</h2>
+                </div>
+                <div class="field-group">
+                  <div class="c-field field-req">
+                    <input class="c-field-control" type="text" placeholder="Full Name"/>
+                    <div class="icon-sign">&#42;</div>
+                  </div>
+                  <div class="c-field field-req">
+                    <input class="c-field-control" type="text" placeholder="User name"/>
+                    <div class="icon-sign">&#42;</div>
+                  </div>
+                  <div class="c-field field-req">
+                    <input class="c-field-control" type="text" placeholder="Email address"/>
+                    <div class="icon-sign">&#42;</div>
+                    <div class="error-msg">
+                      <p>The email addresses do not match</p>
+                    </div>
+                  </div>
+                  <div class="c-field field-req">
+                    <input class="c-field-control" type="text" placeholder="confirm Email address"/>
+                    <div class="icon-sign">&#42;</div>
+                  </div>
+                  <div class="c-field field-req">
+                    <input class="c-field-control" type="password" placeholder="Password"/>
+                    <div class="icon-sign">&#42;</div>
+                  </div>
+                  <div class="c-field field-req">
+                    <input class="c-field-control" type="password" placeholder="Confirm Password"/>
+                    <div class="icon-sign">&#42;</div>
+                  </div>
+                  <div class="c-field">
+                    <label class="label-checkbox label-checkbox-small">
+                      <input type="checkbox"/><span class="check-mark"></span><span class="label-name">I agree to the  Terms &amp; conditions  of WriteUp</span>
+                    </label>
+                  </div>
+                  <div class="c-field"><img class="img-responsive" src="images/captcha.jpg" alt="img"/></div>
+                  <div class="c-field">
+                    <button class="button button-block button-height-large button-font-base button-uppercase button-shadow" ng-click="$state.go('signup-msg')">Sign up</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inner-form-cell form-right-block">
+              <div class="form-block-options">
+                <h2>Or sign up with</h2>
+                <div class="form-options-btn-group">
+                  <div class="row row-10">
+                    <div class="col-md-6">
+                      <button class="button-facebook"> <span class="btn-icon"><i class="icon-facbook"> </i></span><span>Facebook</span></button>
+                    </div>
+                    <div class="col-md-6">
+                      <button class="button-google-plus"> <span class="btn-icon"><i class="icon-google-plus"> </i></span><span>Google+</span></button>
+                    </div>
+                  </div>
+                  <div class="margin-top-10x">
+                    <button class="button-signup" ng-click="$state.go('signupcompany')"><span class="btn-icon"><i class="icon-angle-right-o"> </i></span><span>Sign up as a company</span></button>
+                  </div>
+                  <div class="margin-top-10x text-center"><a class="opt-link" ui-sref="login">already have an account ?</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

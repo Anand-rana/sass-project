@@ -1,0 +1,59 @@
+.create-company-page
+	.container
+		.step-form-block
+			h2.title Create COMPANY or INSTITUTION Page
+			.step-form-container
+				.step-form-heading
+					h3.title Essential Details
+					
+				.step-form-data
+					.step-form-field-box
+						.field-group
+							.c-field.c-outline.c-lh.c-shadow
+									.c-line
+										label Company/Institution Name
+									input(type="text", placeholder="Enter Name").c-field-control
+							.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Company/Institution Category
+									.select-control
+										select.c-field-control
+											option(value='Select') Select
+							.c-field.c-outline.c-lh.c-shadow
+								.c-line 
+									label Keywords
+								  
+								tags-input(ng-model="tags" placeholder="Add Keywords")
+							.c-field.c-outline.c-shadow
+								.c-line
+									label Description
+								textarea(rows="8" cols="8" placeholder="Enter Some Text..").c-field-control
+							.c-field.c-outline.c-lh.c-shadow
+									.c-line
+										label Company Address
+									input(type="text", placeholder="Enter Address").c-field-control
+							.c-field.c-outline.c-lh.c-shadow
+									.c-line
+										label Postal code
+									input(type="text", placeholder="Enter Postal code").c-field-control
+							.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Country
+									.select-control
+										select.c-field-control
+											option(value='Select') Select
+							.c-field.c-outline.c-lh.c-shadow
+									.c-line
+										label Number of Employees
+									.select-control
+										select.c-field-control
+											option(value='Select') Select
+							.c-field.c-outline.c-lh.c-shadow
+									.c-line
+										label Website (Optional)
+									input(type="text", placeholder="Website (Optional)").c-field-control
+							.btn-field.text-center
+								button.button.button-font-medium.button-uppercase.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-left-1x.margin-right-1x.margin-bottom-2x CREATE
+								button.button.button-danger.button-uppercase.button-font-medium.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-right-1x.margin-left-1x CANCEL 
+
+											

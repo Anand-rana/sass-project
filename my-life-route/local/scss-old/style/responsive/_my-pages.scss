@@ -1,0 +1,198 @@
+        @include media("<=992px") {
+            .my-pages-section {
+                @include padding(50 0);
+
+                .my-pages-row {
+                    .__inner-row {
+                        &>.row {
+                            @include margin(0 -10);
+                            [class^="col-"] {
+                                @include padding(0 10);
+                            }
+                        }
+                    }
+
+                    .my-pages-box {
+                        figure {
+                            img {
+                                width: 120px;
+                                height: 120px;
+                            }
+                        }
+
+                        figcaption {
+                            h4 {
+                                @include fontsize(18);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .page-view-section {
+                @include padding(70 0 50);
+                .__inner-cotainer {
+                    @include margin-top(30);
+
+                    .o-u-page__opt {
+
+                        text-align: center;
+                    }
+
+                    &>.row {
+                        @include margin-left(-15);
+                        @include margin-right(-15);
+                        &>[class^="col-"] {
+                            @include padding-left(15);
+                            @include padding-right(15);
+                        }
+                    }
+
+                    .page-dtl-sidebar {
+
+                        .page-nav-list {
+                            &>ul {
+                                &>li {
+                                    @include padding-bottom(15);
+                                    &>a {
+                                        @include fontsize(18);
+                                        @include padding-bottom(15);
+                                    }
+                                }
+                            }
+                        }
+
+                        .page-name-info {
+                            @include padding(0 15);
+                        }
+                    }
+                }
+
+                .page-dtl-sidebar {
+                    @include pos(fix, 0 null 0 -300px);
+                    @include opacity(0);
+                    background-color: $white;
+                    z-index: 100;
+                    width: 300px;
+                    @include padding(20);
+                    overflow: auto;
+                    @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, .17));
+                    -webkit-transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+                    transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+                    &.open {
+                        left: 0;
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+
+        @include media("<=767px") {
+            .my-pages-section {
+                @include padding(30 0);
+            }
+
+            .page-view-section {
+
+                .heading-block {
+                    .p-adv-opt {
+                        text-align: left;
+                    }
+                }
+                .__inner-cotainer {
+                    .page-dtl-box {
+                        .__inner-content {
+                            @include padding(60 20 20);
+                        }
+
+                        .page-dtl__text {
+                            p {
+                                @include fontsize(16);
+                            }
+                        }
+
+                        .page-dtl__other-info {
+                            &>ul {
+                                &>li {
+                                    @include padding-bottom(15);
+                                    @include fontsize(16);
+                                }
+                            }
+                        }
+
+                        .page-dtl__comment-block {
+                            @include padding(15);
+                        }
+                    }
+
+                    .page-reviews-box {
+                        @include padding(20);
+                    }
+                    .page-followers {
+                        @include padding(30);
+                    }
+                    .page-likes {
+                        @include padding(30);
+                    }
+
+                    .page-events {
+                        .page-events__oth-info {
+                            &>ul {
+                                &>li {
+                                    @include fontsize(16);
+                                }
+                            }
+                        }
+                    }
+
+                    .page-about-block {
+                        @include padding(30);
+
+                        .media-left {
+                            @include padding-right(0);
+
+                            .page-img {
+                                @include margin-bottom(15);
+                            }
+                        }
+
+                        .media-left,
+                        .media-right,
+                        .media-body {
+                            display: $b;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media("<=479px") {
+            .page-view-section {
+                .__inner-cotainer {
+
+                    .page-dtl-box {
+
+                        .page-dtl__comment-block {
+
+                            .page-dtl__comment-box {
+                                .media-left,
+                                .media-right,
+                                .media-body {
+                                    display: $b;
+                                    width: auto;
+                                }
+
+                                .usr-pic {
+                                    @include margin-bottom(10);
+                                }
+                                .r-usr-pic {
+                                    @include margin-bottom(10);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }

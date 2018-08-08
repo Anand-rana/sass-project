@@ -1,0 +1,94 @@
+.aboutus-section {
+    .about-company {
+        @include padding(0 120);
+        @include margin(100 0);
+        & > .row {
+            @include margin(0);
+            & > [class*="col-"] {
+                @include padding(0);
+            }
+        }
+        .about-img {
+            // @include margin(60 0);
+            display: table-cell;
+            vertical-align: middle;
+            width: 40%
+        }
+        .about-company-txt {
+            background-color: #2a2a2a;
+            color: $color02;
+            vertical-align: middle;
+            display: table-cell;
+            width: 60%;
+            @include padding(70 50);
+            h3 {
+                color: $color02;
+                @include fontsize(24);
+                text-transform: $uppercase;
+                @include josefinsansbold;
+                @include margin-bottom(30);
+            }
+            p {
+                @include margin-bottom(30);
+                @include josefinsansregular;
+                @include fontsize(18);
+            }
+        }
+    }
+    .about-content-section {
+        @include padding-bottom(100);
+        .about-content-row {
+            @include margin-bottom(100);
+            .about-content-txt {
+                @include margin-top(60);
+                h3 {
+                    @include fontsize(30);
+                    text-transform: $uppercase;
+                    @include josefinsansbold;
+                    @include pos(rel, null);
+                    @include padding-bottom(20);
+                    @include margin-bottom(20);
+                    &:after {
+                        content: "";
+                        @include pos(ab, null null 0 0);
+                        width: 50px;
+                        height: 2px;
+                        background-color: $themecolor;
+                    }
+                }
+                p {
+                    @include fontsize(18);
+                    color: $color01;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+}
+
+.v-btn {
+    color: $color02;
+    text-decoration: none;
+    @include pos(rel, null);
+    @include josefinsansregular;
+    @include fontsize(18);
+    @include padding(10 0);
+    display: $inline;
+    &:before {
+        content: "";
+        @include pos(ab, 0 0 null 0);
+        height: 1px;
+        @include background-image(linear-gradient(left, rgba(122, 79, 87, 0), rgba(122, 79, 87, .12) 6%, #fff 50%, rgba(122, 75, 83, .14) 93%, rgba(122, 75, 83, 0)));
+    }
+    &:after {
+        content: "";
+        @include pos(ab, null 0 0 0);
+        height: 1px;
+        @include background-image(linear-gradient(left, rgba(122, 79, 87, 0), rgba(122, 79, 87, .12) 6%, #fff 50%, rgba(122, 75, 83, .14) 93%, rgba(122, 75, 83, 0)));
+    }
+    &:hover,
+    &:focus {
+        color: $color02;
+        text-decoration: underline;
+    }
+}

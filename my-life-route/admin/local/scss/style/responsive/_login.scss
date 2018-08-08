@@ -1,0 +1,29 @@
+@include media("<=767px") {
+    .dashboard-form-container {
+        @include padding(20 0);
+      height: auto;
+        .dashboard-form__box {
+            @include pos(rel, 0 0 0 0);
+            @include translatepos(0, 0);
+            @include margin(0 10);
+            @include padding(40 30);
+
+            .login-form {
+                .btn-field {
+                    @include margin-top(40);
+                }
+            }
+
+            .forgot-form {
+                .btn-field {
+                    @include margin-top(40);
+                }
+            }
+
+
+            .logo {
+                @include padding-left(0);
+            }
+        }
+    }
+}

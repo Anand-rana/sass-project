@@ -1,0 +1,28 @@
+@include media("<=1400px") {
+    .detail-list-section {
+        .container {
+            width: 100%;
+        }
+        .detail-item-section {
+            @include padding(50);
+        }
+        .contact-section {
+            @include padding(50 0);
+        }
+    }
+    .tilled-txt-5 {
+        top: 500px; 
+    }
+  
+}
+
+@include media("<=992px") {
+    .detail-list-section {
+        .product-dtl {
+            @include margin-top(20);
+        }
+        .detail-item-section {
+            @include padding(50 0);
+        }
+    }
+}

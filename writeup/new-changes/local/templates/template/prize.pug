@@ -1,0 +1,35 @@
+.prize-modal
+	.modal-header
+		h2.title Congratulations, you have won!
+		button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close
+	.modal-body
+		.prize-content-block
+			h3.title Please fill in the details below to claim your 3 month free pass
+			.prize-content-form
+				.field-group
+					.c-field
+						input(type="text", placeholder="First Name").c-field-control
+					.c-field
+						input(type="text", placeholder="last Name").c-field-control
+					.c-field
+						input(type="text", placeholder="Address").c-field-control
+					.c-field
+						input(type="text", placeholder="Postcode").c-field-control
+					label.label-checkbox.label-checkbox-small
+											input(type="checkbox")
+											span.check-mark
+											span.label-name I agree to provide a review based on the terms of this competition
+					.margin-top-2x
+						label.label-checkbox.label-checkbox-small
+											input(type="checkbox")
+											span.check-mark
+											span.label-name I am interested in being contacted regarding being featured on WriteUp
+					.margin-top-6x
+						.row.row-10
+							.col-md-6
+								button.button.button-block.button-blue-dark.button-uppercase.button-height-large.button-font-base.button-blue-shadow.margin-bottom-2x CLAim
+							.col-md-6
+								button.button.button-block.button-uppercase.button-height-large.button-font-base.button-shadow.margin-bottom-2x Cancel
+
+		

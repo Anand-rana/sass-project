@@ -1,0 +1,40 @@
+@include media("<=991px") {
+
+    .dashboard-advert-section {
+        .dashboard-adverts-dtl {
+            .adv-dtl-box .__inner-container {
+                .adv-dtl-info {
+
+                    &>ul {
+                        &>li {
+                            @include padding-bottom(20);
+                        }
+                    }
+                    .social-info {
+                        text-align: left;
+                        @include margin-top(20);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=1200px") {
+
+
+    .dashboard-advert-section {
+        .dashboard-adverts-dtl {
+            .adv-dtl-box .__inner-container {
+
+                .slider-block {
+                    .adv-slider-block {
+                        .sliderNav {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,480 @@
+.life-route-dtl-section
+	.container
+		.life-route-dtl__content
+			.row
+				.col-md-9
+					.life-route-dtl__container
+						.heading-block
+							.breadcrumb-list
+								ul
+									li
+										span LifeRoutes
+									li
+										span.active Lorem Ipsum is simply dummy text
+						.life-route-dtl__box
+							.l-route-dtl__box
+								.row
+									.col-md-4.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											.user-profile
+													h4 UI Designer
+											.list-label
+												span LR
+									.col-md-8.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.r-title Lorem Ipsum is simply dummy text
+												.user-dtl-info-list
+													.row
+														.col-md-12.col-lg-6
+															ul.list-info
+																li
+																	span.l-label From 
+																	span Associate
+																li
+																	span.l-label To 
+																	span Consultant
+																li
+																	span.l-label Location 
+																	span New York ,USA
+																li
+																	span.l-label Steps 
+																	span 7
+														.col-md-12.col-lg-6
+															ul.list-info
+																li
+																	span.l-label Duration  
+																	span 27 Months
+																li
+																	span.l-label Date created  
+																	span 24th May 2016
+																li
+																	span.l-label Last updated 
+																	span 24th May 2017
+																li
+																	span.l-label Total Cost 
+																	span &pound;70,000
+												.user-des-txt
+													h3.title 
+														span.ico.icon-document-file
+														span Description
+													.desc-txt
+														p Lorem Ipsum is simply dummy text of the pg and typesetting industry. Lorem Ipsum has if been the industry's standard dummy text the ever since the 1500s, when an unknown text printer took a galley tially unchanged...
+												.user-keywords
+													h3.title 
+														span.ico.icon-key
+														span Keywords/Tags
+													.keywords-list
+														p Lifestyle, New-age, Apparels, 2017, Exciting
+								.r-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span Like : 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span Comments : 40
+
+										li
+											.t-follower
+												span.icon
+													i.icon-user-group
+												span Followers : 900
+										li
+											.t-share
+												span.icon
+													i.icon-share
+												span Share : 23
+
+				.col-md-3
+					.life-route-dtl__side-block
+						.user-similar-products
+								.u-similar-header
+									h3 View Similar Routes
+								.u-similar-list
+									ul
+										li Route from associate to consultant 
+											a(href="#") View Post
+										li Route from associate to consultant 
+											a(href="#") View Post
+										li Route from associate to consultant 
+											a(href="#") View Post
+										li Route from associate to consultant 
+											a(href="#") View Post
+										li Route from associate to consultant 
+											a(href="#") View Post
+						.recomend-block
+								h3 Recommended For You
+								.recomend-slider(data-ng-controller="reCtrl")
+									ng-owl-carousel(class="owl-theme" owl-items="items" owl-properties="properties" owl-ready="ready($api)")
+										.item(data-ng-repeat="item in items")
+											figure
+												img(src="images/slide-1.jpg" alt="img")
+												figcaption
+													h4 Business Formula's
+									.margin-top-2x.text-center
+										button.button.button-small.button-rounded.button-black View All
+		.life-route-steps-block
+			.life-route-steps-block__inner
+				.life-route-steps-list
+					ul
+						li
+							.row
+								.col-md-6
+									.l-route-info-box.m-space-right
+										.header-block
+											h3 1. Associate to Consultant
+										.l-route-info__list
+											ul
+												li
+													h4 Description
+													p  Lorem Ipsum is simply dummy text of the pgand typesetting industry.  Lorem Ipsum has if been the  industry's standard dummy text the ever since the 1500s, when an unknown text printer took a lley.
+													p  Lorem Ipsum is simply dummy text of the pgand typesetting industry.Lorem Ipsum has if been the  industry's standard dummy text the ever since the 1500s, when an unknown text printer took a lley
+													span.list-ico.c-1
+														i.icon-file-o
+												li
+													h4 Duration: 6 Months
+													span.list-ico.c-2
+														i.icon-watch
+												li
+													h4 Cost :   &pound;2500
+													span.list-ico.c-3
+														i.icon-money
+ 
+ 
+								.col-md-6
+									.l-route-files-box.m-space-left
+										.l-route-files__list
+											ul
+												li
+													h4 2 Video
+													.row.row-10
+														.col-md-6.col-sm-6
+															.video-box
+																vjs-video-container(vjs-ratio="4:3")
+																	video(id="vid1"
+																		class="video-js vjs-default-skin vjs-big-play-centered"
+																		controls
+																		data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}], "youtube": { "iv_load_policy": 1 } }')
+																
+																figcaption
+																	h5 New Name Assign
+														.col-md-6.col-sm-6
+															.video-box
+																vjs-video-container(vjs-ratio="4:3")
+																	video(id="vid2"
+																		class="video-js vjs-default-skin vjs-big-play-centered"
+																		controls
+																		data-setup='{ "techOrder": ["vimeo"], "sources": [{ "type": "video/vimeo", "src": "https://vimeo.com/99275308"}], "vimeo": { "color": "#fbc51b"} }')
+																
+																figcaption
+																	h5 New Name Assign
+													span.list-ico.c-1
+														i.icon-video-play
+												li.last-block
+													h4 4 Images
+													.row.row-10
+														.col-md-6.col-sm-6
+															.img-box
+																figure
+																	a(rel="group1" href="images/news-1.jpg" fancyboxable)
+																		img(src="images/dummy-img.jpg" alt="img" class="img-responsive")
+																	
+																figcaption
+																	h5 New Name Assign
+														.col-md-6.col-sm-6
+															.img-box
+																figure
+																	a(rel="group1" href="images/news-1.jpg" fancyboxable)
+																		img(src="images/dummy-img.jpg" alt="img" class="img-responsive")
+																	
+																figcaption
+																	h5 New Name Assign
+													.row.row-10
+														.col-md-6.col-sm-6
+															.img-box
+																figure
+																	a(rel="group1" href="images/news-1.jpg" fancyboxable)
+																		img(src="images/dummy-img.jpg" alt="img" class="img-responsive")
+																	
+																figcaption
+																	h5 New Name Assign
+														.col-md-6.col-sm-6
+															.img-box
+																figure
+																	a(rel="group1" href="images/news-1.jpg" fancyboxable)
+																		img(src="images/dummy-img.jpg" alt="img" class="img-responsive")
+																	
+																figcaption
+																	h5 New Name Assign
+													span.list-ico.c-2
+														i.icon-file
+							
+
+						li
+							.row
+								.col-md-6
+									.l-route-info-box.m-space-right
+										.header-block
+											h3 2. Associate to Consultant
+										.l-route-info__list
+											ul
+												li
+													h4 Description
+													p  Lorem Ipsum is simply dummy text of the pgand typesetting industry.  Lorem Ipsum has if been the  industry's standard dummy text the ever since the 1500s, when an unknown text printer took a lley.
+													p  Lorem Ipsum is simply dummy text of the pgand typesetting industry.Lorem Ipsum has if been the  industry's standard dummy text the ever since the 1500s, when an unknown text printer took a lley
+													span.list-ico.c-1
+														i.icon-file-o
+												li
+													h4 Duration: 6 Months
+													span.list-ico.c-2
+														i.icon-watch
+												li
+													h4 Cost :   &pound;2500
+													span.list-ico.c-3
+														i.icon-money
+ 
+ 
+								.col-md-6
+									.l-route-files-box.m-space-left
+										.l-route-files__list
+											ul
+												li
+													h4 2 Video
+													.row.row-10
+														.col-md-6.col-sm-6
+															.video-box
+																vjs-video-container(vjs-ratio="4:3")
+																	video(id="vid3"
+																		class="video-js vjs-default-skin vjs-big-play-centered"
+																		controls
+																		data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}], "youtube": { "iv_load_policy": 2 } }')
+																
+																figcaption
+																	h5 New Name Assign
+														.col-md-6.col-sm-6
+															.video-box
+																vjs-video-container(vjs-ratio="4:3")
+																	video(id="vid4"
+																		class="video-js vjs-default-skin vjs-big-play-centered"
+																		controls
+																		data-setup='{ "techOrder": ["vimeo"], "sources": [{ "type": "video/vimeo", "src": "https://vimeo.com/99275308"}], "vimeo": { "color": "#fbc51b"} }')
+																
+																figcaption
+																	h5 New Name Assign
+													span.list-ico.c-1
+														i.icon-video-play
+												li.last-block
+													h4 4 Images
+													.row.row-10
+														.col-md-6.col-sm-6
+															.img-box
+																figure
+																	a(rel="group2" href="images/news-1.jpg" fancyboxable)
+																		img(src="images/dummy-img.jpg" alt="img" class="img-responsive")
+																	
+																figcaption
+																	h5 New Name Assign
+														.col-md-6.col-sm-6
+															.img-box
+																figure
+																	a(rel="group2" href="images/news-1.jpg" fancyboxable)
+																		img(src="images/dummy-img.jpg" alt="img" class="img-responsive")
+																	
+																figcaption
+																	h5 New Name Assign
+													.row.row-10
+														.col-md-6.col-sm-6
+															.img-box
+																figure
+																	a(rel="group2" href="images/news-1.jpg" fancyboxable)
+																		img(src="images/dummy-img.jpg" alt="img" class="img-responsive")
+																	
+																figcaption
+																	h5 New Name Assign
+														.col-md-6.col-sm-6
+															.img-box
+																figure
+																	a(rel="group2" href="images/news-1.jpg" fancyboxable)
+																		img(src="images/dummy-img.jpg" alt="img" class="img-responsive")
+																	
+																figcaption
+																	h5 New Name Assign
+													span.list-ico.c-2
+														i.icon-file
+		.route-comments-block
+			.row
+				.col-md-8
+					.route-comments-block__info
+						.row
+							.col-md-3.col-sm-3.col-elg-2
+								.usr-pic
+									img(src="images/user.jpg" alt="img")
+								.usr-name
+									h4 James Young
+							.col-md-9.col-sm-9.col-elg-10
+								.list-info
+									ul
+										li Like
+											span 500
+										li  Comments
+											span 40
+										li Followers
+											span 900
+										li Share
+											span 23
+					.route-comments__list
+						.header-block
+							h4 Comments
+						.route-comments__listdata
+							.comment-txt-field
+								.media
+									.media-left
+										.usr-pic
+											img(src="images/user.jpg" alt="img")
+									.media-body
+										input(type="text" placeholder="Write a comment...")
+										button.button.button-rounded.button-font-base-small.button-font-sbold.margin-top-2x Comment
+							.comment-row
+								.comment-box
+									.media
+										.media-left
+											.usr-pic
+												img(src="images/user.jpg" alt="img")
+										.media-body
+											.comment-msg
+												.comment-msg__top
+													.comment-mg__usr-info
+														.usr-name
+															h4 Bryan Linquist CIA, CFE  
+														.usr-profile
+															h4 Chief Audit Exceutive
+													.comment-mg__usr__opt
+														.ico(ng-click="isoptCollapsed = !isoptCollapsed")
+															i.icon-dots-ellips
+															.drop-box(uib-collapse="!isoptCollapsed")
+																span(ng-controller="ModalCtrl"  ng-click="report()") Report
+														span.time 11:22 pm	
+												p  Lorem Ipsum is simply dummy text of the pgand typesetting industry. Lorem Ipsum has if been the industry's standard  dummy text the ever since the 1500s, when an unknown text printer took a galley tially unchanged...
+												.comment-msg__opt
+													ul
+														li
+															span Like
+														li
+															span(ng-click="ireplyCollapsed0 = !ireplyCollapsed0") Reply
+											.comment-reply-msg(uib-collapse="!ireplyCollapsed0")
+												.media
+													.media-left
+														.r-usr-pic
+															img(src="images/user.jpg" alt="img")
+													.media-body
+														.comment-msg
+															.comment-msg__top
+																.comment-mg__usr-info
+																	.usr-name
+																		h4 Bryan Linquist CIA, CFE  
+																	.usr-profile
+																		h4 Chief Audit Exceutive
+																.comment-mg__usr__opt
+																	.ico
+																		i.icon-dots-ellips
+																	span.time 11:22 pm	
+															p  Lorem Ipsum is simply dummy text of the pgand typesetting industry. Lorem Ipsum has if been the industry's standard  dummy text the ever since the 1500s, when an unknown text printer took a galley tially unchanged...
+															.comment-msg__opt
+																ul
+																	li
+																		span Like
+																	li
+																		span Reply
+												.comment-txt-field
+													.media
+														.media-left
+															.usr-pic
+																img(src="images/user.jpg" alt="img")
+														.media-body
+															input(type="text" placeholder="Write a comment...")
+															.text-right
+																button.button.button-rounded.button-font-base-small.button-font-sbold.margin-top-2x Post
+
+							.comment-row
+								.comment-box
+									.media
+										.media-left
+											.usr-pic
+												img(src="images/user.jpg" alt="img")
+										.media-body
+											.comment-msg
+												.comment-msg__top
+													.comment-mg__usr-info
+														.usr-name
+															h4 Bryan Linquist CIA, CFE  
+														.usr-profile
+															h4 Chief Audit Exceutive
+													.comment-mg__usr__opt
+														.ico(ng-click="isoptCollapsed1 = !isoptCollapsed1")
+															i.icon-dots-ellips
+															.drop-box(uib-collapse="!isoptCollapsed1")
+																span(ng-controller="ModalCtrl"  ng-click="report()") Report
+														span.time 11:22 pm	
+												p  Lorem Ipsum is simply dummy text of the pgand typesetting industry. Lorem Ipsum has if been the industry's standard  dummy text the ever since the 1500s, when an unknown text printer took a galley tially unchanged...
+												.comment-msg__opt
+													ul
+														li
+															span Like
+														li
+															span(ng-click="ireplyCollapsed1 = !ireplyCollapsed1") Reply
+											.comment-reply-msg(uib-collapse="!ireplyCollapsed1")
+												.media
+													.media-left
+														.r-usr-pic
+															img(src="images/user.jpg" alt="img")
+													.media-body
+														.comment-msg
+															.comment-msg__top
+																.comment-mg__usr-info
+																	.usr-name
+																		h4 Bryan Linquist CIA, CFE  
+																	.usr-profile
+																		h4 Chief Audit Exceutive
+																.comment-mg__usr__opt
+																	.ico
+																		i.icon-dots-ellips
+																	span.time 11:22 pm	
+															p  Lorem Ipsum is simply dummy text of the pgand typesetting industry. Lorem Ipsum has if been the industry's standard  dummy text the ever since the 1500s, when an unknown text printer took a galley tially unchanged...
+															.comment-msg__opt
+																ul
+																	li
+																		span Like
+																	li
+																		span Reply
+												.comment-txt-field
+													.media
+														.media-left
+															.usr-pic
+																img(src="images/user.jpg" alt="img")
+														.media-body
+															input(type="text" placeholder="Write a comment...")
+															.text-right
+																button.button.button-rounded.button-font-base-small.button-font-sbold.margin-top-2x Post						
+													
+
+
+
+

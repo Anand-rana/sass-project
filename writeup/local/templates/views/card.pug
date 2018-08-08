@@ -1,0 +1,116 @@
+.page-conatiner
+	.profile-section.s-ov
+		.container
+			.main-heading
+				h2.title Card Details
+			.card-block
+				uib-tabset(justified="true")
+					uib-tab(index="0" heading="Add A new card")
+						.card-block-content
+							.card-add-form
+								.field-group
+									.row
+										.col-md-6
+											.c-field
+												input(type="text", placeholder="Account Name").c-field-control
+										.col-md-6
+											.c-field
+												input(type="text", placeholder="Account Number").c-field-control
+									.row
+										.col-md-6
+											.c-field
+												input(type="text", placeholder="Confirm Account Number").c-field-control
+										.col-md-6
+											.c-field
+												input(type="text", placeholder="Sort Code").c-field-control
+									.row
+										.col-md-6
+											.c-field
+												input(type="text", placeholder="IBAN").c-field-control
+										.col-md-6
+											.c-field
+												input(type="text", placeholder="SWIFT").c-field-control
+									.row
+										.col-md-6
+											.c-field
+												input(type="text", placeholder="Bank Name").c-field-control
+										.col-md-6
+											.c-field
+												input(type="text", placeholder="Bank Address").c-field-control
+									.margin-top-6x
+										label.label-checkbox.label-checkbox-small
+											input(type="checkbox")
+											span.check-mark
+											span.label-name Default Card
+									.margin-top-6x
+										button.button.button-blue-dark.button-blue-shadow.button-height-large.button-min-width.button-uppercase.button-font-base.margin-right-6x.margin-bottom-2x Confirm
+										.ib_v
+											.su-msg-box
+																	span.ico
+																		i.icon-checked
+																	span.padding-left-2x Card added successfully
+																	span.close-ico
+																		i.icon-close
+
+					uib-tab(index="1" heading="Saved cards")
+						.card-block-content
+							.card-list
+								.s-card-box
+									.s-card__top
+										.s-card-name
+											h3 Bank name here
+										.s-card-status
+											h3.text-blue Default	
+									.s-card-dtl
+										.s-card-dtl-row
+											ul
+												li
+													span.label-name Account NAME : 
+													|Name here
+												li
+													span.label-name ccount Number : 
+													|XXXX XXXX XXXX 3456
+												li.text-right
+													span.label-name Sort code  : 
+													|XX XX 56
+										.s-card-dtl-row.margin-top-3x
+											ul
+												li
+													span.label-name IBAN  : 
+													|XXXX XXXX
+												li
+													span.label-name Swift  : 
+													|XXXX XXXX
+												li.text-right
+													button.button.button-blue-dark.button-uppercase.button-font-base.button-width-large.button-font-bold Remove
+								.s-card-box
+									.s-card__top
+										.s-card-name
+											h3 Bank name here
+										.s-card-status
+											label.label-checkbox.label-checkbox-small
+												input(type="checkbox")
+												span.check-mark
+												span.label-name Mark as Default
+									.s-card-dtl
+										.s-card-dtl-row
+											ul
+												li
+													span.label-name Account NAME : 
+													|Name here
+												li
+													span.label-name ccount Number : 
+													|XXXX XXXX XXXX 3456
+												li.text-right
+													span.label-name Sort code  : 
+													|XX XX 56
+										.s-card-dtl-row.margin-top-3x
+											ul
+												li
+													span.label-name IBAN  : 
+													|XXXX XXXX
+												li
+													span.label-name Swift  : 
+													|XXXX XXXX
+												li.text-right
+													button.button.button-blue-dark.button-uppercase.button-font-base.button-width-large.button-font-bold Remove

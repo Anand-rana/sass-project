@@ -1,0 +1,157 @@
+doctype html
+html(lang="en")
+	include _partials/_head.pug
+	body
+		
+		.layer-backdrop
+		.main-container
+			.marketing-page-block
+				header(id="header").fx-3
+						.top-header
+							.container
+								.row.align-items-center
+									.col-md-3
+										.logo-block
+											a(href="index.html")
+												img(src="images/logo.png" alt="logo" class="img-fluid logo-white")
+												img(src="images/logo-red.png" alt="logo" class="img-fluid logo-red")
+										div(class="hamburger hamburger--spin  nav-icon")
+											.hamburger-box
+												.hamburger-inner
+									.col-md-9
+										.nav-section
+											ul
+												li
+													a(href="Javascript:void;") About us
+												li
+													a(href="Javascript:void;") Our work
+												li
+													a(href="Javascript:void;") Our services
+												li
+													a(href="#app-contact") Contact
+												li
+													a(href="Javascript:void;") Insights
+				section(class="section-app-about")
+					.container
+						.inner-block
+							.app-about-content
+								.txt-block
+									h2(class="type-about") We market apps + websites digitally.
+										br
+										br
+										|We focus on apps + websites because we know them well. This focus achieves results.
+				section(class="section-app-content")
+					.container
+						.inner-block
+							.inner__container
+								.row.align-items-center
+									.col-md-6
+										.app-phone-bg(class="wow fadeInUp d-none d-md-block")
+											img(src="images/Igniva-site-filler-iPhone.gif" atl="img")
+										
+									.col-md-6
+										.txt-block(class="wow fadeIn")
+											.p-content-txt
+												p We concentrate on our own strengths to achieve your goals. This means using social media, email, video, SEO and ASO to improve your marketing reach. The Igniva team is made up of marketing strategists, videographers, copywriters, SEO experts, designers and social media professionals.
+												p We work with you to understand your market and create a strategy. Then we deliver.
+												p Our custom branded visual + written content resonates with your audience on social, in emails and through your blog. We back up this content creation with dedicated SEO and ASO to make sure our content reaches the right people.
+												p We’re results driven, while creating marketing that fits into an overall commercial strategy.
+								.video_block
+									.row
+										.col-md-6
+											.video-box(class="wow fadeIn")
+												figure
+													video(controls autoplay loop)
+														source(src="images/unijob.mp4" type="video/ogg")
+
+										.col-md-6
+											.video-box(class="wow fadeIn")
+												figure
+													video(controls autoplay loop)
+														source(src="images/pixal-video.mp4" type="video/ogg")
+			section(class="section-digital-services")
+				.container
+					.inner-block
+						.inner__container
+							.services-list
+								ul
+									li > Social media
+									li > Email
+									li > Video
+									li > SEO
+									li > ASO
+								
+							.services-list-boxs
+								.row
+									.col-md-6
+										.s-box(class="wow fadeIn")
+											figure
+												a(href="#")
+													img(src="images/Igniva-site-filler-1x1.gif" class="img-fluid" alt="img")
+
+									.col-md-6
+										.s-box(class="wow fadeIn")
+											figure
+												a(href="#")
+													img(src="images/Igniva-site-filler-1x1.gif" class="img-fluid" alt="img")
+			//contact-section
+			section(class="contact-section slide" id="app-contact" data-section-name="contact")
+				.container
+					.inner-block
+						h2 Contact
+						.contact-form-block
+							.field-group
+								.row
+									.col-md-6
+										.field-row-left
+											.c-field
+												input(type="text" placeholder="Name" class="c-field-control")
+											.c-field
+												input(type="text" placeholder="Email" class="c-field-control")
+									.col-md-6
+										.field-row-right
+											.c-field
+												input(type="text" placeholder="Company (optional)" class="c-field-control")
+											.c-field
+												input(type="text" placeholder="Phone (optional)" class="c-field-control")
+									.col-md-12
+										.help-field
+											.c-field
+												textarea( rows="1" placeholder="How can we help?" class="c-field-control js-elasticArea")
+								.btn-field
+									button.s-btn Send ›
+			//footer-section
+			footer
+					.container
+						.inner-footer
+							.row
+								.col-md-6
+									.address-block(class="wow fadeIn")
+										p london@ignivadigital.com
+										p +44 (0)203 769 0628
+										.margin-top-2x
+											p 11th Floor, One Croydon, Croydon, London CR0 0XT
+								.col-md-6
+									.social-links(class="wow fadeIn")
+										ul
+											li
+												a(href="#")
+													i.icon-instagram
+											li
+												a(href="#")
+													i.icon-facebook
+											li
+												a(href="#")
+													i.icon-linked-in
+											li
+												a(href="#")
+													i.icon-twitter
+									.footer-links(class="wow fadeIn")
+										ul
+											li
+												a(href="#") ©2017 Igniva Digital  
+											li
+												a(href="#") Privacy policy
+											li
+												a(href="#") Cookies
+	include _partials/_footer.pug

@@ -1,0 +1,336 @@
+@media (max-height:900px) and (min-width: 1000px) {
+  .contact-section {
+    .inner-block {
+      .contact-form-block {
+        .c-field {
+          textarea.c-field-control {
+            min-height: 240px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-height:850px) and (min-width: 1000px) {
+  .contact-section {
+    .inner-block {
+      @include padding-top(90);
+      @include padding-bottom(20);
+
+      .contact-form-block {
+        .c-field {
+          textarea.c-field-control {
+            min-height: 200px;
+          }
+        }
+
+        .btn-field {
+          @include margin-top(30);
+        }
+      }
+    }
+  }
+}
+@media (max-height:750px) and (min-width: 1000px) {
+  .contact-section {
+    footer {
+      @include pos(rel, 0 0 0 0);
+    }
+  }
+
+  .portfolio-section {
+    .profolio-list {
+      h3.title {
+        @include margin-top(15);
+      }
+
+      .p-data-row {
+        .p-content-list {
+          p {
+            @include margin-bottom(10);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-height:800px) and (min-width: 1000px) {
+  .portfolio-section {
+    .phone-bg {
+      img {
+        width: 290px;
+      }
+    }
+
+    .profolio-list {
+      .profolio-app-list {
+        .app-walkthrough-list {
+          img {
+            width: 255px;
+            height: 450px;
+          }
+
+          video {
+            width: 255px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-height:700px) and (min-width: 1000px) {
+  .portfolio-section {
+    .phone-bg {
+      img {
+        width: 250px;
+      }
+    }
+
+    .profolio-list {
+      .profolio-app-list {
+        .app-walkthrough-list {
+          top: 60px;
+          bottom: 50px;
+
+          img {
+            width: 220px;
+            height: 400px;
+          }
+
+          video {
+            width: 220px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-height:600px) and (min-width: 1000px) {
+  .contact-section {
+    height: auto;
+  }
+}
+@include media(">=1200px") {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@include media("<=990px") {
+
+  .hamburger-box
+  {
+    width:30px;
+    height:20px;
+    .hamburger-inner
+    {
+      width: 30px;
+
+      &:before
+      {
+        width: 30px;
+      }
+      &:after
+      {
+        width: 30px;
+      }
+    }
+  }
+
+  header {
+    //  @include pos(rel, null);
+    @include padding(10 0);
+    .logo-block {
+      img {
+        width: 80px;
+        @include margin-top(3);
+      }
+    }
+
+    .nav-section {
+      @include pos(fix, 0 null 0 -100%);
+      @include opacity(0);
+      z-index: 100;
+      background-color: $color-red;
+      //max-width: 250px;
+      display: table;
+      width: 100%;
+      height: 100%;
+      @include box-shadow(0 5px 13px rgba(0, 0, 0, .28));
+      text-align: left;
+      -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+      & > ul {
+        display: table-cell;
+        width: 100%;
+        min-height: 100vh;
+        vertical-align: middle;
+
+        & > li {
+          display: $b;
+
+          & > a {
+            @include padding(8 0);
+            @include fontsize(20);
+            color: #fff !important;
+            display: $ib;
+
+
+
+            &:before {
+              background: #fff !important;
+              display: none;
+            }
+
+            &.active {
+              color:#FFB3B3 !important;
+              &:before {
+                background: #FFB3B3 !important;
+                display: block;
+              }
+            }
+
+            &:hover
+            {
+              color:#FFB3B3 !important;
+
+            }
+          }
+
+          .sub-menu {
+            background-color: transparent;
+            @include pos(rel, 0 0 0 0);
+            min-width: inherit;
+            @include transform(scaley(1));
+            border: 0;
+
+            & > li {
+              & > a {
+                @include fontsize(12);
+                @include padding(10);
+                color: $white;
+                font-family: $font-family-m;
+                border: 0;
+                font-weight: 300;
+                line-height: 30px;
+                display: block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                position: relative;
+                overflow: hidden;
+
+                &:before {
+                  content: "";
+                  position: absolute;
+                  z-index: -1;
+                  right: 0;
+                  width: 0;
+                  bottom: 2px;
+                  background: $white;
+                  @include radius(2px);
+                  height: 2px;
+                  -webkit-transition-property: width;
+                  transition-property: width;
+                  -webkit-transition-duration: 0.2s;
+                  transition-duration: 0.2s;
+                  -webkit-transition-timing-function: ease-out;
+                  transition-timing-function: ease-out;
+                }
+
+                &:active:before,
+                &:focus:before,
+                &:hover:before {
+                  right: auto;
+                  left: 0;
+                  width: 100%;
+                }
+
+                &.active {
+                  &:before {
+                    right: auto;
+                    left: 0;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.open {
+        @include opacity(1);
+        left: 0;
+      }
+    }
+
+    .top-header {
+      @include pos(rel, null);
+    }
+
+    .nav-icon {
+      display: $b;
+      @include pos(ab, 4px 10px null null);
+      padding: 0;
+    }
+  }
+
+}
+
+@include media("<=767px") {
+  .type-it {
+    .ti-cursor {
+      top: -5px !important;
+      margin-left: -20px;
+      height: 70px;
+    }
+  }
+
+  footer {
+    .inner-footer {
+      .address-block {
+        text-align: left;
+      }
+
+      .social-links {
+        text-align: left;
+        @include margin-top(15);
+      }
+
+      .footer-links {
+        text-align: left;
+        @include margin-top(20);
+      }
+    }
+  }
+}
+//iphone-x landscape and common css
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : landscape) {
+  .type-it {
+    .ti-cursor {
+      top: -5px !important;
+      margin-left: -20px;
+      height: 70px;
+    }
+  }
+
+  footer {
+    .inner-footer {
+      .address-block {
+        text-align: left;
+      }
+
+      .social-links {
+        text-align: left;
+        @include margin-top(15);
+      }
+
+      .footer-links {
+        text-align: left;
+        @include margin-top(20);
+      }
+    }
+  }
+}

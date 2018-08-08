@@ -1,0 +1,16 @@
+@include media("<=767px") {
+    .faq-section {
+        .panel {
+            .panel-heading {
+                .panel-title {
+                    & > a {
+                        @include padding-right(0);
+                    }
+                }
+                .faq-arrow-ico {
+                    display: none;
+                }
+            }
+        }
+    }
+}

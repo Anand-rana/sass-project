@@ -1,0 +1,17 @@
+.reject-modal
+	.modal-header
+		h3.title.text-center Reject
+		button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close
+	.modal-body
+		.reject-form
+			.c-field.c-bg-color.c-shadow.c-b-none.c-txt-medium.c-txt-small.c-b-xsm
+				label Reason For Rejection
+				textarea(class="c-field-control" placeholder="Type a Message..." rows="7" cols="7")
+			.btn-field
+				.margin-top-6x.text-center
+					button.button.button-green.button-width-large.button-rounded.margin-right-3x
+						i.icon-check-bold
+					button.button.button-danger.button-width-large.button-rounded.margin-left-3x
+						i.icon-close-bold
+		

@@ -1,0 +1,62 @@
+
+<div class="about-section s-ov">
+  <div class="container">
+    <div class="main-heading">
+      <h2 class="title">About us</h2>
+    </div>
+  </div>
+  <div class="about-content-block">
+    <div class="about-content-img__block">
+      <div class="container"><img class="img-responsive" src="images/about.jpg" alt="img"/></div>
+    </div>
+    <div class="about-content-txt__block">
+      <div class="container">
+        <div class="main-heading">
+          <h2 class="title">Who are we?</h2>
+        </div>
+        <p>Luctus et ultrices posuere cubilia Curae. Donec nibh sapien, molestie quis elementum et, dignissim non atino ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sed mauris lorem. Sed sit amet mauris eu purus consectetur blandit sed et lacus. Cras tellus enim, sagittis aer varius faucibus, molestie in dolor. Mauris mollis adipiscing elit, in vulputate est volutpat vitae.</p>
+        <p>Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl. Nullam vel tellus massa. Vivamus porttitor rutrum libero ac mattis. Aliquam congue malesuada mauris vitae dignissim. Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis elit varius rhoncus. Etiam ut tellus at ligula eleifend malesuada. Aenean et metus sapien.</p>
+        <p>Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl. Nullam vel tellus massa. Vivamus porttitor rutrum libero ac mattis. Aliquam congue malesuada mauris vitae dignissim. Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis elit varius rhoncus. </p>
+      </div>
+    </div>
+    <div class="about-content-team__block">
+      <div class="container">
+        <div class="main-heading">
+          <h2 class="title">OUR TEAM</h2>
+        </div>
+        <div class="team-list" data-ng-controller="teamCtrl">
+          <ng-owl-carousel class="owl-theme team-slider" owl-items="items" owl-properties="properties" owl-ready="ready($api)">
+            <div class="item" data-ng-repeat="item in items">
+              <div class="team-box">
+                <figure><img class="img-responsive" src="images/team.jpg" alt="img"/>
+                  <ul>
+                    <li><a href="#"><span class="btn_inner"><i class="icon-facebook"></i></span><span class="roll_over"><i class="icon-facebook"></i></span></a></li>
+                    <li><a href="#"><span class="btn_inner"><i class="icon-skype"></i></span><span class="roll_over"><i class="icon-skype"></i></span></a></li>
+                    <li><a href="#"><span class="btn_inner"><i class="icon-twitter-logo"></i></span><span class="roll_over"><i class="icon-twitter-logo"></i></span></a></li>
+                  </ul>
+                </figure>
+              </div>
+            </div>
+          </ng-owl-carousel>
+        </div>
+      </div>
+    </div>
+    <div class="about-content-company__block">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 hidden-sm hidden-xs">
+            <div class="quote-icon"><i class="icon-quote"></i></div>
+          </div>
+          <div class="col-md-7 col-sm-7">
+            <div class="ab-company-txt">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis eros, luctus sit amet hendrerit fringilla, convallis vitae est.</p><span class="author">- John Doe, CEO Company</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-5 hidden-xs">
+            <div class="ab-ceo-img"><img class="img-responsive" src="images/profile.jpg" alt="img"/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

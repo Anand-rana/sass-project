@@ -1,0 +1,199 @@
+
+<div class="edit-profile-section">
+  <div class="container">
+    <div class="step-form-block">
+      <h2 class="title">Edit Profile</h2>
+      <div class="step-form-container" ng-controller="signupCtrl">
+        <div class="step-form-heading">
+          <h3 class="title">Essential Details</h3>
+        </div>
+        <div class="step-form-data">
+          <div class="step-form-field-box">
+            <div class="step-form-nav">
+              <ul>
+                <li>
+                  <div class="step-nav-box step-one active">
+                    <div class="step-nav-txt"><span class="label-step">Step</span><span class="step-no">1</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="step-nav-box step-two active">
+                    <div class="step-nav-txt"><span class="label-step">Step</span><span class="step-no">2</span></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sign-up-step-2">
+              <div class="field-group">
+                <div class="upload-file-box">
+                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                  <h4>Edit Image</h4>
+                  <div class="fileUpload">
+                    <input class="upload" type="file"/>
+                    <button class="button button-green button-rounded button-height-small button-width-large">Browse</button>
+                  </div>
+                </div>
+                <div class="c-field c-outline c-shadow c-b-lg">
+                  <div class="c-line">
+                    <label>About Myself (Max. 1000 Characters)</label>
+                  </div>
+                  <textarea class="c-field-control" rows="8" cols="8" placeholder="Enter Some Text..."></textarea>
+                </div>
+                <div class="c-field c-outline c-lh c-shadow c-b-lg">
+                  <div class="c-line">
+                    <label>Interests (Max 15 Tags)</label>
+                  </div>
+                  <div class="c-help-note">
+                    <p>Note - These keywords will help your profile to be searched more effectively by other users on MyLifeRoute. You may also enter any interests and hobbies as well.  </p>
+                  </div>
+                  <tags-input ng-model="tags" placeholder="Add Interests"></tags-input>
+                </div>
+                <div class="c-field c-outline c-lh c-shadow c-b-lg">
+                  <div class="c-line">
+                    <label>Current Job/Occupation</label>
+                  </div>
+                  <div class="c-help-note">
+                    <p> Note - These keywords will help your profile to be searched more effectively by other users on MyLifeRoute.  </p>
+                  </div>
+                  <input class="c-field-control" type="text" placeholder="Enter.."/>
+                </div>
+                <div class="c-field c-outline c-lh c-shadow c-b-lg">
+                  <div class="c-line">
+                    <label>Education Level</label>
+                  </div>
+                  <div class="select-control">
+                    <select class="c-field-control">
+                      <option value="1">High School</option>
+                      <option value="2">College</option>
+                      <option value="3">Non Degree</option>
+                      <option value="4">Vocational</option>
+                      <option value="5">Undergraduate</option>
+                      <option value="6">Graduate</option>
+                      <option value="7">Masters</option>
+                      <option value="8">Doctoral</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                  <label>Work Related Experience and Skills (Max 10 Entries)</label>
+                  <input class="c-field-control" type="text" placeholder="e.g. IT Management"/>
+                </div>
+                <div class="t-exp-field">
+                  <div class="t-cell">
+                    <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                      <input class="c-field-control" type="text" placeholder="8"/><span> Years</span>
+                    </div>
+                  </div>
+                  <div class="t-cell">
+                    <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                      <input class="c-field-control" type="text" placeholder="1"/><span> Months</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="t-exp-time-field">
+                  <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                    <div class="c-line">
+                      <label>From</label>
+                    </div>
+                    <div class="t-table">
+                      <div class="t-cell">
+                        <div class="select-control">
+                          <select class="c-field-control">
+                            <option value="1993">1993</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="t-cell"><span class="label-name">To</span></div>
+                      <div class="t-cell">
+                        <div class="select-control">
+                          <select class="c-field-control">
+                            <option value="2001">2001</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                  <div class="c-line">
+                    <label>Company Name</label>
+                  </div>
+                  <input class="c-field-control" type="text" placeholder="Enter Name.."/>
+                </div>
+                <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                  <div class="c-line">
+                    <label>Location</label>
+                  </div>
+                  <input class="c-field-control" type="text" placeholder="Enter Location.."/>
+                </div>
+                <div class="exp-field-group" data-ng-repeat="choice in choices|limitTo:5">
+                  <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                    <div class="c-line">
+                      <label>Experience 2 </label>
+                    </div>
+                    <input class="c-field-control" type="text" placeholder="e.g. IT Management"/>
+                  </div>
+                  <div class="t-exp-field">
+                    <div class="t-cell">
+                      <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                        <input class="c-field-control" type="text" placeholder="8"/><span> Years</span>
+                      </div>
+                    </div>
+                    <div class="t-cell">
+                      <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                        <input class="c-field-control" type="text" placeholder="1"/><span> Months</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="t-exp-time-field">
+                    <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                      <div class="c-line">
+                        <label>From</label>
+                      </div>
+                      <div class="t-table">
+                        <div class="t-cell">
+                          <div class="select-control">
+                            <select class="c-field-control">
+                              <option value="1993">1993</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="t-cell"><span class="label-name">To</span></div>
+                        <div class="t-cell">
+                          <div class="select-control">
+                            <select class="c-field-control">
+                              <option value="2001">2001</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                    <div class="c-line">
+                      <label>Company Name</label>
+                    </div>
+                    <input class="c-field-control" type="text" placeholder="Enter Name.."/>
+                  </div>
+                  <div class="c-field c-outline c-lh c-shadow c-b-sm">
+                    <div class="c-line">
+                      <label>Location</label>
+                    </div>
+                    <input class="c-field-control" type="text" placeholder="Enter Location.."/>
+                  </div>
+                </div>
+                <div class="field-opt"><span class="add-icon" ng-click="addNewChoice()"><i class="icon-plus"></i></span>
+                  <spa class="delete-icon"><i class="icon-recycle"></i></spa>
+                </div>
+                <div class="btn-field text-center">
+                  <button class="button button-font-medium button-uppercase button-font-medium-txt button-height-extra-large button-rounded button-min-width-small margin-left-1x margin-right-1x margin-bottom-2x">SAVE</button>
+                  <button class="button button-danger button-uppercase button-font-medium button-font-medium-txt button-height-extra-large button-rounded button-min-width-small margin-right-1x margin-left-1x">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

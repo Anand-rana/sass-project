@@ -1,0 +1,89 @@
+.filter-form-block-container
+	.field-group
+		.filter-life-route
+			.t-cell
+				.c-field.c-outline
+					input(type="text", placeholder="Enter Title").c-field-control
+			.t-cell
+				span.f-label.hidden-xs Or
+			.t-cell
+				.c-field.c-outline
+					input(type="text", placeholder="I am Currently...").c-field-control
+			.t-cell
+				.c-field.c-outline
+					input(type="text", placeholder="I Want To Be...").c-field-control
+			.t-cell
+				span.f-label.hidden-xs In
+			.t-cell
+				.c-field.c-outline 
+					input(type="text", placeholder="Specify Location (City, Country etc)").c-field-control
+			.t-cell.primarySearchCell
+				.btn-field
+					button.button.button-height-large.button-rounded.button-font-medium
+						i.icon-search
+
+	._advanceSearchBlk
+		.innerBlk
+			.row
+				.col-xs-12
+					.form-group
+						input(type="text" placeholder="Keywords").form-control
+				.col-xs-12.col-sm-4
+					.form-group
+						.search-drop-down-field
+							select.form-control
+								option(hidden="" selected="" disabled="") Steps
+								option Option 1
+								option Option 2
+				.col-xs-12.col-sm-4
+					.form-group
+						.search-drop-down-field
+							select.form-control
+								option(hidden="" selected="" disabled="") Posting Status
+								option Option 1
+								option Option 2
+				.col-xs-12.col-sm-4
+					.form-group
+						.search-drop-down-field
+							select.form-control
+								option(hidden="" selected="" disabled="") Media
+								option Option 1
+								option Option 2
+				.col-xs-12.col-sm-4
+					.form-group
+						.search-drop-down-field
+							select.form-control
+								option(hidden="" selected="" disabled="") Posted By
+								option Option 1
+								option Option 2
+				.col-xs-12.col-sm-4
+					.form-group
+						.search-drop-down-field
+							select.form-control
+								option(hidden="" selected="" disabled="") Relevance
+								option Option 1
+								option Option 2
+				.col-xs-12.col-sm-4
+					.form-group
+						.search-drop-down-field
+							select.form-control
+								option(hidden="" selected="" disabled="") Total Cost
+								option Option 1
+								option Option 2
+				.col-xs-12.col-sm-4
+					.form-group
+						.search-drop-down-field
+							select.form-control
+								option(hidden="" selected="" disabled="") Activity Status
+								option Option 1
+								option Option 2
+				.col-xs-12.col-sm-4
+					.form-group
+						button.button.button-green.button-rounded.button-font-medium-txt.button-block Reset
+				.col-xs-12.col-sm-4
+					button.button.button-theme.button-rounded.button-font-medium-txt.button-block Search
+
+
+.filter-advance
+	// span.pointer(ng-controller="ModalCtrl"  ng-click="aliferoutesearch()" id="advanceButton") Advanced
+	span.pointer(ng-controller="routeCtrl" ng-click="toggleFilter()" id="advanceButton") Advanced

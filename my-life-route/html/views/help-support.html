@@ -1,0 +1,38 @@
+
+<div class="faq-page-section">
+  <div class="container">
+    <div class="__top-block">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-4">
+          <div class="heading-block">
+            <h3>Help &amp; Support - FAQ</h3>
+          </div>
+          <div class="search-field">
+            <input class="search-field-control" type="text" placeholder="Search"/><span class="ico"><i class="icon-search"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <div class="f-nav-list">
+            <ul>
+              <li><a data-ui-sref="helpsupport.section({ type: 'signup'})" data-ui-sref-active="active">SIGNING UP</a></li>
+              <li><a data-ui-sref="helpsupport.section({ type: 'genral'})" data-ui-sref-active="active">GENERAL USE</a></li>
+              <li><a data-ui-sref="helpsupport.section({ type: 'advertise'})" data-ui-sref-active="active">ADVERTISING</a></li>
+              <li><a data-ui-sref="helpsupport.section({ type: 'terms'})" data-ui-sref-active="active">T &amp; C</a></li>
+              <li><a data-ui-sref="helpsupport.section({ type: 'policy'})" data-ui-sref-active="active">PRIVACY POLICY</a></li>
+              <li><a data-ui-sref="helpsupport.section({ type: 'contact'})" data-ui-sref-active="active">CONTACT</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-8">
+          <div class="content-data">
+            <div ui-view="section"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+@include media("<=992px") {
+
+    .my-stats-section {
+        .__inner-container {
+            .stats-nav__list {
+                &>ul {
+                    &>li {
+                        &>a {
+                            @include font-size(17);
+                            @include padding-bottom(15);
+                        }
+                    }
+                }
+            }
+
+            .m-stats__data-container {
+                .m-stats__oth-info-container {
+                    .m-stats__info-block {
+                        @include margin-right(0);
+                        @include margin-bottom(20);
+                        min-width: auto;
+                        width: 100%;
+                        float: none;
+                    }
+                }
+
+                .m-stats__main-info-block {
+                    min-width: auto !important;
+                    width: 100% !important;
+                    float: none !important;
+                }
+                .m-stats__data-table {
+                    .__inner-data {
+                        table {
+                            thead {
+                                th {
+                                    white-space: nowrap;
+                                }
+                            }
+                            tbody {
+                                td {
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+
+    .my-stats-section {
+        @include padding(30 0);
+        .__inner-container {
+            @include margin-top(30);
+
+            &>.row {
+                @include margin-left(-15);
+                @include margin-right(-15);
+                &>[class^="col-"] {
+                    @include padding-left(15);
+                    @include padding-right(15);
+                }
+            }
+
+            .m-stats__data-container {
+                .m-stats-route-box {
+                    @include padding(20);
+                }
+
+                .m-stats__data-table {
+                    .sort-field {
+                        text-align: left;
+                        @include margin-top(10);
+
+                        .__label {
+                            @include padding-bottom(5);
+                        }
+                    }
+                }
+            }
+        }
+
+        .heading-block {
+            text-align: center;
+        }
+    }
+}

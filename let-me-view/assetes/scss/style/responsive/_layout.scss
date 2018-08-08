@@ -1,0 +1,358 @@
+//mdoal-center
+@include media(">=1000px") {
+    .modal {
+        text-align: center;
+        padding: 0 !important;
+    }
+
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .fix-to-top {
+        @include pos(fix, 0 null null null);
+
+        width: 100%;
+        z-index: 1000;
+        background-color: #ededed;
+
+        .header {
+            @include padding(20 0);
+        }
+    }
+}
+
+
+@include media(">=768px") {
+    .detail-modal {
+        .modal-dialog {
+            width: 700px;
+        }
+    }
+}
+
+
+@include media("<=992px") {
+    .main-header {
+        .logo {
+            @include margin(15 0);
+        }
+    }
+
+    .nav_bar {
+        text-align: center;
+    }
+
+    .nav_button {
+        text-align: center;
+
+        @include margin-top(10);
+    }
+
+    .top-header {
+        .contact-info {
+            ul {
+                li {
+                    @include padding(8);
+                }
+            }
+        }
+
+        .login-pannel {
+            ul {
+                li {
+                    a {
+                        @include padding(8);
+                    }
+                }
+            }
+
+            .user-info {
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+
+        .sign_up-links {
+            a {
+                @include padding(8);
+            }
+        }
+    }
+}
+
+
+@include media("<=767px") {
+    .banner {
+        min-height: inherit;
+    }
+
+    .banner__caption {
+        @include padding(100 0);
+    }
+
+    .is--agent {
+        .button-white {
+            @include margin-top(30);
+        }
+    }
+
+    .main-header {
+        .header {
+            @include padding(15 0);
+        }
+
+        .logo {
+            @include margin(0);
+        }
+    }
+
+    .app-modal {
+        .close {
+            @include pos(ab, 0 0 null null);
+
+            background: none;
+
+            &:hover, &:focus {
+                background: none;
+            }
+        }
+
+        .modal_footer {
+            text-align: center;
+
+            .button {
+                @include margin-top(15);
+            }
+        }
+
+        .field-group {
+            .field {
+                @include padding(15 40);
+
+                &:before {
+                    left: 30px;
+                }
+            }
+        }
+    }
+
+    .nav_bar {
+        text-align: left;
+
+        @include pos(fix, 0 null null 0);
+
+        z-index: 1000;
+        background-color: $white;
+        height: 100%;
+        min-width: 250px;
+
+        @include transition(all, 0.5s);
+
+        @include margin-left(-250);
+
+        li {
+            display: $block;
+
+            @include margin-bottom(10);
+
+            a {
+                display: $block;
+
+                &.nav_bar__callbtn {
+                    margin-right: 0;
+                }
+            }
+
+            &.login-btn {
+                @include padding(0 5);
+
+                a {
+                    display: $inline;
+                }
+            }
+        }
+    }
+
+    .sideopen {
+        .nav_bar {
+            @include margin-left(0);
+        }
+    }
+
+    .bottom_bar {
+        text-align: center;
+
+        .bottom_bar__links {
+            text-align: center;
+
+            @include margin-top(5);
+        }
+    }
+
+    .r-popup {
+        @include margin(100 20);
+
+        .r-form {
+            .form-group {
+                @include margin-bottom(15);
+            }
+        }
+
+        .r-btn-section {
+            text-align: right;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .r-popup-container {
+        min-width: inherit;
+
+        @include pos(fix, 0);
+
+        overflow: auto;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .mail-box-container {
+        min-width: inherit;
+
+        @include pos(fix, 0);
+
+        overflow: auto;
+        background: rgba(0, 0, 0, 0.8);
+
+        .mail-box {
+            @include margin(100 20);
+        }
+    }
+
+    .c-form {
+        @include pos(ab, null 0px 0px null);
+    }
+
+    .page-heading {
+        @include fontsize(25);
+    }
+
+    .main-heading {
+        @include fontsize(25);
+    }
+
+    .pagnation-list {
+        & > ul {
+            & > li {
+                & > span {
+                    @include padding(5 10);
+                }
+
+                &.prev {
+                    & > a {
+                        @include padding(5 10);
+
+                        & > i {
+                            @include margin-right(10);
+                        }
+                    }
+                }
+
+                &.next {
+                    & > a {
+                        @include padding(5 10);
+
+                        & > i {
+                            @include margin-left(10);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .detail-modal {
+        .offer-dtl-list {
+            .offer-dtl-table {
+                table {
+                    thead {
+                        display: none;
+                    }
+
+                    tbody {
+                        td {
+                            display: block;
+                            width: 100%;
+
+                            &:before {
+                                content: attr(data-th) ": ";
+                                display: inline-block;
+                                color: $themecolor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .nav_button {
+        ul {
+            li {
+                display: block;
+
+                @include margin-right(0);
+
+                @include margin-bottom(10);
+
+                & > a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+
+@include media("<=480px") {
+    .top-header {
+        .sign_up-links {
+            a {
+                @include padding(5);
+
+                @include fontsize(13);
+            }
+
+            .login-btn {
+                @include margin-left(5);
+            }
+        }
+    }
+
+    .logo {
+        img {
+            width: 220px;
+        }
+    }
+
+    .app-modal {
+        .modal-header {
+            h2 {
+                @include fontsize(18);
+            }
+        }
+    }
+}

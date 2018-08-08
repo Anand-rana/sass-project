@@ -1,0 +1,71 @@
+.form-block-section
+	.container
+		.form-block-box
+			.user-signup-form
+				.inner-form
+					.inner-form-row
+						.inner-form-cell
+							.inner-form-block
+								.main-heading
+									h2.title Sign up as a Company
+								.field-group
+									.c-field.field-req
+										input(type="text", placeholder="Company Name").c-field-control
+										.icon-sign &#42;
+									.c-field.field-req
+										input(type="text", placeholder="E-mail").c-field-control
+										.icon-sign &#42;
+									.c-field.field-req
+										input(type="text", placeholder="Company Website").c-field-control
+										.icon-sign &#42;
+										
+									.c-field.has-icon
+										input(type="text", placeholder="number of employees").c-field-control
+										.icon-addon.hidden-xs(uib-popover="Entering your current number of employees when signing up to WriteUp allows you to compare this number 'then and now'. You can see how WriteUp has helped your business grow since the day you signed up and a day in the future." popover-trigger="'outsideClick'"  popover-placement="left")
+											i.icon-help
+									.c-field.field-req
+										input(type="text", placeholder="Country").c-field-control
+										.icon-sign &#42;
+									.c-field.field-req
+										input(type="password", placeholder="Password").c-field-control
+										.icon-sign &#42;
+									.c-field.field-req
+										input(type="password", placeholder="Confirm Password").c-field-control
+										.icon-sign &#42;
+
+									.c-field
+										label.label-checkbox.label-checkbox-small
+											input(type="checkbox")
+											span.check-mark
+											span.label-name I agree to the  Terms &amp; conditions  of WriteUp
+									.c-field
+										img(src="images/captcha.jpg" alt="img" class="img-responsive")
+									.c-field
+										button.button.button-block.button-height-large.button-font-base.button-uppercase.button-shadow Sign up
+
+						.inner-form-cell.form-right-block
+							.form-block-options
+								h2 Or sign up with
+								.form-options-btn-group
+									.row.row-10
+										.col-md-6
+											button.button-facebook 
+												span.btn-icon
+													i.icon-facbook 
+												span Facebook
+										.col-md-6
+											button.button-google-plus 
+												span.btn-icon
+													i.icon-google-plus 
+												span Google+
+									.margin-top-10x
+										button.button-signup(ng-click="$state.go('signup')" )
+												span.btn-icon
+													i.icon-angle-right-o 
+												span Sign up as a user
+									.margin-top-10x.text-center
+										a(ui-sref="login" class="opt-link") already have an account ?
+
+
+
+

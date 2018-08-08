@@ -1,0 +1,294 @@
+
+<div class="m-post-eventsroute">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-md-offset-3">
+        <div class="heading-block">
+          <div class="row">
+            <div class="col-md-6 col-lg-6">
+              <div class="breadcrumb-list">
+                <ul>
+                  <li><a href="#">My Posts</a></li>
+                  <li><a class="active" href="#">Events</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <div class="heading-block__buttons"><a class="button button-action button-rounded button-height-large button-width-medium margin-right-2x margin-bottom-1x" data-ui-sref="create-event">Create New </a><a class="button button-green button-rounded button-height-large button-width-medium margin-bottom-1x" data-ui-sref="post-events-upcoming"> Upcoming</a><a class="button button-danger button-rounded button-height-large button-width-medium margin-left-2x margin-bottom-1x" data-ui-sref="post-events-expired"> Expired</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="filter-side-block">
+          <div class="filter-side-box" ng-class="{'active margin-bottom':issortingCollapsed}">
+            <div class="filter-block__top pointer" ng-click="issortingCollapsed = !issortingCollapsed">
+              <h4>Sorting</h4><span class="caret"></span>
+            </div>
+            <div class="filter-field-group" uib-collapse="!issortingCollapsed">
+              <div class="filter-inline-field">
+                <div class="row row-5">
+                  <div class="col-sm-3">
+                    <label>Sort by</label>
+                  </div>
+                  <div class="col-sm-9">
+                    <div class="f-field">
+                      <div class="select-control">
+                        <select class="f-field-control">
+                          <option value="Latest Post">Latest Post</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-button-group">
+                  <div class="row row-10">
+                    <div class="col-md-6 col-sm-6">
+                      <button class="button button-rounded button-block margin-bottom-2x">Apply</button>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <button class="button button-border button-theme button-border-thin button-rounded button-block margin-bottom-2x">Reset</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filter-side-box" ng-class="{'active margin-top':isfilterCollapsed}">
+            <div class="filter-block__top pointer" ng-click="isfilterCollapsed = !isfilterCollapsed">
+              <h4>Filters</h4><span class="caret"></span>
+            </div>
+            <div class="filter-field-group" uib-collapse="!isfilterCollapsed">
+              <div class="f-field">
+                <input class="f-field-control" type="text" placeholder="Title"/>
+              </div>
+              <div class="f-field has-icon">
+                <input class="f-field-control" type="text" placeholder="From"/><span class="icon-addon"><i class="icon-calendar"></i></span>
+              </div>
+              <div class="f-field has-icon">
+                <input class="f-field-control" type="text" placeholder="To"/><span class="icon-addon"><i class="icon-calendar"></i></span>
+              </div>
+              <div class="f-field">
+                <input class="f-field-control" type="text" placeholder="Location"/>
+              </div><a class="search_link" href="#">Advanced Search</a>
+              <div class="filter-button-group">
+                <div class="row row-10">
+                  <div class="col-md-6 col-sm-6">
+                    <button class="button button-rounded button-block margin-bottom-2x">Apply</button>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <button class="button button-border button-theme button-border-thin button-rounded button-block margin-bottom-2x">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <!--.ap-filter remove class if filter not applied				-->
+        <div class="m-post-eventroute__list ap-filter">
+          <div class="filter-ap-msg">
+            <h4> <span><i class="icon-asterisk-symbol"> </i></span>Filters Applied</h4>
+          </div>
+          <div class="total-posted"><span>Total Posted : 20</span></div>
+          <div class="event-route-box">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 col-lg-3">
+                <div class="user-p-info">
+                  <div class="user-img"><img src="images/user.jpg" alt="img"/></div>
+                  <div class="user-name">
+                    <h3>James Young</h3>
+                  </div>
+                  <div class="list-label"><span>e</span></div>
+                </div>
+              </div>
+              <div class="col-md-9 col-sm-8 col-lg-9">
+                <div class="user-dtl">
+                  <div class="user-dtl-info">
+                    <h3 class="nr-title">Lorem Ipsum is simply dummy text</h3>
+                    <div class="user-dtl-txt">
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...</p>
+                    </div>
+                    <div class="user-dtl-info-list">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                          <ul class="list-info">
+                            <li><span class="l-label">Location</span><span>New York ,USA</span></li>
+                            <li><span class="l-label">Due Date</span><span> 24th June 2017</span></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                          <ul class="list-info">
+                            <li><span class="l-label">Date created</span><span>24th May 2016</span></li>
+                            <li><span class="l-label">Last updated</span><span>24th May 2017</span></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                          <button class="button button-rounded button-height-small button-font-base-small button-min-width-medium button-width-small margin-bottom-2x" ng-click="$state.go('events-route-dtl')"> View</button>
+                          <button class="button button-action button-rounded button-height-small button-font-base-small button-width-small button-min-width-medium" ng-controller="ModalCtrl" ng-click="interstedpeople()"> Show Interested People</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-bottom-block">
+              <ul>
+                <li>
+                  <div class="t-videos"><span class="icon"><i class="icon-play-btn"></i></span><span>6</span></div>
+                  <div class="t-img"><span class="icon"><i class="icon-file"></i></span><span>8</span></div>
+                </li>
+                <li>
+                  <div class="t-likes"><span class="icon"><i class="icon-thumb"></i></span><span class="__label">Like : </span><span>500</span></div>
+                </li>
+                <li>
+                  <div class="t-coments"><span class="icon"><i class="icon-comment"></i></span><span class="__label">Comments : </span><span>40</span></div>
+                </li>
+                <li>
+                  <div class="t-interst"><span class="icon"><i class="icon-user-o"> </i></span><span class="__label">Interested : </span><span>23</span></div>
+                </li>
+                <li>
+                  <div class="t-share"><span class="icon pointer" ng-click="isNavCollapsed  = !isNavCollapsed"><i class="icon-share"></i></span><span class="__label">Share : </span><span>23</span>
+                    <div class="t-share-opt" uib-collapse="!isNavCollapsed"> <a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareroute()">Share by Myliferoute</a><a href="#">Share by Facebook</a><a href="#">Share by Twitter</a><a href="#">Share by LinkedIn</a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareemail()">Share by Email </a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="copy()">Copy Link</a></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="event-route-box">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 col-lg-3">
+                <div class="user-p-info">
+                  <div class="user-img"><img src="images/user.jpg" alt="img"/></div>
+                  <div class="user-name">
+                    <h3>James Young</h3>
+                  </div>
+                  <div class="list-label"><span>e</span></div>
+                </div>
+              </div>
+              <div class="col-md-9 col-sm-8 col-lg-9">
+                <div class="user-dtl">
+                  <div class="user-dtl-info">
+                    <h3 class="nr-title">Lorem Ipsum is simply dummy text</h3>
+                    <div class="user-dtl-txt">
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...</p>
+                    </div>
+                    <div class="user-dtl-info-list">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                          <ul class="list-info">
+                            <li><span class="l-label">Location</span><span>New York ,USA</span></li>
+                            <li><span class="l-label">Due Date</span><span> 24th June 2017</span></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                          <ul class="list-info">
+                            <li><span class="l-label">Date created</span><span>24th May 2016</span></li>
+                            <li><span class="l-label">Last updated</span><span>24th May 2017</span></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                          <button class="button button-rounded button-height-small button-font-base-small button-min-width-medium button-width-small margin-bottom-2x" ng-click="$state.go('events-route-dtl')"> View</button>
+                          <button class="button button-action button-rounded button-height-small button-font-base-small button-width-small button-min-width-medium" ng-controller="ModalCtrl" ng-click="interstedpeople()"> Show Interested People</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-bottom-block">
+              <ul>
+                <li>
+                  <div class="t-videos"><span class="icon"><i class="icon-play-btn"></i></span><span>6</span></div>
+                  <div class="t-img"><span class="icon"><i class="icon-file"></i></span><span>8</span></div>
+                </li>
+                <li>
+                  <div class="t-likes"><span class="icon"><i class="icon-thumb"></i></span><span class="__label">Like : </span><span>500</span></div>
+                </li>
+                <li>
+                  <div class="t-coments"><span class="icon"><i class="icon-comment"></i></span><span class="__label">Comments : </span><span>40</span></div>
+                </li>
+                <li>
+                  <div class="t-interst"><span class="icon"><i class="icon-user-o"> </i></span><span class="__label">Interested : </span><span>23</span></div>
+                </li>
+                <li>
+                  <div class="t-share"><span class="icon pointer" ng-click="isNav1Collapsed  = !isNav1Collapsed"><i class="icon-share"></i></span><span class="__label">Share : </span><span>23</span>
+                    <div class="t-share-opt" uib-collapse="!isNav1Collapsed"> <a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareroute()">Share by Myliferoute</a><a href="#">Share by Facebook</a><a href="#">Share by Twitter</a><a href="#">Share by LinkedIn</a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareemail()">Share by Email </a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="copy()">Copy Link</a></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="event-route-box">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 col-lg-3">
+                <div class="user-p-info">
+                  <div class="user-img"><img src="images/user.jpg" alt="img"/></div>
+                  <div class="user-name">
+                    <h3>James Young</h3>
+                  </div>
+                  <div class="list-label"><span>e</span></div>
+                </div>
+              </div>
+              <div class="col-md-9 col-sm-8 col-lg-9">
+                <div class="user-dtl">
+                  <div class="user-dtl-info">
+                    <h3 class="nr-title">Lorem Ipsum is simply dummy text</h3>
+                    <div class="user-dtl-txt">
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...</p>
+                    </div>
+                    <div class="user-dtl-info-list">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                          <ul class="list-info">
+                            <li><span class="l-label">Location</span><span>New York ,USA</span></li>
+                            <li><span class="l-label">Due Date</span><span> 24th June 2017</span></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                          <ul class="list-info">
+                            <li><span class="l-label">Date created</span><span>24th May 2016</span></li>
+                            <li><span class="l-label">Last updated</span><span>24th May 2017</span></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                          <button class="button button-rounded button-height-small button-font-base-small button-min-width-medium button-width-small margin-bottom-2x" ng-click="$state.go('events-route-dtl')"> View</button>
+                          <button class="button button-action button-rounded button-height-small button-font-base-small button-width-small button-min-width-medium" ng-controller="ModalCtrl" ng-click="interstedpeople()"> Show Interested People </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-bottom-block">
+              <ul>
+                <li>
+                  <div class="t-videos"><span class="icon"><i class="icon-play-btn"></i></span><span>6</span></div>
+                  <div class="t-img"><span class="icon"><i class="icon-file"></i></span><span>8</span></div>
+                </li>
+                <li>
+                  <div class="t-likes"><span class="icon"><i class="icon-thumb"></i></span><span class="__label">Like : </span><span>500</span></div>
+                </li>
+                <li>
+                  <div class="t-coments"><span class="icon"><i class="icon-comment"></i></span><span class="__label">Comments : </span><span>40</span></div>
+                </li>
+                <li>
+                  <div class="t-interst"><span class="icon"><i class="icon-user-o"> </i></span><span class="__label">Interested : </span><span>23</span></div>
+                </li>
+                <li>
+                  <div class="t-share"><span class="icon pointer" ng-click="isNav2Collapsed  = !isNav2Collapsed"><i class="icon-share"></i></span><span class="__label">Share : </span><span>23</span>
+                    <div class="t-share-opt" uib-collapse="!isNav2Collapsed"> <a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareroute()">Share by Myliferoute</a><a href="#">Share by Facebook</a><a href="#">Share by Twitter</a><a href="#">Share by LinkedIn</a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="shareemail()">Share by Email </a><a href="Javascript:void;" ng-controller="ModalCtrl" ng-click="copy()">Copy Link</a></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

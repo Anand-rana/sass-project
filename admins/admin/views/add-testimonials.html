@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="panel">
+    <div class="panel-heading">
+      <h2>Add Testimonials</h2>
+    </div>
+    <div class="panel-body">
+      <form name="myForm" ng-submit="addTestimonial(myForm.$valid)">
+        <div class="form-group">
+
+          <input class="upload" type="file"
+          ngf-select name="t_thumbnail"
+          ng-model="t_thumbnail"
+          ngf-max-size="2MB"
+           ngf-model-invalid="errorMeetingFile"
+           ngf-pattern="'.jpg,.gif,.png,.jpeg'" ngf-multiple="false" ngf-change="uploadimage($files)" ng-required="true"
+          />
+          <div class="file-preview">
+              <img ngf-thumbnail="t_thumbnail" class="img-thumbnail">
+          </div>
+
+          <!-- <div class="data-img-box" ng-repeat="testimonials_img in testimonials_thumbnail">
+            <div class="file-view">
+                 <figure><img src="life_route_images/thumb/{{testimonials_img}}" alt="img"/></figure>
+            </div>
+          </div> -->
+
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Enter Name" ng-required="true" class="form-control" name="testimonials" ng-model="testimonials" />
+
+
+          <div class="text-left">
+            <span class="text-danger" ng-show="myForm.testimonials.$error.required && !myForm.testimonials.$pristine">Please Enter Question.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea cols="5" rows="5" class="form-control" ng-required="true" name="description" ng-model="description"></textarea>
+
+          <div class="text-left">
+            <span class="text-danger" ng-show="myForm.description.$error.required && !myForm.description.$pristine">Please Enter Question.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" ng-disabled="myForm.$invalid" value="Submit" class="btn btn-primary" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

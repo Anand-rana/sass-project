@@ -1,0 +1,106 @@
+.m-post-section(data-ng-controller="sideCtrl")
+	.sp-btn(data-ng-click="profileside(); showcaption = ! showcaption")
+		span(ng-show="!showcaption").hidden-xs Hide Profile
+		span(ng-show="showcaption").hidden-xs Show Profile
+		//for mobile-view
+		span( ng-show="!showcaption").visible-xs Show Profile
+		span(ng-show="showcaption").visible-xs Hide Profile
+
+	.container
+		.my-post-block
+			.user-dtl-block
+				.user-dtl-block-container
+						.user-dtl-box
+							.user-pic
+								img(src="images/profile-3.jpg" alt="img")
+							.user-name
+								h3 Mahmood Choudhury
+							.user-profile
+								h3 Entrepreneur
+							.user-other-dtl-list
+								ul
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-user
+										.t-cell
+											span 22 Years Old
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-marker
+										.t-cell
+											span London, United Kingdom
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-phone
+										.t-cell
+											span +999-123-4567	
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-cap
+										.t-cell
+											span Postgraduate
+									li
+										.t-cell.icon-label
+											span.icon
+												i.icon-web
+										.t-cell
+											span www.myliferoute.com
+							.edit-icon
+								a(href="#")
+									i.icon-edit
+							.close-icon.visible-xs(data-ng-click="closemenu()")
+								i.icon-close-o
+						.margin-top-2x.margin-bottom-2x
+							button.button.button-green.button-rounded.button-font-base.button-height-large.button-font-medium.button-font-medium-txt.button-block(ng-controller="ModalCtrl"  ng-click="workhistory()") View Work History
+								span.button-btn-icon
+									i.icon-arrow-right 
+
+
+						.user-dtl-box
+							
+							.user-work-dtl-list
+								ul
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-route  
+											span Liferoutes :
+										.t-cell.text-right
+											span 22
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-news  
+											span News posted :
+										.t-cell.text-right
+											span 12
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-connection  
+											span Connections :
+										.t-cell.text-right
+											span 22
+									li
+										.t-cell.label-name
+											span.icon
+												i.icon-follow  
+											span Followers :
+										.t-cell.text-right
+											span 12
+			.my-post-cotainer
+				h2.title My Posts
+				.my-post-list
+					.connection-box.c-1
+						a(data-ui-sref="post-life-route")
+							h3 60 Life Routes
+					.connection-box.c-2
+						a(data-ui-sref="post-news-route")
+							h3 88 News Posts
+					.connection-box.c-3
+						a(data-ui-sref="post-events-route")
+							h3 66 Event Posts

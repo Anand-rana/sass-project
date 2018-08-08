@@ -1,0 +1,112 @@
+.entry-cotent {
+    @include padding(70 0);
+    p {
+        line-height: 25px;
+        @include fontsize(20);
+        @include margin-bottom(20);
+        color: $color01;
+    }
+    ol,
+    ul {
+        @include padding-left(30);
+        @include margin-bottom(20);
+    }
+    ol {
+        li {
+            list-style: number;
+        }
+    }
+    li {
+        //line-height: 25px;
+        @include fontsize(20);
+        // @include margin-bottom(20);
+        color: $color01;
+    }
+    hr {
+        @include margin(50 0);
+        border-color: $color01;
+    }
+}
+
+.u-heading {
+    @include fontsize(38);
+    text-transform: $uppercase;
+    @include josefinsansbold;
+    @include padding-bottom(20);
+    @include margin-bottom(20);
+    @include pos(rel, null);
+    span {
+        @include fontsize(30);
+        @include josefinsansregular;
+    }
+    &:after {
+        content: "";
+        @include pos(ab, 100% null 0 0);
+        width: 50px;
+        height: 2px;
+        background-color: $themecolor;
+    }
+}
+
+.faq-section {
+    .faq-heading {
+        @include padding-bottom(20);
+        @include pos(rel, null);
+        @include border-bottom(2, solid, #e0e0e0);
+        h3 {
+            @include fontsize(38);
+            text-transform: $uppercase;
+            @include josefinsansbold;
+            // @include padding-bottom(20);
+            span {
+                @include fontsize(30);
+                @include josefinsansregular;
+            }
+        }
+        &:after {
+            content: "";
+            @include pos(ab, 100% null 0 0);
+            width: 50px;
+            height: 2px;
+            background-color: $themecolor;
+        }
+    }
+    .panel {
+        background-color: tansparent;
+        border: 0;
+        @include box-shadow-none;
+        @include padding (35 0);
+        @include border-bottom(2, solid, #e0e0e0);
+        .panel-heading {
+            border: 0;
+            @include padding (0);
+            @include transition(all 0.3s);
+            .panel-title {
+                @include pos(rel, null);
+                & > a {
+                    @include padding-right(100);
+                    display: $block;
+                    & > span {
+                        @include josefinsansbold;
+                        text-transform: $uppercase;
+                        @include fontsize(20);
+                        text-transform: $uppercase;
+                        @include margin-bottom(10);
+                        display: $block;
+                        color: $themecolor;
+                    }
+                }
+            }
+            .faq-arrow-ico {
+                @include pos(ab, 50% 0 null null);
+                @include fontsize(35);
+                cursor: pointer;
+                @include translatepos(0, -50%);
+            }
+        }
+        .panel-body {
+            border: 0 !important;
+            @include padding(20 0 20 0);
+        }
+    }
+}

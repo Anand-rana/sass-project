@@ -1,0 +1,10 @@
+@include media("<=992px") {
+    .notification-section {
+        @include padding(50 0);
+
+
+        .notification-list {
+            @include margin-top(50);
+        }
+    }
+}

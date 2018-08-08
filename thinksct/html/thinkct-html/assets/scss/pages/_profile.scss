@@ -1,0 +1,86 @@
+.profile-section {
+    @include padding(30 0 0);
+
+    background-color: #f4f4f6;
+
+    .page-title {
+        h2 {
+            @include fontsize(24);
+
+            display: inline-block;
+
+            @include padding-bottom(20);
+
+            @include margin-bottom(0);
+
+            border-bottom: 1px solid $black;
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .from-box {
+        max-width: 560px;
+        margin: 0 auto;
+
+        @include media("<=767px") {
+            @include padding(0 10);
+        }
+
+
+        ._img-block {
+            text-align: center;
+
+            @include padding-top(30);
+
+            @include padding-bottom(60);
+
+            .ch-upload-button {
+                width: 135px;
+                height: 135px;
+                margin: 0 auto;
+
+                span {
+                    display: block;
+                }
+            }
+
+            h5 {
+                font-weight: 700;
+
+                @include margin-bottom(25);
+            }
+
+            img {
+                width: 135px;
+                height: 135px;
+                object-fit: cover;
+                margin: 0 auto;
+            }
+        }
+
+        ._fieldGroup {
+            .ch-radio {
+                font-weight: 400;
+            }
+
+            .btn-field {
+                @include padding-top(60);
+
+                @include media("<=767px") {
+                    @include padding-top(30);
+                }
+            }
+        }
+    }
+
+    .field-group {
+        background-color: $white;
+
+        @include calc(min-height, "100vh - 415px");
+
+        @include padding(50 0);
+    }
+}

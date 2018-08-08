@@ -1,0 +1,75 @@
+
+<div class="page-view-section" data-ng-controller="dtlCtrl">
+  <div class="sp-btn visible-sm visible-xs" ng-click="sidenav()"><span> <i class="icon-arrow-right"></i></span></div>
+  <div class="page-view-section-dtl">
+    <div class="container">
+      <div class="heading-block">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="breadcrumb-list">
+              <ul>
+                <li><span>My Pages </span></li>
+                <li><span>Business Profile </span></li>
+                <li><span class="active">Expired</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="p-adv-opt"><a class="button button-font-medium-txt button-rounded margin-left-1x margin-right-1x" data-ui-sref="create-advert">Create Advert</a><a class="button button-green button-font-medium-txt button-rounded margin-left-1x" data-ui-sref="page-adverts-active"> Active</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="__inner-cotainer">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="page-dtl-sidebar">
+              <div class="close-btn visible-sm visible-xs" ng-click="closenav()"><span><i class="icon-close-o"></i></span></div>
+              <div class="page-name-info">
+                <div class="page-img">
+                  <figure><img src="images/dummy-page.jpg" alt="img"/></figure>
+                  <div class="page-img__overlay">
+                    <div class="fileUpload">
+                      <input class="upload" type="file"/><span><i class="icon-camera"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-name">
+                  <h4>Merchant Store</h4>
+                </div>
+                <div class="page-location"><span><i class="icon-marker"></i></span> New York ,USA</div>
+              </div>
+              <div class="page-nav-list">
+                <ul>
+                  <li><a data-ui-sref="business-page" data-ui-sref-active="active">Home</a><a class="button button-rounded button-font-base-small button-rounded button-font-medium-txt button-height-small" data-ui-sref="create-business-post">Create Post</a></li>
+                  <li><a data-ui-sref="page-about" data-ui-sref-active="active">About</a></li>
+                  <li><a data-ui-sref="page-followers" data-ui-sref-active="active">Followers (221)</a></li>
+                  <li><a data-ui-sref="page-likes" data-ui-sref-active="active">Page Likes (88)</a></li>
+                  <li><a data-ui-sref="page-route-mention" data-ui-sref-active="active">LR Mentions (34)</a></li>
+                  <li><a data-ui-sref="page-events" data-ui-sref-active="active">Events (66)</a></li>
+                  <li><a data-ui-sref="page-reviews" data-ui-sref-active="active">Reviews (35)</a></li>
+                  <li><a data-ui-sref="page-adverts" data-ui-sref-active="active">My Adverts (3)</a><a class="button button-green button-rounded button-font-base-small button-rounded button-font-medium-txt button-height-small" data-ui-sref="create-advert">Create Advert</a></li>
+                </ul>
+                <div class="margin-top-4x">
+                  <button class="button button-green button-rounded button-font-medium-txt button-border-thin button-width-large">Edit Profile</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="page-adv-list"><span class="total-adv">Total Adverts : 3</span>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="adv-box"><a data-ui-sref="page-adverts-dtl">
+                      <figure><img src="images/adv-1.jpg" alt="img"/></figure>
+                      <figcaption>
+                        <h3 class="title">Advert Title</h3><span class="adv-location"> <i class="icon-marker-o"></i>Location</span>
+                      </figcaption></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

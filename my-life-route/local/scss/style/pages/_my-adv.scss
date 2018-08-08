@@ -1,0 +1,260 @@
+.adv-section {
+    @include padding(100 0 50);
+    .heading-block {
+        @include border-bottom(1, solid, lighten($theme, 30%));
+        @include padding-bottom(10);
+
+        h3 {
+            @include fontsize(30);
+            font-weight: 400;
+            color: $theme;
+        }
+
+        .breadcrumb-list {
+            @include margin-top(10);
+            ul {
+                li {
+                    display: $ib;
+
+                    span {
+                        @include fontsize(30);
+                        display:$b;
+                        text-transform: capitalize;
+                        font-weight: 400;
+                        color: $theme;
+                        @include padding(0 15);
+                        @include pos(rel, null);
+                        &:after {
+                            @include pos(ab, -2px -10px 0px null);
+                            content: ">";
+                        }
+
+                        &.active {
+                            color: lighten($theme, 20%);
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+
+
+                    &:first-child {
+                        span {
+                            @include padding-left(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .filter-side-block {
+        @include margin-top(70);
+    }
+
+
+    .filter-ap-msg {
+        text-align: center;
+        @include margin-bottom(20);
+
+        h4 {
+            color: $theme;
+            font-weight: 300;
+            @include fontsize(17);
+        }
+    }
+    .all-adv-list__container {
+        @include margin-top(70);
+
+        &.ap-filter {
+            @include margin-top(40);
+        }
+    }
+    .page-adv-list {
+
+        .total-adv {
+            @include fontsize(14);
+            font-weight: 300;
+            @include padding-bottom(10);
+            display: $b;
+        }
+        .adv-box {
+            background-color: $white;
+            @include border-round(10);
+            @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, .13));
+            @include margin-bottom(30);
+
+            figure {
+                @include margin(0);
+                @include fluid-ratio(4 3, img);
+                overflow: hidden;
+                @include border-round(10 10 0 0);
+                img {
+                    max-width: 100%;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            figcaption {
+                @include padding(15 10);
+
+                h3.title {
+                    @include fontsize(16);
+                    font-weight: 500;
+                    color: $color-text-03;
+                    @include padding-bottom(20);
+                    @include border-bottom(1, solid, #ebebeb);
+                }
+                .adv-location {
+                    display: $b;
+                    @include padding-top(10);
+                    @include fontsize(14);
+                    font-weight: 300;
+                    color: $color-text-03;
+                    [class*="icon-"] {
+                        @include padding-right(5);
+                        display: $ib;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .adv-dtl-box {
+
+        @include border(1, solid, #dfdfdf);
+        @include margin-top(50);
+        @include pos(rel, null);
+        .__inner-container {
+            @include padding(25);
+
+            .title-block {
+                h3.title {
+                    text-align: center;
+                    @include fontsize(28);
+                    font-weight: 400;
+                    color: $color-text-02;
+                }
+            }
+
+
+            .slider-block {
+                .adv-slider-block {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    @include pos(rel, null);
+
+                    .sliderNav {
+                        .owl-prev {
+                            @include pos(ab, 50% null null 0);
+                            @include fontsize(20);
+                            @include translatepos(0, -50%);
+                            cursor: pointer;
+                        }
+                        .owl-next {
+                            @include pos(ab, 50% 0 null null);
+                            @include fontsize(20);
+                            @include translatepos(0, -50%);
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .adv-slider {
+                    max-width: 600px;
+                    margin: 20px auto 0;
+
+                    figure {
+                        @include margin(0);
+                        img {
+                            @include border-round(10);
+                        }
+
+                        figcaption {
+                            text-align: center;
+
+                            @include padding(20 0);
+
+                            h4 {
+                                @include fontsize(20);
+                                font-weight: 400;
+                                color: $color-text-02;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .adv-dtl-info {
+                color: $color-text-02;
+                &>ul {
+                    &>li {
+                        @include padding-bottom(30);
+                        @include fontsize(18);
+                        font-weight: 400;
+
+                        .__label {
+                            font-weight: 300;
+                            @include padding-right(10);
+                        }
+                    }
+                }
+
+                .social-info {
+                    text-align: right;
+
+                    &>li {
+                        display: $ib;
+                        font-weight: 300;
+                        @include padding(0 40);
+
+                        .ico {
+                            @include fontsize(25);
+                            vertical-align: middle;
+                            display: $ib;
+                            @include padding-right(10);
+                        }
+                        .t-liked {
+                            color: #1e83b1;
+                        }
+                        .t-views {
+                            color: #e22126;
+                        }
+                    }
+                }
+            }
+
+            .adv-des-txt {
+                @include padding(30 0);
+                color: $color-text-02;
+                @include border-top(1, solid, #c8c8c8);
+
+                p {
+                    line-height: 35px;
+                }
+            }
+            .adv-keyword {
+                @include padding(30 0);
+                @include border-top(1, solid, #e6e6e6);
+                color: $color-text-02;
+                @include fontsize(18);
+                font-weight: 500;
+                .__label {
+                    font-weight: 300;
+                }
+            }
+            .adv-website {
+                @include padding(30 0);
+                @include border-top(1, solid, #e6e6e6);
+                color: $color-text-02;
+                @include fontsize(18);
+                font-weight: 500;
+                .__label {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

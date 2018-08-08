@@ -1,0 +1,69 @@
+.create-liferoute-section
+	.container
+		.step-form-block
+			h2.title Create or Request LIFEROUTE
+			.step-form-container
+				.step-form-heading
+					h3.title Essential Details
+					
+				.step-form-data
+					.step-form-field-box
+						.step-form-nav
+							ul
+								li
+									.step-nav-box.step-one.active
+										.step-nav-txt
+											span.label-step Step
+											span.step-no 1
+								li
+									.step-nav-box.step-two
+										.step-nav-txt
+											span.label-step Step
+											span.step-no 2
+						
+						.field-group
+							.c-field.c-outline.c-1.c-lh.c-shadow
+								.c-line.c-outline.c-1.c-1
+									label Title
+								input(type="text", placeholder="e.g. From Accountant to Architect in 10 Steps" ng-focus="showSuggestions = true" ng-blur="showSuggestions = false").c-field-control
+								div(class="help-txt" ng-show="showSuggestions")
+									.margin-bottom-3x
+										p 
+											span CREATE Liferoute : 
+											|Fill in TITLE and leave START and END POINT blank. Continue to fill in All remaining fields.
+						
+									p 
+										span REQUEST Liferoute : 
+										|Fill in TITLE , START and END POINT and then continue to fill  All remaining fields.
+							
+							.c-field.c-outline.c-1.c-lh.c-shadow
+								.c-line.c-1
+									label Start Point
+								input(type="text", placeholder="I am Currently...").c-field-control
+							.c-field.c-outline.c-1.c-lh.c-shadow
+								.c-line.c-1
+									label End Point
+								input(type="text", placeholder="I Want To Be...").c-field-control
+							.c-field.c-outline.c-1.c-lh.c-shadow
+								.c-line.c-1
+									label Location
+								input(type="text", placeholder="Specify Location (City, Country etc)").c-field-control
+							.c-field.c-outline.c-1.c-lh.c-shadow
+								.c-line.c-1
+									label Keywords
+								  
+								tags-input(ng-model="tags" placeholder="Add Keywords (e.g. Business, IT, Health, Sport etc)")
+							.c-field.c-outline.c-1.c-lh.c-shadow
+								.c-line.c-1
+									label Specify Business, Brands or Companies Used
+										
+								  
+								tags-input(ng-model="ltags" placeholder="Add Tags (e.g. Amazon, Bloomberg, Nike etc)")
+							.c-field.c-outline.c-1.c-shadow
+								.c-line.c-1
+									label Description
+								textarea(rows="8" cols="8" placeholder="Enter Some Text..").c-field-control
+							
+							.btn-field.text-center
+								button.button.button-green.button-font-medium.button-uppercase.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-left-1x.margin-right-1x.margin-bottom-2x SAVE AS DRAFT
+								button.button.button-uppercase.button-font-medium.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-right-1x.margin-left-1x(ng-click="$state.go('create-liferoute-step-2')") NEXT

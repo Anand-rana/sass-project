@@ -1,0 +1,58 @@
+.about-section.s-ov
+		.container
+			.main-heading
+				h2.title About us
+		.about-content-block
+			.about-content-img__block
+				.container
+					img(src="images/about.jpg" alt="img" class="img-responsive")
+			.about-content-txt__block
+				.container
+					.main-heading
+						h2.title Who are we?
+					p Luctus et ultrices posuere cubilia Curae. Donec nibh sapien, molestie quis elementum et, dignissim non atino ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sed mauris lorem. Sed sit amet mauris eu purus consectetur blandit sed et lacus. Cras tellus enim, sagittis aer varius faucibus, molestie in dolor. Mauris mollis adipiscing elit, in vulputate est volutpat vitae.
+					p Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl. Nullam vel tellus massa. Vivamus porttitor rutrum libero ac mattis. Aliquam congue malesuada mauris vitae dignissim. Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis elit varius rhoncus. Etiam ut tellus at ligula eleifend malesuada. Aenean et metus sapien.
+					p Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl. Nullam vel tellus massa. Vivamus porttitor rutrum libero ac mattis. Aliquam congue malesuada mauris vitae dignissim. Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis elit varius rhoncus. 
+			.about-content-team__block
+				.container
+					.main-heading
+						h2.title OUR TEAM
+					.team-list(data-ng-controller="teamCtrl")
+						ng-owl-carousel(class="owl-theme team-slider" owl-items="items" owl-properties="properties" owl-ready="ready($api)")
+							.item(data-ng-repeat="item in items")
+								.team-box
+									figure
+										img(src="images/team.jpg" alt="img").img-responsive
+										ul
+											li
+												a(href="#")
+													span.btn_inner
+														i.icon-facebook
+													span.roll_over
+														i.icon-facebook
+											li
+												a(href="#")
+													span.btn_inner
+														i.icon-skype
+													span.roll_over
+														i.icon-skype
+											li
+												a(href="#")
+													span.btn_inner
+														i.icon-twitter-logo
+													span.roll_over
+														i.icon-twitter-logo
+					
+			.about-content-company__block
+				.container
+					.row
+						.col-md-2.hidden-sm.hidden-xs
+							.quote-icon
+								i.icon-quote
+						.col-md-7.col-sm-7
+							.ab-company-txt
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis eros, luctus sit amet hendrerit fringilla, convallis vitae est.
+								span.author - John Doe, CEO Company
+						.col-md-3.col-sm-5.hidden-xs
+							.ab-ceo-img
+								img(src="images/profile.jpg" alt="img").img-responsive

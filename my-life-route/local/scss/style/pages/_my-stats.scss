@@ -1,0 +1,438 @@
+.my-stats-section {
+    @include padding(80 0 50);
+    .heading-block {
+        @include padding-bottom(10);
+        @include border-bottom(1, solid, lighten($theme, 30%));
+        .breadcrumb-list {
+            @include margin-top(10);
+            ul {
+                li {
+                    display: $ib;
+                    span {
+                        @include fontsize(30);
+                        text-transform: capitalize;
+                        display: $b;
+                        font-weight: 400;
+                        color: $theme;
+                        @include padding(0 15);
+                        @include pos(rel, null);
+                        &:after {
+                            @include pos(ab, -2px -10px 0px null);
+                            content: ">";
+                        }
+                        &.active {
+                            color: lighten($theme, 20%);
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                    &:first-child {
+                        span {
+                            @include padding-left(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .__inner-container {
+        @include margin-top(70);
+        &>.row {
+            @include margin-left(-20);
+            @include margin-right(-20);
+            &>[class^="col-"] {
+                @include padding-left(20);
+                @include padding-right(20);
+            }
+        }
+        .stats-nav__list {
+            &>ul {
+                &>li {
+                    @include padding-bottom(20);
+                    @include pos(rel, null);
+                    &>a {
+                        display: $b;
+                        font-weight: 300;
+                        @include fontsize(18);
+                        color: $color-text-02;
+                        @include border-bottom(1, solid, #dbdbdb);
+                        @include padding-bottom(20);
+                        vertical-align: middle;
+                        -webkit-transform: perspective(1px) translateZ(0);
+                        transform: perspective(1px) translateZ(0);
+                        box-shadow: 0 0 1px transparent;
+                        position: relative;
+                        overflow: hidden;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            z-index: -1;
+                            left: 0;
+                            right: 100%;
+                            bottom: 0;
+                            background: $theme;
+                            height: 2px;
+                            -webkit-transition-property: right;
+                            transition-property: right;
+                            -webkit-transition-duration: 0.3s;
+                            transition-duration: 0.3s;
+                            -webkit-transition-timing-function: ease-out;
+                            transition-timing-function: ease-out;
+                        }
+                        &:hover:before,
+                        &:focus:before,
+                        &:active:before {
+                            right: 0;
+                        }
+                        &:hover,
+                        &:focus {
+                            color: $theme;
+                        }
+                        &.active {
+                            color: $theme;
+                            &:before {
+                                right: 0;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        &>a {
+                            border: 0;
+                            &:before {
+                                display: none;
+                            }
+                        }
+                    }
+                    &:nth-child(1) {
+                        &>a {
+                            &:before {
+                                background-color: $color-list-01;
+                            }
+                            &:hover,
+                            &:focus {
+                                color: $color-text-08;
+                            }
+                            &.active {
+                                color: $color-text-08;
+                            }
+                        }
+                    } // &:nth-child(2) {
+                    //     &>a {
+                    //         &:before {
+                    //             background-color: $color-list-02;
+                    //         }
+                    //         &:hover,
+                    //         &:focus {
+                    //             color: $color-text-10;
+                    //         }
+                    //         &.active {
+                    //             color: $color-text-10;
+                    //         }
+                    //     }
+                    // }
+                    // &:nth-child(3) {
+                    //     &>a {
+                    //         &:before {
+                    //             background-color: $color-list-03;
+                    //         }
+                    //         &:hover,
+                    //         &:focus {
+                    //             color: $color-text-09;
+                    //         }
+                    //     }
+                    // }
+                }
+            }
+        }
+        .m-stats__data-container {
+            .m-stats-route-box {
+                @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, .17));
+                @include border(1, solid, #d7d7d7);
+                background-color: $white;
+                @include margin-bottom(20);
+                @include padding(50);
+                color: $color-text-02;
+                @include pos(rel, null);
+                h3 {
+                    @include fontsize(28);
+                    color: $theme;
+                    font-weight: 500;
+                }
+                .m-stats-route__result {
+                    @include margin-top(40);
+                }
+                .t-result-list {
+                    &>li {
+                        @include padding-bottom(20);
+                        @include padding-left(30);
+                        @include fontsize(18);
+                        font-weight: 300;
+                        @include pos(rel, null);
+                        span.__t-no {
+                            @include fontsize(28);
+                            font-weight: 500;
+                            color: $theme;
+                            @include padding-right(10);
+                        }
+                        &.list-dot {
+                            &:before {
+                                width: 15px;
+                                height: 15px;
+                                @include circle;
+                                background-color: $theme;
+                                @include pos(ab, 15px null null 0);
+                                content: "";
+                            }
+                            &.list-dot-g {
+                                &:before {
+                                    background-color: $color-list-01;
+                                }
+                            }
+                        }
+                    }
+                }
+                .t-activity-list {
+                    &>li {
+                        @include padding-bottom(15);
+                        @include padding-left(20);
+                        @include fontsize(16);
+                        font-weight: 300;
+                        @include pos(rel, null);
+                        span.__t-no {
+                            @include fontsize(18);
+                            font-weight: 500;
+                            color: $theme;
+                            @include padding-right(10);
+                        }
+                        &.list-dot {
+                            &:before {
+                                width: 12px;
+                                height: 12px;
+                                @include circle;
+                                background-color: $theme;
+                                @include pos(ab, 10px null null 0);
+                                content: "";
+                            }
+                            &.list-dot-g {
+                                &:before {
+                                    background-color: $color-list-01;
+                                }
+                            }
+                        }
+                    }
+                }
+                .m-help-ico {
+                    @include pos(ab, 20px 20px null null);
+                    cursor: pointer;
+                }
+            }
+            .m-stats__oth-info-container {
+                display: table;
+                width: 100%;
+                .m-stats__info-block {
+                    background-color: $white;
+                    @include border(1, solid, #d7d7d7);
+                    @include padding(50 20 40 50);
+                    @include box-shadow(0 5px rgba(0, 0, 0, .16));
+                    @include fontsize(20);
+                    font-weight: 500;
+                    color: $color-text-02;
+                    float: left;
+                    @include margin-right(20);
+                    min-width: 280px;
+                    h3 {
+                        @include fontsize(28);
+                        font-weight: 300;
+                    }
+                    h5 {
+                        @include fontsize(18);
+                        font-weight: 300;
+                    }
+                }
+            }
+            .m-stats-gender-info {
+                @include margin-top(40);
+            }
+            .m-stats__data-table {
+                @include margin-top(25);
+                .__t-count {
+                    @include fontsize(16);
+                    @include margin-top(10);
+                    display: $b;
+                }
+                .sort-field {
+                    text-align: right;
+                    .__label {
+                        display: $ib;
+                        @include fontsize(15);
+                        font-weight: 300;
+                        @include margin-right(15);
+                        color: $color-text-02;
+                    }
+                    .select-control {
+                        max-width: 250px;
+                        @include border(1, solid, #c0c0c0);
+                        display: $ib;
+                        width: 100%;
+                    }
+                    .sort-field-control {
+                        @include padding(10 20);
+                        border: 0;
+                        width: 100%;
+                    }
+                }
+                .__inner-data {
+                    @include margin-top(20);
+                    @include box-shadow(0 2px 7px rgba(0, 0, 0, .22));
+                    table {
+                        width: 100%;
+                        thead {
+                            th {
+                                @include fontsize(18);
+                                font-weight: 400;
+                                color: $white;
+                                @include padding(15 5);
+                                text-align: center;
+                                @include border-top(1, solid, #3ab54a);
+                                @include border-left(1, solid, #cccccc);
+                                @include border-right(1, solid, #cccccc);
+                                @include border-bottom(1, solid, #3ab54a);
+                                background-color: #3ab54a;
+                            }
+                        }
+                        tbody {
+                            td {
+                                color: $color-text-02;
+                                @include padding(15 5);
+                                @include fontsize(16);
+                                font-weight: 500;
+                                text-align: center;
+                                @include border(1, solid, #cccccc);
+                            }
+                        }
+                    }
+                }
+            }
+            .m-stats__life-routes {
+                .m-stats__oth-info-container {
+                    .m-stats__info-block {
+                        h3 {
+                            color: $color-text-08;
+                        }
+                    }
+                }
+            }
+            .m-stats__connection {
+                .m-stats__oth-info-container {
+                    .m-stats__info-block {
+                        h3 {
+                            color: $theme;
+                        }
+                    }
+                }
+            }
+            .m-stats__profile {
+                .m-stats__oth-info-container {
+                    .m-stats__info-block {
+                        h3 {
+                            color: $theme;
+                        }
+                    }
+                }
+            }
+            .m-stats__news {
+                .m-stats__main-info-block {
+                    background-color: $white;
+                    @include margin-bottom(25);
+                    @include border(1, solid, #d7d7d7);
+                    @include padding(50 20 40 50);
+                    @include box-shadow(0 5px rgba(0, 0, 0, .16));
+                    @include fontsize(20);
+                    font-weight: 500;
+                    color: $color-text-02;
+                    float: left;
+                    @include margin-right(20);
+                    min-width: 290px;
+                    h3 {
+                        @include fontsize(30);
+                        font-weight: 300;
+                        color: $color-text-10;
+                    }
+                    h5 {
+                        @include fontsize(18);
+                        font-weight: 300;
+                    }
+                }
+                .m-stats__oth-info-container {
+                    .m-stats__info-block {
+                        h3 {
+                            color: $color-text-10;
+                        }
+                    }
+                }
+                .m-stats__data-table {
+                    .__inner-data {
+                        table {
+                            thead {
+                                th {
+                                    background-color: $color-list-02;
+                                    @include border-top(1, solid, $color-list-02);
+                                    @include border-left(1, solid, lighten($color-list-02, 10%));
+                                    @include border-right(1, solid, lighten($color-list-02, 10%));
+                                    @include border-bottom(1, solid, $color-list-02);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .m-stats__events {
+                .m-stats__main-info-block {
+                    background-color: $white;
+                    @include margin-bottom(25);
+                    @include border(1, solid, #d7d7d7);
+                    @include padding(50 20 40 50);
+                    @include box-shadow(0 5px rgba(0, 0, 0, .16));
+                    @include fontsize(20);
+                    font-weight: 500;
+                    color: $color-text-02;
+                    float: left;
+                    @include margin-right(20);
+                    min-width: 290px;
+                    h3 {
+                        @include fontsize(30);
+                        font-weight: 300;
+                        color: $color-text-09;
+                    }
+                    h5 {
+                        @include fontsize(18);
+                        font-weight: 300;
+                    }
+                }
+                .m-stats__oth-info-container {
+                    .m-stats__info-block {
+                        h3 {
+                            color: $color-text-09;
+                        }
+                    }
+                }
+                .m-stats__data-table {
+                    .__inner-data {
+                        table {
+                            thead {
+                                th {
+                                    background-color: $color-list-03;
+                                    @include border-top(1, solid, $color-list-03);
+                                    @include border-left(1, solid, lighten($color-list-03, 10%));
+                                    @include border-right(1, solid, lighten($color-list-03, 10%));
+                                    @include border-bottom(1, solid, $color-list-03);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

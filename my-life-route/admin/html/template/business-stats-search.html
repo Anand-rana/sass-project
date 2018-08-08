@@ -1,0 +1,116 @@
+
+<div class="search-modal-section">
+  <div class="modal-header">
+    <h2 class="title">Search</h2>
+    <button class="close-ico" id="close" ng-click="cancel()"><i class="icon-close-o"></i></button>
+  </div>
+  <div class="modal-body">
+    <div class="business-search-modal">
+      <div class="field-group" ng-nicescroll="ng-nicescroll" nice-option="{cursorcolor: '#2abeeb',cursorwidth:'6px', horizrailenabled:false,background:'#c4c4c4',cursorborder:'1px solid #c4c4c4',cursorborderradius:'5px',cursorfixedheight:70,touchbehavior:true,railoffset:{left:30},autohidemode:false}" nice-scroll-top-end="topEndComplete()" nice-scroll-end="endScroll()">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Business Name</label>
+              <input class="c-field-control" type="text" placeholder="Enter Name.."/>
+            </div>
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Creator Email</label>
+              <input class="c-field-control" type="text" placeholder="Enter Email.."/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Creator Full Name</label>
+              <input class="c-field-control" type="text" placeholder="Enter Name.."/>
+            </div>
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Keywords</label>
+              <tags-input ng-model="tags" placeholder="Add Keywords"></tags-input>
+            </div>
+          </div>
+        </div>
+        <div class="c-field c-b-sm">
+          <div class="check-opt-field">
+            <label> Profile Type</label>
+            <div class="list-opt">
+              <ul>
+                <li>
+                  <label class="label-checkbox-o label-checkbox-o-lg">
+                    <input type="checkbox"/><span class="check-mark"></span><span class="label-name">All</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="label-checkbox-o label-checkbox-o-lg">
+                    <input type="checkbox"/><span class="check-mark"></span><span class="label-name">Local Business/Place</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="label-checkbox-o label-checkbox-o-lg">
+                    <input type="checkbox"/><span class="check-mark"></span><span class="label-name">Company/Institution</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="label-checkbox-o label-checkbox-o-lg">
+                    <input type="checkbox"/><span class="check-mark"></span><span class="label-name">Brand/Product</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Creation Date</label>
+              <div class="c-has-icon">
+                <input class="c-field-control" type="text" placeholder="Select"/>
+                <div class="icon-addon hidden-xs"><i class="icon-calender-o"></i></div>
+              </div>
+            </div>
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Status</label>
+              <div class="select-control">
+                <select class="c-field-control">
+                  <option>Select</option>
+                </select>
+              </div>
+            </div>
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Minimum Comments</label>
+              <input class="c-field-control" type="text" placeholder="Enter.."/>
+            </div>
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Minimum Video Links</label>
+              <input class="c-field-control" type="text" placeholder="Enter.."/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Last Updated</label>
+              <div class="c-has-icon">
+                <input class="c-field-control" type="text" placeholder="Select"/>
+                <div class="icon-addon hidden-xs"><i class="icon-calender-o"></i></div>
+              </div>
+            </div>
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Minimum Likes</label>
+              <input class="c-field-control" type="text" placeholder="Enter.."/>
+            </div>
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Minimum Shares</label>
+              <input class="c-field-control" type="text" placeholder="Enter.."/>
+            </div>
+            <div class="c-field c-b-sm c-shadow c-lh">
+              <label>Minimum Images</label>
+              <input class="c-field-control" type="text" placeholder="Enter.."/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-field">
+        <button class="button button-shadow button-width-large button-green button-height-large button-font-bold button-rounded button-font-medium margin-right-1x">Search</button>
+        <button class="button button-shadow button-width-large button-danger button-height-large button-font-bold button-rounded button-font-medium margin-left-1x">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>

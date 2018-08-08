@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel" ng-init="faq_list()">
+        <div class="panel-heading">
+          <a  data-ui-sref="main.addFaq" class="btn btn-success">ADD <i class="fa fa-plus"></i></a>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                  <thead>
+                    <th>Question</th>
+                    <th>Action</th>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="x in page_data">
+                      <td>{{x.question}}</td>
+                      <td>
+                        <a data-ui-sref="main.edit_faq({faq_id: x._id})" class="btn btn-primary">Edit <i class="fa fa-edit"></i></a>
+                      </td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

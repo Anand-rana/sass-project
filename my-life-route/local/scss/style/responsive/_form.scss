@@ -1,0 +1,101 @@
+@include media("<=992px") {
+    .create-liferoute-section {
+        .step-form-block {
+            .step-form-container {
+                .step-form-heading {
+                    .sub-title {
+                        @include fontsize(20);
+                    }
+                }
+            }
+        }
+
+        .create-liferoute__step-2 {
+            .step-form-block {
+                .step-form-container {
+                    .step-form-field-box {
+                        @include padding(0 10);
+                    }
+                }
+            }
+        }
+
+        .c-search-field {
+            @include margin-top(30);
+        }
+
+        .btn-field {
+            @include margin-top(50);
+        }
+    }
+}
+
+@include media("<=767px") {
+    .step-form-block {
+        .step-form-container {
+            .field-group {
+                @include margin-top(50);
+            }
+
+            .step-form-field-box {
+                @include padding(0 10);
+            }
+        }
+    }
+
+    .signup-form-section {
+        .step-form-container {
+            .step-form-heading {
+                @include padding(30 10 25);
+                h3.title {
+                    @include fontsize(25);
+                }
+            }
+        }
+    }
+
+    .create-news-section {
+        .step-form-block {
+            .step-form-container {
+                .field-group {
+                    @include margin-top(0);
+                }
+            }
+        }
+
+        .btn-field {
+            @include margin-top(30);
+        }
+    }
+
+
+    .create-event-section {
+        .step-form-block {
+            .step-form-container {
+                .field-group {
+                    @include margin-top(0);
+                }
+            }
+        }
+
+        .btn-field {
+            @include margin-top(30);
+        }
+    }
+
+    .c-add-img-video__block {
+        .c-add-img-video__top {
+            .help-txt {
+                display: $b;
+                @include margin-top(10);
+                @include margin-left(0);
+            }
+        }
+    }
+}
+
+@include media("<=479px") {
+    .step-form-block {
+        @include margin-top(-300);
+    }
+}

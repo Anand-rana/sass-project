@@ -1,0 +1,105 @@
+@include media(">=1000px") {
+    .nav-section {
+        &.stick-header {
+            @include pos(fix, 0 0 null 0);
+            z-index: 999;
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .entry-cotent {
+        p {
+            text-align: justify;
+        }
+    }
+    .modal {
+        text-align: center;
+        padding: 0 !important;
+    }
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+}
+
+@include media("<=1200px") {
+    .get--touch .get--txt {
+        & > ul {
+            & > li {
+                &:last-child {
+                    @include margin-left(50);
+                }
+            }
+        }
+    }
+}
+
+@include media("<=992px") {
+    .get--touch {
+        text-align: center;
+        &:before {
+            display: none;
+        }
+        &:after {
+            display: none;
+        }
+    }
+}
+
+@include media("<=767px") {
+    .signup-form-section {
+        .form-section-top {
+            .step-list {
+                float: left;
+            }
+        }
+    }
+    footer {
+        .inner-footer {
+            .f-div {
+                width: 100%;
+                @include margin-bottom(15);
+                text-align: center;
+            }
+        }
+    }
+    .nav-section {
+        nav {
+            .dropdown-menu.s-menu {
+                background-color: transparent;
+                width: 100%;
+                @include pos(rel, 0);
+                min-width: inherit;
+                @include margin-bottom(20);
+                @include padding-left(15);
+                &:before {
+                    display: none;
+                }
+                & > li {
+                    border: 0;
+                    &:hover {
+                        a {
+                            background-color: transparent;
+                            &.active {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .f-header {
+        display: none;
+      
+    }
+}

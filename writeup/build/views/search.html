@@ -1,0 +1,220 @@
+
+<div class="search-result-section s-ov">
+  <div class="container">
+    <div class="search-result-block">
+      <div class="search-result-top">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="main-heading">
+              <h2 class="title">Search results</h2>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="search-result-filter__block">
+              <div class="search-result-filter">
+                <ul>
+                  <li>
+                    <label class="label-checkbox">
+                      <input type="checkbox"/><span class="check-mark"> </span><span class="label-name">Company</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-checkbox">
+                      <input type="checkbox"/><span class="check-mark"> </span><span class="label-name">Tags</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-checkbox">
+                      <input type="checkbox"/><span class="check-mark"> </span><span class="label-name">User</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-box-container" data-ng-controller="SearchCtrl">
+                <div class="search-box-ico" ng-click="field();"><i class="icon-magnifier-o"></i></div>
+                <div class="search-field">
+                  <input class="search-field-control" type="text"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search-result-list">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="rv-box">
+              <div class="r-cell rv-user-cell">
+                <div class="rv-user-dtl">
+                  <div class="rv-user-pic"><img src="images/user.jpg" alt="img"/></div>
+                  <div class="rv-user-txt">
+                    <h3 class="title">John smith</h3>
+                    <p><span class="fw200">Praesent blandit turpis</span></p>
+                    <p>Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis </p><a class="more-link" ui-sref="read-review">Read more ....</a>
+                  </div>
+                  <div class="r-rating-container">
+                    <div class="rating-container"><span uib-rating="uib-rating" ng-model="4" state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" read-only="true" aria-labelledby="default-rating-1"></span></div>
+                    <div class="like-container"><span class="txt">390</span><span class="like-icon liked"><i class="icon-heart"></i></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="r-cell rv-img-box">
+                <figure><img src="images/rv.jpg" alt="jpg"/></figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rv-box">
+              <div class="r-cell rv-user-cell">
+                <div class="rv-user-dtl">
+                  <div class="rv-user-pic"><img src="images/c-logo-1.jpg" alt="img"/></div>
+                  <div class="rv-user-txt">
+                    <h3 class="title">ABCD COMPANY</h3>
+                    <p><span class="fw200 text-blue">staff member name</span></p>
+                    <p>Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis </p><a class="more-link" ui-sref="read-review">Read more ....</a>
+                  </div>
+                  <div class="r-rating-container">
+                    <div class="rating-container"><span uib-rating="uib-rating" ng-model="4" state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" read-only="true" aria-labelledby="default-rating-1"></span></div>
+                    <div class="like-container"><span class="txt">390</span><span class="like-icon liked"><i class="icon-heart"></i></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="r-cell rv-img-box">
+                <figure><img src="images/rv.jpg" alt="jpg"/></figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rv-box">
+              <div class="r-cell rv-user-cell">
+                <div class="rv-user-dtl">
+                  <div class="rv-user-pic"><img src="images/user.jpg" alt="img"/></div>
+                  <div class="rv-user-txt">
+                    <h3 class="title">John smith</h3>
+                    <p><span class="fw200">Praesent blandit turpis</span></p>
+                    <p>Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis </p><a class="more-link" ui-sref="read-review">Read more ....</a>
+                  </div>
+                  <div class="r-rating-container">
+                    <div class="rating-container"><span uib-rating="uib-rating" ng-model="4" state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" read-only="true" aria-labelledby="default-rating-1"></span></div>
+                    <div class="like-container"><span class="txt">390</span><span class="like-icon"><i class="icon-heart-o"></i></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="r-cell rv-img-box">
+                <figure><img src="images/rv.jpg" alt="jpg"/></figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rv-box">
+              <div class="r-cell rv-user-cell">
+                <div class="rv-user-dtl">
+                  <div class="rv-user-pic"><img src="images/user.jpg" alt="img"/></div>
+                  <div class="rv-user-txt">
+                    <h3 class="title">John smith</h3>
+                    <p><span class="fw200">Praesent blandit turpis</span></p>
+                    <p>Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis </p><a class="more-link" ui-sref="read-review">Read more ....</a>
+                  </div>
+                  <div class="r-rating-container">
+                    <div class="rating-container"><span uib-rating="uib-rating" ng-model="4" state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" read-only="true" aria-labelledby="default-rating-1"></span></div>
+                    <div class="like-container"><span class="txt">390</span><span class="like-icon"><i class="icon-heart-o"></i></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="r-cell rv-img-box">
+                <figure><img src="images/rv.jpg" alt="jpg"/></figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rv-box">
+              <div class="r-cell rv-user-cell">
+                <div class="rv-user-dtl">
+                  <div class="rv-user-pic"><img src="images/user.jpg" alt="img"/></div>
+                  <div class="rv-user-txt">
+                    <h3 class="title">John smith</h3>
+                    <p><span class="fw200">Praesent blandit turpis</span></p>
+                    <p>Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis </p><a class="more-link" ui-sref="read-review">Read more ....</a>
+                  </div>
+                  <div class="r-rating-container">
+                    <div class="rating-container"><span uib-rating="uib-rating" ng-model="4" state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" read-only="true" aria-labelledby="default-rating-1"></span></div>
+                    <div class="like-container"><span class="txt">390</span><span class="like-icon"><i class="icon-heart-o"></i></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="r-cell rv-img-box">
+                <figure><img src="images/rv.jpg" alt="jpg"/></figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rv-box">
+              <div class="r-cell rv-user-cell">
+                <div class="rv-user-dtl">
+                  <div class="rv-user-pic"><img src="images/user.jpg" alt="img"/></div>
+                  <div class="rv-user-txt">
+                    <h3 class="title">John smith</h3>
+                    <p><span class="fw200">Praesent blandit turpis</span></p>
+                    <p>Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis </p><a class="more-link" ui-sref="read-review">Read more ....</a>
+                  </div>
+                  <div class="r-rating-container">
+                    <div class="rating-container"><span uib-rating="uib-rating" ng-model="4" state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" read-only="true" aria-labelledby="default-rating-1"></span></div>
+                    <div class="like-container"><span class="txt">390</span><span class="like-icon"><i class="icon-heart-o"></i></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="r-cell rv-img-box">
+                <figure><img src="images/rv.jpg" alt="jpg"/></figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rv-box">
+              <div class="r-cell rv-user-cell">
+                <div class="rv-user-dtl">
+                  <div class="rv-user-pic"><img src="images/user.jpg" alt="img"/></div>
+                  <div class="rv-user-txt">
+                    <h3 class="title">John smith</h3>
+                    <p><span class="fw200">Praesent blandit turpis</span></p>
+                    <p>Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis </p><a class="more-link" ui-sref="read-review">Read more ....</a>
+                  </div>
+                  <div class="r-rating-container">
+                    <div class="rating-container"><span uib-rating="uib-rating" ng-model="4" state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" read-only="true" aria-labelledby="default-rating-1"></span></div>
+                    <div class="like-container"><span class="txt">390</span><span class="like-icon"><i class="icon-heart-o"></i></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="r-cell rv-img-box">
+                <figure><img src="images/rv.jpg" alt="jpg"/></figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rv-box">
+              <div class="r-cell rv-user-cell">
+                <div class="rv-user-dtl">
+                  <div class="rv-user-pic"><img src="images/user.jpg" alt="img"/></div>
+                  <div class="rv-user-txt">
+                    <h3 class="title">John smith</h3>
+                    <p><span class="fw200">Praesent blandit turpis</span></p>
+                    <p>Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam  a ongue  inar blandit turpis leo, ut iaculis arcu. Praesent blandit turpis </p><a class="more-link" ui-sref="read-review">Read more ....</a>
+                  </div>
+                  <div class="r-rating-container">
+                    <div class="rating-container"><span uib-rating="uib-rating" ng-model="4" state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" read-only="true" aria-labelledby="default-rating-1"></span></div>
+                    <div class="like-container"><span class="txt">390</span><span class="like-icon"><i class="icon-heart-o"></i></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="r-cell rv-img-box">
+                <figure><img src="images/rv.jpg" alt="jpg"/></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search-list-bottom">
+          <button class="button button-circle button-giant button-border button-dark button-font-open button-font-base">Load more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

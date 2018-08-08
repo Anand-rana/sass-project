@@ -1,0 +1,29 @@
+.rate-us__cotent {
+    .rate-us__box {
+        background-color: #f0f6f6;
+
+        @include border(1, solid, #828ea8);
+        @include padding(10);
+        @include margin-top(15);
+
+        label {
+            @include open-semibold;
+        }
+
+        .rate_us__fields {
+            @include padding(50 110);
+        }
+    }
+}
+
+.rating-container {
+    @include fontsize(22);
+
+    & .icon-star-o {
+        color: #d0d0d0;
+    }
+
+    & .icon-star {
+        color: $themecolor;
+    }
+}

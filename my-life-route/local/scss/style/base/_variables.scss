@@ -1,0 +1,71 @@
+// THEME AND COLOR
+$black: #000000 !default;
+$white: #ffffff !default;
+$theme:#2abeeb !default;
+$color-bg-01:#ececec !default;
+$color-bg-02:#fafafa !default;
+
+//txt-color
+$color-text-01:#767676 !default;
+$color-text-02:#272727 !default;
+$color-text-03:#353535 !default;
+$color-text-04:#2abeeb !default;
+$color-text-05:#444444 !default;
+$color-text-06:#777777 !default;
+$color-text-07:#8c8c8c !default;
+$color-text-08:#0db700 !default;
+$color-text-09:#ec7d10 !default;
+$color-text-10:#8800d6 !default;
+$color-text-11:#07beb9 !default;
+
+//listing-color
+$color-list-01:#0ca200 !default;
+$color-list-02:#8800d6 !default;
+$color-list-03:#ec7d10 !default;
+$color-list-04:#1f1f1f !default;
+$color-list-05:#07beb9 !default;
+$color-list-06:#b8ba07 !default;
+
+$color-list-b-01:#ecf6eb !default;
+$color-list-b-02:#f0e2f8 !default;
+$color-list-b-03:#fbf1e8 !default;
+$color-list-b-04:#707070 !default;
+$color-list-b-05:#e1f5f4 !default;
+
+//connetion-color
+$color-connetion-01:#6bc664;
+$color-connetion-02:#b664e4;
+$color-connetion-03:#63c3eb;
+$color-connetion-04:#f69850;
+$color-connetion-05:#79838f;
+$color-connetion-06:#eac14f;
+$color-connetion-07:#74ca99;
+$color-connetion-08:#d9ab30;
+
+// PATH & FONT NAME
+$font-family: "ralway" !default;
+$imgpath: "../images/" !default;
+$primary-font-path: "../fonts" !default;
+$url: $imgpath !default;
+
+// FONTS and TEXT STYLE
+$fontnormal: 16px !default;
+$fontsmall: 12px !default;
+$lineheight: 1.5 !default;
+$fontawesome: FontAwesome !default;
+$spacing: 5px !default;
+
+//TRANSITION EFFECT
+$trasition_all: all 0.3s ease-in-out 0s !default;
+
+// Display
+$ib: inline-block !default;
+$b: block !default;
+$t: table !default;
+$cell: table-cell !default;
+$none: none !default;
+
+// Margin
+$mauto: auto auto !default;
+$zeroauto: 0 auto !default;
+$auto: auto !default;

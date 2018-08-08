@@ -1,0 +1,85 @@
+
+<div class="create-liferoute-section">
+  <div class="container">
+    <div class="step-form-block">
+      <h2 class="title">Create or Request LIFEROUTE</h2>
+      <div class="step-form-container">
+        <div class="step-form-heading">
+          <h3 class="title">Essential Details</h3>
+        </div>
+        <div class="step-form-data">
+          <div class="step-form-field-box">
+            <div class="step-form-nav">
+              <ul>
+                <li>
+                  <div class="step-nav-box step-one active">
+                    <div class="step-nav-txt"><span class="label-step">Step</span><span class="step-no">1</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="step-nav-box step-two">
+                    <div class="step-nav-txt"><span class="label-step">Step</span><span class="step-no">2</span></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="field-group">
+              <div class="c-field c-outline c-1 c-lh c-shadow">
+                <div class="c-line c-outline c-1 c-1">
+                  <label>Title</label>
+                </div>
+                <input class="c-field-control" type="text" placeholder="e.g. From Accountant to Architect in 10 Steps" ng-focus="showSuggestions = true" ng-blur="showSuggestions = false"/>
+                <div class="help-txt" ng-show="showSuggestions">
+                  <div class="margin-bottom-3x">
+                    <p> <span>CREATE Liferoute : </span>Fill in TITLE and leave START and END POINT blank. Continue to fill in All remaining fields.</p>
+                  </div>
+                  <p> <span>REQUEST Liferoute : </span>Fill in TITLE , START and END POINT and then continue to fill  All remaining fields.</p>
+                </div>
+              </div>
+              <div class="c-field c-outline c-1 c-lh c-shadow">
+                <div class="c-line c-1">
+                  <label>Start Point</label>
+                </div>
+                <input class="c-field-control" type="text" placeholder="I am Currently..."/>
+              </div>
+              <div class="c-field c-outline c-1 c-lh c-shadow">
+                <div class="c-line c-1">
+                  <label>End Point</label>
+                </div>
+                <input class="c-field-control" type="text" placeholder="I Want To Be..."/>
+              </div>
+              <div class="c-field c-outline c-1 c-lh c-shadow">
+                <div class="c-line c-1">
+                  <label>Location</label>
+                </div>
+                <input class="c-field-control" type="text" placeholder="Specify Location (City, Country etc)"/>
+              </div>
+              <div class="c-field c-outline c-1 c-lh c-shadow">
+                <div class="c-line c-1">
+                  <label>Keywords</label>
+                </div>
+                <tags-input ng-model="tags" placeholder="Add Keywords (e.g. Business, IT, Health, Sport etc)"></tags-input>
+              </div>
+              <div class="c-field c-outline c-1 c-lh c-shadow">
+                <div class="c-line c-1">
+                  <label>Specify Business, Brands or Companies Used</label>
+                </div>
+                <tags-input ng-model="ltags" placeholder="Add Tags (e.g. Amazon, Bloomberg, Nike etc)"></tags-input>
+              </div>
+              <div class="c-field c-outline c-1 c-shadow">
+                <div class="c-line c-1">
+                  <label>Description</label>
+                </div>
+                <textarea class="c-field-control" rows="8" cols="8" placeholder="Enter Some Text.."></textarea>
+              </div>
+              <div class="btn-field text-center">
+                <button class="button button-green button-font-medium button-uppercase button-font-medium-txt button-height-extra-large button-rounded button-min-width-small margin-left-1x margin-right-1x margin-bottom-2x">SAVE AS DRAFT</button>
+                <button class="button button-uppercase button-font-medium button-font-medium-txt button-height-extra-large button-rounded button-min-width-small margin-right-1x margin-left-1x" ng-click="$state.go('create-liferoute-step-2')">NEXT</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

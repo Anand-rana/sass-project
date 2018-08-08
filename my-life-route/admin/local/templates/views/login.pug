@@ -1,0 +1,17 @@
+.dashboard-form-container
+	.dashboard-form__box
+		.logo
+			img(src="images/logo.jpg" alt="img").img-responsive
+		.login-form
+			.login-form__heading-block
+				h3 Sign In
+				h4 Enter your details below
+			.field-group
+				.c-field.c-b-sm.c-bg-color
+					input(type="text", placeholder="Enter Email/Username").c-field-control
+				.c-field.c-b-sm.c-bg-color
+					input(type="text", placeholder="Enter Password").c-field-control
+				.btn-field
+					button.button.button-block.button-font-medium.button-height-large.button-font-medium-txt.button-rounded(ng-click="$state.go('dashboard-home')") LOGIN
+				.margin-top-4x.text-center
+					a(data-ui-sref="forgot").forgot-link Forgot Password?

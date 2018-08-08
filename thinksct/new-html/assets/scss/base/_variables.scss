@@ -1,0 +1,38 @@
+// THEME AND COLOR
+$color_main0   : #00bbcc !default;
+$color_main01  : #faa61a !default;
+$color_main02  : #c4121a !default; //tint color
+$color_tint01  : #4982c3 !default;
+$color_tint02  : #293274 !default;
+$color_tint03  : #ffc20e !default;
+$color_tint04  : #d71920 !default; //shadow-color
+$color_sh01    : #00a2b7 !default;
+$color_sh02    : #150958 !default;
+$color_sh03    : #faa61a !default;
+$color_sh04    : #9e0b0f !default;
+$black         : #000000 !default;
+$white         : #ffffff !default;
+$theme         : #1d196b !default;
+$font-color    : #494949 !default;
+$heading-color : #2e2e2e !default; // PATH & FONT NAME
+$font          : "Nexa" !default;
+$imgpath       : "../images/" !default;
+$font-path     : "../fonts" !default;
+$icon-font-path: "../fonts/icons" !default;
+$url           : $imgpath !default;
+$fa-font-path  : "../node_modules/font-awesome/fonts" !default; // FONTS and TEXT STYLE
+$fontnormal    : 16px !default;
+$fontsmall     : 12px !default;
+$lineheight    : 1.5 !default;
+$fontawesome   : FontAwesome !default;
+$spacing       : 5px !default; // Display
+$in            : inline !default;
+$ib            : inline-block !default;
+$b             : block !default;
+$t             : table !default;
+$cell          : table-cell !default;
+$n             : none !default; //TRANSITION EFFECT
+$trasition_all : all 300ms ease-in-out !default; // Margin
+$a             : auto !default;
+$auto          : auto auto !default;
+$za            : 0 auto !default;

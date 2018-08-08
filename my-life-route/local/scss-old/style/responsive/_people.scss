@@ -1,0 +1,59 @@
+@include media("<=992px") {
+    .m-people-section {
+        @include padding(50 0);
+    }
+    .mp-connection-section {
+        @include padding(50 0);
+
+        .filter-side-block {
+            @include margin-top(50);
+            &.ap-filter {
+                @include margin-top(50);
+            }
+        }
+
+        .mp-connection__list {
+            @include margin-top(50);
+
+            &.ap-filter {
+                @include margin-top(50);
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+    .m-people-section {
+        @include padding(70 0 50);
+        .user-dtl-block {
+            @include pos(fix, 0 null 0 -1000px);
+            margin-top: 0px;
+            background-color: $black;
+            @include padding(10);
+            overflow: auto;
+
+            &.open {
+                left: 0;
+                z-index: 30;
+            }
+        }
+
+        .my-people-cotainer {
+            @include padding-left(0);
+        }
+        .sp-btn {
+            top: 0;
+        }
+
+        .mp-connection-box
+        {
+            min-height:inherit;
+        }
+    }
+
+    .mp-connection-section {
+        .heading-block {
+            text-align: center;
+        }
+    }
+}

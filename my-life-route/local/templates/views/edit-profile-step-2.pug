@@ -1,0 +1,151 @@
+.edit-profile-section
+	.container
+		.step-form-block
+			h2.title Edit Profile
+			.step-form-container(ng-controller="signupCtrl")
+				.step-form-heading
+					h3.title Essential Details
+				.step-form-data
+					.step-form-field-box
+						.step-form-nav
+							ul
+								li
+									.step-nav-box.step-one.active
+										.step-nav-txt
+											span.label-step Step
+											span.step-no 1
+								li
+									.step-nav-box.step-two.active
+										.step-nav-txt
+											span.label-step Step
+											span.step-no 2
+						.sign-up-step-2
+							.field-group
+								.upload-file-box
+									.user-pic
+										img(src="images/user.jpg" alt="img")
+									h4 Edit Image
+									.fileUpload
+										input(type="file" class="upload")
+										button.button.button-green.button-rounded.button-height-small.button-width-large Browse
+								.c-field.c-outline.c-shadow.c-b-lg
+									.c-line
+										label About Myself (Max. 1000 Characters)
+									textarea(rows="8" cols="8" placeholder="Enter Some Text...").c-field-control
+
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Interests (Max 15 Tags)
+									.c-help-note
+										p Note - These keywords will help your profile to be searched more effectively by other users on MyLifeRoute. You may also enter any interests and hobbies as well.  
+									tags-input(ng-model="tags" placeholder="Add Interests")
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Current Job/Occupation
+									.c-help-note
+										p  Note - These keywords will help your profile to be searched more effectively by other users on MyLifeRoute.  
+									input(type="text", placeholder="Enter..").c-field-control
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Education Level
+									.select-control
+										select.c-field-control
+											option(value='1') High School
+											option(value='2') College
+											option(value='3') Non Degree
+											option(value='4') Vocational
+											option(value='5') Undergraduate
+											option(value='6') Graduate
+											option(value='7') Masters
+											option(value='8') Doctoral
+								.c-field.c-outline.c-lh.c-shadow.c-b-sm
+									label Work Related Experience and Skills (Max 10 Entries)
+									input(type="text", placeholder="e.g. IT Management").c-field-control
+								.t-exp-field
+									
+										.t-cell
+											.c-field.c-outline.c-lh.c-shadow.c-b-sm
+												input(type="text", placeholder="8").c-field-control
+												span  Years
+										.t-cell
+											.c-field.c-outline.c-lh.c-shadow.c-b-sm
+												input(type="text", placeholder="1").c-field-control
+												span  Months
+								.t-exp-time-field
+									
+									.c-field.c-outline.c-lh.c-shadow.c-b-sm
+										.c-line
+											label From
+										.t-table
+											.t-cell
+												.select-control
+													select.c-field-control
+														option(value='1993') 1993
+											.t-cell
+												span.label-name To
+											.t-cell
+												.select-control
+													select.c-field-control
+														option(value='2001') 2001
+								.c-field.c-outline.c-lh.c-shadow.c-b-sm
+									.c-line
+										label Company Name
+									
+									input(type="text", placeholder="Enter Name..").c-field-control
+								.c-field.c-outline.c-lh.c-shadow.c-b-sm
+									.c-line
+										label Location
+									
+									input(type="text", placeholder="Enter Location..").c-field-control
+								.exp-field-group(data-ng-repeat="choice in choices|limitTo:5")
+									.c-field.c-outline.c-lh.c-shadow.c-b-sm
+										.c-line
+											label Experience 2 
+										input(type="text", placeholder="e.g. IT Management").c-field-control
+									.t-exp-field
+									
+										.t-cell
+											.c-field.c-outline.c-lh.c-shadow.c-b-sm
+												input(type="text", placeholder="8").c-field-control
+												span  Years
+										.t-cell
+											.c-field.c-outline.c-lh.c-shadow.c-b-sm
+												input(type="text", placeholder="1").c-field-control
+												span  Months
+									.t-exp-time-field
+									
+										.c-field.c-outline.c-lh.c-shadow.c-b-sm
+											.c-line
+												label From
+											.t-table
+												.t-cell
+													.select-control
+														select.c-field-control
+															option(value='1993') 1993
+												.t-cell
+													span.label-name To
+												.t-cell
+													.select-control
+														select.c-field-control
+															option(value='2001') 2001
+									.c-field.c-outline.c-lh.c-shadow.c-b-sm
+										.c-line
+											label Company Name
+										
+										input(type="text", placeholder="Enter Name..").c-field-control
+									.c-field.c-outline.c-lh.c-shadow.c-b-sm
+										.c-line
+											label Location
+										
+										input(type="text", placeholder="Enter Location..").c-field-control
+								.field-opt
+									span.add-icon(ng-click="addNewChoice()")
+										i.icon-plus
+									spa.delete-icon
+										i.icon-recycle
+								.btn-field.text-center
+									button.button.button-font-medium.button-uppercase.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-left-1x.margin-right-1x.margin-bottom-2x SAVE
+									button.button.button-danger.button-uppercase.button-font-medium.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-right-1x.margin-left-1x Cancel
+
+								
+

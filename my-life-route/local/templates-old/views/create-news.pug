@@ -1,0 +1,209 @@
+.create-news-section
+	.container
+		.step-form-block
+			h2.title Create NEWS
+			.step-form-container
+				.step-form-heading
+					h3.title Essential Details
+					
+				.step-form-data
+					.step-form-field-box
+						.field-group
+							.c-field.c-outline.c-2.c-lh.c-shadow
+									.c-line.c-2
+										label Title
+									input(type="text", placeholder="e.g. From Accountant to Architect in 10 Steps").c-field-control
+							.row.row-10
+								.col-md-6
+									.c-field.c-outline.c-2.c-lh.c-shadow
+										.c-line.c-2
+											label Start Date
+										.c-has-icon
+											input(type="text", placeholder="DD/MM/YYYY").c-field-control
+											.icon-addon.hidden-xs
+												i.icon-calendar
+								.col-md-6
+									.c-field.c-outline.c-2.c-lh.c-shadow
+										.c-line.c-2
+											label End Date
+										.c-has-icon
+											input(type="text", placeholder="DD/MM/YYYY").c-field-control
+											.icon-addon.hidden-xs
+												i.icon-calendar
+
+							.row.row-10
+								.col-md-6
+									.c-field.c-outline.c-2.c-lh.c-shadow
+										.c-line.c-2
+											label Start Time
+										.c-has-icon
+											input(type="text", placeholder="Time").c-field-control
+											.icon-addon.hidden-xs
+												i.icon-watch
+								.col-md-6
+									.c-field.c-outline.c-2.c-lh.c-shadow
+										.c-line.c-2
+											label End Time
+										.c-has-icon
+											input(type="text", placeholder="Time").c-field-control
+											.icon-addon.hidden-xs
+												i.icon-watch
+							.c-field.c-outline.c-2.c-lh.c-shadow
+									.c-line.c-2
+										label Location
+									input(type="text", placeholder="Specify Location (City, Country etc)").c-field-control
+							.c-field.c-outline.c-2.c-shadow.c-b-lg
+									.c-line.c-2
+										label Description
+									textarea(rows="8" cols="8" placeholder="News Description").c-field-control
+							.c-field.c-outline.c-2.c-shadow.c-b-lg
+									.c-line.c-2
+										label Keywords/ Tags
+									textarea(rows="5" cols="5" placeholder="Specific words associated with this News Post (e.g. Employment, Career, Economy etc).").c-field-control
+							.c-add-img-video__block.c-addimgblcok
+											.c-add-img-video__top
+												.fileUpload
+													input(type="file" class="upload")
+													button.button.button-news.button-rounded.button-height-large.button-font-bold Add Images
+												.help-txt.c-1
+													p Max. 4 JPEGs of 10MB in Size 
+												
+											.data-list
+												.row
+													.col-md-6.col-sm-6
+														.img-box
+															span.delete-ico
+																	i.icon-close-fill
+															figure
+
+																img(src="images/test.jpg" alt="img")
+															figcaption
+																h3.file-title Originalname.jpeg
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption = ! addcaption" ng-class="{'hidden':addcaption}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+
+													.col-md-6.col-sm-6
+														.img-box
+															span.delete-ico
+																	i.icon-close-fill
+															figure
+																img(src="images/test.jpg" alt="img")
+															figcaption
+																h3.file-title Originalname.jpeg
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption1 = ! addcaption1" ng-class="{'hidden':addcaption1}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption1") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+
+							.c-add-img-video__block
+											.c-add-img-video__top
+												
+												button.button.button-news.button-rounded.button-height-large.button-font-bold(ng-controller="ModalCtrl"  ng-click="insertvideo()") Add Videos
+												.help-txt.c-1
+													p Max. 2 External Video Links
+											.data-list
+												.row
+													.col-md-6.col-sm-6
+														.video-box
+															span.delete-ico
+																	i.icon-close-fill
+															
+															iframe(width="100%" height="200" src="https://www.youtube.com/embed/7mNu1DaTVDY" frameborder="0" allowfullscreen)
+																	
+															figcaption
+																h3.file-title Originalname.mp4
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption3 = ! addcaption3" ng-class="{'hidden':addcaption3}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption3") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+													.col-md-6.col-sm-6
+														.video-box
+															span.delete-ico
+																	i.icon-close-fill
+															
+															iframe(width="100%" height="200" src="https://www.youtube.com/embed/7mNu1DaTVDY" frameborder="0" allowfullscreen)
+																	
+															figcaption
+																h3.file-title Originalname.mp4
+																.caption__opt
+																	button.button.button-rounded.button-grey.button-font-sbold.button-height-small(ng-click="addcaption4 = ! addcaption4" ng-class="{'hidden':addcaption4}" )  Add Caption
+																	.c-edit-field(ng-show="addcaption4") 
+																		input(type="text", placeholder="New Name Assign")
+																		.field-opt
+																			ul
+																					li
+																						span.edit-ico
+																							i.icon-edit-o
+																					li
+																						span.close-ico
+																							i.icon-close-o
+							.c-setting-opt
+									.row
+										.col-md-8.col-sm-8.col-xs-8
+											h3 Post this to My Connections only
+										.col-md-4.col-sm-4.col-xs-4
+											.c-oth-opt__btn
+												.fh-switch.fh-sm.fc-1
+														input(type="radio" id="four" name="a")
+														label(for="four")
+														span.fh-switch-knob
+							.c-setting-opt
+									.row
+										.col-md-8.col-sm-8.col-xs-8
+											h3 Post this to Specific People only
+										.col-md-4.col-sm-4.col-xs-4
+											.c-oth-opt__btn
+												.fh-switch.fh-sm.fc-1
+														input(type="radio" id="five" name="a")
+														label(for="five")
+														span.fh-switch-knob
+							.c-search-field
+									.row
+										.col-sm-3
+											label Select People
+										.col-sm-9
+											.c-field.c-outline.c-2.c-sh.c-shadow.c-b-sm.c-md
+												input(type="text", placeholder="Search").c-field-control
+												.people-list
+													ul
+														li
+															span.__label John Smith
+															span.ico.pointer 
+																i.icon-close-o 
+														li
+															span.__label John Smith
+															span.ico.pointer
+																i.icon-close-o 
+														li
+															span.__label John Smith
+															span.ico.pointer 
+																i.icon-close-o
+							.btn-field.text-right
+									button.button.button-danger.button-font-medium.button-uppercase.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-left-1x.margin-right-1x.margin-bottom-2x(ng-click="$state.go('landing')" ) CANCEL
+									button.button.button-uppercase.button-font-medium.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-right-1x.margin-left-1x(ng-click="$state.go('landing')" ) POST

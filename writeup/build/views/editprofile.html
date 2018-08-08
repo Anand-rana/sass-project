@@ -1,0 +1,193 @@
+
+<div class="page-conatiner">
+  <div class="profile-section s-ov">
+    <div class="container">
+      <div class="main-heading">
+        <h2 class="title">Profile preview</h2>
+      </div>
+      <div class="profile-block">
+        <div class="profile-block-dtl">
+          <div class="row">
+            <div class="col-md-4 col-sm-5">
+              <div class="p-user-block">
+                <div class="p-img"><img class="img-responsive" src="images/profile.jpg" alt="img"/></div>
+                <div class="p-user-info-block">
+                  <div class="p-trophies">
+                    <h3 class="title"> <span>Trophies</span></h3>
+                    <div class="p-trophies-list">
+                      <ul>
+                        <li><img src="images/trophy-1.png" alt="img"/></li>
+                        <li><img src="images/trophy-2.png" alt="img"/></li>
+                        <li><img src="images/trophy-3.png" alt="img"/></li>
+                        <li><img src="images/trophy-2.png" alt="img"/></li>
+                        <li><img src="images/trophy-1.png" alt="img"/></li>
+                        <li><img src="images/trophy-3.png" alt="img"/></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="p-points">
+                    <h3 class="title"> <span>points</span></h3>
+                    <div class="p-points-total"><img class="ib_v" src="images/points.png" alt="img"/>
+                      <h4 class="ib_v"> <span>400 </span>Points</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-7">
+              <div class="p-personal-info-block">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="user-name"> 
+                      <h3>John smith</h3>
+                    </div>
+                    <div class="user-profile">
+                      <h4>Product Designer</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="user-rating-cotainer">
+                  <h3>Rating</h3>
+                  <div class="rating-container"><span uib-rating="uib-rating" ng-model="4" state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'" read-only="true" aria-labelledby="default-rating-1"></span></div>
+                </div>
+                <div class="p-tabs">
+                  <uib-tabset>
+                    <uib-tab index="0" heading="Personal Information">
+                      <div class="p-tab-cotent">
+                        <div class="up-info edit-profile-block">
+                          <div class="up-info-row">
+                            <h3>About</h3>
+                            <div class="up-row">
+                              <div class="t-cell label-name">
+                                <label>Bio :</label>
+                              </div>
+                              <div class="t-cell">
+                                <div class="c-field c-md">
+                                  <textarea class="c-field-control">Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quamnunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec.</textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="up-info-row">
+                            <h3>Contact Information</h3>
+                            <div class="up-row">
+                              <div class="t-cell label-name">
+                                <label>Address :</label>
+                              </div>
+                              <div class="t-cell">
+                                <div class="c-field c-md">
+                                  <textarea class="c-field-control" rows="1" cols="1">525E 68th Street New York, NY 10651-78 156-187-60</textarea>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="up-row">
+                              <div class="t-cell label-name">
+                                <label>E-mail :</label>
+                              </div>
+                              <div class="t-cell">
+                                <div class="c-field c-md">
+                                  <input class="c-field-control text-blue" type="text" value="Dummy@gmail.com"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="up-row">
+                              <div class="t-cell label-name">
+                                <label>Website :</label>
+                              </div>
+                              <div class="t-cell">
+                                <div class="c-field c-md">
+                                  <input class="c-field-control text-blue" type="text" value="www.dummysitename.com"/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="up-info-row">
+                            <h3>Other Details</h3>
+                            <div class="up-row">
+                              <div class="t-cell label-name">
+                                <label>Age :</label>
+                              </div>
+                              <div class="t-cell">
+                                <div class="c-field c-md">
+                                  <input class="c-field-control" type="text" value="28 years"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="up-row">
+                              <div class="t-cell label-name">
+                                <label>Gender :</label>
+                              </div>
+                              <div class="t-cell">
+                                <div class="c-field c-md">
+                                  <input class="c-field-control" type="text" value="Male"/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="up-info-row">
+                            <div class="margin-top-10x">
+                              <button class="button button-uppercase button-blue button-font-base button-min-width button-height-large margin-right-4x margin-bottom-2x button-blue-dark">Save</button>
+                              <button class="button button-uppercase button-font-base button-min-width button-height-large" ng-click="$state.go('profile')">Cancel</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </uib-tab>
+                    <uib-tab index="1" heading="Change Password">
+                      <div class="p-tab-cotent">
+                        <div class="p-cp-block">
+                          <div class="field-group">
+                            <div class="field-row">
+                              <div class="t-cell">
+                                <label>Current password :</label>
+                              </div>
+                              <div class="t-cell">
+                                <div class="c-field c-md">
+                                  <input class="c-field-control" type="password"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="field-row">
+                              <div class="t-cell">
+                                <label>New Password :</label>
+                              </div>
+                              <div class="t-cell">
+                                <div class="c-field c-md">
+                                  <input class="c-field-control" type="password"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="field-row">
+                              <div class="t-cell">
+                                <label>Re-enter new password :</label>
+                              </div>
+                              <div class="t-cell">
+                                <div class="c-field c-md">
+                                  <input class="c-field-control" type="password"/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="padding-top-5x">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <button class="button button-uppercase button-blue button-font-base button-block margin-bottom-2x">confirm</button>
+                            </div>
+                            <div class="col-md-8">
+                              <div class="su-msg-box"><span class="ico"><i class="icon-checked"></i></span><span>Your password has been changed successfully</span><span class="close-ico"><i class="icon-close"></i></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </uib-tab>
+                  </uib-tabset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+.product-section {
+
+    .product-list-block {
+        background-color: $white;
+        @include box-shadow(0 0 4px rgba(0, 0, 0, .09));
+        @include margin-top(70);
+
+        .product-list-row {
+            @include padding(30 60);
+            @include border-bottom(3, solid, $color-bg-04);
+
+            .media-left,
+            .media-right,
+            .media-body {
+                vertical-align: middle;
+            }
+            .p-pic {
+                img {
+                    width: 70px;
+                    height: auto;
+                    // @include circle;
+                    // object-fit: cover;
+                }
+            }
+            .p-name {
+                h3 {
+                    font-family: $font-family-alt;
+                    font-weight: 200;
+                    text-transform: uppercase;
+                    @include fontsize(18);
+                    color: $color-text-04;
+                }
+            }
+            .p-opt
+            {
+              text-align: right;
+            }
+            .button {
+                &:hover,
+                &:focus {
+                    background-color: #2196f3;
+                }
+            }
+        }
+
+        .product-list-bottom
+        {
+          @include padding(30 0 50);
+        }
+    }
+}

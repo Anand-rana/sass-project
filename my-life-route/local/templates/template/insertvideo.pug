@@ -1,0 +1,24 @@
+.video-modal
+	.modal-header
+		h2.title YouTube or Vimeo URL
+		button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close
+	.modal-body
+		.video-form
+			//.c-field.c-b-xsm.text-center
+				.fileUpload
+					input(type="file" class="upload")
+					button.button.button-rounded.button-width-large.button-font-medium-txt Upload From Computer
+			//.c-field.c-b-xsm.text-center
+				label OR
+			.c-field.c-shadow.c-b-xsm.c-bg-color.c-md
+				input(type="text" placeholder="Paste Video Link Here").c-field-control
+			
+					
+		.margin-top-10x.text-center
+			button.button.button-green.button-width-large.button-rounded.button-height-large.margin-right-3x
+				i.icon-check-bold
+			button.button.button-danger.button-width-large.button-rounded.button-height-large.margin-left-3x
+				i.icon-close-bold
+     
+		

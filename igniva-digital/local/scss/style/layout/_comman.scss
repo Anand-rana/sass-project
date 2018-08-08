@@ -1,0 +1,148 @@
+.nav-icon {
+    display: none;
+
+    &.is-active {
+        z-index: 110;
+    }
+}
+
+.page-template-insights,.single-post {
+    background-color: #f7f7f7;
+}
+
+.scroll-hide {
+    overflow: hidden;
+    position:fixed;
+}
+
+.type-it {
+
+    .ti-cursor {
+        text-indent: -9999px;
+        top: -15px !important;
+        width: 1px !important;
+        overflow: hidden !important;
+        display: inline-block !important;
+        background: #fff;
+        vertical-align: middle !important;
+        @include margin-left(-55);
+        height:128px;
+    }
+}
+
+.type-about {
+    .ti-cursor {
+        text-indent: -9999px;
+        width: 1px !important;
+        overflow: hidden !important;
+        display: inline-block !important;
+        background: $color-red;
+        vertical-align: middle !important;
+
+        &.h-hide {
+            display: none !important;
+        }
+    }
+}
+
+[class^="type-heading-"],
+[class*="type-heading-"] {
+    .ti-cursor {
+        text-indent: -9999px;
+        width: 1px !important;
+        overflow: hidden !important;
+        display: inline-block !important;
+        background: $color-red;
+        vertical-align: middle !important;
+
+        &.h-hide {
+            display: none !important;
+        }
+    }
+}
+
+
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.layer-backdrop {
+    background-color: rgba($black, 0.8);
+    @include pos(fix, 0 0 0 0);
+    width: 100%;
+    height: 100%;
+    @include opacity(0);
+    z-index: 90;
+    display: none;
+
+    &.open {
+        @include opacity(1);
+        display: $b;
+    }
+}
+
+.page404Wrapper {
+   @include padding(30 0 50);
+
+   .wrap404 {
+      @include max-width(600);
+
+      background-color: $theme;
+      margin:100px auto 30px;
+   }
+
+   p {
+      @include fontsize(18);
+
+      font-weight: 300;
+
+      @media (max-width: 600px) {
+         @include fontsize(15);
+      }
+   }
+}

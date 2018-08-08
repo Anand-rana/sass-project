@@ -1,0 +1,7 @@
+@include media("<=1400px") {
+    .dashboard-t-info {
+        .dashboard-t-box {
+            @include padding(80 25);
+        }
+    }
+}

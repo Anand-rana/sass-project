@@ -1,0 +1,53 @@
+@include media("<=1200px") {
+    .upload__file__list {
+        .file__uploadbox {
+            .fileUpload {
+                @include margin(15 0);
+            }
+        }
+    }
+}
+
+
+@include media("<=992px") {
+    .wizard-tab__links {
+        > ul {
+            > li {
+                > span {
+                    @include margin-bottom(15);
+                }
+            }
+        }
+    }
+}
+
+
+@include media("<=767px") {
+    .upload__file__list {
+        .file__uploadbox {
+            @include margin-bottom(20);
+        }
+    }
+
+    .upload_wizard-btn {
+        text-align: center;
+
+        .wizard__btn {
+            @include margin-bottom(10);
+        }
+
+        .wizard-next {
+            float: none;
+        }
+    }
+
+    .property-type {
+        text-align: center;
+
+        > ul {
+            > li {
+                width: 50%;
+            }
+        }
+    }
+}

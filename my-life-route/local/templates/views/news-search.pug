@@ -1,0 +1,189 @@
+.search-result-section
+	.container
+		h2.page-heading You searched for 
+			span.up-letter.text-theme NEWS 
+			
+			|in 
+			span.up-letter.text-theme ALL LOCATIONS
+
+		.search-list-block
+			.search-list-top
+				span.total-result Found 2 Results
+				.sort-field-group
+					span.label-field Sort by
+					.select-control
+						select.sort-field-control
+							option(value='Grade') Status
+			.search-list-data
+				.news-route-box
+					.row
+						.col-md-3.col-sm-4.col-lg-3
+							.user-p-info
+								.user-img
+									img(src="images/user.jpg" alt="img")
+								.user-name
+										h3 James Young
+								
+								.list-label
+									span n
+
+
+						.col-md-9.col-sm-8.col-lg-9
+							.user-dtl
+								.user-dtl-info
+									h3.nr-title Lorem Ipsum is simply dummy text
+									.user-dtl-txt
+										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+											br 
+											|standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...
+									.user-dtl-info-list
+										.row
+											.col-md-6.col-lg-4
+												ul.list-info
+													
+													li
+														span.l-label Location
+														span New York ,USA
+													
+											.col-md-6.col-lg-4
+												ul.list-info
+													
+													li
+														span.l-label Date created
+														span 24th May 2016
+													li
+														span.l-label Last updated
+														span 24th May 2017
+													
+											.col-md-6.col-lg-4
+												.margin-top-3x
+														button.button.button-rounded.button-font-medium.button-height-large.button-min-width-small  View
+					.nr-bottom-block
+						ul
+							li
+								.t-videos
+									span.icon
+										i.icon-play-btn
+									span 6
+								.t-img
+									span.icon
+										i.icon-file
+									span 8
+							li
+								.t-likes
+									span.icon
+										i.icon-thumb
+									span.__label Like : 
+									span 500
+							li
+								.t-coments
+									span.icon
+										i.icon-comment
+									span.__label Comments : 
+									span 40
+
+							li
+								.t-follower
+									span.icon
+										i.icon-user-group
+									span.__label Followers : 
+									span 900
+							li
+								.t-share
+									span.icon.pointer(ng-click="isNavCollapsed  = !isNavCollapsed")
+										i.icon-share
+									span.__label Share : 
+									span 23
+									.t-share-opt(uib-collapse="!isNavCollapsed") 
+										a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+										a(href="#") Share by Facebook
+										a(href="#") Share by Twitter
+										a(href="#") Share by LinkedIn
+										a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+										a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link
+				.news-route-box
+					.row
+						.col-md-3.col-sm-4.col-lg-3
+							.user-p-info
+								.user-img
+									img(src="images/user.jpg" alt="img")
+								.user-name
+										h3 James Young
+								
+								.list-label
+									span n
+
+
+						.col-md-9.col-sm-8.col-lg-9
+							.user-dtl
+								.user-dtl-info
+									h3.nr-title Lorem Ipsum is simply dummy text
+									.user-dtl-txt
+										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+											br 
+											|standard dummy text ever since the 1500s, when an unknown printer took a galley tially unchanged...
+									.user-dtl-info-list
+										.row
+											.col-md-6.col-lg-4
+												ul.list-info
+													
+													li
+														span.l-label Location
+														span New York ,USA
+													
+											.col-md-6.col-lg-4
+												ul.list-info
+													
+													li
+														span.l-label Date created
+														span 24th May 2016
+													li
+														span.l-label Last updated
+														span 24th May 2017
+													
+											.col-md-6.col-lg-4
+												.margin-top-3x
+														button.button.button-rounded.button-font-medium.button-height-large.button-min-width-small  View
+					.nr-bottom-block
+						ul
+							li
+								.t-videos
+									span.icon
+										i.icon-play-btn
+									span 6
+								.t-img
+									span.icon
+										i.icon-file
+									span 8
+							li
+								.t-likes
+									span.icon
+										i.icon-thumb
+									span.__label Like : 
+									span 500
+							li
+								.t-coments
+									span.icon
+										i.icon-comment
+									span.__label Comments : 
+									span 40
+
+							li
+								.t-follower
+									span.icon
+										i.icon-user-group
+									span.__label Followers : 
+									span 900
+							li
+								.t-share
+									span.icon.pointer(ng-click="isNav1Collapsed  = !isNav1Collapsed")
+										i.icon-share
+									span.__label Share : 
+									span 23
+									.t-share-opt(uib-collapse="!isNav1Collapsed") 
+										a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+										a(href="#") Share by Facebook
+										a(href="#") Share by Twitter
+										a(href="#") Share by LinkedIn
+										a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+										a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link

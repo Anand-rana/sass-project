@@ -1,0 +1,270 @@
+.page-conatiner
+	.read-review-section.s-ov
+		.container
+			.main-heading
+						h2.title Read a review
+
+			.read-review-block
+				.r-review-dtl
+					.row
+						.col-md-4.col-sm-5
+							.r-user-block
+								.r-img
+									img(src="images/profile.jpg" class="img-responsive")
+								.r-rating-list
+									.media
+										.media-left
+											span.ico
+												i.icon-cap
+										.media-body
+											h3.title Knowledge
+											.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-1")
+									.media
+										.media-left
+											span.ico
+												i.icon-smily
+										.media-body
+											h3.title Enthusiasm	
+											.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-2")
+									.media
+										.media-left
+											span.ico
+												i.icon-briefcase
+										.media-body
+											h3.title Work Ethics	
+											.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-3")
+									.media
+										.media-left
+											span.ico
+												i.icon-piggy-bank
+										.media-body
+											h3.title Value for money
+											.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-4")
+									.media
+										.media-left
+											span.ico
+												i.icon-handshake
+										.media-body
+											h3.title Friendliness
+											.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-5")
+									.media
+										.media-left
+											span.ico
+												i.icon-like-thumb
+										.media-body
+											h3.title Recommended
+											.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-5")
+						.col-md-8.col-sm-7
+							.r-review-info
+								.user-name
+									h3 John smith
+								.user-profile
+									h4 Product Designer
+								
+								.r-user-opt
+									button.button.button-blue-dark.button-font-open.button-uppercase.button-font-small.margin-right-4x.margin-bottom-2x(ng-click="$state.go('write-review')" )  Review this user
+									button.button.button-border.button-blue-dark.button-font-open.button-uppercase.button-font-small.button-width-large  subscribe
+								.r-review-txt
+									p.ow-200 Nullam dictum felis eu pede mollis pretium
+									.margin-top-6x
+										p Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodalessagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, Aenean imperdiet. Etiam ultricies nisi vel augue. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh
+									
+									.review-opt
+											
+												ul
+														li
+															span Reply 3
+															span.ico
+																i.icon-reply
+														li
+															span 390
+															span.ico.liked
+																i.icon-heart
+														li
+															span 20
+															span.ico.text-blue
+																i.icon-network
+														li.report-ico(ng-controller="ModalCtrl"  ng-click="report()" class="pointer")
+															span.ico.pointer
+																i.icon-do-not-disturb
+								.r-feat-list
+									h3.title Fitness trainer
+									.r-feat-list-container
+										.media
+											.media-left
+												.r-v-img
+													img(src="images/news-4.jpg" alt="img")
+											.media-body
+												p Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. 
+										.media
+											.media-left
+												.r-v-img
+													img(src="images/news-2.jpg" alt="img")
+											.media-body
+												p Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.
+
+
+								.rev-reply-field
+										textarea(placeholder="Type here" rows="2" cols="2").rev-reply-field-control
+										.reply-btn
+											i.icon-paper-plain
+				.r-reply-section
+					.r-reply-cotainer
+						h2.title
+							span Replies on this Review
+						.review-block
+							.review-list
+								.review-box
+									.media
+										.media-left
+											.user-img
+												img(src="images/user-1.jpg" alt="img")
+										.media-body
+											.user-name
+												h3 Sam wilson
+											.rating-container
+													span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star-o star-uncheck-o'"  read-only="true" aria-labelledby="default-rating-2")
+											.review-txt
+												p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.... 
+													a(href="#" class="r-link")  View More
+											.review-opt
+											
+												ul
+														li
+															span Reply 3
+															span.ico
+																i.icon-reply
+														li
+															span 390
+															span.ico.liked
+																i.icon-heart
+														li
+															span 20
+															span.ico.text-blue
+																i.icon-network
+														li.report-ico(ng-controller="ModalCtrl"  ng-click="report()" class="pointer")
+															span.ico.pointer
+																i.icon-do-not-disturb
+											.rev-reply-field
+												textarea(placeholder="Type here" rows="1" cols="2").rev-reply-field-control
+												.reply-btn
+													i.icon-paper-plain
+											
+								
+									
+											
+								.review-box
+									.media
+										.media-left
+											.user-img
+												img(src="images/user-1.jpg" alt="img")
+										.media-body
+											.user-name
+												h3 Sam wilson
+											.rating-container
+													span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star-o star-uncheck-o'"  read-only="true" aria-labelledby="default-rating-2")
+											.review-txt
+												p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.... 
+													a(href="#" class="r-link")  View More
+											.review-opt
+											
+												ul
+														li
+															span Reply 3
+															span.ico
+																i.icon-reply
+														li
+															span 390
+															span.ico.liked
+																i.icon-heart
+														li
+															span 20
+															span.ico.text-blue
+																i.icon-network
+														li.report-ico(ng-controller="ModalCtrl"  ng-click="report()" class="pointer")
+															span.ico.pointer
+																i.icon-do-not-disturb
+											
+								.text-center.margin-top-5x
+									a(href="#" class="view-link") View all Reviews
+				.r-other-section
+					.r-other-cotainer
+						h2.title
+							span Other Reviews
+						.review-block
+							.review-list
+								.review-box
+									.media
+										.media-left
+											.user-img
+												img(src="images/user-1.jpg" alt="img")
+										.media-body
+											.user-name
+												h3 Sam wilson
+											.rating-container
+													span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star-o star-uncheck-o'"  read-only="true" aria-labelledby="default-rating-2")
+											.review-txt
+												p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.... 
+													a(href="#" class="r-link")  View More
+											.review-opt
+											
+												ul
+														li
+															span Reply 3
+															span.ico
+																i.icon-reply
+														li
+															span 390
+															span.ico.liked
+																i.icon-heart
+														li
+															span 20
+															span.ico.text-blue
+																i.icon-network
+														li.report-ico(ng-controller="ModalCtrl"  ng-click="report()" class="pointer")
+															span.ico.pointer
+																i.icon-do-not-disturb
+											
+								
+									
+											
+								.review-box
+									.media
+										.media-left
+											.user-img
+												img(src="images/user-1.jpg" alt="img")
+										.media-body
+											.user-name
+												h3 Sam wilson
+											.rating-container
+													span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star-o star-uncheck-o'"  read-only="true" aria-labelledby="default-rating-2")
+											.review-txt
+												p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.... 
+													a(href="#" class="r-link")  View More
+											.review-opt
+											
+												ul
+														li
+															span Reply 3
+															span.ico
+																i.icon-reply
+														li
+															span 390
+															span.ico.liked
+																i.icon-heart
+														li
+															span 20
+															span.ico.text-blue
+																i.icon-network
+														li.report-ico(ng-controller="ModalCtrl"  ng-click="report()" class="pointer")
+															span.ico.pointer
+																i.icon-do-not-disturb
+											
+								.text-center.margin-top-5x
+									a(href="#" class="view-link") View all Reviews

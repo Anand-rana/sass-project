@@ -1,0 +1,62 @@
+.signup-form-section
+	.container
+		.step-form-block
+			h2.title Sign Up Details
+			.step-form-container
+				.step-form-heading
+					h3.title We need these to deliver the very best results...
+					h4.note Please provide the following information so that User Experience and relevant content
+						br 
+						|can be customised for you.
+				.step-form-data
+					.step-form-field-box
+						.step-form-nav
+							ul
+								li
+									.step-nav-box.step-one.active
+										.step-nav-txt
+											span.label-step Step
+											span.step-no 1
+								li
+									.step-nav-box.step-two
+										.step-nav-txt
+											span.label-step Step
+											span.step-no 2
+						.sign-up-step-1
+							.field-group
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Date of Birth
+									.c-has-icon
+										input(type="text", placeholder="DD/MM/YYYY").c-field-control
+										.icon-addon.hidden-xs
+											i.icon-calendar
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Gender
+									.select-control
+										select.c-field-control
+											option(value='Male') Male
+											option(value='Female') Female
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Phone Number
+									input(type="text", placeholder="Enter Phone Number").c-field-control
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Website
+									input(type="text", placeholder="Enter website (Optional)").c-field-control
+								.c-field.c-outline.c-shadow.c-b-lg
+									.c-line
+										label Full Address (Optional)
+									textarea(rows="8" cols="8" placeholder="Enter Address Details").c-field-control
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label City
+									input(type="text", placeholder="Enter City Name").c-field-control
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Country of Residence
+									input(type="text", placeholder="Enter Country Name").c-field-control
+								.btn-field.text-center
+									button.button.button-font-medium.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width(ng-click="$state.go('signup-step-2')")  NEXT

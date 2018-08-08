@@ -1,0 +1,53 @@
+@include media("<=1400px") {
+    .aboutus-section {
+        .about-company {
+            @include padding(0 30);
+        }
+    }
+}
+
+@include media("<=992px") {
+    .aboutus-section {
+        .about-company {
+            @include margin(50 0);
+            .about-img {
+                display: block;
+                width: 100%;
+                text-align: center;
+                @include margin-bottom(20);
+                img {
+                    display: $inline;
+                    ;
+                }
+            }
+            .about-company-txt {
+                display: block;
+                width: 100%;
+            }
+        }
+        .about-content-section {
+            .about-content-row {
+                text-align: center;
+                .img-responsive {
+                    display: $inline;
+                }
+                .about-content-txt {
+                    h3 {
+                        &:after {
+                            left: 50%;
+                            @include translatepos(-50%, 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+    .aboutus-section {
+        .about-company {
+            @include padding(0);
+        }
+    }
+}

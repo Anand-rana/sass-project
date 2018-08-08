@@ -1,0 +1,67 @@
+.search-modal-section
+	.modal-header
+		h2.title Search
+		button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close-o
+	.modal-body
+		.news-stats-modal
+			.field-group(ng-nicescroll nice-option="{cursorcolor: '#2abeeb',cursorwidth:'6px', horizrailenabled:false,background:'#c4c4c4',cursorborder:'1px solid #c4c4c4',cursorborderradius:'5px',cursorfixedheight:70,touchbehavior:true,railoffset:{left:30},autohidemode:false}" nice-scroll-top-end="topEndComplete()" nice-scroll-end="endScroll()")
+				.row
+					.col-md-6
+
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Title
+							input(type="text", placeholder="Main Headline").c-field-control
+
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Author Email
+							input(type="text", placeholder="Enter Email..").c-field-control
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Creation Date
+							.c-has-icon
+								input(type="text", placeholder="Select").c-field-control
+								.icon-addon.hidden-xs
+									i.icon-calender-o
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Status
+							.select-control
+								select.c-field-control
+									option Select
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Minimum Comments
+							input(type="text", placeholder="Enter..").c-field-control
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Minimum Video Links
+							input(type="text", placeholder="Enter..").c-field-control
+
+
+					.col-md-6
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Author Full Name
+							input(type="text", placeholder="Enter Name..").c-field-control
+
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Keywords
+							tags-input(ng-model="tags" placeholder="Add Keywords")
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Last Updated
+							.c-has-icon
+								input(type="text", placeholder="Select").c-field-control
+								.icon-addon.hidden-xs
+									i.icon-calender-o
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Minimum Likes
+							input(type="text", placeholder="Enter..").c-field-control
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Minimum Shares
+							input(type="text", placeholder="Enter..").c-field-control
+						.c-field.c-b-sm.c-shadow.c-lh
+							label Minimum Images
+							input(type="text", placeholder="Enter..").c-field-control
+				
+			.btn-field
+					button.button.button-shadow.button-width-large.button-green.button-height-large.button-font-bold.button-rounded.button-font-medium.margin-right-1x Search
+					button.button.button-shadow.button-width-large.button-danger.button-height-large.button-font-bold.button-rounded.button-font-medium.margin-left-1x Reset
+
+				
+		

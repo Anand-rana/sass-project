@@ -1,0 +1,721 @@
+<div class="main-header">
+  <div class="container">
+    <div class="header">
+      <div class="row">
+        <div class="col-md-3"><a ui-sref="home" class="logo"><img src="images/logo.png" alt="logo" class="img-reponsive"/></a>
+        
+      </div>
+      <div class="col-md-9">
+        <div class="nav_button">
+          <ul>
+            <li><a href="#" ui-sref="agentlisting" title="" class="nav_button__a">Listing</a></li>
+            <li><a href="#" title="" class="nav_button__a">inbox</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="upload_property_section" ng-controller="pCtrl">
+<div class="upload_wizard-btn blue-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3"><button class="wizard__btn wizard-prev"  ng-click="prev();"><span><i class="icon-slide-arrow-left"></i></span>Previous</button></div>
+      <div class="col-md-6 col-sm-6"><button class="wizard__btn wizard-save button-block">save for later</button></div>
+      <div class="col-md-3 col-sm-3"><button class="wizard__btn wizard-next" ng-click="go();">Next <span><i class="icon-slide-arrow-right"></i></span></button></div>
+    </div>
+  </div>
+</div>
+<!--main-contanier-->
+<div class="main-block">
+  <div class="wizard-tab-section">
+    <div class="container">
+      <wizard on-finish="finishedWizard()" indicators-position="top">
+      <wz-step wz-title="Basic info">
+      <!--basic-->
+      <div class="upload__basic__content">
+        <div class="property-type">
+          <ul>
+            
+            <li>
+              <span class="pt-field">
+                <input id="house" type="radio" name="a"/>
+                <label class="optionlabel" for="house"><i class="icon-house"></i></label>
+                <h5>House</h5>
+              </span>
+            </li>
+            <li>
+              <span class="pt-field">
+                <input id="flat" type="radio" name="a"/>
+                <label class="optionlabel" for="flat"><i class="icon-flat"></i></label>
+                <h5>Flat</h5>
+              </span>
+              
+            </li>
+            <li>
+              <span class="pt-field">
+                <input id="land" type="radio" name="a"/>
+                <label class="optionlabel" for="land"><i class=" icon-land"></i></label>
+                <h5>Land</h5>
+              </span>
+              
+            </li>
+            <li>
+              <span class="pt-field">
+                <input id="building" type="radio" name="a"/>
+                <label class="optionlabel" for="building"><i class="icon-bulding"></i></label>
+                <h5>Utility building</h5>
+              </span>
+              
+            </li>
+            <li>
+              <span class="pt-field">
+                <input id="Premises" type="radio" name="a"/>
+                <label class="optionlabel" for="Premises"><i class="icon-premises"></i></label>
+                <h5>Business Premises</h5>
+              </span>
+              
+            </li>
+          </ul>
+        </div>
+        <div class="p-form-section">
+          <div class="row">
+            <div class="col-md-4">
+              
+              <form>
+                <div class="form-group">
+                  <div class="c-field">
+                    <label>Listing description tittle</label>
+                    <input type="text" class="form-control"  placeholder="Enter Listing description tittle">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="c-field">
+                    <label>Select building type</label>
+                    <select class="form-control">
+                      <option selected="selected">Select options</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="c-field">
+                    <label>Select Premises type</label>
+                    <select class="form-control">
+                      <option selected="selected">Select options</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="c-field">
+                    <label>Property address</label>
+                    <input type="text" class="form-control"  placeholder="Enter address of listing">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-7 col-md-offset-1">
+              
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71661.14958881482!2d-4.302161521830319!3d55.855536566422856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+UK!5e0!3m2!1sen!2sin!4v1475729526815" width="100%" height="430" frameborder="0" style="border:1px solid #828ea8;" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end-basic-->
+      
+      </wz-step>
+      <wz-step wz-title="Details">
+      
+      <div class="upload__dtl__content">
+        <div class="p-form-section">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="row">
+                <div class="col-md-5">
+                  
+                  <form>
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>Number of bedrooms</label>
+                        <input type="text" class="form-control"  placeholder="eg. 4">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>Home size (Sq. Ft.)</label>
+                        <input type="text" class="form-control"  placeholder="eg. 15 sq. ft.">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>Year Built</label>
+                        <select class="form-control">
+                          <option selected="selected">Select options</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>Occupancy Status</label>
+                        <select class="form-control">
+                          <option selected="selected">Select options</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-5  col-md-offset-2">
+                  
+                  <form>
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>Number of bathrooms</label>
+                        <input type="text" class="form-control"  placeholder="eg .2">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>Lot size</label>
+                        <input type="text" class="form-control"  placeholder="eg. 15 sq. ft.">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>Number of units </label>
+                        <select class="form-control">
+                          <option selected="selected">Select options</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>EPC rating</label>
+                        <input type="text" class="form-control"  placeholder="eg. 87">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </wz-step>
+      <wz-step wz-title="Amenities">
+      
+      <div class="upload__amenities__content">
+        <div class="p-form-section">
+          <div class="row">
+            
+            <div class="col-md-12">
+              
+              <div class="form-group">
+                <div class="c-field">
+                  <label>EPC rating</label>
+                  <textarea rows="10" cols="5" class="form-control" placeholder="Important Details about property"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="c-field margin-top-8x">
+                  <label>Current availability</label>
+                  <div class="r-box sm-radio">
+                    <div class="fh-radio">
+                      <input type="radio" id="vac" name="a">
+                      <label for="vac">Vacant</label>
+                    </div>
+                    <div class="fh-radio">
+                      <input type="radio" id="nvac" name="a">
+                      <label for="nvac">Not Vacant</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="c-field">
+                <label>Solicitor details</label>
+                <div class="am-form dark-blue-bg" ng-controller="amCtrl">
+                  
+                  <div class="am-field-group" data-ng-repeat="choice in choices">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <div class="c-field">
+                            <label>Firm name</label>
+                            <input type="text" class="form-control"  placeholder="Name of the firm or Agency">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <div class="c-field">
+                            <label>Email</label>
+                            <input type="text" class="form-control"  placeholder="example@domainname.com">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <div class="c-field">
+                            <label>Conact number</label>
+                            <input type="text" class="form-control"  placeholder="Mobile or Landline">
+                          </div>
+                        </div>
+                        <button class="remove button pull-right" ng-show="$last" ng-click="removeChoice()"><i class="icon-substract"></i></button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <hr/>
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <span class="add_btn">Add more solicitor<i class="icon-plus"  ng-click="addNewChoice()"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      </wz-step>
+      <wz-step wz-title="Photos">
+      
+      <div class="upload__file__list">
+        <div class="p-form-section">
+          <h5 class="list__heading">Add Photos </h5>
+          <div class="list__files light-blue-bg">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="file__uploadbox">
+                  <div class="margin-top-2x">
+                    <img src="images/fileupload.png" alt="img"/>
+                  </div>
+                  <div class="fileUpload ">
+                    <button class="button button-uppercase button-rounded">Upload</button>
+                    <input type="file" class="upload" id="uploadBtn">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box">
+                  <figure><img src="images/pr1.jpg" class="img-responsive" alt="img"/>
+                    <div class="file__box__options">
+                      <span class="fav-opt"><i class="icon-star"></i> </span>
+                      <span class="fav__label">Default image</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box">
+                  <figure><img src="images/pr1.jpg" class="img-responsive" alt="img"/>
+                    <div class="file__box__options">
+                      <span class="fav-opt"><i class="icon-star"></i> </span>
+                      <span class="fav__label">Default image</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box">
+                  <figure><img src="images/pr1.jpg" class="img-responsive" alt="img"/>
+                    <div class="file__box__options">
+                      <span class="fav-opt"><i class="icon-star"></i> </span>
+                      <span class="fav__label">Default image</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box">
+                  <figure><img src="images/pr1.jpg" class="img-responsive" alt="img"/>
+                    <div class="file__box__options">
+                      <span class="fav-opt"><i class="icon-star"></i> </span>
+                      <span class="fav__label">Default image</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box">
+                  <figure><img src="images/pr1.jpg" class="img-responsive" alt="img"/>
+                    <div class="file__box__options">
+                      <span class="fav-opt"><i class="icon-star"></i> </span>
+                      <span class="fav__label">Default image</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box">
+                  <figure><img src="images/pr1.jpg" class="img-responsive" alt="img"/>
+                    <div class="file__box__options">
+                      <span class="fav-opt"><i class="icon-star"></i> </span>
+                      <span class="fav__label">Default image</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box">
+                  <figure><img src="images/pr1.jpg" class="img-responsive" alt="img"/>
+                    <div class="file__box__options">
+                      <span class="fav-opt"><i class="icon-star"></i> </span>
+                      <span class="fav__label">Default image</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-right margin-top-1x padding-right-4x">Any dummy text here eg. you can add upto 12 images maximum. Image size must be less than 1 MB</div>
+        </div>
+      </div>
+      </wz-step>
+      <wz-step wz-title="Attachments">
+      
+      <div class="upload__file__list">
+        <div class="p-form-section">
+          <h5 class="list__heading">Add Documents </h5>
+          <div class="list__files dark-blue-bg">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="file__uploadbox">
+                  <div class="margin-top-2x">
+                    <img src="images/fileupload.png" alt="img"/>
+                  </div>
+                  <div class="fileUpload ">
+                    <button class="button button-uppercase button-rounded">Upload</button>
+                    <input type="file" class="upload" id="uploadBtn">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box is--doc-box">
+                  <figure>
+                    <div class="file-ico">
+                      <img src="images/file-icon.svg" class="img-responsive" alt="img"/>
+                    </div>
+                    <div class="file__box__options">
+                      
+                      <span class="file__name">filename.pdf</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box is--doc-box">
+                  <figure>
+                    <div class="file-ico">
+                      <img src="images/file-icon.svg" class="img-responsive" alt="img"/>
+                    </div>
+                    <div class="file__box__options">
+                      
+                      <span class="file__name">filename.pdf</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 " >
+                <div class="file_box is--doc-box">
+                  <figure>
+                    <div class="file-ico">
+                      <img src="images/file-icon.svg" class="img-responsive" alt="img"/>
+                    </div>
+                    <div class="file__box__options">
+                      
+                      <span class="file__name">filename.pdf</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box is--doc-box">
+                  <figure>
+                    <div class="file-ico">
+                      <img src="images/file-icon.svg" class="img-responsive" alt="img"/>
+                    </div>
+                    <div class="file__box__options">
+                      
+                      <span class="file__name">filename.pdf</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box is--doc-box">
+                  <figure>
+                    <div class="file-ico">
+                      <img src="images/file-icon.svg" class="img-responsive" alt="img"/>
+                    </div>
+                    <div class="file__box__options">
+                      
+                      <span class="file__name">filename.pdf</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box is--doc-box">
+                  <figure>
+                    <div class="file-ico">
+                      <img src="images/file-icon.svg" class="img-responsive" alt="img"/>
+                    </div>
+                    <div class="file__box__options">
+                      
+                      <span class="file__name">filename.pdf</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="file_box is--doc-box">
+                  <figure>
+                    <div class="file-ico">
+                      <img src="images/file-icon.svg" class="img-responsive" alt="img"/>
+                    </div>
+                    <div class="file__box__options">
+                      
+                      <span class="file__name">filename.pdf</span>
+                      <span class="delete-opt"><i class="icon-delete"></i></span>
+                    </div>
+                  </figure>
+                  <figcaption>Add caption</figcaption>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="text-right margin-top-1x padding-right-4x">Any dummy text here eg. you can add upto 12 documents maximum. Document size must be less than 1 MB</div>
+        </div>
+      </div>
+      </wz-step>
+      <wz-step wz-title="Finalize">
+      <div class="upload__finalize__content">
+        <div class="p-form-section">
+          <div class="finalize__row">
+            <h5>Financial values</h5>
+            <div class="f-box">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <div class="c-field">
+                      <label>Bid starting price</label>
+                      <input type="text" placeholder="eg. 380000/-" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <div class="c-field">
+                      <label>Deposit amount</label>
+                      <input type="text" placeholder="eg. 110000/-" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <div class="c-field">
+                      <label>Finance options</label>
+                      <select class="form-control">
+                        <option>Finance options</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="c-textarea">
+                      <div class="c-field">
+                        
+                        <textarea class="form-control" placeholder="Add comments"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <div class="check-btn">
+                      <div class="fh-checkbox">
+                        <input type="checkbox" id="r1">
+                        <label for="r1" ng-click="isrpCollapsed = !isrpCollapsed">Add Reserve Price </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group" uib-collapse="!isrpCollapsed">
+                    <div class="c-field">
+                      <label>Reserve price</label>
+                      <input type="text" placeholder="Add reserve price" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <div class="check-btn">
+                      <div class="fh-checkbox">
+                        <input type="checkbox" id="r2">
+                        <label for="r2" ng-click="isrbCollapsed = !isrbCollapsed">Add Buy Now </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group" uib-collapse="!isrbCollapsed">
+                    <div class="c-field">
+                      <label>Buy now price</label>
+                      <input type="text" placeholder="Add buy now" class="form-control">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="finalize__row">
+            <h5>Visting schedule</h5>
+            <div class="f-box">
+              <div class="vis-field-group" ng-controller="fCtrl">
+                <div class="row" data-ng-repeat="choice in choices">
+                  
+                  <div class="col-md-1 col-sm-2">
+                    <div class="sm-radio margin-top-6x">
+                      <div class="fh-radio">
+                        <input type="radio" name="a" id="vis">
+                        <label for="vis" class="f_empty-btn">&nbsp;</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-5">
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>From Date/Time </label>
+                        <select class="form-control">
+                          <option>Select options</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-5">
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>From Date/Time </label>
+                        <select class="form-control">
+                          <option>Select options</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 text-center">
+                    <div class="form-group">
+                      
+                      <div class="margin-top-5x">
+                        <button class="remove button button-medium  button-info button-rounded " ng-show="$last" ng-click="removeChoice()"><i class="icon-substract"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr/>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <span class="f__add_btn">Add more<i  class="icon-plus" ng-click="addNewChoice()"></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <hr/>
+                </div>
+                <div class="col-md-1 col-sm-1 col-xs-2">
+                  <div class="sm-radio  maging-left-1x">
+                    <div class="fh-radio">
+                      <input type="radio" name="a" id="ap">
+                      <label for="ap">&nbsp;</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-10" >
+                  <label for="ap" class="text-d-grey pointer">By appointment only</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="finalize__row">
+            <h5>Upload listing</h5>
+            <div class="light-blue-bg f_upload-box">
+              <h5>Visting schedule</h5>
+              <div class="row">
+                <div class="col-md-4">
+                  
+                  <div class="f-box">
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>Start Date/Time</label>
+                        <select class="form-control">
+                          <option>Select options</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>Adv. duration</label>
+                        <select class="form-control">
+                          <option>Select options</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="c-field">
+                        <label>Listing duration</label>
+                        <select class="form-control">
+                          <option>Select options</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group text-center">
+                      <button class="button button-rounded button-uppercase button-uppercase button-width-large">Upload listing</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <h2>Add information</h2>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                  <p>when an unknown printer took a gic typesetting,
+                  remaining essentially unchanged. </p>
+                  <p>It was popularised in the 1960s with the release of
+                  Letraset sheets containin.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </wz-step>
+        </wizard>
+      </div>
+    </div>
+  </div>
+</div>

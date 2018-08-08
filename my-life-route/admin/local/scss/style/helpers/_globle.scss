@@ -1,0 +1,535 @@
+/*==================================== GLOBLE CSS ====================================*/
+
+html,
+body {
+    // height: 100%;
+    width: 100%;
+    line-height: $lineheight;
+    font-family: $font-family;
+    background-color: $color-bg-02;
+    font-weight: 100;
+    color: $color-text-01;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-text-stroke: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    //overflow-x: hidden;
+    @include transition(all 0.5s ease-in-out);
+
+    &.bg-grey {
+        background-color: #f8f8f8;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+li,
+p,
+img {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 100%;
+    font-weight: 100;
+    outline: none;
+    border: none;
+    line-height: 1.4;
+}
+
+a {
+    @include anchor;
+    @include transition($trasition_all);
+    color: $black;
+    &:hover {
+        color: darken($theme, 30%);
+    }
+}
+
+.responsiveimg {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.full {
+    width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+textarea {
+    -webkit-appearance: none;
+}
+
+select {
+    &:focus {
+        outline: none;
+    }
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle; //width: inherit;
+    &.justified-cell {
+        width: 1%;
+    }
+}
+
+label {
+    font-weight: 400;
+}
+
+// break
+.br {
+    display: block;
+}
+
+// Margin
+@include maring-and-padding-spacing($spacing);
+.margin-1x {
+    @extend %margin-1x;
+}
+
+.margin-left-1x {
+    @extend %margin-left-1x;
+}
+
+.margin-left-2x {
+    @extend %margin-left-2x;
+}
+
+.margin-left-3x {
+    @extend %margin-left-3x;
+}
+
+.margin-left-4x {
+    @extend %margin-left-4x;
+}
+
+.margin-left-6x {
+    @extend %margin-left-6x;
+}
+
+.margin-right-1x {
+    @extend %margin-right-1x;
+}
+
+.margin-right-2x {
+    @extend %margin-right-2x;
+}
+
+.margin-right-3x {
+    @extend %margin-right-3x;
+}
+
+.margin-right-4x {
+    @extend %margin-right-4x;
+}
+
+.margin-right-6x {
+    @extend %margin-right-6x;
+}
+
+.margin-top-1x {
+    @extend %margin-top-1x;
+}
+
+.margin-top-2x {
+    @extend %margin-top-2x;
+}
+
+.margin-top-3x {
+    @extend %margin-top-3x;
+}
+
+.margin-top-4x {
+    @extend %margin-top-4x;
+}
+
+.margin-top-5x {
+    @extend %margin-top-5x;
+}
+
+.margin-top-6x {
+    @extend %margin-top-6x;
+}
+
+.margin-top-8x {
+    @extend %margin-top-8x;
+}
+
+.margin-top-10x {
+    @extend %margin-top-10x;
+}
+
+.margin-bottom-1x {
+    @extend %margin-bottom-1x;
+}
+
+.margin-bottom-2x {
+    @extend %margin-bottom-2x;
+}
+
+.margin-bottom-3x {
+    @extend %margin-bottom-3x;
+}
+
+.margin-bottom-4x {
+    @extend %margin-bottom-4x;
+}
+
+.margin-bottom-6x {
+    @extend %margin-bottom-6x;
+}
+
+.margin-bottom-8x {
+    @extend %margin-bottom-8x;
+}
+
+.margin-bottom-10x {
+    @extend %margin-bottom-10x;
+}
+
+// PADDING
+.padding-1x {
+    @extend %padding-1x;
+}
+
+.padding-2x {
+    @extend %padding-2x;
+}
+
+.padding-4x {
+    @extend %padding-4x;
+}
+
+.padding-left-1x {
+    @extend %padding-left-1x;
+}
+
+.padding-left-2x {
+    @extend %padding-left-2x;
+}
+
+.padding-left-3x {
+    @extend %padding-left-3x;
+}
+
+.padding-left-4x {
+    @extend %padding-left-4x;
+}
+
+.padding-right-1x {
+    @extend %padding-right-1x;
+}
+
+.padding-right-2x {
+    @extend %padding-right-2x;
+}
+
+.padding-right-3x {
+    @extend %padding-right-3x;
+}
+
+.padding-right-4x {
+    @extend %padding-right-4x;
+}
+
+.padding-top-1x {
+    @extend %padding-top-1x;
+}
+
+.padding-top-2x {
+    @extend %padding-top-2x;
+}
+
+.padding-top-3x {
+    @extend %padding-top-3x;
+}
+
+.padding-top-4x {
+    @extend %padding-top-4x;
+}
+
+.padding-top-5x {
+    @extend %padding-top-5x;
+}
+
+.padding-top-6x {
+    @extend %padding-top-6x;
+}
+
+.padding-top-8x {
+    @extend %padding-top-8x;
+}
+
+.padding-top-10x {
+    @extend %padding-top-10x;
+}
+
+.padding-top-12x {
+    @extend %padding-top-12x;
+}
+
+.padding-bottom-1x {
+    @extend %padding-bottom-1x;
+}
+
+.padding-bottom-2x {
+    @extend %padding-bottom-2x;
+}
+
+.padding-bottom-3x {
+    @extend %padding-bottom-3x;
+}
+
+.padding-bottom-4x {
+    @extend %padding-bottom-4x;
+}
+
+.padding-bottom-6x {
+    @extend %padding-bottom-6x;
+}
+
+.padding-bottom-8x {
+    @extend %padding-bottom-8x;
+}
+
+.padding-bottom-10x {
+    @extend %padding-bottom-10x;
+}
+
+.Pad0_i {
+    padding: 0 !important;
+}
+
+// Main
+.form-control {
+    @include fontsize(13);
+    @include box-shadow-none;
+    @include radius(2px);
+    border-color: darken($white, 4%);
+    background-color: darken($white, 4%);
+    &:focus {
+        border-color: darken($theme, 20%);
+        @include box-shadow-none;
+    }
+    &.input-lg {
+        @include radius(4px);
+        @include padding-left(12);
+        @include padding-right(12);
+        @include height(48);
+    }
+}
+
+textarea {
+    &.form-control {
+        @include height(120);
+        resize: none;
+    }
+}
+
+input::-webkit-input-placeholder {
+    line-height: normal !important;
+}
+
+input[type="file"] {
+    cursor: pointer;
+    &::-webkit-file-upload-button {
+        cursor: pointer;
+    }
+}
+
+.fileUpload {
+    @include pos(rel, null);
+    overflow: hidden;
+    cursor: pointer;
+     ::-webkit-file-upload-button {
+        cursor: pointer;
+    }
+}
+
+.fileUpload input.upload {
+    @include pos(ab, 0);
+    @include margin(0);
+    @include padding(0);
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 100%;
+    height: 100%;
+}
+
+.flowhidden {
+    overflow: hidden;
+}
+
+.text-theme {
+    color: $theme;
+}
+
+.text-black {
+    color: $black !important;
+}
+
+.txt-blue {
+    color: $color-text-10 !important;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+// FONT WEIGHT
+.fw100 {
+    @include font-weight(rnormal);
+}
+
+.fw200 {
+    @include font-weight(rlight);
+}
+
+.fw300 {
+    @include font-weight(rmedium);
+}
+
+.fw400 {
+    @include font-weight(rbold);
+}
+
+.fw500 {
+    @include font-weight(rsbold);
+}
+
+
+
+
+.ib_v {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none !important;
+}
+
+.row-5 {
+    @include margin-left(-5);
+    @include margin-right(-5);
+    [class^="col-"] {
+        @include padding-left(5);
+        @include padding-right(5);
+    }
+}
+
+.row-10 {
+    @include margin-left(-10);
+    @include margin-right(-10);
+    [class^="col-"] {
+        @include padding-left(10);
+        @include padding-right(10);
+    }
+}
+
+.row-2 {
+    @include margin-left(-2);
+    @include margin-right(-2);
+    [class^="col-"] {
+        @include padding-left(2);
+        @include padding-right(2);
+    }
+}
+
+.select-control {
+    @include pos(rel, null);
+    z-index: 0;
+    &:after {
+        color: #000;
+        text-align: center;
+        content: "";
+        @include pos(ab, 50% 12px null null);
+        @include margin-top(-2);
+        @include arrow(bottom, #787878, 6px);
+        z-index: 1;
+    }
+    select {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding-right: 25px !important;
+        text-overflow: ellipsis;
+        line-height: inherit;
+        background-color: transparent;
+     
+        &::-ms-expand {
+            display: none;
+        }
+    }
+}
+
+.app-modal {
+    .modal-header {
+        background-color: $theme;
+        @include padding(25 35);
+        color: $white;
+        @include border-round(4 4 0 0);
+        .title {
+            @include fontsize(25);
+            font-weight: 400;
+        }
+    }
+    .close-ico {
+        background-color: transparent;
+        @include padding(0);
+        border: 0;
+        color: $white;
+        @include fontsize(30);
+        cursor: pointer;
+        @include pos(ab, 25px 20px null null);
+    }
+
+    &.app-modal-sm {
+        .modal-header {
+            @include padding(15 20);
+
+            .title {
+                @include fontsize(20);
+                font-weight: 400;
+            }
+        }
+
+        .close-ico {
+            top: 22px;
+            right: 20px;
+            @include fontsize(16);
+        }
+    }
+}

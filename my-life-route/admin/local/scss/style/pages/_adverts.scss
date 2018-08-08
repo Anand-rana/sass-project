@@ -1,0 +1,159 @@
+.dashboard-advert-section {
+    .advert-list {
+        .total-entries {
+            text-align: center;
+            @include font-size(15);
+            font-weight: 400;
+
+            span {
+                display: $ib;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .dashboard-adverts-dtl {
+        .heading-block {
+            @include border-bottom(1, solid, lighten($theme, 30%));
+            @include padding-bottom(10);
+
+            .title {
+                @include fontsize(24);
+                font-weight: 400;
+                color: $theme;
+            }
+        }
+
+        .adv-dtl-box {
+            @include box-shadow(0 4px 6px rgba(0,0,0,.12));
+            @include border(1, solid, #dfdfdf);
+            @include margin-top(50);
+            @include pos(rel, null);
+            .__inner-container {
+                @include padding(25);
+
+                .title-block {
+                    @include padding-top(20);
+                    h3.title {
+                        text-align: center;
+                        @include fontsize(25);
+                        font-weight: 400;
+                        color: $color-text-01;
+                    }
+                }
+
+
+                .slider-block {
+                    .adv-slider-block {
+                        max-width: 1000px;
+                        margin: 0 auto;
+                        @include pos(rel, null);
+
+                        .sliderNav {
+                            .owl-prev {
+                                @include pos(ab, 50% null null 0);
+                                @include fontsize(20);
+                                @include translatepos(0, -50%);
+                                cursor: pointer;
+                            }
+                            .owl-next {
+                                @include pos(ab, 50% 0 null null);
+                                @include fontsize(20);
+                                @include translatepos(0, -50%);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .adv-slider {
+                        max-width: 600px;
+                        margin: 20px auto 0;
+
+                        figure {
+                            @include margin(0);
+                            img {
+                                @include border-round(10);
+                            }
+
+                            figcaption {
+                                text-align: center;
+
+                                @include padding(20 0);
+
+                                h4 {
+                                    @include fontsize(16);
+                                    font-weight: 400;
+                                    color: $color-text-01;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .adv-dtl-info {
+                    color: $color-text-01;
+                    &>ul {
+                        &>li {
+                            @include padding-bottom(30);
+                            @include fontsize(15);
+                            font-weight: 400;
+
+                            .__label {
+                                font-weight: 300;
+                                @include padding-right(10);
+                            }
+                        }
+                    }
+
+                    .social-info {
+                        text-align: right;
+
+                        &>li {
+                            display: $ib;
+                            font-weight: 300;
+                            @include padding(0 20);
+
+                            .ico {
+                                @include fontsize(20);
+                                vertical-align: middle;
+                                display: $ib;
+                                @include padding-right(10);
+                            }
+                            .t-liked {
+                                color: #1e83b1;
+                            }
+                            .t-views {
+                                color: #e22126;
+                            }
+
+                            &:first-child {
+                                @include padding-left(0);
+                            }
+                        }
+                    }
+                }
+
+                .adv-des-txt {
+                    @include padding(20 0);
+
+                    @include border-top(1, solid, #c8c8c8);
+                    @include fontsize(15);
+
+                    p {
+                        line-height: 35px;
+                        color: $color-text-01;
+                    }
+                }
+                .adv-content-row {
+                    @include padding(20 0);
+                    @include border-top(1, solid, #e6e6e6);
+                    color: $color-text-01;
+                    @include fontsize(15);
+                    font-weight: 500;
+                    .__label {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+div(class="overlay-menu")
+	nav
+		ul
+			li
+				a(href="#") Home
+			li
+				a(href="#") About
+			li
+				a(href="#") Contact 
+			li
+				a(href="#") Terms &amp; Conditions
+			li
+				a(href="#") Privacy Policy
+	.close-btn(data-ng-click= "closemenu($event)")
+		i.icon-close-button
+header
+	.header-section
+		.container
+				.row
+					.col-md-8.col-8
+						a(href="#" class="logo")
+							img(src="images/logo.png" alt="logo")
+					.col-md-4.col-4
+						div(class="hamburger hamburger--spin nav-icon" data-ng-click= "menu($event)")
+							.hamburger-box
+								.hamburger-inner

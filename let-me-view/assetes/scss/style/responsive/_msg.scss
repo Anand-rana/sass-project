@@ -1,0 +1,25 @@
+@include media("<=480px") {
+    .inbox-list {
+        .all-msglist {
+            .msg-row {
+                .user {
+                    margin: 10px auto;
+                }
+
+                .msg-txt {
+                    @include padding(10);
+                }
+
+                .msg-cell {
+                    display: block;
+                    text-align: center;
+                }
+
+                .msg-ltno {
+                    @include margin-bottom(10);
+                    width:100%;
+                }
+            }
+        }
+    }
+}

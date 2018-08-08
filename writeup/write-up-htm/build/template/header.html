@@ -1,0 +1,36 @@
+
+<header>
+  <div class="header-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-2"><a class="logo" href="#"><img class="img-responsive" src="images/logo.jpg" alt="img"/></a></div>
+        <div class="col-md-9 col-sm-10">
+          <div class="nav-section">
+            <div class="main-nav">
+              <ul>
+                <li data-ui-sref-active="active"><a ui-sref="about">About</a></li>
+                <li data-ui-sref-active="active"><a ui-sref="contact">Contact</a></li>
+                <li><a href="#">News</a></li>
+                <li data-ui-sref-active="active"><a ui-sref="leaderboard">Leaderboard</a></li>
+              </ul>
+            </div>
+            <div class="main-login-nav">
+              <ul>
+                <li data-ui-sref-active="active"><a ui-sref="login">Login</a></li>
+                <li data-ui-sref-active="active" ng-class="{active: $state.is('signupcompany')}"><a ui-sref="signup">Signup</a></li>
+              </ul>
+            </div>
+            <div class="main-user-nav">
+              <ul>
+                <li ng-class="{active: $state.is('search')}">
+                  <div class="search-btn" ng-click="$state.go('search')"><i class="icon-magnifier"></i></div>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-icon" id="nav-icon3" data-ng-controller="MenuCtrl"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,17 @@
+.fogot-modal
+	.modal-header
+		h2.title Forgot Your Password ?
+		button(class="close-ico" id="forgot-close"  ng-click="cancel()")
+			i.icon-close-o
+	.modal-body
+		.forgot-form
+			h3 To reset your password – please enter your email address you provided during the registration process.
+			.field-group
+				.c-field.c-bg-color.c-md
+							input(type="text", placeholder="Enter Email Address").c-field-control
+				.btn-field.text-center
+					button.button.button-font-sbold.button-uppercase.button-width-large.button-height-large.button-rounded.margin-left-1x.margin-right-1x.margin-bottom-2x(ng-controller="ModalCtrl"  ng-click="msg()") SUBMIT
+					button.button.button-red.button-font-sbold.button-uppercase.button-width-large.button-height-large.button-rounded.margin-left-1x.margin-right-1x CANCEL
+
+     
+		

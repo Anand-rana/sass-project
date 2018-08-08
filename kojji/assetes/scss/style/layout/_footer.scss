@@ -1,0 +1,91 @@
+.footer-h {
+    @include pos(ab, null 0 10px 15px);
+
+    z-index: 99;
+    color: $white;
+}
+
+.copy-txt {
+    @include fontsize(14);
+}
+
+.social-share {
+    width: 230px;
+    -webkit-box-shadow: -2px 1px 18px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 1px 18px -4px rgba(0,0,0,0.75);
+box-shadow: -2px 1px 18px -4px rgba(0,0,0,0.75);
+    @include padding(10);
+
+    @include pos(ab, null null 0 30%);
+
+    cursor: pointer;
+    z-index: 100;
+
+    .social-share-list {
+        @include padding(10);
+
+        @include border-top(1, dashed, #ababab);
+
+        @include border-left(1, dashed, #ababab);
+
+        @include border-right(1, dashed, #ababab);
+
+        @include rotate(-2deg);
+
+        @include border-round(10 10 0 0);
+
+        @include open-semibold;
+
+        text-transform: $uppercase;
+
+        & > a {
+            width: 28px;
+            height: 28px;
+
+            @include circle;
+
+            line-height: 28px;
+            color: $white;
+            display: $inline;
+            text-align: center;
+        }
+    }
+
+    &:before {
+        content: "";
+
+        @include pos(ab, -5px 0px 5px 0px);
+
+        background-color: $white;
+
+        @include rotate(-2deg);
+
+        @include border-round(10 10 0 0);
+
+        @include border(2, solid, #fff);
+
+        -webkit-backface-visibility: hidden;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        background-color: $white;
+
+        @include pos(ab, 80% -1px 0 1px);
+
+        z-index: -1;
+    }
+}
+
+.facebook-ico {
+    background-color: #4867aa;
+}
+
+.twitter-ico {
+    background-color: #1da1f2;
+}
+
+.googleplus-ico {
+    background-color: #ea4d40;
+}

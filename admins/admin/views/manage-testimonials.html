@@ -1,0 +1,53 @@
+<div class="container-fluid">
+   <div class="panel" ng-init="testimonialList()">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <h2>Manage Testimonials</h2>
+          </div>
+          <div class="col-xs-12 col-md-6 text-right">
+            <a  data-ui-sref="main.add_testimonials" class="btn btn-success">ADD <i class="fa fa-plus"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+         <div class="table-responsive">
+            <table class="table table-bordered">
+               <thead>
+                  <tr>
+                     <th>User Image</th>
+                     <th>Name</th>
+                     <th>Description</th>
+                     <th>Action</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr ng-repeat="x in testimonialListResult">
+                     <td>
+                        <img src="{{x.image?((x.image|toImageUrl)+'?thumbnail=false'):'assets/images/avatar.jpg'}}"  class="img-thumbnail" width="100" />
+                     </td>
+                     <td>{{x.name}}</td>
+                     <td>{{x.description}}</td>
+                     <td>
+                        <button class="btn btn-primary" ng-show="!x.hide" ng-click="HideTestimonial(x._id)">Hide</button>
+                        <button class="btn btn-primary" ng-show="x.hide"  ng-click="UnHideTestimonial(x._id)">Unhide</button>
+                        <button class="btn btn-danger" ng-click="deleteTestimonial(x._id)">Delete</button>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="alert alert-danger" ng-show="testimonialList.data[0].length == 0">
+               No results found t
+            </div>
+         </div>
+      </div>
+
+      <div class="pagination-list">
+         <div class="row">
+            <div class="col-xs-12">
+               <!-- <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="trainerList()" max-size="maxSize" class="pagination-sm pull-right" boundary-link-numbers="true" rotate="false"></ul> -->
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

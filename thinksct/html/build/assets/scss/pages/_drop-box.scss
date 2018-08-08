@@ -1,0 +1,114 @@
+.mydropbox-section {
+    @include padding(60 0 50);
+
+    @include media("<=767px") {
+        @include padding(40 0);
+    }
+
+
+    ._dropList {
+        ._dropBox {
+            background-color: $white;
+            border-bottom: 2px solid $theme;
+
+            @include margin-bottom(50);
+
+            @include padding(15);
+
+            figure {
+                @include fluid-ratio(4 3, "img");
+
+                @include margin-bottom(0);
+
+                overflow: hidden;
+
+                @include media("<=991px") {
+                    @include fluid-ratio(16 9, "img");
+
+                    @include margin-bottom(20);
+                }
+
+
+                img {
+                    max-width: 100%;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+
+                    @include media("<=991px") {
+                        height: auto;
+                    }
+                }
+            }
+
+            ._name {
+                color: $white;
+                display: $ib;
+                line-height: 1.5;
+                min-width: 65px;
+                text-align: center;
+
+                @include fontsize(12);
+
+                @include padding(5);
+
+                @include radius(3px);
+            }
+
+            ._content {
+                @include margin-top(25);
+
+                h3 {
+                    font-weight: 700;
+
+                    @include fontsize(25);
+                }
+            }
+
+            ._aproval-block {
+                text-align: center;
+                color: darken($white, 40%);
+                position: relative;
+                height: 100%;
+
+                @include padding-top(30);
+
+                @include fontsize(14);
+
+                &:before {
+                    @include pos(ab, 15px null 15px -20px);
+
+                    width: 1px;
+                    background-color: darken($white, 10%);
+                    content: "";
+                }
+
+                @include media("<=991px") {
+                    &:before {
+                        display: none;
+                    }
+                }
+
+
+                .ico {
+                    @include fontsize(20);
+
+                    color: $font-color;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $theme;
+                    }
+                }
+
+                .button {
+                    padding: 0;
+
+                    @include margin-top(30);
+
+                    @include fontsize(15);
+                }
+            }
+        }
+    }
+}

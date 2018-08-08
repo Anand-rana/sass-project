@@ -1,0 +1,25 @@
+@include media("<=992px") {
+    .about-history-section {
+        .about-story {
+            figure {
+                @include margin-bottom(30);
+            }
+        }
+    }
+}
+
+@include media("<=480px") {
+    .about-history-section {
+        .about-collection {
+            .ab-row {
+                .ab-cell {
+                    display: $block;
+                    width: 100%;
+                }
+                .ab-c-txt {
+                    @include padding(20 10);
+                }
+            }
+        }
+    }
+}

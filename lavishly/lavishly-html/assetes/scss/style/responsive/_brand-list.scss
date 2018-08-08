@@ -1,0 +1,12 @@
+@include media("<=992px") {
+    .brand-section {
+        .brand-h-top {
+            h3 {
+                @include fontsize(30);
+                span {
+                    @include fontsize(22);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.dashboard-nav
+	.dashboard-nav__list(ng-nicescroll nice-option="{cursorcolor: '#000',cursorwidth:'6px',background:'#c4c4c4',cursorborder:'1px solid #c4c4c4',cursorborderradius:'5px',cursorfixedheight:200,touchbehavior:true}" nice-scroll-top-end="topEndComplete()" nice-scroll-end="endScroll()")
+		ul
+			li
+				a(data-ui-sref="dashboard-home" data-ui-sref-active="active")
+					span.icon-metor
+					|Dashboard
+
+			li
+				a(data-ui-sref="dashboard-messages" data-ui-sref-active="active")
+					span.icon-envelope
+					|Messages
+
+			li
+				a(data-ui-sref="dashboard-user-management" data-ui-sref-active="active")
+					span.icon-user
+					|User Mangement
+			li
+				a(href="javascript:void(0)" data-ng-click="isrouteCollapsed = !isrouteCollapsed" ng-class="{'active':isrouteCollapsed}" ).has-child 
+					span.icon-routes
+					|Life Routes
+				ul.d-sub-nav(uib-collapse="!isrouteCollapsed")
+					li
+						a(data-ui-sref="dashboard-route-listing" data-ui-sref-active="active")
+							span.icon-caret
+							|Life Route Listing
+					li
+						a(data-ui-sref="dashboard-routestats-listing" data-ui-sref-active="active")
+							span.icon-caret
+							|Life Route Stats
+			li
+				a(href="javascript:void(0)" data-ng-click="isnewsCollapsed = !isnewsCollapsed" ng-class="{'active':isnewsCollapsed}").has-child
+					span.icon-mike
+					|News
+				ul.d-sub-nav(uib-collapse="!isnewsCollapsed")
+					li
+						a(data-ui-sref="dashboard-news-listing" data-ui-sref-active="active")
+							span.icon-caret
+							|News Listing
+					li
+						a(data-ui-sref="dashboard-news-stats-listing" data-ui-sref-active="active")
+							span.icon-caret
+							|News Stats
+			li
+				a(href="javascript:void(0)" data-ng-click="iseventCollapsed = !iseventCollapsed" ng-class="{'active':iseventCollapsed}").has-child
+					span.icon-calender
+					|Events
+				ul.d-sub-nav(uib-collapse="!iseventCollapsed")
+					li
+						a(data-ui-sref="dashboard-event-listing" data-ui-sref-active="active")
+							span.icon-caret
+							|Events Listing
+					li
+						a(data-ui-sref="dashboard-event-stats-listing" data-ui-sref-active="active")
+							span.icon-caret
+							|Events Stats
+			li
+				a(href="javascript:void(0)" data-ng-click="isbsuinsessCollapsed = !isbsuinsessCollapsed" ng-class="{'active':isbsuinsessCollapsed}").has-child
+					span.icon-b-user
+					|Business Profiles
+				ul.d-sub-nav(uib-collapse="!isbsuinsessCollapsed")
+					li
+						a(data-ui-sref="dashboard-business-listing" data-ui-sref-active="active")
+							span.icon-caret
+							|Business Profiles Listing
+					li
+						a(data-ui-sref="dashboard-business-posts" data-ui-sref-active="active")
+							span.icon-caret
+							|Business Posts Stats
+			li
+				a(href="javascript:void(0)" data-ng-click="isadvertCollapsed = !isadvertCollapsed" ng-class="{'active':isadvertCollapsed}").has-child
+					span.icon-speaker
+					|Adverts
+				ul.d-sub-nav(uib-collapse="!isadvertCollapsed")
+					li
+						a(data-ui-sref="dashboard-adverts-listing" data-ui-sref-active="active") 
+							span.icon-caret
+							|Adverts For Approval
+					li
+						a(data-ui-sref="dashboard-adverts-stats-listing" data-ui-sref-active="active") 
+							span.icon-caret
+							|Adverts Stats
+			li
+				a(href="javascript:void(0)" data-ng-click="isreportCollapsed = !isreportCollapsed" ng-class="{'active':isreportCollapsed}").has-child
+					span.icon-question
+					|Reports
+				ul.d-sub-nav(uib-collapse="!isreportCollapsed")
+					li
+						a(data-ui-sref="dashboard-report-listing" data-ui-sref-active="active") 
+							span.icon-caret
+							|Users Issues &amp; Reports
+					li
+						a(href="#")
+							span.icon-caret
+							|Report Action Logs

@@ -1,0 +1,36 @@
+.share-route-modal
+	.modal-header
+		h2.title Share  My liferoute
+		button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close
+	.modal-body
+		.share-route-opt
+			.share-route-opt-row
+				.row
+					.col-md-8.col-sm-8.col-xs-8
+						h3 Post this to Specific People only
+					.col-md-4.col-sm-4.col-xs-4
+						.c-oth-opt__btn
+							.fh-switch.fh-sm
+									input(type="radio" id="one" name="b" ng-model="content" value="first")
+									label(for="one")
+									span.fh-switch-knob
+			.share-route-opt-row
+				.row
+					.col-md-8.col-sm-8.col-xs-8
+						h3 From the list of my connection only
+					.col-md-4.col-sm-4.col-xs-4
+						.c-oth-opt__btn
+							.fh-switch.fh-sm
+									input(type="radio" id="two" name="b" ng-model="content" value="other")
+									label(for="two")
+									span.fh-switch-knob
+			.share-route-opt-row(ng-show="content == 'first'")
+				
+				.c-field.c-outline.c-1.c-shadow.c-b-sm
+					input(type="text", placeholder="Select People").c-field-control
+				.btn-field.margin-top-5x
+					button.button.button-green.button-width-large.button-rounded.button.font-medium-txt Share
+			
+		
+		

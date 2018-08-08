@@ -1,0 +1,458 @@
+$color-default: #849FBB; // default color
+$color-default-light: #DDDDDD; // default color light
+$coloraction:#000;
+$color-active: $coloraction; // color when active or checked
+$color-active-light: lighten($theme, 10%); // active color light
+$color-focus: #6FB5FB; // color when focused
+$margin-el: 5px; // default margin for our custom inputs
+
+/**
+* Checkboxes & radios
+*/
+
+.fh-checkbox>[type="checkbox"],
+.fh-radio>[type="radio"] {
+    &:checked,
+    &:not(:checked) {
+        width: 0;
+        height: 0;
+        display: none;
+        opacity: 0;
+        &+label {
+            display: inline-block;
+            margin-bottom: $margin-el;
+            padding-left: 30px;
+            position: relative;
+            cursor: pointer;
+            font-weight: 400;
+            line-height: 20px;
+            &:before {
+                // position elements absolute to parent container
+                position: absolute;
+                display: inline-block;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                border: 1px solid $color-default;
+                color: $color-default; //border-radius:3px;
+            } //&:hover:before {
+            // add some hover styling
+            //background-color: $color-default;
+            //}
+        }
+        &:focus+label:before {
+            border-color: $color-focus;
+            box-shadow: 0 0 6px 0 $color-focus;
+        }
+        &[disabled]+label {
+            cursor: not-allowed;
+            opacity: .4;
+            &:before {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+// styling for checkbox for both states
+.fh-checkbox>[type="checkbox"]:checked+label:before,
+.fh-checkbox>[type="checkbox"]:not(:checked)+label:before {
+    // set icon font
+    font-family: "FontAwesome";
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center; // add some CSS3-animations
+    -webkit-transition: border-color .2s ease-in, background-color .2s ease-in;
+    -moz-transition: border-color .2s ease-in, background-color .2s ease-in;
+    -o-transition: border-color .2s ease-in, background-color .2s ease-in;
+    -ms-transition: border-color .2s ease-in, background-color .2s ease-in;
+    transition: border-color .2s ease-in, background-color .2s ease-in;
+}
+
+// styling for checkbox when selected
+.fh-checkbox>[type="checkbox"]:checked+label:before {
+    // set checkmark icon
+    content: "\f00c";
+    color: #FFF;
+    background-color: $color-active;
+    border-color: $color-active;
+}
+
+// styling for checkbox when not selected
+.fh-checkbox>[type="checkbox"]:not(:checked)+label:before {
+    // remove checkmark icon
+    content: "";
+}
+
+// styling for radio for Not checked states
+.fh-radio>[type="radio"]:not(:checked)+label:before {
+    background-color: $theme;
+    border-color: $theme;
+    @include box-shadow-none;
+}
+
+// styling for radio for both states
+.fh-radio>[type="radio"]:checked+label:before,
+.fh-radio>[type="radio"]:not(:checked)+label:before,
+{
+    content: "";
+    border-radius: 15px; // add some CSS3-animations
+    -webkit-transition: border-color .2s ease-in, box-shadow .1s ease-in, background-color .2s ease-in, box-shadow .2s ease-in;
+    -moz-transition: border-color .2s ease-in, box-shadow .1s ease-in, background-color .2s ease-in;
+    -o-transition: border-color .2s ease-in, box-shadow .1s ease-in, background-color .2s ease-in;
+    -ms-transition: border-color .2s ease-in, box-shadow .1s ease-in, background-color .2s ease-in;
+    transition: border-color .2s ease-in, box-shadow .1s ease-in, background-color .2s ease-in;
+}
+
+// styling for radio when selected
+.fh-radio>[type="radio"]:checked+label:before {
+    color: $color-active;
+    border-color: $theme;
+    background-color: $theme; // use box-shadow to render circle
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+// styling for radio when not selected
+.fh-radio>[type="radio"]:not(:checked)+label:before {
+    //box-shadow: inset 0 0 0 3px #fff; 
+}
+
+
+/**
+* On/off switch
+*/
+
+.fh-switch {
+    position: relative;
+}
+
+.fh-switch>[type="checkbox"]:checked,
+.fh-switch>[type="checkbox"]:not(:checked),
+.fh-switch>[type="radio"]:checked,
+.fh-switch>[type="radio"]:not(:checked) {
+    width: 0;
+    height: 0;
+    display: none;
+    opacity: 0;
+    &+label {
+        cursor: pointer;
+        display: block;
+        width: 80px;
+        height: 35px;
+        &:after {
+            content: "";
+            top: 0px;
+            left: 0px;
+            width: 80px;
+            height: 35px; // use absolute for better positioning
+            position: absolute;
+            border-radius: 30px;
+        }
+        &+.fh-switch-knob {
+            top: 1px;
+            width: 33px;
+            height: 33px;
+            border-radius: 30px;
+            display: inline-block;
+            position: absolute;
+            cursor: pointer;
+            pointer-events: none;
+            @include box-shadow(0 2px 4px rgba(0, 0, 0, .46));
+            -webkit-transition: left .1s ease-in, background-color .1s ease-in;
+            -moz-transition: left .1s ease-in, background-color .1s ease-in;
+            -o-transition: left .1s ease-in, background-color .1s ease-in;
+            -ms-transition: left .1s ease-in, background-color .1s ease-in;
+        }
+    }
+    &:focus+label:after,
+    &:focus+label+.fh-switch-knob {
+        box-shadow: 0 0 6px 0 $color-focus;
+    }
+    &[disabled] {
+        &+label,
+        &+label:after,
+        &+label+.fh-switch-knob {
+            cursor: not-allowed;
+            opacity: 0.4;
+        }
+    }
+}
+
+.fh-switch.fh-sm>[type="checkbox"]:checked,
+.fh-switch.fh-sm>[type="checkbox"]:not(:checked),
+.fh-switch.fh-sm>[type="radio"]:checked,
+.fh-switch.fh-sm>[type="radio"]:not(:checked) {
+    &+label {
+        width: 60px;
+        height: 25px;
+
+        &:after {
+            width: 60px;
+            height: 25px; // use absolute for better positioning
+        }
+
+        &+.fh-switch-knob {
+
+            width: 23px;
+            height: 23px;
+        }
+    }
+}
+
+.fh-switch>[type="checkbox"]:checked+label:after,
+.fh-switch>[type="radio"]:checked+label:after {
+    background-color: #39b54a;
+}
+
+.fh-switch.fc-1>[type="checkbox"]:checked+label:after,
+.fh-switch.fc-1>[type="radio"]:checked+label:after {
+    background-color: #8800d6;
+}
+
+.fh-switch.fc-3>[type="checkbox"]:checked+label:after,
+.fh-switch.fc-3>[type="radio"]:checked+label:after {
+    background-color: #ec7d10;
+}
+
+.fh-switch.fc-2>[type="checkbox"]:checked+label:after,
+.fh-switch.fc-2>[type="radio"]:checked+label:after {
+    background-color: #07beb8;
+}
+
+.fh-switch>[type="checkbox"]:not(:checked)+label:after,
+.fh-switch>[type="radio"]:not(:checked)+label:after {
+    background-color: #cccecc;
+}
+
+.fh-switch>[type="checkbox"]:checked+label+.fh-switch-knob,
+.fh-switch>[type="radio"]:checked+label+.fh-switch-knob  {
+    left: 45px;
+    background-color: $white;
+}
+
+.fh-switch.fh-sm>[type="checkbox"]:checked+label+.fh-switch-knob ,
+.fh-switch.fh-sm>[type="radio"]:checked+label+.fh-switch-knob {
+    left: 35px;
+    background-color: $white;
+}
+
+.fh-switch>[type="checkbox"]:not(:checked)+label+.fh-switch-knob,
+.fh-switch>[type="radio"]:not(:checked)+label+.fh-switch-knob {
+    left: 1px;
+    background-color: $white;
+}
+
+.label-checkbox {
+    position: relative;
+    font-weight: normal;
+    cursor: pointer;
+    @include transition(all 0.2s);
+    & * {
+        @include transition(inherit);
+    }
+    .check-mark {
+        display: inline-block;
+        @include square(20px);
+        border: 1px solid #353535;
+        @include fontsize(10);
+        @include pos(r, null);
+        text-align: center;
+        border-radius: 4px;
+        overflow: hidden;
+        vertical-align: middle;
+
+        &:before {
+            @include pos(ab, 0 0 0 0);
+            @include scale(0);
+            @include transition(all 0.2s);
+            @include opacity(0);
+            font-family: 'icomoon' !important;
+            content: "\e901";
+            line-height: 18px;
+        }
+    }
+    input[type="checkbox"] {
+        @include opacity(0);
+        @include pos(ab, null);
+        visibility: hidden;
+        &:checked {
+            &+.check-mark {
+                background-color: $black;
+                &:before,
+                i {
+                    @include scale(1);
+                    @include opacity(1);
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .label-name {
+        margin-left: 12px;
+        font-family: $font-family;
+        font-weight: 400;
+        @include fontsize(18);
+        vertical-align: middle;
+    }
+    &.label-checkbox-small {
+
+        .label-name {
+            text-transform: none;
+            @include fontsize(16);
+        }
+
+        input[type="checkbox"] {
+            &:checked {
+                &+.check-mark {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+
+.label-checkbox-o {
+    position: relative;
+    font-weight: normal;
+    cursor: pointer;
+    @include transition(all 0.2s);
+    & * {
+        @include transition(inherit);
+    }
+    .check-mark {
+        display: inline-block;
+        @include square(15px);
+        line-height: 15px;
+        background-color: #ccc7c7;
+        font-size: 10px;
+        @include pos(r, null);
+        text-align: center;
+        border-radius: 2px;
+        overflow: hidden;
+        vertical-align: middle;
+
+        &:before {
+            @include pos(ab, 0 0 0 0);
+            @include scale(0);
+            @include transition(all 0.2s);
+            @include opacity(0);
+            font-family: 'icomoon' !important;
+            content: "\e901";
+        }
+    }
+    input[type="checkbox"] {
+        @include opacity(0);
+        @include pos(ab, null);
+        visibility: hidden;
+        &:checked {
+            &+.check-mark {
+                background-color: $theme;
+                color: $white;
+                &:before,
+                i {
+                    @include scale(1);
+                    @include opacity(1);
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .label-name {
+        margin-left: 12px;
+        font-family: $font-family;
+        font-weight: 400;
+        @include fontsize(15);
+        vertical-align: middle;
+        color: #444444;
+    }
+
+    &.label-checkbox-o-lg {
+        .check-mark {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+        }
+        .label-name {
+            @include fontsize(18);
+            font-weight: 500;
+        }
+    }
+}
+
+
+.label-radio {
+    font-weight: 100;
+    @include fontsize(14);
+    cursor: pointer;
+    @include pos(r, null);
+    z-index: 0;
+    @include transition(all 0.2s);
+    & * {
+        @include transition(inherit);
+    }
+
+    .label-name {
+        margin-left: 12px;
+        font-family: $font-family;
+        font-weight: 100;
+        @include fontsize(18);
+        text-transform: uppercase;
+        vertical-align: middle;
+    }
+    .check-radio {
+        display: inline-block;
+        @include square(18px);
+        border: 1px solid darken(#d9d9d9, 10%);
+        @include fontsize(10);
+        color: #fff;
+        @include pos(r, null);
+        text-align: center;
+        overflow: hidden;
+        vertical-align: middle;
+
+
+        &:before {
+            @include pos(ab, 5px 5px 5px 5px);
+            @include transition(all 0.2s);
+            background-color: darken(#d9d9d9, 10%);
+            @include opacity(0);
+            @include circle;
+            z-index: -1;
+            content: "";
+        }
+    }
+    input[type="radio"] {
+        @include opacity(0);
+        @include pos(ab, null);
+        visibility: hidden;
+        &:checked {
+            &+.check-radio {
+                &:before {
+                    @include opacity(1);
+                }
+            }
+        }
+    }
+
+    &.label-radio-small {
+        .check-radio {
+
+
+            border-color: darken(#d9d9d9, 10%);
+
+
+
+            &:before {
+                color: darken(#d9d9d9, 10%);
+            }
+        }
+        .label-name {
+            text-transform: none;
+            @include fontsize(16);
+        }
+    }
+}

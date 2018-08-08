@@ -1,0 +1,370 @@
+.about-section {
+    @include padding-top(60);
+    .about-content-block {
+        @include margin-top(70);
+
+        .about-content-img__block {
+            background-color: $white;
+            @include padding(50 0 80);
+            @include box-shadow(0 0 4px rgba(0, 0, 0, .09));
+        }
+
+        .about-content-txt__block {
+            @include padding(50 0 70);
+            @include border-top(5, solid, #ebebeb);
+            @include border-bottom(5, solid, #ebebeb);
+            @include pos(rel, null);
+            @include fontsize(13);
+            p {
+                @include margin-bottom(15);
+            }
+            .main-heading {
+                @include pos(ab, -40px null null null);
+            }
+        }
+
+        .about-content-team__block {
+            background-color: $white;
+            @include pos(rel, null);
+            .main-heading {
+                @include pos(ab, -40px null null null);
+            }
+            .team-list {
+                @include padding(70 0 50);
+
+                .team-slider {
+                    @include pos(rel, null);
+
+                    .owl-next {
+                        @include pos(ab, 50% -20px null null);
+                        @include fontsize(25);
+                        @include padding(15 20);
+                        background-color: $theme;
+                        color: $black;
+                        cursor: pointer;
+                        @include translatepos(0, -50%);
+                    }
+                    .owl-prev {
+                        @include pos(ab, 50% null null -20px);
+                        @include fontsize(25);
+                        @include padding(15 20);
+                        background-color: $theme;
+                        cursor: pointer;
+                        color: $black;
+                        @include translatepos(0, -50%);
+                    }
+                }
+
+                .team-box {
+                    figure {
+                        @include margin(0);
+                        @include pos(rel, null);
+
+                        ul {
+                            @include pos(ab, null null -1px null);
+                            li {
+                                float: left;
+
+                                a {
+                                    @include padding(15 20);
+                                    display: $b;
+                                    background-color: $theme;
+                                    @include border-right(1, solid, darken($theme, 10%));
+                                    color: $color-text-03;
+                                    @include pos(rel, null);
+                                    overflow: hidden;
+
+
+                                    .roll_over {
+                                        @include pos(ab, 0 0 0 0);
+                                        width: 100%;
+                                        background-color: $color-bg-05;
+                                        color: $white;
+                                        @include padding(15 20);
+                                        @include transform(translate3d(0, 200%, 0));
+                                        -webkit-transition: all 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
+                                        transition: all 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
+                                        display: $b;
+                                    }
+                                    .btn_inner {
+                                        -webkit-transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+                                        transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+                                        @include transform(translate3d(0, 0, 0));
+                                        display: $b;
+                                    }
+
+                                    &:hover {
+                                        .btn_inner {
+                                            @include transform(translate3d(0, -200%, 0));
+                                        }
+                                        .roll_over {
+                                            @include transform(translate3d(0, 0, 0));
+                                        }
+                                    }
+                                }
+
+                                &:last-child {
+                                    a {
+                                        border-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    figcaption {
+                        @include padding(15 0);
+
+                        h3 {
+                            @include fontsize(16);
+                            text-transform: uppercase;
+                            font-family: $font-family-alt;
+                            font-weight: 100;
+                            color: $color-text-04;
+                            @include padding-bottom(5);
+                        }
+                        h4 {
+                            color: $color-text-04;
+                            @include fontsize(12);
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+        .about-content-company__block {
+            overflow: hidden;
+            .quote-icon {
+                background-color: $theme;
+                @include padding(20 25);
+                @include fontsize(40);
+                max-width: 100px;
+                text-align: center;
+                @include pos(rel, null);
+                @include margin(50 0);
+
+                &:before {
+                    @include pos(ab, null 0 100% 0);
+                    content: "";
+                    background-color: $theme;
+                    @include opacity(0.5);
+                    height: 10000px;
+                }
+                &:after {
+                    @include pos(ab, 100% 0 null 0);
+                    content: "";
+                    background-color: $theme;
+                    @include opacity(0.5);
+                    height: 10000px;
+                }
+            }
+            .ab-company-txt {
+                @include padding(50 0);
+                @include fontsize(16);
+                color: $color-text-04;
+                .author {
+                    display: $b;
+                    @include fontsize(15);
+                    text-align: right;
+                    @include margin-top(20);
+                    font-family: $font-family-alt;
+                    font-weight: 100;
+                    color: $color-text-04;
+                }
+            }
+            .ab-ceo-img {
+                @include fluid-ratio(4 3, img);
+                overflow: hidden;
+                img {
+
+                    max-width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.contact-form-section {
+    @include margin-top(70);
+    background-color: $white;
+    @include box-shadow(0 0 4px rgba(0, 0, 0, .09));
+
+    .contact-form-box {
+        display: table;
+        width: 100%;
+        .contact-form {
+            @include padding(40 50);
+            background-color: $theme;
+            display: table-cell;
+            width: 70%;
+            vertical-align: middle;
+            .t-field-control {
+                width: 100%;
+                border: 0;
+                @include padding(10 15);
+                background-color: $white;
+                font-family: $font-family-alt;
+                font-weight: 100;
+                @include fontsize(14);
+                &::-webkit-input-placeholder {
+                    /* Chrome/Opera/Safari */
+                    color: $color-text-01;
+                    opacity: 1;
+                    text-transform: uppercase;
+                }
+                &::-moz-placeholder {
+                    /* Firefox 19+ */
+                    color: $color-text-01;
+                    opacity: 1;
+                    text-transform: uppercase;
+                }
+                &:-ms-input-placeholder {
+                    /* IE 10+ */
+                    color: $color-text-01;
+                    opacity: 1;
+                    text-transform: uppercase;
+                }
+                &:-moz-placeholder {
+                    /* Firefox 18- */
+                    color: $color-text-01;
+                    opacity: 1;
+                    text-transform: uppercase;
+                }
+            }
+
+            textarea.t-field-control {
+                resize: none;
+            }
+        }
+        .contact-info-list {
+            display: table-cell;
+            width: 30%;
+            vertical-align: middle;
+            @include padding(40 50);
+            @include fontsize(12);
+            color: $color-text-04;
+
+            .media {
+                .media-left,
+                .media-right,
+                .media-body {
+                    vertical-align: middle;
+                }
+                .media-left {
+                    @include padding-right(20);
+                    .icon {
+                        width: 48px;
+                        height: 48px;
+                        @include border(2, solid, #414146);
+                        @include circle;
+                        display: $b;
+                        text-align: center;
+                        @include fontsize(20);
+                        line-height: 48px;
+                        color: $color-text-04;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.terms-section {
+    @include padding-top(60);
+}
+
+.faq-section {
+    @include padding-top(60);
+
+    .faq-list {
+        @include margin-top(25);
+
+        .panel {
+            @include box-shadow(0 1px 3px rgba(0, 0, 0, .14));
+            border: 0;
+            border-radius: 0;
+
+            .panel-heading {
+                background-color: transparent;
+                border: 0;
+                .panel-title {
+                    @include fontsize(16);
+                    font-family: $font-family-alt;
+                    font-weight: 100;
+
+                    a {
+                        &:hover,
+                        &:focus {
+                            color: $color-text-06;
+                        }
+
+                        [class*="icon-"] {
+                            color: $color-text-03 !important;
+                        }
+                    }
+                }
+            }
+
+            .panel-body {
+
+                ol,
+                ul {
+                    @include padding-left(20);
+                }
+            }
+        }
+    }
+}
+
+.page-content-section {
+    @include margin-top(70);
+    background-color: $white;
+    @include box-shadow(0 0 4px rgba(0, 0, 0, .09));
+    @include padding(50 0);
+    @include fontsize(14);
+
+    p {
+        color: $color-text-04;
+        @include margin-bottom(20);
+    }
+
+    h2 {
+        @include fontsize(20);
+        font-family: $font-family-alt;
+        font-weight: 100;
+        @include padding-bottom(20);
+    }
+    h3 {
+        @include fontsize(16);
+        font-family: $font-family-alt;
+        font-weight: 100;
+        @include padding-bottom(20);
+    }
+}
+
+.post-section {
+    @include padding-top(60);
+    .post-content-block {
+        @include margin-top(70);
+
+        .post-content-img__block {
+            background-color: $white;
+            @include padding(50 0 80);
+            @include box-shadow(0 0 4px rgba(0, 0, 0, .09));
+        }
+
+        .post-content-txt__block {
+            @include padding(50 0 70);
+            @include border-top(5, solid, #ebebeb);
+            @include border-bottom(5, solid, #ebebeb);
+            @include pos(rel, null);
+            @include fontsize(13);
+            p {
+                @include margin-bottom(15);
+            }
+            .main-heading {
+                @include pos(ab, -40px null null null);
+            }
+        }
+    }
+}

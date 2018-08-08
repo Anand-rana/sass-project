@@ -1,0 +1,372 @@
+.dashboard-advert-section
+	.header-block
+		.row
+			.col-md-4
+				.sort-input-field.margin-bottom-2x
+					.select-control
+						select.sort-field-control
+							option Sort By
+			.col-md-8
+				.text-right
+					button.button.button-l-green.button-height-large.button-font-bold.button-rounded.margin-right-1x All  Adverts
+					button.button.button-height-large.button-font-bold.button-rounded(ng-controller="ModalCtrl"  ng-click="astatssearch()")
+						i.icon-magnifier
+	.advert-list
+		.total-entries
+			span 500 Entries
+		.data-table
+			.table-responsive
+				table.table.c-5.table-bordered
+					thead
+						tr
+							th(class="text-center") No
+							th(class="text-center") Title
+							
+							th(class="text-center") Author
+								br
+								|Name
+							th(class="text-center") Creator Email
+							th(class="text-center") Location 
+							th(class="text-center") Profile Type
+							
+							th(class="text-center") Creation Date
+								br 
+								span (DD/MM/YYYY)
+							th(class="text-center") Start Date
+								br 
+								span (DD/MM/YYYY)
+							th(class="text-center") End Date
+								br 
+								span (DD/MM/YYYY)
+							th(class="text-center") Duration
+							th(class="text-center") Video Links
+							th(class="text-center") Images
+							
+							th(class="text-center") Actions
+					tbody
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+						tr
+							td(align="center") 1
+							td(align="center") Lorem Ipsum is simp text ennie 
+							td(align="center") Jennie jackson
+							td(align="center") Jennie_son@gmail.com
+							td(align="center") Mohali India
+							td(align="center") Brand/Product
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 07/06/2017
+							td(align="center") 5 Days
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="video()")
+									i.icon-help
+							td(align="center") 10
+								span.help-ico.c-4(ng-controller="ModalCtrl"  ng-click="images()")
+									i.icon-help
+							
+							td(align="center")
+								a(data-ui-sref="dashboard-adverts-stats-dtl").view-ico.opt-ico
+									i.icon-eye
+								span.ap-ico.opt-ico
+									i.icon-check-o
+								span.close-ico.opt-ico(ng-controller="ModalCtrl"  ng-click="reject()")
+									i.icon-close-o
+
+					
+						
+						
+		.page-nation-list.c-4.margin-top-4x
+			ul
+				li
+					a(href="#") 1
+				li
+					a(href="#").active 2
+				li
+					a(href="#") 3
+				li
+					a(href="#") 4
+				li
+					a(href="#") 5
+				li
+					a(href="#") 6
+				li
+					a(href="#") 7
+				li
+					a(href="#") 8
+				li
+					a(href="#").next-btn Next
+						Span.ico
+							i.icon-angle-right

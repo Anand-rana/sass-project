@@ -1,0 +1,326 @@
+@include media(">=768px") {
+
+.section-app-content
+{
+  .video_block
+  {
+    .video-box {
+      @include margin-bottom(20);
+      @include margin(0);
+      overflow: hidden;
+      @include fluid-ratio(3 2, video);
+      video {
+        width: 100%;
+        height: 100%;
+        //object-fit: cover;
+      }
+    }
+  }
+}
+}
+@include media("<=992px") {
+  .section-our-services {
+    .services-list {
+      ul {
+        & > li {
+          line-height: 60px;
+          @include fontsize(40);
+        }
+      }
+    }
+  }
+
+  .section-app-about {
+    .app-about-content {
+      .txt-block {
+        min-height: 700px;
+      }
+    }
+  }
+
+  .app-desgin-development-page {
+    .section-app-about {
+      .app-about-content {
+        .txt-block {
+          min-height: 600px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) , (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation: landscape) {
+  .section-app-about {
+    .inner-block {
+      height: auto;
+      @include padding(40 0);
+    }
+
+    .app-about-content {
+      .txt-block {
+        min-height: 370px;
+      }
+
+      h2,
+      p {
+        @include fontsize(24);
+        line-height: 40px;
+      }
+    }
+  }
+
+  .app-desgin-development-page {
+    .section-app-about {
+      .app-about-content {
+        .txt-block {
+          min-height: 290px;
+        }
+      }
+    }
+  }
+
+  .section-app-desgin {
+    .inner-block {
+      height: auto;
+      @include padding(40 0);
+
+      h3 {
+        @include fontsize(24);
+      }
+    }
+
+    .txt-block {
+      p {
+        line-height: 24px;
+      }
+    }
+
+    .app-phone-bg {
+      margin: 0 auto;
+      width: 60%;
+      background-size: 100%;
+      height: auto;
+      @include ratio(1,2.05);
+      //  @include padding(0 20);
+      img,
+      video {
+        @include pos(ab, 0 0 0 0);
+        width: 100%;
+        height: 100%;
+        padding: 25% 5%;
+        @include margin-top(0);
+      }
+
+      .wp-video {
+        @include pos(ab, 0 0 0 0);
+        width: 100%;
+        height: 100%;
+        padding: 25% 5%;
+        @include margin-top(0);
+      }
+    }
+  }
+
+  .section-app-content {
+    .app-phone-bg {
+      margin: 0 auto;
+    }
+
+    .video_block {
+      @include margin-top(50);
+    }
+
+    .txt-block {
+      p {
+        line-height: 24px;
+      }
+    }
+
+
+
+    .app-phone-bg {
+      margin: 0 auto 30px;
+      width: 60%;
+      background-size: 100%;
+      height: auto;
+      @include ratio(1,2.05);
+      //  @include padding(0 20);
+      img,
+      video {
+        @include pos(ab, 0 0 0 0);
+        width: 100%;
+        height: 100%;
+        padding: 25% 5%;
+        @include margin-top(0);
+      }
+
+      .wp-video {
+        @include pos(ab, 0 0 0 0);
+        width: 100%;
+        height: 100%;
+        padding: 25% 5%;
+        @include margin-top(0);
+      }
+    }
+  }
+
+  .section-app-dev {
+    .inner-block {
+      height: auto;
+      @include padding(40 0);
+
+      h3 {
+        @include fontsize(24);
+      }
+    }
+
+    .txt-block {
+      p {
+        line-height: 24px;
+      }
+    }
+
+    .app-tablet-bg {
+      margin: 0 auto;
+      width: 75%;
+      background-size: 100%;
+      height: auto;
+      @include ratio(1,1.5);
+      //  @include padding(0 20);
+      float: none;
+      padding:0;
+      img,
+      video {
+        @include pos(ab, 0 0 0 0);
+        width: 100%;
+        height: 100%;
+        padding: 12% 6% 20%;
+        @include margin-top(0);
+      }
+
+      .wp-video {
+        @include pos(ab, 0 0 0 0);
+        width: 100%;
+        height: 100%;
+        padding: 25% 5%;
+        @include margin-top(0);
+      }
+    }
+  }
+
+  .section-our-services {
+    .inner-block {
+      height: auto;
+      @include padding(40 0);
+    }
+
+    .services-list {
+      ul {
+        & > li {
+          line-height: 25px;
+          @include fontsize(16);
+        }
+      }
+    }
+
+    .services-list-boxs {
+      @include margin-top(50);
+
+      .s-box {
+        .s-post-container {
+          background-color: #fafafa;
+
+          img {
+            display: none;
+          }
+
+          h4 {
+            @include pos(ab,30% null null null);
+            @include translatepos(0,-30%);
+          }
+
+          .rpscw-sidept {
+            @include pos(ab,50% 0 null 0);
+            @include translatepos(0,-50%);
+            @include padding-top(0);
+            @include padding-bottom(0);
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .section-digital-services {
+    .services-list-boxs {
+      .s-box {
+        .s-post-container {
+          background-color: #fafafa;
+
+          img {
+            display: none;
+          }
+
+          h4 {
+            @include pos(ab,30% null null null);
+            @include translatepos(0,-30%);
+          }
+
+          .rpscw-sidept {
+            @include pos(ab,50% 0 null 0);
+            @include translatepos(0,-50%);
+            @include padding-top(0);
+            @include padding-bottom(0);
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 479px) , (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation: landscape) {
+  .section-digital-services {
+    .services-list-boxs {
+      .s-box {
+        .s-post-container {
+          h4 {
+            top: 30px;
+            @include translatepos(0,0%);
+          }
+        }
+      }
+    }
+  }
+
+  .section-our-services {
+    .services-list-boxs {
+      .s-box {
+        .s-post-container {
+          h4 {
+            top: 30px;
+            @include translatepos(0,0%);
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : landscape) {
+  .section-app-about {
+    .app-about-content {
+      .txt-block {
+        min-height: 250px;
+      }
+    }
+  }
+
+  .app-desgin-development-page {
+    .section-app-about {
+      .app-about-content {
+        .txt-block {
+          min-height: 160px;
+          @include margin-top(10);
+        }
+      }
+    }
+  }
+}

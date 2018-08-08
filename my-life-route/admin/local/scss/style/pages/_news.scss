@@ -1,0 +1,200 @@
+.dashboard-news-section {
+    .news-list {
+        .total-entries {
+            text-align: center;
+            @include font-size(15);
+            font-weight: 400;
+
+            span {
+                display: $ib;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.dashboard-news-event-dtl {
+    .heading-block {
+        @include border-bottom(1, solid, lighten($theme, 30%));
+        @include padding-bottom(10);
+
+        .title {
+            @include fontsize(24);
+            font-weight: 400;
+            color: $theme;
+        }
+    }
+    .news-event-dtl-box {
+        @include box-shadow(0 4px 6px rgba(0,0,0,.12));
+        @include border(1, solid, #dfdfdf);
+        @include margin-top(50);
+        @include pos(rel, null);
+        .__inner-container {
+            @include padding(25);
+
+            .title-block {
+                @include padding-top(20);
+                h3.title {
+                    text-align: center;
+                    @include fontsize(25);
+                    font-weight: 400;
+                    color: $color-text-01;
+                }
+            }
+
+
+            .slider-block {
+                .news-event-slider-block {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    @include pos(rel, null);
+
+                    .sliderNav {
+                        .owl-prev {
+                            @include pos(ab, 50% null null 0);
+                            @include fontsize(20);
+                            @include translatepos(0, -50%);
+                            cursor: pointer;
+                        }
+                        .owl-next {
+                            @include pos(ab, 50% 0 null null);
+                            @include fontsize(20);
+                            @include translatepos(0, -50%);
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .news-event-slider {
+                    max-width: 600px;
+                    margin: 35px auto 0;
+
+                    figure {
+                      @include margin(0);
+                      .img-container
+                      {
+                          @include fluid-ratio(16 9,img);
+                          overflow: hidden;
+                          @include border-round(10);
+
+                      }
+                      .video {
+                        @include fluid-ratio(16 9);
+                        overflow: hidden;
+
+                        .video-container {
+                          position: absolute;
+                          left: 0;
+                          right: 0;
+                          top: 0;
+                          bottom: 0;
+                          margin: auto;
+                        }
+                      }
+
+
+
+                      figcaption {
+                        text-align: center;
+                        @include padding(20 0);
+
+                        h4 {
+                          @include fontsize(20);
+                          font-weight: 300;
+                          color: $color-text-02;
+                          font-style: italic;
+                        }
+                      }
+                    }
+                }
+            }
+
+            .n-event-info {
+                color: $color-text-01;
+                &>ul {
+                    &>li {
+                        @include padding-bottom(30);
+                        @include fontsize(15);
+
+
+                        .__label {
+                            font-weight: 300;
+                            @include padding-right(10);
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                .social-info {
+                    text-align: right;
+                    display: table;
+                    width: 100%;
+
+                    &>li {
+                        display: table-cell;
+                        font-weight: 300;
+
+                        .ico {
+                            @include fontsize(20);
+                            vertical-align: middle;
+                            display: $ib;
+                            @include padding-right(10);
+                        }
+                        .t-liked {
+                            color: #1e83b1;
+                        }
+                        .t-comment {
+                            color: #e22126;
+                        }
+                        .t-share {
+                            color: #008001;
+                        }
+                        .t-intersted {
+                            color: #5c0f8c;
+                        }
+                    }
+                }
+            }
+
+            .n-event-des-txt {
+                @include padding(30 0);
+                color: $color-text-01;
+                @include border-top(1, solid, #c8c8c8);
+                @include fontsize(15);
+                p {
+                    line-height: 30px;
+                }
+            }
+            .n-event-keyword {
+                @include padding(30 0);
+                @include border-top(1, solid, #e6e6e6);
+                color: $color-text-01;
+                @include fontsize(15);
+                .__label {
+                    font-weight: 500;
+                }
+            }
+        }
+        .list-label {
+            @include fontsize(25);
+            line-height: 25px;
+            font-weight: 400;
+            @include pos(ab, 0 null null null);
+            @include padding(10 10 10 15);
+            z-index: 0;
+            color: $white;
+            text-transform: uppercase;
+            &:before {
+                @include arrow(top-left, $color-list-02, 80px);
+                content: "";
+                @include pos(ab, 0 nul null 0);
+                z-index: -1;
+            }
+
+            &.e-list-label {
+                &:before {
+                    @include arrow(top-left, $color-list-03, 80px);
+                }
+            }
+        }
+    }
+}

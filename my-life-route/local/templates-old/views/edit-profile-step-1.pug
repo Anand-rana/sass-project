@@ -1,0 +1,61 @@
+.edit-profile-section
+	.container
+		.step-form-block
+			h2.title Edit Profile
+			.step-form-container
+				.step-form-heading
+					h3.title Essential Details
+					
+				.step-form-data
+					.step-form-field-box
+						.step-form-nav
+							ul
+								li
+									.step-nav-box.step-one.active
+										.step-nav-txt
+											span.label-step Step
+											span.step-no 1
+								li
+									.step-nav-box.step-two
+										.step-nav-txt
+											span.label-step Step
+											span.step-no 2
+						.sign-up-step-1
+							.field-group
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label First Name
+									input(type="text", placeholder="Enter First Name").c-field-control
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Last Name
+									input(type="text", placeholder="Last Name").c-field-control
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Date of Birth
+									.c-has-icon
+										input(type="text", placeholder="DD/MM/YYYY").c-field-control
+										.icon-addon.hidden-xs
+											i.icon-calendar
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label Gender
+									.select-control
+										select.c-field-control
+											option(value='Male') Male
+											option(value='Female') Female
+								.c-field.c-outline.c-shadow.c-b-lg
+									.c-line
+										label Full Address (Optional)
+									textarea(rows="8" cols="8" placeholder="Enter Address Details").c-field-control
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg
+									.c-line
+										label City
+									input(type="text", placeholder="Enter City Name").c-field-control
+								.c-field.c-outline.c-lh.c-shadow.c-b-lg 
+									.c-line
+										label Country of Residence
+									input(type="text", placeholder="Enter Country Name").c-field-control
+								.btn-field.text-center
+									button.button.button-font-medium.button-uppercase.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-left-1x.margin-right-1x.margin-bottom-2x(ng-click="$state.go('edit-profile-step-2')") NEXT
+									button.button.button-danger.button-uppercase.button-font-medium.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-right-1x.margin-left-1x Cancel

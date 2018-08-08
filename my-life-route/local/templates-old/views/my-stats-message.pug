@@ -1,0 +1,46 @@
+.my-stats-section
+	.container
+		.heading-block
+			.breadcrumb-list
+				ul
+					li
+						span My Stats 
+					li
+						span.active  My Messages
+		.__inner-container
+			.row
+				.col-md-3
+					.stats-nav__list
+						ul
+							li
+								a(data-ui-sref="my-stats" data-ui-sref-active="active") My Life Routes
+							li
+								a(data-ui-sref="my-stats-news" data-ui-sref-active="active") My News (76 )
+							li
+								a(data-ui-sref="my-stats-events" data-ui-sref-active="active") My Events (88)
+							li
+								a(data-ui-sref="my-stats-connection" data-ui-sref-active="active") My Connections (68)
+							li
+								a(data-ui-sref="my-stats-profile" data-ui-sref-active="active") My Profile
+							li
+								a(data-ui-sref="my-stats-message " data-ui-sref-active="active") My Messages (45)
+				.col-md-9
+					.m-stats__data-container
+						.m-stats__msg
+							.m-stats-route-box
+								h3 My Messages
+								.m-stats-route__result(data-ng-controller="routeresultCtrl")
+									.row
+										.col-md-7
+											ul.t-result-list
+												li
+													span.__t-no 511
+													span Total Messages
+												li.list-dot.list-dot-g
+													span.__t-no 188
+													span Sent
+												li.list-dot
+													span.__t-no 323
+													span Received
+										.col-md-5 
+											canvas(id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-options="options" chart-dataset-override="datasetOverride")

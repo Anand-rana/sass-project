@@ -1,0 +1,134 @@
+
+<div class="advance-search-modal" data-ng-controller="searchCtrl">
+  <div class="modal-header">
+    <h2 class="title">Advanced Search</h2>
+    <button class="close-ico" id="close" ng-click="cancel()"><i class="icon-close-o"></i></button>
+  </div>
+  <div class="modal-body">
+    <div class="field-group">
+      <div class="row">
+        <div class="col-md-4 col-lg-4">
+          <div class="advance-field-group">
+            <div class="search-filed">
+              <label>Name</label>
+              <input class="search-field-control" type="text" placeholder="First Name"/>
+              <input class="search-field-control" type="text" placeholder="Last Name"/>
+            </div>
+          </div>
+          <div class="advance-field-group">
+            <div class="search-filed">
+              <label>Location</label>
+              <input class="search-field-control" type="text" placeholder="Search by Location"/>
+            </div>
+          </div>
+          <div class="advance-field-group">
+            <div class="search-filed">
+              <label>Keywords</label>
+              <input class="search-field-control" type="text" placeholder="Search by Keywords"/>
+            </div>
+          </div>
+          <div class="advance-field-group">
+            <div class="search-filed">
+              <label>Occupation</label>
+              <input class="search-field-control" type="text" placeholder="Search by Occupation"/>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-lg-offset-1">
+          <div class="search-gender-field">
+            <label>Gender</label>
+            <ul>
+              <li>
+                <label class="label-checkbox-o label-checkbox-o-lg">
+                  <input type="checkbox"/><span class="check-mark"></span><span class="label-name">Male</span>
+                </label>
+              </li>
+              <li>
+                <label class="label-checkbox-o label-checkbox-o-lg">
+                  <input type="checkbox"/><span class="check-mark"></span><span class="label-name">Female</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="margin-bottom-4x">
+            <div class="search-drop-down-field">
+              <div ng-dropdown-multiselect="" options="categorymodeldata" selected-model="categorymodel" translation-texts="{buttonDefaultText: 'Category'}" extra-settings="inputsettings"></div>
+            </div>
+            <div class="search-drop-down-field">
+              <div ng-dropdown-multiselect="" options="agemodeldata" selected-model="agemodel" translation-texts="{buttonDefaultText: 'Age Range'}" extra-settings="inputsettings"></div>
+            </div>
+            <div class="search-drop-down-field">
+              <div ng-dropdown-multiselect="" options="relmodeldata" selected-model="relmodel" translation-texts="{buttonDefaultText: 'Relevance'}" extra-settings="inputsettings"></div>
+            </div>
+            <div class="search-drop-down-field">
+              <div ng-dropdown-multiselect="" options="statusmodeldata" selected-model="statusmodel" translation-texts="{buttonDefaultText: 'Posting Status'}" extra-settings="inputsettings"></div>
+            </div>
+            <div class="search-drop-down-field">
+              <div ng-dropdown-multiselect="" options="educationsmodeldata" selected-model="educationsmodel" translation-texts="{buttonDefaultText: 'Educational Level'}" extra-settings="inputsettings"></div>
+            </div>
+            <div class="search-drop-down-field">
+              <div ng-dropdown-multiselect="" options="durationsmodelldata" selected-model="durationsmodel" translation-texts="{buttonDefaultText: 'Duration'}" extra-settings="inputsettings"> </div>
+            </div>
+            <div class="search-drop-down-field">
+              <div ng-dropdown-multiselect="" options="mediamodeldata" selected-model="mediamodel" translation-texts="{buttonDefaultText: 'Media'}" extra-settings="inputsettings"> </div>
+            </div>
+            <div class="search-drop-down-field">
+              <div ng-dropdown-multiselect="" options="noempmodeldata" selected-model="noempmodel" translation-texts="{buttonDefaultText: 'No. of Employees'}" extra-settings="inputsettings"></div>
+            </div>
+            <div class="search-drop-down-field">
+              <div ng-dropdown-multiselect="" options="expmodeldata" selected-model="expmodel" translation-texts="{buttonDefaultText: 'Years of Experience'}" extra-settings="inputsettings"> </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-lg-offset-1">
+          <div class="search-steps-field">
+            <label>Steps</label>
+            <ul>
+              <li>
+                <label class="label-checkbox-o label-checkbox-o-lg">
+                  <input type="checkbox"/><span class="check-mark"></span><span class="label-name">Less Than 5</span>
+                </label>
+              </li>
+              <li>
+                <label class="label-checkbox-o label-checkbox-o-lg">
+                  <input type="checkbox"/><span class="check-mark"></span><span class="label-name">Between 5 and 10</span>
+                </label>
+              </li>
+              <li>
+                <label class="label-checkbox-o label-checkbox-o-lg">
+                  <input type="checkbox"/><span class="check-mark"></span><span class="label-name">10 in All</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="search-drop-down-field">
+            <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'Event Status'}" extra-settings="inputsettings"> </div>
+          </div>
+          <div class="search-drop-down-field">
+            <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'User Type'}" extra-settings="inputsettings"> </div>
+          </div>
+          <div class="search-drop-down-field">
+            <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'Online Activity'}" extra-settings="inputsettings"> </div>
+          </div>
+          <div class="search-drop-down-field">
+            <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'Total Coast'}" extra-settings="inputsettings"> </div>
+          </div>
+          <div class="search-drop-down-field">
+            <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'Event Expiry'}" extra-settings="inputsettings"> </div>
+          </div>
+          <div class="search-drop-down-field">
+            <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'Posted by'}" extra-settings="inputsettings"> </div>
+          </div>
+          <div class="search-drop-down-field">
+            <div ng-dropdown-multiselect="" options="testmodeldata" selected-model="testmodel" translation-texts="{buttonDefaultText: 'Activity Status'}" extra-settings="inputsettings"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-field">
+        <button class="button button-rounded button-font-medium-txt button-rounded margin-left-1x margin-bottom-1x margin-right-1x button-width-large">Search</button>
+        <button class="button button-green button-rounded button-font-medium-txt button-rounded margin-left-1x margin-bottom-1x margin-right-1x button-width-large">Reset</button>
+        <button class="button button-danger button-rounded button-font-medium-txt button-rounded margin-left-1x margin-bottom-1x margin-right-1x button-width-large">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

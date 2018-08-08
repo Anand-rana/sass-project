@@ -1,0 +1,137 @@
+
+<header>
+  <div class="top-header" data-ng-class="headerClass" set-class-when-at-top="fixed">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-3 col-sm-4"><a class="logo" data-ui-sref="landing"><img class="img-responsive" src="images/logo.jpg" alt="img"/></a></div>
+        <div class="col-lg-8 col-md-9 col-sm-8">
+          <div class="nav-section">
+            <div class="nav-icon" id="nav-icon3" data-ng-controller="navCtrl"><span></span><span></span><span></span><span></span></div>
+            <div class="main-nav">
+              <ul>
+                <li><a data-ui-sref="my-people" data-ui-sref-active="active" data-ng-class="{active:$state.includes('my-people-connetion')||$state.includes('my-people-request')||$state.includes('my-people-follow-me')||$state.includes('my-people-follow')||$state.includes('my-people-follow')||$state.includes('my-people-blocked')}">My People </a></li>
+                <li><a data-ui-sref="my-post" data-ui-sref-active="active" data-ng-class="{active:$state.includes('post-life-route')||$state.includes('post-news-route')||$state.includes('post-events-route')||$state.includes('post-events-upcoming')||$state.includes('post-events-expired')}">My Posts </a></li>
+                <li><a data-ui-sref="my-pages" data-ui-sref-active="active" data-ng-class="{active:$state.includes('create-business')||$state.includes('create-company')||$state.includes('create-brand')||$state.includes('business-page')}">My Pages</a></li>
+              </ul>
+            </div>
+            <div class="main-user-nav">
+              <ul>
+                <li>
+                  <div class="msg-btn" ng-click="$state.go('my-message')"><span class="icon pointer"><i class="icon-envelope"></i><span class="t-no">1</span></span></div>
+                </li>
+                <li>
+                  <div class="notification-btn"><span class="icon pointer" ng-click="isnotificationCollapsed = !isnotificationCollapsed; isNavCollapsed = false;" ng-class="{'active':isnotificationCollapsed}"><i class="icon-notification"></i><span class="t-no">8</span></span></div>
+                  <div class="notification-drop-down-box" uib-collapse="!isnotificationCollapsed">
+                    <div class="notification-drop-down-box-cotainer">
+                      <div class="notification-drop-header">
+                        <h4>Notifications (22)</h4><span class="close-btn visible-xs" ng-click="isnotificationCollapsed = false"><i class="icon-close"></i></span>
+                      </div>
+                      <div class="notification-list-drop" ng-nicescroll="ng-nicescroll" nice-option="{cursorcolor: '#2abeeb',cursorwidth:'6px',background:'#c4c4c4',cursorborder:'1px solid #c4c4c4',cursorborderradius:'5px',cursorfixedheight:70,touchbehavior:true}" nice-scroll-top-end="topEndComplete()" nice-scroll-end="endScroll()">
+                        <ul>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                          <li><a href="#">
+                              <div class="media">
+                                <div class="media-left">
+                                  <div class="user-pic"><img src="images/user.jpg" alt="img"/></div>
+                                </div>
+                                <div class="media-body">
+                                  <div class="nt-txt">
+                                    <p>William and 15 others send you a request !!!!!</p><span class="time">2 Min(s) Ago</span>
+                                  </div>
+                                </div>
+                              </div></a></li>
+                        </ul>
+                      </div>
+                      <div class="notification-drop-down-footer"><a data-ui-sref="notification">See All</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="user-drop-down pointer" ng-click="isNavCollapsed = !isNavCollapsed; isnotificationCollapsed = false;"><span class="userImg"><img src="images/profile-2.jpg" alt="img"/></span><span class="user-name hidden-xs">Mahmood Choudhury</span><span class="caret" ng-class="{'open':isNavCollapsed}"></span></div>
+                  <div class="user-drop-down-box" uib-collapse="!isNavCollapsed">
+                    <div class="user-opt-menu">
+                      <ul>
+                        <li><a data-ui-sref="my-pages" data-ui-sref-active="active">Create Page</a></li>
+                        <li><a data-ui-sref="create-advert" data-ui-sref-active="active">Create Advert</a></li>
+                        <li><a data-ui-sref="my-setting" data-ui-sref-active="active">Settings</a></li>
+                        <li><a data-ui-sref="my-stats" data-ui-sref-active="active">My Stats</a></li>
+                        <li><a data-ui-sref="my-profile" data-ui-sref-active="active">My Profile</a></li>
+                        <li><a href="#">Logout</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="h-fix-height hidden-xs hidden-sm"></div>
+</header>

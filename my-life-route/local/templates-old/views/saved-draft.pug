@@ -1,0 +1,385 @@
+.m-post-liferoute
+		.container
+			.row
+				.col-md-9.col-md-offset-3
+					.heading-block
+						.row
+							.col-md-12
+								.breadcrumb-list
+									ul
+										li
+											a(href="#") My Posts
+										li
+											a(href="#") LifeRoutes
+										li
+											a(href="#").active Saved Drafts
+				.col-md-3
+					.filter-side-block
+						.filter-side-box(ng-class="{'active margin-bottom':issortingCollapsed}")
+							.filter-block__top(ng-click="issortingCollapsed = !issortingCollapsed" class="pointer")
+								h4 Sorting
+								span.caret
+							.filter-field-group(uib-collapse="!issortingCollapsed")
+								.filter-inline-field
+									.row.row-5
+										.col-sm-3
+											label Sort by
+										.col-sm-9
+											.f-field
+												.select-control
+														select.f-field-control
+															option(value='Latest Post') Latest Post
+									.filter-button-group
+										.row.row-10
+											.col-md-6.col-sm-6
+												button.button.button-rounded.button-block.margin-bottom-2x Apply
+											.col-md-6.col-sm-6
+												button.button.button-border.button-theme.button-border-thin.button-rounded.button-block.margin-bottom-2x Reset
+										
+										
+									
+
+						.filter-side-box(ng-class="{'active margin-top':isfilterCollapsed}")
+							.filter-block__top(ng-click="isfilterCollapsed = !isfilterCollapsed" class="pointer")
+								h4 Filters
+								span.caret
+							.filter-field-group(uib-collapse="!isfilterCollapsed")
+								.f-field
+									input(type="text", placeholder="I am Currently..").f-field-control
+								.f-field
+									input(type="text", placeholder="I Want To Be...").f-field-control
+								.filter-inline-field
+									.row.row-5
+										.col-sm-3
+											label Status
+										.col-sm-9
+											.f-field
+												.select-control
+														select.f-field-control
+															option(value='Completed...') Completed...
+								.filter-steps
+									h3 Steps
+									ul
+										li
+											label.label-checkbox-o
+												input(type="checkbox")
+												span.check-mark
+												span.label-name Less than 5
+										li
+											label.label-checkbox-o
+												input(type="checkbox")
+												span.check-mark
+												span.label-name Between 5 and 10
+										li
+											label.label-checkbox-o
+												input(type="checkbox")
+												span.check-mark
+												span.label-name 10 in all
+									a(href="#" class="search_link") Advanced Search
+								.filter-button-group
+										.row.row-10
+											.col-md-6.col-sm-6
+												button.button.button-rounded.button-block.margin-bottom-2x Apply
+											.col-md-6.col-sm-6
+												button.button.button-border.button-theme.button-border-thin.button-rounded.button-block.margin-bottom-2x Reset
+
+			
+
+				.col-md-9
+					
+
+							
+					//.ap-filter remove class if filter not applied				
+					.m-post-liferoute__list.ap-filter
+						.filter-ap-msg
+							h4  
+								span
+									i.icon-asterisk-symbol 
+								|Filters Applied
+						.total-posted
+							span Total Posted : 20
+						.l-route-box
+								.row
+									.col-md-3.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											.user-profile
+													h4 UI Designer
+											.list-label
+												span LR
+
+
+									.col-md-9.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.r-title Lorem Ipsum is simply dummy text
+												.user-dtl-info-list
+													.row
+														.col-md-6.col-lg-4
+															ul.list-info
+																li
+																	span.l-label From 
+																	span Associate
+																li
+																	span.l-label To 
+																	span Consultant
+																li
+																	span.l-label Location 
+																	span New York ,USA
+																li
+																	span.l-label Steps 
+																	span 7
+														.col-md-6.col-lg-4
+															ul.list-info
+																li
+																	span.l-label Duration  
+																	span 27 Months
+																li
+																	span.l-label Date created  
+																	span 24th May 2016
+																li
+																	span.l-label Last updated 
+																	span 24th May 2017
+																li
+																	span.l-label Total Cost 
+																	span &pound;70,000
+														.col-md-6.col-lg-4
+															.user-status-info
+																h2 Status
+																.status-rep
+																	h3.cmp Completed
+																.margin-top-4x
+																	button.button.button-rounded.button-font-medium.button-height-large.button-min-width-small  View
+								.r-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span Like : 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span Comments : 40
+
+										li
+											.t-follower
+												span.icon
+													i.icon-user-group
+												span Followers : 900
+										li
+											.t-share
+												span.icon.pointer(ng-click="isNavCollapsed  = !isNavCollapsed")
+													i.icon-share
+												span.__label Share : 
+												span 23
+												.t-share-opt(uib-collapse="!isNavCollapsed") 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+													a(href="#") Share by Facebook
+													a(href="#") Share by Twitter
+													a(href="#") Share by LinkedIn
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link
+						.l-route-box
+								.row
+									.col-md-3.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											.user-profile
+													h4 UI Designer
+											.list-label
+												span LR
+
+
+									.col-md-9.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.r-title Lorem Ipsum is simply dummy text
+												.user-dtl-info-list
+													.row
+														.col-md-6.col-lg-4
+															ul.list-info
+																li
+																	span.l-label From 
+																	span Associate
+																li
+																	span.l-label To 
+																	span Consultant
+																li
+																	span.l-label Location 
+																	span New York ,USA
+																li
+																	span.l-label Steps 
+																	span 7
+														.col-md-6.col-lg-4
+															ul.list-info
+																li
+																	span.l-label Duration  
+																	span 27 Months
+																li
+																	span.l-label Date created  
+																	span 24th May 2016
+																li
+																	span.l-label Last updated 
+																	span 24th May 2017
+																li
+																	span.l-label Total Cost 
+																	span &pound;70,000
+														.col-md-6.col-lg-4
+															.user-status-info
+																h2 Status
+																.status-rep
+																	h3.cmp Completed
+																.margin-top-4x
+																	button.button.button-rounded.button-font-medium.button-height-large.button-min-width-small  View
+								.r-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span Like : 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span Comments : 40
+
+										li
+											.t-follower
+												span.icon
+													i.icon-user-group
+												span Followers : 900
+										li
+											.t-share
+												span.icon.pointer(ng-click="isNav1Collapsed  = !isNav1Collapsed")
+													i.icon-share
+												span.__label Share : 
+												span 23
+												.t-share-opt(uib-collapse="!isNav1Collapsed") 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+													a(href="#") Share by Facebook
+													a(href="#") Share by Twitter
+													a(href="#") Share by LinkedIn
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link
+						.l-route-box
+								.row
+									.col-md-3.col-sm-4.col-lg-3
+										.user-p-info
+											.user-img
+												img(src="images/user.jpg" alt="img")
+											.user-name
+													h3 James Young
+											.user-profile
+													h4 UI Designer
+											.list-label
+												span LR
+
+
+									.col-md-9.col-sm-8.col-lg-9
+										.user-dtl
+											.user-dtl-info
+												h3.r-title Lorem Ipsum is simply dummy text
+												.user-dtl-info-list
+													.row
+														.col-md-6.col-lg-4
+															ul.list-info
+																li
+																	span.l-label From 
+																	span Associate
+																li
+																	span.l-label To 
+																	span Consultant
+																li
+																	span.l-label Location 
+																	span New York ,USA
+																li
+																	span.l-label Steps 
+																	span 7
+														.col-md-6.col-lg-4
+															ul.list-info
+																li
+																	span.l-label Duration  
+																	span 27 Months
+																li
+																	span.l-label Date created  
+																	span 24th May 2016
+																li
+																	span.l-label Last updated 
+																	span 24th May 2017
+																li
+																	span.l-label Total Cost 
+																	span &pound;70,000
+														.col-md-6.col-lg-4
+															.user-status-info
+																h2 Status
+																.status-rep
+																	h3.cmp Completed
+																.margin-top-4x
+																	button.button.button-rounded.button-font-medium.button-height-large.button-min-width-small  View
+								.r-bottom-block
+									ul
+										li
+											.t-videos
+												span.icon
+													i.icon-play-btn
+												span 6
+											.t-img
+												span.icon
+													i.icon-file
+												span 8
+										li
+											.t-likes
+												span.icon
+													i.icon-thumb
+												span Like : 500
+										li
+											.t-coments
+												span.icon
+													i.icon-comment
+												span Comments : 40
+
+										li
+											.t-follower
+												span.icon
+													i.icon-user-group
+												span Followers : 900
+										li
+											.t-share
+												span.icon.pointer(ng-click="isNav2Collapsed  = !isNav2Collapsed")
+													i.icon-share
+												span.__label Share : 
+												span 23
+												.t-share-opt(uib-collapse="!isNav2Collapsed") 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareroute()") Share by Myliferoute
+													a(href="#") Share by Facebook
+													a(href="#") Share by Twitter
+													a(href="#") Share by LinkedIn
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="shareemail()") Share by Email 
+													a(href="Javascript:void;" ng-controller="ModalCtrl"  ng-click="copy()") Copy Link

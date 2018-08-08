@@ -1,0 +1,58 @@
+.page-conatiner
+	.competion-section.s-ov
+		.container
+			.main-heading
+				h2.title Competition Detail
+			.competion-block
+				.competion-block__inner
+					.competion-block__dtl
+						.competion-block__dtl__header
+							h3
+								a(ui-sref="competitions-history")
+									span
+										i.icon-angle-left-o 
+									|competition Name here 
+						.competion-content-block
+							.row
+								.col-md-8
+
+									.c-dtl-box
+										
+										.c-user-dtl
+											
+											.c-dtl-txt
+												
+												p
+													span.fw200 Praesent blandit 
+												p Praesent blandit turpis leo, ut iaculis arcu. Pas umsan tristique massa, in auctor  at hendrerit id. Sed liquam quis. Phasellus sit amet libero ligula. Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam et metus sed tortor eleifend.Pellentesque convallis nisl sit amet lacus luctus vel consequat ligula suscipit. Aliquam et metus sed tortor eleifend pretium non id urna. Fusce in augue leo, sed cursus nisl. Nullam vel tellus massa. Vivamus porttitor rutrum libero ac mattis. Aliquam congue malesuada mauris vitae dignissim. Mauris vehicula placerat justo ac cursus. Ut interdum tortor quis elit varius rhoncus. Etiam ut tellus at ligula eleifend malesuada. Aenean et metus sapien.
+												
+												.c-dtl-info
+													ul
+														li 
+															span.fw300 Section : 
+															|Gym
+														li 
+															span.fw300 Host : 
+															|Gym
+														li 
+															span.text-blue.margin-right-2x
+																i.icon-cup-o
+															|3 months free pass
+														li 
+															span.l-label Live
+															|04/11/2017
+														li
+															h4.ow-100.uppercase You contacted Writeup to host this competition
+
+								.col-md-4
+									.competion-block__dtl__sidebar(data-ng-controller="compCtrl")
+										ng-owl-carousel(class="owl-theme c-slider" owl-items="items" owl-properties="properties" owl-ready="ready($api)")
+											.item(data-ng-repeat="item in items")
+												img(src="images/news-{{item}}.jpg" alt="img").img-responsive
+										ng-owl-carousel(class="owl-theme c-thumb-slider" owl-items="number" owl-properties="propertiestxt" owl-ready="ready2($api)")
+											.item(data-ng-repeat="numbers in number")
+												img(src="images/news-{{numbers}}.jpg" alt="img").img-responsive
+										.margin-top-8x
+											.text-right
+												h4.ow-100.uppercase.padding-bottom-2x  Number of participants - 200
+											button.button.button-blue-dark.button-block.button-uppercase.button-height-large.button-font-base.button-blue-shadow(ng-controller="ModalCtrl"  ng-click="all()") View all participants 

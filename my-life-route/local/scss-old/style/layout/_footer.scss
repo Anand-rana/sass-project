@@ -1,0 +1,86 @@
+footer {
+    background: url(#{$imgpath}footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    .inner-footer {
+        @include padding-top(170);
+
+        .footer-links {
+            text-align: center;
+            @include padding(0 0 15);
+            ul {
+                li {
+                    display: $ib;
+
+                    &>a {
+                        @include padding(0 20);
+                        color: $black;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom-bar {
+            background-color: $black;
+            @include padding(12 0);
+            text-align: center;
+            color: $white;
+            @include fontsize(14);
+
+            .bottom-bar-container {
+
+                @include pos(rel, null);
+            }
+        }
+
+        .follow-div {
+            color: $black;
+            @include pos(ab, null 0 10px null);
+            z-index: 10;
+            ul {
+                @include margin-top(10);
+                li {
+                    display: $ib;
+                    @include padding(0 6);
+                    .facbook-ico {
+                        width: 42px;
+                        height: 42px;
+                        line-height: 42px;
+                        @include fontsize(20);
+                        @include circle;
+                        text-align: center;
+                        color: $white;
+                        background-color: #3a5897;
+                        display: $b;
+                    }
+                    .twitter-ico {
+                        width: 42px;
+                        height: 42px;
+                        line-height: 42px;
+                        @include fontsize(20);
+                        @include circle;
+                        text-align: center;
+                        color: $white;
+                        background-color: #55aded;
+                        display: $b;
+                    }
+
+                      .youtube-ico {
+                        width: 42px;
+                        height: 42px;
+                        line-height: 45px;
+                        @include fontsize(20);
+                        @include circle;
+                        text-align: center;
+                        color: $white;
+                        background-color: #fe0000;
+                        display: $b;
+                    }
+                }
+            }
+        }
+    }
+}

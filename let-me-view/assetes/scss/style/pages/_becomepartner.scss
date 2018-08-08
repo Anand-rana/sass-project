@@ -1,0 +1,58 @@
+.b-partner-section {
+    .b-partner__heading {
+        background-color: #e8ecf5;
+
+        @include padding(10 0);
+
+        & > h3 {
+            text-transform: $uppercase;
+
+            @include raleway-semibold;
+
+            @include fontsize(20);
+        }
+    }
+
+    .b-p__form {
+        @include margin-top(50);
+
+        label {
+            @include open-semibold;
+
+            @include padding-left(15);
+        }
+
+        .b-p-fields {
+            @include margin-top(50);
+
+            .rg-name-field {
+                display: table;
+                width: 100%;
+
+                #f-name {
+                    width: 60%;
+                    float: left;
+                }
+
+                #l-name {
+                    width: 40%;
+                    float: left;
+                }
+            }
+
+            .check-btn {
+                display: $inline;
+
+                &:last-child {
+                    @include padding-left(20);
+                }
+            }
+
+            .button {
+                float: right;
+
+                @include margin-top(15);
+            }
+        }
+    }
+}

@@ -1,0 +1,128 @@
+.profile-view--seller {
+    .company-dtl {
+        @include padding(20);
+        .logo-view {
+            text-align: center;
+            @include border(1, solid, #e4e4e4);
+            @include padding(20);
+        }
+        .dropzone {
+            @include border(1, dashed, #dedede);
+            margin: 0 auto;
+            min-height: inherit;
+            width: 100%;
+            .dz-message {
+                margin: 0;
+            }
+        }
+        .company-dtl-form {
+            .seller-type {
+                @include margin(30 0);
+                @include fontsize(18);
+                @include open-semibold;
+                [class*="icon-"] {
+                    color: $themecolor;
+                    @include fontsize(30);
+                    vertical-align: middle;
+                    @include margin-right(10);
+                }
+                .trusted {
+                    @include margin-left(15);
+                }
+            }
+        }
+    }
+    .dealar-form-section {
+        .dealar-step-2 {
+            @include margin-top(50);
+            .step-pannel-box {
+                @include padding(70 0 50);
+                @include margin-bottom(50);
+            }
+        }
+    }
+}
+
+.v-sform {
+    @include pos(rel, null);
+    z-index: 1000;
+    background-color: $color02;
+}
+
+.my-lisitng-view {
+    .new-listing-form {
+        @include fontsize(20);
+        @include open-regular;
+        @include margin-top(50);
+        .new-listing-field-group {
+            @include padding(0 30);
+        }
+    }
+    .drop-video {
+        .dropzone {
+            @include fontsize(24);
+            .dz-message {
+                @include josefinsansregular;
+                span {
+                    @include fontsize(15);
+                    color: #b6b6b6;
+                }
+            }
+        }
+    }
+}
+
+.seller-event-section {
+    .seller-event-form {
+        @include padding(40 0);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+.edit-icon {
+    cursor: pointer;
+    color: $themecolor;
+    @include fontsize(25);
+}
+
+.form-pannel-box {
+    @include border(1, solid, #d3d3d3);
+    @include border-round(4);
+    @include padding(50 30 30);
+    @include pos(rel, null);
+    @include margin-bottom(60);
+    .form-pannel-heading {
+        display: $inline;
+        @include padding(15 30);
+        @include border(1, solid, #d3d3d3);
+        @include border-round(30);
+        @include open-semibold;
+        text-align: center;
+        background-color: $color02;
+        @include pos(ab, -25px null null 50px);
+        h4 {
+            @include fontsize(14);
+        }
+    }
+}
+
+.seller--enqury {
+   
+    .en-info {
+        li {
+            @include josefinsansbold;
+            @include margin-bottom(10);
+        }
+    }
+    .chat-box-row {
+        @include margin-bottom(30);
+        .media-body {
+            @include padding-bottom(30);
+        }
+    }
+}
+
+.tab-pane-cotent {
+    @include margin-top(20);
+}

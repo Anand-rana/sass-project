@@ -1,0 +1,171 @@
+.detail-list-section {
+    .product-detail-section {
+        @include padding(100 0 80);
+        @include pos(rel, null);
+        .product-dtl {
+            .product-title {
+                h3 {
+                    @include fontsize(25);
+                    @include pos(rel, null);
+                    @include padding-bottom(30);
+                    display: $inline;
+                    &:after {
+                        content: "";
+                        @include pos(ab, null 50px 0 0px);
+                        height: 2px;
+                        background-color: $themecolor;
+                    }
+                }
+            }
+            .price {
+                display: $block;
+                @include margin-top(20);
+                @include fontsize(20);
+                color: $themecolor;
+            }
+            .back-btn {
+                @include margin-top(50);
+                a {
+                    color: $color01;
+                    @include fontsize(20);
+                    letter-spacing: 2px;
+                    span {
+                        width: 44px;
+                        height: 44px;
+                        @include circle();
+                        background-color: $color01;
+                        display: $inline;
+                        color: $color02;
+                        @include margin-right(10);
+                        text-align: center;
+                        .fa {
+                            @include fontsize(35);
+                            vertical-align: middle;
+                            line-height: 44px;
+                        }
+                    }
+                    &:hover {
+                        span {
+                            background-color: lighten($color01, 30%);
+                        }
+                    }
+                }
+            }
+            .product-txt {
+                @include margin-top(50);
+                .panel {
+                    border: 0;
+                    @include margin-bottom(20);
+                    @include box-shadow-none;
+                    & > .panel-heading {
+                        @include border-bottom(1, solid, #e5e5e5);
+                        @include padding(0 0 20);
+                        [class*="icon-"] {
+                            float: right;
+                            color: $themecolor;
+                            @include fontsize(20);
+                        }
+                        .panel-title {
+                            @include open-semibold;
+                            text-transform: $uppercase;
+                        }
+                    }
+                    .panel-body {
+                        @include padding(30 0);
+                        border: 0;
+                        p {
+                            line-height: 25px;
+                            @include fontsize(16);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .product-images {
+        .main-view {
+            background-color: #ccc;
+            text-align: center;
+            .MagicZoomPlus {
+                figure {
+                    & > img {
+                        max-height: 500px !important;
+                        max-width: 100%;
+                        width: auto;
+                    }
+                }
+            }
+        }
+        .MagicScroll {
+            @include margin-top(15);
+            .mcs-wrapper {
+                left: 0;
+                right: 0;
+            }
+            .mcs-item {
+                a {
+                    width: 100%;
+                    @include padding(0 10);
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .detail-item-section {
+        background-color: #f2f2f5;
+        @include pos(rel, null);
+        @include padding(100 100 100 100);
+    }
+    .contact-section {
+        @include padding(150 0);
+        @include pos(rel, null);
+        .c-field {
+            @include margin-bottom(30);
+            .field-control {
+                @include open-regular;
+            }
+        }
+    }
+}
+
+.item-section {
+    @include pos(rel, null);
+    & > .row {
+        @include margin(0 -10);
+        [class*="col-"] {
+            @include padding(0 10);
+        }
+    }
+    .item-box {
+        background-color: $color02;
+        -webkit-box-shadow: 0 0 5px rgba(12, 6, 14, .1);
+        -moz-box-shadow: 0 0 5px rgba(12, 6, 14, .1);
+        box-shadow: 0 0 5px rgba(12, 6, 14, .1);
+        @include margin-bottom(30);
+        @include border-round(3);
+        figure {
+            @include margin(0);
+            background-color: #ccc;
+            overflow: hidden;
+            @include fluid-ratio(2 1, img);
+            @include border-round(3 3 0 0);
+            img {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        figcaption {
+            @include fontsize(16);
+            @include padding(15);
+
+             & > .row {
+        @include margin(0);
+        [class*="col-"] {
+            @include padding(0);
+        }
+    }
+        }
+    }
+}

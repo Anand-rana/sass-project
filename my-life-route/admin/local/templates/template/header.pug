@@ -1,0 +1,119 @@
+header
+	.header-block
+		.container-fluid
+			.row
+				.col-md-4.col-sm-4
+					a(data-ui-sref="dashboard-home").logo
+						img(src="images/logo.jpg" alt="img" class="img-responsive")
+
+				.col-md-4.col-sm-4.col-md-push-4.col-sm-push-4
+					
+					.nav-section
+					
+						.main-user-nav
+							ul
+								
+								li
+									.notification-btn
+										span.icon(ng-click="isnotificationCollapsed = !isnotificationCollapsed;isNavCollapsed = false;" ng-class="{'active':isnotificationCollapsed}" class="pointer")
+											i.icon-notification
+											span.t-no 8
+									.notification-drop-down-box(uib-collapse="!isnotificationCollapsed")
+										.notification-drop-down-box-cotainer
+											.notification-drop-header
+												h4 Notifications (22)
+												span.close-btn.visible-xs(ng-click="isnotificationCollapsed = false")
+													i.icon-close
+											.notification-list-drop(ng-nicescroll nice-option="{cursorcolor: '#2abeeb',cursorwidth:'6px',background:'#c4c4c4',cursorborder:'1px solid #c4c4c4',cursorborderradius:'5px',cursorfixedheight:70,touchbehavior:true}" nice-scroll-top-end="topEndComplete()" nice-scroll-end="endScroll()")
+												ul
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+													li
+														a(href="#")
+															.media
+																.media-left
+																	.user-pic
+																		img(src="images/user.jpg" alt="img")
+																.media-body
+																	.nt-txt
+																		p William and 15 others send you a request !!!!!
+																		span.time 2 Min(s) Ago
+											.notification-drop-down-footer
+												a(data-ui-sref="dashboard-notification") See All
+									
+								li
+									.user-drop-down(ng-click="isNavCollapsed = !isNavCollapsed;isnotificationCollapsed = false;" class="pointer")
+										img(src="images/profile-2.jpg" alt="img")
+										span.user-name.hidden-xs.hidden-sm.hidden-md Mahmood Choudhury
+										span.caret(ng-class="{'open':isNavCollapsed}")
+									.user-drop-down-box(uib-collapse="!isNavCollapsed")
+										.user-opt-menu
+											ul
+												li
+													a(data-ui-sref="dashboard-change-password") Change Password
+												
+												li
+													a(href="#") Logout
+									
+							
+				.col-md-4.col-sm-4.col-md-pull-4.col-sm-pull-4
+						h4.page-title
+							|{{globalTitle}}

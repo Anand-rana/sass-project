@@ -1,0 +1,187 @@
+.formWrapper {
+    .container-fluid {
+        @include padding(0);
+    }
+
+    .formWrapper-dataBox {
+        @include padding(45 30 0);
+
+        @include calc(height, "100vh");
+
+        background-color: $white;
+        overflow: auto;
+
+        @include media("<=767px") {
+            @include padding(30 10 0);
+
+            height: auto;
+        }
+
+
+        .__header-block {
+            @include media("<=767px") {
+                img {
+                    @include margin(10 0);
+                }
+            }
+
+
+            a {
+                text-transform: uppercase;
+                text-decoration: underline;
+                font-weight: 700;
+            }
+        }
+
+        .fromBlock {
+            @include margin(60 0 40);
+
+            h2 {
+                @include font-size(30);
+
+                color: $heading-color;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .fieldGroup {
+                @include margin-top(70);
+
+                .btn-field {
+                    @include margin-top(50);
+                }
+            }
+        }
+    }
+
+    .title-block {
+        color: $white;
+        display: table;
+        width: 100%;
+        position: relative;
+
+        .logo {
+            @include pos(ab, 30px null null 50%);
+
+            @include transform(translate(-50%, 0));
+        }
+
+        .title-block-box {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        h2 {
+            @include font-size(30);
+
+            @include padding(0 30);
+
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $white;
+
+            @include media("<=767px") {
+                @include padding(0 10);
+            }
+        }
+    }
+}
+
+.login-section {
+    .login-fromBlock {
+        .title-block {
+            @include bg_image("#{$url}login-bg.jpg");
+
+            @include calc(height, "100vh");
+
+            overflow: hidden;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .login-opt-container {
+            @include calc(height, "100vh - 70px");
+
+            display: table;
+            width: 100%;
+
+            @include media("<=767px") {
+                @include calc(height, "100vh - 130px");
+            }
+
+
+            .login-opt {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        .formWrapper-dataBox {
+            .fromBlock {
+                .fieldGroup {
+                    .form-group {
+                        .f-link {
+                            color: $theme;
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.forgot-section {
+    .forgot-fromBlock {
+        .title-block {
+            @include bg_image("#{$url}login-bg.jpg");
+
+            @include calc(height, "100vh");
+
+            overflow: hidden;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.signUp-section {
+    .signUp-fromBlock {
+        .title-block {
+            @include bg_image("#{$url}signup-bg.jpg");
+
+            @include calc(height, "100vh");
+
+            overflow: hidden;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .signup-opt-container {
+            @include calc(height, "100vh - 70px");
+
+            display: table;
+            width: 100%;
+
+            @include media("<=767px") {
+                @include calc(height, "100vh - 130px");
+            }
+
+
+            .signup-opt {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+}

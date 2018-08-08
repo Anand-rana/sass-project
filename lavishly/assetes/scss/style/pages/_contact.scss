@@ -1,0 +1,87 @@
+.header-banner-pic {
+    background: url(#{$imgpath}banner-slide.jpg) no-repeat bottom;
+    background-size: cover;
+    min-height: 650px;
+    background-attachment: fixed;
+}
+
+.contact-page-section {
+    @include pos(rel, null null null null);
+    @include padding(100 0);
+    .contact-dtl {
+        & > .row {
+            @include margin(0);
+            & > [class*="col-"] {
+                @include padding(0);
+            }
+        }
+        .contact-dtl-info {
+            background-color: #242424;
+            color: $color02;
+            -webkit-box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.41);
+            -moz-box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.41);
+            box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.41);
+            @include padding(60 25 150);
+            @include fontsize(18);
+            @include pos(rel, null);
+            z-index: 3;
+            h3 {
+                color: $color02;
+                text-transform: $uppercase;
+                @include josefinsansbold;
+            }
+            [class*="icon-"] {
+                @include fontsize(25);
+            }
+        }
+        .contact-dtl-form {
+            @include margin-top(50);
+            background-color: $color02;
+            @include padding(50 40);
+            @include fontsize(18);
+            -webkit-box-shadow: 0px 17px 14px -10px rgba(0, 0, 0, 0.55);
+            -moz-box-shadow: 0px 17px 14px -10px rgba(0, 0, 0, 0.55);
+            box-shadow: 0px 17px 14px -10px rgba(0, 0, 0, 0.55);
+            h3 {
+                @include fontsize(24);
+                text-transform: $uppercase;
+                @include josefinsansbold;
+                @include margin-bottom(30);
+            }
+            .form-group {
+                @include margin-bottom(50);
+            }
+            .t-field {
+                .field-control {
+                    border-color: $themecolor;
+                    &:focus {
+                        @include input-placeholder {
+                            color: $themecolor;
+                        }
+                    }
+                }
+            }
+        }
+        .socail-links {
+            @include margin-top(40);
+            @include margin-left(30);
+            ul {
+                li {
+                    display: $inline;
+                    @include margin-right(10);
+                    a {
+                        color: #828282;
+                        @include fontsize(20);
+                        @include transition(all 0.2s);
+                        &:hover {
+                            color: $themecolor;
+                        }
+                    }
+                    &:last-child {
+                        @include margin-right(0);
+                    }
+                }
+            }
+        }
+    }
+}

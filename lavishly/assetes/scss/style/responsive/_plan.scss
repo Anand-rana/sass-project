@@ -1,0 +1,40 @@
+ @include media("<=1600px") {
+     .price-plan-section {
+         .price-box {
+             .plan-detail {
+                 & > ul {
+                     & > li {
+                         @include padding( 15 10);
+                         @include fontsize(16);
+                     }
+                 }
+                 .plan-btns {
+                     .button-width-large {
+                         padding: 0 20px !important;
+                     }
+                 }
+             }
+         }
+     }
+ }
+ 
+ @include media("<=1200px") {
+     .price-plan-section {
+         @include padding(70 0);
+         .price-box {
+             @include margin-bottom(160);
+             .plan-detail {
+                 & > ul {
+                     & > li {
+                         @include fontsize(18);
+                     }
+                 }
+                 .plan-btns {
+                     .button-width-large {
+                         padding: 0 25px !important;
+                     }
+                 }
+             }
+         }
+     }
+ }

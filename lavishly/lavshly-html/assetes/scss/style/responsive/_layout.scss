@@ -1,0 +1,47 @@
+ @include media(">=1000px") {
+     .nav-section {
+         &.stick-header {
+             @include pos(fix, 0 0 null 0);
+             z-index: 999;
+             &:after {
+                 display: none;
+             }
+         }
+     }
+ }
+ 
+ @include media("<=1200px") {
+     .get--touch .get--txt {
+         & > ul {
+             & > li {
+                 &:last-child {
+                     @include margin-left(50);
+                 }
+             }
+         }
+     }
+ }
+ 
+ @include media("<=992px") {
+     .get--touch {
+         text-align: center;
+         &:before {
+             display: none;
+         }
+         &:after {
+             display: none;
+         }
+     }
+ }
+ 
+ @include media("<=767px") {
+     footer {
+         .inner-footer {
+             .f-div {
+                 width: 100%;
+                 @include margin-bottom(15);
+                 text-align: center;
+             }
+         }
+     }
+ }

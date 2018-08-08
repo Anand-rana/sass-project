@@ -1,0 +1,104 @@
+doctype html
+html(lang="en")
+	include _partials/_head.pug
+	body
+		
+		.layer-backdrop
+
+
+		.main-container
+			
+			//header-section
+			header(class="fx-2")
+				.top-header
+					.container
+						.row.align-items-center
+							.col-md-3
+								.logo-block
+									a(href="index.html")
+										img(src="images/logo.png" alt="logo" class="img-fluid logo-white")
+										img(src="images/logo-red.png" alt="logo" class="img-fluid logo-red")
+								div(class="hamburger hamburger--spin  nav-icon")
+									.hamburger-box
+										.hamburger-inner
+							.col-md-9
+								.nav-section
+									ul
+										li
+											a(href="#about") About us
+										li
+											a(href="#work") Our work
+										li
+											a(href="#services") Our services
+										li
+											a(href="#contact") Contact
+										li
+											a(href="#") Insights
+			//insights-section
+			section(class="insights-section slide" id="insights" data-section-name="insights")
+				.container
+					.inner-block
+						h3(class="type-heading-one") Insights
+						.insight-list-block
+							.row
+								.col-md-6
+									.s-box(class="wow fadeInUp" data-wow-delay="0.1s")
+										figure
+											a(href="#")
+												img(src="images/Igniva-site-filler-1x1.gif" class="img-fluid" alt="img")
+								.col-md-6
+									.s-box(class="wow fadeInUp" data-wow-delay="0.2s")
+										figure
+											a(href="#")
+												img(src="images/Igniva-site-filler-1x1.gif" class="img-fluid" alt="img")
+								.col-md-6
+									.s-box(class="wow fadeInUp" data-wow-delay="0.3s")
+										figure.r-2
+											a(href="#")
+												img(src="images/Igniva-site-filler-3x2.gif" class="img-fluid" alt="img")
+								.col-md-6
+									.s-box(class="wow fadeInUp" data-wow-delay="0.4s")
+										figure.r-2
+											a(href="#")
+												img(src="images/Igniva-site-filler-3x2.gif" class="img-fluid" alt="img")
+
+			
+			//footer-section
+			footer
+					.container
+						.inner-footer
+							.row
+								.col-md-6
+									.address-block(class="wow fadeIn")
+										p london@ignivadigital.com
+										p +44 (0)203 769 0628
+										.margin-top-2x
+											p 11th Floor, One Croydon, Croydon, London CR0 0XT
+								.col-md-6
+									.social-links(class="wow fadeIn")
+										ul
+											li
+												a(href="#")
+													i.icon-instagram
+											li
+												a(href="#")
+													i.icon-facebook
+											li
+												a(href="#")
+													i.icon-linked-in
+											li
+												a(href="#")
+													i.icon-twitter
+									.footer-links(class="wow fadeIn")
+										ul
+											li
+												a(href="#") ©2017 Igniva Digital  
+											li
+												a(href="#") Privacy policy
+											li
+												a(href="#") Cookies
+
+
+
+
+	include _partials/_footer.pug

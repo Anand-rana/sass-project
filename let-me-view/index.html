@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1 , maximum-scale=1 , minimum-scale=1" name="viewport">
+    <title>Let Me View</title>
+    <!--bootstrap-->
+    <link href="assetes/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assetes/css/bootstrap-select.min.css" rel="stylesheet">
+    <!--custom-css-->
+    <link href="assetes/css/style.css" rel="stylesheet" />
+    <!--animate-css-->
+    <link href="assetes/css/animate.css" rel="stylesheet" />
+    <!--responsive-->
+    <link href="assetes/css/responsive.css" rel="stylesheet" />
+    <!--font-css-->
+    <link href="assetes/css/fonts.css" rel="stylesheet" />
+    <!--custom-fonts-->
+    <link href="assetes/custom-fonts/style.css" rel="stylesheet">
+    <!--rz-slider-->
+    <link href="assetes/css/rzslider.css" rel="stylesheet" />
+    <!--scroll-bar-->
+    <link href="assetes/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+    <!--owl-->
+    <link href="assetes/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assetes/css/owl.carousel.css" rel="stylesheet" />
+    <!-- Include Cloud Zoom CSS. -->
+    <link href="assetes/css/cloudzoom.css" rel="stylesheet" type="text/css" />
+    <link href="assetes/css/thumbelina.css" rel="stylesheet" type="text/css" />
+    <!--fancy-box-->
+    <link href="assetes/css/jquery.fancybox-plus.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="myApp">
+    <!--header-->
+    <header ng-hide="$state.includes('landing')">
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 hidden">
+                        <div class="sign_up-links ">
+                            <ul>
+                                <li><a ui-sref="agent" title="Agent"><span>I am an</span> Agent</a></li>
+                                <li><a href="#" title="buyer"><span>Sign-up as</span> buyer</a></li>
+                                <li><a href="#" ng-controller="ModalCtrl" title="Login" class="login-btn" ng-click="login()">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="contact-info">
+                            <ul>
+                                <li>Support: jane@estatehut.com</li>
+                                <li>Call: 07877802813</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="login-pannel">
+                            <ul>
+                                <li><a href="#" title="Sign out">Sign Out</a></li>
+                                <li>
+                                    <div class="user-info"><a href="#">Scott ander <img src="images/user.png" alt="user"/></a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--end-header-->
+    <div class="main-content-block">
+        <div ui-view></div>
+    </div>
+    <footer>
+        <div class="bottom_bar">
+            <div class="container">
+                <div class="col-md-6 col-sm-6">
+                    <p class="margin-top-2x copy_txt">&copy; Copyright 2016 by AuctionShelter. All rights reserved. |
+                        <a href="#" class="text-white"> <u>support@auctionshelter.com</u> </a>
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="share-links">
+                        <span class="text-white v-middle">Follow us:</span>
+                        <a class="facebook-link v-middle" href="#"><i class="icon-facebook"></i></a>
+                        <a class="linked-link v-middle" href="#"><i class="icon-linkedin"></i></a>
+                        <a class="twiiter-link v-middle" href="#"><i class="icon-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="side-back-drop  hidden"></div>
+</body>
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!--animate-js-->
+<script src="assetes/js/animation.js"></script>
+<script src="assetes/js/bootstrap.min.js"></script>
+<script src="assetes/js/owl.carousel.min.js"></script>
+<!-- Include Cloud Zoom script. -->
+<script src="assetes/js/cloudzoom.js"></script>
+<script src="assetes/js/thumbelina.js"></script>
+<!--fancy-box-->
+<script src="assetes/js/jquery.fancybox-plus.js"></script>
+<script src="assetes/js/angular.min.js"></script>
+<!--nice-scroll-->
+<script src="assetes/js/jquery.nicescroll.min.js" type="text/javascript"></script>
+<!--nice-angluar-->
+<script src="assetes/js/angular-nicescroll.js"></script>
+<script src="assetes/js/angular-wizard.js"></script>
+<script src="assetes/js/ui-bootstrap-1.1.1.min.js"></script>
+<script src="assetes/js/bootstrap-select.min.js"></script>
+<script src="assetes/js/angular-bootstrap-select.js"></script>
+<script src="assetes/js/angular-animate.js"></script>
+<script src="assetes/js/angular-ui-router.js"></script>
+<script src="assetes/js/rzslider.js"></script>
+<script src="assetes/js/angular-scroll.min.js"></script>
+<script src="assetes/js/elastic.js"></script>
+<script src="assetes/js/app.js"></script>
+<script>
+$(document).ready(function() {
+    wow = new WOW({
+        boxClass: 'wow', // default
+        animateClass: 'animated', // default
+        offset: 0, // default
+        mobile: false, // default
+        live: true // default
+    })
+    wow.init();
+
+});
+</script>
+<script>
+</script>
+
+</html>

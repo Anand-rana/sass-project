@@ -1,0 +1,224 @@
+<div class="main-header">
+    <div class="container">
+        <div class="header">
+            <div class="row">
+                <div class="col-md-3"><a ui-sref="home" class="logo"><img src="images/logo.png" alt="logo" class="img-reponsive"/></a>
+                    <div id="nav-icon1" class="visible-xs" ng-controller="MenuCtrl" >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="nav_bar">
+                        <ul>
+                            <li><a href="#" title="">Listing</a></li>
+                            <li><a href="#" title="">Our Guarantee</a></li>
+                            <li><a href="#" title="">about us</a></li>
+                            <li><a href="#" title="">help</a></li>
+                            <li><a href="#" title="" class="nav_bar__callbtn">Request Callback</a></li>
+                            <li><a href="#" title="" class="nav_bar__callbtn">Inbox</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--main-contanier-->
+<div class="main-block">
+    <!--profile-section-->
+    <div class="profile-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-offset-3">
+                    <div class="filter_tabs">
+                        <ul>
+                            <li ng-class="{active:item == 'profile'}"><span ng-click="item = 'profile'">My Profile</span></li>
+                            <li ng-class="{active:item == 'security'}"><span ng-click="item = 'security'">Security </span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="porfile-block-form">
+                <div class="row"  ng-init="item = 'profile'">
+                    <div ng-show="item == 'profile'">
+                        <div class="col-md-3 wow  fadeInLeft">
+
+                            <div class="user-dtl">
+                                <div class="user__img">
+                                    <img src="images/user.jpg" alt="user"/>
+                                    <div class="fileUpload ">
+                                        <span class="icon-edit"></span>
+                                        <input type="file" id="uploadBtn" class="upload">
+                                    </div>
+                                </div>
+                                <div class="c-field">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" name="emil" placeholder="Enter Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 wow  fadeInRight">
+                            <div class="form-section">
+
+                                <div class="pannel-block">
+                                    <div class="row">
+                                        <div class="col-md-6">
+
+                                            <div class="form-group">
+                                                <div class="c-field">
+                                                    <label>First Name</label>
+                                                    <input type="text" class="form-control" placeholder="eg.Andy"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="c-field">
+                                                    <label>Last Name</label>
+                                                    <input type="text" class="form-control" placeholder="eg.Smith"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="c-field">
+                                                    <label>Mobile Number</label>
+                                                    <input type="text" class="form-control" placeholder="eg.3015258"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <div class="form-group">
+                                                <div class="c-field">
+                                                    <label>Occupation</label>
+                                                    <select class="form-control">
+                                                        <option selected="selected">Select Options</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="c-field">
+                                                    <label>Buyer Type</label>
+                                                    <select class="form-control">
+                                                        <option selected="selected">Select Options</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="pannel-block">
+                                    <div class="row">
+                                        <div class="col-md-6">
+
+                                            <div class="form-group">
+                                                <div class="c-field">
+                                                    <label>Willing to Spent</label>
+                                                    <input type="text" class="form-control" placeholder="eg. 380000/-"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="c-field">
+                                                    <label>Location looking to Buy</label>
+                                                    <input type="text" class="form-control" placeholder="eg.Smith"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="c-field">
+                                                    <label>Looking to Buy</label>
+                                                    <select class="form-control">
+                                                        <option selected="selected">Select Options</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <div class="form-group">
+                                                <div class="c-field">
+                                                    <label>Premises Type</label>
+                                                    <select class="form-control">
+                                                        <option selected="selected">Select Options</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="c-field">
+                                                    <label>Looking to Buy</label>
+                                                    <select class="form-control">
+                                                        <option selected="selected">Select Options</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="check-btn  ib_v is--smbtn  margin-right-4x">
+                                        <div class="fh-checkbox">
+                                            <input type="checkbox" id="rem1">
+                                            <label for="rem1">Receive Invites from Agents</label>
+                                        </div>
+                                    </div>
+                                    <div class="check-btn ib_v is--smbtn">
+                                        <div class="fh-checkbox">
+                                            <input type="checkbox" id="rem2">
+                                            <label for="rem2">Receive Newsletters</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4"><button class="button button-rounded button-uppercase button-width-large pull-right">upload</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="item == 'security'">
+                        <div class="col-md-12 wow zoomIn">
+                            <div class="ch-pass_block">
+                                <div class="ch-pass__heading">
+                                    <h3>Change your password</h3>
+                                </div>
+                                <div class="form-section">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <form class="form-horizontal">
+                                                <div class="form-group">
+                                                    <div class="c-field">
+                                                        <label class="col-sm-3 control-label">Old Password</label>
+                                                        <div class="col-sm-9"><input type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="c-field">
+                                                        <label class="col-sm-3 control-label">New Password</label>
+                                                        <div class="col-sm-9"><input type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="c-field">
+                                                        <label class="col-sm-3 control-label">Confirm Password</label>
+                                                        <div class="col-sm-9"><input type="text" class="form-control"/></div>
+                                                    </div>
+                                                </div>
+
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="button button-rounded button-uppercase button-width-large pull-right">update password</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end-profile-section-->
+</div>
+<!--end-main-container-->

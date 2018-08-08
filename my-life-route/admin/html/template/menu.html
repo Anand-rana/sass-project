@@ -1,0 +1,46 @@
+
+<div class="dashboard-nav">
+  <div class="dashboard-nav__list" ng-nicescroll="ng-nicescroll" nice-option="{cursorcolor: '#000',cursorwidth:'6px',background:'#c4c4c4',cursorborder:'1px solid #c4c4c4',cursorborderradius:'5px',cursorfixedheight:200,touchbehavior:true}" nice-scroll-top-end="topEndComplete()" nice-scroll-end="endScroll()">
+    <ul>
+      <li><a data-ui-sref="dashboard-home" data-ui-sref-active="active"><span class="icon-metor"></span>Dashboard</a></li>
+      <li><a data-ui-sref="dashboard-messages" data-ui-sref-active="active"><span class="icon-envelope"></span>Messages</a></li>
+      <li><a data-ui-sref="dashboard-user-management" data-ui-sref-active="active"><span class="icon-user"></span>User Mangement</a></li>
+      <li><a class="has-child" href="javascript:void(0)" data-ng-click="isrouteCollapsed = !isrouteCollapsed" ng-class="{'active':isrouteCollapsed}"> <span class="icon-routes"></span>Life Routes</a>
+        <ul class="d-sub-nav" uib-collapse="!isrouteCollapsed">
+          <li><a data-ui-sref="dashboard-route-listing" data-ui-sref-active="active"><span class="icon-caret"></span>Life Route Listing</a></li>
+          <li><a data-ui-sref="dashboard-routestats-listing" data-ui-sref-active="active"><span class="icon-caret"></span>Life Route Stats</a></li>
+        </ul>
+      </li>
+      <li><a class="has-child" href="javascript:void(0)" data-ng-click="isnewsCollapsed = !isnewsCollapsed" ng-class="{'active':isnewsCollapsed}"><span class="icon-mike"></span>News</a>
+        <ul class="d-sub-nav" uib-collapse="!isnewsCollapsed">
+          <li><a data-ui-sref="dashboard-news-listing" data-ui-sref-active="active"><span class="icon-caret"></span>News Listing</a></li>
+          <li><a data-ui-sref="dashboard-news-stats-listing" data-ui-sref-active="active"><span class="icon-caret"></span>News Stats</a></li>
+        </ul>
+      </li>
+      <li><a class="has-child" href="javascript:void(0)" data-ng-click="iseventCollapsed = !iseventCollapsed" ng-class="{'active':iseventCollapsed}"><span class="icon-calender"></span>Events</a>
+        <ul class="d-sub-nav" uib-collapse="!iseventCollapsed">
+          <li><a data-ui-sref="dashboard-event-listing" data-ui-sref-active="active"><span class="icon-caret"></span>Events Listing</a></li>
+          <li><a data-ui-sref="dashboard-event-stats-listing" data-ui-sref-active="active"><span class="icon-caret"></span>Events Stats</a></li>
+        </ul>
+      </li>
+      <li><a class="has-child" href="javascript:void(0)" data-ng-click="isbsuinsessCollapsed = !isbsuinsessCollapsed" ng-class="{'active':isbsuinsessCollapsed}"><span class="icon-b-user"></span>Business Profiles</a>
+        <ul class="d-sub-nav" uib-collapse="!isbsuinsessCollapsed">
+          <li><a data-ui-sref="dashboard-business-listing" data-ui-sref-active="active"><span class="icon-caret"></span>Business Profiles Listing</a></li>
+          <li><a data-ui-sref="dashboard-business-posts" data-ui-sref-active="active"><span class="icon-caret"></span>Business Posts Stats</a></li>
+        </ul>
+      </li>
+      <li><a class="has-child" href="javascript:void(0)" data-ng-click="isadvertCollapsed = !isadvertCollapsed" ng-class="{'active':isadvertCollapsed}"><span class="icon-speaker"></span>Adverts</a>
+        <ul class="d-sub-nav" uib-collapse="!isadvertCollapsed">
+          <li><a data-ui-sref="dashboard-adverts-listing" data-ui-sref-active="active"> <span class="icon-caret"></span>Adverts For Approval</a></li>
+          <li><a data-ui-sref="dashboard-adverts-stats-listing" data-ui-sref-active="active"> <span class="icon-caret"></span>Adverts Stats</a></li>
+        </ul>
+      </li>
+      <li><a class="has-child" href="javascript:void(0)" data-ng-click="isreportCollapsed = !isreportCollapsed" ng-class="{'active':isreportCollapsed}"><span class="icon-question"></span>Reports</a>
+        <ul class="d-sub-nav" uib-collapse="!isreportCollapsed">
+          <li><a data-ui-sref="dashboard-report-listing" data-ui-sref-active="active"> <span class="icon-caret"></span>Users Issues &amp; Reports</a></li>
+          <li><a href="#"><span class="icon-caret"></span>Report Action Logs</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

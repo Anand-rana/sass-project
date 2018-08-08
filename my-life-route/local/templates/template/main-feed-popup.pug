@@ -1,0 +1,42 @@
+.feed-modal
+	.modal-header
+		h2.title Heads Up !
+		//button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close-o
+	.modal-body
+		.feed-modal-container
+			h2 Looks like you have no recent activity yet.
+			.feed-modal-opt
+				h2  Why not try the following options:
+				.main-feed-option
+					.m-feed-opt-block
+						a(data-ui-sref="create-liferoute-step-1" ng-click="cancel()")
+							.icon-box
+								img(src="images/create-liferoute.png" alt="img")
+								.add-icon
+									i.icon-plus
+							figcaption
+								h3 Create 
+									span LIFEROUTE
+					.m-feed-opt-block
+						a(data-ui-sref="create-news" ng-click="cancel()")
+							.icon-box
+								img(src="images/create-news.png" alt="img")
+								.add-icon.c-1
+									i.icon-plus
+							figcaption
+								h3 Create 
+									span news 
+					.m-feed-opt-block
+						a(data-ui-sref="create-event" ng-click="cancel()")
+							.icon-box
+								img(src="images/create-event.png" alt="img")
+								.add-icon.c-2
+									i.icon-plus
+							figcaption
+								h3 Create 
+									span event
+				.btn-field
+					button.button.button-green.button-rounded.button-font-medium-txt.button-height-large.button-width-large(ng-click="cancel()") Ok - Got it
+		
+		

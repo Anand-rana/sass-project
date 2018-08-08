@@ -1,0 +1,18 @@
+@include media("<=479px") {
+    .claim-box {
+        .media-left, .media-right, .media-body {
+            display: block;
+            width: auto;
+        }
+
+        .media-left {
+            img {
+                @include margin-bottom(15);
+            }
+        }
+
+        .time {
+            float: left;
+        }
+    }
+}

@@ -1,0 +1,300 @@
+
+<div class="create-liferoute-section">
+  <div class="create-liferoute__step-2">
+    <div class="container">
+      <div class="step-form-block">
+        <h2 class="title">Create or Request LIFEROUTE</h2>
+        <div class="step-form-container" ng-controller="routeCtrl">
+          <div class="step-form-heading h-sm">
+            <h3 class="sub-title">If CREATING a Liferoute - please add maximum 10 STEPS and details. <br/>If REQUESTING a Liferoute - please fill in as much information you currently know.</h3>
+          </div>
+          <div class="step-form-data">
+            <div class="step-form-field-box">
+              <div class="step-form-nav">
+                <ul>
+                  <li>
+                    <div class="step-nav-box step-one active">
+                      <div class="step-nav-txt"><span class="label-step">Step</span><span class="step-no">1</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="step-nav-box step-two active">
+                      <div class="step-nav-txt"><span class="label-step">Step</span><span class="step-no">2</span></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="field-group">
+                <div class="padding-bottom-4x text-right">
+                  <button class="button button-green button-rounded button-font-bold button-height-large" ng-click="addNewChoice()">Add Steps</button>
+                </div>
+                <div class="c-lroute-stepbox" ng-class="{'active':isstepCollapsed}" data-ng-repeat="choice in choices|limitTo:10">
+                  <div class="c-lroute__top">
+                    <h3 class="c-title">
+                      STEP{{$index+1}}:</h3>
+                    <div class="c-lroute__opt">
+                      <ul>
+                        <li><span class="video-icon pointer" ng-class="{'hidden':!isstepCollapsed}" ng-click="showaddvideoblock=true"><i class="icon-video"></i></span></li>
+                        <li><span class="img-icon pointer" ng-class="{'hidden':!isstepCollapsed}" ng-click="showaddimgblock=true"><i class="icon-file"> </i></span></li>
+                        <li><span class="caret pointer" ng-click="isstepCollapsed = !isstepCollapsed"></span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="c-lroute__field-group" uib-collapse="!isstepCollapsed">
+                    <div class="c-field c-outline c-1 c-lh c-shadow c-b-xsm c-md">
+                      <input class="c-field-control" type="text" placeholder="Sub Title"/>
+                    </div>
+                    <div class="c-field c-outline c-1 c-lh c-shadow c-b-xsm c-md">
+                      <textarea class="c-field-control" rows="6" cols="6" placeholder="Description"></textarea>
+                    </div>
+                    <div class="c-field c-outline c-1 c-lh c-shadow c-b-xsm c-md">
+                      <input class="c-field-control" type="text" placeholder="Duration"/>
+                    </div>
+                    <div class="c-field c-outline c-1 c-lh c-shadow c-b-xsm c-md">
+                      <input class="c-field-control" type="text" placeholder="Cost"/>
+                    </div>
+                    <div class="c-add-img-video__block c-addimgblcok" ng-show="showaddimgblock">
+                      <div class="c-add-img-video__top">
+                        <div class="fileUpload">
+                          <input class="upload" type="file"/>
+                          <button class="button button-green button-rounded button-height-large button-font-bold">Add Images</button>
+                        </div>
+                        <div class="help-txt">
+                          <p>Max. 4 JPEGs of 10MB in Size </p>
+                        </div>
+                      </div>
+                      <div class="data-list">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6">
+                            <div class="img-box"><span class="delete-ico"><i class="icon-close-fill"></i></span>
+                              <figure><img src="images/test.jpg" alt="img"/></figure>
+                              <figcaption>
+                                <h3 class="file-title">Originalname.jpeg</h3>
+                                <div class="caption__opt">
+                                  <button class="button button-rounded button-grey button-font-sbold button-height-small" ng-click="addcaption = ! addcaption" ng-class="{'hidden':addcaption}"> Add Caption</button>
+                                  <div class="c-edit-field" ng-show="addcaption"> 
+                                    <input type="text" placeholder="New Name Assign"/>
+                                    <div class="field-opt">
+                                      <ul>
+                                        <li><span class="edit-ico"><i class="icon-edit-o"></i></span></li>
+                                        <li><span class="close-ico"><i class="icon-close-o"></i></span></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </figcaption>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="img-box"><span class="delete-ico"><i class="icon-close-fill"></i></span>
+                              <figure><img src="images/test.jpg" alt="img"/></figure>
+                              <figcaption>
+                                <h3 class="file-title">Originalname.jpeg</h3>
+                                <div class="caption__opt">
+                                  <button class="button button-rounded button-grey button-font-sbold button-height-small" ng-click="addcaption1 = ! addcaption1" ng-class="{'hidden':addcaption1}"> Add Caption</button>
+                                  <div class="c-edit-field" ng-show="addcaption1"> 
+                                    <input type="text" placeholder="New Name Assign"/>
+                                    <div class="field-opt">
+                                      <ul>
+                                        <li><span class="edit-ico"><i class="icon-edit-o"></i></span></li>
+                                        <li><span class="close-ico"><i class="icon-close-o"></i></span></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </figcaption>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="img-box"><span class="delete-ico"><i class="icon-close-fill"></i></span>
+                              <figure><img src="images/test.jpg" alt="img"/></figure>
+                              <figcaption>
+                                <h3 class="file-title">Originalname.jpeg</h3>
+                                <div class="caption__opt">
+                                  <button class="button button-rounded button-grey button-font-sbold button-height-small" ng-click="addcaption2 = ! addcaption2" ng-class="{'hidden':addcaption2}"> Add Caption</button>
+                                  <div class="c-edit-field" ng-show="addcaption2"> 
+                                    <input type="text" placeholder="New Name Assign"/>
+                                    <div class="field-opt">
+                                      <ul>
+                                        <li><span class="edit-ico"><i class="icon-edit-o"></i></span></li>
+                                        <li><span class="close-ico"><i class="icon-close-o"></i></span></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </figcaption>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-add-img-video__block" ng-show="showaddvideoblock">
+                      <div class="c-add-img-video__top">
+                        <button class="button button-green button-rounded button-height-large button-font-bold" ng-controller="ModalCtrl" ng-click="insertvideo()">Add Videos</button>
+                        <div class="help-txt">
+                          <p>Max. 2 External Video Links</p>
+                        </div>
+                      </div>
+                      <div class="data-list">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6">
+                            <div class="video-box"><span class="delete-ico"><i class="icon-close-fill"></i></span>
+                              <iframe width="100%" height="200" src="https://www.youtube.com/embed/7mNu1DaTVDY" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                              <figcaption>
+                                <h3 class="file-title">Originalname.mp4</h3>
+                                <div class="caption__opt">
+                                  <button class="button button-rounded button-grey button-font-sbold button-height-small" ng-click="addcaption3 = ! addcaption3" ng-class="{'hidden':addcaption3}"> Add Caption</button>
+                                  <div class="c-edit-field" ng-show="addcaption3"> 
+                                    <input type="text" placeholder="New Name Assign"/>
+                                    <div class="field-opt">
+                                      <ul>
+                                        <li><span class="edit-ico"><i class="icon-edit-o"></i></span></li>
+                                        <li><span class="close-ico"><i class="icon-close-o"></i></span></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </figcaption>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                            <div class="video-box"><span class="delete-ico"><i class="icon-close-fill"></i></span>
+                              <iframe width="100%" height="200" src="https://www.youtube.com/embed/7mNu1DaTVDY" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                              <figcaption>
+                                <h3 class="file-title">Originalname.mp4</h3>
+                                <div class="caption__opt">
+                                  <button class="button button-rounded button-grey button-font-sbold button-height-small" ng-click="addcaption4 = ! addcaption4" ng-class="{'hidden':addcaption4}"> Add Caption</button>
+                                  <div class="c-edit-field" ng-show="addcaption4"> 
+                                    <input type="text" placeholder="New Name Assign"/>
+                                    <div class="field-opt">
+                                      <ul>
+                                        <li><span class="edit-ico"><i class="icon-edit-o"></i></span></li>
+                                        <li><span class="close-ico"><i class="icon-close-o"></i></span></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </figcaption>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-post_option">
+                  <h4>POSTING OPTION</h4>
+                  <div class="c-post_option__row">
+                    <div class="row">
+                      <div class="col-md-8 col-sm-8 col-xs-8">
+                        <div class="c-post_option__txt">
+                          <h5>Post as a new life route that I have completed</h5>
+                          <p>Use this option to inform others that you have completed a particular life route which you have prior experience of. Users will be able to post and view comments by clicking on VIEW LIFE ROUTE button.</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-4">
+                        <div class="c-post_option_btn">
+                          <div class="fh-switch">
+                            <input type="radio" id="one" name="a"/>
+                            <label for="one"></label><span class="fh-switch-knob"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-post_option__row">
+                    <div class="row">
+                      <div class="col-md-8 col-sm-8 col-xs-8">
+                        <div class="c-post_option__txt">
+                          <h5>Post as a new life route request for help with</h5>
+                          <p> Use this option to ask other users for help, advice or suggestions for a life route you either have started or are in progress. Users can then offer support, advice and guidance by clicking on POST COMMENT.</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-4">
+                        <div class="c-post_option_btn">
+                          <div class="fh-switch">
+                            <input type="radio" id="two" name="a"/>
+                            <label for="two"></label><span class="fh-switch-knob"> </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-setting-opt">
+                  <div class="row">
+                    <div class="col-md-8 col-sm-8 col-xs-8">
+                      <h3>Post this to Everyone on MyLifeRoute</h3>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                      <div class="c-oth-opt__btn">
+                        <div class="fh-switch">
+                          <input type="radio" id="three" name="b"/>
+                          <label for="three"></label><span class="fh-switch-knob"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-setting-opt">
+                  <div class="row">
+                    <div class="col-md-8 col-sm-8 col-xs-8">
+                      <h3>Post this to My Connections only</h3>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                      <div class="c-oth-opt__btn">
+                        <div class="fh-switch">
+                          <input type="radio" id="four" name="b"/>
+                          <label for="four"></label><span class="fh-switch-knob"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-setting-opt">
+                  <div class="row">
+                    <div class="col-md-8 col-sm-8 col-xs-8">
+                      <h3>Post this to Specific People only</h3>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                      <div class="c-oth-opt__btn">
+                        <div class="fh-switch">
+                          <input type="radio" id="five" name="b"/>
+                          <label for="five"></label><span class="fh-switch-knob"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-search-field">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label>Select People</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="c-field c-outline c-1 c-lh c-shadow c-b-sm">
+                        <input class="c-field-control" type="text" placeholder="Add Keywords"/>
+                        <div class="people-list">
+                          <ul>
+                            <li><span class="__label">John Smith </span><span class="ico pointer"> <i class="icon-close-o"> </i></span></li>
+                            <li><span class="__label">John Smith </span><span class="ico pointer"><i class="icon-close-o"> </i></span></li>
+                            <li><span class="__label">John Smith </span><span class="ico pointer"> <i class="icon-close-o"></i></span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-field text-right">
+                  <button class="button button-danger button-font-medium button-uppercase button-font-medium-txt button-height-extra-large button-rounded button-min-width-small margin-left-1x margin-right-1x margin-bottom-2x">CANCEL</button>
+                  <button class="button button-green button-font-medium button-uppercase button-font-medium-txt button-height-extra-large button-rounded button-min-width-small margin-left-1x margin-right-1x margin-bottom-2x">SAVE AS DRAFT</button>
+                  <button class="button button-uppercase button-font-medium button-font-medium-txt button-height-extra-large button-rounded button-min-width-small margin-right-1x margin-left-1x">POST</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

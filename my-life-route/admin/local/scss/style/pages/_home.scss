@@ -1,0 +1,139 @@
+.dashboard-nav {
+    width: 260px;
+    background-color: $theme;
+    color: $white;
+    @include pos(fix, 0 null 0 0);
+    @include padding-top(80);
+    @include box-shadow(0 4px 15px rgba(0, 0, 0, .27));
+    z-index: 1;
+    overflow: auto;
+    .dashboard-nav__list {
+        height: 100%;
+        &>ul {
+            &>li {
+                &>a {
+                    display: $b;
+                    @include padding(25 15);
+                    color: $white;
+                    @include fontsize(17);
+                    font-weight: 500;
+                    @include pos(rel, null);
+                    @include border-bottom(1, solid, lighten($theme, 10%));
+                    [class*="icon-"] {
+                        @include fontsize(20);
+                        @include margin-right(10);
+                        display: $ib;
+                        width: 30px;
+                        vertical-align: middle;
+                    }
+                    &:hover,
+                    &:focus {
+                        background-color: darken($theme, 20%);
+                    }
+                    &.active {
+                        background-color: darken($theme, 20%);
+                    }
+                    &.has-child {
+                        &:after {
+                            @include pos(ab, 50% 20px null null);
+                            @include translatepos(0, -50%);
+                            font-family: 'icomoon' !important;
+                            font-style: normal;
+                            font-weight: normal;
+                            line-height: 1;
+                            content: "\e90a";
+                            @include transform-origin(center, right);
+                            @include transition(all 0.1s ease-in-out);
+                        }
+                        &.active {
+                            &:after {
+                                @include transform(rotate(90deg));
+                            }
+                        }
+                    }
+                }
+                &:last-child {
+                    &>a {
+                        border: 0;
+                    }
+                }
+            }
+        }
+        .d-sub-nav {
+            background-color: darken($theme, 20%);
+            &>li {
+                &>a {
+                    display: $b;
+                    @include padding(20 20);
+                    color: $white;
+                    @include fontsize(16);
+                    font-weight: 500;
+                    color: #9bccdb;
+                    [class*="icon-"] {
+                        @include fontsize(16);
+                        @include margin-right(20);
+                        display: $ib;
+                        color: #9bccdb;
+                        vertical-align: middle;
+                    }
+                    &:hover,
+                    &:focus {
+                        color: $white;
+                        [class*="icon-"] {
+                            color: $white;
+                        }
+                    }
+                    &.active {
+                        color: $white;
+                        [class*="icon-"] {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dashboard-t-info {
+    .dashboard-t-box {
+        @include padding(90 30);
+        @include border-round(6);
+        color: $white;
+        @include box-shadow(0 3px 8px rgba(0, 0, 0, .37));
+        @include margin-bottom(20);
+        h3 {
+            @include fontsize(40);
+            font-weight: 400;
+        }
+        h4 {
+            @include fontsize(20);
+            font-weight: 500;
+            @include margin-top(5);
+        }
+        .ico {
+            @include fontsize(24);
+            display: $ib;
+            vertical-align: middle;
+            @include margin-left(10);
+        }
+        &.c-1 {
+            background-color: $color-l-bg-01;
+        }
+        &.c-2 {
+            background-color: $color-l-bg-02;
+        }
+        &.c-3 {
+            background-color: $color-l-bg-03;
+        }
+        &.c-4 {
+            background-color: $color-l-bg-04;
+        }
+        &.c-5 {
+            background-color: $color-l-bg-05;
+        }
+        &.c-6 {
+            background-color: $color-l-bg-06;
+        }
+    }
+}

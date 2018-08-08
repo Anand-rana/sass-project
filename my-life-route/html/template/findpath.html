@@ -1,0 +1,19 @@
+
+<div class="find-path-block">
+  <div class="container">
+    <h2 class="heading" data-ng-show="$state.includes('home')">Find Your Path</h2>
+    <div class="filter-block">
+      <div class="filter-nav">
+        <ul>
+          <li><a data-ui-sref="liferoute" data-ui-sref-active="active" data-ng-class="{active:$state.includes('home')||$state.includes('landing')||$state.includes('my-post')||$state.includes('my-people')||$state.includes('post-life-route')||$state.includes('saved-draft')||$state.includes('post-events-route')||$state.includes('post-events-upcoming')||$state.includes('post-events-expired')||$state.includes('my-people-connetion')||$state.includes('my-people-request')||$state.includes('notification')||$state.includes('other-user-profie')||$state.includes('other-user-profie-connection')||$state.includes('my-profile')||$state.includes('my-message')||$state.includes('life-route-dtl')||$state.includes('my-pages')||$state.includes('business-page')||$state.includes('page-reviews')||$state.includes('about')}">Life Route </a></li>
+          <li><a data-ui-sref="news" data-ui-sref-active="active" data-ng-class="{active:$state.includes('news-route-dtl')||$state.includes('events-route-dtl')||$state.includes('post-news-route')}">News</a></li>
+          <li><a data-ui-sref="people" data-ui-sref-active="active">People</a></li>
+          <li><a data-ui-sref="business" data-ui-sref-active="active">Business </a></li>
+        </ul>
+      </div>
+      <div class="filter-form-block">
+        <div data-ui-view="formDetails"></div>
+      </div>
+    </div>
+  </div>
+</div>

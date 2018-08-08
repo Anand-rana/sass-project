@@ -1,0 +1,44 @@
+.notification-list-block {
+    @include margin-top(70);
+    background-color: $white;
+    @include box-shadow(0 0 4px rgba(0, 0, 0, .09));
+    .n-list-row {
+        @include padding(30 60);
+        cursor: pointer;
+        .media-left {
+            @include padding-right(35);
+        }
+
+        .user-img {
+            img {
+                width: 70px;
+                height: 70px;
+                @include circle;
+                object-fit: cover;
+            }
+        }
+        .n-dtl-txt {
+            color: #989898;
+
+            h2 {
+                @include fontsize(18);
+                font-family: $font-family-alt;
+                font-weight: 200;
+                text-transform: uppercase;
+                @include padding-bottom(10);
+                color: $color-text-04;
+            }
+            p {
+                @include fontsize(16);
+                font-weight: 300;
+            }
+        }
+        &.u-read {
+            background-color: #e7f3fe;
+        }
+    }
+    .notification-list-bottom {
+        text-align: center;
+        @include padding(30 0 50);
+    }
+}

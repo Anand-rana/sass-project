@@ -1,0 +1,15 @@
+@include media("<=1400px") {
+    .cat-listing-section {
+        .container-fluid {
+            @include padding(0 40);
+        }
+    }
+}
+
+@include media("<=992px") {
+    .cat-listing-section {
+        .container-fluid {
+            @include padding(0 15);
+        }
+    }
+}

@@ -1,0 +1,455 @@
+.competion-block {
+    background-color: $white;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.09);
+
+    @include margin-top(70);
+
+    .nav-tabs {
+        @include border-bottom(3, solid, $color-bg-04);
+
+        li {
+            @include margin-bottom(0);
+
+            text-align: center;
+
+            a {
+                border: 0 !important;
+                font-family: $font-family-alt;
+                font-weight: 100;
+                text-transform: uppercase;
+                color: $color-text-04;
+
+                @include fontsize(18);
+
+                @include margin-bottom(-3);
+
+                border-radius: 0;
+                display: block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px transparent;
+
+                @include padding(22 0);
+
+                position: relative;
+                overflow: hidden;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    left: 50%;
+                    right: 50%;
+                    bottom: 0;
+                    background: #2196f3;
+                    height: 3px;
+                    -webkit-transition-property: left, right;
+                    transition-property: left, right;
+                    -webkit-transition-duration: 0.3s;
+                    transition-duration: 0.3s;
+                    -webkit-transition-timing-function: ease-out;
+                    transition-timing-function: ease-out;
+                }
+
+                &:hover:before,
+                &:focus:before,
+                &:active:before {
+                    left: 0;
+                    right: 0;
+                }
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+
+            &.active {
+                a {
+                    &:before {
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .competion-content-block {
+        @include padding(60 40 70);
+
+          .c-box-list
+          {
+            &:last-of-type
+            {
+              .c-box {
+                @include margin-bottom(0);
+              }
+            }
+          }
+
+        .c-box {
+            display: table;
+            width: 100%;
+            background-color: #f8f8f8;
+
+            @include pos(rel, null);
+
+            @include margin-bottom(60);
+
+
+
+            .c-cell {
+                display: table-cell;
+            }
+
+            .c-user-dtl-cell {
+                width: 80%;
+                vertical-align: middle;
+
+                .c-user-dtl {
+                    @include padding-bottom(20);
+
+                    .c-user-pic {
+                        @include pos(ab, -25px null null 10px);
+
+                        img {
+                            width: 45px;
+                            height: 45px;
+
+                            @include circle;
+                        }
+                    }
+
+                    .c-dtl-txt {
+                        @include padding(15 40 0 70);
+
+                        @include fontsize(12);
+
+                        .title {
+                            font-family: $font-family-alt;
+                            font-weight: 100;
+
+                            @include fontsize(16);
+
+                            text-transform: uppercase;
+
+                            @include padding-bottom(10);
+                        }
+
+                        p {
+                            color: $color-text-04;
+
+                            @include margin-bottom(4);
+                        }
+
+                        .more-link {
+                            color: $color-text-04;
+                            font-weight: 200;
+
+                            @include fontsize(10);
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    .c-dtl-info {
+                        @include padding(10 0);
+
+                        ul {
+                            display: table;
+                            width: 100%;
+
+                            li {
+                                width: 25%;
+                                float: left;
+
+                                @include fontsize(12);
+
+                                color: $color-text-04;
+
+                                .l-label {
+                                    background-color: #2196f3;
+
+                                    @include fontsize(9);
+
+                                    color: $white;
+
+                                    @include padding(0 3);
+
+                                    @include border-round(2);
+
+                                    @include margin-right(10);
+
+                                    text-transform: uppercase;
+
+                                    /*06-02-2018 start*/
+                                    @include margin-top(-2);
+
+                                    display: inline-block;
+                                    vertical-align: middle;
+
+                                    /*06-02-2018 end*/
+                                }
+                            }
+                        }
+                    }
+
+                    .c-user-status {
+                        @include fontsize(14);
+
+                        @include margin-top(10);
+
+                        color: $color-text-04;
+
+                        .token-no {
+                            @include margin-right(30);
+                        }
+                    }
+                }
+            }
+
+            .c-img-cell {
+                width: 20%;
+                vertical-align: middle;
+                overflow: hidden;
+
+                @include fluid-ratio(1 1, img);
+
+                figure {
+                    @include margin(0);
+
+                    img {
+                        max-width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .competion-block__dtl {
+        .competion-block__dtl__header {
+            @include border-bottom(3, solid, $color-bg-04);
+
+            @include padding(25 30);
+
+            h3 {
+                font-family: $font-family-alt;
+                font-weight: 100;
+                text-transform: uppercase;
+
+                @include fontsize(18);
+
+                a {
+                    color: $color-text-04;
+                }
+
+                span {
+                    @include margin-right(10);
+                    display:$ib;
+                }
+            }
+        }
+
+        .c-dtl-box {
+            //display: table;
+            min-height: 100%;
+            width: 100%;
+            background-color: #f8f8f8;
+
+            @include pos(rel, null);
+
+            .c-user-dtl {
+                .c-user-pic {
+                    @include pos(ab, -25px null null 10px);
+
+                    img {
+                        width: 45px;
+                        height: 45px;
+
+                        @include circle;
+                    }
+                }
+
+                .c-dtl-txt {
+                    @include padding(20 30 0 30);
+
+                    @include fontsize(12);
+
+                    .title {
+                        font-family: $font-family-alt;
+                        font-weight: 100;
+
+                        @include fontsize(16);
+
+                        text-transform: uppercase;
+
+                        @include padding-bottom(20);
+
+                        @include margin-left(40);
+                    }
+
+                    p {
+                        color: $color-text-04;
+
+                        @include margin-bottom(4);
+                    }
+                }
+
+                .cp-upload-list
+                {
+                  @include margin(20 0);
+
+                  .cp-product
+                  {
+                    @include margin-bottom(15);
+                    text-align: center;
+                    a
+                    {
+                      display:$b;
+
+                      img
+                      {
+                        width:70px;
+                        height: 70px;
+                        object-fit:cover;
+                      }
+                    }
+
+                    h5
+                    {
+                      @include margin-top(5);
+                    }
+                  }
+                }
+
+                .c-dtl-info {
+                    @include padding(10 0);
+
+                    ul {
+                        li {
+                            display: $b;
+
+                            @include fontsize(13);
+
+                            color: $color-text-04;
+
+                            @include margin(15 0);
+
+                            .l-label {
+                                background-color: #2196f3;
+
+                                @include fontsize(9);
+
+                                color: $white;
+
+                                @include padding(0 3);
+
+                                @include border-round(2);
+
+                                @include margin-right(10);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .competion-block__dtl__sidebar {
+            .c-thumb-slider {
+                .owl-carousel {
+                    @include margin-top(15);
+
+                    .item {
+                        img {
+                            width: 75px;
+                            height: 55px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.competion-create-form {
+    @include padding(60 50 100);
+
+    .field-group {
+        color: $color-text-01;
+
+        @include fontsize(16);
+
+        max-width: 500px;
+
+        .c-field {
+            .helpicon {
+                @include margin-left(10);
+
+                color: lighten($color-text-01, 15%);
+
+                @include fontsize(20);
+
+                line-height: 1;
+
+                @include margin-top(2);
+            }
+        }
+    }
+
+    .upload-field {
+        h3.title {
+            color: $color-text-01;
+
+            @include fontsize(16);
+
+            font-family: $font-family-alt;
+            font-weight: 100;
+            text-align: right;
+
+            @include margin-bottom(10);
+        }
+
+        .upload-list {
+            @include margin-top(20);
+
+            ul {
+                li {
+                    display: $ib;
+
+                    @include margin-right(10);
+
+                    @include margin-bottom(10);
+                }
+            }
+
+            img {
+                width: 70px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+.competion-block {
+    .competion-block-history-list {
+        .competion-content-block {
+            .c-box {
+                .c-user-dtl-cell {
+                    .c-user-dtl {
+                        .c-dtl-txt {
+                            @include padding(20 20 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

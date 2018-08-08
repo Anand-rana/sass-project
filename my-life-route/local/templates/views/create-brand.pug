@@ -1,0 +1,50 @@
+.create-brand-page
+	.container
+		.step-form-block
+			h2.title Create BRAND or PRODUCT Page
+			.step-form-container
+				.step-form-heading
+					h3.title Essential Details
+					
+				.step-form-data
+					.step-form-field-box
+						.field-group
+							.c-field.c-outline.c-5.c-lh.c-shadow
+									.c-line.c-5
+										label Brand/Product Name
+									input(type="text", placeholder="Enter Name").c-field-control
+							.c-field.c-outline.c-5.c-lh.c-shadow.c-b-lg
+									.c-line.c-5
+										label Brand/Product Category
+									.select-control
+										select.c-field-control
+											option(value='Select') Select
+							.c-field.c-outline.c-5.c-lh.c-shadow
+								.c-line.c-5
+									label Keywords
+								  
+								tags-input(ng-model="tags" placeholder="Add Keywords")
+							.c-field.c-outline.c-5.c-shadow 
+								.c-line.c-5
+									label Description
+								textarea(rows="8" cols="8" placeholder="Enter Some Text..").c-field-control
+							.c-field.c-outline.c-5.c-lh.c-shadow
+									.c-line.c-5
+										label Availability Methods
+									.select-control
+										select.c-field-control
+											option(value='Select') Choose Option
+							.c-field.c-outline.c-5.c-shadow
+								.c-line.c-5
+									label Head Office Address
+								textarea(rows="8" cols="8" placeholder="Head Office Address").c-field-control
+							
+							.c-field.c-outline.c-5.c-lh.c-shadow
+									.c-line.c-5
+										label Website (Optional)
+									input(type="text", placeholder="Website (Optional)").c-field-control
+							.btn-field.text-center
+								button.button.button-font-medium.button-uppercase.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-left-1x.margin-right-1x.margin-bottom-2x CREATE
+								button.button.button-danger.button-uppercase.button-font-medium.button-font-medium-txt.button-height-extra-large.button-rounded.button-min-width-small.margin-right-1x.margin-left-1x CANCEL
+
+											

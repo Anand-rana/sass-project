@@ -1,0 +1,212 @@
+.porfile-block-form {
+    @include margin-top(100);
+
+    .is--smbtn {
+        .fh-checkbox {
+            label {
+                @include open-semibold;
+
+                color: #687aa2;
+
+                &:before {
+                    @include fontsize(20);
+                }
+            }
+        }
+    }
+}
+
+.user-dtl {
+    margin: 0 auto 20px;
+    max-width: 280px;
+
+    .user__img {
+        width: 160px;
+        margin: 0 auto 20px;
+
+        @include pos(rel, null);
+
+        .user__name {
+            width: 155px;
+            height: 155px;
+            background-color: $themecolor;
+            text-align: center;
+            line-height: 155px;
+            color: $white;
+
+            @include circle;
+
+            @include fontsize(30);
+
+            text-transform: $uppercase;
+        }
+
+        img {
+            width: 155px;
+            height: 155px;
+
+            @include circle;
+        }
+
+        .fileUpload {
+            width: 40px;
+            text-align: center;
+
+            @include pos(ab, null 0 0 null);
+        }
+    }
+}
+
+.c-field {
+    label {
+        @include open-semibold;
+
+        @include padding-left(15);
+
+        color: #575a61;
+    }
+
+    .form-control {
+        border-color: #1a346c;
+
+        &:focus {
+            border-color: #e7604a;
+        }
+    }
+
+    .open {
+        & > .dropdown-toggle.c-select {
+            background-color: #fff;
+            border-color: #e7604a;
+
+            &:hover, &:focus {
+                background-color: #fff;
+                border-color: #e7604a;
+            }
+        }
+    }
+
+    .c-select {
+        border-color: #1a346c;
+        border-radius: 0;
+        background-color: #fff;
+
+        @include box-shadow-none;
+    }
+
+    .input-group {
+        .input-group-addon {
+            background-color: $white;
+            border-color: #1a346c;
+            border-radius: 0;
+        }
+
+        .form-control {
+            border-color: #1a346c;
+
+            &:focus {
+                border-color: #1a346c;
+            }
+        }
+    }
+}
+
+.form-section {
+    background-color: #f0f6f6;
+
+    @include border(1, solid, #1c3875);
+
+    @include padding(30);
+
+    @include margin-bottom(20);
+
+    hr {
+        border-color: #c8cccc;
+
+        @include margin(50 0);
+    }
+}
+
+select.form-control {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(#{$imgpath}/arrow-dropdown.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+
+    @include padding-right(25);
+
+    line-height: inherit;
+    background-position-x: 97%;
+    background-position-y: 50%;
+}
+
+.custom-select {
+    @include border(1, solid, #ccc);
+
+    border-radius: 0;
+    display: $block;
+    color: #555 !important;
+    background: $white;
+}
+
+.bootstrap-select {
+    width: 100% !important;
+}
+
+select.form-control::-ms-expand {
+    display: none;
+}
+
+.filter_tabs {
+    li {
+        width: 50%;
+        background-color: #d2e4fc;
+        float: left;
+        text-align: center;
+
+        @include fontsize(17);
+
+        @include raleway-semibold;
+
+        text-transform: $uppercase;
+
+        span {
+            display: block;
+
+            @include padding(15);
+
+            cursor: pointer;
+        }
+
+        &.active {
+            background-color: $themecolor;
+            color: $white;
+        }
+    }
+}
+
+.ch-pass_block {
+    .form-group {
+        @include margin-bottom(30);
+    }
+
+    .ch-pass__heading {
+        @include padding(25);
+
+        background-color: #272e3e;
+
+        h3 {
+            color: $white;
+
+            @include raleway-semibold;
+
+            @include fontsize(18);
+
+            text-transform: $uppercase;
+        }
+    }
+}

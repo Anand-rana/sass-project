@@ -1,0 +1,61 @@
+     @include media("<=992px") {
+     .form-section {
+         @include padding(50 0);
+     }
+     .c-field {
+         @include margin-bottom(50);
+     }
+     .step-list {
+         @include margin-top(20);
+     }
+ }
+ 
+ @include media("<=767px") {
+     .c-field {
+         @include margin-bottom(30);
+         textarea.field-control {
+             
+                 min-height: 70px;
+             }
+         }
+         .login-form-section {
+             .sign-link {
+                 @include margin(15 0);
+                 text-align: left;
+             }
+             .sign-in-options {
+                 @include margin-top(20);
+             }
+         }
+         .step-pannel-box {
+             @include padding(50 0);
+             @include margin-bottom(60);
+             .step-pannel-heading {
+                 @include padding(15);
+                 max-width: 300px;
+                 width: 100%;
+                 @include translatepos(-50%, 0);
+                 left: 50%;
+             }
+         }
+         .dealar-form-section {
+             .dealar-step-2 {
+                 @include margin-top(50);
+             }
+         }
+     }
+     @include media("<=380px") {
+         .c-field {
+             &.field-feedback-side {
+                 .field-control {
+                     @include padding-right(0);
+                 }
+                 .field-group-link {
+                     @include pos(rel, null);
+                     display: $block;
+                     @include margin(15 0 0 15);
+                     text-align: left;
+                 }
+             }
+         }
+     }

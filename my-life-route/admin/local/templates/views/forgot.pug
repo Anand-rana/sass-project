@@ -1,0 +1,15 @@
+.dashboard-form-container
+	.dashboard-form__box
+		.logo
+			img(src="images/logo.jpg" alt="img").img-responsive
+		.forgot-form
+			.forgot-form__heading-block
+				h3 Forgot Your Password ?
+				p In order to receive your access code - please enter the email address you provided during  the registration process.
+			.field-group
+				.c-field.c-b-sm.c-bg-color
+					input(type="text", placeholder="Enter Email/Username").c-field-control
+				
+				.btn-field
+					button.button.button-uppercase.button-block.button-font-medium.button-height-large.button-font-medium-txt.button-rounded.margin-bottom-3x(ng-click="$state.go('email-confirm')") SUBMIT
+					button.button.button-uppercase.button-danger.button-block.button-font-medium.button-height-large.button-font-medium-txt.button-rounded(ng-click="$state.go('login')") Cancel

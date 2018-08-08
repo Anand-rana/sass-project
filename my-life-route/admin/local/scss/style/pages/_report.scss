@@ -1,0 +1,30 @@
+.dashboard-report-section {
+    .report-list {
+        .total-entries {
+            text-align: center;
+            @include font-size(15);
+            font-weight: 400;
+
+            span {
+                display: $ib;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .dashboard-report-dtl {
+        @include margin-top(50);
+
+        .dashboard-report-content-row {
+            @include fontsize(16);
+            font-weight: 300;
+            @include margin-bottom(20);
+            h3 {
+                @include fontsize(20);
+                color: $theme;
+                @include padding-bottom(5);
+                font-weight: 400;
+            }
+        }
+    }
+}

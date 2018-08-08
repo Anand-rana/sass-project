@@ -1,0 +1,257 @@
+<div class="main-header">
+  <div class="container">
+    <div class="header is-h-border">
+      <div class="row">
+        <div class="col-md-3"><a ui-sref="home" class="logo"><img src="images/logo.png" alt="logo" class="img-reponsive"/></a>
+        <div id="nav-icon1" class="visible-xs" ng-controller="MenuCtrl" >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="nav_bar">
+          <ul>
+            <li><a href="#" title="">Listing</a></li>
+            <li><a href="#" title="">Our Guarantee</a></li>
+            <li><a href="#" title="">about us</a></li>
+            <li><a href="#" title="">help</a></li>
+            <li><a href="#" title="" class="nav_bar__callbtn">Request Callback</a></li>
+            <li><a href="#" title="" class="nav_bar__callbtn">Inbox</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--main-contanier-->
+<div class="main-block">
+<div class="single-property-view">
+  <div class="auc_section">
+    <div class="container">
+      <div class="auc_title">
+        Auction Catalogue offered by <span class="text-theme uppercase">Andy Smith</span>
+        <span class="auc_total">251 Lots</span>
+      </div>
+    </div>
+    <div class="auc-slider">
+      <div class="auc-slider__main" ng-controller="MainCtrl" ng-init="names=[{image:'images/property.jpg',status:'live'},{image:'images/property.jpg',status:'Closed'},{image:'images/property.jpg',status:'upcoming'},{image:'images/property.jpg',status:'live'},{image:'images/property.jpg',status:'live'},{image:'images/property.jpg',status:'live'}]">
+        <div class="container">
+          <data-owl-carousel class="owl-carousel owl-theme" data-options="{nav: true,margin:35}">
+          <div owl-carousel-item="" ng-repeat="Objects in names" class="item">
+            <div class="auc_box">
+              <a href="#">
+                <figure><img src="{{Objects.image}}" alt="img"/>
+                  <div class="auc-p-stauts">{{Objects.status}}</div>
+                </figure>
+                <figcaption>
+                <h5>Bid Listing</h5>
+                Chandigarh   160022
+                </figcaption>
+              </a>
+            </div>
+          </div>
+          </data-owl-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="property-view">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          
+          <div class="property__slider">
+            <div class="property_main">
+              <div class="property_info">
+                <div class="property_title">
+                  <h4>Spacious Apartment in London</h4>
+                </div>
+                
+                <span class="l-address">6473 street, postal road, London</span>
+                <span class="time"> 20 hours 15 min. left</span>
+              </div>
+              <div class="zoom-image" zoom>
+                
+                <img id="myFancyCloudZoom" class="cloudzoom img-responsive" src = "images/property-view.jpg"  data-cloudzoom = "zoomImage: 'images/property-view-main.jpg',zoomWidth:500,zoomHeight:500, autoInside: 900"/>
+                
+                <div class="vslider" id="vslider" vslide>
+                  <div class="thumbelina-but vert top"><span class="icon-slide-arrow-top"></span></div>
+                  <ul>
+                    
+                    <li><img class ='cloudzoom-gallery' src = "images/p1.jpg" data-cloudzoom = "useZoom: '.cloudzoom', image: 'images/property-view.jpg', zoomImage: 'images/property-view-main.jpg' " ><span class="feature-arrow"></span></li>
+                    <li><img class = 'cloudzoom-gallery' src = "images/p2.jpg" data-cloudzoom = "useZoom: '.cloudzoom', image: 'images/property-view2.jpg', zoomImage: 'images/property-view-main2.jpg' " ></li>
+                    <li><img class = 'cloudzoom-gallery' src = "images/p3.jpg" data-cloudzoom = "useZoom: '.cloudzoom', image: 'images/property-view3.jpg', zoomImage: 'images/property-view-main2.jpg' " ></li>
+                    <li><img class = 'cloudzoom-gallery' src = "images/p1.jpg" data-cloudzoom = "useZoom: '.cloudzoom', image: 'images/property-view.jpg', zoomImage: 'images/property-view-main.jpg' " ><span class="feature-arrow"></span></li>
+                    <li><img class = 'cloudzoom-gallery' src = "images/p2.jpg" data-cloudzoom = "useZoom: '.cloudzoom', image: 'images/property-view2.jpg', zoomImage: 'images/property-view-main2.jpg' " ></li>
+                    <li><img class = 'cloudzoom-gallery' src = "images/p3.jpg" data-cloudzoom = "useZoom: '.cloudzoom', image: 'images/property-view3.jpg', zoomImage: 'images/property-view-main2.jpg' " ></li>
+                    
+                    
+                  </ul>
+                  <div class="thumbelina-but  vert bottom"><span class="icon-slide-arrow-bottom"></span></div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          
+          <div class="property-status">
+            <div class="p__status__info">
+              <span class="total-views"><i class="icon-eye"></i> View by 144</span>
+              <span class="total-lot"><span class="text-theme">Lot:</span> 3625</span>
+            </div>
+            <div class="bid-status">
+              <div class="bid-txt">
+                <div class="bid-status__info">
+                  <h3 class="uppercase">This property is<br/>
+                  no longer<br/>
+                  available</h3>
+                  
+                </div>
+                <div class="bid-status__ico">
+                 
+                 <i class="icon-warn"></i>
+                </div>
+                <button class="button button-rounded button-uppercase button-width-large">Times Run out. No winner?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="property-view-options">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          
+          <div class="property-list-options">
+            <ul>
+              <li><span>Map view</span></li>
+              <li><span>Street view</span></li>
+              <li><div  class="d-btn"><h4 class="text-theme">CAsh buyers only</h4>
+                Diposit amount: $1234 <i class="icon-question-mark"></i>
+              </div>
+            </li>
+            <li><span>Bid terms</span></li>
+          </ul>
+        </div>
+        <div class="filter_tabs is--viewmod">
+          <ul>
+            <li ng-class="{active:item == 'p-details'}"><span ng-click="item = 'p-details'">Property details</span></li>
+            <li ng-class="{active:item == 'p-documents'}"><span ng-click="item = 'p-documents'">Documents</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        
+        <div class="c-dtl">
+          <div class="media">
+            <div class="media-left">
+              <img src="images/user.jpg" alt="user"/>
+            </div>
+            <div class="media-body">
+              <p class="text-theme">ANDY SMITH</p>
+              <p>9836 3827 02898</p>
+              <p class="l-ac-date"><span class="o-s-bold">Last active:</span> 2 hours ago</p>
+              
+            </div>
+          </div>
+          <span class="m-ico"> <i class="icon-contact"></i> </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="p-detail-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-4">
+        <div class="p-dt-list">
+          <div ng-show="item == 'p-details'">
+            <ul>
+              <li><span class="o-s-bold">Listing Type :</span>  Traditional Bidding</li>
+              <li><span class="o-s-bold">Premises Type :</span>  Residential</li>
+              <li><span class="o-s-bold">Vacant / No Vacant :</span>  Vacant</li>
+              <li><span class="o-s-bold">Number Of Bedrooms:</span>   4</li>
+              <li><span class="o-s-bold">Number Of Bathrooms:</span>  5</li>
+              <li><span class="o-s-bold">Home size (Sq. Ft.):</span> 59</li>
+              <li><span class="o-s-bold">Lot size:</span> 5453</li>
+              <li><span class="o-s-bold">EPC Rating:</span> 574</li>
+              <li><span class="o-s-bold">Property Type :</span>  House</li>
+              <li><span class="o-s-bold">Year Built :</span>  1998</li>
+              <li><span class="o-s-bold">Number of Units :</span>  1</li>
+              <li><span class="o-s-bold">Occupancy Status :</span> House</li>
+            </ul>
+          </div>
+          
+          <p class="text-theme o-bold">Share this listing</p>
+          <div class="share-links">
+            <a href="#" class="facebook-link"><i class="icon-facebook"></i></a>
+            <a href="#" class="linked-link"><i class="icon-linkedin"></i></a>
+            <a href="#" class="twiiter-link"><i class="icon-twitter"></i></a>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-md-9 col-sm-8">
+        
+        <div class="p-dt-cotent">
+          <div  ng-init="item='p-details'">
+            <div ng-show="item == 'p-details'">
+              <h3>Property Description</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is
+                simply dummy text of the printing and typesetting industry. Lorem  Ipsum has been
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem  Ipsum
+                has been missi.
+              </p>
+              <p>
+                Ipsum has been the industry's standard dummy text ever since the 1500s Lorem  Ipsum is
+                simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been Lorem</p>
+              <div class="content__note">
+                <h3>Solicitor details</h3>
+                <p><span class="o-bold">Firm name: </span>  Any name here</p>
+                <p><span class="o-bold">Email: </span> EmailId@jshk.com</p>
+                <p><span class="o-bold">Contact: </span> 9836 3827 02898</p>
+                <hr/>
+                <h3>Viewing arrangements</h3>
+                <p>By appointment only</p>
+                <button class="button button-rounded button-width-large button-uppercase">Contact to arrange</button>
+              </div>
+              <h3>Static text to appear in each screen</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is
+                simply dummy text of the printing and typesetting industry. Lorem  Ipsum has been
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem  Ipsum
+              has been missi.</p>
+              <p>Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div ng-show="item == 'p-documents'">
+              <div class="p-documents">
+                <ul>
+                  <li><a href="#">FileNameToCheck.pdf</a></li>
+                  <li><a href="#">ImageName.Jpg</a></li>
+                  <li><a href="#">DocumentsInWritten.doc</a></li>
+                </ul>
+                <h3>Static text to appear in each screen</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is
+                  simply dummy text of the printing and typesetting industry. Lorem  Ipsum has been
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem  Ipsum
+                has been missi.</p>
+                <p>Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

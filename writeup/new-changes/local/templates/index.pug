@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+	include _partials/_head.pug
+	body(data-ng-app="myApp" data-ng-class="bodyClass")
+		.preloader
+			.spinner
+				.bounce1
+				.bounce2
+				.bounce3
+		
+		div(ui-view="header" data-ng-class="headerClass")
+		div(ui-view="banner")
+		.main-container
+			div(ui-view="content")
+
+							
+
+		include _partials/_footer.pug
+		.side-back-drop.hidden

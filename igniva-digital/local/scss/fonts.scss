@@ -1,0 +1,23 @@
+//Fonts
+@import "style/base/fonts";
+
+
+//open-sans
+
+@include font-face($font-family, #{$primary-font-path}/opensans-light, 100, normal);
+@include font-face($font-family, #{$primary-font-path}/opensans-regular,200, normal);
+@include font-face($font-family, #{$primary-font-path}/opensans-semibold,300, normal);
+@include font-face($font-family, #{$primary-font-path}/opensans-italic,400, normal);
+@include font-face($font-family, #{$primary-font-path}/opensans-lightitalic,500, normal);
+@include font-face($font-family, #{$primary-font-path}/opensans-bold,600, normal); 
+
+
+
+//monsten
+
+@include font-face($font-family-m, #{$primary-font-path}/monosten-light, 100, normal);
+@include font-face($font-family-m, #{$primary-font-path}/monosten-regular,300, normal);
+
+
+
+

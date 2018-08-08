@@ -1,0 +1,96 @@
+.page-conatiner
+	.competion-section.s-ov
+		.container
+			.main-heading
+				h2.title leaderboard
+			.leader-block
+				.leader-block__head
+					ul
+						li
+							h3 User
+						li
+							h3 Rating
+						li
+							h3 Position
+				.leader-block__list
+					.leader-block__list__row
+						ul
+							li
+								.user-pic
+									img(src="images/profile.jpg" alt="img")
+								.user-name
+									h4 John smith
+							li.text-center
+								.rating-container
+										span(uib-rating ng-model="1" max="1"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-1")
+							li.text-right
+								.user-postion
+									img(src="images/trophy-1.png" alt="img")
+									span 1
+										sup st
+					.leader-block__list__row
+						ul
+							li
+								.user-pic
+									img(src="images/profile.jpg" alt="img")
+								.user-name
+									h4 John smith
+							li.text-center
+								.rating-container
+										span(uib-rating ng-model="2" max="2"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-2")
+							li.text-right
+								.user-postion
+									img(src="images/trophy-1.png" alt="img")
+									span 2
+										sup nd
+					.leader-block__list__row
+						ul
+							li
+								.user-pic
+									img(src="images/profile.jpg" alt="img")
+								.user-name
+									h4 John smith
+							li.text-center
+								.rating-container
+										span(uib-rating ng-model="3" max="3"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-3")
+							li.text-right
+								.user-postion
+									img(src="images/trophy-1.png" alt="img")
+									span 3
+										sup rd
+					.leader-block__list__row
+						ul
+							li
+								.user-pic
+									img(src="images/profile.jpg" alt="img")
+								.user-name
+									h4 John smith
+							li.text-center
+								.rating-container
+										span(uib-rating ng-model="4" max="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-4")
+							li.text-right
+								.user-postion
+									img(src="images/trophy-1.png" alt="img")
+									span 4
+										sup th
+					.leader-block__list__row.user-selected
+						ul
+							li
+								.user-pic
+									img(src="images/profile.jpg" alt="img")
+								.user-name
+									h4 John smith
+							li.text-center
+								.rating-container
+										span(uib-rating ng-model="5" max="5"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-5")
+							li.text-right
+								.user-postion
+									img(src="images/trophy-1.png" alt="img")
+									span 5
+										sup th
+									.help-ico.hidden-xs(uib-popover="Entering your current number of employees when signing up to WriteUp allows you to compare this number 'then and now'. You can see how WriteUp has helped your business grow since the day you signed up and a day in the future."  popover-placement="left" popover-trigger="'outsideClick'")
+											i.icon-help
+					.margin-top-8x.padding-bottom-8x.text-center
+						button.button.button-circle.button-normal.button-border.button-dark.button-font-open.button-font-small Load more
+
+				

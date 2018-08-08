@@ -1,0 +1,369 @@
+<div class="page-conatiner" id="seo-html-snapshot">
+    <div class="profile-section s-ov" id="1">
+        <div class="container">
+            <div class="main-heading">
+                <h2 class="title">Company</h2>
+            </div>
+            <div class="profile-block profile-view-company">
+                <div>
+                    <div class="profile-block-dtl">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-5">
+                                <div class="p-user-block">
+                                    <div class="p-img profile-image-area">
+                                        <img class="img-responsive" data-ng-src="{{WUgetImageFromObject(company.profile_image ? company.profile_image : {}, 'COMPANY', 'small')}}"
+                                             alt="{{company.name}}" />
+                                    </div>
+                                    <div class="p-user-info-block" data-ng-if="company_competitions && company_competitions.list && company_competitions.list.length > 0">
+                                        <div class="p-up-competions">
+                                            <h3 class="title">
+                                                <span>Upcoming competitions</span>
+                                            </h3>
+                                            <div class="p-up-competions-list">
+                                                <div class="media" data-ng-repeat="company_competition in company_competitions.list| limitTo : 4">
+                                                    <div class="media-left" data-ng-if="company_competition.gallery && company_competition.gallery.length > 0 && isImageExists(company_competition.gallery)">
+                                                        <div class="p-c-img">
+                                                            <img data-ng-src="{{getAImageFromGallery(company_competition.gallery, 'smallx60')}}" alt="{{company_competition.name}}" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <a href="/competitions/{{company_competition.id}}/{{company_competition.slug}}">
+                                                            <h3>{{company_competition.name|upperCaseFirstFilter:false}}</h3>
+                                                        </a>
+                                                        <p>{{company_competition.description|upperCaseFirstFilter:false|getExcerpt:80}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center margin-top-10px">
+                                        <a class="view-link link-design-1 " data-ng-href="company/{{$state.params.company_id}}/{{$state.params.company_slug}}/competitions">VIEW COMPANY'S COMPETITIONS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-sm-7">
+                                <div class="p-personal-info-block">
+                                    <div class="row">
+                                        <div class="col-md-8 col-sm-8">
+                                            <div class="user-name">
+                                                <h1 class="view-page-title" data-ng-bind="company.name"></h1>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button class="button button-border button-blue-dark button-font-open button-uppercase button-font-small button-min-width-small"
+                                                    data-ng-if="((!company.is_profile_claimed_by_me || company.is_profile_claimed_by_me == 0)) && ((!authentication_service.isAuthenticated()) || (authentication_service.isAuthenticated() && authentication_service.isCompany()))"
+                                                    data-ng-click="onOpenClaimProfileModal()">Claim Company</button>
+
+                                            <button disabled="" class="button button-border button-blue-dark button-font-open button-uppercase button-font-small button-min-width-small"
+                                                    data-ng-if="(company.is_profile_claimed_by_me && (company.is_profile_claimed_by_me || company.is_profile_claimed_by_me == 1))">Company Claimed</button>
+
+                                        </div>
+                                    </div>
+                                    <div class="user-rating-cotainer">
+                                        <h3>Overall Ratings</h3>
+                                        <div class="rating-container">
+                                            <span data-uib-rating="uib-rating" data-ng-model="company.rating_score.overall_rating" data-state-on="'icon-star star-checked'"
+                                                  data-state-off="'icon-star star-uncheck'" data-read-only="true" data-aria-labelledby="default-rating-1"
+                                                  data-titles="{{WUKgetBootstrapRatingArray(company.rating_score.overall_rating)}}"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-user-opt">
+
+                                        <span data-ng-if="authentication_service.isAuthenticated()">
+                                            <span data-ng-if="company.reviews.is_reviewed_by_me && company.reviews.is_reviewed_by_me == 1">
+                                                <span data-ng-if="company.reviews.is_my_review_editable && company.reviews.is_my_review_editable == 1">
+                                                    <a 
+                                                        class="button button-blue-dark button-font-open button-uppercase button-font-small margin-right-4x margin-bottom-2x" 
+                                                        data-ng-href="/company/{{company.id}}/{{company.username}}/review/{{company.reviews.my_submitted_review_detail.id}}/edit">                                                    
+                                                        Edit Review
+                                                    </a>
+                                                </span>     
+                                                <span data-ng-if="!company.reviews.is_my_review_editable">
+                                                    <a 
+                                                        class="button button-blue-dark button-font-open button-uppercase button-font-small margin-right-4x margin-bottom-2x" 
+                                                        data-ng-href="/company/{{company.id}}/{{company.username}}/review/{{company.reviews.my_submitted_review_detail.id}}">                                                    
+                                                        View Review
+                                                    </a>
+                                                </span>   
+                                            </span>
+                                            <span data-ng-if="!company.reviews.is_reviewed_by_me">
+                                                <a 
+                                                    class="button button-blue-dark button-font-open button-uppercase button-font-small margin-right-4x margin-bottom-2x" 
+                                                    data-ng-click="onWriteReview()">
+                                                    Write a review
+                                                </a>
+                                            </span>
+                                        </span>
+
+                                        <span data-ng-if="!authentication_service.isAuthenticated()">
+                                            <a 
+                                                class="button button-blue-dark button-font-open button-uppercase button-font-small margin-right-4x margin-bottom-2x" 
+                                                data-ng-click="onWriteReview()">
+                                                Write a review
+                                            </a>
+                                        </span>
+
+
+                                        <span data-ng-controller="SubscriptionsController">
+                                            <span data-ng-if="company.subscriptions.is_subscribed_by_me && company.subscriptions.is_subscribed_by_me == 1">
+                                                <button class="button button-border button-blue-dark button-font-open button-uppercase button-font-small button-min-width-small"
+                                                        data-ng-click="onUnsubscribe(company)">
+                                                    Unsubscribe
+                                                </button>
+                                            </span>
+                                            <span data-ng-if="!company.subscriptions.is_subscribed_by_me || company.subscriptions.is_subscribed_by_me == 0">
+                                                <button class="button button-border button-blue-dark button-font-open button-uppercase button-font-small button-min-width-small"
+                                                        data-ng-click="onSubscribe(company)">
+                                                    Subscribe
+                                                </button>
+                                            </span>
+                                        </span>
+
+                                    </div>
+
+                                    <div class="p-tabs">
+                                        <uib-tabset>
+                                            <uib-tab index="0" heading="Company Information">
+                                                <div class="p-tab-cotent">
+                                                    <div class="up-info">
+                                                        <div class="up-info-row">
+                                                            <h3>About</h3>
+                                                            <div class="up-row">
+                                                                <div class="t-cell label-name">
+                                                                    <label>Name :</label>
+                                                                </div>
+                                                                <div class="t-cell">
+                                                                    <p>{{company.name| ucFirst| emptyData}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="up-row" data-ng-show="company.profile_description">
+                                                                <div class="t-cell label-name">
+                                                                    <label>Description :</label>
+                                                                </div>
+                                                                <div class="t-cell">
+                                                                    <p class="textarea-preview-content">{{company.profile_description| ucFirst| emptyData}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="up-row" data-ng-show="company.dob">
+                                                                <div class="t-cell label-name">
+                                                                    <label>Founded:</label>
+                                                                </div>
+                                                                <div class="t-cell">
+                                                                    <p>{{company.dob| companyFoundedDateFilter | emptyData}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="up-row" data-ng-show="company.number_of_employees">
+                                                                <div class="t-cell label-name">
+                                                                    <label>Employees :</label>
+                                                                </div>
+                                                                <div class="t-cell">
+                                                                    <p>{{company.number_of_employees| emptyData}}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="up-info-row" 
+                                                             data-ng-if="company.address ||
+                                                                             (company.email && authentication_service.isAuthenticated() && (authentication_service.isAdmin() || authentication_service.isSuperAdmin())) ||
+                                                                             company.website ||
+                                                                             company.country
+                                                             "
+                                                             >
+                                                            <h3>Contact Information</h3>
+                                                            <div class="up-row" data-ng-show="company.address">
+                                                                <div class="t-cell label-name">
+                                                                    <label>Address :</label>
+                                                                </div>
+                                                                <div class="t-cell">
+                                                                    <p class="textarea-preview-content">{{company.address| ucFirst| emptyData}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="up-row" data-ng-if="company.email && authentication_service.isAuthenticated() && (authentication_service.isAdmin() || authentication_service.isSuperAdmin())">
+                                                                <div class="t-cell label-name">
+                                                                    <label>E-mail :</label>
+                                                                </div>
+                                                                <div class="t-cell">
+                                                                    <p class="text-blue">
+                                                                        <a class="text-blue" href="mailto:{{company.email}}">{{company.email}}</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="up-row" data-ng-show="company.website">
+                                                                <div class="t-cell label-name">
+                                                                    <label>Website :</label>
+                                                                </div>
+                                                                <div class="t-cell">
+                                                                    <p class="text-blue">
+                                                                        <span data-ng-if="company.website">
+                                                                            <a class="text-blue" target="_blank" ng-href="{{company.website| websiteUrlFilter}}">{{company.website}}</a>
+                                                                        </span>
+                                                                        <span data-ng-if="!company.website">
+                                                                            {{company.website| emptyData}}
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="up-row" data-ng-if="company.country">
+                                                                <div class="t-cell label-name">
+                                                                    <label>Country :</label>
+                                                                </div>
+                                                                <div class="t-cell">
+                                                                    <p class="">{{company.country.country_name| emptyData}}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </uib-tab>
+                                            <uib-tab index="1" heading="View Staff Members">
+                                                <div class="p-tab-cotent">
+                                                    <div 
+                                                        data-ng-if="!company_staff_members || !company_staff_members.list || company_staff_members.list.length == 0">
+                                                        <div class="empty-search-result">
+                                                            <div class="empty-search-result-img text-center">
+                                                                <img src="assets/images/nothing-found-writeup.png" alt="WriteUp nothing found" />
+                                                            </div>
+                                                            <div class="empty-search-result-info text-center">
+                                                                <h2 class="text-center no-result-found">This company currently has no staff members</h2>
+                                                                <!--TODO : Add a button to add staff--> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div 
+                                                        class="u-staff-list max-height-auto-force" 
+                                                        >
+                                                        <div 
+                                                            class="u-staff-list max-height-auto-force" 
+                                                            data-ng-if="company_staff_members"
+                                                            >
+                                                            <div class="staff-members-company-profile" data-ng-animate="'animate'" data-ng-repeat="staff_member in company_staff_members.list">
+                                                                <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <div class="user-pic">
+                                                                            <div 
+                                                                                >
+                                                                                <img 
+                                                                                    class="img-responsive" 
+                                                                                    data-ng-src="{{WUgetImageFromObject(staff_member.profile_image, 'USER', 'small')}}" 
+                                                                                    alt="{{staff_member.name}}" />
+                                                                            </div>                                                                
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="user-name">
+                                                                            <h3>{{staff_member.name| ucFirst}}</h3>
+                                                                            <span>{{staff_member.job_title| ucFirst}}</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 text-right">
+                                                                        <div class="">
+                                                                            <a href="{{staff_member.main_url}}">
+                                                                                <button 
+                                                                                    class="my-profile-action-btns button button-uppercase button-font-base button-font-bold button-width-small"
+                                                                                    >View User</button>
+                                                                            </a>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                            
+                                                            <div 
+                                                                data-ng-if="company_staff_members && company_staff_members.is_load_more_available" class="margin-top-6x padding-bottom-6x text-center">
+                                                                <a class="view-link link-design-1 cursor-pointer" data-ng-click="loadMoreStaffMembers()">LOAD MORE</a>
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </uib-tab>
+                                            <uib-tab index="2" heading="View Products">
+                                                <div class="p-tab-cotent">
+                                                    <div 
+                                                        data-ng-if="!company_products || !company_products.list || company_products.list.length == 0">
+                                                        <div class="empty-search-result">
+                                                            <div class="empty-search-result-img text-center">
+                                                                <img src="assets/images/nothing-found-writeup.png" alt="WriteUp nothing found" />
+                                                            </div>
+                                                            <div class="empty-search-result-info text-center">
+                                                                <h2 class="text-center no-result-found">This company currently has no products</h2>
+                                                                <!--TODO : Add a button to add staff--> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div 
+                                                        class="u-product-list" 
+                                                        >
+                                                        <div 
+                                                            
+                                                            data-ng-if="company_products"
+                                                            >
+                                                            <div class="u-product-list-container"  data-ng-animate="'animate'" data-ng-repeat="company_product in company_products.list">
+                                                                <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <div class="user-pic">
+                                                                            <div 
+                                                                                >
+                                                                                <img 
+                                                                                    class="img-responsive" 
+                                                                                    data-ng-src="{{WUgetImageFromObject(company_product.image, 'PRODUCT', 'small')}}" 
+                                                                                    alt="{{company_product.title}}" />
+                                                                            </div>                                                                
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="user-name">
+                                                                            <h3>{{company_product.title| ucFirst}}</h3>
+                                                                            <span>{{company_product.description| getExcerpt:150}}</span>                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 text-right">
+                                                                        <div class="">
+                                                                            <a href="{{company_product.main_url}}">
+                                                                                <button 
+                                                                                    class="my-profile-action-btns button button-uppercase button-font-base button-font-bold button-width-small"
+                                                                                    >View Product</button>
+                                                                            </a>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div 
+                                                                data-ng-if="company_products && company_products.is_load_more_available" class="margin-top-6x padding-bottom-6x text-center">
+                                                                <a class="view-link link-design-1 cursor-pointer" data-ng-click="loadMoreProducts()">LOAD MORE</a>
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </uib-tab>
+                                        </uib-tabset>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div 
+                        data-ng-if="reviews && reviews.meta && reviews.meta.total_count && reviews.meta.total_count > 0"
+                        list-recent-reviews-directive 
+                        reviews="reviews" 
+                        reviewsloadmoresettings="reviews_load_more_settings"
+                        hidetitle="false"
+                        ></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+.add-postSection {
+    .feildGroup {
+        max-width: 560px;
+        margin: 40px auto 60px;
+
+        .pic-upload-list {
+            @include margin-top(30);
+
+            .img-box {
+                @include pos(Rel, null);
+
+                width: 130px;
+                position: relative;
+
+                img {
+                    width: 130px;
+                    height: 100px;
+                    object-fit: cover;
+                }
+
+                .close-btn {
+                    @include pos(ab, -10px -10px null null);
+
+                    @include fontsize(20);
+
+                    cursor: pointer;
+                    color: $theme;
+                }
+            }
+        }
+
+        .ch-upload-button {
+            span {
+                width: 130px;
+                height: 100px;
+                text-align: center;
+                background-color: #f2f2f2;
+                display: block;
+                line-height: 100px;
+
+                @include fontsize(35);
+            }
+        }
+
+        .btn-field {
+            @include margin-top(70);
+        }
+    }
+}

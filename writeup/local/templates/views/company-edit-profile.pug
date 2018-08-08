@@ -1,0 +1,176 @@
+.page-conatiner
+	.profile-section.company-profile-section.s-ov
+		.container
+			.main-heading
+				h2.title Profile preview
+			.profile-block
+				.profile-block-dtl
+					.row
+						.col-md-4.col-sm-5
+							.p-user-block
+								.p-img
+									img(src="images/c-logo-1.png" alt="img" class="img-responsive")
+								.p-user-info-block
+									
+									.p-up-competions
+										h3.title 
+											span Upcoming competitions
+										.p-up-competions-list
+											.media
+												.media-left
+													.p-c-img
+														img(src="images/news-3.jpg" alt="img")
+												.media-body
+													h3 weight lifting
+													p Vivamus elementum semper nisi.Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor ...
+											.media
+												.media-left
+													.p-c-img
+														img(src="images/news-3.jpg" alt="img")
+												.media-body
+													h3 weight lifting
+													p Vivamus elementum semper nisi.Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor ...
+											.text-center
+												a(ui-sref="competitions-history-all" class="view-link") View all competitions
+
+
+
+						.col-md-8.col-sm-7
+							.p-personal-info-block
+								.row
+									.col-md-12
+										.user-name 
+											h3 ABCD company
+										.user-profile
+											h4 IT Company
+
+										
+									
+								.user-rating-cotainer
+											h3 Rating
+											.rating-container
+												span(uib-rating ng-model="4"  state-on="'icon-star star-checked'" state-off="'icon-star star-uncheck'"  read-only="true" aria-labelledby="default-rating-1")
+								.p-tabs
+									uib-tabset(justified="true")
+										uib-tab(index="0" heading="About ABCD Company")
+											.p-tab-cotent
+												.up-info.edit-profile-block
+													.up-info-row
+														h3 About
+														.up-row
+															.t-cell.label-name
+																label Description :
+															.t-cell
+																.c-field.c-md
+																	textarea.c-field-control
+																		|Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quamnunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec.
+													.up-info-row
+														h3 Contact Information
+														.up-row
+															.t-cell.label-name
+																label Address :
+															.t-cell
+																.c-field.c-md
+																	textarea(rows="1" cols="1").c-field-control
+																		|525E 68th Street New York, NY 10651-78 156-187-60
+														.up-row
+															.t-cell.label-name
+																label E-mail :
+															.t-cell
+																.c-field.c-md
+																	input(type="text" value="Dummy@gmail.com").c-field-control.text-blue
+														.up-row
+															.t-cell.label-name
+																label Website :
+															.t-cell
+																.c-field.c-md
+																	input(type="text" value="www.dummysitename.com").c-field-control.text-blue
+													
+													.up-info-row
+														h3 Bank Account Details
+														.margin-top-4x
+															button.button.button-uppercase.button-blue.button-font-base Manage Cards
+														
+
+										uib-tab(index="1" heading="Password management")
+											.p-tab-cotent
+												.p-cp-block
+													.field-group
+														.field-row
+															.t-cell
+																label Current password :
+															.t-cell
+																.c-field.c-md
+																	input(type="password").c-field-control
+														.field-row
+															.t-cell
+																label New Password :
+															.t-cell
+																.c-field.c-md
+																	input(type="password").c-field-control
+														.field-row
+															.t-cell
+																label Re-enter new password :
+															.t-cell
+																.c-field.c-md
+																	input(type="password").c-field-control
+												.padding-top-5x
+													.row
+															.col-md-4
+																button.button.button-uppercase.button-blue.button-font-base.button-block.margin-bottom-2x confirm
+															.col-md-8
+																.su-msg-box
+																	span.ico
+																		i.icon-checked
+																	span Your password has been changed successfully
+																	span.close-ico
+																		i.icon-close
+										uib-tab(index="2" heading="Add a staff member")
+											.p-tab-cotent
+												.p-staff-block
+													.field-group
+														.field-row
+															.t-cell.label-name
+																label Name :
+															.t-cell
+																.c-field.c-sm
+																	input(type="text").c-field-control
+														.field-row
+															.t-cell.label-name
+																label E-mail :
+															.t-cell
+																.c-field.c-sm
+																	input(type="text").c-field-control
+														.field-row
+															.t-cell.label-name
+																label Job title :
+															.t-cell
+																.c-field.c-sm
+																	input(type="text").c-field-control
+														.field-row
+															.t-cell.label-name
+																label description :
+															.t-cell
+																.c-field.c-sm
+																	input(type="text").c-field-control
+														.field-row
+															.t-cell.label-name
+																label Profile Picture :
+															.t-cell
+																.c-field.c-sm
+																	.fileUpload
+																		input(type="file").upload
+																		.c-field-control
+																			span
+																				i.icon-file
+														.padding-top-5x
+													.row
+															.col-md-4
+																button.button.button-uppercase.button-blue.button-font-base.button-block.margin-bottom-2x Add this member
+															.col-md-8
+																.su-msg-box
+																	span.ico
+																		i.icon-checked
+																	span Jhon added successfully
+																	span.close-ico
+																		i.icon-close

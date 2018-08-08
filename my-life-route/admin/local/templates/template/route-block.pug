@@ -1,0 +1,26 @@
+.confirm-modal
+	.modal-header
+		h3.title Confirmation
+		button(class="close-ico" id="close"  ng-click="cancel()")
+			i.icon-close
+	.modal-body
+		.confirm-msg
+			h2 Are you sure you want to BLOCK 
+				br
+				|this Liferoute ?
+			.c-field.c-b-sm.c-shadow
+				.select-control
+					select.c-field-control
+						option Select Forever
+						option One Week
+						option Two Week
+						option Thtee Week
+						option Four Week
+
+			.btn-field
+				.margin-top-6x.text-center
+					button.button.button-green.button-width-large.button-rounded.margin-right-3x
+						i.icon-check-bold
+					button.button.button-danger.button-width-large.button-rounded.margin-left-3x
+						i.icon-close-bold
+		

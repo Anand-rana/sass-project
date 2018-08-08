@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+	include _partials/_head.pug
+	body(data-ng-app="myApp")
+		
+		div(ui-view="header")
+		div(ui-view="path" class="find-path-cotainer" data-ng-class="pathClass")
+		div(ui-view="f-banner")
+		.main-cotainer
+			div(ui-view="content")
+		
+							
+
+		include _partials/_footer.pug
+		.bg-back-drop.hidden

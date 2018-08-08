@@ -1,0 +1,102 @@
+<div class="container-fluid">
+   <div class="panel detailPageWrapper" ng-init="trainerDetail()">
+      <div class="panel-heading">
+         <h2>Trainer Management</h2>
+      </div>
+      <div class="panel-body">
+         <div class="row" ng-repeat="trainer in trainer_data">
+            <div class="form-horizontal detailViewWrap">
+               <div class="col-xs-12 col-lg-3 col-lg-push-9">
+                  <span class="_imgBlock">
+                     <img class="img-thumbnail" src="{{trainer.image.file_original_name?((trainer.image._id|toImageUrl)+'?thumbnail=false'):'assets/images/avatar.jpg'}}" alt="img">
+                  </span>
+               </div>
+               <div class="col-xs-12 col-lg-9 col-lg-pull-3">
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">Name:</label>
+                     <div class="col-md-8">
+                        <h5>{{trainer.full_name}}</h5>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">Email:</label>
+                     <div class="col-md-8">
+                        <h5>{{trainer.email}}</h5>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">Regestraion Date:</label>
+                     <div class="col-md-8">
+                        <h5>{{ trainer.created_at*1000 | date:'d MMM, y'}}</h5>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">Mobile Number:</label>
+                     <div class="col-md-8">
+                        <h5>{{ trainer.mobile_number}}</h5>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label class="col-md-4 control-label">Total Reviews:</label>
+                     <div class="col-md-8">
+                        <h5>{{ trainer.testimonials.length}}</h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xs-12">
+                  <div class="_trainingDetailBlock">
+                     <h3>Training Detail</h3>
+                     <div class="form-group">
+                        <label class="col-md-4 control-label">Training type:</label>
+                        <div class="col-md-8">
+                           <h5>{{ trainer.training_method}}</h5>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label class="col-md-4 control-label">Training days in a week:</label>
+                        <div class="col-md-8">
+                           <h5><span ng-repeat="trainingdays in trainer.total_training_days_in_week"> {{trainingdays}}{{ $last ? '' : ', '}} </span></h5>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label class="col-md-4 control-label">Minimum weeks training offered:</label>
+                        <div class="col-md-8">
+                           <h5><span ng-repeat="trainingweeks in trainer.total_training_weeks"> {{trainingweeks}}{{ $last ? '' : ', '}} </span></h5>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label class="col-md-4 control-label">Trainer Skills:</label>
+                        <div class="col-md-8">
+                           <ul class="_skillsWrap">
+                              <li ng-repeat="skills in trainer.skills"> {{skills.name}} </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label class="col-md-4 control-label">Hash Tags:</label>
+                        <div class="col-md-8">
+                           <div class="_hashTagWrap">
+                              <span ng-repeat="hashTags in trainer.hash_tags">{{hashTags}}</span> {{ $last ? '' : ' '}}
+                           </div>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label class="col-md-4 control-label">Documents:</label>
+                        <div class="col-md-8">
+                           <ul>
+                            <li ng-repeat="Documents in trainer.documents">
+                              {{Documents.file_original_name}}
+                              <a target="_blank" download="{{Documents.file_original_name}}"  ng-href="{{Documents._id?((Documents._id|toImageUrl)):''}}">Download File</a>
+                              <!-- <a ng-click="download(Documents._id)">download</a> -->
+                              <!-- <a target="_self" href="{{Documents._id?((Documents._id|toImageUrl)):''}}" download="{{Documents.file_original_name}}">download file</a> -->
+                            </li>
+                          </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

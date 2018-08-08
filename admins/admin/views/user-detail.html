@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel" ng-init="user_detail()">
+        <div class="panel-heading">
+
+
+        </div>
+        <div class="panel-body" ng-repeat="user in user_data">
+
+          <div class="row">
+            <div class="col-md-4">
+              <img  class="img-thumbnail" src="{{user.image.file_original_name?((user.image._id|toImageUrl)+'?thumbnail=false'):'assets/images/avatar.jpg'}} " alt="img">
+
+            </div>
+            <div class="col-md-8">
+              <h5>Name : -  {{user.full_name}}</h5>
+              <h5>Email : - {{user.email}}</h5>
+              <h5>Regestraion Date: -  {{ user.created_at*1000 | date:'d MMM, y'}}</h5>
+              <h5>Address: -  {{ user.address_name ? user.address_name : '--'}}</h5>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>

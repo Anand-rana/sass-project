@@ -1,0 +1,195 @@
+    @include media("<=1200px") {
+        .b-dashboard-section {
+            .b-sidebar {
+                width: 250px;
+            }
+            .main-container {
+                @include margin-left(250);
+                .b-nav-bar {
+                    left: 250px;
+                }
+            }
+        }
+        .message-view {
+            .chat-box {
+                .msgarea {
+                    @include padding-right(20);
+                }
+            }
+            .chat-txt-area {
+                @include margin-right(20);
+                @include margin-left(20);
+            }
+        }
+    }
+    
+    @include media("<=992px") {
+        .b-dashboard-section {
+            .b-sidebar {
+                width: 75px;
+                overflow: auto;
+                .profile-user-block {
+                    @include padding(20 10);
+                    .userimg {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .media-left {
+                        @include padding(0);
+                    }
+                    .user-dtl {
+                        display: none;
+                    }
+                }
+                .main-menu {
+                    & > ul {
+                        &> li {
+                            text-align: center;
+                            & > a {
+                                text-align: center;
+                                @include padding(20 0);
+                            }
+                            .menu-txt {
+                                display: block;
+                                margin-left: 0;
+                                @include font-size(15);
+                            }
+                        }
+                    }
+                }
+                .sizetoogle {
+                    display: none;
+                }
+                .logo-band {
+                    overflow: hidden;
+                }
+            }
+            .main-container {
+                @include margin-left(75);
+                .b-nav-bar {
+                    @include pos(rel, 0);
+                    .nav-notification {
+                        @include margin-left(20);
+                    }
+                }
+            }
+        }
+        .main-content-wrapper {
+            @include margin-top(0);
+        }
+        .profile-view {
+            .b-about-text {
+                @include margin-bottom(20);
+            }
+        }
+        .message-view {
+            .chat-box {
+                .umsg {
+                    @include padding-right(50);
+                    .media-left {
+                        img {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+                .fmsg {
+                    @include padding-left(50);
+                    .media-right {
+                        img {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @include media("<=767px") {
+        .b-dashboard-section {
+            .b-sidebar {
+                left: -75px;
+            }
+            .main-container {
+                @include margin-left(0);
+                .b-nav-bar {
+                    .nav-notification {
+                        @include margin-left(0);
+                    }
+                }
+            }
+            &.sidebar-display {
+                .b-sidebar {
+                    left: 0;
+                }
+                .main-container {
+                    @include margin-left(0);
+                    left: 75px;
+                }
+            }
+        }
+        .profile-view {
+            .profile-dtl-content {
+                @include fontsize(15);
+            }
+        }
+        .t-field {
+            .field-control {
+                @include fontsize(15);
+            }
+        }
+        .tab-bar {
+            & > ul {
+                & > li {
+                    & > a {
+                        @include padding(15);
+                    }
+                }
+            }
+        }
+        .grid-view {
+            .g-w-box {
+                figcaption {
+                    text-align: center;
+                    .text-right {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .filter-section {
+            [class*="margin-left-"] {
+                @include margin(0);
+            }
+            .filter-options {
+                .form-group {
+                    @include margin-right(0);
+                    .form-control {
+                        @include margin-bottom(10);
+                    }
+                }
+            }
+            .price-range {
+                width: 200px;
+            }
+        }
+        .message-view {
+            .p-cat-info {
+                figure {
+                    @include margin-bottom(15);
+                }
+            }
+            .chat-box {
+                .umsg {
+                    @include padding-right(0);
+                }
+                .fmsg {
+                    @include padding-left(0);
+                }
+            }
+            .msgarea {
+                @include padding-right(0);
+            }
+        }
+    }

@@ -1,0 +1,119 @@
+//Fonts
+@include font-face($font, "#{$font-path}/nexa_light-webfont", 400, normal);
+
+@include font-face($font, "#{$font-path}/nexa_bold-webfont", 700, normal);
+
+@font-face {
+    font-family: 'icomoon';
+    src: url("#{$icon-font-path}/icomoon.eot?8saolj");
+    src: url("#{$icon-font-path}/icomoon.eot?8saolj#iefix") format("embedded-opentype"), url("#{$icon-font-path}/icomoon.ttf?8saolj") format("truetype"), url("#{$icon-font-path}/icomoon.woff?8saolj") format("woff"), url("#{$icon-font-path}/icomoon.svg?8saolj#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-edit:before {
+    content: "\e915";
+}
+
+.icon-trash:before {
+    content: "\e916";
+}
+
+.icon-calendar-o:before {
+    content: "\e914";
+}
+
+.icon-comments:before {
+    content: "\e913";
+}
+
+.icon-substract:before {
+    content: "\e912";
+}
+
+.icon-add:before {
+    content: "\e911";
+}
+
+.icon-angle-down:before {
+    content: "\e90a";
+}
+
+.icon-calendar:before {
+    content: "\e90b";
+}
+
+.icon-close:before {
+    content: "\e90c";
+}
+
+.icon-facebook:before {
+    content: "\e90d";
+}
+
+.icon-file-add:before {
+    content: "\e90e";
+}
+
+.icon-linkedIn:before {
+    content: "\e90f";
+}
+
+.icon-twitter:before {
+    content: "\e910";
+}
+
+.icon-search:before {
+    content: "\e909";
+}
+
+.icon-checkbox:before {
+    content: "\e902";
+}
+
+.icon-arrow-down:before {
+    content: "\e903";
+}
+
+.icon-card:before {
+    content: "\e904";
+}
+
+.icon-checkbox-o:before {
+    content: "\e905";
+}
+
+.icon-envelope:before {
+    content: "\e906";
+}
+
+.icon-home:before {
+    content: "\e907";
+}
+
+.icon-phone:before {
+    content: "\e908";
+}
+
+.icon-lock:before {
+    content: "\e900";
+}
+
+.icon-user:before {
+    content: "\e901";
+}

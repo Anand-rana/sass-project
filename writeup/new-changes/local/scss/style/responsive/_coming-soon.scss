@@ -1,0 +1,26 @@
+@include media("<=1200px") {
+    .comingsoon-top-header {
+        .coming-inner {
+            .comingsoon-top-header-block {
+                @include padding(30 30 30 0);
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+
+    .comingsoon-top-header {
+        .coming-inner {
+            .comingsoon-top-header-block {
+
+                h2 {
+                    @include fontsize(30);
+                    span.ico {
+                        @include fontsize(50);
+                    }
+                }
+            }
+        }
+    }
+}

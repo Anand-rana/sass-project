@@ -1,0 +1,81 @@
+.landing-banner {
+    background-image: url(#{$imgpath}/landing-banner-bg.jpg);
+    min-height: 675px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.landing-banner__caption {
+    @include padding-top(200);
+
+    text-align: center;
+
+    & > h2 {
+        @include fontsize(40);
+
+        text-transform: $uppercase;
+        color: $white;
+        line-height: 1.5;
+
+        @include ralway-medium;
+
+        & > span {
+            @include ralway-bold;
+        }
+    }
+
+    & > h3 {
+        color: $white;
+
+        @include ralway-medium;
+
+        @include fontsize(22);
+
+        @include margin-top(45);
+    }
+
+    .email-field-group {
+        max-width: 780px;
+        margin: 25px auto 0;
+
+        & > .input-group {
+            @include border-round(8);
+
+            @include border(3, solid, #fff);
+
+            background-color: #fff;
+
+            .form-control {
+                height: 70px;
+
+                @include padding(15 30);
+
+                @include border-round(6 0 0 6);
+
+                @include fontsize(24);
+
+                background-color: #e6e5e5;
+
+                &:focus {
+                    border-color: #e6e5e5;
+                }
+            }
+
+            .btn {
+                height: 70px;
+
+                @include fontsize(30);
+
+                color: $themecolor;
+                transition: $trasition_all;
+
+                @include padding(6 15);
+
+                &:hover, &:focus {
+                    background-color: $themecolor;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

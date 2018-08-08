@@ -1,0 +1,115 @@
+.footer-section {
+    overflow: hidden;
+    background-color: $color-bg-05;
+    @include pos(rel, null);
+    z-index: 0;
+    @include padding-bottom(60);
+
+    &:before {
+        @include pos(ab, 0 0 null 0);
+        content: "";
+        height: 60px;
+        background-color: $white;
+        z-index: -1;
+    }
+    /*&:after {
+        @include pos(ab, null 0 0 0);
+        content: "";
+        height: 60px;
+        background-color: $white;
+        z-index: -1;
+    }*/
+    .f-logo-block {
+        background-color: $theme;
+        @include padding(50 30 30 50);
+        @include pos(rel, null);
+        @include margin-bottom(-60);
+        z-index: 2;
+
+        h3 {
+            @include fontsize(22);
+            font-family: $font-family-alt;
+            font-weight: 100;
+            text-transform: uppercase;
+            @include padding-top(30);
+        }
+        &:before {
+            @include pos(ab, 0 100% 0 null);
+            content: "";
+            background-color: #fff47f; //@include opacity(0.5);
+            width: 10000px;
+        }
+    }
+
+    .f-social-links {
+        &>ul {
+            @include margin-top(90);
+            &>li {
+                display: $ib;
+                @include margin-right(3);
+                &>a {
+                    width: 48px;
+                    height: 48px;
+                    @include circle;
+                    @include border(2, solid, $color-bg-05);
+                    display: $b;
+                    text-align: center; // @include fontsize(20);
+                    line-height: 48px;
+                }
+            }
+        }
+    }
+
+    .footer-inner-block {
+        @include padding(25 0 0 40);
+        color: $white;
+        @include fontsize(11);
+        h2 {
+            @include padding(20);
+            background-color: $theme;
+            @include fontsize(22);
+            font-weight: 100;
+            font-family: $font-family-alt;
+            color: $color-text-03;
+            display: $ib;
+            text-transform: uppercase;
+        }
+
+        .f-page-links {
+            @include padding(20 20 0);
+            &>ul {
+                &>li {
+                    display: $b;
+                    @include padding-bottom(10);
+                    &>a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .f-contact-info {
+            @include padding(20 20 0);
+            &>ul {
+                &>li {
+                    display: $b;
+                    @include padding-bottom(20);
+
+                    .c-ico {
+                        @include fontsize(16);
+                        display: $b;
+                        min-width: 30px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .f-bottom-block {
+        background-color: $white;
+        @include pos(ab, null 0 0 0);
+        @include padding(20);
+        text-align: right;
+        @include fontsize(11);
+    }
+}
